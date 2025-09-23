@@ -13,7 +13,7 @@ class PaperService:
 
     def register_papers(self, papers: List[Paper]):
         """
-        Paper DTO -> PaperEntity に変換して bulk 保存
+        Convert Paper DTO to PaperEntity and bulk save
         """
         paper_entities = []
         category_entities = []
@@ -31,7 +31,7 @@ class PaperService:
             for c in set([cat.category.lower() for cat in p.categories]):
                 category_entities.append(
                     PaperCategoryEntity(
-                        paper=paper_entity,  # relationship 経由で paper_id が設定される
+                        paper=paper_entity,  # paper_id is set via relationship
                         category=c
                     )
                 )
@@ -47,9 +47,9 @@ class PaperService:
         end_idx: int = None
     ) -> List[Paper]:
         """
-        PaperEntity -> Paper DTO に変換
-        from_datetime, to_datetime で期間を指定可能
-        start_idx, end_idx で範囲指定も可能
+        Convert PaperEntity to Paper DTO
+        Period can be specified with from_datetime, to_datetime
+        Range can also be specified with start_idx, end_idx
         """
         limit = None
         offset = None
@@ -71,7 +71,7 @@ class PaperService:
         
         papers = []
         for m in models:
-            # PaperEntity.categories は PaperCategoryEntity のリスト
+            # PaperEntity.categories is a list of PaperCategoryEntity
             categories = [
                 c.category for c in m.categories
             ]
@@ -92,8 +92,8 @@ class KeywordService:
 
     def register_keywords(self, keywords: List[Keyword]):
         """
-        Keyword DTO -> KeywordEntity に変換して bulk insert
-        日単位集計（abstract_count, title_count）に対応
+        Convert Keyword DTO to KeywordEntity and bulk insert
+        Supports daily aggregation (abstract_count, title_count)
         """
         models = [
             KeywordEntity(
@@ -111,8 +111,8 @@ class KeywordService:
 
     def get_keywords(self, category: str, year: int, month: int, day: int) -> List[Keyword]:
         """
-        KeywordEntity -> Keyword DTO に変換
-        日単位を指定可能（未指定の場合は月単位で全件取得）
+        Convert KeywordEntity to Keyword DTO
+        Daily specification is possible (if not specified, all records are retrieved by month)
         """
         models = self.dao.list_by_category_and_period(category, year, month, day)
 
@@ -134,7 +134,7 @@ class ArxivPaperService:
 
     def get_from_api_by_date(self, target_date: date, limit: int = 10) -> List[ArxivPaper]:
         """
-        arxivから取得する
+        Fetch from arXiv
         """
 
         papers = self.api.fetch_by_day(
@@ -159,7 +159,7 @@ class ArxivPaperService:
 
     def get_from_api_by_arxiv_id(self, arxiv_id_list: List[str]) -> Paper:
         """
-        arxivから取得する
+        Fetch from arXiv
         """
 
         papers = self.api.fetch_by_id(

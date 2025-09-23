@@ -9,13 +9,13 @@ class PaperDAO:
 
     def save_bulk(self, papers: List[PaperEntity], categories: List[PaperCategoryEntity]):
         """
-        一括登録
-        PaperEntity と PaperCategoryEntity を一緒に登録
+        Bulk registration
+        Register PaperEntity and PaperCategoryEntity together
         """
-        # arxiv_id を収集
+        # Collect arxiv_ids
         arxiv_ids = [p.arxiv_id for p in papers]
 
-        # 既存 Paper を arxiv_id -> PaperEntity で取得
+        # Get existing Papers by arxiv_id -> PaperEntity
         existing_papers = {
             r.arxiv_id: r
             for r in self.session.query(PaperEntity)
@@ -23,7 +23,7 @@ class PaperDAO:
             .all()
         }
 
-        # 新規 PaperEntity のみ
+        # Only new PaperEntity
         new_papers = [p for p in papers if p.arxiv_id not in existing_papers]
 
         if new_papers:
@@ -39,9 +39,9 @@ class PaperDAO:
         offset: int = None
     ) -> List[PaperEntity]:
         """
-        指定カテゴリに属する PaperEntity を一括取得
-        limitとoffsetも指定可能
-        from_date, to_date は date型で指定
+        Bulk retrieve PaperEntity belonging to specified category
+        limit and offset can also be specified
+        from_date, to_date are specified as date type
         """
         query = (
             self.session.query(PaperEntity)
@@ -72,7 +72,7 @@ class KeywordDAO:
 
     def upsert_counts(self, entity: KeywordEntity):
         """
-        キーワードを upsert して count を更新
+        Upsert keywords and update count
         """
         stmt = insert(KeywordEntity).values(
             token=entity.token,

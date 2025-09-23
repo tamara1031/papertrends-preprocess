@@ -12,7 +12,7 @@ class Paper:
     published: date
     title: str
     abstract: str
-    categories: List[PaperCategory]  # Paper にカテゴリを持たせる
+    categories: List[PaperCategory]  # Paper holds categories
 
 @dataclass
 class Keyword:
@@ -34,7 +34,7 @@ class ArxivPaper:
     entry_id: Optional[str] = None
 
     def to_paper(self) -> Paper:
-        """Paper DTO に変換、カテゴリを埋め込む"""
+        """Convert to Paper DTO, embed categories"""
         return Paper(
             arxiv_id=self.arxiv_id,
             published=self.published_date.date(),

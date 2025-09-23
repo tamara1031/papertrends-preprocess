@@ -1,135 +1,135 @@
 # papertrends-preprocess
 
-arXiv論文のトピックモデリングと可視化データ生成のための前処理パイプラインです。
+A preprocessing pipeline for arXiv paper topic modeling and visualization data generation.
 
-## 概要
+## Overview
 
-このプロジェクトは、arXivから論文データを取得し、BERTopicを使用してトピックモデリングを行い、可視化用のデータを生成する一連の処理を提供します。
+This project provides a series of processes that fetch paper data from arXiv, perform topic modeling using BERTopic, and generate visualization data.
 
-## セットアップ
+## Setup
 
-### 前提条件
+### Prerequisites
 
-- Python 3.11（PyTorch互換バージョン）
+- Python 3.11 (PyTorch compatible version)
 - MySQL 8.0
-- CUDA対応GPU（推奨）
+- CUDA-compatible GPU (recommended)
 
-### インストール
+### Installation
 
 ```bash
-# 依存関係のインストール
+# Install dependencies
 pip install -r requirements.txt
 
-# spaCyの英語モデルをダウンロード
+# Download spaCy English model
 python -m spacy download en_core_web_sm
 ```
 
-### データベースセットアップ
+### Database Setup
 
 ```bash
-# Docker Composeを使用してMySQLを起動
+# Start MySQL using Docker Compose
 docker-compose up -d
 
-# データベースが起動するまで待機（約30秒）
+# Wait for database to start (approximately 30 seconds)
 ```
 
-## 使用方法
+## Usage
 
-### 1. データセット作成
+### 1. Dataset Creation
 
-arXivから論文データを取得してデータベースに保存します。
+Fetch paper data from arXiv and save to database.
 
 ```bash
 python 1__create_dataset.py
 ```
 
-**設定項目:**
-- `start_date`: 取得開始日（デフォルト: 2017-09-12）
-- `end_date`: 取得終了日（デフォルト: 2025-09-17）
-- カテゴリ: 全arXivカテゴリから取得
+**Configuration:**
+- `start_date`: Start date for data collection (default: 2017-09-12)
+- `end_date`: End date for data collection (default: 2025-09-17)
+- Categories: All arXiv categories are collected
 
-### 2. テキスト埋め込み生成
+### 2. Text Embedding Generation
 
-論文のタイトルとアブストラクトからテキスト埋め込みを生成します。
+Generate text embeddings from paper titles and abstracts.
 
 ```bash
 python 2__preprocess_dataset__text_embeddings.py
 ```
 
-**設定項目:**
-- `BATCH_SIZE`: バッチサイズ（デフォルト: 128）
-- `FROM_DATE`: 処理対象の開始日（デフォルト: 2020-01-01）
-- `CATEGORIES`: 処理対象カテゴリ（デフォルト: ["cs.IR"]）
+**Configuration:**
+- `BATCH_SIZE`: Batch size (default: 128)
+- `FROM_DATE`: Start date for processing (default: 2020-01-01)
+- `CATEGORIES`: Target categories for processing (default: ["cs.IR"])
 
-**出力:**
-- `./preprocessed/{category}/papers.pkl`: 論文データ
-- `./preprocessed/{category}/text_embeddings.npy`: テキスト埋め込み
+**Output:**
+- `./preprocessed/{category}/papers.pkl`: Paper data
+- `./preprocessed/{category}/text_embeddings.npy`: Text embeddings
 
-### 3. トピックモデル学習
+### 3. Topic Model Training
 
-BERTopicを使用してトピックモデルを学習します。
+Train topic models using BERTopic.
 
 ```bash
 python 3__train_model.py
 ```
 
-**設定項目:**
-- `categories`: 学習対象カテゴリ（デフォルト: ["cs.IR"]）
+**Configuration:**
+- `categories`: Target categories for training (default: ["cs.IR"])
 
-**出力:**
-- `./models/{category}/`: 学習済みモデル
-- `./models/{category}/representative_docs.pkl`: 代表文書
+**Output:**
+- `./models/{category}/`: Trained models
+- `./models/{category}/representative_docs.pkl`: Representative documents
 
-### 4. 可視化データ生成
+### 4. Visualization Data Generation
 
-トピックモデルから可視化用のJSONデータを生成します。
+Generate JSON data for visualization from topic models.
 
 ```bash
 python 4__generate_visualizization_data.py
 ```
 
-**出力:**
-- `./visualizations/{category}.json`: 可視化データ
+**Output:**
+- `./visualizations/{category}.json`: Visualization data
 
-**生成されるデータ:**
-- トピック情報（名前、キーワード、論文数）
-- トピック間相関行列
-- 時系列データ（月ごとのトピック分布）
-- 各トピックの代表論文
+**Generated Data:**
+- Topic information (name, keywords, paper count)
+- Topic correlation matrix
+- Time series data (monthly topic distribution)
+- Representative papers for each topic
 
-## ディレクトリ構造
+## Directory Structure
 
 ```
 papertrends-preprocess/
-├── 1__create_dataset.py              # arXivデータ取得
-├── 2__preprocess_dataset__text_embeddings.py  # テキスト埋め込み生成
-├── 3__train_model.py                 # トピックモデル学習
-├── 4__generate_visualizization_data.py  # 可視化データ生成
-├── common/                           # 共通モジュール
-├── config/                           # 設定ファイル
-├── models/                           # 学習済みモデル
-├── preprocessed/                     # 前処理済みデータ
-├── visualizations/                   # 可視化データ
-├── mysql/                            # MySQLデータ
-└── docker-compose.yml               # Docker設定
+├── 1__create_dataset.py              # arXiv data collection
+├── 2__preprocess_dataset__text_embeddings.py  # Text embedding generation
+├── 3__train_model.py                 # Topic model training
+├── 4__generate_visualizization_data.py  # Visualization data generation
+├── common/                           # Common modules
+├── config/                           # Configuration files
+├── models/                           # Trained models
+├── preprocessed/                     # Preprocessed data
+├── visualizations/                   # Visualization data
+├── mysql/                            # MySQL data
+└── docker-compose.yml               # Docker configuration
 ```
 
-## 設定のカスタマイズ
+## Configuration Customization
 
-各スクリプト内のパラメータを変更することで、処理対象の期間やカテゴリを調整できます。
+You can adjust the processing period and categories by modifying parameters in each script.
 
-### 主要パラメータ
+### Key Parameters
 
-- **データ取得期間**: `1__create_dataset.py`の`start_date`、`end_date`
-- **処理対象カテゴリ**: 各スクリプトの`CATEGORIES`変数
-- **バッチサイズ**: `2__preprocess_dataset__text_embeddings.py`の`BATCH_SIZE`
-- **クラスタリングパラメータ**: `3__train_model.py`のHDBSCAN設定
+- **Data collection period**: `start_date`, `end_date` in `1__create_dataset.py`
+- **Target categories**: `CATEGORIES` variable in each script
+- **Batch size**: `BATCH_SIZE` in `2__preprocess_dataset__text_embeddings.py`
+- **Clustering parameters**: HDBSCAN settings in `3__train_model.py`
 
-## 注意事項
+## Notes
 
-- GPUメモリが不足する場合は、`BATCH_SIZE`を小さくしてください
-- 大量のデータを処理する場合は、十分なディスク容量を確保してください
+- Reduce `BATCH_SIZE` if GPU memory is insufficient
+- Ensure sufficient disk space when processing large amounts of data
 
-## ライセンス
+## License
 
-このプロジェクトのライセンスについては、[LICENSE](LICENSE)ファイルを参照してください。
+Please refer to the [LICENSE](LICENSE) file for this project's license.

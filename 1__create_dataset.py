@@ -13,41 +13,41 @@ from common.domain.service import ArxivPaperService, PaperService
 from common.repository.api import ArxivApi
 from common.repository.dao import PaperDAO
 
-# データベース準備
+# Database setup
 engine = create_engine("mysql+pymysql://papertrends:papertrends@localhost:3306/papertrends")
 SessionLocal = sessionmaker(bind=engine)
 session = SessionLocal()
 
-# paper DB service
+# Paper DB service
 paper_dao = PaperDAO(session)
 paper_service: PaperService = PaperService(paper_dao)
 
 # arXiv API service
 arxiv_paper_service = ArxivPaperService(ArxivApi(page_size = 500, delay_seconds = 3.00))
 
-# 取得期間
+# Collection period
 start_date = date(2017, 9, 12)
 end_date = date(2025, 9, 17)
 
 total_days = (end_date - start_date).days + 1
 
-# ループして日ごとに処理
+# Loop and process day by day
 pbar = tqdm(range(total_days), desc="Processing days")
 for offset in pbar:
 
-    # 処理中のdateを計算
+    # Calculate current processing date
     current_date = start_date + timedelta(days=offset)
 
-    # tqdm のバー横に日付を表示
+    # Display date next to tqdm bar
     pbar.set_postfix({"date": current_date})
 
-    # 論文取得
+    # Fetch papers
     arxiv_papers = arxiv_paper_service.get_from_api_by_date(current_date, limit=None)
     
-    # ArxivPaper -> Paper に変換
+    # Convert ArxivPaper -> Paper
     papers = [arxiv_paper.to_paper() for arxiv_paper in arxiv_papers]
     
-    # 登録
+    # Register
     paper_service.register_papers(papers)
     session.commit()
 
