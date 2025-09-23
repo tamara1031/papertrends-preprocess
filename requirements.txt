@@ -1,0 +1,15 @@
+tqdm
+sqlalchemy
+arxiv
+pymysql
+cryptography
+
+bertopic[spacy]
+adapters
+networkx
+python-louvain
+git+https://github.com/boudinfl/pke.git
+
+matplotlib
+wordcloud
+highcharts-core
