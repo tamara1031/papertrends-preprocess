@@ -1,0 +1,1472 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_cell_cells_migration_model",
+        "keywords": [
+          [
+            "cell",
+            0.049640051102318894
+          ],
+          [
+            "cells",
+            0.030977775195327482
+          ],
+          [
+            "migration",
+            0.02778850728523607
+          ],
+          [
+            "model",
+            0.02403905192059362
+          ],
+          [
+            "tissue",
+            0.020519624128527043
+          ],
+          [
+            "cell migration",
+            0.017003435943214712
+          ],
+          [
+            "mechanical",
+            0.015251484270787024
+          ],
+          [
+            "dynamics",
+            0.015152615924540643
+          ],
+          [
+            "motility",
+            0.01440450757655567
+          ],
+          [
+            "forces",
+            0.01337639469138542
+          ]
+        ],
+        "count": 164
+      },
+      "1": {
+        "name": "1_ion_membrane_drug_cellular",
+        "keywords": [
+          [
+            "ion",
+            0.016039515564226354
+          ],
+          [
+            "membrane",
+            0.014935526921473203
+          ],
+          [
+            "drug",
+            0.01478222171927604
+          ],
+          [
+            "cellular",
+            0.014557825186604282
+          ],
+          [
+            "cells",
+            0.014537097326712526
+          ],
+          [
+            "neuronal",
+            0.014132262529563374
+          ],
+          [
+            "new",
+            0.01406193620058588
+          ],
+          [
+            "cell",
+            0.01372575818469196
+          ],
+          [
+            "signalling",
+            0.013602334521213672
+          ],
+          [
+            "time",
+            0.013075118319326123
+          ]
+        ],
+        "count": 60
+      },
+      "2": {
+        "name": "2_cell_gene_fate_stem",
+        "keywords": [
+          [
+            "cell",
+            0.05007826191043682
+          ],
+          [
+            "gene",
+            0.03170215392799755
+          ],
+          [
+            "fate",
+            0.025232386693024154
+          ],
+          [
+            "stem",
+            0.024568168111541656
+          ],
+          [
+            "cells",
+            0.023070458530676703
+          ],
+          [
+            "model",
+            0.021905050024709303
+          ],
+          [
+            "cell fate",
+            0.021387071278169346
+          ],
+          [
+            "differentiation",
+            0.021251575782397523
+          ],
+          [
+            "development",
+            0.02120889284341248
+          ],
+          [
+            "pattern",
+            0.018341876961475555
+          ]
+        ],
+        "count": 57
+      },
+      "3": {
+        "name": "3_bacterial_bacteria_biofilm_growth",
+        "keywords": [
+          [
+            "bacterial",
+            0.04623526038753449
+          ],
+          [
+            "bacteria",
+            0.03513674530958851
+          ],
+          [
+            "biofilm",
+            0.029175329663917664
+          ],
+          [
+            "growth",
+            0.021697092296363952
+          ],
+          [
+            "fluid",
+            0.02102058278869423
+          ],
+          [
+            "model",
+            0.01936881582363088
+          ],
+          [
+            "cells",
+            0.017477516470892563
+          ],
+          [
+            "defects",
+            0.017466461900042047
+          ],
+          [
+            "active",
+            0.017446459619495838
+          ],
+          [
+            "dimensional",
+            0.015428858109627006
+          ]
+        ],
+        "count": 49
+      },
+      "4": {
+        "name": "4_data_learning_cell_models",
+        "keywords": [
+          [
+            "data",
+            0.04062377276212637
+          ],
+          [
+            "learning",
+            0.03406196693458047
+          ],
+          [
+            "cell",
+            0.030384264944557392
+          ],
+          [
+            "models",
+            0.024049735942117633
+          ],
+          [
+            "methods",
+            0.023729472449695817
+          ],
+          [
+            "segmentation",
+            0.022637117844762092
+          ],
+          [
+            "single",
+            0.020780737920860003
+          ],
+          [
+            "multi",
+            0.02059150342868342
+          ],
+          [
+            "images",
+            0.020523688947289363
+          ],
+          [
+            "analysis",
+            0.02022874498076564
+          ]
+        ],
+        "count": 46
+      },
+      "5": {
+        "name": "5_infection_immune_SARS_CoV",
+        "keywords": [
+          [
+            "infection",
+            0.06719237040738732
+          ],
+          [
+            "immune",
+            0.055253145151535746
+          ],
+          [
+            "SARS",
+            0.054629958339974256
+          ],
+          [
+            "CoV",
+            0.054629958339974256
+          ],
+          [
+            "virus",
+            0.05309547191701194
+          ],
+          [
+            "viral",
+            0.030074952638465522
+          ],
+          [
+            "cells",
+            0.028822719230724523
+          ],
+          [
+            "response",
+            0.026121937737808052
+          ],
+          [
+            "affinity",
+            0.024369418695367486
+          ],
+          [
+            "immune response",
+            0.022273560591232065
+          ]
+        ],
+        "count": 33
+      },
+      "6": {
+        "name": "6_gradient_sensing_information_accuracy",
+        "keywords": [
+          [
+            "gradient",
+            0.07263991820871772
+          ],
+          [
+            "sensing",
+            0.06173840025597469
+          ],
+          [
+            "information",
+            0.04897875279482299
+          ],
+          [
+            "accuracy",
+            0.0400133249708959
+          ],
+          [
+            "chemotaxis",
+            0.03602148749074747
+          ],
+          [
+            "receptor",
+            0.03276654147906809
+          ],
+          [
+            "chemotactic",
+            0.03128193512165995
+          ],
+          [
+            "cells",
+            0.03068981044637012
+          ],
+          [
+            "optimal",
+            0.027468770903314628
+          ],
+          [
+            "coli",
+            0.027045047392695948
+          ]
+        ],
+        "count": 30
+      },
+      "7": {
+        "name": "7_growth_size_cell_cell size",
+        "keywords": [
+          [
+            "growth",
+            0.05474424465068951
+          ],
+          [
+            "size",
+            0.03570509656570235
+          ],
+          [
+            "cell",
+            0.03374667532160482
+          ],
+          [
+            "cell size",
+            0.029158832910624297
+          ],
+          [
+            "division",
+            0.026474686411753972
+          ],
+          [
+            "microbial",
+            0.025309193571411693
+          ],
+          [
+            "resistance",
+            0.019847280476030266
+          ],
+          [
+            "law",
+            0.01904905099772801
+          ],
+          [
+            "protein",
+            0.018832134137899487
+          ],
+          [
+            "cell growth",
+            0.018400292153356864
+          ]
+        ],
+        "count": 28
+      },
+      "8": {
+        "name": "8_cancer_immune_tumour_cells",
+        "keywords": [
+          [
+            "cancer",
+            0.051368437804883114
+          ],
+          [
+            "immune",
+            0.049804941842712815
+          ],
+          [
+            "tumour",
+            0.0391470337963943
+          ],
+          [
+            "cells",
+            0.027041107853384823
+          ],
+          [
+            "data",
+            0.026445339493056226
+          ],
+          [
+            "model",
+            0.025890878579459486
+          ],
+          [
+            "immune cells",
+            0.025686028050145065
+          ],
+          [
+            "tumor",
+            0.02563511996188572
+          ],
+          [
+            "cell",
+            0.021322414796648235
+          ],
+          [
+            "treatment",
+            0.018045817766794
+          ]
+        ],
+        "count": 27
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6784252529811798,
+        -0.3872857592486565,
+        -0.6739943483591003,
+        -0.49497998603436244,
+        -0.7097294279570436,
+        -0.6111151241756135,
+        -0.44739338893551694,
+        -0.5920199593612163
+      ],
+      [
+        -0.6784252529811798,
+        1.0,
+        -0.7136141578230566,
+        -0.7409274234836454,
+        -0.7391489692986202,
+        -0.7399434711636832,
+        -0.7397293712249214,
+        -0.6909761985651163,
+        -0.72239935348744
+      ],
+      [
+        -0.3872857592486565,
+        -0.7136141578230566,
+        1.0,
+        -0.6934714638328832,
+        -0.41981964704837316,
+        -0.7171384638813789,
+        -0.675697878308093,
+        -0.4750333356070763,
+        -0.6638078418533535
+      ],
+      [
+        -0.6739943483591003,
+        -0.7409274234836454,
+        -0.6934714638328832,
+        1.0,
+        -0.7170091654230938,
+        -0.7521358702964968,
+        -0.6864118399381502,
+        -0.6334583142617292,
+        -0.7484983350066647
+      ],
+      [
+        -0.49497998603436244,
+        -0.7391489692986202,
+        -0.41981964704837316,
+        -0.7170091654230938,
+        1.0,
+        -0.7305557503223432,
+        -0.6894812855432774,
+        -0.589503083982706,
+        -0.6457429121682126
+      ],
+      [
+        -0.7097294279570436,
+        -0.7399434711636832,
+        -0.7171384638813789,
+        -0.7521358702964968,
+        -0.7305557503223432,
+        1.0,
+        -0.7555568330253857,
+        -0.7415346957336533,
+        -0.46976885544571634
+      ],
+      [
+        -0.6111151241756135,
+        -0.7397293712249214,
+        -0.675697878308093,
+        -0.6864118399381502,
+        -0.6894812855432774,
+        -0.7555568330253857,
+        1.0,
+        -0.680366535431109,
+        -0.7096954492572577
+      ],
+      [
+        -0.44739338893551694,
+        -0.6909761985651163,
+        -0.4750333356070763,
+        -0.6334583142617292,
+        -0.589503083982706,
+        -0.7415346957336533,
+        -0.680366535431109,
+        1.0,
+        -0.6653749414605101
+      ],
+      [
+        -0.5920199593612163,
+        -0.72239935348744,
+        -0.6638078418533535,
+        -0.7484983350066647,
+        -0.6457429121682126,
+        -0.46976885544571634,
+        -0.7096954492572577,
+        -0.6653749414605101,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        7,
+        0,
+        1,
+        0,
+        3,
+        1,
+        0,
+        0,
+        1
+      ],
+      "2020-02": [
+        5,
+        0,
+        0,
+        1,
+        1,
+        1,
+        4,
+        0,
+        1
+      ],
+      "2020-03": [
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "2020-04": [
+        5,
+        0,
+        2,
+        0,
+        1,
+        2,
+        0,
+        4,
+        1
+      ],
+      "2020-05": [
+        8,
+        0,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        0
+      ],
+      "2020-06": [
+        7,
+        1,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "2020-07": [
+        6,
+        0,
+        1,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "2020-08": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        3,
+        1,
+        0,
+        0
+      ],
+      "2020-09": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        1,
+        0
+      ],
+      "2020-10": [
+        5,
+        0,
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "2020-11": [
+        3,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "2020-12": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "2021-01": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "2021-02": [
+        3,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "2021-03": [
+        2,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "2021-04": [
+        6,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "2021-05": [
+        4,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "2021-06": [
+        5,
+        1,
+        0,
+        3,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "2021-07": [
+        4,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "2021-08": [
+        2,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "2021-09": [
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "2021-10": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "2021-11": [
+        5,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "2021-12": [
+        5,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "2022-01": [
+        3,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "2022-02": [
+        5,
+        0,
+        3,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "2022-03": [
+        6,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "2022-04": [
+        3,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2022-05": [
+        3,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      "2022-06": [
+        4,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "2022-07": [
+        5,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "2022-08": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "2022-09": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "2022-10": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "2022-11": [
+        6,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      "2022-12": [
+        3,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "2023-01": [
+        8,
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        0,
+        4
+      ],
+      "2023-02": [
+        2,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "2023-03": [
+        3,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
+      "2023-04": [
+        4,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "2023-05": [
+        3,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "2023-06": [
+        5,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "2023-07": [
+        3,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        2
+      ],
+      "2023-08": [
+        5,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        3
+      ],
+      "2023-09": [
+        4,
+        1,
+        1,
+        2,
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      "2023-10": [
+        6,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "2023-11": [
+        2,
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "2023-12": [
+        6,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "2024-01": [
+        4,
+        0,
+        1,
+        4,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "2024-02": [
+        5,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2024-03": [
+        5,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "2024-04": [
+        8,
+        0,
+        2,
+        2,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "2024-05": [
+        7,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "2024-06": [
+        7,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "2024-07": [
+        6,
+        0,
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "2024-08": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "2024-09": [
+        6,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1
+      ],
+      "2024-10": [
+        6,
+        0,
+        1,
+        2,
+        1,
+        0,
+        3,
+        0,
+        1
+      ],
+      "2024-11": [
+        4,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "2024-12": [
+        5,
+        1,
+        3,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2025-01": [
+        3,
+        0,
+        4,
+        2,
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      "2025-02": [
+        8,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        3
+      ],
+      "2025-03": [
+        8,
+        0,
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "2025-04": [
+        9,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "2025-05": [
+        4,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        2,
+        2
+      ],
+      "2025-06": [
+        3,
+        0,
+        1,
+        0,
+        3,
+        0,
+        2,
+        2,
+        2
+      ],
+      "2025-07": [
+        4,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      "2025-08": [
+        3,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1
+      ],
+      "2025-09": [
+        4,
+        0,
+        1,
+        0,
+        1,
+        0,
+        3,
+        1,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "One dimensional cell motility patterns",
+          "year": "2020-03",
+          "abstract": "During migration cells exhibit a rich variety of seemingly random migration\npatterns, which makes unraveling the underlying mechanisms that control cell\nmigration a daunting challenge. For efficient migration cells require a\nmechanism for polarization, so that traction forces are produced in the\ndirection of motion, while adhesion is released to allow forward migration. To\nsimplify the study of this process cells have been studied when placed along\none-dimensional tracks, where single cells exhibit both smooth and stick-slip\nmigration modes. The stick-slip motility mode is characterized by protrusive\nmotion at the cell front, coupled with slow cell elongation, which is followed\nby rapid retractions of the cell back. In this study, we explore a minimal\nphysical model that couples the force applied on the adhesion bonds to the\nlength variations of the cell and the traction forces applied by the polarized\nactin retrograde flow. We show that the rich spectrum of cell migration\npatterns emerges from this model as different \\emph{deterministic} dynamical\nphases. This result suggests a source for the large cell-to-cell variability\n(CCV) in cell migration patterns observed in single cells over time and within\ncell populations. The large heterogeneity can arise from small fluctuations in\nthe cellular components that are greatly amplified due to moving the cells'\ninternal state across the dynamical phase transition lines. Temporal noise is\nshown to drive random changes in the cellular polarization direction, which is\nenhanced during the stick-slip migration mode. These results offer a new\nframework to explain experimental observations of migrating cells, resulting\nfrom noisy switching between underlying deterministic migration modes.",
+          "arxiv_id": "2003.03788v1"
+        },
+        {
+          "title": "Interplay between substrate rigidity and tissue fluidity regulates cell monolayer spreading",
+          "year": "2022-06",
+          "abstract": "Coordinated and cooperative motion of cells is essential for embryonic\ndevelopment, tissue morphogenesis, wound healing and cancer invasion. A\npredictive understanding of the emergent mechanical behaviors in collective\ncell motion is challenging due to the complex interplay between cell-cell\ninteractions, cell-matrix adhesions and active cell behaviors. To overcome this\nchallenge, we develop a predictive cellular vertex model that can delineate the\nrelative roles of substrate rigidity, tissue mechanics and active cell\nproperties on the movement of cell collectives. We apply the model to the\nspecific case of collective motion in cell aggregates as they spread into a\ntwo-dimensional cell monolayer adherent to a soft elastic matrix. Consistent\nwith recent experiments, we find that substrate stiffness regulates the driving\nforces for the spreading of cellular monolayer, which can be pressure-driven or\ncrawling-based depending on substrate rigidity. On soft substrates, cell\nmonolayer spreading is driven by an active pressure due to the influx of cells\ncoming from the aggregate, whereas on stiff substrates, cell spreading is\ndriven primarily by active crawling forces. Our model predicts that cooperation\nof cell crawling and tissue pressure drives faster spreading, while the\nspreading rate is sensitive to the mechanical properties of the tissue. We find\nthat solid tissues spread faster on stiff substrates, with spreading rate\nincreasing with tissue tension. By contrast, the spreading of fluid tissues is\nindependent of substrate stiffness and is slower than solid tissues. We compare\nour theoretical results with experimental results on traction force generation\nand spreading kinetics of cell monolayers, and provide new predictions on the\nrole of tissue fluidity and substrate rigidity on collective cell motion.",
+          "arxiv_id": "2206.03570v2"
+        },
+        {
+          "title": "Physics of collective cell migration",
+          "year": "2023-02",
+          "abstract": "Movement of cell clusters along extracellular matrices (ECM) during tissue\ndevelopment, wound healing, and early stage of cancer invasion involve various\ninter-connected migration modes such as: (1) cell movement within clusters, (2)\ncluster extension (wetting) and compression (de-wetting), and (3) directional\ncluster movement. It has become increasingly evident that dilational and\nvolumetric viscoelasticity of cell clusters and their surrounding substrate\nsignificantly influence these migration modes through physical parameters such\nas: cell and matrix surface tensions, interfacial tension between cells and\nsubstrate, gradients of surface and interfacial tensions, as well as, the\naccumulation of cell and matrix residual stresses. Inhomogeneous distribution\nof cell surface tension along migrating cell cluster can appear as a\nconsequence of different strength of cell-cell adhesion contacts and cell\ncontractility between leader and follower cells. While the directional cell\nmigration caused by the matrix stiffness gradient (i.e. durotaxis) has been\nwidely elaborated, the structural changes of matrix surface caused by cell\ntractions which lead to the generation of the matrix surface tension gradient\nhas not been considered yet. The main goal of this theoretical consideration is\nto clarify the roles of various physical parameters in collective cell\nmigration based on the formulating biophysical model. This complex phenomenon\nis discussed on the model systems such as the movement of cell clusters on the\ncollagen I gel matrix by simultaneously reviewing various experimental data\nwith and without cells.",
+          "arxiv_id": "2302.05789v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "AI-driven control of bioelectric signalling for real-time topological reorganization of cells",
+          "year": "2025-03",
+          "abstract": "Understanding and manipulating bioelectric signaling could present a new wave\nof progress in developmental biology, regenerative medicine, and synthetic\nbiology. Bioelectric signals, defined as voltage gradients across cell\nmembranes caused by ionic movements, play a role in regulating crucial\nprocesses including cellular differentiation, proliferation, apoptosis, and\ntissue morphogenesis. Recent studies demonstrate the ability to modulate these\nsignals to achieve controlled tissue regeneration and morphological outcomes in\norganisms such as planaria and frogs. However, significant knowledge gaps\nremain, particularly in predicting and controlling the spatial and temporal\ndynamics of membrane potentials (V_mem), understanding their regulatory roles\nin tissue and organ development, and exploring their therapeutic potential in\ndiseases. In this work we propose an experiment using Deep Reinforcement\nLearning (DRL) framework together with lab automation techniques for real-time\nmanipulation of bioelectric signals to guide tissue regeneration and\nmorphogenesis. The proposed framework should interact continuously with\nbiological systems, adapting strategies based on direct biological feedback.\nCombining DRL with real-time measurement techniques -- such as optogenetics,\nvoltage-sensitive dyes, fluorescent reporters, and advanced microscopy -- could\nprovide a comprehensive platform for precise bioelectric control, leading to\nimproved understanding of bioelectric mechanisms in morphogenesis, quantitative\nbioelectric models, identification of minimal experimental setups, and\nadvancements in bioelectric modulation techniques relevant to regenerative\nmedicine and cancer therapy. Ultimately, this research aims to utilize\nbioelectric signaling to develop new biomedical and bioengineering\napplications.",
+          "arxiv_id": "2503.13489v2"
+        },
+        {
+          "title": "Cell information processing via frequency encoding and excitability",
+          "year": "2023-12",
+          "abstract": "Cells continuously interact with their environment mediating their responses\nthrough signaling cascades. Very often, external stimuli induce pulsatile\nbehaviors in intermediaries of the cascade of increasing frequency with the\nstimulus strength. This is characteristic of intracellular Ca$^{2+}$ signals\ninvolving Ca$^{2+}$ release through Inositol Trisphosphate Receptors\n(IP$_3$Rs). The mean frequency of IP$_3$R-mediated Ca$^{2+}$ pulses has been\nobserved to scale exponentially with the stimulus strength in many cell types.\nIn this paper we use a simple ODE model of the intracellular Ca$^{2+}$ dynamics\nfor parameters for which there is one excitable fixed point. Including\nfluctuations through an additive noise term, we derive the mean escape rate\nfrom the stationary state and, thus, the mean interpulse time, as a function of\nthe fraction, $\\beta$, of readily openable IP$_3$Rs. Using an IP$_3$R kinetic\nmodel, experimental observations of spatially resolved Ca$^{2+}$ signals and\nprevious estimates of the IP$_3$ produced upon stimulation we quantify the\nfluctuations and relate $\\beta$ to [IP$_3$] and the stimulus strength. In this\nway we determine that the mean interpulse time can be approximated by an\nexponential function of the latter for ranges such that the covered mean time\nintervals are similar or larger than those observed experimentally. The study\nthus provides an easily interpretable explanation, applicable to other\npulsatile signaling intermediaries, of the observed exponential dependence\nbetween frequency and stimulus, a key feature that makes frequency encoding\nqualitatively different from other ways commonly used by cells to \"read\" their\nenvironment.",
+          "arxiv_id": "2312.17629v3"
+        },
+        {
+          "title": "Phenomenological analysis of simple ion channel block in large populations of uncoupled cardiomyocytes",
+          "year": "2023-01",
+          "abstract": "Current understanding of arrhythmia mechanisms and design of anti-arrhythmic\ndrug therapies hinges on the assumption that myocytes from the same region of a\nsingle heart have similar, if not identical, action potential waveforms and\ndrug responses. On the contrary, recent experiments reveal significant\nheterogeneity in uncoupled healthy myocytes both from different hearts as well\nas from identical regions within a single heart. In this work, a methodology is\ndeveloped for quantifying the individual electrophysiological properties of\nlarge numbers of uncoupled cardiomyocytes under ion channel block in terms of\nthe parameters values of a conceptual fast-slow model of electrical\nexcitability. The approach is applied to a population of nearly 500 rabbit\nventricular myocytes for which action potential duration (APD) before and after\nthe application of the drug nifedipine was experimentally measured (Lachaud et\nal., 2022, Cardiovasc. Res.). To this end, drug action is represented by a\nmultiplicative factor to an effective ion conductance, a closed form asymptotic\nexpression for APD is derived and inverted to determine model parameters as\nfunctions of APD and dAPD (drug-induced change in APD) for each myocyte. Two\nfree protocol-related quantities are calibrated to experiment using an\nadaptive-domain procedure based on an original assumption of optimal\nexcitability. The explicit APD expression and the resulting set of model\nparameter values allow (a) direct evaluation of conditions necessary to\nmaintain fixed APD or dAPD, (b) predictions of the proportion of cells\nremaining excitable after drug application, (c) predictions of stimulus period\ndependency and (d) predictions of dose-response curves, the latter being in\nagreement with additional experimental data.",
+          "arxiv_id": "2301.06878v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "A computational scheme connecting gene regulatory network dynamics with heterogeneous stem cell regeneration",
+          "year": "2024-04",
+          "abstract": "Stem cell regeneration is a vital biological process in self-renewing\ntissues, governing development and tissue homeostasis. Gene regulatory network\ndynamics are pivotal in controlling stem cell regeneration and cell type\ntransitions. However, integrating the quantitative dynamics of gene regulatory\nnetworks at the single-cell level with stem cell regeneration at the population\nlevel poses significant challenges. This study presents a computational\nframework connecting gene regulatory network dynamics with stem cell\nregeneration through a data-driven formulation of the inheritance function. The\ninheritance function captures epigenetic state transitions during cell division\nin heterogeneous stem cell populations. Our scheme allows the derivation of the\ninheritance function based on a hybrid model of cross-cell-cycle gene\nregulation network dynamics. The proposed scheme enables us to derive the\ninheritance function based on the hybrid model of cross-cell-cycle gene\nregulation network dynamics. By explicitly incorporating gene regulatory\nnetwork structure, it replicates cross-cell-cycling gene regulation dynamics\nthrough individual-cell-based modeling. The numerical scheme holds the\npotential for extension to diverse gene regulatory networks, facilitating a\ndeeper understanding of the connection between gene regulation dynamics and\nstem cell regeneration.",
+          "arxiv_id": "2404.11761v1"
+        },
+        {
+          "title": "Dynamics of cell-type transition mediated by epigenetic modifications",
+          "year": "2023-09",
+          "abstract": "Maintaining tissue homeostasis requires appropriate regulation of stem cell\ndifferentiation. The Waddington landscape posits that gene circuits in a cell\nform a potential landscape of different cell types, wherein cells follow\nattractors of the probability landscape to develop into distinct cell types.\nHowever, how adult stem cells achieve a delicate balance between self-renewal\nand differentiation remains unclear. We propose that random inheritance of\nepigenetic states plays a pivotal role in stem cell differentiation and present\na hybrid model of stem cell differentiation induced by epigenetic\nmodifications. Our comprehensive model integrates gene regulation networks,\nepigenetic state inheritance, and cell regeneration, encompassing multi-scale\ndynamics ranging from transcription regulation to cell population. Through\nmodel simulations, we demonstrate that random inheritance of epigenetic states\nduring cell divisions can spontaneously induce cell differentiation,\ndedifferentiation, and transdifferentiation. Furthermore, we investigate the\ninfluences of interfering with epigenetic modifications and introducing\nadditional transcription factors on the probabilities of dedifferentiation and\ntransdifferentiation, revealing the underlying mechanism of cell reprogramming.\nThis \\textit{in silico} model provides valuable insights into the intricate\nmechanism governing stem cell differentiation and cell reprogramming and offers\na promising path to enhance the field of regenerative medicine.",
+          "arxiv_id": "2309.07356v1"
+        },
+        {
+          "title": "Finding signatures of low-dimensional geometric landscapes in high-dimensional cell fate transitions",
+          "year": "2025-06",
+          "abstract": "Multicellular organisms develop a wide variety of highly-specialized cell\ntypes. The consistency and robustness of developmental cell fate trajectories\nsuggests that complex gene regulatory networks effectively act as\nlow-dimensional cell fate landscapes. A complementary set of works draws on the\ntheory of dynamical systems to argue that cell fate transitions can be\ncategorized into universal decision-making classes. However, the theory\nconnecting geometric landscapes and decision-making classes to high-dimensional\ngene expression space is still in its infancy. Here, we introduce a\nphenomenological model that allows us to identify gene expression signatures of\ndecision-making classes from single-cell RNA-sequencing time-series data. Our\nmodel combines low-dimensional gradient-like dynamical systems and\nhigh-dimensional Hopfield networks to capture the interplay between cell fate,\ngene expression, and signaling pathways. We apply our model to the maturation\nof alveolar cells in mouse lungs to show that the transient appearance of a\nmixed alveolar type 1/type 2 state suggests the triple cusp decision-making\nclass. We also analyze lineage-tracing data on hematopoetic differentiation and\nshow that bipotent neutrophil-monocyte progenitors likely undergo a\nheteroclinic flip bifurcation. Our results suggest it is possible to identify\nuniversal decision-making classes for cell fate transitions directly from data.",
+          "arxiv_id": "2506.04219v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Tilt-induced polar order and topological defects in growing bacterial populations",
+          "year": "2021-06",
+          "abstract": "Rod-shaped bacteria, such as Escherichia coli, commonly live forming mounded\ncolonies. They initially grow two-dimensionally on a surface and finally\nachieve three-dimensional growth. While it was recently reported that\nthree-dimensional growth is promoted by topological defects of winding number\n$+1/2$ in populations of motile bacteria, how cellular alignment plays a role\nin non-motile cases is largely unknown. Here, we investigate the relevance of\ntopological defects in colony formation processes of non-motile E. coli\npopulations, and found that both $\\pm 1/2$ topological defects contribute to\nthe three-dimensional growth. Analyzing the cell flow in the bottom layer of\nthe colony, we observe that $+1/2$ defects attract cells and $-1/2$ defects\nrepel cells, in agreement with previous studies on motile cells, in the initial\nstage of the colony growth. However, later, cells gradually flow toward $-1/2$\ndefects as well, exhibiting a sharp contrast to the existing knowledge. By\ninvestigating three-dimensional cell orientations by confocal microscopy, we\nfind strong vertical tilting of cells near the defects. Crucially, this leads\nto the emergence of a polar order in the otherwise nematic two-dimensional cell\norientation. We extend the theory of active nematics by incorporating this\npolar order and the vertical tilting, which successfully explains the influx\ntoward $-1/2$ defects in terms of a polarity-induced force. Our work reveals\nthat three-dimensional cell orientations may result in drastic changes in\nproperties of active nematics, especially those of topological defects, which\nmay be generically relevant in active matter systems driven by cellular growth\ninstead of self-propulsion.",
+          "arxiv_id": "2106.10954v3"
+        },
+        {
+          "title": "Motility-induced buckling and glassy dynamics regulate three-dimensional transitions of bacterial monolayers",
+          "year": "2020-03",
+          "abstract": "Many mature bacterial colonies and biofilms are complex three-dimensional\n(3D) structures. One key step in their developmental program is a transition\nfrom a two-dimensional (2D) monolayer into a 3D architecture. Despite the\nimportance of controlling the growth of microbial colonies and biofilms in a\nvariety of medical and industrial settings, the underlying physical mechanisms\nbehind single-cell dynamics, collective behaviors of densely-packed cells, and\n3D complex colony expansion remain largely unknown. In this work, we explore\nthe mechanisms behind the 2D-to-3D transition of motile Pseudomonas aeruginosa\ncolonies; we provide a new motility-induced, rate-dependent buckling mechanism\nfor their out-of-plane growth. We find that swarming of motile bacterial\ncolonies generate sustained in-plane flows. We show that the viscous shear\nstresses and dynamic pressures arising from these flows allow cells to overcome\ncell-substrate adhesion, leading to buckling of bacterial monolayers and growth\ninto the third dimension. Modeling bacterial monolayers as 2D fluid films, we\nidentify universal relationships that elucidate the competition between\nin-plane viscous stresses, pressure and cell-substrate adhesion. Furthermore,\nwe show that bacterial monolayers can exhibit crossover from swarming to\nkinetically-arrested, glassy-like states above an onset density, resulting in\ndistinct 2D-to-3D transition mechanisms. Combining experimental observations of\nP. aeruginosa colonies at single-cell resolution, molecular dynamics\nsimulations of active systems, and theories of glassy dynamics and 2D fluid\nfilms, we develop a dynamical state diagram that predicts the state of the\ncolony, and the mechanisms governing their 2D-to-3D transitions.",
+          "arxiv_id": "2003.05618v1"
+        },
+        {
+          "title": "Biofilm mechanics and patterns",
+          "year": "2024-01",
+          "abstract": "From multicellular tissues to bacterial colonies, three dimensional cellular\nstructures arise through the interaction of cellular activities and mechanical\nforces. Simple bacterial communities provide model systems for analyzing such\ninteraction. Biofilms are bacterial aggregates attached to wet surfaces and\nencased in a self-produced polymeric matrix. Biofilms in flows form filamentary\nstructures that contrast with the wrinkled layers observed on air/solid\ninterfaces. We are able to reproduce both types of shapes through elastic rod\nand plate models that incorporate information from the biomass production and\ndifferentiations process, such as growth rates, growth tensors or inner\nstresses, as well as constraints imposed by the interaction with environment. A\nmore precise study of biofilm dynamics requires tackling water absorption from\nits surroundings and fluid transport within the biological system. This process\nalters the material properties of the biofilm and the overall stresses. We\nanalyze whether poroelastic approaches can provide a suitable combined\ndescription of fluid-like and solid-like biofilm behavior.",
+          "arxiv_id": "2401.05323v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "CellVerse: Do Large Language Models Really Understand Cell Biology?",
+          "year": "2025-05",
+          "abstract": "Recent studies have demonstrated the feasibility of modeling single-cell data\nas natural languages and the potential of leveraging powerful large language\nmodels (LLMs) for understanding cell biology. However, a comprehensive\nevaluation of LLMs' performance on language-driven single-cell analysis tasks\nstill remains unexplored. Motivated by this challenge, we introduce CellVerse,\na unified language-centric question-answering benchmark that integrates four\ntypes of single-cell multi-omics data and encompasses three hierarchical levels\nof single-cell analysis tasks: cell type annotation (cell-level), drug response\nprediction (drug-level), and perturbation analysis (gene-level). Going beyond\nthis, we systematically evaluate the performance across 14 open-source and\nclosed-source LLMs ranging from 160M to 671B on CellVerse. Remarkably, the\nexperimental results reveal: (1) Existing specialist models (C2S-Pythia) fail\nto make reasonable decisions across all sub-tasks within CellVerse, while\ngeneralist models such as Qwen, Llama, GPT, and DeepSeek family models exhibit\npreliminary understanding capabilities within the realm of cell biology. (2)\nThe performance of current LLMs falls short of expectations and has substantial\nroom for improvement. Notably, in the widely studied drug response prediction\ntask, none of the evaluated LLMs demonstrate significant performance\nimprovement over random guessing. CellVerse offers the first large-scale\nempirical demonstration that significant challenges still remain in applying\nLLMs to cell biology. By introducing CellVerse, we lay the foundation for\nadvancing cell biology through natural languages and hope this paradigm could\nfacilitate next-generation single-cell analysis.",
+          "arxiv_id": "2505.07865v1"
+        },
+        {
+          "title": "A Multi-Modal AI Copilot for Single-Cell Analysis with Instruction Following",
+          "year": "2025-01",
+          "abstract": "Large language models excel at interpreting complex natural language\ninstructions, enabling them to perform a wide range of tasks. In the life\nsciences, single-cell RNA sequencing (scRNA-seq) data serves as the \"language\nof cellular biology\", capturing intricate gene expression patterns at the\nsingle-cell level. However, interacting with this \"language\" through\nconventional tools is often inefficient and unintuitive, posing challenges for\nresearchers. To address these limitations, we present InstructCell, a\nmulti-modal AI copilot that leverages natural language as a medium for more\ndirect and flexible single-cell analysis. We construct a comprehensive\nmulti-modal instruction dataset that pairs text-based instructions with\nscRNA-seq profiles from diverse tissues and species. Building on this, we\ndevelop a multi-modal cell language architecture capable of simultaneously\ninterpreting and processing both modalities. InstructCell empowers researchers\nto accomplish critical tasks-such as cell type annotation, conditional\npseudo-cell generation, and drug sensitivity prediction-using straightforward\nnatural language commands. Extensive evaluations demonstrate that InstructCell\nconsistently meets or exceeds the performance of existing single-cell\nfoundation models, while adapting to diverse experimental conditions. More\nimportantly, InstructCell provides an accessible and intuitive tool for\nexploring complex single-cell data, lowering technical barriers and enabling\ndeeper biological insights.",
+          "arxiv_id": "2501.08187v2"
+        },
+        {
+          "title": "scI2CL: Effectively Integrating Single-cell Multi-omics by Intra- and Inter-omics Contrastive Learning",
+          "year": "2025-08",
+          "abstract": "Single-cell multi-omics data contain huge information of cellular states, and\nanalyzing these data can reveal valuable insights into cellular heterogeneity,\ndiseases, and biological processes. However, as cell differentiation \\&\ndevelopment is a continuous and dynamic process, it remains challenging to\ncomputationally model and infer cell interaction patterns based on single-cell\nmulti-omics data. This paper presents scI2CL, a new single-cell multi-omics\nfusion framework based on intra- and inter-omics contrastive learning, to learn\ncomprehensive and discriminative cellular representations from complementary\nmulti-omics data for various downstream tasks. Extensive experiments of four\ndownstream tasks validate the effectiveness of scI2CL and its superiority over\nexisting peers. Concretely, in cell clustering, scI2CL surpasses eight\nstate-of-the-art methods on four widely-used real-world datasets. In cell\nsubtyping, scI2CL effectively distinguishes three latent monocyte cell\nsubpopulations, which are not discovered by existing methods. Simultaneously,\nscI2CL is the only method that correctly constructs the cell developmental\ntrajectory from hematopoietic stem and progenitor cells to Memory B cells. In\naddition, scI2CL resolves the misclassification of cell types between two\nsubpopulations of CD4+ T cells, while existing methods fail to precisely\ndistinguish the mixed cells. In summary, scI2CL can accurately characterize\ncross-omics relationships among cells, thus effectively fuses multi-omics data\nand learns discriminative cellular representations to support various\ndownstream analysis tasks.",
+          "arxiv_id": "2508.18304v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Coagulapathies after vaccination against SARS-CoV-2 may be derived from a combination effect of SARS-CoV-2 spike protein and adenovirus vector-triggered signaling pathways",
+          "year": "2021-08",
+          "abstract": "The novel coronavirus SARS-CoV-2 has resulted in a global pandemic with\nworldwide 6-digital infection rates and thousands death tolls daily. Enormeous\neffords are undertaken to achieve high coverage of immunization in order to\nreach herd immunity to stop spreading of SARS-CoV-2 infection. Several\nSARS-CoV-2 vaccines, based either on mRNA, viral vectors, or inactivated\nSARS-CoV-2 virus have been approved and are being applied worldwide. However,\nrecently increased numbers of normally very rare types of thromboses associated\nwith thrombocytopenia have been reported in particular in the context of the\nadenoviral vector vaccine ChAdOx1 nCoV-19 from Astra Zeneca. While statistical\nprevalence of these side effects seem to correlate with this particular vaccine\ntype, i.e. adenonoviral vector based vaccines, the exact molecular mechanisms\nare still not clear. The present review summarizes current data and hypotheses\nfor molecular and cellular mechanisms into one integrated hypothesis indicating\nthat coagulopathies, including thromboses, thrombocytopenia and other related\nside effects are correlated to an interplay of the two components in the\nvaccine, i.e. the spike antigen and the adenoviral vector, with the innate and\nimmune system which under certain circumstances can imitate the picture of a\nlimited COVID-19 pathological picture.",
+          "arxiv_id": "2109.00089v1"
+        },
+        {
+          "title": "Within host dynamics of SARS-CoV-2 in humans: Modeling immune responses and antiviral treatments",
+          "year": "2020-06",
+          "abstract": "In December 2019, a newly discovered SARS-CoV-2 virus was emerged from China\nand propagated worldwide as a pandemic. In the absence of preventive medicine\nor a ready to use vaccine, mathematical models can provide useful scientific\ninsights about transmission patterns and targets for drug development. In this\nstudy, we propose a within-host mathematical model of SARS-CoV-2 infection\nconsidering innate and adaptive immune responses. We analyze the equilibrium\npoints of the proposed model and obtain an expression of the basic reproduction\nnumber. We then numerically show the existence of a transcritical bifurcation.\nThe proposed model is calibrated to real viral load data of two COVID-19\npatients. Using the estimated parameters, we perform global sensitivity\nanalysis with respect to the peak of viral load. Finally, we study the efficacy\nof antiviral drugs and vaccination on the dynamics of SARS-CoV-2 infection. Our\nresults suggest that blocking the production of the virus by infected cells\ndecreases the viral load more than reducing the infection rate of healthy\ncells. Vaccination is also found useful but during the vaccine development\nphase, blocking virus production from infected cells can be targeted for\nantiviral drug development.",
+          "arxiv_id": "2006.02936v2"
+        },
+        {
+          "title": "Model-based cellular kinetic analysis of SARS-CoV-2 infection: different immune response modes and treatment strategies",
+          "year": "2021-01",
+          "abstract": "Increasing number in global COVID-19 cases demands for mathematical model to\nanalyze the interaction between the virus dynamics and the response of innate\nand adaptive immunity. Here, based on the assumption of a weak and delayed\nresponse of the innate and adaptive immunity in SARS-CoV-2 infection, we\nconstructed a mathematical model to describe the dynamic processes of immune\nsystem. Integrating theoretical results with clinical COVID-19 patients' data,\nwe classified the COVID-19 development processes into three typical modes of\nimmune responses, correlated with the clinical classification of mild &\nmoderate, severe and critical patients. We found that the immune efficacy (the\nability of host to clear virus and kill infected cells) and the lymphocyte\nsupply (the abundance and pool of na\\\"ive T and B cell) play important roles in\nthe dynamic process and determine the clinical outcome, especially for the\nsevere and critical patients. Furthermore, we put forward possible treatment\nstrategies for the three typical modes of immune response. We hope our results\ncan help to understand the dynamical mechanism of the immune response against\nSARS-CoV-2 infection, and to be useful for the treatment strategies and vaccine\ndesign.",
+          "arxiv_id": "2101.04477v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Collective gradient sensing with limited positional information",
+          "year": "2021-10",
+          "abstract": "Eukaryotic cells sense chemical gradients to decide where and when to move.\nClusters of cells can sense gradients more accurately than individual cells by\nintegrating measurements of the concentration made across the cluster. Is this\ngradient sensing accuracy impeded when cells have limited knowledge of their\nposition within the cluster, i.e. limited positional information? We apply\nmaximum likelihood estimation to study gradient sensing accuracy of a cluster\nof cells with finite positional information. If cells must estimate their\nlocation within the cluster, this lowers the accuracy of collective gradient\nsensing. We compare our results with a tug-of-war model where cells respond to\nthe gradient by a mechanism of collective guidance without relying on their\npositional information. As the cell positional uncertainty increases, there is\na trade-off where the tug-of-war model responds more accurately to the chemical\ngradient. However, for sufficiently large cell clusters or shallow chemical\ngradients, the tug-of-war model will always be suboptimal to one that\nintegrates information from all cells, even if positional uncertainty is high.",
+          "arxiv_id": "2110.10260v1"
+        },
+        {
+          "title": "Optimal Cell Shape for Accurate Chemical Gradient Sensing in Eukaryote Chemotaxis",
+          "year": "2025-03",
+          "abstract": "Accurate gradient sensing is crucial for efficient chemotaxis in noisy\nenvironments, but the relationship between cell shape deformations and sensing\naccuracy is not well understood. Using a theoretical framework based on maximum\nlikelihood estimation, we show that the receptor dispersion, quantified by cell\nshape convex hull, fundamentally limits gradient sensing accuracy. Cells with a\nconcave shape and isotropic error space achieve optimal performance in gradient\ndetection. This concave shape, resulting from active protrusions or\ncontractions, can significantly improve gradient sensing accuracy at the cost\nof increased energy expenditure. By balancing sensing accuracy and deformation\ncost, we predict that a concave, three-branched shape as optimal for cells in\nshallow gradients. To achieve efficient chemotaxis, our theory suggests that a\ncell should adopt a repeating \"run-and-expansion\" cycle. Our theoretical\npredictions align well with experimental observations, implying that the fast\namoeboid cell motion is optimized near the physical limit for chemotaxis. This\nstudy highlights the crucial role of active cell shape deformation in\nfacilitating accurate chemotaxis.",
+          "arxiv_id": "2503.04716v1"
+        },
+        {
+          "title": "Information bounds on the accuracy of cell polarization",
+          "year": "2025-04",
+          "abstract": "Here we characterized an information measure for cell polarity that applies\nto non-motile cells responding to a chemical gradient. The central idea is that\npolarization represents information about the direction of the gradient. We\napplied a theory of optimal gradient sensing and response in the presence of\nexternal noise based on the information capacity of a Gaussian channel. First,\nwe formulated an information framework that describes spatial gradient sensing\nand polarization response. As part of this section, we modeled ligand diffusion\nand receptor-binding dynamics as a mixed Poisson distribution, confirming the\nsingle receptor accuracy limits derived by ten Wolde and colleagues. Second, we\nperformed numerical calculations of stochastic ligand levels at the cell\nsurface to estimate the information provided about the directional component of\nthe gradient vector, which was close to the Gaussian channel bound for low\nsignal-to-noise ratios. Third, we used the information framework to evaluate\nthe noise-robustness of three generic models of cell polarity, demonstrating\nthat a filter-amplifier architecture and time integration can attenuate the\ndetrimental impact of noise on polarity so that the model can approach the\ntheoretical limits. Fourth, we compared the theory to published experimental\ndata on yeast mating projection growth in a pheromone gradient, identifying the\nligand association rate and integration time as two key parameters affecting\ndirectional accuracy. By varying these parameters, we showed that for certain\nranges the theory is roughly in agreement with the data, and that the slow\nbinding rate constant is a key limiting factor. We concluded that temporal\naveraging can help overcome the slow binding rate to achieve greater accuracy,\nbut with the drawback of a slow mating response.",
+          "arxiv_id": "2504.08164v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Continuous Approximation of Stochastic Maps for Modeling Asymmetric Cell Division",
+          "year": "2023-07",
+          "abstract": "Cell size control and homeostasis is a major topic in cell biology yet to be\nfully understood. Several growth laws like the timer, adder, and sizer were\nproposed, and mathematical approaches that model cell growth and division were\ndeveloped. This study focuses on utilizing stochastic map modeling for\ninvestigating asymmetric cell division. We establish a mapping between the\ndescription of cell growth and division and the Ornstein-Uhlenbeck process with\ndichotomous noise. We leverage this mapping to achieve analytical solutions and\nderive a closed-form expression for the stable cell size distribution under\nasymmetric division. To validate our findings, we conduct numerical simulations\nencompassing several cell growth scenarios. Our approach allows us to obtain a\nprecise criterion for a bi-phasic behavior of the cell size. While for the case\nof the sizer scenario, a transition from the uni-modal phase to bi-modal is\nalways possible, given sufficiently large asymmetry at the division, the\naffine-linear approximation of the adder scenario invariably yields uni-modal\ndistribution.",
+          "arxiv_id": "2307.09391v1"
+        },
+        {
+          "title": "Cellular resource allocation strategies for cell size and shape control in bacteria",
+          "year": "2021-10",
+          "abstract": "Bacteria are highly adaptive microorganisms that thrive in a wide range of\ngrowth conditions via changes in cell morphologies and macromolecular\ncomposition. How bacterial morphologies are regulated in diverse environmental\nconditions is a longstanding question. Regulation of cell size and shape\nimplies control mechanisms that couple the growth and division of bacteria to\ntheir cellular environment and macromolecular composition. In the past decade,\nsimple quantitative laws have emerged that connect cell growth to proteomic\ncomposition and the nutrient availability. However, the relationships between\ncell size, shape and growth physiology remain challenging to disentangle and\nunifying models are lacking. In this review, we focus on regulatory models of\ncell size control that reveal the connections between bacterial cell morphology\nand growth physiology. In particular, we discuss how changes in nutrient\nconditions and translational perturbations regulate the cell size, growth rate\nand proteome composition. Integrating quantitative models with experimental\ndata, we identify the physiological principles of bacterial size regulation,\nand discuss the optimization strategies of cellular resource allocation for\nsize control.",
+          "arxiv_id": "2110.08575v1"
+        },
+        {
+          "title": "Determining cancer cells division strategy",
+          "year": "2023-06",
+          "abstract": "Heterogeneity in the size distribution of cancer cell populations has been\nrecently linked to drug resistance and invasiveness. However, despite many\nprogresses have been made in understanding how such heterogeneous size\ndistributions arise in fast-proliferating cell types -like bacteria and yeast-,\ncomprehensive investigations on cancer cell populations are still lacking\nmainly due to the difficulties of monitoring the proliferation of the time\nscales typical of mammalian cells. From a reductionist cell dynamics point of\nview, the strategies allowing size homeostasis are roughly grouped into three\nclasses, \\emph{i.e.} timer, sizer, or adder. These strategies are empirically\ndistinguishable given the phenomenological measurable relationship between the\ncell size at birth and at division, which requires following the proliferation\nat the single-cell level.\n  Here, we show how it is possible to infer the growth regime and division\nstrategy of leukemia cell populations using live cell fluorescence labeling and\nflow cytometry in combination with a quantitative analytical model where both\ncell growth and division rates depend on powers of the cell size.\n  Using our novel approach, we found that the dynamics of the size distribution\nof leukemia Jurkat T-cells is quantitatively reproduced by (i) a sizer-like\ndivision strategy, with (ii) division times following an Erlang distribution\ngiven by the sum of at least three independent exponentially-distributed times\nand (iii) fluctuations up to 15\\% of the inherited fraction of size at division\nwith respect to the mother cell size. Finally, we note that our experimental\nand theoretical apparatus can be easily extended to other cell types and\nenvironmental conditions, allowing for a comprehensive characterization of the\ngrowth and division model different cells can adopt.",
+          "arxiv_id": "2306.10905v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "Sensitivity analysis-guided model reduction of a mathematical model of pembrolizumab therapy for de novo metastatic MSI-H/dMMR colorectal cancer",
+          "year": "2025-05",
+          "abstract": "Colorectal cancer (CRC) is the third most commonly diagnosed cancer worldwide\nand the leading cause of cancer-related deaths in adults under 55, involving a\ncomplex interplay of biological processes such as dendritic cell (DC)\nmaturation and migration, T cell activation and proliferation, cytokine\nproduction, and T cell and natural killer (NK) cell-mediated cancer cell\nkilling. Microsatellite instability-high (MSI-H) CRC and deficient mismatch\nrepair (dMMR) CRC constitute 15% of all CRC, and 4% of metastatic CRC, and\nexhibit remarkable responsiveness to immunotherapy, especially with PD-1\ninhibitors such as pembrolizumab. Mathematical models of the underlying\nimmunobiology and the interactions underpinning immune checkpoint blockade\noffer mechanistic insights into tumour-immune dynamics and provide avenues for\ntreatment optimisation and the identification of novel therapeutic targets. We\nused our data-driven model of de novo metastatic MSI-H/dMMR CRC (dnmMCRC) and\nperformed sensitivity analysis-guided model reduction using the FAST and EFAST\nmethods. In this work, we constructed two simplified models of dnmMCRC: one\nthat faithfully reproduces all of the original model's trajectories, and a\nsecond, minimal model that accurately replicates the original dynamics while\nbeing highly extensible for future inclusion of additional components to\nexplore various aspects of the anti-tumour immune response.",
+          "arxiv_id": "2505.18920v2"
+        },
+        {
+          "title": "Optimisation of neoadjuvant pembrolizumab therapy for locally advanced MSI-H/dMMR colorectal cancer using data-driven delay integro-differential equations",
+          "year": "2024-11",
+          "abstract": "Colorectal cancer (CRC) poses a major public health challenge due to its\nincreasing prevalence, particularly among younger populations. Microsatellite\ninstability-high (MSI-H) CRC and deficient mismatch repair (dMMR) CRC\nconstitute 15% of all CRC and exhibit remarkable responsiveness to\nimmunotherapy, especially with PD-1 inhibitors. Despite this, there is a\nsignificant need to optimise immunotherapeutic regimens to maximise clinical\nefficacy and patient quality of life whilst minimising monetary costs. To\naddress this, we employ a novel framework driven by delay integro-differential\nequations to model the interactions among cancer cells, immune cells, and\nimmune checkpoints. Several of these components are being modelled\ndeterministically for the first time in cancer, paving the way for a deeper\nunderstanding of the complex underlying immune dynamics. We consider two\ncompartments: the tumour site and the tumour-draining lymph node, incorporating\nphenomena such as dendritic cell (DC) migration, T cell proliferation, and CD8+\nT cell exhaustion and reinvigoration. Parameter values and initial conditions\nare derived from experimental data, integrating various pharmacokinetic,\nbioanalytical, and radiographic studies, along with deconvolution of bulk\nRNA-sequencing data from the TCGA COADREAD and GSE26571 datasets. We finally\noptimised neoadjuvant treatment with pembrolizumab, a widely used PD-1\ninhibitor, to balance efficacy, efficiency, and toxicity in locally advanced\nMSI-H/dMMR CRC patients. We mechanistically analysed factors influencing\ntreatment success and improved upon currently FDA-approved therapeutic regimens\nfor metastatic MSI-H/dMMR CRC, demonstrating that a single medium-to-high dose\nof pembrolizumab may be sufficient for effective tumour eradication while being\nefficient, safe and practical.",
+          "arxiv_id": "2411.12123v8"
+        },
+        {
+          "title": "Oscillations of the number of immune system cells in a space-velocity thermostatted kinetic theory model of tumor growth",
+          "year": "2021-04",
+          "abstract": "The competition between cancer cells and immune system cells in inhomogeneous\nconditions is described at cell scale within the framework of the thermostatted\nkinetic theory. Cell learning is reproduced by increased cell activity during\nfavorable interactions. The cell activity fluctuations are controlled by a\nthermostat. The direction of cell velocity is changed according to stochastic\nrules mimicking a dense fluid. We develop a kinetic Monte Carlo algorithm\ninspired from the direct simulation Monte Carlo (DSMC) method initially used\nfor dilute gases. The evolution of an initially localized tumor is analyzed.\nQualitatively different behaviors are observed as the field regulating activity\nfluctuations decreases. For high field values, i.e. efficient thermalization,\ncancer is controlled. For small field values, cancer rapidly and monotonously\nescapes from immunosurveillance. For the critical field value separating these\ntwo domains, the 3E's of immunotherapy are reproduced, with an apparent initial\nelimination of cancer, a long quasi-equilibrium period followed by large\nfluctuations, and the final escape of cancer, even for a favored production of\nimmune system cells. For field values slightly smaller than the critical value,\nmore regular oscillations of the number of immune system cells are\nspontaneously observed in agreement with clinical observations. The\nantagonistic effects that the stimulation of the immune system may have on\noncogenesis are reproduced in the model by activity-weighted rate constants for\nthe autocatalytic productions of immune system cells and cancer cells. Local\nfavorable conditions for the launching of the oscillations are met in the\nfluctuating inhomogeneous system, able to generate a small cluster of immune\nsystem cells with larger activities than those of the surrounding cancer cells.",
+          "arxiv_id": "2104.13694v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:42:49Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

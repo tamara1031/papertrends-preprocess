@@ -1,0 +1,2272 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_games_game_learning_player",
+        "keywords": [
+          [
+            "games",
+            0.03253695686596403
+          ],
+          [
+            "game",
+            0.021436631147927203
+          ],
+          [
+            "learning",
+            0.01693620080047475
+          ],
+          [
+            "player",
+            0.016134067429367807
+          ],
+          [
+            "Nash",
+            0.014772244939351841
+          ],
+          [
+            "equilibrium",
+            0.01461437254996319
+          ],
+          [
+            "strategies",
+            0.01298335429727418
+          ],
+          [
+            "players",
+            0.012051511614524092
+          ],
+          [
+            "algorithm",
+            0.011629934824173164
+          ],
+          [
+            "sum",
+            0.01092333101992034
+          ]
+        ],
+        "count": 1686
+      },
+      "1": {
+        "name": "1_allocation_agents_envy_allocations",
+        "keywords": [
+          [
+            "allocation",
+            0.030736320013408282
+          ],
+          [
+            "agents",
+            0.030172007792213747
+          ],
+          [
+            "envy",
+            0.026752928153173854
+          ],
+          [
+            "allocations",
+            0.02410134534879135
+          ],
+          [
+            "valuations",
+            0.023105459989233152
+          ],
+          [
+            "fairness",
+            0.02060576117349399
+          ],
+          [
+            "items",
+            0.020293751433636032
+          ],
+          [
+            "goods",
+            0.019880510255579936
+          ],
+          [
+            "fair",
+            0.019771538137212854
+          ],
+          [
+            "EFX",
+            0.019116348566063986
+          ]
+        ],
+        "count": 638
+      },
+      "2": {
+        "name": "2_voting_voters_rules_candidates",
+        "keywords": [
+          [
+            "voting",
+            0.04506015068730346
+          ],
+          [
+            "voters",
+            0.03170435090344144
+          ],
+          [
+            "rules",
+            0.02832197087312841
+          ],
+          [
+            "candidates",
+            0.026207875170526626
+          ],
+          [
+            "rule",
+            0.01977247242481636
+          ],
+          [
+            "elections",
+            0.018009209939437956
+          ],
+          [
+            "candidate",
+            0.016646368591733764
+          ],
+          [
+            "committee",
+            0.016513254749070824
+          ],
+          [
+            "preferences",
+            0.015841079858633006
+          ],
+          [
+            "election",
+            0.015781959927800387
+          ]
+        ],
+        "count": 525
+      },
+      "3": {
+        "name": "3_auctions_auction_revenue_price",
+        "keywords": [
+          [
+            "auctions",
+            0.02945243926793667
+          ],
+          [
+            "auction",
+            0.026863841011271386
+          ],
+          [
+            "revenue",
+            0.024829314794398722
+          ],
+          [
+            "price",
+            0.022793134889741204
+          ],
+          [
+            "optimal",
+            0.02004679185991914
+          ],
+          [
+            "mechanism",
+            0.018571821419158002
+          ],
+          [
+            "bidders",
+            0.01818475927379424
+          ],
+          [
+            "seller",
+            0.017044401997481487
+          ],
+          [
+            "bidding",
+            0.016019874766179158
+          ],
+          [
+            "mechanisms",
+            0.015168746819970623
+          ]
+        ],
+        "count": 519
+      },
+      "4": {
+        "name": "4_principal_agent_information_sender",
+        "keywords": [
+          [
+            "principal",
+            0.027066308300993647
+          ],
+          [
+            "agent",
+            0.02397676876727474
+          ],
+          [
+            "information",
+            0.019489331158604548
+          ],
+          [
+            "sender",
+            0.017293654437272644
+          ],
+          [
+            "optimal",
+            0.01720881355636133
+          ],
+          [
+            "agents",
+            0.0160275364734311
+          ],
+          [
+            "problem",
+            0.014910022019772318
+          ],
+          [
+            "receiver",
+            0.014858746133807313
+          ],
+          [
+            "regret",
+            0.01376712524965797
+          ],
+          [
+            "contract",
+            0.012264240525325515
+          ]
+        ],
+        "count": 434
+      },
+      "5": {
+        "name": "5_blockchain_protocol_block_transaction",
+        "keywords": [
+          [
+            "blockchain",
+            0.03043172396937459
+          ],
+          [
+            "protocol",
+            0.01959802372134635
+          ],
+          [
+            "block",
+            0.01888015593300775
+          ],
+          [
+            "transaction",
+            0.017086544895087773
+          ],
+          [
+            "mechanism",
+            0.015659101735843603
+          ],
+          [
+            "mining",
+            0.015536251413341208
+          ],
+          [
+            "transactions",
+            0.015454262530751363
+          ],
+          [
+            "market",
+            0.014951600588378753
+          ],
+          [
+            "miners",
+            0.014393586386325595
+          ],
+          [
+            "protocols",
+            0.014329037192527646
+          ]
+        ],
+        "count": 423
+      },
+      "6": {
+        "name": "6_matching_stable_preferences_stable matching",
+        "keywords": [
+          [
+            "matching",
+            0.06291478031274435
+          ],
+          [
+            "stable",
+            0.0464653489034658
+          ],
+          [
+            "preferences",
+            0.027573359095032755
+          ],
+          [
+            "stable matching",
+            0.024589429420397938
+          ],
+          [
+            "matchings",
+            0.02448050424946767
+          ],
+          [
+            "problem",
+            0.021923967340948022
+          ],
+          [
+            "Stable",
+            0.019080461099374106
+          ],
+          [
+            "Matching",
+            0.01817944544827024
+          ],
+          [
+            "agents",
+            0.017005638576043994
+          ],
+          [
+            "markets",
+            0.01659671187752281
+          ]
+        ],
+        "count": 285
+      },
+      "7": {
+        "name": "7_defender_attacker_game_security",
+        "keywords": [
+          [
+            "defender",
+            0.028017734628087
+          ],
+          [
+            "attacker",
+            0.026933515167972613
+          ],
+          [
+            "game",
+            0.025356305048016448
+          ],
+          [
+            "security",
+            0.025011769463140075
+          ],
+          [
+            "attacks",
+            0.019526769383116743
+          ],
+          [
+            "cyber",
+            0.018907084433104803
+          ],
+          [
+            "attack",
+            0.016220316176218535
+          ],
+          [
+            "defense",
+            0.015908974346923666
+          ],
+          [
+            "strategy",
+            0.015500988838906887
+          ],
+          [
+            "strategies",
+            0.015425881101703509
+          ]
+        ],
+        "count": 262
+      },
+      "8": {
+        "name": "8_congestion_traffic_time_network",
+        "keywords": [
+          [
+            "congestion",
+            0.02426529376025689
+          ],
+          [
+            "traffic",
+            0.018685975140772613
+          ],
+          [
+            "time",
+            0.018381520633508532
+          ],
+          [
+            "network",
+            0.018045386453430318
+          ],
+          [
+            "users",
+            0.01610881756323252
+          ],
+          [
+            "routing",
+            0.014985784408873
+          ],
+          [
+            "equilibrium",
+            0.014705107855592536
+          ],
+          [
+            "cost",
+            0.014672661613927725
+          ],
+          [
+            "model",
+            0.014664236351964384
+          ],
+          [
+            "travel",
+            0.01410502216649588
+          ]
+        ],
+        "count": 257
+      },
+      "9": {
+        "name": "9_games_cooperative_game_coalition",
+        "keywords": [
+          [
+            "games",
+            0.03124334613365803
+          ],
+          [
+            "cooperative",
+            0.022957024913103422
+          ],
+          [
+            "game",
+            0.022402990178776377
+          ],
+          [
+            "coalition",
+            0.02220657508417234
+          ],
+          [
+            "network",
+            0.020851749464388874
+          ],
+          [
+            "core",
+            0.020736447194055232
+          ],
+          [
+            "value",
+            0.019864594112042725
+          ],
+          [
+            "Shapley",
+            0.01772031087234378
+          ],
+          [
+            "networks",
+            0.015973524649495013
+          ],
+          [
+            "agents",
+            0.015070979277264527
+          ]
+        ],
+        "count": 197
+      },
+      "10": {
+        "name": "10_LLMs_AI_human_LLM",
+        "keywords": [
+          [
+            "LLMs",
+            0.04410454354851051
+          ],
+          [
+            "AI",
+            0.03549571909595006
+          ],
+          [
+            "human",
+            0.029664858598702337
+          ],
+          [
+            "LLM",
+            0.02902987179707114
+          ],
+          [
+            "language",
+            0.027615598950608576
+          ],
+          [
+            "models",
+            0.02273478041725502
+          ],
+          [
+            "Language",
+            0.01979258631868749
+          ],
+          [
+            "game",
+            0.019188169828881857
+          ],
+          [
+            "language models",
+            0.01647375741566706
+          ],
+          [
+            "Large",
+            0.014762118681963171
+          ]
+        ],
+        "count": 168
+      },
+      "11": {
+        "name": "11_data_Federated_learning_federated",
+        "keywords": [
+          [
+            "data",
+            0.047797534705811516
+          ],
+          [
+            "Federated",
+            0.04143696963817472
+          ],
+          [
+            "learning",
+            0.03501396129552402
+          ],
+          [
+            "federated",
+            0.03260740099791279
+          ],
+          [
+            "model",
+            0.03183351668638347
+          ],
+          [
+            "federated learning",
+            0.02685574988805588
+          ],
+          [
+            "privacy",
+            0.02683502516918214
+          ],
+          [
+            "training",
+            0.025351350836147937
+          ],
+          [
+            "Learning",
+            0.025247420681047655
+          ],
+          [
+            "incentive",
+            0.015938387919197612
+          ]
+        ],
+        "count": 134
+      },
+      "12": {
+        "name": "12_resource_edge_computing_IoT",
+        "keywords": [
+          [
+            "resource",
+            0.029241578014610414
+          ],
+          [
+            "edge",
+            0.027257245017676807
+          ],
+          [
+            "computing",
+            0.021411049139650452
+          ],
+          [
+            "IoT",
+            0.019912947138411893
+          ],
+          [
+            "allocation",
+            0.01974206035880223
+          ],
+          [
+            "resources",
+            0.017723342606281074
+          ],
+          [
+            "service",
+            0.01752641531138816
+          ],
+          [
+            "devices",
+            0.017150639339943825
+          ],
+          [
+            "resource allocation",
+            0.016474603774202425
+          ],
+          [
+            "offloading",
+            0.016385175656184955
+          ]
+        ],
+        "count": 114
+      },
+      "13": {
+        "name": "13_energy_market_electricity_trading",
+        "keywords": [
+          [
+            "energy",
+            0.0668489598006881
+          ],
+          [
+            "market",
+            0.04734153412887388
+          ],
+          [
+            "electricity",
+            0.02276219217949046
+          ],
+          [
+            "trading",
+            0.020305656731909923
+          ],
+          [
+            "markets",
+            0.01873720393652334
+          ],
+          [
+            "Energy",
+            0.01865026998132754
+          ],
+          [
+            "bidding",
+            0.015484651040037456
+          ],
+          [
+            "renewable",
+            0.014238807742809308
+          ],
+          [
+            "model",
+            0.014144359529655334
+          ],
+          [
+            "grid",
+            0.0138665161183511
+          ]
+        ],
+        "count": 103
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.5682188066496648,
+        -0.5971839128785993,
+        -0.590808104726104,
+        -0.5411572648418504,
+        -0.5581105188918727,
+        -0.687452822241267,
+        -0.49038634559239314,
+        -0.5308197953723722,
+        -0.1440849259217385,
+        -0.7137503735558932,
+        -0.6573671669070419,
+        -0.7301759683371803,
+        -0.7213281906109161
+      ],
+      [
+        -0.5682188066496648,
+        1.0,
+        -0.4794522054356206,
+        -0.47623047303647753,
+        -0.32069775915092225,
+        -0.5313086499192925,
+        -0.5733460051507498,
+        -0.7092791449241709,
+        -0.5115345728064311,
+        -0.46619650312544714,
+        -0.7291800111262375,
+        -0.6923510018763377,
+        -0.6845900885885903,
+        -0.706555395438361
+      ],
+      [
+        -0.5971839128785993,
+        -0.4794522054356206,
+        1.0,
+        -0.5205744658847433,
+        -0.4366736297036143,
+        -0.4859406059229707,
+        -0.6310744853679754,
+        -0.7213995397450983,
+        -0.5148861730257137,
+        -0.5040503767935931,
+        -0.7378023299525206,
+        -0.7116758650173497,
+        -0.7401328439069137,
+        -0.7350181259532996
+      ],
+      [
+        -0.590808104726104,
+        -0.47623047303647753,
+        -0.5205744658847433,
+        1.0,
+        -0.4534280304920415,
+        -0.496124946253275,
+        -0.6473720788439723,
+        -0.7170918704397216,
+        -0.5040319856547641,
+        -0.504928927041844,
+        -0.7312992516107786,
+        -0.6861530293250355,
+        -0.7137510361146617,
+        -0.6776347024430853
+      ],
+      [
+        -0.5411572648418504,
+        -0.32069775915092225,
+        -0.4366736297036143,
+        -0.4534280304920415,
+        1.0,
+        -0.46782061626346366,
+        -0.611225778073311,
+        -0.691780653725896,
+        -0.4617029926415088,
+        -0.44382298150692934,
+        -0.7231319032276833,
+        -0.6741700993870363,
+        -0.7264004031676106,
+        -0.71166017369709
+      ],
+      [
+        -0.5581105188918727,
+        -0.5313086499192925,
+        -0.4859406059229707,
+        -0.496124946253275,
+        -0.46782061626346366,
+        1.0,
+        -0.6849355563503603,
+        -0.6686684151102866,
+        -0.4272026382095768,
+        -0.4913926057956721,
+        -0.7413018656067933,
+        -0.7058514776530795,
+        -0.7253753080221309,
+        -0.6780081129484661
+      ],
+      [
+        -0.687452822241267,
+        -0.5733460051507498,
+        -0.6310744853679754,
+        -0.6473720788439723,
+        -0.611225778073311,
+        -0.6849355563503603,
+        1.0,
+        -0.739023500432203,
+        -0.6878591393430654,
+        -0.6144809846897499,
+        -0.7449560684322782,
+        -0.7107731656466003,
+        -0.7253959490200923,
+        -0.6854620679128802
+      ],
+      [
+        -0.49038634559239314,
+        -0.7092791449241709,
+        -0.7213995397450983,
+        -0.7170918704397216,
+        -0.691780653725896,
+        -0.6686684151102866,
+        -0.739023500432203,
+        1.0,
+        -0.6777057054149991,
+        -0.4588367886402318,
+        -0.7195029502658805,
+        -0.6882147252113836,
+        -0.7172061328260517,
+        -0.7357143640332318
+      ],
+      [
+        -0.5308197953723722,
+        -0.5115345728064311,
+        -0.5148861730257137,
+        -0.5040319856547641,
+        -0.4617029926415088,
+        -0.4272026382095768,
+        -0.6878591393430654,
+        -0.6777057054149991,
+        1.0,
+        -0.4245557262798284,
+        -0.7237254455419562,
+        -0.6749455137441348,
+        -0.7135893936066631,
+        -0.7057125961934387
+      ],
+      [
+        -0.1440849259217385,
+        -0.46619650312544714,
+        -0.5040503767935931,
+        -0.504928927041844,
+        -0.44382298150692934,
+        -0.4913926057956721,
+        -0.6144809846897499,
+        -0.4588367886402318,
+        -0.4245557262798284,
+        1.0,
+        -0.7164100352313585,
+        -0.6643343766823375,
+        -0.718602119882189,
+        -0.690004989758184
+      ],
+      [
+        -0.7137503735558932,
+        -0.7291800111262375,
+        -0.7378023299525206,
+        -0.7312992516107786,
+        -0.7231319032276833,
+        -0.7413018656067933,
+        -0.7449560684322782,
+        -0.7195029502658805,
+        -0.7237254455419562,
+        -0.7164100352313585,
+        1.0,
+        -0.7035998581136229,
+        -0.7365578819743943,
+        -0.7462543248443975
+      ],
+      [
+        -0.6573671669070419,
+        -0.6923510018763377,
+        -0.7116758650173497,
+        -0.6861530293250355,
+        -0.6741700993870363,
+        -0.7058514776530795,
+        -0.7107731656466003,
+        -0.6882147252113836,
+        -0.6749455137441348,
+        -0.6643343766823375,
+        -0.7035998581136229,
+        1.0,
+        -0.7217106425305988,
+        -0.7011401864313187
+      ],
+      [
+        -0.7301759683371803,
+        -0.6845900885885903,
+        -0.7401328439069137,
+        -0.7137510361146617,
+        -0.7264004031676106,
+        -0.7253753080221309,
+        -0.7253959490200923,
+        -0.7172061328260517,
+        -0.7135893936066631,
+        -0.718602119882189,
+        -0.7365578819743943,
+        -0.7217106425305988,
+        1.0,
+        -0.6848655173664282
+      ],
+      [
+        -0.7213281906109161,
+        -0.706555395438361,
+        -0.7350181259532996,
+        -0.6776347024430853,
+        -0.71166017369709,
+        -0.6780081129484661,
+        -0.6854620679128802,
+        -0.7357143640332318,
+        -0.7057125961934387,
+        -0.690004989758184,
+        -0.7462543248443975,
+        -0.7011401864313187,
+        -0.6848655173664282,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        16,
+        5,
+        3,
+        4,
+        7,
+        2,
+        6,
+        3,
+        5,
+        5,
+        1,
+        2,
+        1,
+        4
+      ],
+      "2020-02": [
+        33,
+        20,
+        6,
+        12,
+        11,
+        1,
+        9,
+        11,
+        6,
+        5,
+        1,
+        4,
+        1,
+        3
+      ],
+      "2020-03": [
+        14,
+        6,
+        3,
+        6,
+        9,
+        4,
+        0,
+        4,
+        3,
+        7,
+        1,
+        4,
+        2,
+        4
+      ],
+      "2020-04": [
+        17,
+        7,
+        6,
+        2,
+        8,
+        1,
+        4,
+        4,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "2020-05": [
+        24,
+        20,
+        4,
+        0,
+        4,
+        4,
+        9,
+        2,
+        4,
+        4,
+        0,
+        5,
+        1,
+        3
+      ],
+      "2020-06": [
+        40,
+        14,
+        7,
+        11,
+        3,
+        2,
+        7,
+        5,
+        3,
+        5,
+        2,
+        6,
+        2,
+        4
+      ],
+      "2020-07": [
+        30,
+        17,
+        7,
+        12,
+        9,
+        3,
+        9,
+        9,
+        11,
+        1,
+        1,
+        6,
+        7,
+        5
+      ],
+      "2020-08": [
+        19,
+        5,
+        4,
+        4,
+        7,
+        3,
+        3,
+        4,
+        1,
+        2,
+        1,
+        4,
+        2,
+        3
+      ],
+      "2020-09": [
+        36,
+        10,
+        2,
+        8,
+        9,
+        0,
+        11,
+        3,
+        7,
+        4,
+        2,
+        4,
+        3,
+        6
+      ],
+      "2020-10": [
+        17,
+        6,
+        9,
+        9,
+        9,
+        1,
+        8,
+        5,
+        4,
+        2,
+        1,
+        5,
+        2,
+        5
+      ],
+      "2020-11": [
+        20,
+        10,
+        2,
+        9,
+        4,
+        1,
+        8,
+        2,
+        1,
+        6,
+        1,
+        3,
+        3,
+        5
+      ],
+      "2020-12": [
+        22,
+        14,
+        6,
+        10,
+        4,
+        3,
+        4,
+        5,
+        0,
+        6,
+        6,
+        5,
+        2,
+        6
+      ],
+      "2021-01": [
+        22,
+        8,
+        5,
+        0,
+        7,
+        1,
+        5,
+        5,
+        3,
+        6,
+        0,
+        3,
+        3,
+        5
+      ],
+      "2021-02": [
+        29,
+        12,
+        12,
+        8,
+        12,
+        2,
+        8,
+        6,
+        6,
+        5,
+        3,
+        1,
+        2,
+        5
+      ],
+      "2021-03": [
+        20,
+        11,
+        2,
+        11,
+        10,
+        5,
+        10,
+        4,
+        1,
+        5,
+        1,
+        4,
+        1,
+        8
+      ],
+      "2021-04": [
+        26,
+        7,
+        7,
+        4,
+        2,
+        3,
+        4,
+        4,
+        3,
+        3,
+        1,
+        1,
+        1,
+        4
+      ],
+      "2021-05": [
+        19,
+        14,
+        4,
+        4,
+        11,
+        2,
+        9,
+        2,
+        4,
+        3,
+        0,
+        3,
+        4,
+        3
+      ],
+      "2021-06": [
+        41,
+        18,
+        3,
+        12,
+        13,
+        3,
+        6,
+        8,
+        3,
+        7,
+        0,
+        12,
+        0,
+        7
+      ],
+      "2021-07": [
+        29,
+        17,
+        8,
+        12,
+        12,
+        4,
+        14,
+        5,
+        2,
+        7,
+        0,
+        2,
+        2,
+        2
+      ],
+      "2021-08": [
+        16,
+        6,
+        5,
+        1,
+        3,
+        0,
+        4,
+        4,
+        1,
+        4,
+        1,
+        2,
+        1,
+        3
+      ],
+      "2021-09": [
+        24,
+        18,
+        3,
+        5,
+        8,
+        2,
+        7,
+        9,
+        4,
+        3,
+        1,
+        3,
+        3,
+        4
+      ],
+      "2021-10": [
+        27,
+        15,
+        4,
+        11,
+        13,
+        2,
+        7,
+        0,
+        2,
+        2,
+        2,
+        4,
+        2,
+        8
+      ],
+      "2021-11": [
+        29,
+        9,
+        6,
+        10,
+        14,
+        3,
+        4,
+        3,
+        3,
+        4,
+        1,
+        3,
+        2,
+        2
+      ],
+      "2021-12": [
+        20,
+        14,
+        10,
+        4,
+        6,
+        0,
+        6,
+        6,
+        0,
+        4,
+        2,
+        4,
+        6,
+        2
+      ],
+      "2022-01": [
+        27,
+        9,
+        8,
+        7,
+        6,
+        4,
+        5,
+        3,
+        5,
+        4,
+        2,
+        5,
+        1,
+        5
+      ],
+      "2022-02": [
+        30,
+        18,
+        7,
+        10,
+        12,
+        4,
+        7,
+        4,
+        6,
+        7,
+        2,
+        9,
+        1,
+        4
+      ],
+      "2022-03": [
+        33,
+        11,
+        6,
+        10,
+        7,
+        3,
+        10,
+        4,
+        2,
+        7,
+        1,
+        4,
+        3,
+        6
+      ],
+      "2022-04": [
+        31,
+        13,
+        7,
+        7,
+        9,
+        4,
+        5,
+        6,
+        6,
+        2,
+        1,
+        2,
+        3,
+        2
+      ],
+      "2022-05": [
+        28,
+        16,
+        13,
+        11,
+        16,
+        3,
+        6,
+        2,
+        4,
+        5,
+        1,
+        6,
+        1,
+        4
+      ],
+      "2022-06": [
+        36,
+        16,
+        6,
+        5,
+        8,
+        0,
+        6,
+        2,
+        1,
+        4,
+        2,
+        9,
+        0,
+        2
+      ],
+      "2022-07": [
+        39,
+        10,
+        5,
+        10,
+        12,
+        2,
+        4,
+        3,
+        3,
+        6,
+        0,
+        8,
+        1,
+        4
+      ],
+      "2022-08": [
+        21,
+        16,
+        5,
+        5,
+        6,
+        3,
+        6,
+        4,
+        2,
+        4,
+        0,
+        3,
+        4,
+        5
+      ],
+      "2022-09": [
+        30,
+        13,
+        4,
+        6,
+        12,
+        4,
+        6,
+        3,
+        2,
+        7,
+        2,
+        3,
+        3,
+        8
+      ],
+      "2022-10": [
+        37,
+        3,
+        9,
+        14,
+        10,
+        3,
+        5,
+        5,
+        4,
+        5,
+        4,
+        6,
+        0,
+        3
+      ],
+      "2022-11": [
+        25,
+        18,
+        11,
+        5,
+        12,
+        1,
+        5,
+        5,
+        4,
+        5,
+        0,
+        6,
+        2,
+        4
+      ],
+      "2022-12": [
+        16,
+        7,
+        1,
+        3,
+        6,
+        3,
+        6,
+        5,
+        0,
+        2,
+        0,
+        6,
+        1,
+        2
+      ],
+      "2023-01": [
+        32,
+        19,
+        4,
+        11,
+        10,
+        4,
+        5,
+        10,
+        1,
+        3,
+        0,
+        4,
+        1,
+        5
+      ],
+      "2023-02": [
+        35,
+        19,
+        10,
+        19,
+        22,
+        5,
+        8,
+        3,
+        1,
+        4,
+        3,
+        8,
+        1,
+        3
+      ],
+      "2023-03": [
+        33,
+        9,
+        6,
+        6,
+        9,
+        3,
+        4,
+        4,
+        1,
+        5,
+        3,
+        4,
+        1,
+        7
+      ],
+      "2023-04": [
+        26,
+        7,
+        6,
+        7,
+        8,
+        1,
+        6,
+        3,
+        0,
+        2,
+        0,
+        9,
+        0,
+        4
+      ],
+      "2023-05": [
+        39,
+        24,
+        17,
+        14,
+        18,
+        2,
+        7,
+        2,
+        0,
+        4,
+        7,
+        7,
+        2,
+        7
+      ],
+      "2023-06": [
+        28,
+        13,
+        6,
+        12,
+        11,
+        3,
+        1,
+        4,
+        4,
+        5,
+        2,
+        12,
+        3,
+        4
+      ],
+      "2023-07": [
+        34,
+        13,
+        9,
+        9,
+        19,
+        4,
+        3,
+        5,
+        1,
+        7,
+        2,
+        7,
+        3,
+        5
+      ],
+      "2023-08": [
+        16,
+        14,
+        2,
+        3,
+        10,
+        3,
+        2,
+        2,
+        2,
+        4,
+        3,
+        6,
+        3,
+        3
+      ],
+      "2023-09": [
+        25,
+        6,
+        4,
+        2,
+        5,
+        2,
+        5,
+        3,
+        2,
+        9,
+        3,
+        6,
+        1,
+        5
+      ],
+      "2023-10": [
+        51,
+        12,
+        7,
+        16,
+        10,
+        0,
+        9,
+        5,
+        3,
+        7,
+        6,
+        7,
+        1,
+        6
+      ],
+      "2023-11": [
+        29,
+        4,
+        1,
+        9,
+        8,
+        2,
+        7,
+        7,
+        2,
+        10,
+        5,
+        3,
+        0,
+        4
+      ],
+      "2023-12": [
+        32,
+        23,
+        11,
+        9,
+        11,
+        7,
+        9,
+        4,
+        3,
+        10,
+        6,
+        8,
+        3,
+        5
+      ],
+      "2024-01": [
+        24,
+        9,
+        6,
+        6,
+        4,
+        2,
+        10,
+        1,
+        5,
+        9,
+        6,
+        4,
+        2,
+        9
+      ],
+      "2024-02": [
+        49,
+        29,
+        11,
+        15,
+        24,
+        11,
+        14,
+        6,
+        6,
+        18,
+        11,
+        16,
+        2,
+        6
+      ],
+      "2024-03": [
+        36,
+        10,
+        11,
+        15,
+        15,
+        5,
+        6,
+        7,
+        3,
+        8,
+        10,
+        7,
+        2,
+        5
+      ],
+      "2024-04": [
+        23,
+        17,
+        5,
+        4,
+        11,
+        4,
+        2,
+        3,
+        2,
+        12,
+        5,
+        3,
+        4,
+        9
+      ],
+      "2024-05": [
+        50,
+        13,
+        14,
+        10,
+        15,
+        3,
+        4,
+        3,
+        1,
+        5,
+        9,
+        10,
+        1,
+        6
+      ],
+      "2024-06": [
+        35,
+        9,
+        5,
+        12,
+        11,
+        3,
+        5,
+        4,
+        3,
+        7,
+        14,
+        6,
+        1,
+        5
+      ],
+      "2024-07": [
+        23,
+        17,
+        9,
+        10,
+        8,
+        3,
+        7,
+        3,
+        3,
+        3,
+        3,
+        1,
+        4,
+        6
+      ],
+      "2024-08": [
+        34,
+        10,
+        10,
+        9,
+        8,
+        1,
+        4,
+        5,
+        6,
+        7,
+        4,
+        12,
+        3,
+        3
+      ],
+      "2024-09": [
+        30,
+        13,
+        5,
+        9,
+        9,
+        2,
+        10,
+        4,
+        2,
+        6,
+        10,
+        5,
+        3,
+        1
+      ],
+      "2024-10": [
+        41,
+        27,
+        11,
+        10,
+        22,
+        3,
+        10,
+        4,
+        0,
+        6,
+        6,
+        11,
+        1,
+        9
+      ],
+      "2024-11": [
+        25,
+        18,
+        6,
+        5,
+        11,
+        2,
+        13,
+        1,
+        4,
+        4,
+        7,
+        6,
+        3,
+        8
+      ],
+      "2024-12": [
+        37,
+        9,
+        9,
+        4,
+        9,
+        2,
+        5,
+        7,
+        1,
+        7,
+        9,
+        12,
+        2,
+        4
+      ],
+      "2025-01": [
+        26,
+        11,
+        10,
+        8,
+        11,
+        3,
+        7,
+        2,
+        3,
+        5,
+        11,
+        5,
+        6,
+        3
+      ],
+      "2025-02": [
+        45,
+        29,
+        18,
+        24,
+        16,
+        4,
+        14,
+        3,
+        8,
+        10,
+        16,
+        10,
+        3,
+        7
+      ],
+      "2025-03": [
+        31,
+        13,
+        6,
+        7,
+        11,
+        3,
+        6,
+        0,
+        1,
+        5,
+        10,
+        5,
+        1,
+        8
+      ],
+      "2025-04": [
+        31,
+        13,
+        5,
+        5,
+        8,
+        3,
+        4,
+        2,
+        4,
+        2,
+        5,
+        2,
+        6,
+        2
+      ],
+      "2025-05": [
+        42,
+        19,
+        14,
+        9,
+        10,
+        4,
+        9,
+        8,
+        4,
+        7,
+        14,
+        7,
+        3,
+        4
+      ],
+      "2025-06": [
+        33,
+        16,
+        6,
+        10,
+        14,
+        2,
+        6,
+        3,
+        2,
+        6,
+        11,
+        4,
+        3,
+        6
+      ],
+      "2025-07": [
+        26,
+        20,
+        3,
+        16,
+        7,
+        4,
+        8,
+        3,
+        3,
+        8,
+        11,
+        1,
+        4,
+        3
+      ],
+      "2025-08": [
+        32,
+        17,
+        10,
+        9,
+        6,
+        1,
+        5,
+        6,
+        2,
+        7,
+        11,
+        6,
+        1,
+        7
+      ],
+      "2025-09": [
+        19,
+        6,
+        3,
+        0,
+        10,
+        1,
+        0,
+        3,
+        0,
+        2,
+        5,
+        4,
+        3,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Hardness of Independent Learning and Sparse Equilibrium Computation in Markov Games",
+          "year": "2023-03",
+          "abstract": "We consider the problem of decentralized multi-agent reinforcement learning\nin Markov games. A fundamental question is whether there exist algorithms that,\nwhen adopted by all agents and run independently in a decentralized fashion,\nlead to no-regret for each player, analogous to celebrated convergence results\nin normal-form games. While recent work has shown that such algorithms exist\nfor restricted settings (notably, when regret is defined with respect to\ndeviations to Markovian policies), the question of whether independent\nno-regret learning can be achieved in the standard Markov game framework was\nopen. We provide a decisive negative resolution this problem, both from a\ncomputational and statistical perspective. We show that:\n  - Under the widely-believed assumption that PPAD-hard problems cannot be\nsolved in polynomial time, there is no polynomial-time algorithm that attains\nno-regret in general-sum Markov games when executed independently by all\nplayers, even when the game is known to the algorithm designer and the number\nof players is a small constant.\n  - When the game is unknown, no algorithm, regardless of computational\nefficiency, can achieve no-regret without observing a number of episodes that\nis exponential in the number of players.\n  Perhaps surprisingly, our lower bounds hold even for seemingly easier setting\nin which all agents are controlled by a a centralized algorithm. They are\nproven via lower bounds for a simpler problem we refer to as SparseCCE, in\nwhich the goal is to compute a coarse correlated equilibrium that is sparse in\nthe sense that it can be represented as a mixture of a small number of product\npolicies. The crux of our approach is a novel application of aggregation\ntechniques from online learning, whereby we show that any algorithm for the\nSparseCCE problem can be used to compute approximate Nash equilibria for\nnon-zero sum normal-form games.",
+          "arxiv_id": "2303.12287v1"
+        },
+        {
+          "title": "Multi-Player Zero-Sum Markov Games with Networked Separable Interactions",
+          "year": "2023-07",
+          "abstract": "We study a new class of Markov games, \\emph(multi-player) zero-sum Markov\nGames} with \\emph{Networked separable interactions} (zero-sum NMGs), to model\nthe local interaction structure in non-cooperative multi-agent sequential\ndecision-making. We define a zero-sum NMG as a model where {the payoffs of the\nauxiliary games associated with each state are zero-sum and} have some\nseparable (i.e., polymatrix) structure across the neighbors over some\ninteraction network. We first identify the necessary and sufficient conditions\nunder which an MG can be presented as a zero-sum NMG, and show that the set of\nMarkov coarse correlated equilibrium (CCE) collapses to the set of Markov Nash\nequilibrium (NE) in these games, in that the product of per-state\nmarginalization of the former for all players yields the latter. Furthermore,\nwe show that finding approximate Markov \\emph{stationary} CCE in\ninfinite-horizon discounted zero-sum NMGs is \\texttt{PPAD}-hard, unless the\nunderlying network has a ``star topology''. Then, we propose\nfictitious-play-type dynamics, the classical learning dynamics in normal-form\ngames, for zero-sum NMGs, and establish convergence guarantees to Markov\nstationary NE under a star-shaped network structure. Finally, in light of the\nhardness result, we focus on computing a Markov \\emph{non-stationary} NE and\nprovide finite-iteration guarantees for a series of value-iteration-based\nalgorithms. We also provide numerical experiments to corroborate our\ntheoretical results.",
+          "arxiv_id": "2307.09470v3"
+        },
+        {
+          "title": "Memory Asymmetry Creates Heteroclinic Orbits to Nash Equilibrium in Learning in Zero-Sum Games",
+          "year": "2023-05",
+          "abstract": "Learning in games considers how multiple agents maximize their own rewards\nthrough repeated games. Memory, an ability that an agent changes his/her action\ndepending on the history of actions in previous games, is often introduced into\nlearning to explore more clever strategies and discuss the decision-making of\nreal agents like humans. However, such games with memory are hard to analyze\nbecause they exhibit complex phenomena like chaotic dynamics or divergence from\nNash equilibrium. In particular, how asymmetry in memory capacities between\nagents affects learning in games is still unclear. In response, this study\nformulates a gradient ascent algorithm in games with asymmetry memory\ncapacities. To obtain theoretical insights into learning dynamics, we first\nconsider a simple case of zero-sum games. We observe complex behavior, where\nlearning dynamics draw a heteroclinic connection from unstable fixed points to\nstable ones. Despite this complexity, we analyze learning dynamics and prove\nlocal convergence to these stable fixed points, i.e., the Nash equilibria. We\nidentify the mechanism driving this convergence: an agent with a longer memory\nlearns to exploit the other, which in turn endows the other's utility function\nwith strict concavity. We further numerically observe such convergence in\nvarious initial strategies, action numbers, and memory lengths. This study\nreveals a novel phenomenon due to memory asymmetry, providing fundamental\nstrides in learning in games and new insights into computing equilibria.",
+          "arxiv_id": "2305.13619v4"
+        }
+      ],
+      "1": [
+        {
+          "title": "Extension of Additive Valuations to General Valuations on the Existence of EFX",
+          "year": "2021-07",
+          "abstract": "Envy-freeness is one of the most widely studied notions in fair division.\nSince envy-free allocations do not always exist when items are indivisible,\nseveral relaxations have been considered. Among them, possibly the most\ncompelling concept is envy-freeness up to any item (EFX). We study the\nexistence of EFX allocations for general valuations. The existence of EFX\nallocations is a major open problem. For general valuations, it is known that\nan EFX allocation always exists (i) when $n=2$ or (ii) when all agents have\nidentical valuations, where $n$ is the number of agents. it is also known that\nan EFX allocation always exists when one can leave at most $n-1$ items\nunallocated.\n  We develop new techniques and extend some results of additive valuations to\ngeneral valuations on the existence of EFX allocations. We show that an EFX\nallocation always exists (i) when all agents have one of two general valuations\nor (ii) when the number of items is at most $n+3$. We also show that an EFX\nallocation always exists when one can leave at most $n-2$ items unallocated. In\naddition to the positive results, we construct an instance with $n=3$ in which\nan existing approach does not work as it is.",
+          "arxiv_id": "2107.09901v2"
+        },
+        {
+          "title": "On Approximate Envy-Freeness for Indivisible Chores and Mixed Resources",
+          "year": "2020-12",
+          "abstract": "We study the fair allocation of undesirable indivisible items, or chores.\nWhile the case of desirable indivisible items (or goods) is extensively\nstudied, with many results known for different notions of fairness, less is\nknown about the fair division of chores. We study the envy-free division of\nchores, and make three contributions. First, we show that determining the\nexistence of an envy-free allocation is NP-complete, even in the simple case\nwhen agents have binary additive valuations. Second, we provide a\npolynomial-time algorithm for computing an allocation that satisfies\nenvy-freeness up to one chore (EF1), correcting an existing proof in the\nliterature. A straightforward modification of our algorithm can be used to\ncompute an EF1 allocation for doubly monotone instances (wherein each agent can\npartition the set of items into objective goods and objective chores). Our\nthird result applies to a mixed resources model consisting of indivisible items\nand a divisible, undesirable heterogeneous resource (i.e., a bad cake). We show\nthat there always exists an allocation that satisfies envy-freeness for mixed\nresources (EFM) in this setting, complementing a recent result of Bei et al.\n(Art. Int. 2021) for indivisible goods and divisible cake.",
+          "arxiv_id": "2012.06788v3"
+        },
+        {
+          "title": "Fair Division with Prioritized Agents",
+          "year": "2022-11",
+          "abstract": "We consider the fair division problem of indivisible items. It is well-known\nthat an envy-free allocation may not exist, and a relaxed version of\nenvy-freeness, envy-freeness up to one item (EF1), has been widely considered.\nIn an EF1 allocation, an agent may envy others' allocated shares, but only up\nto one item. In many applications, we may wish to specify a subset of\nprioritized agents where strict envy-freeness needs to be guaranteed from these\nagents to the remaining agents, while ensuring the whole allocation is still\nEF1. Prioritized agents may be those agents who are envious in a previous EF1\nallocation, those agents who belong to underrepresented groups, etc. Motivated\nby this, we propose a new fairness notion named envy-freeness with prioritized\nagents \"EFPrior\", and study the existence and the algorithmic aspects for the\nproblem of computing an EFPrior allocation. With additive valuations, the\nsimple round-robin algorithm is able to compute an EFPrior allocation. In this\npaper, we mainly focus on general valuations. In particular, we present a\npolynomial-time algorithm that outputs an EFPrior allocation with most of the\nitems allocated. When all the items need to be allocated, we also present\npolynomial-time algorithms for some well-motivated special cases.",
+          "arxiv_id": "2211.16143v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Characterizations of Sequential Valuation Rules",
+          "year": "2023-02",
+          "abstract": "Approval-based committee (ABC) voting rules elect a fixed size subset of the\ncandidates, a so-called committee, based on the voters' approval ballots over\nthe candidates. While these rules have recently attracted significant\nattention, axiomatic characterizations are largely missing so far. We address\nthis problem by characterizing ABC voting rules within the broad and intuitive\nclass of sequential valuation rules. These rules compute the winning committees\nby sequentially adding candidates that increase the score of the chosen\ncommittee the most. In more detail, we first characterize almost the full class\nof sequential valuation rules based on mild standard conditions and a new axiom\ncalled consistent committee monotonicity. This axiom postulates that the\nwinning committees of size k can be derived from those of size k-1 by only\nadding candidates and that these new candidates are chosen consistently. By\nrequiring additional conditions, we derive from this result also a\ncharacterization of the prominent class of sequential Thiele rules. Finally, we\nrefine our results to characterize three well-known ABC voting rules, namely\nsequential approval voting, sequential proportional approval voting, and\nsequential Chamberlin-Courant approval voting.",
+          "arxiv_id": "2302.11890v1"
+        },
+        {
+          "title": "Approval-Based Committee Voting under Incomplete Information",
+          "year": "2021-03",
+          "abstract": "We investigate approval-based committee voting with incomplete information\nabout the approval preferences of voters. We consider several models of\nincompleteness where each voter partitions the set of candidates into approved,\ndisapproved, and unknown candidates, possibly with ordinal preference\nconstraints among candidates in the latter category. This captures scenarios\nwhere voters have not evaluated all candidates and/or it is unknown where\nvoters draw the threshold between approved and disapproved candidates. We study\nthe complexity of some fundamental computational problems for a number of\nclassic approval-based committee voting rules including Proportional Approval\nVoting and Chamberlin-Courant. These problems include determining whether a\ngiven set of candidates is a possible or necessary winning committee and\nwhether a given candidate is possibly or necessarily a member of the winning\ncommittee. We also consider proportional representation axioms and the problem\nof deciding whether a given committee is possibly or necessarily\nrepresentative.",
+          "arxiv_id": "2103.14847v3"
+        },
+        {
+          "title": "Metric Distortion for Tournament Voting and Beyond",
+          "year": "2025-05",
+          "abstract": "In the well-studied metric distortion problem in social choice, we have\nvoters and candidates located in a shared metric space, and the objective is to\ndesign a voting rule that selects a candidate with minimal total distance to\nthe voters. However, the voting rule has limited information about the\ndistances in the metric, such as each voter's ordinal rankings of the\ncandidates in order of distances. The central question is whether we can design\nrules that, for any election and underlying metric space, select a candidate\nwhose total cost deviates from the optimal by only a small factor, referred to\nas the distortion.\n  A long line of work resolved the optimal distortion of deterministic rules,\nand recent work resolved the optimal distortion of randomized (weighted)\ntournament rules, which only use the aggregate preferences between pairs of\ncandidates. In both cases, simple rules achieve the optimal distortion of $3$.\nCan we achieve the best of both worlds: a deterministic tournament rule\nmatching the lower bound of $3$? Prior to our work, the best rules have\ndistortion $2 + \\sqrt{5} \\approx 4.2361$.\n  In this work, we establish a lower bound of $3.1128$ on the distortion of any\ndeterministic tournament rule, even when there are only 5 candidates, and\nimprove the upper bound with a novel rule guaranteeing distortion $3.9312$. We\nthen generalize tournament rules to the class of $k$-tournament rules which\nobtain the aggregate preferences between $k$-tuples of candidates. We show that\nthere is a family of deterministic $k$-tournament rules that achieves\ndistortion approaching $3$ as $k$ grows. Finally, we show that even with $k =\n3$, a randomized $k$-tournament rule can achieve distortion less than $3$,\nwhich had been a longstanding barrier even for the larger class of ranked\nvoting rules.",
+          "arxiv_id": "2505.13630v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Multi-item Non-truthful Auctions Achieve Good Revenue",
+          "year": "2020-02",
+          "abstract": "We present a general framework for designing approximately revenue-optimal\nmechanisms for multi-item additive auctions, which applies to both truthful and\nnon-truthful auctions. Given a (not necessarily truthful) single-item auction\nformat $A$ satisfying certain technical conditions, we run simultaneous item\nauctions augmented with a personalized entry fee for each bidder that must be\npaid before the auction can be accessed. These entry fees depend only on the\nprior distribution of bidder types, and in particular are independent of\nrealized bids. We bound the revenue of the resulting two-part tariff mechanism\nusing a novel geometric technique that enables revenue guarantees for many\ncommon non-truthful auctions that previously had none. Our approach adapts and\nextends the duality framework of Cai et al [CDW16] beyond truthful auctions.\n  Our framework can be used with many common auction formats, such as\nsimultaneous first-price, simultaneous second-price, and simultaneous all-pay\nauctions. Our results for first price and all-pay are the first revenue\nguarantees of non-truthful mechanisms in multi-dimensional environments,\naddressing an open question in the literature [RST17]. If all-pay auctions are\nused, we prove that the resulting mechanism is also credible in the sense that\nthe auctioneer cannot benefit by deviating from the stated mechanism after\nobserving agent bids. This is the first static credible mechanism for\nmulti-item additive auctions that achieves a constant factor of the optimal\nrevenue. If second-price auctions are used, we obtain a truthful\n$O(1)$-approximate mechanism with fixed entry fees that are amenable to tuning\nvia online learning techniques.",
+          "arxiv_id": "2002.06702v6"
+        },
+        {
+          "title": "Time-Varyingness in Auction Breaks Revenue Equivalence",
+          "year": "2024-10",
+          "abstract": "Auction is one of the most representative buying-selling systems. A\ncelebrated study shows that the seller's expected revenue is equal in\nequilibrium, regardless of the type of auction, typically first-price and\nsecond-price auctions. Here, however, we hypothesize that when some auction\nenvironments vary with time, this revenue equivalence may not be maintained. In\nsecond-price auctions, the equilibrium strategy is robustly feasible.\nConversely, in first-price auctions, the buyers must continue to adapt their\nstrategies according to the environment of the auction. Surprisingly, we prove\nthat revenue equivalence can be broken in both directions. First-price auctions\nbring larger or smaller revenue than second-price auctions, case by case,\ndepending on how the value of an item varies. Our experiments also demonstrate\nrevenue inequivalence in various scenarios, where the value varies periodically\nor randomly. This study uncovers a phenomenon, the breaking of revenue\nequivalence by the time-varyingness in auctions, that likely occurs in\nreal-world auctions, revealing its underlying mechanism.",
+          "arxiv_id": "2410.12306v1"
+        },
+        {
+          "title": "No-Regret Algorithms in non-Truthful Auctions with Budget and ROI Constraints",
+          "year": "2024-04",
+          "abstract": "Advertisers increasingly use automated bidding to optimize their ad campaigns\non online advertising platforms. Autobidding optimizes an advertiser's\nobjective subject to various constraints, e.g. average ROI and budget\nconstraints. In this paper, we study the problem of designing online\nautobidding algorithms to optimize value subject to ROI and budget constraints\nwhen the platform is running any mixture of first and second price auction.\n  We consider the following stochastic setting: There is an item for sale in\neach of $T$ rounds. In each round, buyers submit bids and an auction is run to\nsell the item. We focus on one buyer, possibly with budget and ROI constraints.\nWe assume that the buyer's value and the highest competing bid are drawn i.i.d.\nfrom some unknown (joint) distribution in each round. We design a low-regret\nbidding algorithm that satisfies the buyer's constraints. Our benchmark is the\nobjective value achievable by the best possible Lipschitz function that maps\nvalues to bids, which is rich enough to best respond to many different\ncorrelation structures between value and highest competing bid. Our main result\nis an algorithm with full information feedback that guarantees a near-optimal\n$\\tilde O(\\sqrt T)$ regret with respect to the best Lipschitz function. Our\nresult applies to a wide range of auctions, most notably any mixture of first\nand second price auctions (price is a convex combination of the first and\nsecond price). In addition, our result holds for both value-maximizing buyers\nand quasi-linear utility-maximizing buyers.\n  We also study the bandit setting, where we show an $\\Omega(T^{2/3})$ lower\nbound on the regret for first-price auctions, showing a large disparity between\nthe full information and bandit settings. We also design an algorithm with\n$\\tilde O(T^{3/4})$ regret, when the value distribution is known and is\nindependent of the highest competing bid.",
+          "arxiv_id": "2404.09832v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Online Information Acquisition: Hiring Multiple Agents",
+          "year": "2023-07",
+          "abstract": "We investigate the mechanism design problem faced by a principal who hires\n\\emph{multiple} agents to gather and report costly information. Then, the\nprincipal exploits the information to make an informed decision. We model this\nproblem as a game, where the principal announces a mechanism consisting in\naction recommendations and a payment function, a.k.a. scoring rule. Then, each\nagent chooses an effort level and receives partial information about an\nunderlying state of nature based on the effort. Finally, the agents report the\ninformation (possibly non-truthfully), the principal takes a decision based on\nthis information, and the agents are paid according to the scoring rule. While\nprevious work focuses on single-agent problems, we consider multi-agents\nsettings. This poses the challenge of coordinating the agents' efforts and\naggregating correlated information. Indeed, we show that optimal mechanisms\nmust correlate agents' efforts, which introduces externalities among the\nagents, and hence complex incentive compatibility constraints and equilibrium\nselection problems. First, we design a polynomial-time algorithm to find an\noptimal incentive compatible mechanism. Then, we study an online problem, where\nthe principal repeatedly interacts with a group of unknown agents. We design a\nno-regret algorithm that provides $\\widetilde{\\mathcal{O}}(T^{2/3})$ regret\nwith respect to an optimal mechanism, matching the state-of-the-art bound for\nsingle-agent settings.",
+          "arxiv_id": "2307.06210v1"
+        },
+        {
+          "title": "The Sample Complexity of Online Contract Design",
+          "year": "2022-11",
+          "abstract": "We study the hidden-action principal-agent problem in an online setting. In\neach round, the principal posts a contract that specifies the payment to the\nagent based on each outcome. The agent then makes a strategic choice of action\nthat maximizes her own utility, but the action is not directly observable by\nthe principal. The principal observes the outcome and receives utility from the\nagent's choice of action. Based on past observations, the principal dynamically\nadjusts the contracts with the goal of maximizing her utility.\n  We introduce an online learning algorithm and provide an upper bound on its\nStackelberg regret. We show that when the contract space is $[0,1]^m$, the\nStackelberg regret is upper bounded by $\\widetilde O(\\sqrt{m} \\cdot\nT^{1-1/(2m+1)})$, and lower bounded by $\\Omega(T^{1-1/(m+2)})$, where\n$\\widetilde O$ omits logarithmic factors. This result shows that\nexponential-in-$m$ samples are sufficient and necessary to learn a near-optimal\ncontract, resolving an open problem on the hardness of online contract design.\nMoreover, when contracts are restricted to some subset $\\mathcal{F} \\subset\n[0,1]^m$, we define an intrinsic dimension of $\\mathcal{F}$ that depends on the\ncovering number of the spherical code in the space and bound the regret in\nterms of this intrinsic dimension. When $\\mathcal{F}$ is the family of linear\ncontracts, we show that the Stackelberg regret grows exactly as\n$\\Theta(T^{2/3})$.\n  The contract design problem is challenging because the utility function is\ndiscontinuous. Bounding the discretization error in this setting has been an\nopen problem. In this paper, we identify a limited set of directions in which\nthe utility function is continuous, allowing us to design a new discretization\nmethod and bound its error. This approach enables the first upper bound with no\nrestrictions on the contract and action space.",
+          "arxiv_id": "2211.05732v3"
+        },
+        {
+          "title": "Bayesian Agency: Linear versus Tractable Contracts",
+          "year": "2021-06",
+          "abstract": "We study principal-agent problems in which a principal commits to an\noutcome-dependent payment scheme (a.k.a. contract) so as to induce an agent to\ntake a costly, unobservable action. We relax the assumption that the principal\nperfectly knows the agent by considering a Bayesian setting where the agent's\ntype is unknown and randomly selected according to a given probability\ndistribution, which is known to the principal. Each agent's type is\ncharacterized by her own action costs and action-outcome distributions. In the\nliterature on non-Bayesian principal-agent problems, considerable attention has\nbeen devoted to linear contracts, which are simple, pure-commission payment\nschemes that still provide nice approximation guarantees with respect to\nprincipal-optimal (possibly non-linear) contracts. While in non-Bayesian\nsettings an optimal contract can be computed efficiently, this is no longer the\ncase for our Bayesian principal-agent problems. This further motivates our\nfocus on linear contracts, which can be optimized efficiently given their\nsingle-parameter nature. Our goal is to analyze the properties of linear\ncontracts in Bayesian settings, in terms of approximation guarantees with\nrespect to optimal contracts and general tractable contracts (i.e.,\nefficiently-computable ones). First, we study the approximation guarantees of\nlinear contracts with respect to optimal ones, showing that the former suffer\nfrom a multiplicative loss linear in the number of agent's types. Nevertheless,\nwe prove that linear contracts can still provide a constant multiplicative\napproximation $\\rho$ of the optimal principal's expected utility, though at the\nexpense of an exponentially-small additive loss $2^{-\\Omega(\\rho)}$. Then, we\nswitch to tractable contracts, showing that, surprisingly, linear contracts\nperform well among them.",
+          "arxiv_id": "2106.00319v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Mechanism Design for Automated Market Makers",
+          "year": "2024-02",
+          "abstract": "Blockchains have popularized automated market makers (AMMs). An AMM exchange\nis an application running on a blockchain which maintains a pool of\ncrypto-assets and automatically trades assets with users governed by some\npricing function that prices the assets based on their relative demand/supply.\nAMMs have created an important challenge commonly known as the Miner\nExtractable Value (MEV). In particular, the miners who control the contents and\nordering of transactions in a block can extract value by front-running and\nback-running users' transactions, leading to arbitrage opportunities that\nguarantee them risk-free returns.\n  In this paper, we consider how to design AMM mechanisms that eliminate MEV\nopportunities. Specifically, we propose a new AMM mechanism that processes all\ntransactions contained within a block in a batch. We show that our new\nmechanism satisfies two tiers of guarantees. First, for legacy blockchains\nwhere each block is proposed by a single (possibly rotating) miner, we prove\nthat our mechanism satisfies arbitrage resilience, i.e., a miner cannot gain\nrisk-free profit. Moreover, we also guarantee fair treatment among all\ntransactions within the same block, such that the miner is unable to sell off\nfavorable positions in the block to users or arbitragers. Second, for\nblockchains where the block proposal process is decentralized and offers\nsequencing-fairness, we prove a stronger notion called incentive compatibility\n-- roughly speaking, we guarantee that any individual user's best response is\nto follow the honest strategy.",
+          "arxiv_id": "2402.09357v3"
+        },
+        {
+          "title": "QuickSync: A Quickly Synchronizing PoS-Based Blockchain Protocol",
+          "year": "2020-05",
+          "abstract": "To implement a blockchain, we need a blockchain protocol for all the nodes to\nfollow. To design a blockchain protocol, we need a block publisher selection\nmechanism and a chain selection rule. In Proof-of-Stake (PoS) based blockchain\nprotocols, block publisher selection mechanism selects the node to publish the\nnext block based on the relative stake held by the node. However, PoS\nprotocols, such as Ouroboros v1, may face vulnerability to fully adaptive\ncorruptions.\n  In this paper, we propose a novel PoS-based blockchain protocol, QuickSync,\nto achieve security against fully adaptive corruptions while improving on\nperformance. We propose a metric called block power, a value defined for each\nblock, derived from the output of the verifiable random function based on the\ndigital signature of the block publisher. With this metric, we compute chain\npower, the sum of block powers of all the blocks comprising the chain, for all\nthe valid chains. These metrics are a function of the block publisher's stake\nto enable the PoS aspect of the protocol. The chain selection rule selects the\nchain with the highest chain power as the one to extend. This chain selection\nrule hence determines the selected block publisher of the previous block. When\nwe use metrics to define the chain selection rule, it may lead to\nvulnerabilities against Sybil attacks. QuickSync uses a Sybil attack resistant\nfunction implemented using histogram matching. We prove that QuickSync\nsatisfies common prefix, chain growth, and chain quality properties and hence\nit is secure. We also show that it is resilient to different types of\nadversarial attack strategies. Our analysis demonstrates that QuickSync\nperforms better than Bitcoin by an order of magnitude on both transactions per\nsecond and time to finality, and better than Ouroboros v1 by a factor of three\non time to finality.",
+          "arxiv_id": "2005.03564v4"
+        },
+        {
+          "title": "BitcoinF: Achieving Fairness for Bitcoin in Transaction-Fee-Only Model",
+          "year": "2020-03",
+          "abstract": "A blockchain, such as Bitcoin, is an append-only, secure, transparent,\ndistributed ledger. A fair blockchain is expected to have healthy metrics; high\nhonest mining power, low processing latency, i.e., low wait times for\ntransactions and stable price of consumption, i.e., the minimum transaction fee\nrequired to have a transaction processed. As Bitcoin matures, the influx of\ntransactions increases and the block rewards become insignificant. We show that\nunder these conditions, it becomes hard to maintain the health of the\nblockchain. In Bitcoin, under these mature operating conditions (MOC), the\nminers would find it challenging to cover their mining costs as there would be\nno more revenue from merely mining a block. It may cause miners not to continue\nmining, threatening the blockchain's security. Further, as we show in this\npaper using simulations, the cost of acting in favor of the health of the\nblockchain, under MOC, is very high in Bitcoin, causing all miners to process\ntransactions greedily. It leads to stranded transactions, i.e., transactions\noffering low transaction fees, experiencing unreasonably high processing\nlatency. To make matters worse, a compounding effect of these stranded\ntransactions is the rising price of consumption. Such phenomena not only induce\nunfairness as experienced by the miners and the users but also deteriorate the\nhealth of the blockchain.\n  We propose BitcoinF transaction processing protocol, a simple, yet highly\neffective modification to the existing Bitcoin protocol to fix these issues of\nunfairness. BitcoinF resolves these issues of unfairness while preserving the\nability of the users to express urgency and have their transactions\nprioritized.",
+          "arxiv_id": "2003.00801v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Fragile Stable Matchings",
+          "year": "2024-03",
+          "abstract": "We show how fragile stable matchings are in a decentralized one-to-one\nmatching setting. The classical work of Roth and Vande Vate (1990) suggests\nsimple decentralized dynamics in which randomly-chosen blocking pairs match\nsuccessively. Such decentralized interactions guarantee convergence to a stable\nmatching. Our first theorem shows that, under mild conditions, any unstable\nmatching -- including a small perturbation of a stable matching -- can\nculminate in any stable matching through these dynamics. Our second theorem\nhighlights another aspect of fragility: stabilization may take a long time.\nEven in markets with a unique stable matching, where the dynamics always\nconverge to the same matching, decentralized interactions can require an\nexponentially long duration to converge. A small perturbation of a stable\nmatching may lead the market away from stability and involve a sizable\nproportion of mismatched participants for extended periods. Our results hold\nfor a broad class of dynamics.",
+          "arxiv_id": "2403.12183v1"
+        },
+        {
+          "title": "Cutoff stability under distributional constraints with an application to summer internship matching",
+          "year": "2021-02",
+          "abstract": "We introduce a new two-sided stable matching problem that describes the\nsummer internship matching practice of an Australian university. The model is a\ncase between two models of Kamada and Kojima on matchings with distributional\nconstraints. We study three solution concepts, the strong and weak stability\nconcepts proposed by Kamada and Kojima, and a new one in between the two,\ncalled cutoff stability. Kamada and Kojima showed that a strongly stable\nmatching may not exist in their most restricted model with disjoint regional\nquotas. Our first result is that checking its existence is NP-hard. We then\nshow that a cutoff stable matching exists not just for the summer internship\nproblem but also for the general matching model with arbitrary heredity\nconstraints. We present an algorithm to compute a cutoff stable matching and\nshow that it runs in polynomial time in our special case of summer internship\nmodel. However, we also show that finding a maximum size cutoff stable matching\nis NP-hard, but we provide a Mixed Integer Linear Program formulation for this\noptimisation problem.",
+          "arxiv_id": "2102.02931v2"
+        },
+        {
+          "title": "Modifying an Instance of the Super-Stable Matching Problem",
+          "year": "2024-02",
+          "abstract": "Super-stability is one of the stability concepts in the stable matching\nproblem with ties. It is known that there may not exist a super-stable\nmatching, and the existence of a super-stable matching can be checked in\npolynomial time. In this paper, we consider the problem of modifying an\ninstance of the super-stable matching problem by deleting some bounded number\nof agents in such a way that there exists a super-stable matching in the\nmodified instance. First, we prove that if we are allowed to delete agents on\nonly one side, then our problem can be solved in polynomial time.\nInterestingly, this result is obtained by carefully observing the existing\nalgorithm for checking the existence of a super-stable matching. In addition,\nwe prove that if we are allowed to delete agents on both sides, then our\nproblem is NP-complete.",
+          "arxiv_id": "2402.11918v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Reactive Synthesis of Sensor Revealing Strategies in Hypergames on Graphs",
+          "year": "2024-12",
+          "abstract": "In many security applications of cyber-physical systems, a system designer\nmust guarantee that critical missions are satisfied against attacks in the\nsensors and actuators of the CPS. Traditional security design of CPSs often\nassume that attackers have complete knowledge of the system. In this article,\nwe introduce a class of deception techniques and study how to leverage\nasymmetric information created by deception to strengthen CPS security.\nConsider an adversarial interaction between a CPS defender and an attacker, who\ncan perform sensor jamming attacks. To mitigate such attacks, the defender\nintroduces asymmetrical information by deploying a \"hidden sensor,\" whose\npresence is initially undisclosed but can be revealed if queried. We introduce\nhypergames on graphs to model this game with asymmetric information. Building\non the solution concept called subjective rationalizable strategies in\nhypergames, we identify two stages in the game: An initial game stage where the\ndefender commits to a strategy perceived rationalizable by the attacker until\nhe deviates from the equilibrium in the attacker's perceptual game; Upon the\ndeviation, a delay-attack game stage starts where the defender plays against\nthe attacker, who has a bounded delay in attacking the sensor being revealed.\nBased on backward induction, we develop an algorithm that determines, for any\ngiven state, if the defender can benefit from hiding a sensor and revealing it\nlater. If the answer is affirmative, the algorithm outputs a sensor revealing\nstrategy to determine when to reveal the sensor during dynamic interactions. We\ndemonstrate the effectiveness of our deceptive strategies through two case\nstudies related to CPS security applications.",
+          "arxiv_id": "2412.01975v1"
+        },
+        {
+          "title": "Foureye: Defensive Deception based on Hypergame Theory Against Advanced Persistent Threats",
+          "year": "2021-01",
+          "abstract": "Defensive deception techniques have emerged as a promising proactive defense\nmechanism to mislead an attacker and thereby achieve attack failure. However,\nmost game-theoretic defensive deception approaches have assumed that players\nmaintain consistent views under uncertainty. They do not consider players'\npossible, subjective beliefs formed due to asymmetric information given to\nthem. In this work, we formulate a hypergame between an attacker and a defender\nwhere they can interpret the same game differently and accordingly choose their\nbest strategy based on their respective beliefs. This gives a chance for\ndefensive deception strategies to manipulate an attacker's belief, which is the\nkey to the attacker's decision making. We consider advanced persistent threat\n(APT) attacks, which perform multiple attacks in the stages of the cyber kill\nchain where both the attacker and the defender aim to select optimal strategies\nbased on their beliefs. Through extensive simulation experiments, we\ndemonstrated how effectively the defender can leverage defensive deception\ntechniques while dealing with multi-staged APT attacks in a hypergame in which\nthe imperfect information is reflected based on perceived uncertainty, cost,\nand expected utilities of both attacker and defender, the system lifetime\n(i.e., mean time to security failure), and improved false positive rates in\ndetecting attackers.",
+          "arxiv_id": "2101.02863v2"
+        },
+        {
+          "title": "A Theory of Hypergames on Graphs for Synthesizing Dynamic Cyber Defense with Deception",
+          "year": "2020-08",
+          "abstract": "In this chapter, we present an approach using formal methods to synthesize\nreactive defense strategy in a cyber network, equipped with a set of decoy\nsystems. We first generalize formal graphical security models--attack\ngraphs--to incorporate defender's countermeasures in a game-theoretic model,\ncalled an attack-defend game on graph. This game captures the dynamic\ninteractions between the defender and the attacker and their defense/attack\nobjectives in formal logic. Then, we introduce a class of hypergames to model\nasymmetric information created by decoys in the attacker-defender interactions.\nGiven qualitative security specifications in formal logic, we show that the\nsolution concepts from hypergames and reactive synthesis in formal methods can\nbe extended to synthesize effective dynamic defense strategy using cyber\ndeception. The strategy takes the advantages of the misperception of the\nattacker to ensure security specification is satisfied, which may not be\nsatisfiable when the information is symmetric.",
+          "arxiv_id": "2008.03210v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "To Analyze and Regulate Human-in-the-loop Learning for Congestion Games",
+          "year": "2025-01",
+          "abstract": "In congestion games, selfish users behave myopically to crowd to the shortest\npaths, and the social planner designs mechanisms to regulate such selfish\nrouting through information or payment incentives. However, such mechanism\ndesign requires the knowledge of time-varying traffic conditions and it is the\nusers themselves to learn and report past road experiences to the social\nplanner (e.g., Waze or Google Maps). When congestion games meet mobile\ncrowdsourcing, it is critical to incentivize selfish users to explore\nnon-shortest paths in the best exploitation-exploration trade-off. First, we\nconsider a simple but fundamental parallel routing network with one\ndeterministic path and multiple stochastic paths for users with an average\narrival probability $\\lambda$. We prove that the current myopic routing policy\n(widely used in Waze and Google Maps) misses both exploration (when strong\nhazard belief) and exploitation (when weak hazard belief) as compared to the\nsocial optimum. Due to the myopic policy's under-exploration, we prove that the\ncaused price of anarchy (PoA) is larger than\n\\(\\frac{1}{1-\\rho^{\\frac{1}{\\lambda}}}\\), which can be arbitrarily large as\ndiscount factor \\(\\rho\\rightarrow1\\). To mitigate such huge efficiency loss, we\npropose a novel selective information disclosure (SID) mechanism: we only\nreveal the latest traffic information to users when they intend to over-explore\nstochastic paths upon arrival, while hiding such information when they want to\nunder-explore. We prove that our mechanism successfully reduces PoA to be less\nthan~\\(2\\). Besides the parallel routing network, we further extend our\nmechanism and PoA results to any linear path graphs with multiple intermediate\nnodes.",
+          "arxiv_id": "2501.03055v2"
+        },
+        {
+          "title": "Credit-Based Congestion Pricing: Equilibrium Properties and Optimal Scheme Design",
+          "year": "2022-10",
+          "abstract": "Credit-based congestion pricing (CBCP) has emerged as a mechanism to\nalleviate the social inequity concerns of road congestion pricing - a promising\nstrategy for traffic congestion mitigation - by providing low-income users with\ntravel credits to offset some of their toll payments. While CBCP offers immense\npotential for addressing inequity issues that hamper the practical viability of\ncongestion pricing, the deployment of CBCP in practice is nascent, and the\npotential efficacy and optimal design of CBCP schemes have yet to be\nformalized. In this work, we study the design of CBCP schemes to achieve\nparticular societal objectives and investigate their influence on traffic\npatterns when routing heterogeneous users with different values of time (VoTs)\nin a multi-lane highway with an express lane. We introduce a new non-atomic\ncongestion game model of a mixed-economy, wherein eligible users receive travel\ncredits while the remaining ineligible users pay out-of-pocket to use the\nexpress lane. In this setting, we investigate the effect of CBCP schemes on\ntraffic patterns by characterizing the properties (i.e., existence, comparative\nstatics) of the corresponding Nash equilibria and, in the setting when eligible\nusers have time-invariant VoTs, develop a convex program to compute these\nequilibria. We further present a bi-level optimization framework to design\noptimal CBCP schemes to achieve a central planner's societal objectives.\nFinally, we conduct numerical experiments based on a case study of the San\nMateo 101 Express Lanes Project, one of the first North American CBCP pilots.\nOur results demonstrate the potential of CBCP to enable low-income travelers to\navail of the travel time savings provided by congestion pricing on express\nlanes while having comparatively low impacts on the travel costs of other road\nusers.",
+          "arxiv_id": "2210.15907v1"
+        },
+        {
+          "title": "Bridging the user equilibrium and the system optimum in static traffic assignment: how the cooperation among drivers can solve the congestion problem in city networks",
+          "year": "2021-05",
+          "abstract": "Solving the road congestion problem is one of the most pressing issues in\nmoderncities since it causes time wasting, pollution, higher industrial costs\nand huge roadmaintenance costs. Advances in ITS technologies and the advent of\nautonomousvehicles are changing mobility dramatically. They enable the\nimplementation of acoordination mechanism, called coordinated traffic\nassignment, among the sat-navdevices aiming at assigning paths to drivers to\neliminate congestion and to re-duce the total travel time in traffic networks.\nAmong possible congestion avoidance methods, coordinated traffic assignment is\na valuable choice since it does not involvehuge investments to expand the road\nnetwork. Traffic assignments are traditionally devoted to two main perspectives\non which the well-known Wardropian principlesare inspired: the user equilibrium\nand the system optimum. User equilibrium is a user-driven traffic assignment in\nwhich each user chooses the most convenientpath selfishly. It guarantees that\nfairness among users is respected since, whenthe equilibrium is reached, all\nusers sharing the same origin and destination willexperience the same travel\ntime. The main drawback in a user equilibrium is thatthe system total travel\ntime is not minimized and, hence, the so-called Price ofAnarchy is paid. On the\nother hand, the system optimum is an efficient system-wide traffic assignment\nin which drivers are routed on the network in such a waythe total travel time\nis minimized but users might experience travel times that arehigher than the\nother users travelling from the same origin to the same destina-tion affecting\nthe compliance. Thus, drawbacks in implementing one of the two assignments can\nbe overcome by hybridizing the two approaches aiming at bridging users'\nfairness to system-wide efficiency. The survey reviews the state-of-the-art of\nthese trade-off approaches",
+          "arxiv_id": "2105.05804v1"
+        }
+      ],
+      "9": [
+        {
+          "title": "The algebraic structures of social organizations: the operad of cooperative games",
+          "year": "2025-06",
+          "abstract": "The main goal of this paper is to settle a conceptual framework for\ncooperative game theory in which the notion of composition/aggregation of games\nis the defining structure. This is done via the mathematical theory of\nalgebraic operads: we start by endowing the collection of all cooperative games\nwith any number of players with an operad structure, and we show that it\ngeneralises all the previous notions of sums, products and compositions of\ngames considered by Owen, Shapley, von Neumann and Morgenstern, and many\nothers. Furthermore, we explicitly compute this operad in terms of generators\nand relations, showing that the M\\\"obius transform map induces a canonical\nisomorphism between the operad of cooperative games and the operad that encodes\ncommutative triassociative algebras. In other words, we prove that any\ncooperative game is a linear combination of iterated compositions of the\n2-player bargaining game and the 2-player dictator games. We show that many\ninteresting classes of games (simple, balanced, capacities a.k.a fuzzy measures\nand convex functions, totally monotone, etc) are stable under compositions, and\nthus form suboperads. In the convex case, this gives by the submodularity\ntheorem a new operad structure on the family of all generalized permutahedra.\nFinally, we focus on how solution concepts in cooperative game theory behave\nunder composition: we study the core of a composite and describe it in terms of\nthe core of its components, and we give explicit formulas for the Shapley value\nand the Banzhaf index of a compound game.",
+          "arxiv_id": "2507.01969v1"
+        },
+        {
+          "title": "Cooperative networks and Hodge-Shapley value",
+          "year": "2022-03",
+          "abstract": "Lloyd Shapley's cooperative value allocation theory stands as a central\nconcept in game theory, extensively utilized across various domains to\ndistribute resources, evaluate individual contributions, and ensure fairness.\nThe Shapley value formula and his four axioms that characterize it form the\nfoundation of the theory.\n  Traditionally, the Shapley value is assigned under the assumption that all\nplayers in a cooperative game will ultimately form the grand coalition. In this\npaper, we reinterpret the Shapley value as an expectation of a certain\nstochastic path integral, with each path representing a general coalition\nformation process. As a result, the value allocation is naturally extended to\nall partial coalition states. In addition, we provide a set of five properties\nthat extend the Shapley axioms and characterize the stochastic path integral.\nFinally, by integrating Hodge calculus, stochastic processes, and path\nintegration of edge flows on graphs, we expand the cooperative value allocation\ntheory beyond the standard coalition game structure to encompass a broader\nrange of cooperative network configurations.",
+          "arxiv_id": "2203.06860v7"
+        },
+        {
+          "title": "1-convex extensions of incomplete cooperative games and the average value",
+          "year": "2021-07",
+          "abstract": "The model of incomplete cooperative games incorporates uncertainty into the\nclassical model of cooperative games by considering a partial characteristic\nfunction. Thus the values for some of the coalitions are not known. The main\nfocus of this paper is the class of 1-convex cooperative games under this\nframework.\n  We are interested in two heavily intertwined questions. First, given an\nincomplete game, in which ways can we fill in the missing values to obtain a\nclassical 1-convex game? Such complete games are called \\emph{1-convex\nextensions}. For the class of minimal incomplete games (in which precisely the\nvalues of singletons and grand coalitions are known), we provide an answer in\nterms of a description of the set of 1-convex extensions. The description\nemploys extreme points and extreme rays of the set.\n  Second, how to determine in a rational, fair, and efficient way the payoffs\nof players based only on the known values of coalitions? Based on the\ndescription of the set of 1-convex extensions, we introduce generalisations of\nthree solution concepts (values) for complete games, namely the $\\tau$-value,\nthe Shapley value and the nucleolus. We consider two variants where we compute\nthe centre of gravity of either extreme games or of a combination of extreme\ngames and extreme rays. We show that all of the generalised values coincide for\nminimal incomplete games which allows to introduce the \\emph{average value}.\nFor this value, we provide three different axiomatisations based on axiomatic\ncharacterisations of the $\\tau$-value and the Shapley value for classical\ncooperative games.\n  Finally, we turn our attention to \\emph{incomplete games with defined upper\nvector}, asking the same questions and this time arriving to different\nconclusions. This provides a benchmark to test our tools and knowledge of the\naverage value.",
+          "arxiv_id": "2107.04679v2"
+        }
+      ],
+      "10": [
+        {
+          "title": "Static network structure cannot stabilize cooperation among Large Language Model agents",
+          "year": "2024-11",
+          "abstract": "Large language models (LLMs) are increasingly used to model human social\nbehavior, with recent research exploring their ability to simulate social\ndynamics. Here, we test whether LLMs mirror human behavior in social dilemmas,\nwhere individual and collective interests conflict. Humans generally cooperate\nmore than expected in laboratory settings, showing less cooperation in\nwell-mixed populations but more in fixed networks. In contrast, LLMs tend to\nexhibit greater cooperation in well-mixed settings. This raises a key question:\nAre LLMs about to emulate human behavior in cooperative dilemmas on networks?\nIn this study, we examine networked interactions where agents repeatedly engage\nin the Prisoner's Dilemma within both well-mixed and structured network\nconfigurations, aiming to identify parallels in cooperative behavior between\nLLMs and humans. Our findings indicate critical distinctions: while humans tend\nto cooperate more within structured networks, LLMs display increased\ncooperation mainly in well-mixed environments, with limited adjustment to\nnetworked contexts. Notably, LLM cooperation also varies across model types,\nillustrating the complexities of replicating human-like social adaptability in\nartificial agents. These results highlight a crucial gap: LLMs struggle to\nemulate the nuanced, adaptive social strategies humans deploy in fixed\nnetworks. Unlike human participants, LLMs do not alter their cooperative\nbehavior in response to network structures or evolving social contexts, missing\nthe reciprocity norms that humans adaptively employ. This limitation points to\na fundamental need in future LLM design -- to integrate a deeper comprehension\nof social norms, enabling more authentic modeling of human-like cooperation and\nadaptability in networked environments.",
+          "arxiv_id": "2411.10294v1"
+        },
+        {
+          "title": "Nicer Than Humans: How do Large Language Models Behave in the Prisoner's Dilemma?",
+          "year": "2024-06",
+          "abstract": "The behavior of Large Language Models (LLMs) as artificial social agents is\nlargely unexplored, and we still lack extensive evidence of how these agents\nreact to simple social stimuli. Testing the behavior of AI agents in classic\nGame Theory experiments provides a promising theoretical framework for\nevaluating the norms and values of these agents in archetypal social\nsituations. In this work, we investigate the cooperative behavior of three LLMs\n(Llama2, Llama3, and GPT3.5) when playing the Iterated Prisoner's Dilemma\nagainst random adversaries displaying various levels of hostility. We introduce\na systematic methodology to evaluate an LLM's comprehension of the game rules\nand its capability to parse historical gameplay logs for decision-making. We\nconducted simulations of games lasting for 100 rounds and analyzed the LLMs'\ndecisions in terms of dimensions defined in the behavioral economics\nliterature. We find that all models tend not to initiate defection but act\ncautiously, favoring cooperation over defection only when the opponent's\ndefection rate is low. Overall, LLMs behave at least as cooperatively as the\ntypical human player, although our results indicate some substantial\ndifferences among models. In particular, Llama2 and GPT3.5 are more cooperative\nthan humans, and especially forgiving and non-retaliatory for opponent\ndefection rates below 30%. More similar to humans, Llama3 exhibits consistently\nuncooperative and exploitative behavior unless the opponent always cooperates.\nOur systematic approach to the study of LLMs in game theoretical scenarios is a\nstep towards using these simulations to inform practices of LLM auditing and\nalignment.",
+          "arxiv_id": "2406.13605v2"
+        },
+        {
+          "title": "PokerBench: Training Large Language Models to become Professional Poker Players",
+          "year": "2025-01",
+          "abstract": "We introduce PokerBench - a benchmark for evaluating the poker-playing\nabilities of large language models (LLMs). As LLMs excel in traditional NLP\ntasks, their application to complex, strategic games like poker poses a new\nchallenge. Poker, an incomplete information game, demands a multitude of skills\nsuch as mathematics, reasoning, planning, strategy, and a deep understanding of\ngame theory and human psychology. This makes Poker the ideal next frontier for\nlarge language models. PokerBench consists of a comprehensive compilation of\n11,000 most important scenarios, split between pre-flop and post-flop play,\ndeveloped in collaboration with trained poker players. We evaluate prominent\nmodels including GPT-4, ChatGPT 3.5, and various Llama and Gemma series models,\nfinding that all state-of-the-art LLMs underperform in playing optimal poker.\nHowever, after fine-tuning, these models show marked improvements. We validate\nPokerBench by having models with different scores compete with each other,\ndemonstrating that higher scores on PokerBench lead to higher win rates in\nactual poker games. Through gameplay between our fine-tuned model and GPT-4, we\nalso identify limitations of simple supervised fine-tuning for learning optimal\nplaying strategy, suggesting the need for more advanced methodologies for\neffectively training language models to excel in games. PokerBench thus\npresents a unique benchmark for a quick and reliable evaluation of the\npoker-playing ability of LLMs as well as a comprehensive benchmark to study the\nprogress of LLMs in complex game-playing scenarios.",
+          "arxiv_id": "2501.08328v2"
+        }
+      ],
+      "11": [
+        {
+          "title": "Incentivizing Federated Learning",
+          "year": "2022-05",
+          "abstract": "Federated Learning is an emerging distributed collaborative learning paradigm\nused by many of applications nowadays. The effectiveness of federated learning\nrelies on clients' collective efforts and their willingness to contribute local\ndata. However, due to privacy concerns and the costs of data collection and\nmodel training, clients may not always contribute all the data they possess,\nwhich would negatively affect the performance of the global model. This paper\npresents an incentive mechanism that encourages clients to contribute as much\ndata as they can obtain. Unlike previous incentive mechanisms, our approach\ndoes not monetize data. Instead, we implicitly use model performance as a\nreward, i.e., significant contributors are paid off with better models. We\ntheoretically prove that clients will use as much data as they can possibly\npossess to participate in federated learning under certain conditions with our\nincentive mechanism",
+          "arxiv_id": "2205.10951v1"
+        },
+        {
+          "title": "IMFL-AIGC: Incentive Mechanism Design for Federated Learning Empowered by Artificial Intelligence Generated Content",
+          "year": "2024-06",
+          "abstract": "Federated learning (FL) has emerged as a promising paradigm that enables\nclients to collaboratively train a shared global model without uploading their\nlocal data. To alleviate the heterogeneous data quality among clients,\nartificial intelligence-generated content (AIGC) can be leveraged as a novel\ndata synthesis technique for FL model performance enhancement. Due to various\ncosts incurred by AIGC-empowered FL (e.g., costs of local model computation and\ndata synthesis), however, clients are usually reluctant to participate in FL\nwithout adequate economic incentives, which leads to an unexplored critical\nissue for enabling AIGC-empowered FL. To fill this gap, we first devise a data\nquality assessment method for data samples generated by AIGC and rigorously\nanalyze the convergence performance of FL model trained using a blend of\nauthentic and AI-generated data samples. We then propose a data quality-aware\nincentive mechanism to encourage clients' participation. In light of\ninformation asymmetry incurred by clients' private multi-dimensional\nattributes, we investigate clients' behavior patterns and derive the server's\noptimal incentive strategies to minimize server's cost in terms of both model\naccuracy loss and incentive payments for both complete and incomplete\ninformation scenarios. Numerical results demonstrate that our proposed\nmechanism exhibits highest training accuracy and reduces up to 53.34% of the\nserver's cost with real-world datasets, compared with existing benchmark\nmechanisms.",
+          "arxiv_id": "2406.08526v1"
+        },
+        {
+          "title": "Incentive Mechanism Design for Unbiased Federated Learning with Randomized Client Participation",
+          "year": "2023-04",
+          "abstract": "Incentive mechanism is crucial for federated learning (FL) when rational\nclients do not have the same interests in the global model as the server.\nHowever, due to system heterogeneity and limited budget, it is generally\nimpractical for the server to incentivize all clients to participate in all\ntraining rounds (known as full participation). The existing FL incentive\nmechanisms are typically designed by stimulating a fixed subset of clients\nbased on their data quantity or system resources. Hence, FL is performed only\nusing this subset of clients throughout the entire training process, leading to\na biased model because of data heterogeneity. This paper proposes a game\ntheoretic incentive mechanism for FL with randomized client participation,\nwhere the server adopts a customized pricing strategy that motivates different\nclients to join with different participation levels (probabilities) for\nobtaining an unbiased and high performance model. Each client responds to the\nserver's monetary incentive by choosing its best participation level, to\nmaximize its profit based on not only the incurred local cost but also its\nintrinsic value for the global model. To effectively evaluate clients'\ncontribution to the model performance, we derive a new convergence bound which\nanalytically predicts how clients' arbitrary participation levels and their\nheterogeneous data affect the model performance. By solving a non-convex\noptimization problem, our analysis reveals that the intrinsic value leads to\nthe interesting possibility of bidirectional payment between the server and\nclients. Experimental results using real datasets on a hardware prototype\ndemonstrate the superiority of our mechanism in achieving higher model\nperformance for the server as well as higher profits for the clients.",
+          "arxiv_id": "2304.07981v1"
+        }
+      ],
+      "12": [
+        {
+          "title": "A Repeated Auction Model for Load-Aware Dynamic Resource Allocation in Multi-Access Edge Computing",
+          "year": "2024-02",
+          "abstract": "Multi-access edge computing (MEC) is one of the enabling technologies for\nhigh-performance computing at the edge of the 6 G networks, supporting high\ndata rates and ultra-low service latency. Although MEC is a remedy to meet the\ngrowing demand for computation-intensive applications, the scarcity of\nresources at the MEC servers degrades its performance. Hence, effective\nresource management is essential; nevertheless, state-of-the-art research lacks\nefficient economic models to support the exponential growth of the MEC-enabled\napplications market. We focus on designing a MEC offloading service market\nbased on a repeated auction model with multiple resource sellers (e.g., network\noperators and service providers) that compete to sell their computing resources\nto the offloading users. We design a computationally-efficient modified\nGeneralized Second Price (GSP)-based algorithm that decides on pricing and\nresource allocation by considering the dynamic offloading requests arrival and\nthe servers' computational workloads. Besides, we propose adaptive\nbest-response bidding strategies for the resource sellers, satisfying the\nsymmetric Nash equilibrium (SNE) and individual rationality properties.\nFinally, via intensive numerical results, we show the effectiveness of our\nproposed resource allocation mechanism.",
+          "arxiv_id": "2402.04399v1"
+        },
+        {
+          "title": "BARGAIN-MATCH: A Game Theoretical Approach for Resource Allocation and Task Offloading in Vehicular Edge Computing Networks",
+          "year": "2022-03",
+          "abstract": "Vehicular edge computing (VEC) is emerging as a promising architecture of\nvehicular networks (VNs) by deploying the cloud computing resources at the edge\nof the VNs. This work aims to optimize resource allocation and task offloading\nin VEC networks. Specifically, we formulate a game theoretical resource\nallocation and task offloading problem (GTRATOP) that aims to maximize the\nsystem performance by jointly considering the incentive for cooperation,\ncompetition among vehicles, heterogeneity between VEC servers and vehicles, and\ninherent dynamic of VNs. Since the formulated GTRATOP is NP-hard, we propose an\nadaptive approach for resource allocation and task offloading in VEC networks\nby incorporating bargaining game and matching game, which is called\nBARGAIN-MATCH. First, for resource allocation, a bargaining game-based\nincentive is proposed to stimulate the vehicles and VEC servers to negotiate\nthe optimal resource allocation and pricing decisions. Second, for task\noffloading, a many-to-one matching scheme is proposed to decide the optimal\noffloading strategies. Third, the dynamic and time-varying features are\nconsidered to adapt the strategies of BARGAIN-MATCH to the real-time VEC\nnetworks. Moreover, the BARGAIN-MATCH is proved to be stable and weak Pareto\noptimal. Simulation results demonstrate that the proposed BARGAIN-MATCH\nachieves superior system performance and efficiency compared to other methods,\nespecially when the system workload is heavy.",
+          "arxiv_id": "2203.14064v3"
+        },
+        {
+          "title": "Joint Task Offloading and Resource Allocation in Aerial-Terrestrial UAV Networks with Edge and Fog Computing for Post-Disaster Rescue",
+          "year": "2023-08",
+          "abstract": "Unmanned aerial vehicles (UAVs) play an increasingly important role in\nassisting fast-response post-disaster rescue due to their fast deployment,\nflexible mobility, and low cost. However, UAVs face the challenges of limited\nbattery capacity and computing resources, which could shorten the expected\nflight endurance of UAVs and increase the rescue response delay during\nperforming mission-critical tasks. To address this challenge, we first present\na three-layer post-disaster rescue computing architecture by leveraging the\naerial-terrestrial edge capabilities of mobile edge computing (MEC) and vehicle\nfog computing (VFC), which consists of a vehicle fog layer, a UAV client layer,\nand a UAV edge layer. Moreover, we formulate a joint task offloading and\nresource allocation optimization problem (JTRAOP) with the aim of maximizing\nthe time-average system utility. Since the formulated JTRAOP is proved to be\nNP-hard, we propose an MEC-VFC-aided task offloading and resource allocation\n(MVTORA) approach, which consists of a game theoretic algorithm for task\noffloading decision, a convex optimization-based algorithm for MEC resource\nallocation, and an evolutionary computation-based hybrid algorithm for VFC\nresource allocation. Simulation results validate that the proposed approach can\nachieve superior system performance compared to the other benchmark schemes,\nespecially under heavy system workloads.",
+          "arxiv_id": "2309.16709v2"
+        }
+      ],
+      "13": [
+        {
+          "title": "Sharing Energy in Wide Area: A Two-Layer Energy Sharing Scheme for Massive Prosumers",
+          "year": "2024-01",
+          "abstract": "The popularization of distributed energy resources transforms end-users from\nconsumers into prosumers. Inspired by the sharing economy principle, energy\nsharing markets for prosumers are proposed to facilitate the utilization of\nrenewable energy. This paper proposes a novel two-layer energy sharing market\nfor massive prosumers, which can promote social efficiency by wider-area\nsharing. In this market, there is an upper-level wide-area market (WAM) in the\ndistribution system and numerous lower-level local-area markets (LAMs) in\ncommunities. Prosumers in the same community share energy with each other in\nthe LAM, which can be uncleared. The energy surplus and shortage of LAMs are\ncleared in the WAM. Thanks to the wide-area two-layer structure, the market\noutcome is near-social-optimal in large-scale systems. However, the proposed\nmarket forms a complex mathematical program with equilibrium constraints\n(MPEC). To solve the problem, we propose an efficient and hierarchically\ndistributed bidding algorithm. The proposed two-layer market and bidding\nalgorithm are verified on the IEEE 123-bus system with 11250 prosumers, which\ndemonstrates the practicality and efficiency for large-scale markets.",
+          "arxiv_id": "2401.11090v1"
+        },
+        {
+          "title": "Microgrids Coalitions for Energy Market Balancing",
+          "year": "2025-06",
+          "abstract": "With the integration of renewable sources in electricity distribution\nnetworks, the need to develop intelligent mechanisms for balancing the energy\nmarket has arisen. In the absence of such mechanisms, the energy market may\nface imbalances that can lead to power outages, financial losses or instability\nat the grid level. In this context, the grouping of microgrids into optimal\ncoalitions that can absorb energy from the market during periods of surplus or\nsupply energy to the market during periods of is a key aspect in the efficient\nmanagement of distribution networks. In this article, we propose a method that\nidentify an optimal microgrids coalition capable of addressing the dynamics of\nthe energy market. The proposed method models the problem of identifying the\noptimal coalition as an optimization problem that it solves by combining a\nstrategy inspired by cooperative game theory with a memetic algorithm. An\nindividual is represented as a coalition of microgrids and the evolution of\npopulation of individuals over generations is assured by recombination and\nmutation. The fitness function is defined as the difference between the total\nvalue generated by the coalition and a penalty applied to the coalition when\nthe energy traded by coalition exceeds the energy available/demanded on/by the\nenergy market. The value generated by the coalition is calculated based on the\nprofit obtained by the collation if it sells energy on the market during\nperiods of deficit or the savings obtained by the coalition if it buys energy\non the market during periods of surplus and the costs associated with the\ntrading process. This value is divided equitably among the coalition members,\naccording to the Shapley value, which considers the contribution of each one to\nthe formation of collective value.",
+          "arxiv_id": "2506.06058v1"
+        },
+        {
+          "title": "Social Factors in P2P Energy Trading Using Hedonic Games",
+          "year": "2023-09",
+          "abstract": "Lately, the energy communities have gained a lot of attention as they have\nthe potential to significantly contribute to the resilience and flexibility of\nthe energy system, facilitating widespread integration of intermittent\nrenewable energy sources. Within these communities the prosumers can engage in\npeer-to-peer trading, fostering local collaborations and increasing awareness\nabout energy usage and flexible consumption. However, even under these\nfavorable conditions, prosumer engagement levels remain low, requiring trading\nmechanisms that are aligned with their social values and expectations. In this\npaper, we introduce an innovative hedonic game coordination and cooperation\nmodel for P2P energy trading among prosumers which considers the social\nrelationships within an energy community to create energy coalitions and\nfacilitate energy transactions among them. We defined a heuristic that\noptimizes the prosumers coalitions, considering their social and energy price\npreferences and balancing the energy demand and supply within the community. We\nintegrated the proposed hedonic game model into a state-of-the-art\nblockchain-based P2P energy flexibility market and evaluated its performance\nwithin an energy community of prosumers. The evaluation results on a\nblockchain-based P2P energy flexibility market show the effectiveness in\nconsidering social factors when creating coalitions, increasing the total\namount of energy transacted in a market session by 5% compared with other game\ntheory-based solutions. Finally, it shows the importance of the social\ndimensions of P2P energy transactions, the positive social dynamics in the\nenergy community increasing the amount of energy transacted by more than 10%\nwhile contributing to a more balanced energy demand and supply within the\ncommunity.",
+          "arxiv_id": "2309.01418v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:41:48Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

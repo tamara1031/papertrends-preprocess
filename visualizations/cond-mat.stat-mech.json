@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_quantum_model_systems_time",
+        "keywords": [
+          [
+            "quantum",
+            0.02650734655159283
+          ],
+          [
+            "model",
+            0.024134766524191192
+          ],
+          [
+            "systems",
+            0.020667572022305757
+          ],
+          [
+            "time",
+            0.019951650581563438
+          ],
+          [
+            "phase",
+            0.018983663953866917
+          ],
+          [
+            "dynamics",
+            0.017398148268730172
+          ],
+          [
+            "non",
+            0.01629299794439157
+          ],
+          [
+            "state",
+            0.01605072150414157
+          ],
+          [
+            "transition",
+            0.013234155403576198
+          ],
+          [
+            "results",
+            0.013061113253024904
+          ]
+        ],
+        "count": 19196
+      },
+      "1": {
+        "name": "1_exclusion_exclusion process_process_TASEP",
+        "keywords": [
+          [
+            "exclusion",
+            0.05423970104449944
+          ],
+          [
+            "exclusion process",
+            0.04119377075622696
+          ],
+          [
+            "process",
+            0.03750625584447086
+          ],
+          [
+            "TASEP",
+            0.029398010386481033
+          ],
+          [
+            "asymmetric",
+            0.029255195418751094
+          ],
+          [
+            "simple exclusion",
+            0.0269692217889643
+          ],
+          [
+            "current",
+            0.02669338772935373
+          ],
+          [
+            "simple exclusion process",
+            0.023785560061867446
+          ],
+          [
+            "simple",
+            0.0227011879164858
+          ],
+          [
+            "particles",
+            0.022376096247433325
+          ]
+        ],
+        "count": 197
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.14810537738156282
+      ],
+      [
+        -0.14810537738156282,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        217,
+        14
+      ],
+      "2020-02": [
+        239,
+        16
+      ],
+      "2020-03": [
+        287,
+        11
+      ],
+      "2020-04": [
+        280,
+        11
+      ],
+      "2020-05": [
+        290,
+        14
+      ],
+      "2020-06": [
+        299,
+        13
+      ],
+      "2020-07": [
+        317,
+        12
+      ],
+      "2020-08": [
+        301,
+        3
+      ],
+      "2020-09": [
+        299,
+        13
+      ],
+      "2020-10": [
+        286,
+        9
+      ],
+      "2020-11": [
+        280,
+        17
+      ],
+      "2020-12": [
+        312,
+        9
+      ],
+      "2021-01": [
+        231,
+        11
+      ],
+      "2021-02": [
+        233,
+        12
+      ],
+      "2021-03": [
+        329,
+        21
+      ],
+      "2021-04": [
+        293,
+        16
+      ],
+      "2021-05": [
+        291,
+        10
+      ],
+      "2021-06": [
+        293,
+        18
+      ],
+      "2021-07": [
+        277,
+        17
+      ],
+      "2021-08": [
+        250,
+        14
+      ],
+      "2021-09": [
+        282,
+        15
+      ],
+      "2021-10": [
+        302,
+        11
+      ],
+      "2021-11": [
+        281,
+        12
+      ],
+      "2021-12": [
+        308,
+        21
+      ],
+      "2022-01": [
+        246,
+        10
+      ],
+      "2022-02": [
+        280,
+        11
+      ],
+      "2022-03": [
+        317,
+        18
+      ],
+      "2022-04": [
+        269,
+        12
+      ],
+      "2022-05": [
+        325,
+        16
+      ],
+      "2022-06": [
+        295,
+        16
+      ],
+      "2022-07": [
+        270,
+        17
+      ],
+      "2022-08": [
+        285,
+        10
+      ],
+      "2022-09": [
+        264,
+        12
+      ],
+      "2022-10": [
+        293,
+        6
+      ],
+      "2022-11": [
+        295,
+        13
+      ],
+      "2022-12": [
+        276,
+        13
+      ],
+      "2023-01": [
+        261,
+        14
+      ],
+      "2023-02": [
+        249,
+        10
+      ],
+      "2023-03": [
+        306,
+        13
+      ],
+      "2023-04": [
+        235,
+        12
+      ],
+      "2023-05": [
+        340,
+        15
+      ],
+      "2023-06": [
+        315,
+        16
+      ],
+      "2023-07": [
+        336,
+        18
+      ],
+      "2023-08": [
+        291,
+        14
+      ],
+      "2023-09": [
+        290,
+        11
+      ],
+      "2023-10": [
+        357,
+        20
+      ],
+      "2023-11": [
+        316,
+        15
+      ],
+      "2023-12": [
+        293,
+        9
+      ],
+      "2024-01": [
+        267,
+        13
+      ],
+      "2024-02": [
+        290,
+        18
+      ],
+      "2024-03": [
+        334,
+        16
+      ],
+      "2024-04": [
+        278,
+        14
+      ],
+      "2024-05": [
+        329,
+        14
+      ],
+      "2024-06": [
+        308,
+        14
+      ],
+      "2024-07": [
+        351,
+        9
+      ],
+      "2024-08": [
+        233,
+        10
+      ],
+      "2024-09": [
+        341,
+        6
+      ],
+      "2024-10": [
+        353,
+        13
+      ],
+      "2024-11": [
+        335,
+        9
+      ],
+      "2024-12": [
+        332,
+        17
+      ],
+      "2025-01": [
+        271,
+        15
+      ],
+      "2025-02": [
+        244,
+        13
+      ],
+      "2025-03": [
+        339,
+        17
+      ],
+      "2025-04": [
+        295,
+        10
+      ],
+      "2025-05": [
+        318,
+        10
+      ],
+      "2025-06": [
+        328,
+        6
+      ],
+      "2025-07": [
+        385,
+        12
+      ],
+      "2025-08": [
+        310,
+        14
+      ],
+      "2025-09": [
+        174,
+        9
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Observing quantum many-body scars in random quantum circuits",
+          "year": "2024-02",
+          "abstract": "The Schwinger model describes quantum electrodynamics in 1+1-dimensions, it\nis a prototype for quantum chromodynamics, and its lattice version allows for a\nquantum link model description that can be simulated using modern quantum\ndevices. In this work, we devise quantum simulations to investigate the\ndynamics of this model in its low dimensional form, where the gauge field\ndegrees of freedom are described by spin 1/2 operators. We apply trotterization\nto write quantum circuits that effectively generate the evolution under the\nSchwinger model Hamiltonian. We consider both sequential circuits, with a fixed\ngate sequence, and randomized ones. Utilizing the correspondence between the\nSchwinger model and the PXP model, known for its quantum scars, we investigate\nthe presence of quantum scar states in the Schwinger model by identifying\nstates exhibiting extended thermalization times in our circuit evolutions. Our\ncomparison of sequential and randomized circuit dynamics shows that the\nnon-thermal sector of the Hilbert space, including the scars, are more\nsensitive to randomization.",
+          "arxiv_id": "2402.06489v2"
+        },
+        {
+          "title": "Rényi entropy of the permutationally invariant part of the ground state across a quantum phase transition",
+          "year": "2024-04",
+          "abstract": "We investigate the role of the permutationally invariant part of the density\nmatrix (PIDM) in capturing the properties of the ground state of the system\nduring a quantum phase transition. In the context of quantum state tomography,\nPIDM is known to be obtainable with only a low number of measurement settings,\nnamely $\\mathcal{O}(L^2)$, where $L$ is the system size. Considering the\ntransverse-field Ising chain as an example, we compute the second-order R\\'enyi\nentropy of PIDM for the ground state by using the density matrix\nrenormalization group algorithm. In the ferromagnetic case, the ground state is\npermutationally invariant both in the limits of zero and infinite field,\nleading to vanishing R\\'enyi entropy of PIDM. The latter exhibits a broad peak\nas a function of the transverse field around the quantum critical point, which\ngets more pronounced for larger system size. In the antiferromagnetic case, the\npeak structure disappears and the R\\'enyi entropy diverges like\n$\\mathcal{O}(L)$ in the whole field range of the ordered phase. We discuss the\ncause of these behaviors of the R\\'enyi entropy of PIDM, examining the possible\napplication of this experimentally tractable quantity to the analysis of phase\ntransition phenomena.",
+          "arxiv_id": "2404.08389v1"
+        },
+        {
+          "title": "Wehrl entropy production rate across a dynamical quantum phase transition",
+          "year": "2020-04",
+          "abstract": "The quench dynamics of many-body quantum systems may exhibit\nnon-analyticities in the Loschmidt echo, a phenomenon known as dynamical phase\ntransition (DPT). Despite considerable research into the underlying mechanisms\nbehind this phenomenon, several open questions still remain. Motivated by this,\nwe put forth a detailed study of DPTs from the perspective of quantum phase\nspace and entropy production, a key concept in thermodynamics. We focus on the\nLipkin-Meshkov-Glick model and use spin coherent states to construct the\ncorresponding Husimi-$Q$ quasi-probability distribution. The entropy of the\n$Q$-function, known as Wehrl entropy, provides a measure of the coarse-grained\ndynamics of the system and, therefore, evolves non-trivially even for closed\nsystems. We show that critical quenches lead to a quasi-monotonic growth of the\nWehrl entropy in time, combined with small oscillations. The former reflects\nthe information scrambling characteristic of these transitions and serves as a\nmeasure of entropy production. On the other hand, the small oscillations imply\nnegative entropy production rates and, therefore, signal the recurrences of the\nLoschmidt echo. Finally, we also study a Gaussification of the model based on a\nmodified Holstein-Primakoff approximation. This allows us to identify the\nrelative contribution of the low energy sector to the emergence of DPTs. The\nresults presented in this article are relevant not only from the dynamical\nquantum phase transition perspective, but also for the field of quantum\nthermodynamics, since they point out that the Wehrl entropy can be used as a\nviable measure of entropy production.",
+          "arxiv_id": "2004.01126v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Nonequilibrium steady states in coupled asymmetric and symmetric exclusion processes",
+          "year": "2023-06",
+          "abstract": "We propose and study a one-dimensional (1D) model consisting of two lanes\nwith open boundaries. One of the lanes executes diffusive and the other lane\ndriven unidirectional or asymmetric exclusion dynamics, which are mutually\ncoupled through particle exchanges in the bulk. We elucidate the generic\nnonuniform steady states in this model. We show that in a parameter regime,\nwhere hopping along the TASEP lane, diffusion along the SEP lane and the\nexchange of particles between the TASEP and SEP lanes compete, the SEP\ndiffusivity $D$ appears as a tuning parameter for both the SEP and TASEP\ndensities for a given exchange rate in the nonequilibrium steady states of this\nmodel. Indeed, $D$ can be tuned to achieve phase coexistence in the asymmetric\nexclusion dynamics together with spatially smoothly varying density in the\ndiffusive dynamics in the steady state. We obtain phase diagrams of the model\nby using mean field theories, and corroborate and complement the results by\nstochastic Monte Carlo simulations. This model reduces to an isolated open\ntotally asymmetric exclusion process (TASEP) and an open TASEP with bulk\nparticle nonconserving Langmuir kinetics (LK), respectively, in the limits of\nvanishing and diverging particle diffusivity in the lane executing diffusive\ndynamics. Thus this model works as an overarching general model, connecting\nboth pure TASEPs and TASEPs with LK in different asymptotic limits. We further\ndefine phases in the SEP and obtain phase diagrams, and show their\ncorrespondence with the TASEP phases. In addition to its significance as a 1D\ndriven, diffusive model, this model also serves as a simple reduced model for\ncell biological transport by molecular motors undergoing diffusive and directed\nmotion inside eukaryotic cells.",
+          "arxiv_id": "2306.14651v2"
+        },
+        {
+          "title": "Exact steady states in the asymmetric simple exclusion process beyond one dimension",
+          "year": "2024-03",
+          "abstract": "The asymmetric simple exclusion process (ASEP) is a paradigmatic\nnonequilibrium many-body system that describes the asymmetric random walk of\nparticles with exclusion interactions in a lattice. Although the ASEP is\nrecognized as an exactly solvable model, most of the exact results obtained so\nfar are limited to one-dimensional systems. Here, we construct the exact steady\nstates of the ASEP with closed and periodic boundary conditions in arbitrary\ndimensions. This is achieved through the concept of transition decomposition,\nwhich enables the treatment of the multi-dimensional ASEP as a composite of the\none-dimensional ASEPs.",
+          "arxiv_id": "2403.01934v1"
+        },
+        {
+          "title": "Diameters of symmetric and lifted simple exclusion models",
+          "year": "2023-11",
+          "abstract": "We determine diameters of Markov chains describing one-dimensional N\n-particle models with an exclusion interaction, namely the Ssep (symmetric\nsimple exclusion process) and one of its non-reversible liftings, the lifted\nTasep (totally asymmetric simple exclusion process). The diameters provide\nlower bounds for the mixing times, and we discuss the implications of our\nfindings for the analysis of these models.",
+          "arxiv_id": "2311.17346v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:15:07Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

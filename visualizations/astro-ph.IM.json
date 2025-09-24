@@ -1,0 +1,578 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_model_observations_high",
+        "keywords": [
+          [
+            "data",
+            0.023571214182184934
+          ],
+          [
+            "model",
+            0.013318762256836087
+          ],
+          [
+            "observations",
+            0.012897604898686897
+          ],
+          [
+            "high",
+            0.012793321478841923
+          ],
+          [
+            "time",
+            0.011679419582004118
+          ],
+          [
+            "method",
+            0.011301157832813142
+          ],
+          [
+            "present",
+            0.011220313165741144
+          ],
+          [
+            "stars",
+            0.01029335087919808
+          ],
+          [
+            "new",
+            0.010293221934249648
+          ],
+          [
+            "results",
+            0.009722811108986545
+          ]
+        ],
+        "count": 12267
+      },
+      "1": {
+        "name": "1_ray_energy_detector_gamma",
+        "keywords": [
+          [
+            "ray",
+            0.03679613110968795
+          ],
+          [
+            "energy",
+            0.02963312391776841
+          ],
+          [
+            "detector",
+            0.02111955698034532
+          ],
+          [
+            "gamma",
+            0.020313816605370346
+          ],
+          [
+            "high",
+            0.01607091680459425
+          ],
+          [
+            "detectors",
+            0.01564320399350997
+          ],
+          [
+            "cosmic",
+            0.015595607144826511
+          ],
+          [
+            "gamma ray",
+            0.015103576073399926
+          ],
+          [
+            "Cherenkov",
+            0.014325097195176207
+          ],
+          [
+            "data",
+            0.013860305215602487
+          ]
+        ],
+        "count": 2274
+      },
+      "2": {
+        "name": "2_gravitational_wave_gravitational wave_noise",
+        "keywords": [
+          [
+            "gravitational",
+            0.050707354562333225
+          ],
+          [
+            "wave",
+            0.04298491097462028
+          ],
+          [
+            "gravitational wave",
+            0.040504340646949036
+          ],
+          [
+            "noise",
+            0.031987517702806945
+          ],
+          [
+            "data",
+            0.02117219210268118
+          ],
+          [
+            "GW",
+            0.020690390808208853
+          ],
+          [
+            "signals",
+            0.019690457268412946
+          ],
+          [
+            "LIGO",
+            0.01724264228158746
+          ],
+          [
+            "frequency",
+            0.016645975015880863
+          ],
+          [
+            "waves",
+            0.016017487218827238
+          ]
+        ],
+        "count": 1451
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.43944337359050223,
+        -0.4612679416572313
+      ],
+      [
+        -0.43944337359050223,
+        1.0,
+        -0.6804190403064095
+      ],
+      [
+        -0.4612679416572313,
+        -0.6804190403064095,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        97,
+        24,
+        22
+      ],
+      "2020-02": [
+        113,
+        26,
+        34
+      ],
+      "2020-03": [
+        149,
+        24,
+        18
+      ],
+      "2020-04": [
+        137,
+        27,
+        26
+      ],
+      "2020-05": [
+        133,
+        31,
+        30
+      ],
+      "2020-06": [
+        154,
+        28,
+        28
+      ],
+      "2020-07": [
+        151,
+        31,
+        28
+      ],
+      "2020-08": [
+        142,
+        20,
+        25
+      ],
+      "2020-09": [
+        155,
+        19,
+        29
+      ],
+      "2020-10": [
+        144,
+        35,
+        29
+      ],
+      "2020-11": [
+        175,
+        25,
+        27
+      ],
+      "2020-12": [
+        278,
+        48,
+        38
+      ],
+      "2021-01": [
+        192,
+        56,
+        29
+      ],
+      "2021-02": [
+        125,
+        43,
+        18
+      ],
+      "2021-03": [
+        162,
+        22,
+        25
+      ],
+      "2021-04": [
+        115,
+        31,
+        26
+      ],
+      "2021-05": [
+        134,
+        19,
+        16
+      ],
+      "2021-06": [
+        159,
+        20,
+        17
+      ],
+      "2021-07": [
+        186,
+        57,
+        28
+      ],
+      "2021-08": [
+        140,
+        58,
+        23
+      ],
+      "2021-09": [
+        154,
+        47,
+        21
+      ],
+      "2021-10": [
+        147,
+        31,
+        31
+      ],
+      "2021-11": [
+        207,
+        40,
+        35
+      ],
+      "2021-12": [
+        164,
+        46,
+        24
+      ],
+      "2022-01": [
+        155,
+        27,
+        23
+      ],
+      "2022-02": [
+        140,
+        21,
+        20
+      ],
+      "2022-03": [
+        181,
+        38,
+        29
+      ],
+      "2022-04": [
+        124,
+        26,
+        31
+      ],
+      "2022-05": [
+        135,
+        30,
+        29
+      ],
+      "2022-06": [
+        158,
+        21,
+        33
+      ],
+      "2022-07": [
+        174,
+        39,
+        37
+      ],
+      "2022-08": [
+        244,
+        53,
+        27
+      ],
+      "2022-09": [
+        210,
+        38,
+        25
+      ],
+      "2022-10": [
+        183,
+        32,
+        38
+      ],
+      "2022-11": [
+        191,
+        38,
+        28
+      ],
+      "2022-12": [
+        146,
+        31,
+        20
+      ],
+      "2023-01": [
+        158,
+        35,
+        30
+      ],
+      "2023-02": [
+        160,
+        32,
+        26
+      ],
+      "2023-03": [
+        142,
+        37,
+        26
+      ],
+      "2023-04": [
+        134,
+        29,
+        27
+      ],
+      "2023-05": [
+        177,
+        31,
+        33
+      ],
+      "2023-06": [
+        164,
+        29,
+        36
+      ],
+      "2023-07": [
+        141,
+        44,
+        38
+      ],
+      "2023-08": [
+        149,
+        57,
+        28
+      ],
+      "2023-09": [
+        170,
+        54,
+        29
+      ],
+      "2023-10": [
+        195,
+        58,
+        39
+      ],
+      "2023-11": [
+        227,
+        41,
+        43
+      ],
+      "2023-12": [
+        151,
+        23,
+        29
+      ],
+      "2024-01": [
+        143,
+        39,
+        27
+      ],
+      "2024-02": [
+        155,
+        22,
+        29
+      ],
+      "2024-03": [
+        151,
+        27,
+        28
+      ],
+      "2024-04": [
+        144,
+        19,
+        27
+      ],
+      "2024-05": [
+        196,
+        37,
+        44
+      ],
+      "2024-06": [
+        199,
+        35,
+        36
+      ],
+      "2024-07": [
+        246,
+        44,
+        44
+      ],
+      "2024-08": [
+        159,
+        19,
+        22
+      ],
+      "2024-09": [
+        216,
+        38,
+        40
+      ],
+      "2024-10": [
+        210,
+        50,
+        67
+      ],
+      "2024-11": [
+        189,
+        33,
+        36
+      ],
+      "2024-12": [
+        171,
+        31,
+        39
+      ],
+      "2025-01": [
+        161,
+        36,
+        42
+      ],
+      "2025-02": [
+        156,
+        36,
+        33
+      ],
+      "2025-03": [
+        202,
+        33,
+        32
+      ],
+      "2025-04": [
+        193,
+        28,
+        31
+      ],
+      "2025-05": [
+        178,
+        24,
+        34
+      ],
+      "2025-06": [
+        175,
+        33,
+        42
+      ],
+      "2025-07": [
+        236,
+        85,
+        32
+      ],
+      "2025-08": [
+        187,
+        40,
+        47
+      ],
+      "2025-09": [
+        151,
+        33,
+        25
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Benchmark tests of transmission spectroscopy using transiting white dwarfs",
+          "year": "2022-05",
+          "abstract": "Ground-based transit observations are affected by both telluric absorption\nand instrumental systematics. To account for these effects, a better\nunderstanding of the impact of different data analyses is needed to improve the\naccuracy of the retrieved transmission spectra. We propose validating\nground-based low-resolution transmission spectroscopy using transiting white\ndwarfs. The advantage here is that we know beforehand what the final\ntransmission spectrum should be: a featureless flat spectrum. We analyzed two\ntransiting white dwarfs analogous to hot Jupiters. We used various noise models\nto account for the systematic noise in their spectroscopic light curves\nfollowing common procedures of transmission spectroscopy analyses. We compared\nthe derived transmission spectra with the broadband transit depth to determine\nwhether there are any artificial offsets or spectral features arising from\nlight-curve fitting. The results show a strong model dependence, and the\ntransmission spectra exhibit considerable discrepancies when they are computed\nwith different noise models, different reference stars, and different\ncommon-mode removal methods. Nonetheless, we can still derive relatively\naccurate transmission spectra based on a Bayesian model comparison. With\ncurrent ground-based instrumentation, the systematics in transit light curves\ncan easily contaminate a transmission spectrum, introducing a general offset or\nsome spurious spectral features and thus leading to a biased interpretation on\nthe planetary atmosphere. Therefore, it is necessary to determine the\ndependence of results on the adopted noise model through model comparison. The\nmodel inferences should be examined through multiple observations and different\ninstruments. (Abridged)",
+          "arxiv_id": "2205.05969v1"
+        },
+        {
+          "title": "From convective stellar dynamo simulations to Zeeman-Doppler images",
+          "year": "2023-06",
+          "abstract": "Zeeman-Doppler imaging (ZDI) is used to reconstruct the surface magnetic\nfield of late-type stars from high resolution spectropolarimetric observations.\nThe results are usually described in terms of characteristics of the field\ntopology, i.e. poloidality vs. toroidality and axi-symmetry vs. non-axisymmetry\nin addition to the field strength. We want to test how well these\ncharacteristics are preserved when applying the ZDI method on simulated data,\ni.e. how accurately the field topology is preserved and to what extent stellar\nparameters influence the reconstruction. We use published magnetic field data\nfrom direct numerical MHD simulations. These have variable rotation rates, and\nhence represent different levels of activity, of an otherwise Sun-like setup.\nOur ZDI reconstruction is based on spherical harmonics expansion. By comparing\nthe original values to those of the reconstructed images, we study the ability\nto reconstruct the surface magnetic field in terms of various characteristics\nof the field. The main large-scale features are reasonably well recovered, but\nthe strength of the recovered magnetic field is just a fraction of the original\ninput. The quality of the reconstruction shows clear correlations with the data\nquality. Furthermore, there are some spurious dependencies between stellar\nparameters and the characteristics of the field. Our study uncovers some limits\nof ZDI. Firstly, the recovered field strength will generally be lower than the\n\"real\" value as smaller structures with opposite polarities will be blurred in\nthe inversion. Secondly, the axisymmetry is overestimated. The poloidality vs.\ntoroidality is better recovered. The reconstruction works better for a stronger\nfield and faster rotation velocity. Still, the ZDI method works surprisingly\nwell even for a weaker field and slow rotation, provided the data has a high\nsignal-to-noise and good rotation phase coverage.",
+          "arxiv_id": "2306.07838v2"
+        },
+        {
+          "title": "The SDSS-V Local Volume Mapper (LVM): Data Analysis Pipeline",
+          "year": "2024-11",
+          "abstract": "We introduce the Data Analysis Pipeline (DAP) for the Sloan Digital Sky\nSurvey V (SDSS-V) Local Volume Mapper (LVM) project, referred to as the\nLVM-DAP. We outline our methods for recovering both stellar and emission line\ncomponents from the optical integral field spectroscopy, highlighting the\ndevelopments and changes implemented to address specific challenges of the data\nset. The observations from the LVM project are unique because they cover a wide\nrange of physical resolutions, from approximately 0.05 pc to 100 pc, depending\non the distance to the targets. This, along with the varying number of stars\nsampled in each aperture (ranging from zero, just one of a few, to thousands),\npresents challenges in using previous spectral synthesis methods and\ninterpreting the spectral fits. We provide a detailed explanation of how we\nmodel the stellar content and separate it from the ionized gas emission lines.\nTo assess the accuracy of our results, we compare them with both idealized and\nmore realistic simulations, highlighting the limitations of our methods. We\nfind that the DAP robustly correct for stellar continuum features and recover\nemission line parameters (e.g. flux, equivalent width, systemtic velocity and\nvelocity dispersion) with a precision and accuracy that fulfill the\nrequirements of the primary goal of the analysis. In addition, the recovered\nstellar parameters are reliable for single stars, the recovery of integrated\npopulations is less precise. We conclude with a description of the data\nproducts we provide, instructions for downloading and using our software, and a\nshowcase illustrating the quality of the data and the analysis on a deep\nexposure taken on the Huygens region at the center of the Orion Nebula.",
+          "arxiv_id": "2411.09729v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Gamma- and Cosmic-Ray Observations with the GAMMA-400 Gamma-Ray Telescope",
+          "year": "2021-08",
+          "abstract": "The future space-based GAMMA-400 gamma-ray telescope will operate onboard the\nRussian astrophysical observatory in a highly elliptic orbit during 7 years to\nobserve Galactic plane, Galactic Center, Fermi Bubbles, Crab, Vela, Cygnus X,\nGeminga, Sun, and other regions and measure gamma- and cosmic-ray fluxes.\nObservations will be performed in the point-source mode continuously for a long\ntime (~100 days). GAMMA-400 will measure gamma rays in the energy range from\n~20 MeV to several TeV and cosmic-ray electrons + positrons up to several tens\nTeV. GAMMA-400 instrument will have very good angle and energy resolutions,\nhigh separation efficiency of gamma rays from cosmic-ray background, as well as\nelectrons + positrons from protons. The main feature of GAMMA-400 is the\nunprecedented angular resolution for energies >30 GeV better than the\nspace-based and ground-based gamma-ray telescopes by a factor of 5-10.\nGAMMA-400 observations will permit to resolve gamma rays from annihilation or\ndecay of dark matter particles, identify many discrete sources, clarify the\nstructure of extended sources, specify the data on cosmic-ray electron +\npositron spectra.",
+          "arxiv_id": "2108.12609v2"
+        },
+        {
+          "title": "Effect of the uncertainty in the hadronic interaction models on the estimation of the sensitivity of the Cherenkov Telescope Array",
+          "year": "2021-05",
+          "abstract": "Imaging Atmospheric Cherenkov Telescopes (IACTs) are ground-based indirect\ndetectors for cosmic gamma rays with energies above tens of GeV. The major\nbackgrounds for gamma-ray observations in IACTs are cosmic-ray charged\nparticles. The capability to reject these backgrounds is the most important\nfactor determining the gamma-ray sensitivity of IACT systems. Monte Carlo\nsimulations are used to estimate the residual background rates and sensitivity\nof the systems during the design and construction phase. Uncertainties in the\nmodeling of high-energy hadronic interactions of cosmic rays with nuclei in the\nair propagate into the estimates of residual background rates and subsequently\ninto the estimated instrument sensitivity. We investigate the influence of the\ndifference in the current hadronic interaction models on the estimated\ngamma-ray sensitivity of the Cherenkov Telescope Array using four interaction\nmodels (QGSJET-II-03, QGSJET-II-04, EPOS-LHC, and SIBYLL2.3c) implemented in\nthe air shower simulation tool CORSIKA. Variations in background rates of up to\na factor 2 with respect to QGSJET-II-03 are observed between the models, mainly\ndue to differences in the $\\pi^0$ production spectrum. These lead to ~30%\ndifferences in the estimated gamma-ray sensitivity in the 1 - 30 TeV region,\nassuming a 50-hour observation of a gamma-ray point-like source. The presented\nresults also show that IACTs have a significant capability in the verification\nof hadronic interaction models.",
+          "arxiv_id": "2105.05822v1"
+        },
+        {
+          "title": "Capabilities of the GAMMA-400 gamma-ray telescope to detect gamma-ray bursts from lateral directions",
+          "year": "2021-03",
+          "abstract": "The currently developing space-based gamma-ray telescope GAMMA-400 will\nmeasure the gamma-ray and electron + positron fluxes using the main top-down\naperture in the energy range from ~20 MeV to several TeV in a highly elliptic\norbit (without shading the telescope by the Earth and outside the radiation\nbelts) continuously for a long time. The instrument will provide fundamentally\nnew data on discrete gamma-ray sources, gamma-ray bursts (GRBs), sources and\npropagation of Galactic cosmic rays and signatures of dark matter due to its\nunique angular and energy resolutions in the wide energy range. The gamma-ray\ntelescope consists of the anticoincidence system (AC), the converter-tracker\n(C), the time-of-flight system (S1 and S2), the position-sensitive and\nelectromagnetic calorimeters (CC1 and CC2), scintillation detectors (S3 and S4)\nlocated above and behind the CC2 calorimeter and lateral detectors (LD) located\naround the CC2 calorimeter. In this paper, the capabilities of the GAMMA-400\ngamma-ray telescope to measure fluxes of GRBs from lateral directions of CC2\nare analyzed using Monte-Carlo simulations. The analysis is based on off-line\nsecond-level trigger construction using signals from S3, CC2, S4 and LD\ndetectors. For checking the numerical algorithm the data from space-based GBM\nand LAT instruments of the Fermi experiment are used, namely, three long\nbursts: GRB 080916C, GRB 090902B, GRB 090926A and one short burst GRB 090510A.\nThe obtained results allow us to conclude that from lateral directions the\nGAMMA-400 space-based gamma-ray telescope will reliably measure the spectra of\nbright GRBs in the energy range from ~10 to ~100 MeV with the on-axis effective\narea of about 0.13 m2 for each of the four sides of CC2 and total field of view\nof about 6 sr.",
+          "arxiv_id": "2103.07161v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "Enhancing the sensitivity of transient gravitational wave searches with Gaussian Mixture Models",
+          "year": "2020-08",
+          "abstract": "Identifying the presence of a gravitational wave transient buried in\nnon-stationary, non-Gaussian noise which can often contain spurious noise\ntransients (glitches) is a very challenging task. For a given data set,\ntransient gravitational wave searches produce a corresponding list of triggers\nthat indicate the possible presence of a gravitational wave signal. These\ntriggers are often the result of glitches mimicking gravitational wave signal\ncharacteristics. To distinguish glitches from genuine gravitational wave\nsignals, search algorithms estimate a range of trigger attributes, with\nthresholds applied to these trigger properties to separate signal from noise.\nHere, we present the use of Gaussian mixture models, a supervised machine\nlearning approach, as a means of modelling the multi-dimensional trigger\nattribute space. We demonstrate this approach by applying it to triggers from\nthe coherent Waveburst search for generic bursts in LIGO O1 data. By building\nGaussian mixture models for the signal and background noise attribute spaces,\nwe show that we can significantly improve the sensitivity of the coherent\nWaveburst search and strongly suppress the impact of glitches and background\nnoise, without the use of multiple search bins as employed by the original O1\nsearch. We show that the detection probability is enhanced by a factor of 10,\nleading enhanced statistical significance for gravitational wave signals such\nas GW150914.",
+          "arxiv_id": "2008.01262v1"
+        },
+        {
+          "title": "Characterization of Gravitational Waves Signals Using Neural Networks",
+          "year": "2020-09",
+          "abstract": "Gravitational wave astronomy has been already a well-established research\ndomain for many years. Moreover, after the detection by LIGO/Virgo\ncollaboration, in 2017, of the first gravitational wave signal emitted during\nthe collision of a binary neutron star system, that was accompanied by the\ndetection of other types of signals coming from the same event, multi-messenger\nastronomy has claimed its rights more assertively. In this context, it is of\ngreat importance in a gravitational wave experiment to have a rapid mechanism\nof alerting about potential gravitational waves events other observatories\ncapable to detect other types of signals (e.g. in other wavelengths) that are\nproduce by the same event. In this paper, we present the first progress in the\ndevelopment of a neural network algorithm trained to recognize and characterize\ngravitational wave patterns from signal plus noise data samples. We have\nimplemented two versions of the algorithm, one that classifies the\ngravitational wave signals into 2 classes, and another one that classifies them\ninto 4 classes, according to the mass ratio of the emitting source. We have\nobtained promising results, with 100% training and testing accuracy for the\n2-class network and approximately 95% for the 4-class network. We conclude that\nthe current version of the neural network algorithm demonstrates the ability of\na well-configured and calibrated Bidirectional Long-Short Term Memory software\nto classify with very high accuracy and in an extremely short time\ngravitational wave signals, even when they are accompanied by noise. Moreover,\nthe performance obtained with this algorithm qualifies it as a fast method of\ndata analysis and can be used as a low-latency pipeline for gravitational wave\nobservatories like the future LISA Mission.",
+          "arxiv_id": "2009.06109v1"
+        },
+        {
+          "title": "BILBY in space: Bayesian inference for transient gravitational-wave signals observed with LISA",
+          "year": "2023-12",
+          "abstract": "The Laser Interferometer Space Antenna (LISA) is scheduled to launch in the\nmid 2030s, and is expected to observe gravitational-wave candidates from\nmassive black-hole binary mergers, extreme mass-ratio inspirals, and more.\nAccurately inferring the source properties from the observed gravitational-wave\nsignals is crucial to maximise the scientific return of the LISA mission.\nBILBY, the user-friendly Bayesian inference library, is regularly used for\nperforming gravitational-wave inference on data from existing ground-based\ngravitational-wave detectors. Given that Bayesian inference with LISA includes\nadditional subtitles and complexities beyond it's ground-based counterpart, in\nthis work we modify BILBY to perform parameter estimation with LISA. We show\nthat full nested sampling can be performed to accurately infer the properties\nof LISA sources from transient gravitational-wave signals in a) zero-noise and\nb) idealized instrumental noise. By focusing on massive black-hole binary\nmergers, we demonstrate that higher order multipole waveform models can be used\nto analyse a year's worth of simulated LISA data, and discuss the computational\ncost and performance of full nested sampling compared with techniques for\noptimising likelihood calculations, such as the heterodyned likelihood.",
+          "arxiv_id": "2312.13039v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:10:55Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

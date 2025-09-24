@@ -2,6 +2,8 @@ from typing import List
 
 from datetime import datetime
 
+from tqdm import tqdm
+
 import os
 import gc
 import pickle
@@ -12,9 +14,12 @@ from bertopic import BERTopic
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.spatial.distance import jensenshannon
 
-from common.utils import get_custom_embedding_model
+from common.utils import get_custom_embedding_model, get_category_codes
 
 VERSION = "0.0.2"
+
+def already_processed(category: str):
+    return os.path.exists(f"./visualizations/{category}.json")
 
 def load_model(category: str):
     embedding_model = get_custom_embedding_model()
@@ -50,22 +55,22 @@ def convert_representative_docs_to_dataframe(representative_docs):
     
     return pd.DataFrame(rows)
 
-def get_topic_distr(model: BERTopic, texts: List[str]):
+def get_topic_distr(category: str, model: BERTopic, texts: List[str]):
     """データを読み込み、トピック分布を計算する"""
     
     # トピック分布を計算
-    tmp_path = f"./visualizations/topic_distr_tmp.npy"
-    os.makedirs(f"./visualizations/", exist_ok=True)
-    if os.path.exists(tmp_path):
-        topic_distr = np.load(tmp_path)
-    else:
-        topic_distr, _ = model.approximate_distribution(
-            texts,
-            calculate_tokens=True,
-            # use_embedding_model=True,
-            # separator=embedding_model.tokenizer.sep_token
-        )
-        np.save(tmp_path, topic_distr)
+    # tmp_path = f"./visualizations/{category}/topic_distr_tmp.npy"
+    # os.makedirs(f"./visualizations/{category}", exist_ok=True)
+    # if os.path.exists(tmp_path):
+    #     topic_distr = np.load(tmp_path)
+    # else:
+    topic_distr, _ = model.approximate_distribution(
+        texts,
+        calculate_tokens=True,
+        # use_embedding_model=True,
+        # separator=model.embedding_model.tokenizer.sep_token
+    )
+    #     np.save(tmp_path, topic_distr)
 
     return topic_distr
 
@@ -274,9 +279,12 @@ def save_visualization_data(category, visualization_data):
     print(f"Visualization data saved to: {output_path}")
     return output_path
 
-def main():
-    """メイン処理: データ取得 → 可視化"""
-    category = "cs.IR"
+def process_category(category):
+
+    gc.collect()
+
+    if already_processed(category):
+        return
 
     # データを読み込み
     model = load_model(category)
@@ -312,7 +320,8 @@ def main():
     # create document_info
     texts = [model.embedding_model.get_input_text(paper) for paper in papers]
     document_info = model.get_document_info(texts)
-    topic_distr = get_topic_distr(model, texts)
+    topic_distr = get_topic_distr(category, model, texts)
+
     document_info["Topic_Distribution"] = [dist for dist in topic_distr]
     # document_infoのindexとpapersのindexを対応させて、paper情報をdocument_infoに追加
     document_info["Paper"] = [papers[idx] for idx in document_info.index]
@@ -330,6 +339,13 @@ def main():
     print(f"Output file: {output_path}")
     
     return output_path
+
+def main():
+    """メイン処理: データ取得 → 可視化"""
+    categories = get_category_codes()
+
+    for category in tqdm(categories, desc="Processing categories"):
+        process_category(category)
 
 
 if __name__ == "__main__":

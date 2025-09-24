@@ -1,0 +1,1016 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_wave_waves_acoustic_non",
+        "keywords": [
+          [
+            "wave",
+            0.022604742707612552
+          ],
+          [
+            "waves",
+            0.021525590572829417
+          ],
+          [
+            "acoustic",
+            0.0212350820648935
+          ],
+          [
+            "non",
+            0.016502471378092746
+          ],
+          [
+            "modes",
+            0.0161013980890512
+          ],
+          [
+            "scattering",
+            0.015395380234179487
+          ],
+          [
+            "topological",
+            0.015302023981157058
+          ],
+          [
+            "frequency",
+            0.014878453991316447
+          ],
+          [
+            "systems",
+            0.013954838109329938
+          ],
+          [
+            "Hermitian",
+            0.013375896005997567
+          ]
+        ],
+        "count": 583
+      },
+      "1": {
+        "name": "1_field_electromagnetic_classical_equations",
+        "keywords": [
+          [
+            "field",
+            0.031239088391314132
+          ],
+          [
+            "electromagnetic",
+            0.02406231759776436
+          ],
+          [
+            "classical",
+            0.023437584561329324
+          ],
+          [
+            "equations",
+            0.021808982888406655
+          ],
+          [
+            "charge",
+            0.02083100686837333
+          ],
+          [
+            "energy",
+            0.0176801782580214
+          ],
+          [
+            "electric",
+            0.01697971921673347
+          ],
+          [
+            "momentum",
+            0.01683501440666849
+          ],
+          [
+            "fields",
+            0.016770661247054786
+          ],
+          [
+            "Maxwell",
+            0.016611467025198594
+          ]
+        ],
+        "count": 535
+      },
+      "2": {
+        "name": "2_elastic_stress_model_strain",
+        "keywords": [
+          [
+            "elastic",
+            0.030240890151750407
+          ],
+          [
+            "stress",
+            0.026993586117888012
+          ],
+          [
+            "model",
+            0.021726240613582016
+          ],
+          [
+            "strain",
+            0.018519211036276524
+          ],
+          [
+            "materials",
+            0.017224422291285364
+          ],
+          [
+            "elasticity",
+            0.016204400223550543
+          ],
+          [
+            "material",
+            0.0161174006011381
+          ],
+          [
+            "contact",
+            0.015977162035753893
+          ],
+          [
+            "shear",
+            0.015740983451921514
+          ],
+          [
+            "surface",
+            0.014942554111798267
+          ]
+        ],
+        "count": 313
+      },
+      "3": {
+        "name": "3_entropy_temperature_heat_equilibrium",
+        "keywords": [
+          [
+            "entropy",
+            0.0357820867914588
+          ],
+          [
+            "temperature",
+            0.026681967723521997
+          ],
+          [
+            "heat",
+            0.026489093957539147
+          ],
+          [
+            "equilibrium",
+            0.02421821009592462
+          ],
+          [
+            "thermodynamic",
+            0.024193530782716088
+          ],
+          [
+            "thermodynamics",
+            0.023472983825198555
+          ],
+          [
+            "energy",
+            0.019683299098109834
+          ],
+          [
+            "time",
+            0.019322628385760335
+          ],
+          [
+            "law",
+            0.01846618314554896
+          ],
+          [
+            "dynamics",
+            0.017311537470546326
+          ]
+        ],
+        "count": 187
+      },
+      "4": {
+        "name": "4_orbits_body_problem_motion",
+        "keywords": [
+          [
+            "orbits",
+            0.033311918578816435
+          ],
+          [
+            "body",
+            0.03119895055334474
+          ],
+          [
+            "problem",
+            0.027441168601959522
+          ],
+          [
+            "motion",
+            0.02463312258455962
+          ],
+          [
+            "gravitational",
+            0.02287611979514739
+          ],
+          [
+            "orbit",
+            0.02200486291506485
+          ],
+          [
+            "Kepler",
+            0.019875259872907457
+          ],
+          [
+            "Newton",
+            0.019134255867160412
+          ],
+          [
+            "mass",
+            0.018592526523060517
+          ],
+          [
+            "solutions",
+            0.018143787909238707
+          ]
+        ],
+        "count": 113
+      },
+      "5": {
+        "name": "5_motion_friction_rolling_force",
+        "keywords": [
+          [
+            "motion",
+            0.04216015501176844
+          ],
+          [
+            "friction",
+            0.040839363329585474
+          ],
+          [
+            "rolling",
+            0.03153543696304726
+          ],
+          [
+            "force",
+            0.024280422734833898
+          ],
+          [
+            "ball",
+            0.02222813429065844
+          ],
+          [
+            "model",
+            0.021917996752456804
+          ],
+          [
+            "chain",
+            0.021782348304264666
+          ],
+          [
+            "bottle",
+            0.02054439178560069
+          ],
+          [
+            "velocity",
+            0.020142517048530085
+          ],
+          [
+            "floor",
+            0.018905299765769438
+          ]
+        ],
+        "count": 61
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.5806137815058305,
+        -0.5642098250118109,
+        -0.5882118402345778,
+        -0.5830631808240957,
+        -0.6425905705418233
+      ],
+      [
+        -0.5806137815058305,
+        1.0,
+        -0.5919726932509621,
+        -0.5980634535065515,
+        -0.5726339920304806,
+        -0.40365822027732806
+      ],
+      [
+        -0.5642098250118109,
+        -0.5919726932509621,
+        1.0,
+        -0.5767629070962592,
+        -0.566562235153352,
+        -0.5864924331768598
+      ],
+      [
+        -0.5882118402345778,
+        -0.5980634535065515,
+        -0.5767629070962592,
+        1.0,
+        -0.5744710437655074,
+        -0.6148509246650178
+      ],
+      [
+        -0.5830631808240957,
+        -0.5726339920304806,
+        -0.566562235153352,
+        -0.5744710437655074,
+        1.0,
+        -0.56778552688332
+      ],
+      [
+        -0.6425905705418233,
+        -0.40365822027732806,
+        -0.5864924331768598,
+        -0.6148509246650178,
+        -0.56778552688332,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        11,
+        9,
+        6,
+        3,
+        6,
+        4
+      ],
+      "2020-02": [
+        19,
+        6,
+        2,
+        0,
+        1,
+        4
+      ],
+      "2020-03": [
+        15,
+        14,
+        3,
+        0,
+        4,
+        4
+      ],
+      "2020-04": [
+        16,
+        10,
+        2,
+        7,
+        2,
+        0
+      ],
+      "2020-05": [
+        13,
+        13,
+        4,
+        0,
+        6,
+        5
+      ],
+      "2020-06": [
+        11,
+        17,
+        3,
+        2,
+        6,
+        5
+      ],
+      "2020-07": [
+        20,
+        18,
+        4,
+        5,
+        4,
+        1
+      ],
+      "2020-08": [
+        23,
+        12,
+        4,
+        1,
+        4,
+        3
+      ],
+      "2020-09": [
+        16,
+        6,
+        1,
+        5,
+        5,
+        4
+      ],
+      "2020-10": [
+        15,
+        11,
+        2,
+        2,
+        4,
+        1
+      ],
+      "2020-11": [
+        14,
+        4,
+        3,
+        1,
+        4,
+        1
+      ],
+      "2020-12": [
+        22,
+        12,
+        5,
+        4,
+        2,
+        5
+      ],
+      "2021-01": [
+        9,
+        20,
+        2,
+        5,
+        4,
+        2
+      ],
+      "2021-02": [
+        19,
+        9,
+        2,
+        2,
+        4,
+        1
+      ],
+      "2021-03": [
+        17,
+        8,
+        6,
+        6,
+        3,
+        6
+      ],
+      "2021-04": [
+        19,
+        5,
+        4,
+        5,
+        3,
+        4
+      ],
+      "2021-05": [
+        18,
+        13,
+        3,
+        4,
+        5,
+        3
+      ],
+      "2021-06": [
+        20,
+        6,
+        4,
+        3,
+        5,
+        5
+      ],
+      "2021-07": [
+        21,
+        14,
+        7,
+        2,
+        7,
+        5
+      ],
+      "2021-08": [
+        22,
+        12,
+        1,
+        2,
+        2,
+        2
+      ],
+      "2021-09": [
+        12,
+        8,
+        2,
+        1,
+        3,
+        2
+      ],
+      "2021-10": [
+        22,
+        9,
+        5,
+        1,
+        9,
+        3
+      ],
+      "2021-11": [
+        15,
+        11,
+        4,
+        6,
+        3,
+        2
+      ],
+      "2021-12": [
+        14,
+        15,
+        3,
+        5,
+        7,
+        7
+      ],
+      "2022-01": [
+        11,
+        6,
+        7,
+        2,
+        0,
+        0
+      ],
+      "2022-02": [
+        17,
+        6,
+        2,
+        1,
+        5,
+        1
+      ],
+      "2022-03": [
+        18,
+        8,
+        1,
+        2,
+        5,
+        5
+      ],
+      "2022-04": [
+        12,
+        13,
+        4,
+        1,
+        6,
+        0
+      ],
+      "2022-05": [
+        19,
+        8,
+        3,
+        5,
+        2,
+        3
+      ],
+      "2022-06": [
+        21,
+        9,
+        4,
+        1,
+        4,
+        1
+      ],
+      "2022-07": [
+        14,
+        8,
+        6,
+        3,
+        5,
+        6
+      ],
+      "2022-08": [
+        17,
+        13,
+        7,
+        3,
+        7,
+        3
+      ],
+      "2022-09": [
+        16,
+        7,
+        4,
+        1,
+        2,
+        3
+      ],
+      "2022-10": [
+        20,
+        10,
+        4,
+        1,
+        4,
+        1
+      ],
+      "2022-11": [
+        30,
+        5,
+        5,
+        4,
+        2,
+        1
+      ],
+      "2022-12": [
+        13,
+        6,
+        3,
+        3,
+        5,
+        4
+      ],
+      "2023-01": [
+        15,
+        10,
+        5,
+        2,
+        2,
+        5
+      ],
+      "2023-02": [
+        18,
+        12,
+        3,
+        3,
+        6,
+        1
+      ],
+      "2023-03": [
+        18,
+        9,
+        3,
+        1,
+        7,
+        3
+      ],
+      "2023-04": [
+        15,
+        4,
+        4,
+        2,
+        4,
+        1
+      ],
+      "2023-05": [
+        19,
+        9,
+        3,
+        1,
+        4,
+        3
+      ],
+      "2023-06": [
+        12,
+        12,
+        1,
+        3,
+        5,
+        3
+      ],
+      "2023-07": [
+        19,
+        7,
+        0,
+        3,
+        7,
+        1
+      ],
+      "2023-08": [
+        19,
+        18,
+        2,
+        5,
+        4,
+        1
+      ],
+      "2023-09": [
+        13,
+        4,
+        6,
+        2,
+        4,
+        1
+      ],
+      "2023-10": [
+        15,
+        15,
+        2,
+        0,
+        2,
+        1
+      ],
+      "2023-11": [
+        8,
+        11,
+        4,
+        2,
+        3,
+        0
+      ],
+      "2023-12": [
+        16,
+        5,
+        5,
+        2,
+        3,
+        2
+      ],
+      "2024-01": [
+        16,
+        10,
+        8,
+        2,
+        4,
+        1
+      ],
+      "2024-02": [
+        13,
+        13,
+        3,
+        4,
+        5,
+        4
+      ],
+      "2024-03": [
+        10,
+        11,
+        4,
+        2,
+        3,
+        2
+      ],
+      "2024-04": [
+        15,
+        7,
+        3,
+        1,
+        3,
+        0
+      ],
+      "2024-05": [
+        20,
+        3,
+        1,
+        0,
+        5,
+        2
+      ],
+      "2024-06": [
+        19,
+        8,
+        4,
+        2,
+        3,
+        1
+      ],
+      "2024-07": [
+        15,
+        7,
+        9,
+        2,
+        3,
+        6
+      ],
+      "2024-08": [
+        20,
+        10,
+        1,
+        2,
+        2,
+        2
+      ],
+      "2024-09": [
+        13,
+        9,
+        7,
+        2,
+        8,
+        1
+      ],
+      "2024-10": [
+        18,
+        10,
+        6,
+        3,
+        5,
+        1
+      ],
+      "2024-11": [
+        14,
+        10,
+        3,
+        4,
+        3,
+        2
+      ],
+      "2024-12": [
+        15,
+        11,
+        2,
+        4,
+        2,
+        5
+      ],
+      "2025-01": [
+        15,
+        13,
+        7,
+        2,
+        4,
+        5
+      ],
+      "2025-02": [
+        7,
+        8,
+        2,
+        3,
+        4,
+        3
+      ],
+      "2025-03": [
+        20,
+        12,
+        5,
+        3,
+        6,
+        3
+      ],
+      "2025-04": [
+        13,
+        10,
+        3,
+        2,
+        1,
+        2
+      ],
+      "2025-05": [
+        20,
+        7,
+        3,
+        0,
+        4,
+        5
+      ],
+      "2025-06": [
+        17,
+        6,
+        2,
+        0,
+        10,
+        3
+      ],
+      "2025-07": [
+        12,
+        12,
+        3,
+        4,
+        9,
+        4
+      ],
+      "2025-08": [
+        15,
+        5,
+        4,
+        1,
+        3,
+        2
+      ],
+      "2025-09": [
+        6,
+        8,
+        2,
+        1,
+        2,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Measuring the Adiabatic Non-Hermitian Berry Phase in Feedback-Coupled Oscillators",
+          "year": "2022-05",
+          "abstract": "The geometrical Berry phase is key to understanding the behaviour of quantum\nstates under cyclic adiabatic evolution. When generalised to non-Hermitian\nsystems with gain and loss, the Berry phase can become complex, and should\nmodify not only the phase but also the amplitude of the state. Here, we perform\nthe first experimental measurements of the adiabatic non-Hermitian Berry phase,\nexploring a minimal two-site $\\mathcal{PT}$-symmetric Hamiltonian that is\ninspired by the Hatano-Nelson model. We realise this non-Hermitian model\nexperimentally by mapping its dynamics to that of a pair of classical\noscillators coupled by real-time measurement-based feedback. As we verify\nexperimentally, the adiabatic non-Hermitian Berry phase is a purely geometrical\neffect that leads to significant amplification and damping of the amplitude\nalso for non-cyclical paths within the parameter space even when all\neigenenergies are real. We further observe a non-Hermitian analog of the\nAharonov--Bohm solenoid effect, observing amplification and attenuation when\nencircling a region of broken $\\mathcal{PT}$ symmetry that serves as a source\nof imaginary flux. This experiment demonstrates the importance of geometrical\neffects that are unique to non-Hermitian systems and paves the way towards the\nfurther studies of non-Hermitian and topological physics in synthetic\nmetamaterials.",
+          "arxiv_id": "2205.02700v1"
+        },
+        {
+          "title": "Observation of dynamic non-Hermitian skin effects",
+          "year": "2023-12",
+          "abstract": "Non-Hermitian effects have emerged as a new paradigm for the manipulation of\nphases of matter that profoundly changes our understanding of non-equilibrium\nsystems, introducing novel concepts such as exceptional points and spectral\ntopology, as well as exotic phenomena such as non-Hermitian skin effects\n(NHSEs). Most existing studies, however, focus on non-Hermitian eigenstates,\nwhereas dynamic properties of non-Hermitian systems have been discussed only\nvery recently, predicting unexpected phenomena such as wave self-healing,\nchiral Zener tunneling, and the dynamic NHSEs that are not yet confirmed in\nexperiments. Here, we report the first experimental observation of rich\nnon-Hermitian skin dynamics using tunable one-dimensional nonreciprocal\ndouble-chain mechanical systems with glide-time symmetry. Remarkably, dynamic\nNHSEs are observed with various dynamic behaviors in different dynamic phases,\nrevealing the intriguing nature of these phases that can be understood via the\ngeneralized Brillouin zone and the related concepts. Moreover, the observed\ntunable non-Hermitian skin dynamics and amplifications, the bulk unidirectional\nwave propagation, and the boundary wave trapping provide promising ways to\nguide, trap, and amplify waves in a controllable and robust way. Our findings\nunveil the fundamental aspects and open a new pathway toward non-Hermitian\ndynamics, which will fertilize the study of non-equilibrium phases of matter\nand give rise to novel applications in information processing.",
+          "arxiv_id": "2312.07564v1"
+        },
+        {
+          "title": "Observation of Coherent Perfect Acoustic Absorption at an Exceptional Point",
+          "year": "2025-05",
+          "abstract": "Non-Hermitian systems have recently shown new possibilities to manipulate\nwave scattering by exploiting loss, yet coherent perfect absorption at an\nexceptional point (CPA EP) remains elusive in acoustics. Here we demonstrate it\nbased on a two-channel waveguide with compact lossy resonators. We realize\nimbalanced losses crucial for CPA EP by using active components to\nindependently modulate the non-Hermiticity. The CPA EP experimentally manifests\nas full absorption at a unique real frequency and shows high sensitivity to the\nincident phase variations.Our findings open an avenue to explore novel\nnon-Hermitian physics for classical waves and develop innovative acoustic\nsingularity-based devices.",
+          "arxiv_id": "2506.04231v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "On some properties of the electromagnetic field and its interaction with a charged particle",
+          "year": "2020-04",
+          "abstract": "A procedure for solving the Maxwell equations in vacuum, under the additional\nrequirement that both scalar invariants are equal to zero, is presented. Such a\nfield is usually called a null electromagnetic field. Based on the complex\nEuler potentials that appear as arbitrary functions in the general solution, a\nvector potential for the null electromagnetic field is defined. This potential\nis called natural vector potential of the null electromagnetic field. An\nattempt is made to make the most of knowing the general solution. The\nproperties of the field and the potential are studied without fixing a specific\nfamily of solutions. A equality, which is similar to the Dirac gauge condition,\nis found to be true for both null field and Lienard-Wiechert field. It turns\nout that the natural potential is a substantially complex vector, which is\nequivalent to two real potentials. A modification of the coupling term in the\nDirac equation is proposed, that makes the equation work with both real\npotentials. A solution, that corresponds to the Volkov's solution for a Dirac\nparticle in a linearly polarized plane electromagnetic wave, is found. The\nsolution found is directly compared to Volkov's solution under the same\nconditions.",
+          "arxiv_id": "2004.09273v1"
+        },
+        {
+          "title": "Towards nonlinear electrodynamics without renormalization",
+          "year": "2021-10",
+          "abstract": "In this paper is considered nonlinear electrodynamics (NE) which does not\nsatisfy the linear superposition principle (LSP). Since the presentation of the\nspecial theory of relativity, it has been commonly accepted that a famous\nformula E = mc^2 = m_0c^2 /(1-v^2/c^2)^(1/2) expresses the energy of a free\nparticle only. However, while studying the experiment for the annihilation of\nparticle and antiparticle and the production of the photon in terms of the law\nof energy conservation of particle and field, we obtain a conclusion that E\nincludes not only the energy of a free particle but also the energy of its self\n-fields (electromagnetic field and gravitational field). Hence, a formula for\nthe energy in the special theory of relativity comes to have a more inclusive\nmeaning than Einstein had thought of it. Based upon such an idea and the\ncorrespondence principle, through introducing a new non-Euclidean\nfour-dimensional space, so-called KR space in which the metric is the function\nof coordinates and 4-velocity, we reformulate the action function to be a\nfunction defined in the nonlinear version and from it find equation system for\na charge and the field with a modified version, which is reduced to that in the\nMaxwell theory under the weak field condition: here, weak field condition is\ngiven by |U/m_0c^2|<<1, U; interactional energy. With the equation system, we\nshow that the divergence problem arising from the Maxwell theory, without\ninvoking renormalization, is very naturally solved by sensible mathematics and\nthen demonstrate that the total energy of a free charge and its field equals\nmc^2 and so the energy of an electrostatic field leads to the finite. In this\ncourse are derived the modified version of Coulomb potential and of radiation\nreaction without renormalization which contains an interference effect (a\nnonlinear effect that does not obey LSP).",
+          "arxiv_id": "2110.09002v1"
+        },
+        {
+          "title": "Second gradient electrodynamics: a non-singular relativistic field theory",
+          "year": "2020-10",
+          "abstract": "In this paper, we give the covariant formulation of second gradient\nelectrodynamics, which is a generalized electrodynamics of second order\nincluding derivatives of higher order. The relativistic form of the field\nequations, the energy-momentum tensor and the Lorentz force density are\npresented. For an electric point charge, the generalized Lienard-Wiechert\npotentials and the corresponding electromagnetic field strength tensor are\ngiven as retarded integral expressions. Explicit formulas for the\nelectromagnetic potential vector and electromagnetic field strength tensor of a\nuniformly moving point charge are found without any singularity and\ndiscontinuity. In addition, a world-line integral expression for the self-force\nof a charged point particle is given. The relativistic equation of motion of a\ncharged particle coupled with electromagnetic fields in second gradient\nelectrodynamics is derived, which is an integro-differential equation with\nnonlocality in time. For a uniformly accelerated charge, explicit formulas of\nthe self-force and the electromagnetic mass, being non-singular, are given.\nMoreover, the wave propagation and the dispersion relations in the vacuum of\nsecond gradient electrodynamics are analyzed. Three modes of waves were found:\none non-dispersive wave as in Maxwell electrodynamics, and two dispersive waves\nsimilar to the wave propagation in a collisionless plasma.",
+          "arxiv_id": "2010.13546v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "Dynamics of elastic lattices with sliding constraints",
+          "year": "2024-01",
+          "abstract": "This study investigates the impact of sliders -- constraints acting on\nelastic rods allowing for a transverse displacement jump while maintaining\naxial and rotational displacement continuity -- on the dynamics of a periodic\nelastic grid, including the effects of axial preload. The grid is linearly\nelastic and subject to in-plane incremental deformation, involving normal and\nshear forces and bending moment. The periodicity of the infinite grid permits a\nFloquet-Bloch wave analysis and a rigorous dynamic homogenization, leading to\nan equivalent prestressed elastic solid. The investigation is complemented by\n{\\it ad hoc} developed F.E. simulations and perturbations with a pulsating\nGreen's function. Results show that the sliders create band gaps, flat bands,\nand Dirac cones in the dispersion diagrams and generate macro-instability even\nfor tensile prestress. The latter corresponds to the loss of ellipticity at the\nparabolic boundary in the equivalent elastic solid and provides a rare example\nof an almost unexplored form of material instability. Therefore, our results\noffer design strategies for metamaterials and architected materials showing\nreversible material instabilities and filtering properties for mechanical\nsignals.",
+          "arxiv_id": "2401.06663v1"
+        },
+        {
+          "title": "Grain boundary stresses in elastic materials",
+          "year": "2022-07",
+          "abstract": "A simple analytical model of intergranular normal stresses is proposed for a\ngeneral elastic polycrystalline material with arbitrary shaped and randomly\noriented grains under uniform loading. The model provides algebraic expressions\nfor the local grain-boundary-normal stress and the corresponding uncertainties,\nas a function of the grain-boundary type, its inclination with respect to the\ndirection of external loading and material-elasticity parameters. The knowledge\nof intergranular normal stresses is a necessary prerequisite in any local\ndamage modeling approach, e.g., to predict the intergranular stress-corrosion\ncracking, grain-boundary sliding or fatigue-crack-initiation sites in\nstructural materials.\n  The model is derived in a perturbative manner, starting with the exact\nsolution of a simple setup and later successively refining it to account for\nhigher order complexities of realistic polycrystalline materials. In the\nsimplest scenario, a bicrystal model is embedded in an isotropic elastic medium\nand solved for uniaxial loading conditions, assuming 1D Reuss and Voigt\napproximations on different length scales. In the final iteration, the grain\nboundary becomes a part of a 3D structure consisting of five 1D chains with\narbitrary number of grains and surrounded by an anisotropic elastic medium.\nConstitutive equations can be solved for arbitrary uniform loading, for any\ngrain-boundary type and choice of elastic polycrystalline material. At each\niteration, the algebraic expressions for the local grain-boundary-normal\nstress, along with the corresponding statistical distributions, are derived and\ntheir accuracy systematically verified and validated against the finite element\nsimulation results of different Voronoi microstructures.",
+          "arxiv_id": "2207.11060v1"
+        },
+        {
+          "title": "A way to hypo-elastic artificial materials without a strain potential and displaying flutter instability",
+          "year": "2021-07",
+          "abstract": "Cauchy-elastic solids include hyper-elasticity and a subset of elastic\nmaterials for which the stress does not follow from a scalar strain potential.\nMore in general, hypo-elastic materials are only defined incrementally and\ncomprise Cauchy-elasticity. Infringement of the hyper-elastic 'dogma' is so far\nunattempted and normally believed to be impossible, as it apparently violates\nthermodynamics, because energy may be produced in closed strain cycles.\nContrary to this belief, we show that non-hyper-elastic behavior is possible\nand we indicate the way to a practical realization of this new concept. In\nparticular, a design paradigm is established for artificial materials where\nfollower forces, so far ignored in homogenization schemes, are introduced as\nloads prestressing an elastic two-dimensional grid made up of linear elastic\nrods (reacting to elongation, flexure and shear). A rigorous application of\nFloquet-Bloch wave asymptotics yields an unsymmetric acoustic tensor governing\nthe \\textit{incremental} dynamics of the effective material. The latter is\ntherefore the incremental response of a hypo-elastic solid, which does not\nfollow from a strain potential and thus does not belong to hyper-elasticity.\nThrough the externally applied follower forces (which could be originated via\ninteraction with a fluid, or gas, or by application of Coulomb friction, or\nnon-holonomic constraints), the artificial material may adsorb/release energy\nfrom/to the environment and therefore produce energy in a closed strain loop,\nwithout violating any rule of thermodynamics. The solid is also shown to\ndisplay flutter, a material instability corresponding to a Hopf bifurcation,\nwhich was advocated as possible in plastic solids, but never experimentally\nfound and so far believed to be impossible in elasticity.",
+          "arxiv_id": "2107.12951v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Foundations of a Finite Non-Equilibrium Statistical Thermodynamics: Extrinsic Quantities",
+          "year": "2022-01",
+          "abstract": "Statistical thermodynamics is valuable as a conceptual structure that shapes\nour thinking about equilibrium thermodynamic states. A cloud of unresolved\nquestions surrounding the foundations of the theory could lead an impartial\nobserver to conclude that statistical thermodynamics is in a state of crisis\nthough. Indeed, the discussion about the microscopic origins of irreversibility\nhas continued in the scientific community for more than a hundred years. This\npaper considers these questions while beginning to develop a statistical\nthermodynamics for finite non-equilibrium systems. Definitions are proposed for\nall of the extrinsic variables of the fundamental thermodynamic relation that\nare consistent with existing results in the equilibrium thermodynamic limit.\nThe probability density function on the phase space is interpreted as a\nsubjective uncertainty about the microstate, and the Gibbs entropy formula is\nmodified to allow for entropy creation without introducing additional physics\nor modifying the phase space dynamics. Resolutions are proposed to the mixing\nparadox, Gibbs' paradox, Loschmidt's paradox, and Maxwell's demon thought\nexperiment. Finally, the extrinsic variables of the fundamental thermodynamic\nrelation are evaluated as functions of time and space for a diffusing ideal\ngas, and the initial and final values are shown to coincide with the expected\nequilibrium values when interpreted in a classical context.",
+          "arxiv_id": "2201.02777v1"
+        },
+        {
+          "title": "Residual Entropy of Glasses and the Third Law Expression",
+          "year": "2022-07",
+          "abstract": "The third law of thermodynamics dictates that the entropy of materials\nbecomes zero as temperature ($T$) approaches zero. Contrarily, glass and other\nsimilar materials exhibit nonzero entropy at $T=0$, which contradicts the third\nlaw. For over a century, it has been a common practice to evade this problem by\nregarding glass as nonequilibrium. However, this treatment causes many\ninconsistencies in thermodynamics theory. This paper provides resolutions to\nthese inconsistencies and provides a rigorous expression of the third law\nwithout any exception. To seek the entropy origin, the anthropomorphic feature\nof entropy must be resolved. Because entropy can be uniquely determined only\nwhen thermodynamic coordinates (TCs) are specified, we have to know which are\nTCs. This requires the reconsideration of the definition of equilibrium for\nsolids in an unambiguous way, which does not depend on the solid structure. On\nthis basis, it is deduced that TCs of solids are the equilibrium positions of\natoms. TCs comprise a thermodynamic space, on which a unique value can be\nassigned to the entropy. For solids, equilibrium states are specified by\ndiscrete points in the thermodynamic space, which define atom configurations.\nAmong various atom configurations, only one is thermally activated at\nsufficiently low temperatures, and others are called frozen configuration,\nwhich do not contribute to the temperature dependence of entropy in that\nregion. The rigorous statement of the third law has been established by\nexpressing that the entropy associated with the active configuration vanishes\nat $T=0$. Residual entropy arises when the entropy is evaluated on an extended\nspace including the frozen configurations, which were previously active at high\ntemperatures. The reconciliation of the two different views is explained\nthrough several debates on the glass transition.",
+          "arxiv_id": "2207.11421v4"
+        },
+        {
+          "title": "On the second law of thermodynamics: An ideal-gas flow spontaneously induced by a locally nonchaotic energy barrier",
+          "year": "2022-06",
+          "abstract": "People are well aware that, inherently, certain small-scale nonchaotic\nparticle movements are not governed by thermodynamics. Usually, such phenomena\nare studied by kinetic theory and their energy properties are considered\n\"trivial\". In current research, we show that, beyond the boundary of the second\nlaw of thermodynamics where Boltzmann's H-theorem does not apply, there are\nalso large-sized systems of nontrivial energy properties: when the system is\nisolated, entropy can decrease; from a single thermal reservoir, the system can\nabsorb heat and produce useful work without any other effect. The key concept\nis local nonchaoticity, demonstrated by using a narrow energy barrier. The\nbarrier width is much less than the nominal particle mean free path, so that\ninside the barrier, the particle-particle collisions are sparse and the\nparticle trajectories tend to be locally nonchaotic. Across the barrier, the\nsteady-state particle flux ratio is intrinsically in a non-Boltzmann form. With\na step-ramp structure, the nonequilibrium effect spreads to the entire system,\nand a global flow is generated spontaneously from the random thermal motion.\nThe deviation from thermodynamic equilibrium is steady and significant, and\ncompatible with the basic principle of maximum entropy. These theoretical and\nnumerical analyses may shed light on the fundamentals of thermodynamics and\nstatistical mechanics.",
+          "arxiv_id": "2206.12736v7"
+        }
+      ],
+      "4": [
+        {
+          "title": "Numerical search for three-body periodic free-fall orbits with central symmetry",
+          "year": "2025-03",
+          "abstract": "A specialized high-precision numerical search for equal-mass collisionless\nthree-body periodic free-fall orbits with central symmetry is conducted. The\nsearch is based on Newton's method with initial approximations obtained by the\ngrid-search method. Instead of solving the standard periodicity equation on the\nentire period a quarter-period equation that also characterizes the periodic\norbits is solved. The number of the known orbits from the class is\nsignificantly enlarged. The linear stability of the orbits is also\ninvestigated. All of them are unstable. A discussion in relation to the\nefficiency of Newton's method applied with grid-search initial approximations\nis held.",
+          "arxiv_id": "2503.00432v1"
+        },
+        {
+          "title": "The Geometry of Isochrone Orbits: from Archimedes' parabolae to Kepler's third law",
+          "year": "2020-03",
+          "abstract": "In classical mechanics, the Kepler potential and the Harmonic potential share\nthe following remarkable property: in either of these potentials, a bound test\nparticle orbits with a radial period that is independent of its angular\nmomentum. For this reason, the Kepler and Harmonic potentials are called\n\\it{isochrone}. In this paper, we solve the following general problem: are\nthere any other isochrone potentials, and if so, what kind of orbits do they\ncontain? To answer these questions, we adopt a geometrical point of view\ninitiated by Michel H\\'enon in 1959, in order to explore and classify\nexhaustively the set of isochrone potentials and isochrone orbits. In\nparticular, we provide a geometric generalization of Kepler's third law, and\ngive a similar law for the apsidal angle, for any isochrone orbit. We also\nrelate the set of isochrone orbits to the set of parabolae in the plane under\nlinear transformations, and use this to derive an analytical parameterization\nof any isochrone orbit. Along the way we compare our results to known ones,\npinpoint some interesting details of this mathematical physics problem, and\nargue that our geometrical methods can be exported to more generic orbits in\npotential theory.",
+          "arxiv_id": "2003.13456v3"
+        },
+        {
+          "title": "Approximating Orbits in a Rotating Gravity Field with Oblateness and Ellipticity Perturbations",
+          "year": "2021-08",
+          "abstract": "This paper explores the problem of analytically approximating the orbital\nstate for a subset of orbits in a rotating potential with oblateness and\nellipticity perturbations. This is done by isolating approximate differential\nequations for the orbit radius and other elements. The conservation of the\nJacobi integral is used to make the problem solvable to first-order in the\nperturbations. The solutions are characterized as small deviations from an\nunperturbed circular orbit. The approximations are developed for near-circular\norbits with initial mean motion $n_{0}$ around a body with rotation rate $c$.\nThe approximations are shown to be valid for values of angular rate ratio\n$\\Gamma = c/n_{0} > 1$, with accuracy decreasing as $\\Gamma \\rightarrow 1$, and\nsingularities at and near $\\Gamma = 1$. Extensions of the methodology to\neccentric orbits are discussed, with commentary on the challenges of obtaining\ngenerally valid solutions for both near-circular and eccentric orbits.",
+          "arxiv_id": "2108.09607v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "The geometric phase and the dry friction of sleeping tops on inclined planes",
+          "year": "2021-06",
+          "abstract": "We report on the motion of a spinning sleeping top on an inclined plane.\nBelow a critical inclination angle the sleeping tops are force free. The\ntrajectory of a sleeping top on weakly inclined planes in the adiabatic limit\nis invariant of the angular frequency of the top and thus invariant under a\nrescaling of the time, however not invariant under time reversal. The\nstationary trajectory of the sleeping top is characterized by its angle to the\nin plane horizontal direction. At larger inclinations of the plane the\nstationary motion of the top becomes unstable and the top accelerates downhill.\nThe behavior points towards a complex law of dry friction of the contact point\nbetween the top tip and the material of the inclined plane that depends on a\nslip parameter. We propose a phenomenological law of dry friction that can\nexplain the relaxation of the top into the sleeping position, the geometric\nbehavior of the top trajectories, and the instability of the stationary motion\nat larger inclination angles.",
+          "arxiv_id": "2106.11742v1"
+        },
+        {
+          "title": "Dynamic Stabilization of Water Bottles",
+          "year": "2021-12",
+          "abstract": "The motion of water filled bottles is studied when it is thrown into the air\nand falls back to the floor, including the possibilities of an upright landing\nor rolling down before it finally reaches static state. When dealing with the\nprocess after throwing a water bottle, the free falling (bottle falls without\ninitial angular velocity) and flipping (bottle falls with initial angular\nvelocity) are considered. In theory, the physical principles behind the motion\nare analyzed. In addition, the impacts of initial angle, linear velocity,\nangular velocity and the water amount on the uprightness of the bottle are\ndiscussed. In experiment of throwing bottle, we changed the water amount,\nangular velocity, and releasing height, and examined the impacts of these\nfactors. The results suggest that a certain amount of water and spinning result\nin higher possibility of upright landing. When dealing with rolling bottle,\ntheoretically we build the bottle-and-bead model to describe the coupled motion\nof water and the bottle. Analytical solutions are obtained for small amplitude\nand the numerical solution can be done in a general situation. In the\nexperiment of rolling bottle, we firstly verified the theoretical model, and\nthen addressed the impact of initial conditions and water amount on the motion\npatterns of the bottle.",
+          "arxiv_id": "2112.10585v1"
+        },
+        {
+          "title": "Analysis of Rotational Motion based on Rolling Friction Torque",
+          "year": "2021-11",
+          "abstract": "In the problem of cylinder rolling without slipping on a horizontal floor,\nboth the cylinder and floor are generally treated as rigid bodies in normal\ntextbooks. When the air resistance is ignored, the equation of motion has a\nsolution with a constant velocity. However, in the real world, permanent motion\ndoes not occur. The difficulty cannot be solved only by the horizontal force,\nbecause a horizontal force opposite the translational direction increases the\nangular velocity of rotation around the center. Therefore other mechanisms need\nto be examined. There are two main reasons for this result. 1) Both a cylinder\nand a floor are not perfect circle and perfect plane, but have uneven surfaces.\nThe micro bumps on the surface yield small collisions in the direction\nperpendicular to the floor. The collisions generate a rolling friction torque\naround the center. 2) A strong force acts on the contact part which is\ndeformed. The high-speed deformation produces a history effect on the\nrelationship between stress and strain, because the compressed wave in the\ncontact part diffuses to the outside at the speed of sound. Therefore a rolling\nfriction torque is also generated. Both torques are caused by forces\nperpendicular to the floor. The rolling friction torque eliminates the\ndiscrepancy between the textbook results and reality by solving the\nsimultaneous differential equations of rotation and translation. This method is\nuseful for studying rolling systems such as trains and cars.",
+          "arxiv_id": "2111.06258v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:39:48Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

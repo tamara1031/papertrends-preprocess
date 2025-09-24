@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_model_market_data_models",
+        "keywords": [
+          [
+            "model",
+            0.05185593074747689
+          ],
+          [
+            "market",
+            0.04188354369784905
+          ],
+          [
+            "data",
+            0.03956868121322681
+          ],
+          [
+            "models",
+            0.03790188675050834
+          ],
+          [
+            "financial",
+            0.03524924705964262
+          ],
+          [
+            "time",
+            0.03294273122548553
+          ],
+          [
+            "learning",
+            0.03145746674938921
+          ],
+          [
+            "method",
+            0.02784476589769352
+          ],
+          [
+            "approach",
+            0.02784321677857111
+          ],
+          [
+            "volatility",
+            0.027719677324281516
+          ]
+        ],
+        "count": 1500
+      },
+      "1": {
+        "name": "1_quantum_Quantum_classical_computing",
+        "keywords": [
+          [
+            "quantum",
+            0.17500484572306302
+          ],
+          [
+            "Quantum",
+            0.06864824868287499
+          ],
+          [
+            "classical",
+            0.04180719193280973
+          ],
+          [
+            "computing",
+            0.040742910126431144
+          ],
+          [
+            "algorithms",
+            0.035814239416882394
+          ],
+          [
+            "algorithm",
+            0.03330617587621163
+          ],
+          [
+            "computers",
+            0.029872402343179817
+          ],
+          [
+            "derivative",
+            0.026235666082445815
+          ],
+          [
+            "financial",
+            0.025186393437212084
+          ],
+          [
+            "pricing",
+            0.024864987769187184
+          ]
+        ],
+        "count": 53
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6719610829471612
+      ],
+      [
+        -0.6719610829471612,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        8,
+        0
+      ],
+      "2020-02": [
+        16,
+        1
+      ],
+      "2020-03": [
+        25,
+        0
+      ],
+      "2020-04": [
+        23,
+        0
+      ],
+      "2020-05": [
+        28,
+        0
+      ],
+      "2020-06": [
+        23,
+        0
+      ],
+      "2020-07": [
+        15,
+        0
+      ],
+      "2020-08": [
+        13,
+        1
+      ],
+      "2020-09": [
+        17,
+        1
+      ],
+      "2020-10": [
+        9,
+        0
+      ],
+      "2020-11": [
+        8,
+        2
+      ],
+      "2020-12": [
+        10,
+        2
+      ],
+      "2021-01": [
+        17,
+        0
+      ],
+      "2021-02": [
+        20,
+        1
+      ],
+      "2021-03": [
+        23,
+        1
+      ],
+      "2021-04": [
+        19,
+        1
+      ],
+      "2021-05": [
+        24,
+        0
+      ],
+      "2021-06": [
+        21,
+        1
+      ],
+      "2021-07": [
+        20,
+        0
+      ],
+      "2021-08": [
+        16,
+        1
+      ],
+      "2021-09": [
+        13,
+        1
+      ],
+      "2021-10": [
+        12,
+        1
+      ],
+      "2021-11": [
+        16,
+        3
+      ],
+      "2021-12": [
+        18,
+        1
+      ],
+      "2022-01": [
+        11,
+        2
+      ],
+      "2022-02": [
+        23,
+        1
+      ],
+      "2022-03": [
+        21,
+        3
+      ],
+      "2022-04": [
+        12,
+        0
+      ],
+      "2022-05": [
+        18,
+        0
+      ],
+      "2022-06": [
+        20,
+        0
+      ],
+      "2022-07": [
+        24,
+        1
+      ],
+      "2022-08": [
+        11,
+        1
+      ],
+      "2022-09": [
+        30,
+        0
+      ],
+      "2022-10": [
+        28,
+        2
+      ],
+      "2022-11": [
+        19,
+        0
+      ],
+      "2022-12": [
+        29,
+        1
+      ],
+      "2023-01": [
+        22,
+        3
+      ],
+      "2023-02": [
+        18,
+        0
+      ],
+      "2023-03": [
+        18,
+        3
+      ],
+      "2023-04": [
+        13,
+        2
+      ],
+      "2023-05": [
+        27,
+        0
+      ],
+      "2023-06": [
+        16,
+        2
+      ],
+      "2023-07": [
+        18,
+        1
+      ],
+      "2023-08": [
+        26,
+        4
+      ],
+      "2023-09": [
+        32,
+        0
+      ],
+      "2023-10": [
+        19,
+        1
+      ],
+      "2023-11": [
+        20,
+        2
+      ],
+      "2023-12": [
+        22,
+        0
+      ],
+      "2024-01": [
+        23,
+        0
+      ],
+      "2024-02": [
+        28,
+        1
+      ],
+      "2024-03": [
+        16,
+        0
+      ],
+      "2024-04": [
+        26,
+        2
+      ],
+      "2024-05": [
+        24,
+        1
+      ],
+      "2024-06": [
+        27,
+        0
+      ],
+      "2024-07": [
+        30,
+        1
+      ],
+      "2024-08": [
+        36,
+        0
+      ],
+      "2024-09": [
+        37,
+        0
+      ],
+      "2024-10": [
+        33,
+        1
+      ],
+      "2024-11": [
+        43,
+        0
+      ],
+      "2024-12": [
+        32,
+        0
+      ],
+      "2025-01": [
+        21,
+        1
+      ],
+      "2025-02": [
+        26,
+        3
+      ],
+      "2025-03": [
+        25,
+        0
+      ],
+      "2025-04": [
+        26,
+        1
+      ],
+      "2025-05": [
+        30,
+        1
+      ],
+      "2025-06": [
+        20,
+        2
+      ],
+      "2025-07": [
+        24,
+        2
+      ],
+      "2025-08": [
+        41,
+        1
+      ],
+      "2025-09": [
+        10,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Understanding intra-day price formation process by agent-based financial market simulation: calibrating the extended chiarella model",
+          "year": "2022-08",
+          "abstract": "This article presents XGB-Chiarella, a powerful new approach for deploying\nagent-based models to generate realistic intra-day artificial financial price\ndata. This approach is based on agent-based models, calibrated by XGBoost\nmachine learning surrogate. Following the Extended Chiarella model, three types\nof trading agents are introduced in this agent-based model: fundamental\ntraders, momentum traders, and noise traders. In particular, XGB-Chiarella\nfocuses on configuring the simulation to accurately reflect real market\nbehaviours. Instead of using the original Expectation-Maximisation algorithm\nfor parameter estimation, the agent-based Extended Chiarella model is\ncalibrated using XGBoost machine learning surrogate. It is shown that the\nmachine learning surrogate learned in the proposed method is an accurate proxy\nof the true agent-based market simulation. The proposed calibration method is\nsuperior to the original Expectation-Maximisation parameter estimation in terms\nof the distance between historical and simulated stylised facts. With the same\nunderlying model, the proposed methodology is capable of generating realistic\nprice time series in various stocks listed at three different exchanges, which\nindicates the universality of intra-day price formation process. For the time\nscale (minutes) chosen in this paper, one agent per category is shown to be\nsufficient to capture the intra-day price formation process. The proposed\nXGB-Chiarella approach provides insights that the price formation process is\ncomprised of the interactions between momentum traders, fundamental traders,\nand noise traders. It can also be used to enhance risk management by\npractitioners.",
+          "arxiv_id": "2208.14207v1"
+        },
+        {
+          "title": "MLP, XGBoost, KAN, TDNN, and LSTM-GRU Hybrid RNN with Attention for SPX and NDX European Call Option Pricing",
+          "year": "2024-08",
+          "abstract": "We explore the performance of various artificial neural network\narchitectures, including a multilayer perceptron (MLP), Kolmogorov-Arnold\nnetwork (KAN), LSTM-GRU hybrid recursive neural network (RNN) models, and a\ntime-delay neural network (TDNN) for pricing European call options. In this\nstudy, we attempt to leverage the ability of supervised learning methods, such\nas ANNs, KANs, and gradient-boosted decision trees, to approximate complex\nmultivariate functions in order to calibrate option prices based on past market\ndata. The motivation for using ANNs and KANs is the Universal Approximation\nTheorem and Kolmogorov-Arnold Representation Theorem, respectively.\nSpecifically, we use S\\&P 500 (SPX) and NASDAQ 100 (NDX) index options traded\nduring 2015-2023 with times to maturity ranging from 15 days to over 4 years\n(OptionMetrics IvyDB US dataset). Black \\& Scholes's (BS) PDE \\cite{Black1973}\nmodel's performance in pricing the same options compared to real data is used\nas a benchmark. This model relies on strong assumptions, and it has been\nobserved and discussed in the literature that real data does not match its\npredictions. Supervised learning methods are widely used as an alternative for\ncalibrating option prices due to some of the limitations of this model. In our\nexperiments, the BS model underperforms compared to all of the others. Also,\nthe best TDNN model outperforms the best MLP model on all error metrics. We\nimplement a simple self-attention mechanism to enhance the RNN models,\nsignificantly improving their performance. The best-performing model overall is\nthe LSTM-GRU hybrid RNN model with attention. Also, the KAN model outperforms\nthe TDNN and MLP models. We analyze the performance of all models by ticker,\nmoneyness category, and over/under/correctly-priced percentage.",
+          "arxiv_id": "2409.06724v3"
+        },
+        {
+          "title": "Hedging with Sparse Reward Reinforcement Learning",
+          "year": "2025-03",
+          "abstract": "Derivatives, as a critical class of financial instruments, isolate and trade\nthe price attributes of risk assets such as stocks, commodities, and indices,\naiding risk management and enhancing market efficiency. However, traditional\nhedging models, constrained by assumptions such as continuous trading and zero\ntransaction costs, fail to satisfy risk control requirements in complex and\nuncertain real-world markets.\n  With advances in computing technology and deep learning, data-driven trading\nstrategies are becoming increasingly prevalent. This thesis proposes a\nderivatives hedging framework integrating deep learning and reinforcement\nlearning. The framework comprises a probabilistic forecasting model and a\nhedging agent, enabling market probability prediction, derivative pricing, and\nhedging.\n  Specifically, we design a spatiotemporal attention-based probabilistic\nfinancial time series forecasting Transformer to address the scarcity of\nderivatives hedging data. A low-rank attention mechanism compresses\nhigh-dimensional assets into a low-dimensional latent space, capturing\nnonlinear asset relationships. The Transformer models sequential dependencies\nwithin this latent space, improving market probability forecasts and\nconstructing an online training environment for downstream hedging tasks.\n  Additionally, we incorporate generalized geometric Brownian motion to develop\na risk-neutral pricing approach for derivatives. We model derivatives hedging\nas a reinforcement learning problem with sparse rewards and propose a behavior\ncloning-based recurrent proximal policy optimization (BC-RPPO) algorithm. This\npretraining-finetuning framework significantly enhances the hedging agent's\nperformance. Numerical experiments in the U.S. and Chinese financial markets\ndemonstrate our method's superiority over traditional approaches.",
+          "arxiv_id": "2503.04218v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Quantum Risk Analysis of Financial Derivatives",
+          "year": "2024-04",
+          "abstract": "We introduce two quantum algorithms to compute the Value at Risk (VaR) and\nConditional Value at Risk (CVaR) of financial derivatives using quantum\ncomputers: the first by applying existing ideas from quantum risk analysis to\nderivative pricing, and the second based on a novel approach using Quantum\nSignal Processing (QSP). Previous work in the literature has shown that quantum\nadvantage is possible in the context of individual derivative pricing and that\nadvantage can be leveraged in a straightforward manner in the estimation of the\nVaR and CVaR. The algorithms we introduce in this work aim to provide an\nadditional advantage by encoding the derivative price over multiple market\nscenarios in superposition and computing the desired values by applying\nappropriate transformations to the quantum system. We perform complexity and\nerror analysis of both algorithms, and show that while the two algorithms have\nthe same asymptotic scaling the QSP-based approach requires significantly fewer\nquantum resources for the same target accuracy. Additionally, by numerically\nsimulating both quantum and classical VaR algorithms, we demonstrate that the\nquantum algorithm can extract additional advantage from a quantum computer\ncompared to individual derivative pricing. Specifically, we show that under\ncertain conditions VaR estimation can lower the latest published estimates of\nthe logical clock rate required for quantum advantage in derivative pricing by\nup to $\\sim 30$x. In light of these results, we are encouraged that our\nformulation of derivative pricing in the QSP framework may be further leveraged\nfor quantum advantage in other relevant financial applications, and that\nquantum computers could be harnessed more efficiently by considering problems\nin the financial sector at a higher level.",
+          "arxiv_id": "2404.10088v1"
+        },
+        {
+          "title": "Finding the Optimal Currency Composition of Foreign Exchange Reserves with a Quantum Computer",
+          "year": "2023-03",
+          "abstract": "Portfolio optimization is an inseparable part of strategic asset allocation\nat the Czech National Bank. Quantum computing is a new technology offering\nalgorithms for that problem. The capabilities and limitations of quantum\ncomputers with regard to portfolio optimization should therefore be\ninvestigated. In this paper, we focus on applications of quantum algorithms to\ndynamic portfolio optimization based on the Markowitz model. In particular, we\ncompare algorithms for universal gate-based quantum computers (the QAOA, the\nVQE and Grover adaptive search), single-purpose quantum annealers, the\nclassical exact branch and bound solver and classical heuristic algorithms\n(simulated annealing and genetic optimization). To run the quantum algorithms\nwe use the IBM Quantum\\textsuperscript{TM} gate-based quantum computer. We also\nemploy the quantum annealer offered by D-Wave. We demonstrate portfolio\noptimization on finding the optimal currency composition of the CNB's FX\nreserves. A secondary goal of the paper is to provide staff of central banks\nand other financial market regulators with literature on quantum optimization\nalgorithms, because financial firms are active in finding possible applications\nof quantum computing.",
+          "arxiv_id": "2303.01909v1"
+        },
+        {
+          "title": "Prospects and challenges of quantum finance",
+          "year": "2020-11",
+          "abstract": "Quantum computers are expected to have substantial impact on the finance\nindustry, as they will be able to solve certain problems considerably faster\nthan the best known classical algorithms. In this article we describe such\npotential applications of quantum computing to finance, starting with the\nstate-of-the-art and focusing in particular on recent works by the QC Ware\nteam. We consider quantum speedups for Monte Carlo methods, portfolio\noptimization, and machine learning. For each application we describe the extent\nof quantum speedup possible and estimate the quantum resources required to\nachieve a practical speedup. The near-term relevance of these quantum finance\nalgorithms varies widely across applications - some of them are heuristic\nalgorithms designed to be amenable to near-term prototype quantum computers,\nwhile others are proven speedups which require larger-scale quantum computers\nto implement. We also describe powerful ways to bring these speedups closer to\nexperimental feasibility - in particular describing lower depth algorithms for\nMonte Carlo methods and quantum machine learning, as well as quantum annealing\nheuristics for portfolio optimization. This article is targeted at financial\nprofessionals and no particular background in quantum computation is assumed.",
+          "arxiv_id": "2011.06492v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:36Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

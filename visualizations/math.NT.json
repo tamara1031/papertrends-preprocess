@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_number_field_paper_group",
+        "keywords": [
+          [
+            "number",
+            0.02423699366544177
+          ],
+          [
+            "field",
+            0.018053137134552946
+          ],
+          [
+            "paper",
+            0.017511740967232455
+          ],
+          [
+            "group",
+            0.01653205913173003
+          ],
+          [
+            "numbers",
+            0.016446120512555843
+          ],
+          [
+            "conjecture",
+            0.016007322460840977
+          ],
+          [
+            "results",
+            0.015934536157597424
+          ],
+          [
+            "prime",
+            0.015506530608421602
+          ],
+          [
+            "fields",
+            0.015234634096475784
+          ],
+          [
+            "finite",
+            0.014818453391863724
+          ]
+        ],
+        "count": 16670
+      },
+      "1": {
+        "name": "1_partitions_partition_parts_congruences",
+        "keywords": [
+          [
+            "partitions",
+            0.09083596353960162
+          ],
+          [
+            "partition",
+            0.0666961250093732
+          ],
+          [
+            "parts",
+            0.04582579841890223
+          ],
+          [
+            "congruences",
+            0.039519904571735036
+          ],
+          [
+            "function",
+            0.03207492799272597
+          ],
+          [
+            "number",
+            0.0317259848768568
+          ],
+          [
+            "modulo",
+            0.026017268700803384
+          ],
+          [
+            "Andrews",
+            0.02449936603337666
+          ],
+          [
+            "partition function",
+            0.023850895085320616
+          ],
+          [
+            "identities",
+            0.02078005925228238
+          ]
+        ],
+        "count": 522
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.30241919439877174
+      ],
+      [
+        -0.30241919439877174,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        230,
+        11
+      ],
+      "2020-02": [
+        240,
+        11
+      ],
+      "2020-03": [
+        241,
+        9
+      ],
+      "2020-04": [
+        206,
+        19
+      ],
+      "2020-05": [
+        299,
+        11
+      ],
+      "2020-06": [
+        289,
+        16
+      ],
+      "2020-07": [
+        219,
+        7
+      ],
+      "2020-08": [
+        212,
+        14
+      ],
+      "2020-09": [
+        238,
+        14
+      ],
+      "2020-10": [
+        275,
+        14
+      ],
+      "2020-11": [
+        210,
+        11
+      ],
+      "2020-12": [
+        263,
+        6
+      ],
+      "2021-01": [
+        234,
+        12
+      ],
+      "2021-02": [
+        228,
+        15
+      ],
+      "2021-03": [
+        245,
+        8
+      ],
+      "2021-04": [
+        214,
+        10
+      ],
+      "2021-05": [
+        227,
+        9
+      ],
+      "2021-06": [
+        241,
+        9
+      ],
+      "2021-07": [
+        209,
+        7
+      ],
+      "2021-08": [
+        222,
+        11
+      ],
+      "2021-09": [
+        242,
+        9
+      ],
+      "2021-10": [
+        247,
+        16
+      ],
+      "2021-11": [
+        264,
+        19
+      ],
+      "2021-12": [
+        222,
+        15
+      ],
+      "2022-01": [
+        219,
+        12
+      ],
+      "2022-02": [
+        207,
+        12
+      ],
+      "2022-03": [
+        261,
+        13
+      ],
+      "2022-04": [
+        221,
+        15
+      ],
+      "2022-05": [
+        221,
+        15
+      ],
+      "2022-06": [
+        246,
+        11
+      ],
+      "2022-07": [
+        261,
+        18
+      ],
+      "2022-08": [
+        236,
+        11
+      ],
+      "2022-09": [
+        226,
+        14
+      ],
+      "2022-10": [
+        246,
+        13
+      ],
+      "2022-11": [
+        288,
+        8
+      ],
+      "2022-12": [
+        210,
+        13
+      ],
+      "2023-01": [
+        234,
+        13
+      ],
+      "2023-02": [
+        218,
+        11
+      ],
+      "2023-03": [
+        276,
+        19
+      ],
+      "2023-04": [
+        219,
+        12
+      ],
+      "2023-05": [
+        216,
+        14
+      ],
+      "2023-06": [
+        226,
+        10
+      ],
+      "2023-07": [
+        227,
+        16
+      ],
+      "2023-08": [
+        268,
+        18
+      ],
+      "2023-09": [
+        263,
+        14
+      ],
+      "2023-10": [
+        269,
+        17
+      ],
+      "2023-11": [
+        222,
+        11
+      ],
+      "2023-12": [
+        259,
+        16
+      ],
+      "2024-01": [
+        295,
+        14
+      ],
+      "2024-02": [
+        247,
+        12
+      ],
+      "2024-03": [
+        266,
+        19
+      ],
+      "2024-04": [
+        213,
+        16
+      ],
+      "2024-05": [
+        282,
+        11
+      ],
+      "2024-06": [
+        259,
+        17
+      ],
+      "2024-07": [
+        261,
+        12
+      ],
+      "2024-08": [
+        244,
+        17
+      ],
+      "2024-09": [
+        268,
+        19
+      ],
+      "2024-10": [
+        296,
+        15
+      ],
+      "2024-11": [
+        266,
+        11
+      ],
+      "2024-12": [
+        256,
+        21
+      ],
+      "2025-01": [
+        221,
+        15
+      ],
+      "2025-02": [
+        263,
+        16
+      ],
+      "2025-03": [
+        281,
+        19
+      ],
+      "2025-04": [
+        288,
+        14
+      ],
+      "2025-05": [
+        289,
+        15
+      ],
+      "2025-06": [
+        255,
+        11
+      ],
+      "2025-07": [
+        288,
+        21
+      ],
+      "2025-08": [
+        329,
+        25
+      ],
+      "2025-09": [
+        156,
+        10
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "On index divisors and monogenity of certain number fields defined by $x^{12}+ax^m+b$",
+          "year": "2022-11",
+          "abstract": "In this paper, we deal with the problem of monogenity of number fields\ndefined by monic irreducible trinomials $F(x)=x^{12}+ax^m+b\\in \\mathbb{Z}[x]$\nwith $1\\leq m\\leq11$. We give sufficient conditions on $a$, $b$, and $m$ so\nthat the number field $K$ is not monogenic. In particular, for $m=1$ and for\nevery rational prime $p$, we characterize when $p$ divides the index of $K$ and\nwe provide a partial answer to the Problem $22$ of Narkiewicz \\cite{Nar} for\nthese number fields. Our results are illustrated by computational examples.",
+          "arxiv_id": "2211.04138v1"
+        },
+        {
+          "title": "Diophantine avoidance and small-height primitive elements in ideals of number fields",
+          "year": "2023-12",
+          "abstract": "Let $K$ be a number field of degree $d$. Then every ideal $I$ in the ring of\nintegers ${\\mathcal O}_K$ contains infinitely many primitive elements, i.e.\nelements of degree $d$. A bound on smallest height of such an element in $I$\nfollows from some recent developments in the direction of a 1998 conjecture of\nW. Ruppert. We prove a very explicit bound like this in the case of quadratic\nfields. Further, we consider primitive elements in an ideal outside of a finite\nunion of other ideals and prove a bound on the height of a smallest such\nelement. Our main tool is a result on points of small norm in a lattice outside\nof an algebraic hypersurface and a finite union of sublattices of finite index,\nwhich we prove by blending two previous Diophantine avoidance results. We also\nobtain an avoidance result like this for lattice points in the positive orthant\nin $\\mathbb{R}^d$ and use it to obtain a small-height totally positive\nprimitive element in an ideal of a totally real number field outside of a\nfinite union of other ideals. Additionally, we use our avoidance method to\nprove a bound on the Mahler measure of a generating non-sparse polynomial for a\ngiven number field. Finally, we produce a bound on the height of a smallest\nprimitive generator for a principal ideal in a quadratic number field.",
+          "arxiv_id": "2312.10853v3"
+        },
+        {
+          "title": "On the Beilinson-Bloch conjecture over function fields",
+          "year": "2025-05",
+          "abstract": "Let k be a field and X a smooth projective variety over k. When k is a number\nfield, the Beilinson--Bloch conjecture relates the ranks of the Chow groups of\nX to the order of vanishing of certain L-functions. We consider the same\nconjecture when k is a global function field, and give a criterion for the\nconjecture to hold for X, extending an earlier result of Jannsen. As an\napplication, we provide a new proof of a theorem of Geisser connecting the Tate\nconjecture over finite fields and the Birch and Swinnerton-Dyer conjecture over\nfunction fields. We then prove the Tate conjecture for a product of a smooth\nprojective curve with a power of a CM elliptic curve over any finitely\ngenerated field, and thus deduce special cases of the Beilinson--Bloch\nconjecture. In the process we obtain a conditional answer to a question of\nMoonen on the Chow groups of powers of ordinary CM elliptic curves over\narbitrary fields.",
+          "arxiv_id": "2505.00696v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Partition theorems and the Chinese remainder theorem",
+          "year": "2023-10",
+          "abstract": "The famous partition theorem of Euler states that partitions of $n$ into\ndistinct parts are equinumerous with partitions of $n$ into odd parts. Another\nfamous partition theorem due to MacMahon states that the number of partitions\nof $n$ with all parts repeated at least once equals the number of partitions of\n$n$ where all parts must be even or congruent to $3 \\pmod 6$. These partition\ntheorems were further extended by Glaisher, Andrews, Subbarao, Nyirenda and\nMugwangwavari. In this paper, we utilize the Chinese remainder theorem to prove\na comprehensive partition theorem that encompasses all existing partition\ntheorems. We also give a natural generalization of Euler's theorem based on a\nspecial complete residue system. Furthermore, we establish interesting\ncongruence connections between the partition function $p(n)$ and related\npartition functions.",
+          "arxiv_id": "2310.08978v1"
+        },
+        {
+          "title": "Explaining Unforeseen Congruence Relationships Between PEND and POND Partitions via an Atkin--Lehner Involution",
+          "year": "2025-03",
+          "abstract": "For the past several years, numerous authors have studied POD and PED\npartitions from a variety of perspectives. These are integer partitions wherein\nthe odd parts must be distinct (in the case of POD partitions) or the even\nparts must be distinct (in the case of PED partitions).\n  More recently, Ballantine and Welch were led to consider POND and PEND\npartitions, which are integer partitions wherein the odd parts cannot be\ndistinct (in the case of POND partitions) or the even parts cannot be distinct\n(in the case of PEND partitions). Soon after, the first author proved the\nfollowing results via elementary $q$-series identities and generating function\nmanipulations, along with mathematical induction: For all $\\alpha \\geq 1$ and\nall $n\\geq 0,$\n  $$\\mathrm{pend}\\left(3^{2\\alpha +1}n+\\frac{17\\cdot 3^{2\\alpha}-1}{8}\\right)\n\\equiv 0 \\pmod{3}, \\textrm{ and}$$ $$\\mathrm{pond}\\left(3^{2\\alpha\n+1}n+\\frac{23\\cdot 3^{2\\alpha}+1}{8}\\right) \\equiv 0 \\pmod{3},$$ where\n$\\mathrm{pend}(n)$ counts the number of PEND partitions of weight $n$ and\n$\\mathrm{pond}(n)$ counts the number of POND partitions of weight $n$.\n  In this work, we revisit these families of congruences, and we show a\nrelationship between them via an Atkin--Lehner involution. From this\nrelationship, we can show that, once one of the above families of congruences\nis known, the other follows immediately.",
+          "arxiv_id": "2503.16019v2"
+        },
+        {
+          "title": "$4$-Regular partitions and the pod function",
+          "year": "2021-11",
+          "abstract": "The partition function $pod(n)$ enumerates the partitions of $n$ wherein odd\nparts are distinct and even parts are unrestricted. Recently, a number of\nproperties for $pod(n)$ have been established. In this paper, for $k\\in\\{0,2\\}$\nwe consider the partitions of $n$ into distinct parts not congruent to $k$\nmodulo $4$ and the $4$-regular partitions of $n$ in order to obtain new\nproperties for $pod(n)$. In this context, we derive two new infinite families\nof linear inequalities involving the function $pod(n)$ and obtain new\nidentities of Watson type.",
+          "arxiv_id": "2111.10702v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:34:49Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

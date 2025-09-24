@@ -1,0 +1,1786 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_systems_time_model",
+        "keywords": [
+          [
+            "data",
+            0.03063069239812964
+          ],
+          [
+            "systems",
+            0.02215372165890453
+          ],
+          [
+            "time",
+            0.020981392769284467
+          ],
+          [
+            "model",
+            0.018113464337094463
+          ],
+          [
+            "learning",
+            0.01787653503580772
+          ],
+          [
+            "dynamics",
+            0.017569803409155742
+          ],
+          [
+            "series",
+            0.017066608387635754
+          ],
+          [
+            "dynamical",
+            0.016562827982977812
+          ],
+          [
+            "time series",
+            0.016279277780992932
+          ],
+          [
+            "chaotic",
+            0.014893003999094968
+          ]
+        ],
+        "count": 660
+      },
+      "1": {
+        "name": "1_quantum_systems_classical_chaos",
+        "keywords": [
+          [
+            "quantum",
+            0.05276588058814498
+          ],
+          [
+            "systems",
+            0.0217263734945872
+          ],
+          [
+            "classical",
+            0.020640573327324715
+          ],
+          [
+            "chaos",
+            0.020638923391274204
+          ],
+          [
+            "time",
+            0.01775755729671953
+          ],
+          [
+            "body",
+            0.017680099865363983
+          ],
+          [
+            "random",
+            0.016264876608325915
+          ],
+          [
+            "chaotic",
+            0.016038346252452367
+          ],
+          [
+            "spectral",
+            0.015401893492422934
+          ],
+          [
+            "dynamics",
+            0.014965646129706328
+          ]
+        ],
+        "count": 421
+      },
+      "2": {
+        "name": "2_maps_map_systems_chaotic",
+        "keywords": [
+          [
+            "maps",
+            0.028990594533268355
+          ],
+          [
+            "map",
+            0.02347881120836562
+          ],
+          [
+            "systems",
+            0.019283748099647984
+          ],
+          [
+            "chaotic",
+            0.019131438289155492
+          ],
+          [
+            "bifurcation",
+            0.016438467119270835
+          ],
+          [
+            "fractional",
+            0.015857084632184642
+          ],
+          [
+            "dimensional",
+            0.015382671414607972
+          ],
+          [
+            "parameter",
+            0.014247388514907722
+          ],
+          [
+            "dynamics",
+            0.013922511521095336
+          ],
+          [
+            "dynamical",
+            0.01346573736928173
+          ]
+        ],
+        "count": 346
+      },
+      "3": {
+        "name": "3_synchronization_oscillators_networks_network",
+        "keywords": [
+          [
+            "synchronization",
+            0.04352119175219926
+          ],
+          [
+            "oscillators",
+            0.03373731849057483
+          ],
+          [
+            "networks",
+            0.03344783449032427
+          ],
+          [
+            "network",
+            0.03136516482895038
+          ],
+          [
+            "coupling",
+            0.029849580505709624
+          ],
+          [
+            "phase",
+            0.02335546352621571
+          ],
+          [
+            "states",
+            0.021769799553361547
+          ],
+          [
+            "Kuramoto",
+            0.019936914984904065
+          ],
+          [
+            "dynamics",
+            0.01985641107139954
+          ],
+          [
+            "chimera",
+            0.019581017800192918
+          ]
+        ],
+        "count": 277
+      },
+      "4": {
+        "name": "4_turbulence_flow_turbulent_energy",
+        "keywords": [
+          [
+            "turbulence",
+            0.04569440625386359
+          ],
+          [
+            "flow",
+            0.02270306910213177
+          ],
+          [
+            "turbulent",
+            0.021340144100774335
+          ],
+          [
+            "energy",
+            0.02007825125700464
+          ],
+          [
+            "wave",
+            0.018467247205572284
+          ],
+          [
+            "fluid",
+            0.017176980707246887
+          ],
+          [
+            "scale",
+            0.016614692629058538
+          ],
+          [
+            "flows",
+            0.016463465235118283
+          ],
+          [
+            "equation",
+            0.01596408378088573
+          ],
+          [
+            "active",
+            0.01457681024384801
+          ]
+        ],
+        "count": 253
+      },
+      "5": {
+        "name": "5_orbits_body_black_mass",
+        "keywords": [
+          [
+            "orbits",
+            0.03798467534653218
+          ],
+          [
+            "body",
+            0.02880776392209128
+          ],
+          [
+            "black",
+            0.018894879738039848
+          ],
+          [
+            "mass",
+            0.018268888436301152
+          ],
+          [
+            "resonances",
+            0.017369190739620108
+          ],
+          [
+            "periodic",
+            0.017266811022661283
+          ],
+          [
+            "periodic orbits",
+            0.01708559134719888
+          ],
+          [
+            "orbital",
+            0.016396115268897022
+          ],
+          [
+            "motion",
+            0.016213070269475265
+          ],
+          [
+            "space",
+            0.01610287277156683
+          ]
+        ],
+        "count": 186
+      },
+      "6": {
+        "name": "6_laser_optical_frequency_dynamics",
+        "keywords": [
+          [
+            "laser",
+            0.029807152669163603
+          ],
+          [
+            "optical",
+            0.02810300521746986
+          ],
+          [
+            "frequency",
+            0.022161480040544322
+          ],
+          [
+            "dynamics",
+            0.021446770224324653
+          ],
+          [
+            "nonlinear",
+            0.020751275836067166
+          ],
+          [
+            "feedback",
+            0.01758044949484847
+          ],
+          [
+            "mode",
+            0.017370322911773005
+          ],
+          [
+            "chaotic",
+            0.01662160814211205
+          ],
+          [
+            "phase",
+            0.015578206002906088
+          ],
+          [
+            "chaos",
+            0.015314524312013281
+          ]
+        ],
+        "count": 141
+      },
+      "7": {
+        "name": "7_game_games_dynamics_population",
+        "keywords": [
+          [
+            "game",
+            0.038575660965342574
+          ],
+          [
+            "games",
+            0.030555186947917187
+          ],
+          [
+            "dynamics",
+            0.029550072361449603
+          ],
+          [
+            "population",
+            0.025296394976490184
+          ],
+          [
+            "agents",
+            0.02257274740600608
+          ],
+          [
+            "prey",
+            0.02096529918750122
+          ],
+          [
+            "players",
+            0.019342790902099977
+          ],
+          [
+            "evolutionary",
+            0.017624043184087192
+          ],
+          [
+            "model",
+            0.01735638980466185
+          ],
+          [
+            "predator",
+            0.017349343478049874
+          ]
+        ],
+        "count": 74
+      },
+      "8": {
+        "name": "8_gravity_string_chaos_theory",
+        "keywords": [
+          [
+            "gravity",
+            0.038842566078691645
+          ],
+          [
+            "string",
+            0.03712161959490705
+          ],
+          [
+            "chaos",
+            0.032899170280057614
+          ],
+          [
+            "theory",
+            0.032310731603101425
+          ],
+          [
+            "quantum",
+            0.0300996860405965
+          ],
+          [
+            "black",
+            0.0253330956967739
+          ],
+          [
+            "holographic",
+            0.02514520559282916
+          ],
+          [
+            "SYK",
+            0.022413060477508046
+          ],
+          [
+            "field",
+            0.020317773569998577
+          ],
+          [
+            "theories",
+            0.020095653600160305
+          ]
+        ],
+        "count": 67
+      },
+      "9": {
+        "name": "9_billiards_billiard_quantum_boundary",
+        "keywords": [
+          [
+            "billiards",
+            0.06492986273892831
+          ],
+          [
+            "billiard",
+            0.061684802616567676
+          ],
+          [
+            "quantum",
+            0.021940479502846694
+          ],
+          [
+            "boundary",
+            0.021507309518491044
+          ],
+          [
+            "classical",
+            0.021368684142822725
+          ],
+          [
+            "diffusion",
+            0.02132619721247496
+          ],
+          [
+            "chaotic",
+            0.02090916802575471
+          ],
+          [
+            "energy",
+            0.0206320648981352
+          ],
+          [
+            "space",
+            0.019008576458845152
+          ],
+          [
+            "trajectories",
+            0.01694005335249605
+          ]
+        ],
+        "count": 66
+      },
+      "10": {
+        "name": "10_nonlinear_energy_resonance_vibration",
+        "keywords": [
+          [
+            "nonlinear",
+            0.03870512795871558
+          ],
+          [
+            "energy",
+            0.027998127901396632
+          ],
+          [
+            "resonance",
+            0.026038604482561276
+          ],
+          [
+            "vibration",
+            0.02384936986686655
+          ],
+          [
+            "vibrational resonance",
+            0.023276446778491406
+          ],
+          [
+            "vibrational",
+            0.022899494909807135
+          ],
+          [
+            "frequency",
+            0.01963056919120861
+          ],
+          [
+            "damping",
+            0.018850942678664558
+          ],
+          [
+            "excitation",
+            0.018126366535054263
+          ],
+          [
+            "oscillations",
+            0.016434421976470413
+          ]
+        ],
+        "count": 63
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.560659302927954,
+        -0.4452790888692635,
+        -0.6460624889948761,
+        -0.6346668070764956,
+        -0.6790048654976117,
+        -0.6384795928589648,
+        -0.6403013775987623,
+        -0.6409412460087649,
+        -0.7246916047270934,
+        -0.6632542156792409
+      ],
+      [
+        -0.560659302927954,
+        1.0,
+        -0.36633457617947984,
+        -0.6710928599748347,
+        -0.5395992108505776,
+        -0.5894805499710879,
+        -0.6134164377582547,
+        -0.6500253910501333,
+        -0.09145629979887183,
+        -0.6407749049589331,
+        -0.6691181606151226
+      ],
+      [
+        -0.4452790888692635,
+        -0.36633457617947984,
+        1.0,
+        -0.6296716570721197,
+        -0.5123469953490818,
+        -0.5664593094083783,
+        -0.6077245139019685,
+        -0.622532811051225,
+        -0.37921129390183617,
+        -0.6792108874259093,
+        -0.5926177088809351
+      ],
+      [
+        -0.6460624889948761,
+        -0.6710928599748347,
+        -0.6296716570721197,
+        1.0,
+        -0.7034755040560463,
+        -0.7210476633183753,
+        -0.632209218719682,
+        -0.6409771029687636,
+        -0.65799783374323,
+        -0.7395947015494352,
+        -0.7082451718972846
+      ],
+      [
+        -0.6346668070764956,
+        -0.5395992108505776,
+        -0.5123469953490818,
+        -0.7034755040560463,
+        1.0,
+        -0.697179240280086,
+        -0.6581453614277157,
+        -0.6888878837187683,
+        -0.45419857771812844,
+        -0.7269662091773412,
+        -0.6840407520812761
+      ],
+      [
+        -0.6790048654976117,
+        -0.5894805499710879,
+        -0.5664593094083783,
+        -0.7210476633183753,
+        -0.697179240280086,
+        1.0,
+        -0.6681460877265064,
+        -0.6657744279295452,
+        -0.5640013711211129,
+        -0.47708339945492306,
+        -0.6212824289492471
+      ],
+      [
+        -0.6384795928589648,
+        -0.6134164377582547,
+        -0.6077245139019685,
+        -0.632209218719682,
+        -0.6581453614277157,
+        -0.6681460877265064,
+        1.0,
+        -0.037763263255195426,
+        -0.6129629453167361,
+        -0.7153588353002834,
+        -0.5730396998863585
+      ],
+      [
+        -0.6403013775987623,
+        -0.6500253910501333,
+        -0.622532811051225,
+        -0.6409771029687636,
+        -0.6888878837187683,
+        -0.6657744279295452,
+        -0.037763263255195426,
+        1.0,
+        -0.6505480832598847,
+        -0.720754236714295,
+        -0.6730915967425615
+      ],
+      [
+        -0.6409412460087649,
+        -0.09145629979887183,
+        -0.37921129390183617,
+        -0.65799783374323,
+        -0.45419857771812844,
+        -0.5640013711211129,
+        -0.6129629453167361,
+        -0.6505480832598847,
+        1.0,
+        -0.6713709874058365,
+        -0.6790306632205272
+      ],
+      [
+        -0.7246916047270934,
+        -0.6407749049589331,
+        -0.6792108874259093,
+        -0.7395947015494352,
+        -0.7269662091773412,
+        -0.47708339945492306,
+        -0.7153588353002834,
+        -0.720754236714295,
+        -0.6713709874058365,
+        1.0,
+        -0.7146874030882189
+      ],
+      [
+        -0.6632542156792409,
+        -0.6691181606151226,
+        -0.5926177088809351,
+        -0.7082451718972846,
+        -0.6840407520812761,
+        -0.6212824289492471,
+        -0.5730396998863585,
+        -0.6730915967425615,
+        -0.6790306632205272,
+        -0.7146874030882189,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        16,
+        3,
+        8,
+        3,
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "2020-02": [
+        15,
+        5,
+        10,
+        8,
+        8,
+        3,
+        1,
+        3,
+        2,
+        2,
+        5
+      ],
+      "2020-03": [
+        16,
+        5,
+        6,
+        3,
+        1,
+        3,
+        2,
+        2,
+        4,
+        2,
+        3
+      ],
+      "2020-04": [
+        13,
+        5,
+        5,
+        3,
+        5,
+        5,
+        3,
+        5,
+        1,
+        1,
+        1
+      ],
+      "2020-05": [
+        12,
+        9,
+        10,
+        8,
+        3,
+        8,
+        5,
+        6,
+        1,
+        0,
+        2
+      ],
+      "2020-06": [
+        14,
+        6,
+        10,
+        7,
+        6,
+        3,
+        2,
+        1,
+        4,
+        1,
+        2
+      ],
+      "2020-07": [
+        14,
+        6,
+        9,
+        6,
+        6,
+        8,
+        0,
+        1,
+        1,
+        3,
+        2
+      ],
+      "2020-08": [
+        13,
+        7,
+        7,
+        8,
+        2,
+        6,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "2020-09": [
+        14,
+        7,
+        6,
+        1,
+        5,
+        4,
+        2,
+        2,
+        2,
+        4,
+        1
+      ],
+      "2020-10": [
+        14,
+        7,
+        3,
+        10,
+        6,
+        5,
+        0,
+        3,
+        0,
+        1,
+        1
+      ],
+      "2020-11": [
+        15,
+        9,
+        5,
+        5,
+        3,
+        5,
+        1,
+        3,
+        3,
+        2,
+        1
+      ],
+      "2020-12": [
+        9,
+        3,
+        6,
+        4,
+        2,
+        3,
+        1,
+        2,
+        3,
+        2,
+        3
+      ],
+      "2021-01": [
+        12,
+        6,
+        4,
+        7,
+        2,
+        6,
+        3,
+        3,
+        2,
+        0,
+        2
+      ],
+      "2021-02": [
+        16,
+        3,
+        7,
+        11,
+        3,
+        4,
+        2,
+        4,
+        2,
+        1,
+        2
+      ],
+      "2021-03": [
+        7,
+        7,
+        9,
+        4,
+        2,
+        2,
+        5,
+        2,
+        8,
+        0,
+        3
+      ],
+      "2021-04": [
+        11,
+        4,
+        4,
+        10,
+        3,
+        1,
+        2,
+        3,
+        2,
+        13,
+        2
+      ],
+      "2021-05": [
+        10,
+        6,
+        5,
+        9,
+        8,
+        7,
+        4,
+        4,
+        4,
+        1,
+        6
+      ],
+      "2021-06": [
+        14,
+        9,
+        10,
+        2,
+        3,
+        2,
+        2,
+        4,
+        2,
+        3,
+        3
+      ],
+      "2021-07": [
+        16,
+        2,
+        7,
+        4,
+        5,
+        4,
+        1,
+        1,
+        5,
+        1,
+        3
+      ],
+      "2021-08": [
+        20,
+        7,
+        4,
+        8,
+        6,
+        5,
+        1,
+        3,
+        1,
+        0,
+        3
+      ],
+      "2021-09": [
+        15,
+        7,
+        4,
+        6,
+        2,
+        9,
+        5,
+        5,
+        1,
+        1,
+        1
+      ],
+      "2021-10": [
+        15,
+        5,
+        6,
+        8,
+        8,
+        5,
+        1,
+        5,
+        2,
+        4,
+        1
+      ],
+      "2021-11": [
+        8,
+        6,
+        7,
+        12,
+        4,
+        5,
+        2,
+        1,
+        1,
+        4,
+        0
+      ],
+      "2021-12": [
+        18,
+        9,
+        4,
+        7,
+        7,
+        2,
+        2,
+        1,
+        4,
+        1,
+        2
+      ],
+      "2022-01": [
+        13,
+        4,
+        4,
+        5,
+        2,
+        5,
+        4,
+        5,
+        4,
+        1,
+        3
+      ],
+      "2022-02": [
+        9,
+        7,
+        11,
+        7,
+        2,
+        0,
+        3,
+        3,
+        1,
+        5,
+        1
+      ],
+      "2022-03": [
+        10,
+        7,
+        5,
+        12,
+        4,
+        4,
+        0,
+        4,
+        0,
+        2,
+        2
+      ],
+      "2022-04": [
+        11,
+        7,
+        9,
+        6,
+        4,
+        2,
+        2,
+        0,
+        4,
+        1,
+        2
+      ],
+      "2022-05": [
+        15,
+        10,
+        4,
+        7,
+        6,
+        2,
+        3,
+        1,
+        1,
+        1,
+        2
+      ],
+      "2022-06": [
+        16,
+        4,
+        5,
+        2,
+        4,
+        5,
+        2,
+        2,
+        2,
+        0,
+        3
+      ],
+      "2022-07": [
+        11,
+        3,
+        7,
+        5,
+        5,
+        5,
+        2,
+        3,
+        1,
+        2,
+        1
+      ],
+      "2022-08": [
+        10,
+        5,
+        6,
+        7,
+        5,
+        3,
+        2,
+        2,
+        4,
+        1,
+        2
+      ],
+      "2022-09": [
+        12,
+        2,
+        7,
+        9,
+        5,
+        5,
+        1,
+        0,
+        5,
+        2,
+        2
+      ],
+      "2022-10": [
+        16,
+        1,
+        7,
+        5,
+        4,
+        3,
+        1,
+        4,
+        4,
+        1,
+        1
+      ],
+      "2022-11": [
+        16,
+        10,
+        5,
+        6,
+        4,
+        1,
+        1,
+        2,
+        4,
+        3,
+        0
+      ],
+      "2022-12": [
+        11,
+        11,
+        11,
+        6,
+        9,
+        4,
+        0,
+        3,
+        1,
+        1,
+        3
+      ],
+      "2023-01": [
+        16,
+        3,
+        6,
+        11,
+        5,
+        3,
+        0,
+        3,
+        2,
+        4,
+        0
+      ],
+      "2023-02": [
+        4,
+        6,
+        3,
+        7,
+        1,
+        5,
+        1,
+        5,
+        5,
+        0,
+        1
+      ],
+      "2023-03": [
+        14,
+        10,
+        6,
+        9,
+        7,
+        3,
+        1,
+        3,
+        4,
+        1,
+        0
+      ],
+      "2023-04": [
+        14,
+        3,
+        4,
+        3,
+        5,
+        4,
+        1,
+        2,
+        3,
+        1,
+        1
+      ],
+      "2023-05": [
+        17,
+        6,
+        7,
+        3,
+        6,
+        5,
+        3,
+        4,
+        4,
+        2,
+        1
+      ],
+      "2023-06": [
+        14,
+        6,
+        2,
+        15,
+        4,
+        7,
+        3,
+        1,
+        1,
+        2,
+        0
+      ],
+      "2023-07": [
+        10,
+        9,
+        7,
+        7,
+        4,
+        5,
+        3,
+        1,
+        1,
+        3,
+        2
+      ],
+      "2023-08": [
+        10,
+        15,
+        8,
+        5,
+        4,
+        2,
+        0,
+        3,
+        4,
+        3,
+        1
+      ],
+      "2023-09": [
+        14,
+        5,
+        2,
+        7,
+        3,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "2023-10": [
+        18,
+        7,
+        5,
+        6,
+        4,
+        3,
+        0,
+        4,
+        3,
+        0,
+        2
+      ],
+      "2023-11": [
+        18,
+        5,
+        5,
+        11,
+        8,
+        7,
+        2,
+        5,
+        1,
+        2,
+        2
+      ],
+      "2023-12": [
+        10,
+        6,
+        7,
+        9,
+        4,
+        3,
+        1,
+        4,
+        4,
+        2,
+        6
+      ],
+      "2024-01": [
+        17,
+        12,
+        6,
+        5,
+        1,
+        2,
+        1,
+        0,
+        4,
+        1,
+        3
+      ],
+      "2024-02": [
+        14,
+        2,
+        13,
+        4,
+        4,
+        4,
+        0,
+        4,
+        1,
+        1,
+        3
+      ],
+      "2024-03": [
+        13,
+        3,
+        5,
+        5,
+        4,
+        4,
+        1,
+        4,
+        4,
+        2,
+        2
+      ],
+      "2024-04": [
+        8,
+        4,
+        3,
+        8,
+        6,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "2024-05": [
+        10,
+        15,
+        10,
+        9,
+        2,
+        3,
+        2,
+        4,
+        4,
+        2,
+        3
+      ],
+      "2024-06": [
+        15,
+        6,
+        4,
+        7,
+        5,
+        2,
+        0,
+        2,
+        1,
+        2,
+        4
+      ],
+      "2024-07": [
+        20,
+        9,
+        3,
+        8,
+        4,
+        3,
+        4,
+        2,
+        1,
+        3,
+        8
+      ],
+      "2024-08": [
+        14,
+        8,
+        10,
+        8,
+        4,
+        5,
+        5,
+        8,
+        3,
+        1,
+        1
+      ],
+      "2024-09": [
+        19,
+        7,
+        2,
+        5,
+        3,
+        8,
+        1,
+        4,
+        2,
+        2,
+        1
+      ],
+      "2024-10": [
+        28,
+        6,
+        12,
+        5,
+        4,
+        6,
+        1,
+        7,
+        1,
+        1,
+        2
+      ],
+      "2024-11": [
+        21,
+        6,
+        4,
+        6,
+        1,
+        5,
+        1,
+        6,
+        4,
+        4,
+        7
+      ],
+      "2024-12": [
+        15,
+        9,
+        5,
+        8,
+        9,
+        4,
+        0,
+        5,
+        0,
+        1,
+        3
+      ],
+      "2025-01": [
+        21,
+        3,
+        6,
+        9,
+        4,
+        2,
+        1,
+        4,
+        3,
+        3,
+        0
+      ],
+      "2025-02": [
+        18,
+        6,
+        6,
+        6,
+        4,
+        1,
+        3,
+        0,
+        3,
+        0,
+        2
+      ],
+      "2025-03": [
+        23,
+        11,
+        6,
+        6,
+        5,
+        5,
+        1,
+        6,
+        3,
+        6,
+        3
+      ],
+      "2025-04": [
+        21,
+        3,
+        2,
+        7,
+        7,
+        3,
+        2,
+        3,
+        2,
+        4,
+        1
+      ],
+      "2025-05": [
+        17,
+        9,
+        10,
+        9,
+        8,
+        3,
+        0,
+        5,
+        3,
+        3,
+        5
+      ],
+      "2025-06": [
+        24,
+        14,
+        6,
+        10,
+        4,
+        4,
+        2,
+        3,
+        2,
+        0,
+        3
+      ],
+      "2025-07": [
+        29,
+        10,
+        9,
+        9,
+        8,
+        4,
+        2,
+        4,
+        1,
+        3,
+        1
+      ],
+      "2025-08": [
+        19,
+        10,
+        4,
+        0,
+        8,
+        6,
+        1,
+        7,
+        4,
+        4,
+        1
+      ],
+      "2025-09": [
+        11,
+        7,
+        1,
+        4,
+        3,
+        3,
+        1,
+        2,
+        0,
+        1,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Using Data Assimilation to Train a Hybrid Forecast System that Combines Machine-Learning and Knowledge-Based Components",
+          "year": "2021-02",
+          "abstract": "We consider the problem of data-assisted forecasting of chaotic dynamical\nsystems when the available data is in the form of noisy partial measurements of\nthe past and present state of the dynamical system. Recently there have been\nseveral promising data-driven approaches to forecasting of chaotic dynamical\nsystems using machine learning. Particularly promising among these are hybrid\napproaches that combine machine learning with a knowledge-based model, where a\nmachine-learning technique is used to correct the imperfections in the\nknowledge-based model. Such imperfections may be due to incomplete\nunderstanding and/or limited resolution of the physical processes in the\nunderlying dynamical system, e.g., the atmosphere or the ocean. Previously\nproposed data-driven forecasting approaches tend to require, for training,\nmeasurements of all the variables that are intended to be forecast. We describe\na way to relax this assumption by combining data assimilation with machine\nlearning. We demonstrate this technique using the Ensemble Transform Kalman\nFilter (ETKF) to assimilate synthetic data for the 3-variable Lorenz system and\nfor the Kuramoto-Sivashinsky system, simulating model error in each case by a\nmisspecified parameter value. We show that by using partial measurements of the\nstate of the dynamical system, we can train a machine learning model to improve\npredictions made by an imperfect knowledge-based model.",
+          "arxiv_id": "2102.07819v1"
+        },
+        {
+          "title": "Deep learning delay coordinate dynamics for chaotic attractors from partial observable data",
+          "year": "2022-11",
+          "abstract": "A common problem in time series analysis is to predict dynamics with only\nscalar or partial observations of the underlying dynamical system. For data on\na smooth compact manifold, Takens theorem proves a time delayed embedding of\nthe partial state is diffeomorphic to the attractor, although for chaotic and\nhighly nonlinear systems learning these delay coordinate mappings is\nchallenging. We utilize deep artificial neural networks (ANNs) to learn\ndiscrete discrete time maps and continuous time flows of the partial state.\nGiven training data for the full state, we also learn a reconstruction map.\nThus, predictions of a time series can be made from the current state and\nseveral previous observations with embedding parameters determined from time\nseries analysis. The state space for time evolution is of comparable dimension\nto reduced order manifold models. These are advantages over recurrent neural\nnetwork models, which require a high dimensional internal state or additional\nmemory terms and hyperparameters. We demonstrate the capacity of deep ANNs to\npredict chaotic behavior from a scalar observation on a manifold of dimension\nthree via the Lorenz system. We also consider multivariate observations on the\nKuramoto-Sivashinsky equation, where the observation dimension required for\naccurately reproducing dynamics increases with the manifold dimension via the\nspatial extent of the system.",
+          "arxiv_id": "2211.11061v1"
+        },
+        {
+          "title": "Reconstructing dynamics from sparse observations with no training on target system",
+          "year": "2024-10",
+          "abstract": "In applications, an anticipated situation is where the system of interest has\nnever been encountered before and sparse observations can be made only once.\nCan the dynamics be faithfully reconstructed from the limited observations\nwithout any training data? This problem defies any known traditional methods of\nnonlinear time-series analysis as well as existing machine-learning methods\nthat typically require extensive data from the target system for training. We\naddress this challenge by developing a hybrid transformer and\nreservoir-computing machine-learning scheme. The key idea is that, for a\ncomplex and nonlinear target system, the training of the transformer can be\nconducted not using any data from the target system, but with essentially\nunlimited synthetic data from known chaotic systems. The trained transformer is\nthen tested with the sparse data from the target system. The output of the\ntransformer is further fed into a reservoir computer for predicting the\nlong-term dynamics or the attractor of the target system. The power of the\nproposed hybrid machine-learning framework is demonstrated using a large number\nof prototypical nonlinear dynamical systems, with high reconstruction accuracy\neven when the available data is only 20% of that required to faithfully\nrepresent the dynamical behavior of the underlying system. The framework\nprovides a paradigm of reconstructing complex and nonlinear dynamics in the\nextreme situation where training data does not exist and the observations are\nrandom and sparse.",
+          "arxiv_id": "2410.21222v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Quantum and Semi-Classical Signatures of Dissipative Chaos in the Steady State",
+          "year": "2025-06",
+          "abstract": "We investigate the quantum-classical correspondence in open quantum many-body\nsystems using the SU(3) Bose-Hubbard trimer as a minimal model. Combining exact\ndiagonalization with semiclassical Langevin dynamics, we establish a direct\nconnection between classical trajectories characterized by fixed-point\nattractors, limit cycles, or chaos and the spectral and structural properties\nof the quantum steady state. We show that classical dynamical behavior, as\nquantified by the sign of the Lyapunov exponent, governs the level statistics\nof the steady-state density matrix: non-positive exponents associated with\nregular dynamics yield Poissonian statistics, while positive exponents arising\nfrom chaotic dynamics lead to Wigner-Dyson statistics. Strong symmetries\nconstrain the system to lower-dimensional manifolds, suppressing chaos and\nenforcing localization, while weak symmetries preserve the global structure of\nthe phase space and allow chaotic behavior to persist. To characterize\nphase-space localization, we introduce the phase-space inverse participation\nratio IPR, which defines an effective dimension D of the Husimi distribution's\nsupport. We find that the entropy scales as $S \\propto \\ln N^D$, consistently\ncapturing the classical nature of the underlying dynamics. This semiclassical\nframework, based on stochastic mixtures of coherent states, successfully\nreproduces not only observable averages but also finer features such as\nspectral correlations and localization properties. Our results demonstrate that\ndissipative quantum chaos is imprinted in the steady-state density matrix, much\nlike in closed systems, and that the interplay between dynamical regimes and\nsymmetry constraints can be systematically probed using spectral and\nphase-space diagnostics. These tools offer a robust foundation for studying\nergodicity, localization, and non-equilibrium phases of open quantum systems.",
+          "arxiv_id": "2506.14961v1"
+        },
+        {
+          "title": "Many-body quantum chaos and time reversal symmetry",
+          "year": "2025-03",
+          "abstract": "We investigate universal signatures of quantum chaos in the presence of time\nreversal symmetry (TRS) in generic many body quantum chaotic systems (gMBQCs).\nWe study three classes of minimal models of gMBQCs with TRS, realized through\nrandom quantum circuits with (i) local TRS, (ii) global TRS, and (iii) TRS\ncombined with discrete time-translation symmetry. In large local Hilbert space\ndimension $q$, we derive the emergence of random matrix theory (RMT)\nuniversality in the spectral form factor (SFF) at times larger than the\nThouless time $t_{\\mathrm{Th}}$, which diverges with system sizes in gMBQCs. At\ntimes before $t_{\\mathrm{Th}}$, we identify universal behaviour beyond RMT by\nderiving explicit scaling functions of SFF in the thermodynamic limit. In\nparticular, in the simplest non-trivial setting - preserving global TRS while\nbreaking time translation symmetry - we show that the SFF is mapped to the\npartition function of an emergent classical ferromagnetic Ising model, where\nthe Ising spins correspond to the time-parallel and time-reversed pairings of\nFeynman paths, and external magnetic fields are induced by TRS-breaking\nmechanisms. Without relying on the large-$q$ limit, we develop a second\nindependent derivation of the Ising scaling behaviour of SFF using space-time\nduality and parity symmetric non-Hermitian Ginibre ensembles. Moreover, we show\nthat many body effects originating from time-reversed pairings of Feynman paths\nmanifest in the two-point autocorrelation function (2PAF), the\nout-of-time-ordered correlator (OTOC), and the partial spectral form factor -\nquantities sensitive to both eigenvalue and eigenstate correlations. We\nestablish that the fluctuations of 2PAF are governed by an emergent three-state\nPotts model, leading to an exponential scaling with the operator support size,\nat a rate set by the three-state Potts model. [See full abstract in the paper]",
+          "arxiv_id": "2503.23475v2"
+        },
+        {
+          "title": "Spectral form factor in chaotic, localized, and integrable open quantum many-body systems",
+          "year": "2024-05",
+          "abstract": "We numerically study the spectral statistics of open quantum many-body\nsystems (OQMBS) as signatures of quantum chaos (or the lack thereof), using the\ndissipative spectral form factor (DSFF), a generalization of the spectral form\nfactor to complex spectra. We show that the DSFF of chaotic OQMBS generically\ndisplays the $\\textit{quadratic}$ ramp-plateau behaviour of the Ginibre\nensemble from random matrix theory, in contrast to the linear ramp-plateau\nbehaviour of the Gaussian ensemble in closed quantum systems. Furthermore, in\nthe presence of many-body interactions, such RMT behaviour emerges only after a\ntime scale $\\tau_{\\mathrm{dev}}$, which generally increases with system size\nfor sufficiently large system size, and can be identified as the non-Hermitian\nanalogue of the $\\textit{many-body Thouless time}$. The universality of the\nrandom matrix theory behavior is demonstrated by surveying twelve models of\nOQMBS, including random Kraus circuits (quantum channels) and random\nLindbladians (Liouvillians) in several symmetry classes, as well as\nLindbladians of paradigmatic models such as the Sachdev-Ye-Kitaev (SYK), XXZ,\nand the transverse field Ising models. We devise an unfolding and filtering\nprocedure to remove variations of the averaged density of states which would\notherwise hide the universal RMT-like signatures in the DSFF for chaotic OQMBS.\nBeyond chaotic OQMBS, we study the spectral statistics of non-chaotic OQMBS,\nspecifically the integrable XX model and a system in the many-body localized\n(MBL) regime in the presence of dissipation, which exhibit DSFF behaviours\ndistinct from the ramp-plateau behaviour of random matrix theory. Lastly, we\nstudy the DSFF of Lindbladians with the Hamiltonian term set to zero, i.e. only\nthe jump operators are present, and demonstrate that the results of RMT\nuniversality and scaling of many-body Thouless time survive even without\ncoherent evolution.",
+          "arxiv_id": "2405.01641v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Abundance of weird quasiperiodic attractors in piecewise linear discontinuous maps",
+          "year": "2025-04",
+          "abstract": "In this work, we consider a class of $n$-dimensional, $n\\geq2$, piecewise\nlinear discontinuous maps that can exhibit a new type of attractor, called a\nweird quasiperiodic attractor. While the dynamics associated with these\nattractors may appear chaotic, we prove that chaos cannot occur. The considered\nclass of $n$-dimensional maps allows for any finite number of partitions,\nseparated by various types of discontinuity sets. The key characteristic,\nbeyond discontinuity, is that all functions defining the map have the same real\nfixed point. These maps cannot have hyperbolic cycles other than the fixed\npoint itself. We consider the two-dimensional case in detail. We prove that in\nnongeneric cases, the restriction, or the first return, of the map to a segment\nof straight line is reducible to a piecewise linear circle map. The generic\nattractor, different from the fixed point, is a weird quasiperiodic attractor,\nwhich may coexist with other attractors or attracting sets. We illustrate the\nexistence of these attractors through numerous examples, using functions with\ndifferent types of Jacobian matrices, as well as with different types of\ndiscontinuity sets. In some cases, we describe possible mechanisms leading to\nthe appearance of these attractors. We also give examples in the\nthree-dimensional space. Several properties of this new type of attractor\nremain open for further investigation.",
+          "arxiv_id": "2504.04778v2"
+        },
+        {
+          "title": "Asymptotic cycles in fractional generalizations of multidimensional maps",
+          "year": "2024-07",
+          "abstract": "In regular dynamics, discrete maps are model presentations of discrete\ndynamical systems, and they may approximate continuous dynamical systems. Maps\nare used to investigate general properties of dynamical systems and to model\nvarious natural and socioeconomic systems. They are also used in engineering.\nMany natural and almost all socioeconomic systems possess memory which, in many\ncases, is power-law-like memory. Generalized fractional maps, in which memory\nis not exactly the power-law memory but the asymptotically power-law-like\nmemory, are used to model and investigate general properties of these systems.\nIn this paper we extend the definition of the notion of generalized fractional\nmaps of arbitrary positive orders that previously was defined only for maps\nwhich, in the case of integer orders, converge to area/volume-preserving maps.\nFractional generalizations of H'enon and Lozi maps belong to the newly defined\nclass of generalized fractional maps. We derive the equations which define\nperiodic points in generalized fractional maps. We consider applications of our\nresults to the fractional and fractional difference H'enon and Lozi maps.",
+          "arxiv_id": "2408.00134v2"
+        },
+        {
+          "title": "Asymptotic cycles in fractional maps of arbitrary positive orders",
+          "year": "2021-11",
+          "abstract": "Many natural and social systems possess power-law memory, and their\nmathematical modeling requires the application of discrete and continuous\nfractional calculus. Most of these systems are nonlinear and demonstrate\nregular and chaotic behavior, different from the behavior of memoryless\nsystems. Finding periodic solutions is essential for understanding the regular\nand chaotic behavior of nonlinear systems. Fractional systems do not have\nperiodic solutions except fixed points. Instead, they have asymptotically\nperiodic solutions which, in the case of stable regular behavior, converge to\nthe periodic sinks (similar to regular dissipative systems) and, in the case of\nunstable/chaotic behavior, act as repellers. In one of his recent papers, the\nfirst author derived equations that allow calculations of asymptotically\nperiodic points for a wide class of discrete maps with memory. All fractional\nand fractional difference maps of the orders 0 < \\alpha < 1 belong to this\nclass. In this paper, we derive the equations that allow calculations of the\ncoordinates of the asymptotically periodic points for a wider class of maps\nwhich include fractional and fractional difference maps of the arbitrary\npositive orders \\alpha > 0. The maps are defined as convolutions of a\ngenerating function -G_K(x), which may be the same as in a corresponding\nregular map x_{n+1} = -G_K(x_n)+x_n, with a kernel U_{\\alpha}(k), which defines\nthe type of a map. In the case of fractional maps, it is U{\\alpha}(k) =\nk^{\\alpha}, and it is U{\\alpha}(k) = k^{(\\alpha)}, the falling factorial\nfunction, in the case of fractional difference maps. In this paper, we define\nthe space of kernel functions that allow calculations of the periodic points of\nthe corresponding maps with memory. We also prove that in fractional maps of\nthe orders 1 < \\alpha < 2 the total of all physical momenta of period-l points\nis zero.",
+          "arxiv_id": "2111.12777v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Synchronization in repulsively coupled oscillators",
+          "year": "2022-12",
+          "abstract": "A long-standing expectation is that two repulsively coupled oscillators tend\nto oscillate in opposite directions. It has been difficult to achieve complete\nsynchrony in coupled identical oscillators with purely repulsive coupling.\nHere, we introduce a general coupling condition based on the linear matrix of\ndynamical systems for the emergence of the complete synchronization in pure\nrepulsively coupled oscillators. The proposed coupling profiles (coupling\nmatrices) define a bidirectional cross-coupling link that plays the role of\nindicator for the onset of complete synchrony between identical oscillators. We\nillustrate the proposed coupling scheme on several paradigmatic two-coupled\nchaotic oscillators and validate its effectiveness through the linear stability\nanalysis of the synchronous solution based on the master stability function\napproach. We further demonstrate that the proposed general condition for the\nselection of coupling profiles to achieve synchronization even works perfectly\nfor a large ensemble of oscillators.",
+          "arxiv_id": "2212.00988v1"
+        },
+        {
+          "title": "Effect of phase-lag on synchronization in adaptive multilayer networks with higher-order interactions",
+          "year": "2025-07",
+          "abstract": "We investigate the transition to synchronization in adaptive multilayer\nnetworks with higher-order interactions both analytically and numerically in\nthe presence of phase frustration ($\\beta$). The higher order topology consists\nof pairwise and triadic couplings. The analytical framework for the\ninvestigation is based on the Ott-Antonsen ansatz which leads to a convenient\nlow-dimensional model. Extensive bifurcation analysis of the low-dimensional\nmodel and the numerical simulation of the full networks are performed to\nexplore the paths to synchronization. The combined analysis shows a complex\ndependence of the transition to synchronization on adaptation exponents,\ncoupling strengths, phase lag parameter, and multilayer configuration. Various\ntypes of transitions to synchronization, namely continuous, tiered, and\nexplosive, are exhibited by the system in different regions of the parameter\nspace. In all the cases, a satisfactory match between the low-dimensional model\nand the numerical simulation results is observed. The origin of different\ntransitions to synchronization is clearly understood using the low-dimensional\nmodel. Exploration of a wide region of the parameter space suggests that the\nphase frustration parameter inhibits tired as well as explosive synchronization\ntransitions for fixed triadic coupling strength ($K_2$). On the other hand,\ndiscontinuous transition is promoted by the phase frustration parameter for\nfixed pairwise coupling strength ($K_1$). Moreover, the exponent of the\nadaptation function with the pairwise coupling decreases the width of the\nhysteresis, despite the dominance of the higher-order coupling for fixed\n$\\beta$ and $K_2$. While, the exponent of the function adapted with\nhigher-order coupling shows the opposite effect, it promotes bistability in\nspite of dominance of pairwise coupling strength for fixed $\\beta$, and $K_1$.",
+          "arxiv_id": "2507.01640v1"
+        },
+        {
+          "title": "Explosive synchronization in multiplex neuron-glial networks",
+          "year": "2023-11",
+          "abstract": "Explosive synchronization refers to an abrupt (first order) transition to\nnon-zero phase order parameter in oscillatory networks, underpinned by the\nbistability of synchronous and asynchronous states. Growing evidence suggests\nthat this phenomenon might be no less general then the celebrated Kuramoto\nscenario that belongs to the second order universality class. Importantly, the\nrecent examples demonstrate that explosive synchronization can occur for\ncertain network topologies and coupling types, like the global higher-order\ncoupling, without specific requirements on the individial oscillator dynamics\nor dynamics-network correlations. Here we demonstrate a rich picture of\nexplosive synchronization and desynchronization transitions in multiplex\nnetworks, where it is sufficient to have a single random sparsly connected\nlayer with higher-order coupling terms (and not necessarily in the\nsynchronization regime on its own), the other layer being a regular lattice\nwithout own phase transitions at all. Moreover, explosive synchronization\nemerges even when the random layer has only low-order pairwise coupling,\nalthoug the hysteresis interval becomes narrow and explosive desynchronization\nis no longer observed. The relevance to the normal and pathological dynamics of\nneural-glial networks is pointed out.",
+          "arxiv_id": "2311.10154v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Interaction renormalization and validity of kinetic equations for turbulent states",
+          "year": "2023-07",
+          "abstract": "We consider turbulence of waves that interact weakly via four-wave scattering\n(sea waves, plasma waves, spin waves, and many others). In the first\nnon-vanishing order in the interaction, the occupation number of waves satisfy\na closed kinetic equation which has stationary solutions describing turbulent\ncascades. We show that a straightforward perturbation theory beyond the kinetic\nequation gives terms that generally diverge both at small (IR) and large (UV)\nwavenumbers for a direct cascade. The analysis up to the third order identifies\nthe most UV-divergent terms. In order to gain qualitative analytic control, we\nsum a subset of the most UV divergent term, to all orders, giving a\nperturbation theory which is generally free from UV divergence, showing that\nturbulence becomes independent of the dissipation scale when it goes to zero.\nOn the contrary, the ever-present IR divergence means that the effective\ncoupling is parametrically larger than the naive estimate and grows with the\npumping scale (similar to anomalous scaling in fluid turbulence). This suggests\nthat the kinetic equation does not describe wave turbulence even of arbitrarily\nsmall level if the cascade is sufficiently long. We show that the character of\nstrong turbulence is determined by the sign of the coupling, that is, whether\nthe effective four-wave interaction is enhanced or suppressed by collective\neffects. The enhancement possibly signals that strong turbulence is dominated\nby multi-wave bound states (solitons, shocks, cusps), similar to confinement in\nquantum chromodynamics.",
+          "arxiv_id": "2308.00033v3"
+        },
+        {
+          "title": "Novel turbulence and coarsening arrest in active-scalar fluids",
+          "year": "2024-02",
+          "abstract": "We uncover a new type of turbulence -- activity-induced homogeneous and\nisotropic turbulence in a model that has been employed to investigate\nmotility-induced phase separation (MIPS) in a system of microswimmers. The\nactive Cahn-Hilliard-Navier-Stokes equations (CHNS), also called active model\nH, provides a natural theoretical framework for our study. In this CHNS model,\na single scalar order parameter $\\phi$, positive (negative) in regions of high\n(low) microswimmer density, is coupled with the velocity field $\\bm u$. The\nactivity of the microswimmers is governed by an activity parameter $\\zeta$ that\nis positive for \\textit{extensile} swimmers and negative for\n\\textit{contractile} swimmers. With extensile swimmers, this system undergoes\ncomplete phase separation, which is similar to that in binary-fluid mixtures.\nBy carrying out pseudospectral direct numerical simulations (DNSs), we show,\nfor the first time, that this model (a) develops an emergent nonequilibrium,\nbut statistically steady, state (NESS) of active turbulence, for the case of\ncontractile swimmers, if $\\zeta$ is sufficiently large and negative and (b)\nthis turbulence arrests the phase separation. We quantify this suppression by\nshowing how the coarsening-arrest length scale does not grow indefinitely, with\ntime $t$, but saturates at a finite value at large times. We characterise the\nstatistical properties of this active-scalar turbulence by employing energy\nspectra and fluxes and the spectrum of $\\phi$. For sufficiently high Reynolds\nnumbers, the energy spectrum $\\mathcal E(k)$ displays an inertial range, with a\npower-law dependence on the wavenumber $k$. We demonstrate that, in this range,\nthe flux $\\Pi(k)$ assumes a nearly constant, negative value, which indicates\nthat the system shows an inverse cascade of energy, even though energy\ninjection occurs over a wide range of wavenumbers in our active-CHNS model.",
+          "arxiv_id": "2402.00961v1"
+        },
+        {
+          "title": "Variable energy flux in turbulence",
+          "year": "2020-11",
+          "abstract": "In three-dimensional hydrodynamic turbulence forced at large length scales, a\nconstant energy flux $ \\Pi_u $ flows from large scales to intermediate scales,\nand then to small scales. It is well known that for multiscale energy injection\nand dissipation, the energy flux $\\Pi_u$ varies with scales. In this review we\ndescribe this principle and show how this general framework is useful for\ndescribing a variety of turbulent phenomena. Compared to Kolmogorov's spectrum,\nthe energy spectrum steepens in turbulence involving quasi-static magnetofluid,\nEkman friction, stable stratification, magnetohydrodynamics, and solution with\ndilute polymer. However, in turbulent thermal convection, in unstably\nstratified turbulence such as Rayleigh-Taylor turbulence, and in shear\nturbulence, the energy spectrum has an opposite behaviour due to an increase of\nenergy flux with wavenumber. In addition, we briefly describe the role of\nvariable energy flux in quantum turbulence, in binary-fluid turbulence\nincluding time-dependent Landau-Ginzburg and Cahn-Hillianrd equations, and in\nEuler turbulence.",
+          "arxiv_id": "2011.07291v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Disruption of exo-asteroids around white dwarfs and the release of dust particles in debris rings in co-orbital motion",
+          "year": "2024-09",
+          "abstract": "Close to the Roche radius of a white dwarf (WD), an asteroid on a circular\norbit sheds material that then adopts a very similar orbit. Observations of the\nresulting debris show a periodic behavior and changes in flux on short\ntimescales, implying ongoing dynamical activity. Additional encounters from\nother minor planets may then yield co-orbital rings of debris at different\ninclinations. The structure, dynamics, and lifetime of these debris discs\nremains highly uncertain, but is important for understanding WD planetary\nsystems. We aim to identify and quantify the locations of co-orbitals in\nWD-asteroid-dust particle 3-body systems by exploring the influence of 1:1\nresonant periodic orbits. We begin this exploration with co-planar and inclined\norbits in the circular restricted 3-body problem (CRTBP) and model the\ndynamical evolution of these exosystems over observable timescales. The mass\nratio parameter for this class of systems ($~2\\times 10^{-11}$) is one of the\nlowest ever explored in this dynamical configuration. We computed the periodic\norbits, deduced their linear stability, and suitably seeded the dynamical\nstability maps. We carried out a limited suite of N-body simulations to provide\ndirect comparisons with the maps. We derive novel results for this extreme mass\nratio in the CRTBP, including new unstable 3D families. We illustrate through\nthe maps and N-body simulations where dust can exist in a stable configuration\nover observable timescales across a wide expanse of parameter space in the\nabsence of strong external forces. Over a timescale of 10 yr, the maximum\norbital period deviations of stable debris due to the co-orbital perturbations\nof the asteroid is about a few seconds. Unstable debris in a close encounter\nwith the asteroid typically deviates from the co-orbital configuration by more\nthan about 20 km and is on a near-circular orbit with an eccentricity lower\nthan ~0.01.",
+          "arxiv_id": "2409.03002v1"
+        },
+        {
+          "title": "From period to quasi-period to chaos: A continuous spectrum of orbits of charged particles trapped in a dipole magnetic field",
+          "year": "2020-11",
+          "abstract": "Via evaluation of the Lyapunov exponent, we report the discovery of three\nprominent sets of phase space regimes of quasi-periodic orbits of charged\nparticles trapped in a dipole magnetic field. Besides the low energy regime\nthat has been studied extensively and covers more than 10% in each dimension of\nthe phase space of trapped orbits, there are two sets of high energy regimes,\nthe largest of which covers more than 4% in each dimension of the phase space\nof trapped orbits. Particles in these high energy orbits may be observed in\nspace and be realized in plasma experiments on the Earth. It is well-known that\nthere are quasi-periodic orbits around stable periodic orbits in Hamiltonian\nsystems with 2 degrees of freedom and these quasi-periodic orbits are stable as\nwell. Since periodic orbits appear to have a negligible measure in the phase\nspace, they are difficult to realize in nature. Quasi-periodic orbits, on the\nother hand, may occupy a finite volume in the 4 dimensional (4D) phase space\nand be readily detectable. A chaotic orbit has at least one positive Lyapunov\nexponent. The Lyapunov exponents of quasi-periodic orbits, on the other hand,\nshould be zero. Via calculation of the Lyapunov exponent of orbits of trapped\ncharged particles in a dipole magnetic field, we scanned the corresponding\nphase space and found several prominent regimes of quasi-periodic orbits\nassociated with stable periodic orbits in the equatorial plane. These regimes\nappear to be connected to some small regimes of quasi-periodic orbits\nassociated with stable periodic orbits in the Meridian plane. Our numerical\nresults also show a continuous spectrum of these orbits from stable periodic,\nto quasi-periodic with vanishing Lyapunov exponents, and eventually to chaotic\nones with at least one positive Lyapunov exponent and there are unstable\nperiodic orbits with a positive maximum Lyapunov exponent.",
+          "arxiv_id": "2011.11249v1"
+        },
+        {
+          "title": "Periodic orbits in the 1:2:3 resonant chain and their impact on the orbital dynamics of the Kepler-51 planetary system",
+          "year": "2022-03",
+          "abstract": "Space missions have discovered a large number of exoplanets evolving in (or\nclose to) mean-motion resonances (MMRs) and resonant chains. Often, the\npublished data exhibit very high uncertainties due to the observational\nlimitations that introduce chaos into the evolution of the system on especially\nshorter or longer timescales. We propose a study of the dynamics of such\nsystems by exploring particular regions in phase space. We exemplify our method\nby studying the long-term orbital stability of the three-planet system\nKepler-51 and either favor or constrain its data. It is a dual process which\nbreaks down in two steps: the computation of the families of periodic orbits in\nthe 1:2:3 resonant chain and the visualization of the phase space through maps\nof dynamical stability. We present novel results for the general four-body\nproblem. Stable periodic orbits were found only in the low-eccentricity regime.\nWe demonstrate three possible scenarios safeguarding Kepler-51, each followed\nby constraints. Firstly, there are the 2/1 and 3/2 two-body MMRs, in which\n$e_b<0.02$, such that these two-body MMRs last for extended time spans.\nSecondly, there is the 1:2:3 three-body Laplace-like resonance, in which\n$e_c<0.016$ and $e_d<0.006$ are necessary for such a chain to be viable.\nThirdly, there is the combination comprising the 1/1 secondary resonance inside\nthe 2/1 MMR for the inner pair of planets and an apsidal difference oscillation\nfor the outer pair of planets in which the observational eccentricities, $e_b$\nand $e_c$, are favored as long as $e_d\\approx 0$. With the aim to obtain an\noptimum deduction of the orbital elements, this study showcases the need for\ndynamical analyses based on periodic orbits performed in parallel to the\nfitting processes.",
+          "arxiv_id": "2203.03349v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "Impact of feedback time-distribution on laser dynamics",
+          "year": "2023-07",
+          "abstract": "Time-distributed optical feedback in semiconductor lasers has gained\nattention for its ability to produce high-quality chaos and effectively\nsuppress the time-delay signature. However, the fundamental impact of the\ndistribution of feedback in time on laser dynamics remains unexplored. In this\npaper, we investigate this topic by using fiber Bragg grating (FBG) feedback.\nWe theoretically study the laser response using FBGs of different lengths but\nsimilar reflectivity, effectively stretching the impulse response over a longer\nperiod while maintaining its overall shape. We observe that above a critical\nvalue corresponding to a grating length of approximately $1$\\,cm, fluctuations\nin laser stability emerge. We attribute this phenomenon to the damping of\nrelaxation oscillations when the zeros of the FBG reflectivity spectrum align\nwith the laser side lobes around the relaxation oscillation frequency. We also\nuncover an asymmetrical dynamical behavior of the laser for positive and\nnegative frequency detuning. We deduce that this asymmetry is a characteristic\nfeature of FBG feedback and delve into the specificities that trigger such\nbehavior.",
+          "arxiv_id": "2307.15532v1"
+        },
+        {
+          "title": "Complex switching dynamics of interacting light in a ring resonator",
+          "year": "2023-06",
+          "abstract": "Microresonators are micron-scale optical systems that confine light using\ntotal internal reflection. These optical systems have gained interest in the\nlast two decades due to their compact sizes, unprecedented measurement\ncapabilities, and widespread applications. The increasingly high finesse (or\n$Q$ factor) of such resonators means that nonlinear effects are unavoidable\neven for low power, making them attractive for nonlinear applications,\nincluding optical comb generation and second harmonic generation. In addition,\nlight in these nonlinear resonators may exhibit chaotic behavior across wide\nparameter regions. Hence, it is necessary to understand how, where, and what\ntypes of such chaotic dynamics occur before they can be used in practical\ndevices. We consider a pair of coupled differential equations that describes\nthe interactions of two optical beams in a single-mode resonator with symmetric\npumping. Recently, it was shown that this system exhibits a wide range of\nfascinating behaviors, including bistability, symmetry breaking, chaos, and\nself-switching oscillations. We employ here a dynamical system approach to\nidentify, delimit, and explain the regions where such different behaviors can\nbe observed. Specifically, we find that different kinds of self-switching\noscillations are created via the collision of a pair of asymmetric periodic\norbits or chaotic attractors at Shilnikov homoclinic bifurcations, which acts\nas a gluing bifurcation. We present a bifurcation diagram that shows how these\nglobal bifurcations are organized by a Belyakov transition point (where the\nstability of the homoclinic orbit changes). In this way, we map out distinct\ntransitions to different chaotic switching behavior that should be expected\nfrom this optical device.",
+          "arxiv_id": "2306.16030v1"
+        },
+        {
+          "title": "Chaotic mode-competition dynamics in a multimode semiconductor laser with optical feedback and injection",
+          "year": "2022-11",
+          "abstract": "Photonic computing is attracting increasing interest to accelerate\ninformation processing in machine learning applications. The mode-competition\ndynamics of multimode semiconductor lasers is useful for solving the\nmulti-armed bandit problem in reinforcement learning for computing\napplications. In this study, we numerically evaluate the chaotic\nmode-competition dynamics in a multimode semiconductor laser with optical\nfeedback and injection. We observe the chaotic mode-competition dynamics among\nthe longitudinal modes and control them by injecting an external optical signal\ninto one of the longitudinal modes. We define the dominant mode as the mode\nwith the maximum intensity; the dominant-mode ratio for the injected mode\nincreases as the optical injection strength increases. We find that the\ncharacteristics of the dominant mode ratio in terms of the optical injection\nstrength are different among the modes owing to the different optical feedback\nphases. We propose a control technique for the characteristics of the dominant\nmode ratio by precisely tuning the initial optical frequency detuning between\nthe optical injection signal and injected mode. We also evaluate the\nrelationship between the region for the large dominant mode ratio and injection\nlocking range. The region for the large dominant mode ratio does not correspond\nto the injection-locking range. This discrepancy results from the complex\nmode-competition dynamics in multimode semiconductor lasers with both optical\nfeedback and injection. This control technique of chaotic mode-competition\ndynamics in multimode lasers is promising for applications in reinforcement\nlearning and reservoir computing as photonic artificial intelligence.",
+          "arxiv_id": "2211.08185v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Bayesian eco-evolutionary game dynamics",
+          "year": "2025-04",
+          "abstract": "The symbiotic relationship between the frameworks of classical game theory\nand evolutionary game theory is well-established. However, evolutionary game\ntheorists have mostly tapped into the classical game of complete information\nwhere players are completely informed of all other players' payoffs. Of late,\nthere is a surge of interest in eco-evolutionary interactions where the\nenvironment's state is changed by the players' actions which, in turn, are\ninfluenced by the changing environment. However, in real life, the information\nabout the true environmental state must pass through some noisy channel (like\nusually imperfect sensory apparatus of the players) before it is perceived by\nthe players: The players naturally are prone to sometimes perceive the true\nstate erroneously. Given the uncertain perceived environment, the players may\nadopt bet-hedging kind of strategies in which they play different actions in\ndifferent perceptions. In a population of such ill-informed players, a player\nwould be confused about the information state of her opponent, and an\nincomplete information situation akin to a Bayesian game surfaces. In short, we\ncontemplate possibility of natural emergence of symbiotic relationship between\nthe frameworks of Bayesian games and eco-evolutionary games when the players\nare equipped with inefficient sensory apparatus. Herein, we illustrate this\nconnection using a setup of infinitely large, well-mixed population of players\nequipped with two actions for exploiting a resource (the environment) at two\ndifferent rates so that the resource state evolves accordingly. The state of\nthe resource impacts every player's decision of playing particular action. We\ninvestigate continuous state environment in the presence of a Gaussian noisy\nchannel. Employing the formalism of replicator dynamics, we find that noisy\ninformation can be effective in preventing resource from going extinct.",
+          "arxiv_id": "2504.02399v1"
+        },
+        {
+          "title": "Chaos and noise in evolutionary game dynamics",
+          "year": "2025-03",
+          "abstract": "Evolutionary game theory has traditionally employed deterministic models to\ndescribe population dynamics. These models, due to their inherent\nnonlinearities, can exhibit deterministic chaos, where population fluctuations\nfollow complex, aperiodic patterns. Recently, the focus has shifted towards\nstochastic models, quantifying fixation probabilities and analysing systems\nwith constants of motion. Yet, the role of stochastic effects in systems with\nchaotic dynamics remains largely unexplored within evolutionary game theory.\nThis study addresses how demographic noise -- arising from probabilistic birth\nand death events -- impacts chaotic dynamics in finite populations. We show\nthat despite stochasticity, large populations retain a signature of chaotic\ndynamics, as evidenced by comparing a chaotic deterministic system with its\nstochastic counterpart. More concretely, the strange attractor observed in the\ndeterministic model is qualitatively recovered in the stochastic model, where\nthe term deterministic chaos loses its meaning. We employ tools from nonlinear\ndynamics to quantify how the population size influences the dynamics. We\nobserve that for small populations, stochasticity dominates, overshadowing\ndeterministic selection effects. However, as population size increases, the\ndynamics increasingly reflect the underlying chaotic structure. This resilience\nto demographic noise can be essential for maintaining diversity in populations,\neven in non-equilibrium dynamics. Overall, our results broaden our\nunderstanding of population dynamics, and revisit the boundaries between chaos\nand noise, showing how they maintain structure when considering finite\npopulations in systems that are chaotic in the deterministic limit.",
+          "arxiv_id": "2504.00028v1"
+        },
+        {
+          "title": "Memory Asymmetry Creates Heteroclinic Orbits to Nash Equilibrium in Learning in Zero-Sum Games",
+          "year": "2023-05",
+          "abstract": "Learning in games considers how multiple agents maximize their own rewards\nthrough repeated games. Memory, an ability that an agent changes his/her action\ndepending on the history of actions in previous games, is often introduced into\nlearning to explore more clever strategies and discuss the decision-making of\nreal agents like humans. However, such games with memory are hard to analyze\nbecause they exhibit complex phenomena like chaotic dynamics or divergence from\nNash equilibrium. In particular, how asymmetry in memory capacities between\nagents affects learning in games is still unclear. In response, this study\nformulates a gradient ascent algorithm in games with asymmetry memory\ncapacities. To obtain theoretical insights into learning dynamics, we first\nconsider a simple case of zero-sum games. We observe complex behavior, where\nlearning dynamics draw a heteroclinic connection from unstable fixed points to\nstable ones. Despite this complexity, we analyze learning dynamics and prove\nlocal convergence to these stable fixed points, i.e., the Nash equilibria. We\nidentify the mechanism driving this convergence: an agent with a longer memory\nlearns to exploit the other, which in turn endows the other's utility function\nwith strict concavity. We further numerically observe such convergence in\nvarious initial strategies, action numbers, and memory lengths. This study\nreveals a novel phenomenon due to memory asymmetry, providing fundamental\nstrides in learning in games and new insights into computing equilibria.",
+          "arxiv_id": "2305.13619v4"
+        }
+      ],
+      "8": [
+        {
+          "title": "Chaotic scattering of highly excited strings",
+          "year": "2021-03",
+          "abstract": "Motivated by the desire to understand chaos in the $S$-matrix of string\ntheory, we study tree level scattering amplitudes involving highly excited\nstrings. While the amplitudes for scattering of light strings have been a\nhallmark of string theory since its early days, scattering of excited strings\nhas been far less studied. Recent results on black hole chaos, combined with\nthe correspondence principle between black holes and strings, suggest that the\namplitudes have a rich structure. We review the procedure by which an excited\nstring is formed by repeatedly scattering photons off of an initial tachyon\n(the DDF formalism). We compute the scattering amplitude of one arbitrary\nexcited string and any number of tachyons in bosonic string theory. At high\nenergies and high mass excited state these amplitudes are determined by a\nsaddle-point in the integration over the positions of the string vertex\noperators on the sphere (or the upper half plane), thus yielding a\ngeneralization of the \"scattering equations\". We find a compact expression for\nthe amplitude of an excited string decaying into two tachyons, and study its\nproperties for a generic excited string. We find the amplitude is highly\nerratic as a function of both the precise excited string state and of the\ntachyon scattering angle relative to its polarization, a sign of chaos.",
+          "arxiv_id": "2103.15301v2"
+        },
+        {
+          "title": "Unorientable topological gravity and orthogonal random matrix universality",
+          "year": "2024-05",
+          "abstract": "The duality of Jackiw-Teitelboim (JT) gravity and a double scaled matrix\nintegral has led to studies of the canonical spectral form factor (SFF) in the\nso called $\\tau-$scaled limit of large times, $t \\to \\infty$, and fixed\ntemperature in order to demonstrate agreement with universal random matrix\ntheory (RMT). Though this has been established for the unitary case, extensions\nto other symmetry classes requires the inclusion of unorientable manifolds in\nthe sum over geometries, necessary to address time reversal invariance, and\nregularization of the corresponding prime geometrical objects, the\nWeil-Petersson (WP) volumes. We report here how universal signatures of quantum\nchaos, witnessed by the fidelity to the Gaussian orthogonal ensemble, emerge\nfor the low-energy limit of unorientable JT gravity, i.e. the Airy\nmodel/topological gravity. To this end, we implement the loop equations for the\ncorresponding dual (double-scaled) matrix model and find the generic form of\nthe Airy WP volumes, supported by calculations using unorientable Kontsevich\ngraphs. In an apparent violation of the gravity/chaos duality, the\n$\\tau-$scaled SFF on the gravity side acquires both logarithmic and power law\ncontributions in $t$, not manifestly present on the RMT side. We show the\nexpressions can be made to agree by means of bootstrapping-like relations\nhidden in the asymptotic expansions of generalized hypergeometric functions.\nThus, we are able to establish strong evidence of the quantum chaotic nature of\nunorientable topological gravity.",
+          "arxiv_id": "2405.17177v4"
+        },
+        {
+          "title": "Late time physics of holographic quantum chaos",
+          "year": "2020-08",
+          "abstract": "Quantum chaotic systems are often defined via the assertion that their\nspectral statistics coincides with, or is well approximated by, random matrix\ntheory. In this paper we explain how the universal content of random matrix\ntheory emerges as the consequence of a simple symmetry-breaking principle and\nits associated Goldstone modes. This allows us to write down an effective-field\ntheory (EFT) description of quantum chaotic systems, which is able to control\nthe level statistics up to an accuracy ${\\cal O} \\left(e^{-S} \\right)$ with $S$\nthe entropy. We explain how the EFT description emerges from explicit\nensembles, using the example of a matrix model with arbitrary invariant\npotential, but also when and how it applies to individual quantum systems,\nwithout reference to an ensemble. Within AdS/CFT this gives a general framework\nto express correlations between \"different universes\" and we explicitly\ndemonstrate the bulk realization of the EFT in minimal string theory where the\nGoldstone modes are bound states of strings stretching between bulk spectral\nbranes. We discuss the construction of the EFT of quantum chaos also in higher\ndimensional field theories, as applicable for example for higher-dimensional\nAdS/CFT dual pairs.",
+          "arxiv_id": "2008.02271v3"
+        }
+      ],
+      "9": [
+        {
+          "title": "Statistical properties of the localization measure of chaotic eigenstates and the spectral statistics in a mixed-type billiard",
+          "year": "2021-04",
+          "abstract": "We study the quantum localization in the chaotic eigenstates of a billiard\nwith mixed-type phase space, after separating the regular and chaotic\neigenstates, in the regime of slightly distorted circle billiard where the\nclassical transport time in the momentum space is still large enough, although\nthe diffusion is not normal. In quantum systems with discrete energy spectrum\nthe Heisenberg time $t_H =2\\pi \\hbar/\\Delta E$, where $\\Delta E$ is the mean\nlevel spacing, is an important time scale.The classical transport time scale\n$t_T$ in relation to the Heisenberg time scale $t_H$ (their ratio is the\nparameter $\\alpha=t_H/t_T$) determines the degree of localization of the\nchaotic eigenstates, whose measure $A$ is based on the information entropy. We\nshow that $A$ is linearly related to normalized inverse participation ratio.\nThe localization of chaotic eigenstates is reflected also in the fractional\npower-law repulsion between the nearest energy levels in the sense that the\nprobability density to find successive levels on a distance $S$ goes like\n$\\propto S^\\beta$ for small $S$, where $0\\leq\\beta\\leq1$, and $\\beta=1$\ncorresponds to completely extended states. We show that the level repulsion\nexponent $\\beta$ is empirically a rational function of $\\alpha$, and the mean\n$\\langle A \\rangle$ as a function of $\\alpha$ is also well approximated by a\nrational function. In both cases there is some scattering of the empirical data\naround the mean curve, which is due to the fact that $A$ actually has a\ndistribution, typically with quite complex structure, but in the limit\n$\\alpha\\rightarrow \\infty$ well described by the beta distribution. Like in\nother systems, $\\beta$ goes from $0$ to $1$ when $\\alpha$ goes from $0$ to\n$\\infty$. $\\beta$ is a function of $\\langle A \\rangle$, similar to the quantum\nkicked rotator and the stadium billiard.",
+          "arxiv_id": "2104.11325v1"
+        },
+        {
+          "title": "The level repulsion exponent of localized chaotic eigenstates as a function of the classical transport time scales in the stadium billiard",
+          "year": "2021-04",
+          "abstract": "We study the aspects of quantum localization in the stadium billiard, which\nis a classically chaotic ergodic system, but in the regime of slightly\ndistorted circle billiard the diffusion in the momentum space is very slow. In\nquantum systems with discrete energy spectrum the Heisenberg time $t_H =2\\pi\n\\hbar/\\Delta E$, where $\\Delta E$ is the mean level spacing (inverse energy\nlevel density), is an important time scale. The classical transport time scale\n$t_T$ (diffusion time) in relation to the Heisenberg time scale $t_H$ (their\nratio is the parameter $\\alpha=t_H/t_T$) determines the degree of localization\nof the chaotic eigenstates, whose measure $A$ is based on the information\nentropy. The localization of chaotic eigenstates is reflected also in the\nfractional power-law repulsion between the nearest energy levels in the sense\nthat the probability density (level spacing distribution) to find successive\nlevels on a distance $S$ goes like $\\propto S^\\beta$ for small $S$, where\n$0\\leq\\beta\\leq1$, and $\\beta=1$ corresponds to completely extended states. We\nshow that the level repulsion exponent $\\beta$ is a unique rational function of\n$\\alpha$, and $A$ is a unique rational function of $\\alpha$. $\\beta$ goes from\n$0$ to $1$ when $\\alpha$ goes from $0$ to $\\infty$. Also, $\\beta$ is a linear\nfunction of $A$, which is similar as in the quantum kicked rotator, but\ndifferent from a mixed type billiard.",
+          "arxiv_id": "2104.08915v1"
+        },
+        {
+          "title": "Classical and quantum mixed-type lemon billiards without stickiness",
+          "year": "2021-04",
+          "abstract": "The boundary of the lemon billiards is defined by the intersection of two\ncircles of equal unit radius with the distance $2B$ between their centers, as\nintroduced by Heller and Tomsovic in Phys. Today {\\bf 46} 38 (1993). This paper\nis a continuation of our recent paper on classical and quantum ergodic lemon\nbilliard ($B=0.5$) with strong stickiness effects published in Phys. Rev. E\n{\\bf 103} 012204 (2021). Here we study the classical and quantum lemon\nbilliards, for the cases $B=0.42,\\;0.55,\\; 0.6$, which are mixed-type billiards\nwithout stickiness regions and thus serve as ideal examples of systems with\nsimple divided phase space. The classical phase portraits show the structure of\none large chaotic sea with uniform chaoticity (no stickiness regions)\nsurrounding a large regular island with almost no further substructure, being\nentirely covered by invariant tori. The boundary between the chaotic sea and\nthe regular island is smooth, except for a few points. The classical transport\ntime is estimated to be very short (just a few collisions), therefore the\nlocalization of the chaotic eigenstates is rather weak. The quantum states are\ncharacterized by the following {\\em universal} properties of mixed-type systems\nwithout stickiness in the chaotic regions:(i) Using the Poincar\\'e-Husimi (PH)\nfunctions the eigenstates are separated to the regular ones and chaotic ones.\nThe regular eigenenergies obey the Poissonian statistics, while the chaotic\nones exhibit the Brody distribution with various values of the level repulsion\nexponent $\\beta$, its value depending on the strength of the localization of\nthe chaotic eigenstates. Consequently, the total spectrum is well described by\nthe Berry-Robnik-Brody (BRB) distribution.",
+          "arxiv_id": "2104.08925v1"
+        }
+      ],
+      "10": [
+        {
+          "title": "Ultrasensitive vibrational resonance induced by small disturbances",
+          "year": "2023-11",
+          "abstract": "We have found two kinds of ultra-sensitive vibrational resonance in coupled\nnonlinear systems. It is particularly worth pointing out that this\nultra-sensitive vibrational resonance is a transient behavior caused by\ntransient chaos. Considering long-term response, the system will transform from\ntransient chaos to periodic response. The pattern of vibrational resonance will\nalso transform from ultra-sensitive vibrational resonance to conventional\nvibrational resonance. This article focuses on the transient ultra-sensitive\nvibrational resonance phenomenon. It is induced by a small disturbance of the\nhigh-frequency excitation and the initial simulation conditions, respectively.\nThe damping coefficient and the coupling strength are the key factors to induce\nthe ultra-sensitive vibrational resonance. By increasing these two parameters,\nthe vibrational resonance pattern can be transformed from an ultra-sensitive\nvibrational resonance to a conventional vibrational resonance. The reason for\ndifferent vibrational resonance patterns to occur lies in the state of the\nsystem response. The response usually presents transient chaotic behavior when\nthe ultra-sensitive vibrational resonance appears and the plot of the response\namplitude versus the controlled parameters shows a highly fractalized pattern.\nWhen the response is periodic or doubly-periodic, it usually corresponds to the\nconventional vibrational resonance. The ultra-sensitive vibrational resonance\nnot only occurs at the excitation frequency, but it also occurs at some more\nnonlinear frequency components. The ultra-sensitive vibrational resonance as a\ntransient behavior and the transformation of vibrational resonance patterns are\nnew phenomena in coupled nonlinear systems.",
+          "arxiv_id": "2312.11474v1"
+        },
+        {
+          "title": "Dynamics of a hybrid cubic vibro-impact oscillator and nonlinear energy sink",
+          "year": "2021-06",
+          "abstract": "Various dynamical engineering systems involve purely nonlinear stiffness that\nlacks linear properties even under the assumption of small displacements. The\nmost common is the cubic nonlinearity that may stem from either geometric or\nmaterial properties. Examples include flexible structural components,\npre-tensioned cables, springs, and polymers. When subjected to tight rigid\nconstraints collisions might take place, leading to an additional infinitely\nstrong nonlinearity. The resulting dynamical regime involves both smooth\nnonlinear oscillations (SNOs) and a hybrid cubic vibro-impact (HCVI) regime.\nThe adaptive nonlinearity of the HCVI oscillator is used by the HCVI-nonlinear\nenergy sink (NES) as an effective mechanism for efficient vibration mitigation\nin broad energy and frequency ranges. Due to the multiple essential\nnonlinearities of the HCVI oscillator, traditional analytical methods are\ninapplicable for the description of its transient dynamics. In the current\nwork, we model the HCVI oscillator by a forced particle in a hybrid\nquartic-square potential well with infinite depth under periodic external\nforcing. Unlike previous studies, three underlying dynamical mechanisms that\ngovern the occurrence of bifurcations are identified: two maximum mechanisms\nand one saddle mechanism. The maximal transient energy is predicted\nanalytically over the space of excitation parameters and described using\niso-energy contours. The response curves of the system are obtained\nanalytically, allowing a full perspective on the HCVI-oscillator dynamical\nresponse, and the HCVI-NES performances and design optimization. All\ntheoretical results are supported by numerical simulations.",
+          "arxiv_id": "2106.02123v1"
+        },
+        {
+          "title": "Nonlinear energy harvesting system with multiple stability",
+          "year": "2023-12",
+          "abstract": "The nonlinear energy harvesting systems of the forced vibration with an\nelectron-mechanical coupling are widely used to capture ambient vibration\nenergy and convert mechanical energy into electrical energy. However, the\nnonlinear response mechanism of the friction induced vibration (FIV) energy\nharvesting system with multiple stability and stick-slip motion is still\nunclear. In the current paper, a novel nonlinear energy harvesting model with\nmultiple stability of single-, double- and triple-well potential is proposed\nbased on V-shaped structure spring and the belt conveying system. The dynamic\nequations for the energy harvesting system with multiple stability and\nself-excited friction are established by using Euler-Lagrangian equations.\nSecondly, the nonlinear restoring force, friction force, and potential energy\nsurfaces for static characteristics of the energy harvesting system are\nobtained to show the nonlinear varying stiffness, multiple equilibrium points,\ndiscontinuous behaviors and multiple well response. Then, the equilibrium\nsurface of bifurcation sets of the autonomous system is given to show the\nthird-order quasi zero stiffness (QZS3), fifth-order quasi zero stiffness\n(QZS5), double well (DW) and triple well (TW). Furthermore, the response\namplitudes of charge, current, voltage and power of the forced\nelectron-mechanical coupled vibration system for QZS3, QZS5, DW and TW are\nanalyzed by using the numerically solution. Finally, a prototype of FIV energy\nharvesting system is manufactured and the experimental system is setup. The\nexperimental work of static restoring force, damping force and electrical\noutput are well agreeable with the numerical results, which testified the\nproposed FIV energy harvesting model.",
+          "arxiv_id": "2312.17282v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:37:37Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

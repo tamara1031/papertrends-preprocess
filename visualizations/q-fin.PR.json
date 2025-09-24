@@ -1,0 +1,722 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_volatility_model_options_pricing",
+        "keywords": [
+          [
+            "volatility",
+            0.04615006458313846
+          ],
+          [
+            "model",
+            0.04387534590097249
+          ],
+          [
+            "options",
+            0.04027095610478805
+          ],
+          [
+            "pricing",
+            0.033613995691062465
+          ],
+          [
+            "option",
+            0.030073454343212232
+          ],
+          [
+            "models",
+            0.029959585381580136
+          ],
+          [
+            "stochastic",
+            0.0266586519455684
+          ],
+          [
+            "price",
+            0.021001352480028664
+          ],
+          [
+            "process",
+            0.020943242756536758
+          ],
+          [
+            "time",
+            0.020757498125525204
+          ]
+        ],
+        "count": 175
+      },
+      "1": {
+        "name": "1_learning_market_model_returns",
+        "keywords": [
+          [
+            "learning",
+            0.030449328074021023
+          ],
+          [
+            "market",
+            0.027814915261413324
+          ],
+          [
+            "model",
+            0.027260701694070636
+          ],
+          [
+            "returns",
+            0.021517045283225004
+          ],
+          [
+            "models",
+            0.021380554378607634
+          ],
+          [
+            "price",
+            0.020451115772268123
+          ],
+          [
+            "deep",
+            0.01944998922549697
+          ],
+          [
+            "data",
+            0.018675442266285577
+          ],
+          [
+            "pricing",
+            0.018489829435649037
+          ],
+          [
+            "neural",
+            0.01821920088443915
+          ]
+        ],
+        "count": 128
+      },
+      "2": {
+        "name": "2_risk_model_pricing_hedging",
+        "keywords": [
+          [
+            "risk",
+            0.038416534034642
+          ],
+          [
+            "model",
+            0.028899254625499714
+          ],
+          [
+            "pricing",
+            0.027247049120140317
+          ],
+          [
+            "hedging",
+            0.023236863986557773
+          ],
+          [
+            "price",
+            0.022840860856281713
+          ],
+          [
+            "market",
+            0.02209547956638868
+          ],
+          [
+            "framework",
+            0.020613389225897095
+          ],
+          [
+            "default",
+            0.01995790909320366
+          ],
+          [
+            "time",
+            0.019558069074880183
+          ],
+          [
+            "valuation",
+            0.019486192922325687
+          ]
+        ],
+        "count": 122
+      },
+      "3": {
+        "name": "3_market_economic_return_factors",
+        "keywords": [
+          [
+            "market",
+            0.06229610534889066
+          ],
+          [
+            "economic",
+            0.05465926743930957
+          ],
+          [
+            "return",
+            0.04361847716648021
+          ],
+          [
+            "factors",
+            0.04134083783309363
+          ],
+          [
+            "price",
+            0.040433573854486204
+          ],
+          [
+            "returns",
+            0.03988219316235352
+          ],
+          [
+            "variables",
+            0.035254004796923734
+          ],
+          [
+            "factor",
+            0.032074886255229376
+          ],
+          [
+            "volumes",
+            0.0316444635938993
+          ],
+          [
+            "statistical",
+            0.030719658562807804
+          ]
+        ],
+        "count": 25
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.2896149199512794,
+        -0.1612022513864782,
+        -0.4970125118481184
+      ],
+      [
+        -0.2896149199512794,
+        1.0,
+        0.005815033897905119,
+        -0.2597955989369566
+      ],
+      [
+        -0.1612022513864782,
+        0.005815033897905119,
+        1.0,
+        -0.3499599244837315
+      ],
+      [
+        -0.4970125118481184,
+        -0.2597955989369566,
+        -0.3499599244837315,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        7,
+        1,
+        3,
+        1
+      ],
+      "2020-02": [
+        5,
+        1,
+        4,
+        2
+      ],
+      "2020-03": [
+        3,
+        1,
+        4,
+        1
+      ],
+      "2020-04": [
+        4,
+        1,
+        0,
+        2
+      ],
+      "2020-05": [
+        6,
+        1,
+        4,
+        1
+      ],
+      "2020-06": [
+        8,
+        1,
+        4,
+        3
+      ],
+      "2020-07": [
+        7,
+        0,
+        3,
+        1
+      ],
+      "2020-08": [
+        5,
+        2,
+        3,
+        2
+      ],
+      "2020-09": [
+        4,
+        0,
+        1,
+        1
+      ],
+      "2020-10": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "2020-11": [
+        1,
+        1,
+        4,
+        0
+      ],
+      "2020-12": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "2021-01": [
+        6,
+        1,
+        3,
+        1
+      ],
+      "2021-02": [
+        5,
+        1,
+        3,
+        1
+      ],
+      "2021-03": [
+        3,
+        0,
+        3,
+        0
+      ],
+      "2021-04": [
+        7,
+        1,
+        3,
+        2
+      ],
+      "2021-05": [
+        10,
+        0,
+        2,
+        3
+      ],
+      "2021-06": [
+        4,
+        0,
+        1,
+        0
+      ],
+      "2021-07": [
+        5,
+        0,
+        3,
+        0
+      ],
+      "2021-08": [
+        5,
+        1,
+        3,
+        1
+      ],
+      "2021-09": [
+        7,
+        0,
+        2,
+        3
+      ],
+      "2021-10": [
+        1,
+        0,
+        3,
+        1
+      ],
+      "2021-11": [
+        4,
+        0,
+        3,
+        3
+      ],
+      "2021-12": [
+        13,
+        1,
+        0,
+        0
+      ],
+      "2022-01": [
+        4,
+        0,
+        0,
+        1
+      ],
+      "2022-02": [
+        5,
+        0,
+        1,
+        1
+      ],
+      "2022-03": [
+        5,
+        0,
+        3,
+        1
+      ],
+      "2022-04": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "2022-05": [
+        7,
+        0,
+        3,
+        2
+      ],
+      "2022-06": [
+        3,
+        1,
+        1,
+        0
+      ],
+      "2022-07": [
+        4,
+        0,
+        0,
+        1
+      ],
+      "2022-08": [
+        5,
+        0,
+        3,
+        5
+      ],
+      "2022-09": [
+        7,
+        2,
+        1,
+        0
+      ],
+      "2022-10": [
+        3,
+        0,
+        3,
+        2
+      ],
+      "2022-11": [
+        6,
+        2,
+        1,
+        1
+      ],
+      "2022-12": [
+        3,
+        2,
+        1,
+        2
+      ],
+      "2023-01": [
+        6,
+        0,
+        5,
+        1
+      ],
+      "2023-02": [
+        7,
+        1,
+        0,
+        2
+      ],
+      "2023-03": [
+        5,
+        0,
+        2,
+        0
+      ],
+      "2023-04": [
+        2,
+        1,
+        4,
+        1
+      ],
+      "2023-05": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "2023-06": [
+        3,
+        0,
+        2,
+        4
+      ],
+      "2023-07": [
+        7,
+        2,
+        1,
+        1
+      ],
+      "2023-08": [
+        6,
+        1,
+        1,
+        1
+      ],
+      "2023-09": [
+        5,
+        0,
+        1,
+        1
+      ],
+      "2023-10": [
+        3,
+        1,
+        0,
+        3
+      ],
+      "2023-11": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "2023-12": [
+        2,
+        3,
+        1,
+        2
+      ],
+      "2024-01": [
+        5,
+        2,
+        4,
+        0
+      ],
+      "2024-02": [
+        11,
+        2,
+        0,
+        1
+      ],
+      "2024-03": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "2024-04": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "2024-05": [
+        5,
+        1,
+        3,
+        1
+      ],
+      "2024-06": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "2024-07": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "2024-08": [
+        4,
+        1,
+        3,
+        0
+      ],
+      "2024-09": [
+        6,
+        2,
+        0,
+        2
+      ],
+      "2024-10": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "2024-11": [
+        5,
+        2,
+        2,
+        0
+      ],
+      "2024-12": [
+        4,
+        0,
+        2,
+        1
+      ],
+      "2025-01": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "2025-02": [
+        5,
+        0,
+        3,
+        2
+      ],
+      "2025-03": [
+        4,
+        0,
+        3,
+        0
+      ],
+      "2025-04": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "2025-05": [
+        6,
+        0,
+        1,
+        3
+      ],
+      "2025-06": [
+        5,
+        0,
+        3,
+        3
+      ],
+      "2025-07": [
+        4,
+        0,
+        3,
+        3
+      ],
+      "2025-08": [
+        10,
+        2,
+        2,
+        2
+      ],
+      "2025-09": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "A decomposition formula for fractional Heston jump diffusion models",
+          "year": "2020-07",
+          "abstract": "We present an option pricing formula for European options in a stochastic\nvolatility model. In particular, the volatility process is defined using a\nfractional integral of a diffusion process and both the stock price and the\nvolatility processes have jumps in order to capture the market effect known as\nleverage effect. We show how to compute a martingale representation for the\nvolatility process. Finally, using It\\^o calculus for processes with\ndiscontinuous trajectories, we develop a first order approximation formula for\noption prices. There are two main advantages in the usage of such approximating\nformulas to traditional pricing methods. First, to improve computational\neffciency, and second, to have a deeper understanding of the option price\nchanges in terms of changes in the model parameters.",
+          "arxiv_id": "2007.14328v1"
+        },
+        {
+          "title": "Semi-analytic pricing of American options in time-dependent jump-diffusion models with exponential jumps",
+          "year": "2023-08",
+          "abstract": "In this paper we propose a semi-analytic approach to pricing American options\nfor time-dependent jump-diffusions models with exponential jumps The idea of\nthe method is to further generalize our approach developed for pricing barrier,\n[Itkin et al., 2021], and American, [Carr and Itkin, 2021; Itkin and Muravey,\n2023], options in various time-dependent one factor and even stochastic\nvolatility models. Our approach i) allows arbitrary dependencies of the model\nparameters on time; ii) reduces solution of the pricing problem for American\noptions to a simpler problem of solving a system of an algebraic nonlinear\nequation for the exercise boundary and a linear Fredholm-Volterra equation for\nthe the option price; iii) the options Greeks solve a similar Fredholm-Volterra\nlinear equation obtained by just differentiating Eq. (25) by the required\nparameter. Once done, the American option price is presented in close form.",
+          "arxiv_id": "2308.08760v2"
+        },
+        {
+          "title": "Analytic estimation of parameters of stochastic volatility diffusion models with exponential-affine characteristic function for currency option pricing",
+          "year": "2025-07",
+          "abstract": "This dissertation develops and justifies a novel method for deriving\napproximate formulas to estimate two parameters in stochastic volatility\ndiffusion models with exponentially-affine characteristic functions and single-\nor two-factor variance. These formulas aim to improve the accuracy of option\npricing and enhance the calibration process by providing reliable initial\nvalues for local minimization algorithms. The parameters relate to the\nvolatility of the stochastic factor in instantaneous variance dynamics and the\ncorrelation between stochastic factors and asset price dynamics.\n  The study comprises five chapters. Chapter one outlines the currency option\nmarket, pricing methods, and the general structure of stochastic volatility\nmodels. Chapter two derives the replication strategy dynamics and introduces a\nnew two-factor volatility model: the OUOU model. Chapter three analyzes the\ndistribution and surface dynamics of implied volatilities using principal\ncomponent and common factor analysis. Chapter four discusses calibration\nmethods for stochastic volatility models, particularly the Heston model, and\npresents the new Implied Central Moments method to estimate parameters in the\nHeston and Sch\\\"obel-Zhu models. Extensions to two-factor models, Bates and\nOUOU, are also explored. Chapter five evaluates the performance of the proposed\nformulas on the EURUSD options market, demonstrating the superior accuracy of\nthe new method.\n  The dissertation successfully meets its research objectives, expanding tools\nfor derivative pricing and risk assessment. Key contributions include faster\nand more precise parameter estimation formulas and the introduction of the OUOU\nmodel - an extension of the Sch\\\"obel-Zhu model with a semi-analytical\nvaluation formula for European options, previously unexamined in the\nliterature.",
+          "arxiv_id": "2507.11868v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Stochastic Volatility Model with Sticky Drawdown and Drawup Processes: A Deep Learning Approach",
+          "year": "2025-03",
+          "abstract": "We propose a new financial model, the stochastic volatility model with sticky\ndrawdown and drawup processes (SVSDU model), which enables us to capture the\nfeatures of winning and losing streaks that are common across financial markets\nbut can not be captured simultaneously by the existing financial models.\nMoreover, the SVSDU model retains the advantages of the stochastic volatility\nmodels. Since there are not closed-form option pricing formulas under the SVSDU\nmodel and the existing simulation methods for the sticky diffusion processes\nare really time-consuming, we develop a deep neural network to solve the\ncorresponding high-dimensional parametric partial differential equation (PDE),\nwhere the solution to the PDE is the pricing function of a European option\naccording to the Feynman-Kac Theorem, and validate the accuracy and efficiency\nof our deep learning approach. We also propose a novel calibration framework\nfor our model, and demonstrate the calibration performances of our models on\nboth simulated data and historical data. The calibration results on SPX option\ndata show that the SVSDU model is a good representation of the asset value\ndynamic, and both winning and losing streaks are accounted for in option\nvalues. Our model opens new horizons for modeling and predicting the dynamics\nof asset prices in financial markets.",
+          "arxiv_id": "2503.14829v1"
+        },
+        {
+          "title": "RVRAE: A Dynamic Factor Model Based on Variational Recurrent Autoencoder for Stock Returns Prediction",
+          "year": "2024-03",
+          "abstract": "In recent years, the dynamic factor model has emerged as a dominant tool in\neconomics and finance, particularly for investment strategies. This model\noffers improved handling of complex, nonlinear, and noisy market conditions\ncompared to traditional static factor models. The advancement of machine\nlearning, especially in dealing with nonlinear data, has further enhanced asset\npricing methodologies. This paper introduces a groundbreaking dynamic factor\nmodel named RVRAE. This model is a probabilistic approach that addresses the\ntemporal dependencies and noise in market data. RVRAE ingeniously combines the\nprinciples of dynamic factor modeling with the variational recurrent\nautoencoder (VRAE) from deep learning. A key feature of RVRAE is its use of a\nprior-posterior learning method. This method fine-tunes the model's learning\nprocess by seeking an optimal posterior factor model informed by future data.\nNotably, RVRAE is adept at risk modeling in volatile stock markets, estimating\nvariances from latent space distributions while also predicting returns. Our\nempirical tests with real stock market data underscore RVRAE's superior\nperformance compared to various established baseline methods.",
+          "arxiv_id": "2403.02500v1"
+        },
+        {
+          "title": "Asset Pricing and Deep Learning",
+          "year": "2022-09",
+          "abstract": "Traditional machine learning methods have been widely studied in financial\ninnovation. My study focuses on the application of deep learning methods on\nasset pricing. I investigate various deep learning methods for asset pricing,\nespecially for risk premia measurement. All models take the same set of\npredictive signals (firm characteristics, systematic risks and macroeconomics).\nI demonstrate high performance of all kinds of state-of-the-art (SOTA) deep\nlearning methods, and figure out that RNNs with memory mechanism and attention\nhave the best performance in terms of predictivity. Furthermore, I demonstrate\nlarge economic gains to investors using deep learning forecasts. The results of\nmy comparative experiments highlight the importance of domain knowledge and\nfinancial theory when designing deep learning models. I also show return\nprediction tasks bring new challenges to deep learning. The time varying\ndistribution causes distribution shift problem, which is essential for\nfinancial time series prediction. I demonstrate that deep learning methods can\nimprove asset risk premium measurement. Due to the booming deep learning\nstudies, they can constantly promote the study of underlying financial\nmechanisms behind asset pricing. I also propose a promising research method\nthat learning from data and figuring out the underlying economic mechanisms\nthrough explainable artificial intelligence (AI) methods. My findings not only\njustify the value of deep learning in blooming fintech development, but also\nhighlight their prospects and advantages over traditional machine learning\nmethods.",
+          "arxiv_id": "2209.12014v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Super-hedging-pricing formulas and Immediate-Profit arbitrage for market models under random horizon",
+          "year": "2024-01",
+          "abstract": "In this paper, we consider the discrete-time setting, and the market model\ndescribed by (S,F,T)$. Herein F is the ``public\" flow of information which is\navailable to all agents overtime, S is the discounted price process of\nd-tradable assets, and T is an arbitrary random time whose occurrence might not\nbe observable via F. Thus, we consider the larger flow G which incorporates F\nand makes T an observable random time. This framework covers the credit risk\ntheory setting, the life insurance setting and the setting of employee stock\noption valuation. For the stopped model (S^T,G) and for various vulnerable\nclaims, based on this model, we address the super-hedging pricing valuation\nproblem and its intrinsic Immediate-Profit arbitrage (IP hereafter for short).\nOur first main contribution lies in singling out the impact of change of prior\nand/or information on conditional essential supremum, which is a vital tool in\nsuper-hedging pricing. The second main contribution consists of describing as\nexplicit as possible how the set of super-hedging prices expands under the\nstochasticity of T and its risks, and we address the IP arbitrage for (S^T,G)\nas well. The third main contribution resides in elaborating as explicit as\npossible pricing formulas for vulnerable claims, and singling out the various\ninformational risks in the prices' dynamics.",
+          "arxiv_id": "2401.05713v1"
+        },
+        {
+          "title": "Equal Risk Pricing and Hedging of Financial Derivatives with Convex Risk Measures",
+          "year": "2020-02",
+          "abstract": "In this paper, we consider the problem of equal risk pricing and hedging in\nwhich the fair price of an option is the price that exposes both sides of the\ncontract to the same level of risk. Focusing for the first time on the context\nwhere risk is measured according to convex risk measures, we establish that the\nproblem reduces to solving independently the writer and the buyer's hedging\nproblem with zero initial capital. By further imposing that the risk measures\ndecompose in a way that satisfies a Markovian property, we provide dynamic\nprogramming equations that can be used to solve the hedging problems for both\nthe case of European and American options. All of our results are general\nenough to accommodate situations where the risk is measured according to a\nworst-case risk measure as is typically done in robust optimization. Our\nnumerical study illustrates the advantages of equal risk pricing over schemes\nthat only account for a single party, pricing based on quadratic hedging (i.e.\n$\\epsilon$-arbitrage pricing), or pricing based on a fixed equivalent\nmartingale measure (i.e. Black-Scholes pricing). In particular, the numerical\nresults confirm that when employing an equal risk price both the writer and the\nbuyer end up being exposed to risks that are more similar and on average\nsmaller than what they would experience with the other approaches.",
+          "arxiv_id": "2002.02876v2"
+        },
+        {
+          "title": "Forward indifference valuation and hedging of basis risk under partial information",
+          "year": "2021-01",
+          "abstract": "We study the hedging and valuation of European and American claims on a\nnon-traded asset $Y$, when a traded stock $S$ is available for hedging, with\n$S$ and $Y$ following correlated geometric Brownian motions. This is an\nincomplete market, often called a basis risk model. The market agent's risk\npreferences are modelled using a so-called forward performance process (forward\nutility), which is a time-decreasing utility of exponential type. Moreover, the\nmarket agent (investor) does not know with certainty the values of the asset\nprice drifts. This market setting with drift parameter uncertainty is the\npartial information scenario. We discuss the stochastic control problem\nobtained by setting up the hedging portfolio and derive the optimal hedging\nstrategy. Furthermore, a (dual) forward indifference price representation of\nthe claim and its PDE are obtained. With these results, the residual risk\nprocess representing the basis risk (hedging error), pay-off decompositions and\nasymptotic expansions of the indifference price in the European case are\nderived. We develop the analogous stochastic control and stopping problem with\nan American claim and obtain the corresponding forward indifference price\nvaluation formula.",
+          "arxiv_id": "2101.00251v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Economic Complexity Limits Accuracy of Price Probability Predictions by Gaussian Distributions",
+          "year": "2023-08",
+          "abstract": "We discuss the economic reasons why the predictions of price and return\nstatistical moments in the coming decades, in the best case, will be limited by\ntheir averages and volatilities. That limits the accuracy of the forecasts of\nprice and return probabilities by Gaussian distributions. The economic origin\nof these restrictions lies in the fact that the predictions of the market-based\nn-th statistical moments of price and return for n=1,2,.., require the\ndescription of the economic variables of the n-th order that are determined by\nsums of the n-th degrees of values or volumes of market trades. The lack of\nexisting models that describe the evolution of the economic variables\ndetermined by the sums of the 2nd degrees of market trades results in the fact\nthat even predictions of the volatilities of price and return are very\nuncertain. One can ignore existing economic barriers that we highlight but\ncannot overcome or resolve them. The accuracy of predictions of price and\nreturn probabilities substantially determines the reliability of asset pricing\nmodels and portfolio theories. The restrictions on the accuracy of predictions\nof price and return statistical moments reduce the reliability and veracity of\nmodern asset pricing and portfolio theories.",
+          "arxiv_id": "2309.02447v2"
+        },
+        {
+          "title": "Volatility Depends on Market Trades and Macro Theory",
+          "year": "2020-08",
+          "abstract": "We consider the randomness of market trade as the origin of price and return\nstochasticity. We look at time series of trade values and volumes as random\nvariables during the averaging interval {\\Delta} and describe the dependences\nof market-based volatilities of price and return on the volatilities and\ncorrelations of market trade values and volumes. We describe the market-based\norigin of the lower boundaries of the accuracy of macroeconomic variables and\nconsider, as an example, the accuracy of macroeconomic investments. We\nhighlight that current macroeconomic models describe relations between the 1st\norder variables determined by sums of trade values or volumes. To predict\nmarket-based volatilities of price, return, and volatilities of macroeconomic\nvariables, one should develop econometric methodologies, collect data, and\nelaborate macroeconomic theories of the 2nd order that model the mutual\ndependence of the 1st and 2nd order economic variables. The absence of\nmacroeconomic theories of the 2nd order means no economic basis for predictions\nof market-based volatilities of price and return, as well as volatilities of\nany macroeconomic variables. In turn, that limits the accuracy of forecasting\nprobabilities of price, return, and the accuracy of macroeconomic variables in\nthe best case by Gaussian distributions.",
+          "arxiv_id": "2008.07907v2"
+        },
+        {
+          "title": "Market-Based Asset Price Probability",
+          "year": "2022-05",
+          "abstract": "We consider volume weighted average price (VWAP) as the 1st market-based\nstatistical moment and derive the dependence of higher statistical moments of\nprice on statistical moments and correlations of the values and volumes of\nmarket trades. If all trade volumes are constant during the averaging interval,\nthen the market-based statistical moments equal the frequency-based. We\napproximate market-based probability of price by a finite number of statistical\nmoments. The use of VWAP results in zero price-volume correlations. We derive\nthe expressions of market-based correlations between prices and squares of\ntrade volumes and between squares of prices and volumes. To forecast\nmarket-based averages and volatility of asset prices, one should predict two\nstatistical moments and the correlation of their trade values and volumes. We\nexplain how that limits the number of predicted statistical moments of prices\nby the first two and limits the accuracy of the forecasts of the probability of\nasset prices by the accuracy of the Gaussian approximations. To improve the\naccuracy and reliability of large macroeconomic and market models like those\ndeveloped by BlackRock's Aladdin, JP Morgan, and the U.S. Fed., the developers\nshould use market-based statistical moments of asset prices.",
+          "arxiv_id": "2205.07256v4"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:54Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

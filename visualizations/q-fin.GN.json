@@ -1,0 +1,1166 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_blockchain_Bitcoin_DeFi_liquidity",
+        "keywords": [
+          [
+            "blockchain",
+            0.028819076639401493
+          ],
+          [
+            "Bitcoin",
+            0.027996211314592585
+          ],
+          [
+            "DeFi",
+            0.025257647370190928
+          ],
+          [
+            "liquidity",
+            0.024969277694869445
+          ],
+          [
+            "market",
+            0.02375446326521466
+          ],
+          [
+            "decentralized",
+            0.021425142033862785
+          ],
+          [
+            "digital",
+            0.017204484440564834
+          ],
+          [
+            "network",
+            0.015630821489205474
+          ],
+          [
+            "risk",
+            0.015197817889663507
+          ],
+          [
+            "users",
+            0.015175348029513435
+          ]
+        ],
+        "count": 122
+      },
+      "1": {
+        "name": "1_market_price_model_capital",
+        "keywords": [
+          [
+            "market",
+            0.02943111124605595
+          ],
+          [
+            "price",
+            0.0265018939256255
+          ],
+          [
+            "model",
+            0.024470970632477402
+          ],
+          [
+            "capital",
+            0.023177916687875163
+          ],
+          [
+            "economic",
+            0.02164105238955071
+          ],
+          [
+            "quantum",
+            0.021208762061217898
+          ],
+          [
+            "risk",
+            0.020604573336574762
+          ],
+          [
+            "statistical",
+            0.01851545921171995
+          ],
+          [
+            "time",
+            0.017974915185499162
+          ],
+          [
+            "models",
+            0.017933815104671326
+          ]
+        ],
+        "count": 96
+      },
+      "2": {
+        "name": "2_LLMs_AI_financial_language",
+        "keywords": [
+          [
+            "LLMs",
+            0.05602844194084193
+          ],
+          [
+            "AI",
+            0.042885686430968836
+          ],
+          [
+            "financial",
+            0.04072420033360541
+          ],
+          [
+            "language",
+            0.03241477862969041
+          ],
+          [
+            "LLM",
+            0.030492593607188024
+          ],
+          [
+            "data",
+            0.029850167864669312
+          ],
+          [
+            "models",
+            0.025241028144264356
+          ],
+          [
+            "Language",
+            0.024401309800646268
+          ],
+          [
+            "tasks",
+            0.023915465488845367
+          ],
+          [
+            "Large",
+            0.023429008042614878
+          ]
+        ],
+        "count": 67
+      },
+      "3": {
+        "name": "3_stock_market_stock market_investors",
+        "keywords": [
+          [
+            "stock",
+            0.059925678682242654
+          ],
+          [
+            "market",
+            0.044814215675515495
+          ],
+          [
+            "stock market",
+            0.036768551931550465
+          ],
+          [
+            "investors",
+            0.029996046016193198
+          ],
+          [
+            "investor",
+            0.027113070164906702
+          ],
+          [
+            "study",
+            0.025244475838726712
+          ],
+          [
+            "volatility",
+            0.0218960441079712
+          ],
+          [
+            "China",
+            0.02158940778792489
+          ],
+          [
+            "markets",
+            0.02139056801546962
+          ],
+          [
+            "returns",
+            0.0210096181729675
+          ]
+        ],
+        "count": 55
+      },
+      "4": {
+        "name": "4_carbon_energy_climate_economic",
+        "keywords": [
+          [
+            "carbon",
+            0.02817110316830763
+          ],
+          [
+            "energy",
+            0.023820419189780704
+          ],
+          [
+            "climate",
+            0.02228595068098697
+          ],
+          [
+            "economic",
+            0.018489123311134167
+          ],
+          [
+            "emissions",
+            0.017751357986585576
+          ],
+          [
+            "study",
+            0.017190111960418055
+          ],
+          [
+            "sustainability",
+            0.01640095415141242
+          ],
+          [
+            "supply",
+            0.01582329046061961
+          ],
+          [
+            "countries",
+            0.014620743471516463
+          ],
+          [
+            "business",
+            0.014485310297835539
+          ]
+        ],
+        "count": 53
+      },
+      "5": {
+        "name": "5_models_learning_data_portfolio",
+        "keywords": [
+          [
+            "models",
+            0.02755309036938197
+          ],
+          [
+            "learning",
+            0.02661702215819722
+          ],
+          [
+            "data",
+            0.026518925465446208
+          ],
+          [
+            "portfolio",
+            0.026364851380267215
+          ],
+          [
+            "performance",
+            0.023888009566690654
+          ],
+          [
+            "model",
+            0.023774334420837786
+          ],
+          [
+            "volatility",
+            0.022133771893183964
+          ],
+          [
+            "sample",
+            0.021544444704258644
+          ],
+          [
+            "market",
+            0.02082374040364653
+          ],
+          [
+            "risk",
+            0.019166949009152615
+          ]
+        ],
+        "count": 41
+      },
+      "6": {
+        "name": "6_study_banks_firms_financial",
+        "keywords": [
+          [
+            "study",
+            0.06271488978322486
+          ],
+          [
+            "banks",
+            0.061904360873002065
+          ],
+          [
+            "firms",
+            0.05260564575116027
+          ],
+          [
+            "financial",
+            0.04617618758107548
+          ],
+          [
+            "performance",
+            0.04597733871828456
+          ],
+          [
+            "Return",
+            0.03822390420507206
+          ],
+          [
+            "Exchange",
+            0.035767773031855805
+          ],
+          [
+            "profitability",
+            0.035521555739306425
+          ],
+          [
+            "growth",
+            0.03426043100763328
+          ],
+          [
+            "Bangladesh",
+            0.029358995616875615
+          ]
+        ],
+        "count": 31
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.3384861104704511,
+        -0.6724658145530944,
+        -0.5420582233971192,
+        -0.6579004759597304,
+        -0.49819732390222093,
+        -0.5892395376477606
+      ],
+      [
+        -0.3384861104704511,
+        1.0,
+        -0.6742606813265284,
+        -0.46321472052823776,
+        -0.6634043039569848,
+        -0.415543442108137,
+        -0.6260315763541908
+      ],
+      [
+        -0.6724658145530944,
+        -0.6742606813265284,
+        1.0,
+        -0.684991070057045,
+        -0.7253143744359171,
+        -0.5200664301022385,
+        -0.5727298518172526
+      ],
+      [
+        -0.5420582233971192,
+        -0.46321472052823776,
+        -0.684991070057045,
+        1.0,
+        -0.6084689132558891,
+        -0.6148981389566379,
+        -0.5765400787174659
+      ],
+      [
+        -0.6579004759597304,
+        -0.6634043039569848,
+        -0.7253143744359171,
+        -0.6084689132558891,
+        1.0,
+        -0.7097836041332597,
+        -0.5696321661730158
+      ],
+      [
+        -0.49819732390222093,
+        -0.415543442108137,
+        -0.5200664301022385,
+        -0.6148981389566379,
+        -0.7097836041332597,
+        1.0,
+        -0.6203677766794835
+      ],
+      [
+        -0.5892395376477606,
+        -0.6260315763541908,
+        -0.5727298518172526,
+        -0.5765400787174659,
+        -0.5696321661730158,
+        -0.6203677766794835,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        5,
+        1,
+        0,
+        1,
+        0,
+        1,
+        4
+      ],
+      "2020-02": [
+        2,
+        3,
+        0,
+        2,
+        1,
+        2,
+        3
+      ],
+      "2020-03": [
+        9,
+        1,
+        0,
+        4,
+        0,
+        3,
+        3
+      ],
+      "2020-04": [
+        6,
+        0,
+        0,
+        5,
+        0,
+        0,
+        2
+      ],
+      "2020-05": [
+        10,
+        3,
+        1,
+        5,
+        0,
+        3,
+        8
+      ],
+      "2020-06": [
+        6,
+        2,
+        0,
+        3,
+        1,
+        3,
+        5
+      ],
+      "2020-07": [
+        5,
+        1,
+        3,
+        5,
+        1,
+        2,
+        6
+      ],
+      "2020-08": [
+        2,
+        0,
+        1,
+        3,
+        1,
+        2,
+        3
+      ],
+      "2020-09": [
+        8,
+        3,
+        1,
+        3,
+        2,
+        2,
+        0
+      ],
+      "2020-10": [
+        2,
+        2,
+        1,
+        3,
+        0,
+        2,
+        5
+      ],
+      "2020-11": [
+        5,
+        1,
+        2,
+        3,
+        1,
+        0,
+        1
+      ],
+      "2020-12": [
+        7,
+        0,
+        0,
+        3,
+        0,
+        1,
+        2
+      ],
+      "2021-01": [
+        6,
+        1,
+        1,
+        2,
+        0,
+        0,
+        4
+      ],
+      "2021-02": [
+        2,
+        0,
+        0,
+        3,
+        0,
+        1,
+        3
+      ],
+      "2021-03": [
+        6,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "2021-04": [
+        5,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "2021-05": [
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        4
+      ],
+      "2021-06": [
+        7,
+        1,
+        0,
+        3,
+        1,
+        1,
+        4
+      ],
+      "2021-07": [
+        6,
+        0,
+        0,
+        2,
+        2,
+        3,
+        2
+      ],
+      "2021-08": [
+        5,
+        2,
+        1,
+        0,
+        0,
+        3,
+        3
+      ],
+      "2021-09": [
+        4,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "2021-10": [
+        2,
+        0,
+        0,
+        4,
+        0,
+        0,
+        2
+      ],
+      "2021-11": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "2021-12": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "2022-01": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        4
+      ],
+      "2022-02": [
+        6,
+        5,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "2022-03": [
+        3,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "2022-04": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "2022-05": [
+        3,
+        1,
+        0,
+        2,
+        0,
+        2,
+        1
+      ],
+      "2022-06": [
+        7,
+        0,
+        2,
+        3,
+        0,
+        1,
+        3
+      ],
+      "2022-07": [
+        5,
+        1,
+        2,
+        4,
+        1,
+        2,
+        9
+      ],
+      "2022-08": [
+        4,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "2022-09": [
+        4,
+        0,
+        0,
+        3,
+        0,
+        0,
+        2
+      ],
+      "2022-10": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "2022-11": [
+        8,
+        0,
+        2,
+        2,
+        1,
+        3,
+        1
+      ],
+      "2022-12": [
+        5,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "2023-01": [
+        4,
+        1,
+        2,
+        3,
+        0,
+        0,
+        2
+      ],
+      "2023-02": [
+        8,
+        1,
+        1,
+        3,
+        0,
+        1,
+        3
+      ],
+      "2023-03": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "2023-04": [
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      "2023-05": [
+        3,
+        1,
+        3,
+        6,
+        0,
+        1,
+        3
+      ],
+      "2023-06": [
+        3,
+        0,
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "2023-07": [
+        6,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "2023-08": [
+        8,
+        1,
+        0,
+        2,
+        0,
+        0,
+        4
+      ],
+      "2023-09": [
+        5,
+        1,
+        6,
+        4,
+        0,
+        2,
+        2
+      ],
+      "2023-10": [
+        2,
+        1,
+        2,
+        5,
+        0,
+        1,
+        2
+      ],
+      "2023-11": [
+        6,
+        0,
+        4,
+        4,
+        0,
+        1,
+        5
+      ],
+      "2023-12": [
+        4,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "2024-01": [
+        5,
+        2,
+        2,
+        1,
+        0,
+        1,
+        1
+      ],
+      "2024-02": [
+        5,
+        1,
+        2,
+        0,
+        0,
+        4,
+        2
+      ],
+      "2024-03": [
+        12,
+        3,
+        1,
+        0,
+        0,
+        3,
+        1
+      ],
+      "2024-04": [
+        6,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "2024-05": [
+        5,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0
+      ],
+      "2024-06": [
+        2,
+        1,
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2024-07": [
+        3,
+        1,
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      "2024-08": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "2024-09": [
+        0,
+        0,
+        3,
+        4,
+        0,
+        0,
+        4
+      ],
+      "2024-10": [
+        8,
+        1,
+        2,
+        3,
+        1,
+        0,
+        3
+      ],
+      "2024-11": [
+        6,
+        1,
+        2,
+        0,
+        0,
+        0,
+        3
+      ],
+      "2024-12": [
+        3,
+        1,
+        3,
+        0,
+        0,
+        0,
+        2
+      ],
+      "2025-01": [
+        3,
+        1,
+        3,
+        2,
+        0,
+        0,
+        1
+      ],
+      "2025-02": [
+        2,
+        0,
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "2025-03": [
+        5,
+        0,
+        5,
+        1,
+        1,
+        2,
+        2
+      ],
+      "2025-04": [
+        3,
+        1,
+        4,
+        2,
+        0,
+        1,
+        1
+      ],
+      "2025-05": [
+        8,
+        2,
+        4,
+        2,
+        0,
+        0,
+        1
+      ],
+      "2025-06": [
+        6,
+        0,
+        5,
+        1,
+        0,
+        1,
+        2
+      ],
+      "2025-07": [
+        4,
+        2,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "2025-08": [
+        7,
+        0,
+        4,
+        3,
+        0,
+        1,
+        0
+      ],
+      "2025-09": [
+        4,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "DeFi Lending During The Merge",
+          "year": "2023-01",
+          "abstract": "Lending protocols in decentralized finance enable the permissionless exchange\nof capital from lenders to borrowers without relying on a trusted third party\nfor clearing or market-making. Interest rates are set by the supply and demand\nof capital according to a pre-defined function. In the lead-up to The Merge:\nEthereum blockchain's transition from proof-of-work (PoW) to proof-of-stake\n(PoS), a fraction of the Ethereum ecosystem announced plans of continuing with\na PoW-chain. Owners of ETH - whether their ETH was borrowed or not - would hold\nthe native tokens on each chain. This development alarmed lending protocols.\nThey feared spiking ETH borrowing rates would lead to mass liquidations which\ncould undermine their viability. Thus, the decentralized autonomous\norganization running the protocols saw no alternative to intervention -\nrestricting users' ability to borrow.\n  We investigate the effects of the merge and the aforementioned intervention\non the two biggest lending protocols on Ethereum: AAVE and Compound. Our\nanalysis finds that borrowing rates were extremely volatile, jumping by two\norders of magnitude, and borrowing at times reached 100% of the available\nfunds. Despite this, no spike in mass liquidations or irretrievable loans\nmaterialized. Further, we are the first to quantify and analyze\nhard-fork-arbitrage, profiting from holding debt in the native blockchain token\nduring a hard fork. We find that arbitrageurs transferred tokens to centralized\nexchanges which at the time were worth more than 13 Mio US$, money that was\neffectively extracted from the platforms' lenders.",
+          "arxiv_id": "2303.08748v3"
+        },
+        {
+          "title": "Auto-Balancer: Harnessing idle network resources for enhanced market stability",
+          "year": "2025-02",
+          "abstract": "We propose a mechanism embedded into the foundational infrastructure of a\nblockchain network, designed to improve the utility of idle network resources,\nwhilst enhancing market microstructure efficiency during block production by\nleveraging both network-owned and external capital. By systematically seeking\nto use idle network resources for internally capture arbitrageable\ninefficiencies, the mechanism mitigates extractable value leakage, reduces\nexecution frictions, and improves price formation across venues. This framework\noptimises resource allocation by incentivising an ordered set of transactions\nto be identified and automatically executed at the end of each block,\nredirecting any realised arbitrage income - to marketplaces operating on the\nhost blockchain network (and other stakeholders), which may have otherwise been\nextracted as rent by external actors. Crucially, this process operates without\nintroducing additional inventory risk, ensuring that the network remains a\nneutral facilitator of price discovery. While the systematic framework\ngoverning the distribution of these internally captured returns is beyond the\nscope of this work, reinvesting them to support the ecosystem deployed on the\nhost blockchain network is envisioned to endogenously enhance liquidity,\nstrengthen transactional efficiency, and promote the organic adoption of the\nblockchain for end users. This mechanism is designed specifically for Supra's\nblockchain and seeks to maximally utilise its highly efficient automation\nframework to enhance the blockchain network's efficiency.",
+          "arxiv_id": "2502.20670v1"
+        },
+        {
+          "title": "CeFi vs. DeFi -- Comparing Centralized to Decentralized Finance",
+          "year": "2021-06",
+          "abstract": "To non-experts, the traditional Centralized Finance (CeFi) ecosystem may seem\nobscure, because users are typically not aware of the underlying rules or\nagreements of financial assets and products. Decentralized Finance (DeFi),\nhowever, is making its debut as an ecosystem claiming to offer transparency and\ncontrol, which are partially attributable to the underlying integrity-protected\nblockchain, as well as currently higher financial asset yields than CeFi. Yet,\nthe boundaries between CeFi and DeFi may not be always so clear cut.\n  In this work, we systematically analyze the differences between CeFi and\nDeFi, covering legal, economic, security, privacy and market manipulation. We\nprovide a structured methodology to differentiate between a CeFi and a DeFi\nservice. Our findings show that certain DeFi assets (such as USDC or USDT\nstablecoins) do not necessarily classify as DeFi assets, and may endanger the\neconomic security of intertwined DeFi protocols. We conclude this work with the\nexploration of possible synergies between CeFi and DeFi.",
+          "arxiv_id": "2106.08157v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "To VaR, or Not to VaR, That is the Question",
+          "year": "2021-01",
+          "abstract": "We consider economic obstacles that limit the reliability and accuracy of\nvalue-at-risk (VaR). Investors who manage large market transactions should take\ninto account the impact of the randomness of large trade volumes on predictions\nof price probability and VaR assessments. We introduce market-based\nprobabilities of price and return that depend on the randomness of market trade\nvalues and volumes. Contrary to them, the conventional frequency-based price\nprobability describes the case of constant trade volumes. We derive the\ndependence of market-based price volatility on the volatilities and correlation\nof trade values and volumes. In the coming years, that will limit the accuracy\nof price probability predictions to Gaussian approximations, and even the\nforecasts of market-based price volatility will be inaccurate and highly\nuncertain.",
+          "arxiv_id": "2101.08559v3"
+        },
+        {
+          "title": "Three Remarks On Asset Pricing",
+          "year": "2021-05",
+          "abstract": "We consider the consumption-based asset pricing model, derive a new modified\nbasic pricing equation, and present its successive approximations using the\nTaylor series expansions of the investor's utility during the averaging time\ninterval. For linear and quadratic Taylor approximations, we derive new\nexpressions for the mean price, mean payoff, volatility, skewness, and the\nasset's amount that define the maximum of the investor's utility. We discuss\nthe market-based origin of price probability. We use volume weighted average\nprice (VWAP) as a market-based average price and introduce market-based price\nvolatility. The use of VWAP results in zero correlations between the price p\nand trade volume U. We derive a correlation between price p and squares of\ntrade volume {U^2} and between squares of price {p^2} and volume {U^2}. To\npredict market-based price volatility, one should forecast the 2-d statistical\nmoments of the market trade values and volumes at the same horizon T.",
+          "arxiv_id": "2105.13903v4"
+        },
+        {
+          "title": "Market-Based Asset Price Probability",
+          "year": "2022-05",
+          "abstract": "We consider volume weighted average price (VWAP) as the 1st market-based\nstatistical moment and derive the dependence of higher statistical moments of\nprice on statistical moments and correlations of the values and volumes of\nmarket trades. If all trade volumes are constant during the averaging interval,\nthen the market-based statistical moments equal the frequency-based. We\napproximate market-based probability of price by a finite number of statistical\nmoments. The use of VWAP results in zero price-volume correlations. We derive\nthe expressions of market-based correlations between prices and squares of\ntrade volumes and between squares of prices and volumes. To forecast\nmarket-based averages and volatility of asset prices, one should predict two\nstatistical moments and the correlation of their trade values and volumes. We\nexplain how that limits the number of predicted statistical moments of prices\nby the first two and limits the accuracy of the forecasts of the probability of\nasset prices by the accuracy of the Gaussian approximations. To improve the\naccuracy and reliability of large macroeconomic and market models like those\ndeveloped by BlackRock's Aladdin, JP Morgan, and the U.S. Fed., the developers\nshould use market-based statistical moments of asset prices.",
+          "arxiv_id": "2205.07256v4"
+        }
+      ],
+      "2": [
+        {
+          "title": "A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges",
+          "year": "2024-06",
+          "abstract": "Recent advances in large language models (LLMs) have unlocked novel\nopportunities for machine learning applications in the financial domain. These\nmodels have demonstrated remarkable capabilities in understanding context,\nprocessing vast amounts of data, and generating human-preferred contents. In\nthis survey, we explore the application of LLMs on various financial tasks,\nfocusing on their potential to transform traditional practices and drive\ninnovation. We provide a discussion of the progress and advantages of LLMs in\nfinancial contexts, analyzing their advanced technologies as well as\nprospective capabilities in contextual understanding, transfer learning\nflexibility, complex emotion detection, etc. We then highlight this survey for\ncategorizing the existing literature into key application areas, including\nlinguistic tasks, sentiment analysis, financial time series, financial\nreasoning, agent-based modeling, and other applications. For each application\narea, we delve into specific methodologies, such as textual analysis,\nknowledge-based analysis, forecasting, data augmentation, planning, decision\nsupport, and simulations. Furthermore, a comprehensive collection of datasets,\nmodel assets, and useful codes associated with mainstream applications are\npresented as resources for the researchers and practitioners. Finally, we\noutline the challenges and opportunities for future research, particularly\nemphasizing a number of distinctive aspects in this field. We hope our work can\nhelp facilitate the adoption and further development of LLMs in the financial\nsector.",
+          "arxiv_id": "2406.11903v1"
+        },
+        {
+          "title": "A Survey of Large Language Models in Finance (FinLLMs)",
+          "year": "2024-02",
+          "abstract": "Large Language Models (LLMs) have shown remarkable capabilities across a wide\nvariety of Natural Language Processing (NLP) tasks and have attracted attention\nfrom multiple domains, including financial services. Despite the extensive\nresearch into general-domain LLMs, and their immense potential in finance,\nFinancial LLM (FinLLM) research remains limited. This survey provides a\ncomprehensive overview of FinLLMs, including their history, techniques,\nperformance, and opportunities and challenges. Firstly, we present a\nchronological overview of general-domain Pre-trained Language Models (PLMs)\nthrough to current FinLLMs, including the GPT-series, selected open-source\nLLMs, and financial LMs. Secondly, we compare five techniques used across\nfinancial PLMs and FinLLMs, including training methods, training data, and\nfine-tuning methods. Thirdly, we summarize the performance evaluations of six\nbenchmark tasks and datasets. In addition, we provide eight advanced financial\nNLP tasks and datasets for developing more sophisticated FinLLMs. Finally, we\ndiscuss the opportunities and the challenges facing FinLLMs, such as\nhallucination, privacy, and efficiency. To support AI research in finance, we\ncompile a collection of accessible datasets and evaluation benchmarks on\nGitHub.",
+          "arxiv_id": "2402.02315v1"
+        },
+        {
+          "title": "Large Language Models in Finance: A Survey",
+          "year": "2023-09",
+          "abstract": "Recent advances in large language models (LLMs) have opened new possibilities\nfor artificial intelligence applications in finance. In this paper, we provide\na practical survey focused on two key aspects of utilizing LLMs for financial\ntasks: existing solutions and guidance for adoption.\n  First, we review current approaches employing LLMs in finance, including\nleveraging pretrained models via zero-shot or few-shot learning, fine-tuning on\ndomain-specific data, and training custom LLMs from scratch. We summarize key\nmodels and evaluate their performance improvements on financial natural\nlanguage processing tasks.\n  Second, we propose a decision framework to guide financial professionals in\nselecting the appropriate LLM solution based on their use case constraints\naround data, compute, and performance needs. The framework provides a pathway\nfrom lightweight experimentation to heavy investment in customized LLMs.\n  Lastly, we discuss limitations and challenges around leveraging LLMs in\nfinancial applications. Overall, this survey aims to synthesize the\nstate-of-the-art and provide a roadmap for responsibly applying LLMs to advance\nfinancial AI.",
+          "arxiv_id": "2311.10723v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Short Term Stress of Covid-19 On World Major Stock Indices",
+          "year": "2020-08",
+          "abstract": "The main objective of this study is to check short term stress of COVID-19 on\nthe American, European, Asian, and Pacific stock market indices, furthermore,\nthe correlation between all the stock markets during the pandemic. Secondary\ndata of 41 stock exchange from 32 countries have been collected from\ninvesting.com website from 1st July 2019 to 14th May 2020 for the stock market\nand the COVID-19 data has been collected according to the first cases reported\nin the country, stocks market are classified either developed or emerging\neconomy, further divided according to the subcontinent i.e. America, Europe,\nand Pacific/Asia, the main focus in the data is the report of first COVID-19\ncases. The study reveals that there is volatility in the all the 41 stock\nmarket (American, Europe, Asia, and Pacific) after reporting of the first case\nand volatility increase with the increase of COVID-19 cases, moreover, there is\na significant negative relationship between the number of COVID-19 cases and 41\nmajor stock indices of American, Europe, Asia and Pacific, European\nsubcontinent market found more effected from the COVID-19 than another\nsubcontinent, there is Clustering effect of COVID-19 on all the stock market\nexcept American's stock market due to smart capital investing.",
+          "arxiv_id": "2008.06450v1"
+        },
+        {
+          "title": "The impact of COVID-19 on the stock market crash risk in China",
+          "year": "2020-09",
+          "abstract": "This study investigates the impact of the COVID-19 pandemic on the stock\nmarket crash risk in China. For this purpose, we first estimated the\nconditional skewness of the return distribution from a GARCH with skewness\n(GARCH-S) model as the proxy for the equity market crash risk of the Shanghai\nStock Exchange. We then constructed a fear index for COVID-19 using data from\nthe Baidu Index. Based on the findings, conditional skewness reacts negatively\nto daily growth in total confirmed cases, indicating that the pandemic\nincreases stock market crash risk. Moreover, the fear sentiment exacerbates\nsuch risk, especially with regard to the impact of COVID-19. In other words,\nwhen the fear sentiment is high, the stock market crash risk is more strongly\naffected by the pandemic. Our evidence is robust for the number of daily deaths\nand global cases.",
+          "arxiv_id": "2009.08030v2"
+        },
+        {
+          "title": "Inside the Mind of a Stock Market Crash",
+          "year": "2020-04",
+          "abstract": "We analyze how investor expectations about economic growth and stock returns\nchanged during the February-March 2020 stock market crash induced by the\nCOVID-19 pandemic, as well as during the subsequent partial stock market\nrecovery. We surveyed retail investors who are clients of Vanguard at three\npoints in time: (i) on February 11-12, around the all-time stock market high,\n(ii) on March 11-12, after the stock market had collapsed by over 20\\%, and\n(iii) on April 16-17, after the market had rallied 25\\% from its lowest point.\nFollowing the crash, the average investor turned more pessimistic about the\nshort-run performance of both the stock market and the real economy. Investors\nalso perceived higher probabilities of both further extreme stock market\ndeclines and large declines in short-run real economic activity. In contrast,\ninvestor expectations about long-run (10-year) economic and stock market\noutcomes remained largely unchanged, and, if anything, improved. Disagreement\namong investors about economic and stock market outcomes also increased\nsubstantially following the stock market crash, with the disagreement\npersisting through the partial market recovery. Those respondents who were the\nmost optimistic in February saw the largest decline in expectations, and sold\nthe most equity. Those respondents who were the most pessimistic in February\nlargely left their portfolios unchanged during and after the crash.",
+          "arxiv_id": "2004.01831v2"
+        }
+      ],
+      "4": [
+        {
+          "title": "Combined climate stress testing of supply-chain networks and the financial system with nation-wide firm-level emission estimates",
+          "year": "2025-02",
+          "abstract": "On the way towards carbon neutrality, climate stress testing provides\nestimates for the physical and transition risks that climate change poses to\nthe economy and the financial system. Missing firm-level CO2 emissions data\nseverely impedes the assessment of transition risks originating from carbon\npricing. Based on the individual emissions of all Hungarian firms (410,523), as\nestimated from their fossil fuel purchases, we conduct a stress test of both\nactual and hypothetical carbon pricing policies. Using a simple 1:1 economic\nABM and introducing the new carbon-to-profit ratio, we identify firms that\nbecome unprofitable and default, and estimate the respective loan write-offs.\nWe find that 45% of all companies are directly exposed to carbon pricing. At a\nprice of 45 EUR/t, direct economic losses of 1.3% of total sales and bank\nequity losses of 1.2% are expected. Secondary default cascades in supply chain\nnetworks could increase these losses by 300% to 4000%, depending on firms'\nability to substitute essential inputs. To reduce transition risks, firms\nshould reduce their dependence on essential inputs from supply chains with high\nCO2 exposure. We discuss the implications of different policy implementations\non these transition risks.",
+          "arxiv_id": "2503.10644v1"
+        },
+        {
+          "title": "Shadow economy and populism-risk and uncertainty factors for establishing low-carbon economy of Balkan countries-case study for Bulgaria",
+          "year": "2020-11",
+          "abstract": "The main purpose of the current publication is to formulate a scenario model\nfor analysis of the opportunities for low-carbon economy establishment in the\ncountries with transition economies.The model studies risk factors such as\nshadow economy level and populism based on the implementation and development\nof Balkan countries economic policy and at the same time shows future climate\nchanges tendencies and uncertainties of climate models.A transdisciplinary\napproach is implemented in the study. Climate change perception and\nunderstanding about low-carbon economy are examined through the public opinion\nand analysis of mass-media publications.The results of the research are\nimportant in order to clarify the multicultural divergences as a factor for\nrisk and uncertainty in the implementation process of the policy for climate\nchange.In this way geographical aspects of risk and uncertainty, which are not\nonly related to the economic development of the relevant countries, could be\nbrought out.",
+          "arxiv_id": "2011.06592v1"
+        },
+        {
+          "title": "The aftermath of the Covid pandemic in the forest sector: new opportunities for emerging wood products",
+          "year": "2024-09",
+          "abstract": "Context: Over the last decade, the forestry sector has undergone substantial\nchanges, evolving from a post-2008 financial crisis landscape to incorporating\npolicies favoring sustainable and green alternatives, especially after the 2015\nParis agreement. This evolution was drastically disrupted with the advent of\nthe COVID-19 pandemic in 2020, causing unprecedented interruptions in supply\nchains, product markets, and data collection. Grasping the aftermath of the\nCOVID-19, regional instances of the forest supply chain sector need synthetic\npictures of their present state and future opportunities for emerging wood\nproducts and better regional-scale carbon balance. But given the impact of\nCOVID-19 lock-down on data collection, the production of such synthetic\npictures has become more complex, yet essential. This was the case for the\nregional supply chain of the Grand-Est region in France that we studied.\n  Aims: For this study, our aim was to demonstrate that an integrated\nmethodology could provide such synthetic picture even though we sued\nheterogenous sources of data and different analytical objectives: i.e. (1)\nretrospectively evaluate the aftermath of COVID-19 pandemic on the supply chain\noutcomes within the forestry sector; and then (2) retrospectively explore\npossible options of structural change of regional supply chain that would be\nrequired to simultaneously recover from COVID-19 and transit to new objectives\nin line with the extraction of new bio-molecules from wood biomass, and with\nthe reduction of the regional scale carbon footprint (in line with the IPCC\nParis Agreement)\n  Methods: To achieve this, our methodological approach was decomposed into\nthree steps. We first used a Material Flow Analysis (MFA) recently conducted on\nthe forestry sector in the Grand Est region to establish a Sankey diagram (i.e.\na schematic representation of industrial sectors and biomass flows along the\nsupply chain) for the pre-Covid-19 period (2014-2018). Then we compared\npre-Covid-19 Sankey diagram to the only source of data we could access from the\npost-Covid-19 period (2020-2021) in order to estimate the impact of Covid-19.\nFinally, we used as input the reconciled supply chain model into a\nconsequential Wood Product Model (WPMs), called CAT (carbon accounting tool) in\norder to compare three prospective scenarios: (1) a scenario that projected\n2020-2021 Covid-19 conditions and assumed pre-Covid-19 business as usual\npractices, (2) a scenario illustrating the consequence or rerouting some of the\nbiomass to satisfy the expected increase in pulp and paper production to\nsatisfy the needs of the industry after Covid-19, and (3) a scenario that\nexplored new opportunities in term of extraction of novel bio-molecules by the\nemerging biochemical wood industry. For every scenario we also evaluated the\nregional carbon gains and losses that these changes implied.\n  Results: Our study conducted a detailed analysis of the impacts of the\nCOVID-19 pandemic on the forestry sector's supply chain in the Grand Est\nregion, using a dynamic and integrated Wood Product Model. We found significant\ndisruptions during the pandemic period, with notable declines in industrial\nwood chips and timber hardwood production by 41.8% and 40%, respectively.\nConversely, there were substantial increases in fuelwood, timber sawdust, and\ntimber softwood, rising by 14.15%, 44.23%, and 15.29% respectively. These\nfluctuations underscore the resilience and vulnerabilities within the regional\nwood supply chain. Our findings also emphasize the potential for strategic\nrerouting of biomass flows to meet changing industry demands, which could play\na crucial role in supporting the sector's recovery and adaptation to\npost-pandemic conditions.\n  Discussion and conclusion: In addition, our study recognizes the limitations\nof the current approach combining MFA and WPM and suggests potential areas of\nenhancement. Ultimately, our findings shed light on the need to develop more\nintegrated analytical methods to provide useful synthetic pictures of regional\nscale supply chains, when there is a need to adapt it to evolving situations\nand complex data landscapes.",
+          "arxiv_id": "2410.07195v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Deep Learning, Predictability, and Optimal Portfolio Returns",
+          "year": "2020-09",
+          "abstract": "We study dynamic portfolio choice of a long-horizon investor who uses deep\nlearning methods to predict equity returns when forming optimal portfolios. Our\nresults show statistically and economically significant benefits from using\ndeep learning to form optimal portfolios through certainty equivalent returns\nand Sharpe ratios. We demonstrate that a long-short-term-memory recurrent\nneural network, which excels in learning complex time-series dependencies,\ngenerates a superior performance among a variety of networks considered. Return\npredictability via deep learning generates substantially improved portfolio\nperformance across different subsamples, particularly during recessionary\nperiods. These gains are robust to including transaction costs, short-selling\nand borrowing constraints.",
+          "arxiv_id": "2009.03394v3"
+        },
+        {
+          "title": "Two-Stage Sector Rotation Methodology Using Machine Learning and Deep Learning Techniques",
+          "year": "2021-08",
+          "abstract": "Market indicators such as CPI and GDP have been widely used over decades to\nidentify the stage of business cycles and also investment attractiveness of\nsectors given market conditions. In this paper, we propose a two-stage\nmethodology that consists of predicting ETF prices for each sector using market\nindicators and ranking sectors based on their predicted rate of returns. We\ninitially start with choosing sector specific macroeconomic indicators and\nimplement Recursive Feature Elimination algorithm to select the most important\nfeatures for each sector. Using our prediction tool, we implement different\nRecurrent Neural Networks models to predict the future ETF prices for each\nsector. We then rank the sectors based on their predicted rate of returns. We\nselect the best performing model by evaluating the annualized return,\nannualized Sharpe ratio, and Calmar ratio of the portfolios that includes the\ntop four ranked sectors chosen by the model. We also test the robustness of the\nmodel performance with respect to lookback windows and look ahead windows. Our\nempirical results show that our methodology beats the equally weighted\nportfolio performance even in the long run. We also find that Echo State\nNetworks exhibits an outstanding performance compared to other models yet it is\nfaster to implement compared to other RNN models.",
+          "arxiv_id": "2108.02838v1"
+        },
+        {
+          "title": "State-dependent Asset Allocation Using Neural Networks",
+          "year": "2022-11",
+          "abstract": "Changes in market conditions present challenges for investors as they cause\nperformance to deviate from the ranges predicted by long-term averages of means\nand covariances. The aim of conditional asset allocation strategies is to\novercome this issue by adjusting portfolio allocations to hedge changes in the\ninvestment opportunity set. This paper proposes a new approach to conditional\nasset allocation that is based on machine learning; it analyzes historical\nmarket states and asset returns and identifies the optimal portfolio choice in\na new period when new observations become available. In this approach, we\ndirectly relate state variables to portfolio weights, rather than firstly\nmodeling the return distribution and subsequently estimating the portfolio\nchoice. The method captures nonlinearity among the state (predicting) variables\nand portfolio weights without assuming any particular distribution of returns\nand other data, without fitting a model with a fixed number of predicting\nvariables to data and without estimating any parameters. The empirical results\nfor a portfolio of stock and bond indices show the proposed approach generates\na more efficient outcome compared to traditional methods and is robust in using\ndifferent objective functions across different sample periods.",
+          "arxiv_id": "2211.00871v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Effect of Long-Term Debt on the Financial Growth of Non-Financial Firms Listed at the Nairobi Securities Exchange",
+          "year": "2020-10",
+          "abstract": "A significant number of the non-financial firms listed at Nairobi Securities\nExchange (NSE) have been experiencing declining financial performance which\ndeter investors from investing in such firms. The lenders are also not willing\nto lend to such firms. As such, the firms struggle to raise funds for their\noperations. Prudent financing decisions can lead to financial growth of the\nfirm. The purpose of this study is to assess the effect of Long-term debt on\nthe financial growth of Non-financial firms listed at Nairobi Securities\nExchange. Financial firms were excluded because of their specific sector\ncharacteristics and stringent regulatory framework. The study is guided by\nTrade-Off Theory and Theory of Growth of the Firm. Explanatory research design\nwas adopted. The population of the study comprised of 45 non-financial firms\nlisted at the NSE for a period of ten years from 2008 to 2017. The study\nconducted both descriptive statistics analysis and panel data analysis. The\nresult indicates that Long term debt explains 21.6% and 5.16% of variation in\nfinancial growth as measured by growth in earnings per share and growth in\nmarket capitalization respectively. Long term debt positively and significantly\ninfluences financial growth measured using both growth in earnings per share\nand growth in market capitalization. The study recommends that, the management\nof non-financial firms listed at Nairobi Securities Exchange to employ\nfinancing means that can improve the earnings per share, market capitalization\nand enhance the value of the firm for the benefit of its stakeholders.",
+          "arxiv_id": "2010.12596v3"
+        },
+        {
+          "title": "Effect of Short-Term Debt on Financial Growth of Non-Financial Firms Listed at Nairobi Securities Exchange",
+          "year": "2020-11",
+          "abstract": "A significant number of the non-financial firms listed at Nairobi Securities\nExchange (NSE) have been experiencing declining financial performance which\ndeter investors from investing in such firms. The lenders are also not willing\nto lend to such firms. As such, the firms struggle to raise funds for their\noperations. Prudent financing decisions can lead to financial growth of the\nfirm. The purpose of this study is to assess the effect of short-term debt on\nfinancial growth of non-financial firms listed at Nairobi Securities Exchange\nfor a period of ten years from 2008 to 2017. Financial firms were excluded\nbecause of their specific sector characteristics and stringent regulatory\nframework. The study is guided by Agency Theory and Theory of Growth of the\nFirm. Explanatory research design was adopted. The target population of the\nstudy comprised of 45 non-financial firms listed at the NSE for a period of ten\nyears from 2008 to 2017. The study conducted both descriptive statistics\nanalysis and panel data analysis. The result indicates that, short term debt\nexplains 45.99% and 25.6% of variations in financial growth as measured by\ngrowth in earnings per share and growth in market capitalization respectively.\nShort term debt positively and significantly influences financial growth\nmeasured using both growth in earnings per share and growth in market\ncapitalization. The study recommends that, the management of non-financial\nfirms listed at Nairobi Securities Exchange to employ financing means that can\nimprove the earnings per share, market capitalization and enhance the value of\nthe firm for the benefit of its stakeholders.",
+          "arxiv_id": "2011.03339v1"
+        },
+        {
+          "title": "Effect of Share Capital on Financial Growth of Non-Financial Firms Listed at the Nairobi Securities Exchange",
+          "year": "2021-08",
+          "abstract": "Purpose: A significant number of the non-financial firms listed at the\nNairobi Securities Exchange (NSE) have been experiencing declining financial\nperformance which deters investors from investing in such firms. The lenders\nare also not willing to lend to such firms. As such, the firms struggle to\nraise funds for their operations. Prudent financing decisions can lead to\nfinancial growth of the firm. The purpose of this study is to assess the effect\nof Share capital on financial growth of Non-financial firms listed at the\nNairobi Securities Exchange. Financial firms were excluded because of their\nspecific sector characteristics and stringent regulatory framework. The study\nis guided by Market Timing Theory and Theory of Growth of the Firm.\nMethodology: Explanatory research design was adopted. The target population of\nthe study comprised of 45 non-financial firms listed at NSE for a period of ten\nyears from 2008 to 2017. The study conducted both descriptive statistics\nanalysis and panel data analysis. Findings: The result indicates that, share\ncapital explains 32.73% and 11.62% of variations in financial growth as measure\nby growth in earnings per share and growth in market capitalization\nrespectively. Share capital positively and significantly influences financial\ngrowth as measured by both growth in earnings per share and growth in market\ncapitalization. Implications: The study recommends for the Non-financial firms\nto utilize equity financing as a way of raising capital for major expansions,\nasset growth or acquisitions which may require heavy funding. In this way,\nfirms will be assured of improved performance as well as high financial growth.\nThe study also recommends for substantial firm financing through equity. Value:\nEquity financing is important to any firm, if the proceeds are used to invest\nin projects which eventually bring growth to the firm.",
+          "arxiv_id": "2108.10244v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:46Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_problem_optimization_problems_control",
+        "keywords": [
+          [
+            "problem",
+            0.04075024573894991
+          ],
+          [
+            "optimization",
+            0.0354427781280218
+          ],
+          [
+            "problems",
+            0.030422919200865855
+          ],
+          [
+            "control",
+            0.03013144394767297
+          ],
+          [
+            "algorithm",
+            0.029128592282230827
+          ],
+          [
+            "optimal",
+            0.028755340853080562
+          ],
+          [
+            "method",
+            0.028485347690061644
+          ],
+          [
+            "time",
+            0.026811530191920733
+          ],
+          [
+            "paper",
+            0.025184197206714394
+          ],
+          [
+            "model",
+            0.023783459209756223
+          ]
+        ],
+        "count": 31725
+      },
+      "1": {
+        "name": "1_model_control_optimal_number",
+        "keywords": [
+          [
+            "model",
+            0.10110040982391442
+          ],
+          [
+            "control",
+            0.08446363226996768
+          ],
+          [
+            "optimal",
+            0.06198446473917944
+          ],
+          [
+            "number",
+            0.04134852982700061
+          ],
+          [
+            "individuals",
+            0.03987357866512225
+          ],
+          [
+            "models",
+            0.03955726497673683
+          ],
+          [
+            "optimal control",
+            0.03874681591158117
+          ],
+          [
+            "time",
+            0.03564230573475344
+          ],
+          [
+            "strategies",
+            0.03533156059591701
+          ],
+          [
+            "data",
+            0.031663751322273136
+          ]
+        ],
+        "count": 360
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        0.2737118834778547
+      ],
+      [
+        0.2737118834778547,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        214,
+        143
+      ],
+      "2020-02": [
+        289,
+        184
+      ],
+      "2020-03": [
+        261,
+        211
+      ],
+      "2020-04": [
+        244,
+        204
+      ],
+      "2020-05": [
+        247,
+        166
+      ],
+      "2020-06": [
+        335,
+        232
+      ],
+      "2020-07": [
+        265,
+        196
+      ],
+      "2020-08": [
+        204,
+        147
+      ],
+      "2020-09": [
+        229,
+        200
+      ],
+      "2020-10": [
+        268,
+        209
+      ],
+      "2020-11": [
+        252,
+        192
+      ],
+      "2020-12": [
+        259,
+        183
+      ],
+      "2021-01": [
+        239,
+        162
+      ],
+      "2021-02": [
+        235,
+        204
+      ],
+      "2021-03": [
+        283,
+        244
+      ],
+      "2021-04": [
+        229,
+        191
+      ],
+      "2021-05": [
+        240,
+        178
+      ],
+      "2021-06": [
+        323,
+        208
+      ],
+      "2021-07": [
+        264,
+        169
+      ],
+      "2021-08": [
+        189,
+        143
+      ],
+      "2021-09": [
+        254,
+        178
+      ],
+      "2021-10": [
+        300,
+        188
+      ],
+      "2021-11": [
+        242,
+        183
+      ],
+      "2021-12": [
+        232,
+        170
+      ],
+      "2022-01": [
+        235,
+        158
+      ],
+      "2022-02": [
+        244,
+        171
+      ],
+      "2022-03": [
+        275,
+        226
+      ],
+      "2022-04": [
+        253,
+        179
+      ],
+      "2022-05": [
+        270,
+        167
+      ],
+      "2022-06": [
+        271,
+        206
+      ],
+      "2022-07": [
+        259,
+        182
+      ],
+      "2022-08": [
+        237,
+        140
+      ],
+      "2022-09": [
+        263,
+        180
+      ],
+      "2022-10": [
+        290,
+        206
+      ],
+      "2022-11": [
+        295,
+        194
+      ],
+      "2022-12": [
+        215,
+        178
+      ],
+      "2023-01": [
+        234,
+        146
+      ],
+      "2023-02": [
+        285,
+        202
+      ],
+      "2023-03": [
+        333,
+        226
+      ],
+      "2023-04": [
+        261,
+        199
+      ],
+      "2023-05": [
+        300,
+        195
+      ],
+      "2023-06": [
+        262,
+        177
+      ],
+      "2023-07": [
+        275,
+        175
+      ],
+      "2023-08": [
+        225,
+        170
+      ],
+      "2023-09": [
+        240,
+        207
+      ],
+      "2023-10": [
+        315,
+        212
+      ],
+      "2023-11": [
+        314,
+        221
+      ],
+      "2023-12": [
+        272,
+        203
+      ],
+      "2024-01": [
+        272,
+        219
+      ],
+      "2024-02": [
+        314,
+        223
+      ],
+      "2024-03": [
+        379,
+        291
+      ],
+      "2024-04": [
+        223,
+        197
+      ],
+      "2024-05": [
+        330,
+        206
+      ],
+      "2024-06": [
+        294,
+        184
+      ],
+      "2024-07": [
+        275,
+        193
+      ],
+      "2024-08": [
+        225,
+        184
+      ],
+      "2024-09": [
+        298,
+        213
+      ],
+      "2024-10": [
+        349,
+        242
+      ],
+      "2024-11": [
+        269,
+        189
+      ],
+      "2024-12": [
+        336,
+        210
+      ],
+      "2025-01": [
+        317,
+        198
+      ],
+      "2025-02": [
+        289,
+        226
+      ],
+      "2025-03": [
+        338,
+        267
+      ],
+      "2025-04": [
+        308,
+        243
+      ],
+      "2025-05": [
+        365,
+        258
+      ],
+      "2025-06": [
+        291,
+        199
+      ],
+      "2025-07": [
+        290,
+        208
+      ],
+      "2025-08": [
+        262,
+        191
+      ],
+      "2025-09": [
+        171,
+        131
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Modified projected Gauss-Newton method for constrained nonlinear least-squares: application to power flow analysis",
+          "year": "2025-04",
+          "abstract": "In this paper, we consider a modified projected Gauss-Newton method for\nsolving constrained nonlinear least-squares problems. We assume that the\nfunctional constraints are smooth and the the other constraints are represented\nby a simple closed convex set. We formulate the nonlinear least-squares problem\nas an optimization problem using the Euclidean norm as a merit function. In our\nmethod, at each iteration we linearize the functional constraints inside the\nmerit function at the current point and add a quadratic regularization,\nyielding a strongly convex subproblem that is easy to solve, whose solution is\nthe next iterate. We present global convergence guarantees for the proposed\nmethod under mild assumptions. In particular, we prove stationary point\nconvergence guarantees and under Kurdyka-Lojasiewicz (KL) property for the\nobjective function we derive convergence rates depending on the KL parameter.\nFinally, we show the efficiency of this method on the power flow analysis\nproblem using several IEEE bus test cases.",
+          "arxiv_id": "2504.00783v1"
+        },
+        {
+          "title": "Riemannian Stochastic Fixed Point Optimization Algorithm",
+          "year": "2020-12",
+          "abstract": "This paper considers a stochastic optimization problem over the fixed point\nsets of quasinonexpansive mappings on Riemannian manifolds. The problem enables\nus to consider Riemannian hierarchical optimization problems over complicated\nsets, such as the intersection of many closed convex sets, the set of all\nminimizers of a nonsmooth convex function, and the intersection of sublevel\nsets of nonsmooth convex functions. We focus on adaptive learning rate\noptimization algorithms, which adapt step-sizes (referred to as learning rates\nin the machine learning field) to find optimal solutions quickly. We then\npropose a Riemannian stochastic fixed point optimization algorithm, which\ncombines fixed point approximation methods on Riemannian manifolds with the\nadaptive learning rate optimization algorithms. We also give convergence\nanalyses of the proposed algorithm for nonsmooth convex and smooth nonconvex\noptimization. The analysis results indicate that, with small constant\nstep-sizes, the proposed algorithm approximates a solution to the problem.\nConsideration of the case in which step-size sequences are diminishing\ndemonstrates that the proposed algorithm solves the problem with a guaranteed\nconvergence rate. This paper also provides numerical comparisons that\ndemonstrate the effectiveness of the proposed algorithms with formulas based on\nthe adaptive learning rate optimization algorithms, such as Adam and AMSGrad.",
+          "arxiv_id": "2012.09346v1"
+        },
+        {
+          "title": "Online Proximal-ADMM For Time-varying Constrained Convex Optimization",
+          "year": "2020-05",
+          "abstract": "This paper considers a convex optimization problem with cost and constraints\nthat evolve over time. The function to be minimized is strongly convex and\npossibly non-differentiable, and variables are coupled through linear\nconstraints. In this setting, the paper proposes an online algorithm based on\nthe alternating direction method of multipliers (ADMM), to track the optimal\nsolution trajectory of the time-varying problem; in particular, the proposed\nalgorithm consists of a primal proximal gradient descent step and an\nappropriately perturbed dual ascent step. The paper derives tracking results,\nasymptotic bounds, and linear convergence results. The proposed algorithm is\nthen specialized to a multi-area power grid optimization problem, and our\nnumerical results verify the desired properties.",
+          "arxiv_id": "2005.03267v4"
+        }
+      ],
+      "1": [
+        {
+          "title": "Dynamical behavior and optimal control of a stochastic SAIRS epidemic model with two saturated incidences",
+          "year": "2024-05",
+          "abstract": "Stochastic models are widely used to investigate the spread of epidemics in a\ncomplex environment. This paper extends a deterministic SAIRS epidemic model to\na stochastic case with limited patient capacity and exposure. We first study\nthe dynamical properties of the model under certain conditions, including\npersistence, extinction, and ergodic. Then, we introduce vaccination and\nisolation into the model as control variables. The optimal control strategies\nare obtained based on the Pontryagin minimum principle. Finally, numerical\nsimulations are given to illustrate our theoretical results.",
+          "arxiv_id": "2405.09982v2"
+        },
+        {
+          "title": "Optimal control and comprehensive cost-effectiveness analysis for COVID-19",
+          "year": "2021-07",
+          "abstract": "Cost-effectiveness analysis is a mode of determining both the cost and\neconomic health outcomes of one or more control interventions. In this work, we\nhave formulated a non-autonomous nonlinear deterministic model to study the\ncontrol of COVID-19 to unravel the cost and economic health outcomes for the\nautonomous nonlinear model proposed for the Kingdom of Saudi Arabia. The\noptimal control model captures four time-dependent control functions, thus,\n$u_1$-practising physical or social distancing protocols; $u_2$-practising\npersonal hygiene by cleaning contaminated surfaces with alcohol-based\ndetergents; $u_3$-practising proper and safety measures by exposed,\nasymptomatic and symptomatic infected individuals; $u_4$-fumigating schools in\nall levels of education, sports facilities, commercial areas and religious\nworship centres. We proved the existence of the proposed optimal control model.\nThe optimality system associated with the non-autonomous epidemic model is\nderived using Pontryagin's maximum principle. We have performed numerical\nsimulations to investigate extensive cost-effectiveness analysis for fourteen\noptimal control strategies. Comparing the control strategies, we noticed that;\nStrategy 1 (practising physical or social distancing protocols) is the most\ncost-saving and most effective control intervention in Saudi Arabia in the\nabsence of vaccination. But, in terms of the infection averted, we saw that\nstrategy 6, strategy 11, strategy 12, and strategy 14 are just as good in\ncontrolling COVID-19.",
+          "arxiv_id": "2107.09595v1"
+        },
+        {
+          "title": "Model-free based control of a HIV/AIDS prevention model",
+          "year": "2021-11",
+          "abstract": "Controlling an epidemiological model is often performed using optimal control\ntheory techniques for which the solution depends on the equations of the\ncontrol system, objective functional and possible state and/or control\nconstraints. In this paper, we propose a model-free control approach based on\nan algorithm that operates in 'real-time' and drives the state solution\naccording to a direct feedback on the state solution that is aimed to be\nminimized, and without knowing explicitly the equations of the control system.\nWe consider a concrete epidemic problem of minimizing the number of HIV\ninfected individuals, through the preventive measure pre-exposure prophylaxis\n(PrEP) given to susceptible individuals. The solutions must satisfy control and\nmixed state-control constraints that represent the limitations on PrEP\nimplementation. Our model-free based control algorithm allows to close the loop\nbetween the number of infected individuals with HIV and the supply of PrEP\nmedication 'in real time', in such manner that the number of infected\nindividuals is asymptotically reduced and the number of individuals under PrEP\nmedication is below a fixed constant value. We prove the efficiency of our\napproach and compare the model-free control solutions with the ones obtained\nusing a classical optimal control approach via Pontryagin maximum principle.\nThe performed numerical simulations allow us to conclude that the model-free\nbased control strategy highlights new and interesting performances compared\nwith the classical optimal control approach.",
+          "arxiv_id": "2111.03093v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:35:39Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

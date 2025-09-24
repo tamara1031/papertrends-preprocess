@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_model_time_method",
+        "keywords": [
+          [
+            "data",
+            0.042689718624249896
+          ],
+          [
+            "model",
+            0.03017692540207285
+          ],
+          [
+            "time",
+            0.025514939479348592
+          ],
+          [
+            "method",
+            0.022918646327584866
+          ],
+          [
+            "learning",
+            0.021228847328651178
+          ],
+          [
+            "models",
+            0.02060779571464943
+          ],
+          [
+            "analysis",
+            0.020421359603937015
+          ],
+          [
+            "approach",
+            0.018955607745794502
+          ],
+          [
+            "networks",
+            0.018207817608751207
+          ],
+          [
+            "network",
+            0.018004017995032078
+          ]
+        ],
+        "count": 3746
+      },
+      "1": {
+        "name": "1_data_gravitational_model_noise",
+        "keywords": [
+          [
+            "data",
+            0.04032928052586179
+          ],
+          [
+            "gravitational",
+            0.02148367907523378
+          ],
+          [
+            "model",
+            0.017647430959871365
+          ],
+          [
+            "noise",
+            0.017198612151824007
+          ],
+          [
+            "method",
+            0.016403313578972345
+          ],
+          [
+            "wave",
+            0.015305424257201739
+          ],
+          [
+            "gravitational wave",
+            0.015014129221825306
+          ],
+          [
+            "parameters",
+            0.014484677155170636
+          ],
+          [
+            "time",
+            0.014314971880040222
+          ],
+          [
+            "analysis",
+            0.012967524908514319
+          ]
+        ],
+        "count": 343
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        0.262692643820177
+      ],
+      [
+        0.262692643820177,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        46,
+        15
+      ],
+      "2020-02": [
+        41,
+        9
+      ],
+      "2020-03": [
+        51,
+        15
+      ],
+      "2020-04": [
+        51,
+        9
+      ],
+      "2020-05": [
+        34,
+        14
+      ],
+      "2020-06": [
+        38,
+        14
+      ],
+      "2020-07": [
+        37,
+        10
+      ],
+      "2020-08": [
+        43,
+        15
+      ],
+      "2020-09": [
+        34,
+        13
+      ],
+      "2020-10": [
+        55,
+        14
+      ],
+      "2020-11": [
+        57,
+        17
+      ],
+      "2020-12": [
+        59,
+        14
+      ],
+      "2021-01": [
+        45,
+        13
+      ],
+      "2021-02": [
+        41,
+        11
+      ],
+      "2021-03": [
+        46,
+        17
+      ],
+      "2021-04": [
+        46,
+        5
+      ],
+      "2021-05": [
+        48,
+        17
+      ],
+      "2021-06": [
+        45,
+        18
+      ],
+      "2021-07": [
+        55,
+        15
+      ],
+      "2021-08": [
+        44,
+        12
+      ],
+      "2021-09": [
+        46,
+        14
+      ],
+      "2021-10": [
+        47,
+        9
+      ],
+      "2021-11": [
+        37,
+        18
+      ],
+      "2021-12": [
+        37,
+        12
+      ],
+      "2022-01": [
+        44,
+        12
+      ],
+      "2022-02": [
+        53,
+        8
+      ],
+      "2022-03": [
+        67,
+        12
+      ],
+      "2022-04": [
+        47,
+        18
+      ],
+      "2022-05": [
+        32,
+        16
+      ],
+      "2022-06": [
+        45,
+        14
+      ],
+      "2022-07": [
+        57,
+        17
+      ],
+      "2022-08": [
+        42,
+        10
+      ],
+      "2022-09": [
+        40,
+        9
+      ],
+      "2022-10": [
+        47,
+        16
+      ],
+      "2022-11": [
+        45,
+        8
+      ],
+      "2022-12": [
+        31,
+        13
+      ],
+      "2023-01": [
+        47,
+        18
+      ],
+      "2023-02": [
+        35,
+        8
+      ],
+      "2023-03": [
+        56,
+        8
+      ],
+      "2023-04": [
+        46,
+        9
+      ],
+      "2023-05": [
+        47,
+        15
+      ],
+      "2023-06": [
+        43,
+        17
+      ],
+      "2023-07": [
+        53,
+        14
+      ],
+      "2023-08": [
+        46,
+        10
+      ],
+      "2023-09": [
+        50,
+        15
+      ],
+      "2023-10": [
+        62,
+        16
+      ],
+      "2023-11": [
+        45,
+        8
+      ],
+      "2023-12": [
+        48,
+        9
+      ],
+      "2024-01": [
+        36,
+        17
+      ],
+      "2024-02": [
+        50,
+        10
+      ],
+      "2024-03": [
+        36,
+        13
+      ],
+      "2024-04": [
+        47,
+        13
+      ],
+      "2024-05": [
+        43,
+        18
+      ],
+      "2024-06": [
+        56,
+        14
+      ],
+      "2024-07": [
+        56,
+        14
+      ],
+      "2024-08": [
+        42,
+        6
+      ],
+      "2024-09": [
+        49,
+        9
+      ],
+      "2024-10": [
+        59,
+        14
+      ],
+      "2024-11": [
+        38,
+        15
+      ],
+      "2024-12": [
+        53,
+        9
+      ],
+      "2025-01": [
+        49,
+        17
+      ],
+      "2025-02": [
+        42,
+        14
+      ],
+      "2025-03": [
+        44,
+        14
+      ],
+      "2025-04": [
+        47,
+        8
+      ],
+      "2025-05": [
+        63,
+        16
+      ],
+      "2025-06": [
+        46,
+        16
+      ],
+      "2025-07": [
+        56,
+        20
+      ],
+      "2025-08": [
+        45,
+        9
+      ],
+      "2025-09": [
+        26,
+        9
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Near real-time streaming analysis of big fusion data",
+          "year": "2021-08",
+          "abstract": "While experiments on fusion plasmas produce high-dimensional data time series\nwith ever increasing magnitude and velocity, data analysis has been lagging\nbehind this development. For example, many data analysis tasks are often\nperformed in a manual, ad-hoc manner some time after an experiment. In this\narticle we introduce the DELTA framework that facilitates near real-time\nstreaming analysis of big and fast fusion data. By streaming measurement data\nfrom fusion experiments to a high-performance compute center, DELTA allows to\nperform demanding data analysis tasks in between plasma pulses. This article\ndescribe the modular and expandable software architecture of DELTA and presents\nperformance benchmarks of its individual components as well as of entire\nworkflows. Our focus is on the streaming analysis of ECEi data measured at\nKSTAR on NERSCs supercomputers and we routinely achieve data transfer rates of\nabout 500 Megabyte per second. We show that a demanding turbulence analysis\nworkload can be distributed among multiple GPUs and executes in under 5\nminutes. We further discuss how DELTA uses modern database systems and\ncontainer orchestration services to provide web-based real-time data\nvisualization. For the case of ECEi data we demonstrate how data visualizations\ncan be augmented with outputs from machine learning models. By providing\nsession leaders and physics operators results of higher order data analysis\nusing live visualization they may monitor the evolution of a long-pulse\ndischarge in near real-time and may make more informed decision on how to\nconfigure the machine for the next shot.",
+          "arxiv_id": "2108.08896v1"
+        },
+        {
+          "title": "PV Fleet Modeling via Smooth Periodic Gaussian Copula",
+          "year": "2023-06",
+          "abstract": "We present a method for jointly modeling power generation from a fleet of\nphotovoltaic (PV) systems. We propose a white-box method that finds a function\nthat invertibly maps vector time-series data to independent and identically\ndistributed standard normal variables. The proposed method, based on a novel\napproach for fitting a smooth, periodic copula transform to data, captures many\naspects of the data such as diurnal variation in the distribution of power\noutput, dependencies among different PV systems, and dependencies across time.\nIt consists of interpretable steps and is scalable to many systems. The\nresulting joint probability model of PV fleet output across systems and time\ncan be used to generate synthetic data, impute missing data, perform anomaly\ndetection, and make forecasts. In this paper, we explain the method and\ndemonstrate these applications.",
+          "arxiv_id": "2307.00004v1"
+        },
+        {
+          "title": "AdoptODE: Fusion of data and expert knowledge for modeling dynamical systems",
+          "year": "2023-05",
+          "abstract": "Building a representative model of a complex system remains a highly\nchallenging problem. While by now there is basic understanding of most physical\ndomains, model design is often hindered by lack of detail, for example\nconcerning model dimensions or its relevant constraints. Here we present a\nnovel model-building approach -- adoptODE -- augmenting basic system\ndescriptions, based on expert knowledge in the form of ordinary differential\nequations, with continuous adjoint sensitivity analysis related to artificial\nneural network principles, based on observable data. With this we have created\na general tool, that can be applied to any physical system described by\nordinary differential equations. AdoptODE allows validating or extending the\ninitial description, for example with different variables and constraints. This\nway one arrives at a better-optimised, representative low-dimensional model,\nwhich can fit existing data and predict novel experimental outcomes. We\nvalidate our method on five, quite different problem domains. (1) Kolmogorov\nmodel: Lotka Volterra model where we show the application of adoptODE to\ncontinuous-time Markov processes and the performance of adoptODE when working\nwith noisy data. (2) Particle model: Interactive N-body, is a demonstration of\nthe scalability of adoptODE and that even interactive system with a high number\nof elements can be reconstructed with high precision. (3) Excitable media\n(heart dynamics) by the Bueno\\-Orovio\\-Cherry\\-Fenton model: AdoptODE can\nreconstruct the parameters of a high-dimensional model and fields for diffusion\ndriven system for chaotic behaviour. (4) Fluid dynamics: Rayleigh-B\\'enard\nConvection where a complete unknown field, the temperature, can be extracted\nfrom only velocity data. (5) New experimental data of Zebrafish embryogenesis:\nThis is a case where we extend existing models with new variables.",
+          "arxiv_id": "2305.09325v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Hardware-accelerated Inference for Real-Time Gravitational-Wave Astronomy",
+          "year": "2021-08",
+          "abstract": "The field of transient astronomy has seen a revolution with the first\ngravitational-wave detections and the arrival of multi-messenger observations\nthey enabled. Transformed by the first detection of binary black hole and\nbinary neutron star mergers, computational demands in gravitational-wave\nastronomy are expected to grow by at least a factor of two over the next five\nyears as the global network of kilometer-scale interferometers are brought to\ndesign sensitivity. With the increase in detector sensitivity, real-time\ndelivery of gravitational-wave alerts will become increasingly important as an\nenabler of multi-messenger followup. In this work, we report a novel\nimplementation and deployment of deep learning inference for real-time\ngravitational-wave data denoising and astrophysical source identification. This\nis accomplished using a generic Inference-as-a-Service model that is capable of\nadapting to the future needs of gravitational-wave data analysis. Our\nimplementation allows seamless incorporation of hardware accelerators and also\nenables the use of commercial or private (dedicated) as-a-service computing.\nBased on our results, we propose a paradigm shift in low-latency and offline\ncomputing in gravitational-wave astronomy. Such a shift can address key\nchallenges in peak-usage, scalability and reliability, and provide a data\nanalysis platform particularly optimized for deep learning applications. The\nachieved sub-millisecond scale latency will also be relevant for any machine\nlearning-based real-time control systems that may be invoked in the operation\nof near-future and next generation ground-based laser interferometers, as well\nas the front-end collection, distribution and processing of data from such\ninstruments.",
+          "arxiv_id": "2108.12430v1"
+        },
+        {
+          "title": "LSTM and CNN application for core-collapse supernova search in gravitational wave real data",
+          "year": "2023-01",
+          "abstract": "$Context.$ Core-collapse supernovae (CCSNe) are expected to emit\ngravitational wave signals that could be detected by current and future\ngeneration interferometers within the Milky Way and nearby galaxies. The\nstochastic nature of the signal arising from CCSNe requires alternative\ndetection methods to matched filtering. $Aims.$ We aim to show the potential of\nmachine learning (ML) for multi-label classification of different CCSNe\nsimulated signals and noise transients using real data. We compared the\nperformance of 1D and 2D convolutional neural networks (CNNs) on single and\nmultiple detector data. For the first time, we tested multi-label\nclassification also with long short-term memory (LSTM) networks. $Methods.$ We\napplied a search and classification procedure for CCSNe signals, using an event\ntrigger generator, the Wavelet Detection Filter (WDF), coupled with ML. We used\ntime series and time-frequency representations of the data as inputs to the ML\nmodels. To compute classification accuracies, we simultaneously injected, at\ndetectable distance of 1\\,kpc, CCSN waveforms, obtained from recent\nhydrodynamical simulations of neutrino-driven core-collapse, onto\ninterferometer noise from the O2 LIGO and Virgo science run. $Results.$ We\ncompared the performance of the three models on single detector data. We then\nmerged the output of the models for single detector classification of noise and\nastrophysical transients, obtaining overall accuracies for LIGO ($\\sim99\\%$)\nand ($\\sim80\\%$) for Virgo. We extended our analysis to the multi-detector case\nusing triggers coincident among the three ITFs and achieved an accuracy of\n$\\sim98\\%$.",
+          "arxiv_id": "2301.09387v1"
+        },
+        {
+          "title": "Noise Reduction in Gravitational-wave Data via Deep Learning",
+          "year": "2020-05",
+          "abstract": "With the advent of gravitational wave astronomy, techniques to extend the\nreach of gravitational wave detectors are desired. In addition to the\nstellar-mass black hole and neutron star mergers already detected, many more\nare below the surface of the noise, available for detection if the noise is\nreduced enough. Our method (DeepClean) applies machine learning algorithms to\ngravitational wave detector data and data from on-site sensors monitoring the\ninstrument to reduce the noise in the time-series due to instrumental artifacts\nand environmental contamination. This framework is generic enough to subtract\nlinear, non-linear, and non-stationary coupling mechanisms. It may also provide\nhandles in learning about the mechanisms which are not currently understood to\nbe limiting detector sensitivities. The robustness of the noise reduction\ntechnique in its ability to efficiently remove noise with no unintended effects\non gravitational-wave signals is also addressed through software signal\ninjection and parameter estimation of the recovered signal. It is shown that\nthe optimal SNR ratio of the injected signal is enhanced by $\\sim 21.6\\%$ and\nthe recovered parameters are consistent with the injected set. We present the\nperformance of this algorithm on linear and non-linear noise sources and\ndiscuss its impact on astrophysical searches by gravitational wave detectors.",
+          "arxiv_id": "2005.06534v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:40:17Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

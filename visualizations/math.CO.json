@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_graph_graphs_number_set",
+        "keywords": [
+          [
+            "graph",
+            0.05172402540762954
+          ],
+          [
+            "graphs",
+            0.049077238265104156
+          ],
+          [
+            "number",
+            0.03768487104746693
+          ],
+          [
+            "set",
+            0.02749634019981657
+          ],
+          [
+            "paper",
+            0.026084080788890508
+          ],
+          [
+            "vertices",
+            0.023586978224194602
+          ],
+          [
+            "vertex",
+            0.022608838646361592
+          ],
+          [
+            "results",
+            0.021189135097919535
+          ],
+          [
+            "result",
+            0.018961110394923295
+          ],
+          [
+            "edge",
+            0.01821198605538517
+          ]
+        ],
+        "count": 29412
+      },
+      "1": {
+        "name": "1_phylogenetic_networks_tree_trees",
+        "keywords": [
+          [
+            "phylogenetic",
+            0.13806947087047874
+          ],
+          [
+            "networks",
+            0.13208021857009997
+          ],
+          [
+            "tree",
+            0.10276846465735807
+          ],
+          [
+            "trees",
+            0.09197448931794287
+          ],
+          [
+            "network",
+            0.06098756957084744
+          ],
+          [
+            "rooted",
+            0.05186200862616601
+          ],
+          [
+            "species",
+            0.04720396298810593
+          ],
+          [
+            "phylogenetic trees",
+            0.04599542876368743
+          ],
+          [
+            "evolutionary",
+            0.04478788076876092
+          ],
+          [
+            "binary",
+            0.039472798482901875
+          ]
+        ],
+        "count": 186
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6059303056517595
+      ],
+      [
+        -0.6059303056517595,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        339,
+        14
+      ],
+      "2020-02": [
+        316,
+        22
+      ],
+      "2020-03": [
+        424,
+        25
+      ],
+      "2020-04": [
+        375,
+        28
+      ],
+      "2020-05": [
+        416,
+        32
+      ],
+      "2020-06": [
+        390,
+        24
+      ],
+      "2020-07": [
+        425,
+        24
+      ],
+      "2020-08": [
+        385,
+        26
+      ],
+      "2020-09": [
+        410,
+        20
+      ],
+      "2020-10": [
+        401,
+        19
+      ],
+      "2020-11": [
+        329,
+        25
+      ],
+      "2020-12": [
+        426,
+        10
+      ],
+      "2021-01": [
+        342,
+        15
+      ],
+      "2021-02": [
+        334,
+        25
+      ],
+      "2021-03": [
+        384,
+        30
+      ],
+      "2021-04": [
+        371,
+        27
+      ],
+      "2021-05": [
+        388,
+        25
+      ],
+      "2021-06": [
+        399,
+        20
+      ],
+      "2021-07": [
+        374,
+        27
+      ],
+      "2021-08": [
+        381,
+        21
+      ],
+      "2021-09": [
+        365,
+        18
+      ],
+      "2021-10": [
+        404,
+        23
+      ],
+      "2021-11": [
+        426,
+        22
+      ],
+      "2021-12": [
+        423,
+        27
+      ],
+      "2022-01": [
+        368,
+        23
+      ],
+      "2022-02": [
+        375,
+        13
+      ],
+      "2022-03": [
+        389,
+        23
+      ],
+      "2022-04": [
+        364,
+        13
+      ],
+      "2022-05": [
+        383,
+        25
+      ],
+      "2022-06": [
+        405,
+        20
+      ],
+      "2022-07": [
+        429,
+        17
+      ],
+      "2022-08": [
+        370,
+        23
+      ],
+      "2022-09": [
+        408,
+        32
+      ],
+      "2022-10": [
+        408,
+        20
+      ],
+      "2022-11": [
+        444,
+        21
+      ],
+      "2022-12": [
+        452,
+        19
+      ],
+      "2023-01": [
+        335,
+        15
+      ],
+      "2023-02": [
+        352,
+        23
+      ],
+      "2023-03": [
+        458,
+        27
+      ],
+      "2023-04": [
+        348,
+        16
+      ],
+      "2023-05": [
+        445,
+        26
+      ],
+      "2023-06": [
+        409,
+        25
+      ],
+      "2023-07": [
+        433,
+        26
+      ],
+      "2023-08": [
+        418,
+        19
+      ],
+      "2023-09": [
+        431,
+        23
+      ],
+      "2023-10": [
+        453,
+        23
+      ],
+      "2023-11": [
+        437,
+        20
+      ],
+      "2023-12": [
+        468,
+        25
+      ],
+      "2024-01": [
+        417,
+        22
+      ],
+      "2024-02": [
+        445,
+        33
+      ],
+      "2024-03": [
+        458,
+        31
+      ],
+      "2024-04": [
+        402,
+        26
+      ],
+      "2024-05": [
+        460,
+        26
+      ],
+      "2024-06": [
+        418,
+        20
+      ],
+      "2024-07": [
+        443,
+        26
+      ],
+      "2024-08": [
+        463,
+        27
+      ],
+      "2024-09": [
+        496,
+        26
+      ],
+      "2024-10": [
+        491,
+        26
+      ],
+      "2024-11": [
+        495,
+        26
+      ],
+      "2024-12": [
+        497,
+        27
+      ],
+      "2025-01": [
+        439,
+        19
+      ],
+      "2025-02": [
+        413,
+        33
+      ],
+      "2025-03": [
+        467,
+        25
+      ],
+      "2025-04": [
+        421,
+        29
+      ],
+      "2025-05": [
+        439,
+        29
+      ],
+      "2025-06": [
+        427,
+        34
+      ],
+      "2025-07": [
+        530,
+        35
+      ],
+      "2025-08": [
+        526,
+        29
+      ],
+      "2025-09": [
+        292,
+        14
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Connectivity versus Lin-Lu-Yau curvature",
+          "year": "2025-04",
+          "abstract": "We explore the interaction between connectivity and Lin-Lu-Yau curvature of\ngraphs systematically. The intuition is that connected graphs with large\nLin-Lu-Yau curvature also have large connectivity, and vice versa. We prove\nthat the connectivity of a connected graph is lower bounded by the product of\nits minimum degree and its Lin-Lu-Yau curvature. On the other hand, if the\nconnectivity of a graph $G$ on $n$ vertices is at least $\\frac{n-1}{2}$, then\n$G$ has positive Lin-Lu-Yau curvature. Moreover, the bound $\\frac{n-1}{2}$ here\nis optimal. Furthermore, we prove that the edge-connectivity is equal to the\nminimum vertex degree for any connected graph with positive Lin-Lu-Yau\ncurvature. As applications, we estimate or determine the connectivity and\nedge-connectivity of an amply regular graph with parameters $(d,\\alpha,\\beta)$\nsuch that $1\\neq \\beta\\geq \\alpha$.",
+          "arxiv_id": "2504.14352v1"
+        },
+        {
+          "title": "Packing a number of copies of a $(p,\\,q)$-graph",
+          "year": "2020-02",
+          "abstract": "Let $k,p,q$ be three positive integers. A graph $G$ with order $n$ is said to\nbe $k$-placeable if there are $k$ edge disjoint copies of $G$ in the complete\ngraph on $n$ vertices. A $(p,\\,q)$-graph is a graph of order $p$ with $q$\nedges. Packing results have proved useful in the study of the complexity of\ngraph properties. Bollob\\'{a}s et al. investigated the $k$-placeable of\n$(n,\\,n-2)$-graphs and $(n,\\,n-1)$-graphs with $k=2$ and $k=3$. Motivated by\ntheir results, this paper characterizes $(n,\\,n-1)$-graphs with girth at least\n$9$ which are $4$-placeable. We also consider the $k$-placeable of\n$(n,\\,n+1)$-graphs and 2-factors.",
+          "arxiv_id": "2002.01266v2"
+        },
+        {
+          "title": "Triangle-Covered Graphs: Algorithms, Complexity, and Structure",
+          "year": "2025-09",
+          "abstract": "The widely studied edge modification problems ask how to minimally alter a\ngraph to satisfy certain structural properties. In this paper, we introduce and\nstudy a new edge modification problem centered around transforming a given\ngraph into a triangle-covered graph (one in which every vertex belongs to at\nleast one triangle). We first present tight lower bounds on the number of edges\nin any connected triangle-covered graph of order $n$, and then we characterize\nall connected graphs that attain this minimum edge count. For a graph $G$, we\ndefine the notion of a $\\Delta$-completion set as a set of non-edges of $G$\nwhose addition to $G$ results in a triangle-covered graph. We prove that the\ndecision problem of finding a $\\Delta$-completion set of size at most $t\\geq0$\nis $\\mathbb{NP}$-complete and does not admit a constant-factor approximation\nalgorithm under standard complexity assumptions. Moreover, we show that this\nproblem remains $\\mathbb{NP}$-complete even when the input is restricted to\nconnected bipartite graphs. We then study the problem from an algorithmic\nperspective, providing tight bounds on the minimum $\\Delta$-completion set size\nfor several graph classes, including trees, chordal graphs, and cactus graphs.\nFurthermore, we show that the triangle-covered problem admits an $(\\ln n\n+1)$-approximation algorithm for general graphs. For trees and chordal graphs,\nwe design algorithms that compute minimum $\\Delta$-completion sets. Finally, we\nshow that the threshold for a random graph $\\mathbb{G}(n, p)$ to be\ntriangle-covered occurs at $n^{-2/3}$.",
+          "arxiv_id": "2509.11448v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "The tree-child network problem for line trees and the shortest common supersequences for permutations",
+          "year": "2023-07",
+          "abstract": "One strategy for reconstruction of phylogenetic networks is to solve the\nphylogenetic network problem, which involves inferring phylogenetic trees first\nand subsequently computing the smallest phylogenetic network that displays all\nthe trees. This approach capitalizes on exceptional tools available for\ninferring phylogenetic trees from biomolecular sequences. Since the vast space\nof phylogenetic networks poses difficulties in obtaining comprehensive\nsampling, the researchers switch their attention to inferring tree-child\nnetworks from multiple phylogenetic trees, where in a tree-child network each\nnon-leaf node must have at least one child that is an indegree-one node.\n  Two results are obtained: (1) The tree-child network inference problem for\nmultiple line trees remains NP-hard by a reduction from the shortest common\nsupersequence problem for permutations and proving that the latter is NP-hard.\n(2) The tree-child networks with the least reticulate nodes that display all\nthe line trees are the same as that display all the binary trees, whose\nhybridization number is $\\Theta(n^3)$ for $n (> 7)$ taxa.",
+          "arxiv_id": "2307.04335v4"
+        },
+        {
+          "title": "Forest-based networks",
+          "year": "2022-02",
+          "abstract": "In evolutionary studies it is common to use phylogenetic trees to represent\nthe evolutionary history of a set of species. However, in case the transfer of\ngenes or other genetic information between the species or their ancestors has\noccurred in the past, a tree may not provide a complete picture of their\nhistory. In such cases,tree-based phylogenetic networks can provide a useful,\nmore refined representation of the species evolution. Such a network is\nessentially a phylogenetic tree with some arcs added between the tree edges so\nas to represent reticulate events such as gene transfer. Even so, this model\ndoes not permit the representation of evolutionary scenarios where reticulate\nevents have taken place between different subfamilies or lineages of species.\nTo represent such scenarios, in this paper we introduce the notion of a\nforest-based phylogenetic network, that is, a collection of leaf-disjoint\nphylogenetic trees on a set of species with arcs added between the edges of\ndistinct trees within the collection. Forest-based networks include the\nrecently introduced class of overlaid species forests which are used to model\nintrogression. As we shall see, even though the definition of forest-based\nnetworks is closely related to that of tree-based networks, they lead to new\nmathematical theory which complements that of tree-based networks. As well as\nstudying the relationship of forest-based networks with other classes of\nphylogenetic networks, such as tree-child networks and universal tree-based\nnetworks, we present some characterizations of some special classes of\nforest-based networks. We expect that our results will be useful for developing\nnew models and algorithms to understand reticulate evolution, such as gene\ntransfer between collections of bacteria that live in different environments.",
+          "arxiv_id": "2202.06644v1"
+        },
+        {
+          "title": "Bounding the softwired parsimony score of a phylogenetic network",
+          "year": "2024-05",
+          "abstract": "In comparison to phylogenetic trees, phylogenetic networks are more suitable\nto represent complex evolutionary histories of species whose past includes\nreticulation such as hybridisation or lateral gene transfer. However, the\nreconstruction of phylogenetic networks remains challenging and computationally\nexpensive due to their intricate structural properties. For example, the small\nparsimony problem that is solvable in polynomial time for phylogenetic trees,\nbecomes NP-hard on phylogenetic networks under softwired and parental\nparsimony, even for a single binary character and structurally constrained\nnetworks. To calculate the parsimony score of a phylogenetic network $N$, these\ntwo parsimony notions consider different exponential-size sets of phylogenetic\ntrees that can be extracted from $N$ and infer the minimum parsimony score over\nall trees in the set. In this paper, we ask: What is the maximum difference\nbetween the parsimony score of any phylogenetic tree that is contained in the\nset of considered trees and a phylogenetic tree whose parsimony score equates\nto the parsimony score of $N$? Given a gap-free sequence alignment of\nmulti-state characters and a rooted binary level-$k$ phylogenetic network, we\nuse the novel concept of an informative blob to show that this difference is\nbounded by $k+1$ times the softwired parsimony score of $N$. In particular, the\ndifference is independent of the alignment length and the number of character\nstates. We show that an analogous bound can be obtained for the softwired\nparsimony score of semi-directed networks, while under parental parsimony on\nthe other hand, such a bound does not hold.",
+          "arxiv_id": "2405.19587v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:31:17Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

@@ -1,0 +1,1628 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_model_package_models",
+        "keywords": [
+          [
+            "data",
+            0.02756309876453013
+          ],
+          [
+            "model",
+            0.018335667061721062
+          ],
+          [
+            "package",
+            0.01568693699262931
+          ],
+          [
+            "models",
+            0.015517819916350395
+          ],
+          [
+            "methods",
+            0.012301918295512929
+          ],
+          [
+            "analysis",
+            0.011874804583920788
+          ],
+          [
+            "method",
+            0.011822217204105805
+          ],
+          [
+            "distribution",
+            0.0101722780618458
+          ],
+          [
+            "Bayesian",
+            0.010090851576881554
+          ],
+          [
+            "regression",
+            0.010088289148182834
+          ]
+        ],
+        "count": 782
+      },
+      "1": {
+        "name": "1_model_models_problems_Bayesian",
+        "keywords": [
+          [
+            "model",
+            0.02078917749161442
+          ],
+          [
+            "models",
+            0.017481707728964794
+          ],
+          [
+            "problems",
+            0.014562611991572168
+          ],
+          [
+            "Bayesian",
+            0.014101442190531275
+          ],
+          [
+            "uncertainty",
+            0.013971247545626352
+          ],
+          [
+            "method",
+            0.013767963237011594
+          ],
+          [
+            "approach",
+            0.012905465319337442
+          ],
+          [
+            "state",
+            0.01262830646369155
+          ],
+          [
+            "methods",
+            0.012103603674219672
+          ],
+          [
+            "parameters",
+            0.01192990652505236
+          ]
+        ],
+        "count": 380
+      },
+      "2": {
+        "name": "2_algorithm_regression_data_method",
+        "keywords": [
+          [
+            "algorithm",
+            0.020850170529883277
+          ],
+          [
+            "regression",
+            0.019052386132461022
+          ],
+          [
+            "data",
+            0.015714994045146403
+          ],
+          [
+            "method",
+            0.015252203879632296
+          ],
+          [
+            "matrix",
+            0.014725125976984041
+          ],
+          [
+            "selection",
+            0.014235187816584411
+          ],
+          [
+            "sparse",
+            0.013818291098786458
+          ],
+          [
+            "problems",
+            0.01370940325043066
+          ],
+          [
+            "optimization",
+            0.01367582470896357
+          ],
+          [
+            "problem",
+            0.013050753094690986
+          ]
+        ],
+        "count": 327
+      },
+      "3": {
+        "name": "3_Metropolis_Monte_Carlo_Langevin",
+        "keywords": [
+          [
+            "Metropolis",
+            0.029141355391357548
+          ],
+          [
+            "Monte",
+            0.025410008045624974
+          ],
+          [
+            "Carlo",
+            0.025410008045624974
+          ],
+          [
+            "Langevin",
+            0.024278030486926578
+          ],
+          [
+            "Hamiltonian",
+            0.02350221623014928
+          ],
+          [
+            "HMC",
+            0.02285336542765187
+          ],
+          [
+            "target",
+            0.022100732271323215
+          ],
+          [
+            "sampling",
+            0.021503983813608338
+          ],
+          [
+            "algorithm",
+            0.021237018120456055
+          ],
+          [
+            "Markov",
+            0.019722384853591943
+          ]
+        ],
+        "count": 242
+      },
+      "4": {
+        "name": "4_spatial_data_Gaussian_model",
+        "keywords": [
+          [
+            "spatial",
+            0.0448627143227499
+          ],
+          [
+            "data",
+            0.03297656917580683
+          ],
+          [
+            "Gaussian",
+            0.021969915957408763
+          ],
+          [
+            "model",
+            0.02027679193665299
+          ],
+          [
+            "models",
+            0.01796844107859792
+          ],
+          [
+            "temporal",
+            0.016111428829658134
+          ],
+          [
+            "large",
+            0.014067577183592398
+          ],
+          [
+            "process",
+            0.013479558142602623
+          ],
+          [
+            "covariance",
+            0.013158963050362881
+          ],
+          [
+            "spatio",
+            0.012450358876171106
+          ]
+        ],
+        "count": 213
+      },
+      "5": {
+        "name": "5_series_time_time series_models",
+        "keywords": [
+          [
+            "series",
+            0.03327864011347441
+          ],
+          [
+            "time",
+            0.03244780004953421
+          ],
+          [
+            "time series",
+            0.029160038179208706
+          ],
+          [
+            "models",
+            0.021044355990675917
+          ],
+          [
+            "model",
+            0.02099830511659085
+          ],
+          [
+            "data",
+            0.019272460197461087
+          ],
+          [
+            "forecasting",
+            0.018694668036106466
+          ],
+          [
+            "detection",
+            0.016581981514052366
+          ],
+          [
+            "forecast",
+            0.01642355779724517
+          ],
+          [
+            "change",
+            0.014941007837975258
+          ]
+        ],
+        "count": 188
+      },
+      "6": {
+        "name": "6_network_networks_graph_nodes",
+        "keywords": [
+          [
+            "network",
+            0.05313005552718669
+          ],
+          [
+            "networks",
+            0.046888664822889344
+          ],
+          [
+            "graph",
+            0.028048146871884942
+          ],
+          [
+            "nodes",
+            0.02153679314709731
+          ],
+          [
+            "community",
+            0.01843709834760164
+          ],
+          [
+            "model",
+            0.01804335910713491
+          ],
+          [
+            "edge",
+            0.01654091716856098
+          ],
+          [
+            "node",
+            0.015661739267685604
+          ],
+          [
+            "structure",
+            0.015642422029883682
+          ],
+          [
+            "data",
+            0.014725472526751352
+          ]
+        ],
+        "count": 131
+      },
+      "7": {
+        "name": "7_MCMC_Bayesian_posterior_likelihood",
+        "keywords": [
+          [
+            "MCMC",
+            0.036748616677024226
+          ],
+          [
+            "Bayesian",
+            0.030842356888777026
+          ],
+          [
+            "posterior",
+            0.026674559754309414
+          ],
+          [
+            "likelihood",
+            0.025064303782583744
+          ],
+          [
+            "ABC",
+            0.022394250583355306
+          ],
+          [
+            "Monte",
+            0.020624343797512285
+          ],
+          [
+            "Carlo",
+            0.020624343797512285
+          ],
+          [
+            "inference",
+            0.0197535386366062
+          ],
+          [
+            "methods",
+            0.018359806397699175
+          ],
+          [
+            "Markov",
+            0.017751846247761847
+          ]
+        ],
+        "count": 122
+      },
+      "8": {
+        "name": "8_design_designs_optimal_experimental",
+        "keywords": [
+          [
+            "design",
+            0.07033602130239613
+          ],
+          [
+            "designs",
+            0.0455123389278399
+          ],
+          [
+            "optimal",
+            0.037972029270149324
+          ],
+          [
+            "experimental",
+            0.03571076338511263
+          ],
+          [
+            "experimental design",
+            0.025718353224826115
+          ],
+          [
+            "experiments",
+            0.021905750646369702
+          ],
+          [
+            "Design",
+            0.021178763393684824
+          ],
+          [
+            "optimal designs",
+            0.016592429790160186
+          ],
+          [
+            "Bayesian",
+            0.01641864297335248
+          ],
+          [
+            "information",
+            0.015847906464540967
+          ]
+        ],
+        "count": 99
+      },
+      "9": {
+        "name": "9_model_disease_data_models",
+        "keywords": [
+          [
+            "model",
+            0.03557044666017342
+          ],
+          [
+            "disease",
+            0.031501499599089926
+          ],
+          [
+            "data",
+            0.02754725049310859
+          ],
+          [
+            "models",
+            0.025326401680839283
+          ],
+          [
+            "transmission",
+            0.02466876007025085
+          ],
+          [
+            "epidemic",
+            0.02133904134031697
+          ],
+          [
+            "time",
+            0.01971854720856962
+          ],
+          [
+            "spread",
+            0.018518066921084833
+          ],
+          [
+            "infection",
+            0.016740221548650132
+          ],
+          [
+            "cases",
+            0.01553864742953154
+          ]
+        ],
+        "count": 74
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.47933979892305956,
+        -0.6159533706517428,
+        -0.6599824927506913,
+        -0.20905930017468027,
+        -0.5286911959386116,
+        -0.7036072779567996,
+        -0.6547019067820787,
+        -0.6970816964507571,
+        -0.16563014544928906
+      ],
+      [
+        -0.47933979892305956,
+        1.0,
+        -0.6787942591385356,
+        -0.5916552602743821,
+        -0.5342130631811962,
+        -0.5224284028223323,
+        -0.7203742099156164,
+        -0.5722527737063836,
+        -0.7136101477587244,
+        -0.42098419340258686
+      ],
+      [
+        -0.6159533706517428,
+        -0.6787942591385356,
+        1.0,
+        -0.4689700643960045,
+        -0.6741685529738781,
+        -0.6733683403930744,
+        -0.7134818612798206,
+        -0.6550350641689151,
+        -0.6911547694229117,
+        -0.6705956030139764
+      ],
+      [
+        -0.6599824927506913,
+        -0.5916552602743821,
+        -0.4689700643960045,
+        1.0,
+        -0.6768389349937551,
+        -0.6577466354130939,
+        -0.7172788012988272,
+        -0.06301121640078124,
+        -0.691937832710794,
+        -0.6618892740362239
+      ],
+      [
+        -0.20905930017468027,
+        -0.5342130631811962,
+        -0.6741685529738781,
+        -0.6768389349937551,
+        1.0,
+        -0.5744595390906284,
+        -0.6983740502027118,
+        -0.6618959412482337,
+        -0.7092943427750322,
+        -0.2548258846351963
+      ],
+      [
+        -0.5286911959386116,
+        -0.5224284028223323,
+        -0.6733683403930744,
+        -0.6577466354130939,
+        -0.5744595390906284,
+        1.0,
+        -0.6983300014376883,
+        -0.658115327627888,
+        -0.717068282861912,
+        -0.31696279638335867
+      ],
+      [
+        -0.7036072779567996,
+        -0.7203742099156164,
+        -0.7134818612798206,
+        -0.7172788012988272,
+        -0.6983740502027118,
+        -0.6983300014376883,
+        1.0,
+        -0.6999831933381764,
+        -0.7275036166754169,
+        -0.6914723205223938
+      ],
+      [
+        -0.6547019067820787,
+        -0.5722527737063836,
+        -0.6550350641689151,
+        -0.06301121640078124,
+        -0.6618959412482337,
+        -0.658115327627888,
+        -0.6999831933381764,
+        1.0,
+        -0.7013898010690656,
+        -0.6363078725362815
+      ],
+      [
+        -0.6970816964507571,
+        -0.7136101477587244,
+        -0.6911547694229117,
+        -0.691937832710794,
+        -0.7092943427750322,
+        -0.717068282861912,
+        -0.7275036166754169,
+        -0.7013898010690656,
+        1.0,
+        -0.7106582626340643
+      ],
+      [
+        -0.16563014544928906,
+        -0.42098419340258686,
+        -0.6705956030139764,
+        -0.6618892740362239,
+        -0.2548258846351963,
+        -0.31696279638335867,
+        -0.6914723205223938,
+        -0.6363078725362815,
+        -0.7106582626340643,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        14,
+        0,
+        2,
+        5,
+        8,
+        6,
+        2,
+        14,
+        9,
+        2
+      ],
+      "2020-02": [
+        13,
+        0,
+        5,
+        16,
+        6,
+        11,
+        4,
+        12,
+        7,
+        2
+      ],
+      "2020-03": [
+        16,
+        1,
+        3,
+        9,
+        8,
+        2,
+        4,
+        10,
+        3,
+        4
+      ],
+      "2020-04": [
+        15,
+        0,
+        6,
+        4,
+        10,
+        8,
+        1,
+        18,
+        9,
+        8
+      ],
+      "2020-05": [
+        20,
+        0,
+        6,
+        10,
+        11,
+        6,
+        1,
+        8,
+        6,
+        5
+      ],
+      "2020-06": [
+        21,
+        0,
+        10,
+        9,
+        9,
+        7,
+        8,
+        10,
+        6,
+        6
+      ],
+      "2020-07": [
+        23,
+        1,
+        2,
+        13,
+        7,
+        12,
+        6,
+        15,
+        9,
+        5
+      ],
+      "2020-08": [
+        13,
+        0,
+        3,
+        6,
+        7,
+        5,
+        5,
+        8,
+        2,
+        1
+      ],
+      "2020-09": [
+        13,
+        1,
+        4,
+        9,
+        1,
+        5,
+        6,
+        8,
+        3,
+        8
+      ],
+      "2020-10": [
+        20,
+        2,
+        8,
+        12,
+        4,
+        14,
+        4,
+        10,
+        8,
+        3
+      ],
+      "2020-11": [
+        16,
+        1,
+        8,
+        9,
+        9,
+        5,
+        4,
+        10,
+        5,
+        4
+      ],
+      "2020-12": [
+        17,
+        0,
+        3,
+        7,
+        8,
+        3,
+        6,
+        11,
+        7,
+        6
+      ],
+      "2021-01": [
+        17,
+        3,
+        5,
+        8,
+        10,
+        9,
+        6,
+        7,
+        1,
+        6
+      ],
+      "2021-02": [
+        20,
+        1,
+        5,
+        11,
+        9,
+        11,
+        3,
+        5,
+        4,
+        4
+      ],
+      "2021-03": [
+        14,
+        0,
+        3,
+        11,
+        7,
+        6,
+        1,
+        12,
+        8,
+        0
+      ],
+      "2021-04": [
+        15,
+        0,
+        5,
+        8,
+        2,
+        7,
+        4,
+        11,
+        8,
+        3
+      ],
+      "2021-05": [
+        17,
+        1,
+        5,
+        11,
+        11,
+        10,
+        4,
+        14,
+        3,
+        5
+      ],
+      "2021-06": [
+        33,
+        0,
+        10,
+        21,
+        3,
+        8,
+        1,
+        10,
+        8,
+        7
+      ],
+      "2021-07": [
+        9,
+        0,
+        2,
+        10,
+        3,
+        9,
+        5,
+        10,
+        4,
+        3
+      ],
+      "2021-08": [
+        13,
+        0,
+        3,
+        10,
+        8,
+        4,
+        4,
+        5,
+        3,
+        6
+      ],
+      "2021-09": [
+        17,
+        0,
+        3,
+        6,
+        11,
+        11,
+        3,
+        6,
+        3,
+        8
+      ],
+      "2021-10": [
+        25,
+        0,
+        4,
+        14,
+        10,
+        9,
+        1,
+        14,
+        10,
+        7
+      ],
+      "2021-11": [
+        12,
+        0,
+        5,
+        12,
+        6,
+        2,
+        3,
+        3,
+        4,
+        5
+      ],
+      "2021-12": [
+        10,
+        1,
+        4,
+        9,
+        3,
+        7,
+        6,
+        15,
+        4,
+        2
+      ],
+      "2022-01": [
+        17,
+        0,
+        3,
+        12,
+        10,
+        2,
+        7,
+        7,
+        6,
+        4
+      ],
+      "2022-02": [
+        15,
+        0,
+        0,
+        12,
+        10,
+        3,
+        6,
+        10,
+        3,
+        4
+      ],
+      "2022-03": [
+        25,
+        0,
+        5,
+        8,
+        3,
+        6,
+        5,
+        13,
+        6,
+        5
+      ],
+      "2022-04": [
+        10,
+        0,
+        3,
+        9,
+        7,
+        3,
+        2,
+        10,
+        3,
+        2
+      ],
+      "2022-05": [
+        22,
+        0,
+        3,
+        5,
+        3,
+        5,
+        3,
+        15,
+        10,
+        2
+      ],
+      "2022-06": [
+        15,
+        2,
+        6,
+        12,
+        8,
+        5,
+        9,
+        17,
+        7,
+        5
+      ],
+      "2022-07": [
+        19,
+        3,
+        2,
+        16,
+        6,
+        9,
+        1,
+        8,
+        5,
+        3
+      ],
+      "2022-08": [
+        14,
+        3,
+        5,
+        9,
+        4,
+        6,
+        7,
+        8,
+        10,
+        8
+      ],
+      "2022-09": [
+        15,
+        1,
+        2,
+        10,
+        5,
+        5,
+        4,
+        6,
+        7,
+        9
+      ],
+      "2022-10": [
+        18,
+        2,
+        5,
+        14,
+        7,
+        7,
+        6,
+        9,
+        7,
+        3
+      ],
+      "2022-11": [
+        21,
+        1,
+        8,
+        12,
+        10,
+        9,
+        3,
+        8,
+        6,
+        7
+      ],
+      "2022-12": [
+        11,
+        1,
+        6,
+        8,
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ],
+      "2023-01": [
+        9,
+        1,
+        1,
+        11,
+        5,
+        7,
+        6,
+        5,
+        9,
+        3
+      ],
+      "2023-02": [
+        14,
+        0,
+        4,
+        6,
+        10,
+        5,
+        3,
+        4,
+        7,
+        3
+      ],
+      "2023-03": [
+        21,
+        2,
+        3,
+        17,
+        12,
+        6,
+        8,
+        5,
+        2,
+        3
+      ],
+      "2023-04": [
+        11,
+        1,
+        5,
+        10,
+        5,
+        2,
+        0,
+        5,
+        5,
+        2
+      ],
+      "2023-05": [
+        17,
+        1,
+        6,
+        15,
+        6,
+        4,
+        3,
+        9,
+        4,
+        4
+      ],
+      "2023-06": [
+        11,
+        0,
+        5,
+        15,
+        6,
+        7,
+        5,
+        8,
+        4,
+        1
+      ],
+      "2023-07": [
+        12,
+        1,
+        3,
+        11,
+        5,
+        5,
+        5,
+        8,
+        3,
+        3
+      ],
+      "2023-08": [
+        13,
+        0,
+        6,
+        13,
+        5,
+        4,
+        6,
+        8,
+        8,
+        2
+      ],
+      "2023-09": [
+        11,
+        0,
+        2,
+        10,
+        9,
+        5,
+        3,
+        5,
+        5,
+        6
+      ],
+      "2023-10": [
+        18,
+        4,
+        4,
+        14,
+        2,
+        10,
+        7,
+        12,
+        3,
+        4
+      ],
+      "2023-11": [
+        13,
+        1,
+        1,
+        6,
+        5,
+        6,
+        3,
+        7,
+        5,
+        8
+      ],
+      "2023-12": [
+        14,
+        1,
+        6,
+        16,
+        4,
+        1,
+        2,
+        7,
+        4,
+        3
+      ],
+      "2024-01": [
+        16,
+        2,
+        1,
+        13,
+        9,
+        7,
+        3,
+        6,
+        7,
+        1
+      ],
+      "2024-02": [
+        26,
+        0,
+        5,
+        16,
+        7,
+        4,
+        2,
+        11,
+        9,
+        5
+      ],
+      "2024-03": [
+        16,
+        0,
+        3,
+        10,
+        7,
+        6,
+        3,
+        7,
+        8,
+        4
+      ],
+      "2024-04": [
+        15,
+        0,
+        7,
+        11,
+        14,
+        7,
+        1,
+        12,
+        5,
+        3
+      ],
+      "2024-05": [
+        18,
+        1,
+        6,
+        15,
+        9,
+        6,
+        11,
+        13,
+        6,
+        3
+      ],
+      "2024-06": [
+        11,
+        1,
+        1,
+        12,
+        11,
+        6,
+        9,
+        13,
+        8,
+        2
+      ],
+      "2024-07": [
+        8,
+        2,
+        5,
+        17,
+        8,
+        6,
+        4,
+        8,
+        7,
+        3
+      ],
+      "2024-08": [
+        10,
+        2,
+        7,
+        10,
+        10,
+        7,
+        3,
+        18,
+        4,
+        4
+      ],
+      "2024-09": [
+        15,
+        1,
+        1,
+        15,
+        9,
+        4,
+        10,
+        12,
+        4,
+        4
+      ],
+      "2024-10": [
+        30,
+        2,
+        9,
+        20,
+        9,
+        12,
+        8,
+        10,
+        10,
+        5
+      ],
+      "2024-11": [
+        24,
+        2,
+        6,
+        11,
+        8,
+        7,
+        8,
+        6,
+        4,
+        5
+      ],
+      "2024-12": [
+        16,
+        0,
+        5,
+        14,
+        5,
+        8,
+        4,
+        12,
+        5,
+        2
+      ],
+      "2025-01": [
+        23,
+        0,
+        8,
+        15,
+        9,
+        4,
+        3,
+        11,
+        6,
+        3
+      ],
+      "2025-02": [
+        19,
+        0,
+        6,
+        8,
+        9,
+        8,
+        6,
+        18,
+        8,
+        1
+      ],
+      "2025-03": [
+        17,
+        1,
+        6,
+        11,
+        5,
+        10,
+        12,
+        9,
+        7,
+        3
+      ],
+      "2025-04": [
+        14,
+        1,
+        5,
+        17,
+        7,
+        8,
+        3,
+        12,
+        6,
+        5
+      ],
+      "2025-05": [
+        24,
+        1,
+        6,
+        15,
+        10,
+        6,
+        10,
+        6,
+        11,
+        4
+      ],
+      "2025-06": [
+        27,
+        1,
+        3,
+        11,
+        5,
+        5,
+        7,
+        7,
+        2,
+        3
+      ],
+      "2025-07": [
+        15,
+        1,
+        3,
+        8,
+        12,
+        7,
+        5,
+        9,
+        11,
+        6
+      ],
+      "2025-08": [
+        24,
+        0,
+        3,
+        12,
+        6,
+        5,
+        4,
+        5,
+        7,
+        4
+      ],
+      "2025-09": [
+        8,
+        0,
+        2,
+        8,
+        3,
+        3,
+        3,
+        6,
+        4,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "CausalMetaR: An R package for performing causally interpretable meta-analyses",
+          "year": "2024-02",
+          "abstract": "Researchers would often like to leverage data from a collection of sources\n(e.g., primary studies in a meta-analysis) to estimate causal effects in a\ntarget population of interest. However, traditional meta-analytic methods do\nnot produce causally interpretable estimates for a well-defined target\npopulation. In this paper, we present the CausalMetaR R package, which\nimplements efficient and robust methods to estimate causal effects in a given\ninternal or external target population using multi-source data. The package\nincludes estimators of average and subgroup treatment effects for the entire\ntarget population. To produce efficient and robust estimates of causal effects,\nthe package implements doubly robust and non-parametric efficient estimators\nand supports using flexible data-adaptive (e.g., machine learning techniques)\nmethods and cross-fitting techniques to estimate the nuisance models (e.g., the\ntreatment model, the outcome model). We describe the key features of the\npackage and demonstrate how to use the package through an example.",
+          "arxiv_id": "2402.04341v2"
+        },
+        {
+          "title": "A Weibull Mixture Cure Frailty Model for High-dimensional Covariates",
+          "year": "2024-01",
+          "abstract": "A novel mixture cure frailty model is introduced for handling censored\nsurvival data. Mixture cure models are preferable when the existence of a cured\nfraction among patients can be assumed. However, such models are heavily\nunderexplored: frailty structures within cure models remain largely\nundeveloped, and furthermore, most existing methods do not work for\nhigh-dimensional datasets, when the number of predictors is significantly\nlarger than the number of observations. In this study, we introduce a novel\nextension of the Weibull mixture cure model that incorporates a frailty\ncomponent, employed to model an underlying latent population heterogeneity with\nrespect to the outcome risk. Additionally, high-dimensional covariates are\nintegrated into both the cure rate and survival part of the model, providing a\ncomprehensive approach to employ the model in the context of high-dimensional\nomics data. We also perform variable selection via an adaptive elastic-net\npenalization, and propose a novel approach to inference using the\nexpectation-maximization (EM) algorithm. Extensive simulation studies are\nconducted across various scenarios to demonstrate the performance of the model,\nand results indicate that our proposed method outperforms competitor models. We\napply the novel approach to analyze RNAseq gene expression data from bulk\nbreast cancer patients included in The Cancer Genome Atlas (TCGA) database. A\nset of prognostic biomarkers is then derived from selected genes, and\nsubsequently validated via both functional enrichment analysis and comparison\nto the existing biological literature. Finally, a prognostic risk score index\nbased on the identified biomarkers is proposed and validated by exploring the\npatients' survival.",
+          "arxiv_id": "2401.06575v2"
+        },
+        {
+          "title": "A Diagnostic Approach to Assess the Quality of Data Splitting in Machine Learning",
+          "year": "2022-06",
+          "abstract": "In machine learning, a routine practice is to split the data into a training\nand a test data set. A proposed model is built based on the training data, and\nthen the performance of the model is assessed using test data. Usually, the\ndata is split randomly into a training and a test set on an ad hoc basis. This\napproach, pivoted on random splitting, works well but more often than not, it\nfails to gauge the generalizing capability of the model with respect to\nperturbations in the input of training and test data. Experimentally, this\nsensitive aspect of randomness in the input data is realized when a new\niteration of a fixed pipeline, from model building to training and testing, is\nexecuted, and an overly optimistic performance estimate is reported. Since the\nconsistency in a model's performance predominantly depends on the data\nsplitting, any conclusions on the robustness of the model are unreliable in\nsuch a scenario. We propose a diagnostic approach to quantitatively assess the\nquality of a given split in terms of its true randomness, and provide a basis\nfor inferring model insensitivity towards the input data. We associate model\nrobustness with random splitting using a self-defined data-driven distance\nmetric based on the Mahalanobis squared distance between a train set and its\ncorresponding test set. The probability distribution of the distance metric is\nsimulated using Monte Carlo simulations, and a threshold is calculated from\none-sided hypothesis testing. We motivate and showcase the performance of the\nproposed approach using various real data sets. We also compare the performance\nof the existing data splitting methods using the proposed method.",
+          "arxiv_id": "2206.11721v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Fully probabilistic deep models for forward and inverse problems in parametric PDEs",
+          "year": "2022-08",
+          "abstract": "We introduce a physics-driven deep latent variable model (PDDLVM) to learn\nsimultaneously parameter-to-solution (forward) and solution-to-parameter\n(inverse) maps of parametric partial differential equations (PDEs). Our\nformulation leverages conventional PDE discretization techniques, deep neural\nnetworks, probabilistic modelling, and variational inference to assemble a\nfully probabilistic coherent framework. In the posited probabilistic model,\nboth the forward and inverse maps are approximated as Gaussian distributions\nwith a mean and covariance parameterized by deep neural networks. The PDE\nresidual is assumed to be an observed random vector of value zero, hence we\nmodel it as a random vector with a zero mean and a user-prescribed covariance.\nThe model is trained by maximizing the probability, that is the evidence or\nmarginal likelihood, of observing a residual of zero by maximizing the evidence\nlower bound (ELBO). Consequently, the proposed methodology does not require any\nindependent PDE solves and is physics-informed at training time, allowing the\nreal-time solution of PDE forward and inverse problems after training. The\nproposed framework can be easily extended to seamlessly integrate observed data\nto solve inverse problems and to build generative models. We demonstrate the\nefficiency and robustness of our method on finite element discretized\nparametric PDE problems such as linear and nonlinear Poisson problems, elastic\nshells with complex 3D geometries, and time-dependent nonlinear and\ninhomogeneous PDEs using a physics-informed neural network (PINN)\ndiscretization. We achieve up to three orders of magnitude speed-up after\ntraining compared to traditional finite element method (FEM), while outputting\ncoherent uncertainty estimates.",
+          "arxiv_id": "2208.04856v2"
+        },
+        {
+          "title": "hIPPYlib-MUQ: A Bayesian Inference Software Framework for Integration of Data with Complex Predictive Models under Uncertainty",
+          "year": "2021-12",
+          "abstract": "Bayesian inference provides a systematic framework for integration of data\nwith mathematical models to quantify the uncertainty in the solution of the\ninverse problem. However, the solution of Bayesian inverse problems governed by\ncomplex forward models described by partial differential equations (PDEs)\nremains prohibitive with black-box Markov chain Monte Carlo (MCMC) methods. We\npresent hIPPYlib-MUQ, an extensible and scalable software framework that\ncontains implementations of state-of-the art algorithms aimed to overcome the\nchallenges of high-dimensional, PDE-constrained Bayesian inverse problems.\nThese algorithms accelerate MCMC sampling by exploiting the geometry and\nintrinsic low-dimensionality of parameter space via derivative information and\nlow rank approximation. The software integrates two complementary open-source\nsoftware packages, hIPPYlib and MUQ. hIPPYlib solves PDE-constrained inverse\nproblems using automatically-generated adjoint-based derivatives, but it lacks\nfull Bayesian capabilities. MUQ provides a spectrum of powerful Bayesian\ninversion models and algorithms, but expects forward models to come equipped\nwith gradients and Hessians to permit large-scale solution. By combining these\ntwo libraries, we created a robust, scalable, and efficient software framework\nthat realizes the benefits of each and allows us to tackle complex large-scale\nBayesian inverse problems. To illustrate the capabilities of hIPPYlib-MUQ, we\npresent a comparison of a number of MCMC methods on several inverse problems.\nThese include problems with linear and nonlinear PDEs, various noise models,\nand different parameter dimensions. The results demonstrate that large ($\\sim\n50\\times$) speedups over conventional black box and gradient-based MCMC\nalgorithms can be obtained by exploiting Hessian information (from the log\nposterior), underscoring the power of the integrated hIPPYlib-MUQ framework.",
+          "arxiv_id": "2112.00713v2"
+        },
+        {
+          "title": "Scaling Up Bayesian Uncertainty Quantification for Inverse Problems using Deep Neural Networks",
+          "year": "2021-01",
+          "abstract": "Due to the importance of uncertainty quantification (UQ), Bayesian approach\nto inverse problems has recently gained popularity in applied mathematics,\nphysics, and engineering. However, traditional Bayesian inference methods based\non Markov Chain Monte Carlo (MCMC) tend to be computationally intensive and\ninefficient for such high dimensional problems. To address this issue, several\nmethods based on surrogate models have been proposed to speed up the inference\nprocess. More specifically, the calibration-emulation-sampling (CES) scheme has\nbeen proven to be successful in large dimensional UQ problems. In this work, we\npropose a novel CES approach for Bayesian inference based on deep neural\nnetwork models for the emulation phase. The resulting algorithm is\ncomputationally more efficient and more robust against variations in the\ntraining set. Further, by using an autoencoder (AE) for dimension reduction, we\nhave been able to speed up our Bayesian inference method up to three orders of\nmagnitude. Overall, our method, henceforth called \\emph{Dimension-Reduced\nEmulative Autoencoder Monte Carlo (DREAMC)} algorithm, is able to scale\nBayesian UQ up to thousands of dimensions for inverse problems. Using two\nlow-dimensional (linear and nonlinear) inverse problems we illustrate the\nvalidity of this approach. Next, we apply our method to two high-dimensional\nnumerical examples (elliptic and advection-diffussion) to demonstrate its\ncomputational advantages over existing algorithms.",
+          "arxiv_id": "2101.03906v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "A Pathwise Coordinate Descent Algorithm for LASSO Penalized Quantile Regression",
+          "year": "2025-02",
+          "abstract": "$\\ell_1$ penalized quantile regression is used in many fields as an\nalternative to penalized least squares regressions for high-dimensional data\nanalysis. Existing algorithms for penalized quantile regression either use\nlinear programming, which does not scale well in high dimension, or an\napproximate coordinate descent (CD) which does not solve for exact\ncoordinatewise minimum of the nonsmooth loss function. Further, neither\napproaches build fast, pathwise algorithms commonly used in high-dimensional\nstatistics to leverage sparsity structure of the problem in large-scale data\nsets. To avoid the computational challenges associated with the nonsmooth\nquantile loss, some recent works have even advocated using smooth\napproximations to the exact problem. In this work, we develop a fast, pathwise\ncoordinate descent algorithm to compute exact $\\ell_1$ penalized quantile\nregression estimates for high-dimensional data. We derive an easy-to-compute\nexact solution for the coordinatewise nonsmooth loss minimization, which, to\nthe best of our knowledge, has not been reported in the literature. We also\nemploy a random perturbation strategy to help the algorithm avoid getting stuck\nalong the regularization path. In simulated data sets, we show that our\nalgorithm runs substantially faster than existing alternatives based on\napproximate CD and linear program, while retaining the same level of estimation\naccuracy.",
+          "arxiv_id": "2502.12363v1"
+        },
+        {
+          "title": "A Global Two-stage Algorithm for Non-convex Penalized High-dimensional Linear Regression Problems",
+          "year": "2021-11",
+          "abstract": "By the asymptotic oracle property, non-convex penalties represented by\nminimax concave penalty (MCP) and smoothly clipped absolute deviation (SCAD)\nhave attracted much attentions in high-dimensional data analysis, and have been\nwidely used in signal processing, image restoration, matrix estimation, etc.\nHowever, in view of their non-convex and non-smooth characteristics, they are\ncomputationally challenging. Almost all existing algorithms converge locally,\nand the proper selection of initial values is crucial. Therefore, in actual\noperation, they often combine a warm-starting technique to meet the rigid\nrequirement that the initial value must be sufficiently close to the optimal\nsolution of the corresponding problem. In this paper, based on the DC\n(difference of convex functions) property of MCP and SCAD penalties, we aim to\ndesign a global two-stage algorithm for the high-dimensional least squares\nlinear regression problems. A key idea for making the proposed algorithm to be\nefficient is to use the primal dual active set with continuation (PDASC)\nmethod, which is equivalent to the semi-smooth Newton (SSN) method, to solve\nthe corresponding sub-problems. Theoretically, we not only prove the global\nconvergence of the proposed algorithm, but also verify that the generated\niterative sequence converges to a d-stationary point. In terms of computational\nperformance, the abundant research of simulation and real data show that the\nalgorithm in this paper is superior to the latest SSN method and the classic\ncoordinate descent (CD) algorithm for solving non-convex penalized\nhigh-dimensional linear regression problems.",
+          "arxiv_id": "2111.11801v1"
+        },
+        {
+          "title": "MARS: A second-order reduction algorithm for high-dimensional sparse precision matrices estimation",
+          "year": "2021-06",
+          "abstract": "Estimation of the precision matrix (or inverse covariance matrix) is of great\nimportance in statistical data analysis and machine learning. However, as the\nnumber of parameters scales quadratically with the dimension $p$, computation\nbecomes very challenging when $p$ is large. In this paper, we propose an\nadaptive sieving reduction algorithm to generate a solution path for the\nestimation of precision matrices under the $\\ell_1$ penalized D-trace loss,\nwith each subproblem being solved by a second-order algorithm. In each\niteration of our algorithm, we are able to greatly reduce the number of\nvariables in the {problem} based on the Karush-Kuhn-Tucker (KKT) conditions and\nthe sparse structure of the estimated precision matrix in the previous\niteration. As a result, our algorithm is capable of handling datasets with very\nhigh dimensions that may go beyond the capacity of the existing methods.\nMoreover, for the sub-problem in each iteration, other than solving the primal\nproblem directly, we develop a semismooth Newton augmented Lagrangian algorithm\nwith global linear convergence rate on the dual problem to improve the\nefficiency. Theoretical properties of our proposed algorithm have been\nestablished. In particular, we show that the convergence rate of our algorithm\nis asymptotically superlinear. The high efficiency and promising performance of\nour algorithm are illustrated via extensive simulation studies and real data\napplications, with comparison to several state-of-the-art solvers.",
+          "arxiv_id": "2106.13508v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Hamiltonian Assisted Metropolis Sampling",
+          "year": "2020-05",
+          "abstract": "Various Markov chain Monte Carlo (MCMC) methods are studied to improve upon\nrandom walk Metropolis sampling, for simulation from complex distributions.\nExamples include Metropolis-adjusted Langevin algorithms, Hamiltonian Monte\nCarlo, and other recent algorithms related to underdamped Langevin dynamics. We\npropose a broad class of irreversible sampling algorithms, called Hamiltonian\nassisted Metropolis sampling (HAMS), and develop two specific algorithms with\nappropriate tuning and preconditioning strategies. Our HAMS algorithms are\ndesigned to achieve two distinctive properties, while using an augmented target\ndensity with momentum as an auxiliary variable. One is generalized detailed\nbalance, which induces an irreversible exploration of the target. The other is\na rejection-free property, which allows our algorithms to perform\nsatisfactorily with relatively large step sizes. Furthermore, we formulate a\nframework of generalized Metropolis--Hastings sampling, which not only\nhighlights our construction of HAMS at a more abstract level, but also\nfacilitates possible further development of irreversible MCMC algorithms. We\npresent several numerical experiments, where the proposed algorithms are found\nto consistently yield superior results among existing ones.",
+          "arxiv_id": "2005.08159v1"
+        },
+        {
+          "title": "Metropolis Augmented Hamiltonian Monte Carlo",
+          "year": "2022-01",
+          "abstract": "Hamiltonian Monte Carlo (HMC) is a powerful Markov Chain Monte Carlo (MCMC)\nmethod for sampling from complex high-dimensional continuous distributions.\nHowever, in many situations it is necessary or desirable to combine HMC with\nother Metropolis-Hastings (MH) samplers. The common HMC-within-Gibbs strategy\nimplies a trade-off between long HMC trajectories and more frequent other MH\nupdates. Addressing this trade-off has been the focus of several recent works.\nIn this paper we propose Metropolis Augmented Hamiltonian Monte Carlo (MAHMC),\nan HMC variant that allows MH updates within HMC and eliminates this trade-off.\nExperiments on two representative examples demonstrate MAHMC's efficiency and\nease of use when compared with within-Gibbs alternatives.",
+          "arxiv_id": "2201.08044v2"
+        },
+        {
+          "title": "On Irreversible Metropolis Sampling Related to Langevin Dynamics",
+          "year": "2021-06",
+          "abstract": "There has been considerable interest in designing Markov chain Monte Carlo\nalgorithms by exploiting numerical methods for Langevin dynamics, which\nincludes Hamiltonian dynamics as a deterministic case. A prominent approach is\nHamiltonian Monte Carlo (HMC), where a leapfrog discretization of Hamiltonian\ndynamics is employed. We investigate a recently proposed class of irreversible\nsampling algorithms, called Hamiltonian assisted Metropolis sampling (HAMS),\nwhich uses an augmented target density similarly as in HMC, but involves a\nflexible proposal scheme and a carefully formulated acceptance-rejection scheme\nto achieve generalized reversibility. We show that as the step size tends to 0,\nthe HAMS proposal satisfies a class of stochastic differential equations\nincluding Langevin dynamics as a special case. We provide theoretical results\nfor HAMS under the univariate Gaussian setting, including the stationary\nvariance, the expected acceptance rate, and the spectral radius. From these\nresults, we derive default choices of tuning parameters for HAMS, such that\nonly the step size needs to be tuned in applications. Various relatively recent\nalgorithms for Langevin dynamics are also shown to fall in the class of HAMS\nproposals up to negligible differences. Our numerical experiments on sampling\nhigh-dimensional latent variables confirm that the HAMS algorithms consistently\nachieve superior performance, compared with several Metropolis-adjusted\nalgorithms based on popular integrators of Langevin dynamics.",
+          "arxiv_id": "2106.03012v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "High-dimensional modeling of spatial and spatio-temporal conditional extremes using INLA and Gaussian Markov random fields",
+          "year": "2020-11",
+          "abstract": "The conditional extremes framework allows for event-based stochastic modeling\nof dependent extremes, and has recently been extended to spatial and\nspatio-temporal settings. After standardizing the marginal distributions and\napplying an appropriate linear normalization, certain non-stationary Gaussian\nprocesses can be used as asymptotically-motivated models for the process\nconditioned on threshold exceedances at a fixed reference location and time. In\nthis work, we adapt existing conditional extremes models to allow for the\nhandling of large spatial datasets. This involves specifying the model for\nspatial observations at $d$ locations in terms of a latent $m\\ll d$ dimensional\nGaussian model, whose structure is specified by a Gaussian Markov random field.\nWe perform Bayesian inference for such models for datasets containing thousands\nof observation locations using the integrated nested Laplace approximation, or\nINLA. We explain how constraints on the spatial and spatio-temporal Gaussian\nprocesses, arising from the conditioning mechanism, can be implemented through\nthe latent variable approach without losing the computationally convenient\nMarkov property. We discuss tools for the comparison of models via their\nposterior distributions, and illustrate the flexibility of the approach with\ngridded Red Sea surface temperature data at over $6,000$ observed locations.\nPosterior sampling is exploited to study the probability distribution of\ncluster functionals of spatial and spatio-temporal extreme episodes.",
+          "arxiv_id": "2011.04486v3"
+        },
+        {
+          "title": "Spatial Factor Modeling: A Bayesian Matrix-Normal Approach for Misaligned Data",
+          "year": "2020-05",
+          "abstract": "Multivariate spatially-oriented data sets are prevalent in the environmental\nand physical sciences. Scientists seek to jointly model multiple variables,\neach indexed by a spatial location, to capture any underlying spatial\nassociation for each variable and associations among the different dependent\nvariables. Multivariate latent spatial process models have proved effective in\ndriving statistical inference and rendering better predictive inference at\narbitrary locations for the spatial process. High-dimensional multivariate\nspatial data, which is the theme of this article, refers to data sets where the\nnumber of spatial locations and the number of spatially dependent variables is\nvery large. The field has witnessed substantial developments in scalable models\nfor univariate spatial processes, but such methods for multivariate spatial\nprocesses, especially when the number of outcomes are moderately large, are\nlimited in comparison. Here, we extend scalable modeling strategies for a\nsingle process to multivariate processes. We pursue Bayesian inference which is\nattractive for full uncertainty quantification of the latent spatial process.\nOur approach exploits distribution theory for the Matrix-Normal distribution,\nwhich we use to construct scalable versions of a hierarchical linear model of\ncoregionalization (LMC) and spatial factor models that deliver inference over a\nhigh-dimensional parameter space including the latent spatial process. We\nillustrate the computational and inferential benefits of our algorithms over\ncompeting methods using simulation studies and an analysis of a massive\nvegetation index data set.",
+          "arxiv_id": "2006.00595v2"
+        },
+        {
+          "title": "Modelling Big, Heterogeneous, Non-Gaussian Spatial and Spatio-Temporal Data using FRK",
+          "year": "2021-10",
+          "abstract": "Non-Gaussian spatial and spatio-temporal data are becoming increasingly\nprevalent, and their analysis is needed in a variety of disciplines. FRK is an\nR package for spatial/spatio-temporal modelling and prediction with very large\ndata sets that, to date, has only supported linear process models and Gaussian\ndata models. In this paper, we describe a major upgrade to FRK that allows for\nnon-Gaussian data to be analysed in a generalised linear mixed model framework.\nThese vastly more general spatial and spatio-temporal models are fitted using\nthe Laplace approximation via the software TMB. The existing functionality of\nFRK is retained with this advance into non-Gaussian models; in particular, it\nallows for automatic basis-function construction, it can handle both\npoint-referenced and areal data simultaneously, and it can predict process\nvalues at any spatial support from these data. This new version of FRK also\nallows for the use of a large number of basis functions when modelling the\nspatial process, and is thus often able to achieve more accurate predictions\nthan previous versions of the package in a Gaussian setting. We demonstrate\ninnovative features in this new version of FRK, highlight its ease of use, and\ncompare it to alternative packages using both simulated and real data sets.",
+          "arxiv_id": "2110.02507v3"
+        }
+      ],
+      "5": [
+        {
+          "title": "MSTL: A Seasonal-Trend Decomposition Algorithm for Time Series with Multiple Seasonal Patterns",
+          "year": "2021-07",
+          "abstract": "The decomposition of time series into components is an important task that\nhelps to understand time series and can enable better forecasting. Nowadays,\nwith high sampling rates leading to high-frequency data (such as daily, hourly,\nor minutely data), many real-world datasets contain time series data that can\nexhibit multiple seasonal patterns. Although several methods have been proposed\nto decompose time series better under these circumstances, they are often\ncomputationally inefficient or inaccurate. In this study, we propose Multiple\nSeasonal-Trend decomposition using Loess (MSTL), an extension to the\ntraditional Seasonal-Trend decomposition using Loess (STL) procedure, allowing\nthe decomposition of time series with multiple seasonal patterns. In our\nevaluation on synthetic and a perturbed real-world time series dataset,\ncompared to other decomposition benchmarks, MSTL demonstrates competitive\nresults with lower computational cost. The implementation of MSTL is available\nin the R package forecast.",
+          "arxiv_id": "2107.13462v1"
+        },
+        {
+          "title": "Resampling Methods that Generate Time Series Data to Enable Sensitivity and Model Analysis in Energy Modeling",
+          "year": "2025-02",
+          "abstract": "Energy systems modeling frequently relies on time series data, whether\nobserved or forecast. This is particularly the case, for example, in capacity\nplanning models that use hourly production and load data forecast to occur over\nthe coming several decades. This paper addresses the attendant problem of\nperforming sensitivity, robustness, and other post-solution analyses using time\nseries data. We explore two efficient and relatively simple, non-parametric,\nbootstrapping methods for generating arbitrary numbers of time series from a\nsingle observed or forecast series. The paper presents and assesses each\nmethod. We find that the generated series are both visually and by statistical\nsummary measures close to the original observational data. In consequence these\nseries are credibly taken as stochastic instances from a common distribution,\nthat of the original series of observations. With climate change in mind, the\npaper further proposes and explores two general techniques for systematically\naltering (increasing or decreasing) time series. Both for the perturbed and\nunperturbed synthetic series data, we find that the generated series induce\nvariability in properties of the series that are important for energy modeling,\nin particular periods of under- and over-production, and periods of increased\nramping rates. In consequence, series produced in this way are apt for use in\nrobustness, sensitivity, and in general post-solution analysis of energy\nplanning models. These validity factors auger well for applications beyond\nenergy modeling.",
+          "arxiv_id": "2502.08102v1"
+        },
+        {
+          "title": "A Semiparametric Approach to the Detection of Change-points in Volatility Dynamics of Financial Data",
+          "year": "2022-10",
+          "abstract": "One of the most important features of financial time series data is\nvolatility. There are often structural changes in volatility over time, and an\naccurate estimation of the volatility of financial time series requires careful\nidentification of change-points. A common approach to modeling the volatility\nof time series data is the well-known GARCH model. Although the problem of\nchange-point estimation of volatility dynamics derived from the GARCH model has\nbeen considered in the literature, these approaches rely on parametric\nassumptions of the conditional error distribution, which are often violated in\nfinancial time series. This may lead to inaccuracies in change-point detection\nresulting in unreliable GARCH volatility estimates. This paper introduces a\nnovel change-point detection algorithm based on a semiparametric GARCH model.\nThe proposed method retains the structural advantages of the GARCH process\nwhile incorporating the flexibility of nonparametric conditional error\ndistribution. The approach utilizes a penalized likelihood derived from a\nsemiparametric GARCH model and an efficient binary segmentation algorithm. The\nresults show that in terms of change-point estimation and detection accuracy,\nthe semiparametric method outperforms the commonly used Quasi-MLE (QMLE) and\nother variations of GARCH models in wide-ranging scenarios.",
+          "arxiv_id": "2210.11520v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Fast inference of latent space dynamics in huge relational event networks",
+          "year": "2023-03",
+          "abstract": "Relational events are a type of social interactions, that sometimes are\nreferred to as dynamic networks. Its dynamics typically depends on emerging\npatterns, so-called endogenous variables, or external forces, referred to as\nexogenous variables. Comprehensive information on the actors in the network,\nespecially for huge networks, is rare, however. A latent space approach in\nnetwork analysis has been a popular way to account for unmeasured covariates\nthat are driving network configurations. Bayesian and EM-type algorithms have\nbeen proposed for inferring the latent space, but both the sheer size many\nsocial network applications as well as the dynamic nature of the process, and\ntherefore the latent space, make computations prohibitively expensive. In this\nwork we propose a likelihood-based algorithm that can deal with huge relational\nevent networks. We propose a hierarchical strategy for inferring network\ncommunity dynamics embedded into an interpretable latent space. Node dynamics\nare described by smooth spline processes. To make the framework feasible for\nlarge networks we borrow from machine learning optimization methodology.\nModel-based clustering is carried out via a convex clustering penalization,\nencouraging shared trajectories for ease of interpretation. We propose a\nmodel-based approach for separating macro-microstructures and perform a\nhierarchical analysis within successive hierarchies. The method can fit\nmillions of nodes on a public Colab GPU in a few minutes. The code and a\ntutorial are available in a Github repository.",
+          "arxiv_id": "2303.17460v1"
+        },
+        {
+          "title": "Root and community inference on the latent growth process of a network",
+          "year": "2021-07",
+          "abstract": "Many existing statistical models for networks overlook the fact that many\nreal world networks are formed through a growth process. To address this, we\nintroduce the PAPER (Preferential Attachment Plus Erd\\H{o}s--R\\'{e}nyi) model\nfor random networks, where we let a random network G be the union of a\npreferential attachment (PA) tree T and additional Erd\\H{o}s--R\\'{e}nyi (ER)\nrandom edges. The PA tree component captures the underlying growth/recruitment\nprocess of a network where vertices and edges are added sequentially, while the\nER component can be regarded as random noise. Given only a single snapshot of\nthe final network G, we study the problem of constructing confidence sets for\nthe early history, in particular the root node, of the unobserved growth\nprocess; the root node can be patient zero in a disease infection network or\nthe source of fake news in a social media network. We propose an inference\nalgorithm based on Gibbs sampling that scales to networks with millions of\nnodes and provide theoretical analysis showing that the expected size of the\nconfidence set is small so long as the noise level of the ER edges is not too\nlarge. We also propose variations of the model in which multiple growth\nprocesses occur simultaneously, reflecting the growth of multiple communities,\nand we use these models to provide a new approach to community detection.",
+          "arxiv_id": "2107.00153v4"
+        },
+        {
+          "title": "Actor Heterogeneity and Explained Variance in Network Models -- A Scalable Approach through Variational Approximations",
+          "year": "2022-04",
+          "abstract": "The analysis of network data has gained considerable interest in recent\nyears. This also includes the analysis of large, high-dimensional networks with\nhundreds and thousands of nodes. While exponential random graph models serve as\nworkhorse for network data analyses, their applicability to very large networks\nis problematic via classical inference such as maximum likelihood or exact\nBayesian estimation owing to scaling and instability issues. The latter trace\nfrom the fact that classical network statistics consider nodes as exchangeable,\ni.e., actors in the network are assumed to be homogeneous. This is often\nquestionable. One way to circumvent the restrictive assumption is to include\nactor-specific random effects, which account for unobservable heterogeneity.\nHowever, this increases the number of unknowns considerably, thus making the\nmodel highly-parameterized. As a solution even for very large networks, we\npropose a scalable approach based on variational approximations, which not only\nleads to numerically stable estimation but is also applicable to\nhigh-dimensional directed as well as undirected networks. We furthermore\ndemonstrate that including node-specific covariates can reduce node\nheterogeneity, which we facilitate through versatile prior formulations and a\nnew measure that we call posterior explained variance. We illustrate our\napproach in three diverse examples, covering network data from the Italian\nParliament, international arms trading, and Facebook; and conduct detailed\nsimulation studies.",
+          "arxiv_id": "2204.14214v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Scalable Approximate Bayesian Computation for Growing Network Models via Extrapolated and Sampled Summaries",
+          "year": "2020-11",
+          "abstract": "Approximate Bayesian computation (ABC) is a simulation-based likelihood-free\nmethod applicable to both model selection and parameter estimation. ABC\nparameter estimation requires the ability to forward simulate datasets from a\ncandidate model, but because the sizes of the observed and simulated datasets\nusually need to match, this can be computationally expensive. Additionally,\nsince ABC inference is based on comparisons of summary statistics computed on\nthe observed and simulated data, using computationally expensive summary\nstatistics can lead to further losses in efficiency. ABC has recently been\napplied to the family of mechanistic network models, an area that has\ntraditionally lacked tools for inference and model choice. Mechanistic models\nof network growth repeatedly add nodes to a network until it reaches the size\nof the observed network, which may be of the order of millions of nodes. With\nABC, this process can quickly become computationally prohibitive due to the\nresource intensive nature of network simulations and evaluation of summary\nstatistics. We propose two methodological developments to enable the use of ABC\nfor inference in models for large growing networks. First, to save time needed\nfor forward simulating model realizations, we propose a procedure to\nextrapolate (via both least squares and Gaussian processes) summary statistics\nfrom small to large networks. Second, to reduce computation time for evaluating\nsummary statistics, we use sample-based rather than census-based summary\nstatistics. We show that the ABC posterior obtained through this approach,\nwhich adds two additional layers of approximation to the standard ABC, is\nsimilar to a classic ABC posterior. Although we deal with growing network\nmodels, both extrapolated summaries and sampled summaries are expected to be\nrelevant in other ABC settings where the data are generated incrementally.",
+          "arxiv_id": "2011.04532v1"
+        },
+        {
+          "title": "Optimal combination of composite likelihoods using approximate Bayesian computation with application to state-space models",
+          "year": "2024-04",
+          "abstract": "Composite likelihood provides approximate inference when the full likelihood\nis intractable and sub-likelihood functions of marginal events can be evaluated\nrelatively easily. It has been successfully applied for many complex models.\nHowever, its wider application is limited by two issues. First, weight\nselection of marginal likelihood can have a significant impact on the\ninformation efficiency and is currently an open question. Second, calibrated\nBayesian inference with composite likelihood requires curvature adjustment\nwhich is difficult for dependent data. This work shows that approximate\nBayesian computation (ABC) can properly address these two issues by using\nmultiple composite score functions as summary statistics. First, the\nsummary-based posterior distribution gives the optimal Godambe information\namong a wide class of estimators defined by linear combinations of estimating\nfunctions. Second, to make ABC computationally feasible for models where\nmarginal likelihoods have no closed form, a novel approach is proposed to\nestimate all simulated marginal scores using a Monte Carlo sample with size N.\nSufficient conditions are given for the additional noise to be negligible with\nN fixed as the data size n goes to infinity, and the computational cost is\nO(n). Third, asymptotic properties of ABC with summary statistics having\nheterogeneous convergence rates is derived, and an adaptive scheme to choose\nthe component composite scores is proposed. Numerical studies show that the new\nmethod significantly outperforms the existing Bayesian composite likelihood\nmethods, and the efficiency of adaptively combined composite scores well\napproximates the efficiency of particle MCMC using the full likelihood.",
+          "arxiv_id": "2404.02313v2"
+        },
+        {
+          "title": "Rare event ABC-SMC$^{2}$",
+          "year": "2022-11",
+          "abstract": "Approximate Bayesian computation (ABC) is a well-established family of Monte\nCarlo methods for performing approximate Bayesian inference in the case where\nan ``implicit'' model is used for the data: when the data model can be\nsimulated, but the likelihood cannot easily be pointwise evaluated. A\nfundamental property of standard ABC approaches is that the number of Monte\nCarlo points required to achieve a given accuracy scales exponentially with the\ndimension of the data. Prangle et al. (2018) proposes a Markov chain Monte\nCarlo (MCMC) method that uses a rare event sequential Monte Carlo (SMC)\napproach to estimating the ABC likelihood that avoids this exponential scaling,\nand thus allows ABC to be used on higher dimensional data. This paper builds on\nthe work of Prangle et al. (2018) by using the rare event SMC approach within\nan SMC algorithm, instead of within an MCMC algorithm. The new method has a\nsimilar structure to SMC$^{2}$ (Chopin et al., 2013), and requires less tuning\nthan the MCMC approach. We demonstrate the new approach, compared to existing\nABC-SMC methods, on a toy example and on a duplication-divergence random graph\nmodel used for modelling protein interaction networks.",
+          "arxiv_id": "2211.02172v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "A Likelihood-Free Approach to Goal-Oriented Bayesian Optimal Experimental Design",
+          "year": "2024-08",
+          "abstract": "Conventional Bayesian optimal experimental design seeks to maximize the\nexpected information gain (EIG) on model parameters. However, the end goal of\nthe experiment often is not to learn the model parameters, but to predict\ndownstream quantities of interest (QoIs) that depend on the learned parameters.\nAnd designs that offer high EIG for parameters may not translate to high EIG\nfor QoIs. Goal-oriented optimal experimental design (GO-OED) thus directly\ntargets to maximize the EIG of QoIs.\n  We introduce LF-GO-OED (likelihood-free goal-oriented optimal experimental\ndesign), a computational method for conducting GO-OED with nonlinear\nobservation and prediction models. LF-GO-OED is specifically designed to\naccommodate implicit models, where the likelihood is intractable. In\nparticular, it builds a density ratio estimator from samples generated from\napproximate Bayesian computation (ABC), thereby sidestepping the need for\nlikelihood evaluations or density estimations. The overall method is validated\non benchmark problems with existing methods, and demonstrated on scientific\napplications of epidemiology and neural science.",
+          "arxiv_id": "2408.09582v1"
+        },
+        {
+          "title": "Bayesian Experimental Design for Implicit Models by Mutual Information Neural Estimation",
+          "year": "2020-02",
+          "abstract": "Implicit stochastic models, where the data-generation distribution is\nintractable but sampling is possible, are ubiquitous in the natural sciences.\nThe models typically have free parameters that need to be inferred from data\ncollected in scientific experiments. A fundamental question is how to design\nthe experiments so that the collected data are most useful. The field of\nBayesian experimental design advocates that, ideally, we should choose designs\nthat maximise the mutual information (MI) between the data and the parameters.\nFor implicit models, however, this approach is severely hampered by the high\ncomputational cost of computing posteriors and maximising MI, in particular\nwhen we have more than a handful of design variables to optimise. In this\npaper, we propose a new approach to Bayesian experimental design for implicit\nmodels that leverages recent advances in neural MI estimation to deal with\nthese issues. We show that training a neural network to maximise a lower bound\non MI allows us to jointly determine the optimal design and the posterior.\nSimulation studies illustrate that this gracefully extends Bayesian\nexperimental design for implicit models to higher design dimensions.",
+          "arxiv_id": "2002.08129v3"
+        },
+        {
+          "title": "Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design",
+          "year": "2021-03",
+          "abstract": "We introduce Deep Adaptive Design (DAD), a method for amortizing the cost of\nadaptive Bayesian experimental design that allows experiments to be run in\nreal-time. Traditional sequential Bayesian optimal experimental design\napproaches require substantial computation at each stage of the experiment.\nThis makes them unsuitable for most real-world applications, where decisions\nmust typically be made quickly. DAD addresses this restriction by learning an\namortized design network upfront and then using this to rapidly run (multiple)\nadaptive experiments at deployment time. This network represents a design\npolicy which takes as input the data from previous steps, and outputs the next\ndesign using a single forward pass; these design decisions can be made in\nmilliseconds during the live experiment. To train the network, we introduce\ncontrastive information bounds that are suitable objectives for the sequential\nsetting, and propose a customized network architecture that exploits key\nsymmetries. We demonstrate that DAD successfully amortizes the process of\nexperimental design, outperforming alternative strategies on a number of\nproblems.",
+          "arxiv_id": "2103.02438v2"
+        }
+      ],
+      "9": [
+        {
+          "title": "A kinetic model for qualitative understanding and analysis of the effect of complete lockdown imposed by India for controlling the COVID-19 disease spread by the SARS-CoV-2 virus",
+          "year": "2020-04",
+          "abstract": "The present ongoing global pandemic caused by SARS-CoV-2 virus is creating\nhavoc across the world. The absence of any vaccine as well as any definitive\ndrug to cure, has made the situation very grave. Therefore only few effective\ntools are available to contain the rapid pace of spread of this disease, named\nas COVID-19. On 24th March, 2020, the the Union Government of India made an\nannouncement of unprecedented complete lockdown of the entire country effective\nfrom the next day. No exercise of similar scale and magnitude has been ever\nundertaken anywhere on the globe in the history of entire mankind. This study\naims to scientifically analyze the implications of this decision using a\nkinetic model covering more than 96% of Indian territory. This model was\nfurther constrained by large sets of realistic parameters pertinent to India in\norder to capture the ground realities prevailing in India, such as: (i) true\nstate wise population density distribution, (ii) accurate state wise infection\ndistribution for the zeroth day of simulation (20th March, 2020), (iii)\nrealistic movements of average clusters, (iv) rich diversity in movements\npatterns across different states, (v) migration patterns across different\ngeographies, (vi) different migration patterns for pre- and post-COVID-19\noutbreak, (vii) Indian demographic data based on the 2011 census, (viii) World\nHealth Organization (WHO) report on demography wise infection rate and (ix)\nincubation period as per WHO report. This model does not attempt to make a\nlong-term prediction about the disease spread on a standalone basis; but to\ncompare between two different scenarios (complete lockdown vs. no lockdown). In\nthe framework of model assumptions, our model conclusively shows significant\nsuccess of the lockdown in containing the disease within a tiny fraction of the\npopulation and in the absence of it, it would have led to a very grave\nsituation.",
+          "arxiv_id": "2004.05684v1"
+        },
+        {
+          "title": "Dynamic SIR/SEIR-like models comprising a time-dependent transmission rate: Hamiltonian Monte Carlo approach with applications to COVID-19",
+          "year": "2023-01",
+          "abstract": "A study of changes in the transmission of a disease, in particular, a new\ndisease like COVID-19, requires very flexible models which can capture, among\nothers, the effects of non-pharmacological and pharmacological measures,\nchanges in population behaviour and random events. In this work, we give\npriority to data-driven approaches and choose to avoid a priori and ad-hoc\nmethods. We introduce a generalised family of epidemiologically informed\nmechanistic models, guided by Ordinary Differential Equations and embedded in a\nprobabilistic model. The mechanistic models SIKR and SEMIKR with K Infectious\nand M Exposed sub-compartments (resulting in non-exponential infectious and\nexposed periods) are enriched with a time-dependent transmission rate,\nparametrized using Bayesian P-splines. This enables an extensive flexibility in\nthe transmission dynamics, with no ad-hoc intervention, while maintaining good\ndifferentiability properties. Our probabilistic model relies on the solutions\nof the mechanistic model and benefits from access to the information about\nunder-reporting of new infected cases, a crucial property when studying\ndiseases with a large fraction of asymptomatic infections. Such a model can be\nefficiently differentiated, which facilitates the use of Hamiltonian Monte\nCarlo for sampling from the posterior distribution of the model parameters. The\nfeatures and advantages of the proposed approach are demonstrated through\ncomparison with state-of-the-art methods using a synthetic dataset.\nFurthermore, we successfully apply our methodology to the study of the\ntransmission dynamics of COVID-19 in the Basque Country (Spain) for almost a\nyear, from mid February 2020 to the end of January 2021.",
+          "arxiv_id": "2301.06385v1"
+        },
+        {
+          "title": "The Framework for the Prediction of the Critical Turning Period for Outbreak of COVID-19 Spread in China based on the iSEIR Model",
+          "year": "2020-04",
+          "abstract": "The goal of this study is to establish a general framework for predicting the\nso-called critical Turning Period in an infectious disease epidemic such as the\nCOVID-19 outbreak in China early this year. This framework enabled a timely\nprediction of the turning period when applied to Wuhan COVID-19 epidemic and\ninformed the relevant authority for taking appropriate and timely actions to\ncontrol the epidemic. It is expected to provide insightful information on\nturning period for the world's current battle against the COVID-19 pandemic.\nThe underlying mathematical model in our framework is the individual\nSusceptible-Exposed- Infective-Removed (iSEIR) model, which is a set of\ndifferential equations extending the classic SEIR model. We used the observed\ndaily cases of COVID-19 in Wuhan from February 6 to 10, 2020 as the input to\nthe iSEIR model and were able to generate the trajectory of COVID-19 cases\ndynamics for the following days at midnight of February 10 based on the updated\nmodel, from which we predicted that the turning period of CIVID-19 outbreak in\nWuhan would arrive within one week after February 14. This prediction turned to\nbe timely and accurate, providing adequate time for the government, hospitals,\nessential industry sectors and services to meet peak demands and to prepare\naftermath planning. Our study also supports the observed effectiveness on\nflatting the epidemic curve by decisively imposing the Lockdown and Isolation\nControl Program in Wuhan since January 23, 2020. The Wuhan experience provides\nan exemplary lesson for the whole world to learn in combating COVID-19.",
+          "arxiv_id": "2004.02278v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:46:18Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

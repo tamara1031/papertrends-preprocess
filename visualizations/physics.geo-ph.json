@@ -1,0 +1,1472 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_flow_model_fluid_fracture",
+        "keywords": [
+          [
+            "flow",
+            0.019190373871853822
+          ],
+          [
+            "model",
+            0.019072394703391293
+          ],
+          [
+            "fluid",
+            0.018213401301608406
+          ],
+          [
+            "fracture",
+            0.015072893549269882
+          ],
+          [
+            "fault",
+            0.014629607678056834
+          ],
+          [
+            "stress",
+            0.014250415145610203
+          ],
+          [
+            "slip",
+            0.014124174246710846
+          ],
+          [
+            "pressure",
+            0.012767464068972438
+          ],
+          [
+            "ice",
+            0.011795825615611136
+          ],
+          [
+            "water",
+            0.0117528183207617
+          ]
+        ],
+        "count": 724
+      },
+      "1": {
+        "name": "1_Earth_mantle_formation_core",
+        "keywords": [
+          [
+            "Earth",
+            0.026690400327480403
+          ],
+          [
+            "mantle",
+            0.019839320119821577
+          ],
+          [
+            "formation",
+            0.018409641339455673
+          ],
+          [
+            "core",
+            0.015599759752036448
+          ],
+          [
+            "Fe",
+            0.015547610565931977
+          ],
+          [
+            "surface",
+            0.014726555035940232
+          ],
+          [
+            "iron",
+            0.014529016606206526
+          ],
+          [
+            "planets",
+            0.01451682779748353
+          ],
+          [
+            "water",
+            0.013762629835269899
+          ],
+          [
+            "composition",
+            0.013664150276039105
+          ]
+        ],
+        "count": 471
+      },
+      "2": {
+        "name": "2_data_inversion_seismic_FWI",
+        "keywords": [
+          [
+            "data",
+            0.04055007019334016
+          ],
+          [
+            "inversion",
+            0.03299915617510095
+          ],
+          [
+            "seismic",
+            0.03291023192145734
+          ],
+          [
+            "FWI",
+            0.02109146459013588
+          ],
+          [
+            "model",
+            0.0206137334397758
+          ],
+          [
+            "method",
+            0.01922329165911283
+          ],
+          [
+            "velocity",
+            0.01829487780196897
+          ],
+          [
+            "noise",
+            0.016375434278976645
+          ],
+          [
+            "seismic data",
+            0.015132221154019835
+          ],
+          [
+            "network",
+            0.014180207162812673
+          ]
+        ],
+        "count": 458
+      },
+      "3": {
+        "name": "3_climate_models_model_data",
+        "keywords": [
+          [
+            "climate",
+            0.03092557630345257
+          ],
+          [
+            "models",
+            0.022410275204643542
+          ],
+          [
+            "model",
+            0.021787236316597066
+          ],
+          [
+            "data",
+            0.02005455657732475
+          ],
+          [
+            "global",
+            0.014778916851099135
+          ],
+          [
+            "learning",
+            0.01446968822510441
+          ],
+          [
+            "temperature",
+            0.012911942891151523
+          ],
+          [
+            "time",
+            0.010811938800651151
+          ],
+          [
+            "Earth",
+            0.009790940899436563
+          ],
+          [
+            "change",
+            0.009523750744090759
+          ]
+        ],
+        "count": 352
+      },
+      "4": {
+        "name": "4_earthquake_seismic_earthquakes_magnitude",
+        "keywords": [
+          [
+            "earthquake",
+            0.0479767174064644
+          ],
+          [
+            "seismic",
+            0.032599165169764896
+          ],
+          [
+            "earthquakes",
+            0.031144998036688697
+          ],
+          [
+            "magnitude",
+            0.023065844798476075
+          ],
+          [
+            "events",
+            0.022151485030853745
+          ],
+          [
+            "data",
+            0.02146993850773255
+          ],
+          [
+            "time",
+            0.020575951422544814
+          ],
+          [
+            "model",
+            0.018293248767346792
+          ],
+          [
+            "learning",
+            0.017310837068996842
+          ],
+          [
+            "seismicity",
+            0.013136606897065492
+          ]
+        ],
+        "count": 290
+      },
+      "5": {
+        "name": "5_magnetic_core_waves_convection",
+        "keywords": [
+          [
+            "magnetic",
+            0.027717833572907132
+          ],
+          [
+            "core",
+            0.026847095249102167
+          ],
+          [
+            "waves",
+            0.025460119444839537
+          ],
+          [
+            "convection",
+            0.02329988090913123
+          ],
+          [
+            "rotating",
+            0.02152405604944273
+          ],
+          [
+            "field",
+            0.01904422355854698
+          ],
+          [
+            "flow",
+            0.017692575543204303
+          ],
+          [
+            "energy",
+            0.016769773070924563
+          ],
+          [
+            "boundary",
+            0.016566819759093347
+          ],
+          [
+            "scale",
+            0.016109876700800527
+          ]
+        ],
+        "count": 255
+      },
+      "6": {
+        "name": "6_learning_model_data_reservoir",
+        "keywords": [
+          [
+            "learning",
+            0.024562912163067666
+          ],
+          [
+            "model",
+            0.020531451496261625
+          ],
+          [
+            "data",
+            0.019553169126030265
+          ],
+          [
+            "reservoir",
+            0.019468200906821352
+          ],
+          [
+            "flow",
+            0.017772317036308178
+          ],
+          [
+            "models",
+            0.016405522063396086
+          ],
+          [
+            "permeability",
+            0.01621602693038048
+          ],
+          [
+            "properties",
+            0.01570814501585946
+          ],
+          [
+            "machine",
+            0.01525119940697905
+          ],
+          [
+            "rock",
+            0.01490688906006193
+          ]
+        ],
+        "count": 139
+      },
+      "7": {
+        "name": "7_gravity_GNSS_satellite_clocks",
+        "keywords": [
+          [
+            "gravity",
+            0.029523285660178762
+          ],
+          [
+            "GNSS",
+            0.02808732888770545
+          ],
+          [
+            "satellite",
+            0.027913671904547636
+          ],
+          [
+            "clocks",
+            0.02103734489154511
+          ],
+          [
+            "Earth",
+            0.01998641308152684
+          ],
+          [
+            "time",
+            0.01915333646706932
+          ],
+          [
+            "geodetic",
+            0.017300198495964255
+          ],
+          [
+            "data",
+            0.017295028080499406
+          ],
+          [
+            "noise",
+            0.016974677271213007
+          ],
+          [
+            "observations",
+            0.016251607958886027
+          ]
+        ],
+        "count": 110
+      },
+      "8": {
+        "name": "8_geomagnetic_ionospheric_field_solar",
+        "keywords": [
+          [
+            "geomagnetic",
+            0.05901078213849815
+          ],
+          [
+            "ionospheric",
+            0.044233325717744916
+          ],
+          [
+            "field",
+            0.03621348941289811
+          ],
+          [
+            "solar",
+            0.03159597278766344
+          ],
+          [
+            "magnetic",
+            0.028597536704558335
+          ],
+          [
+            "storm",
+            0.027240566604155757
+          ],
+          [
+            "variations",
+            0.022107593447740104
+          ],
+          [
+            "time",
+            0.021073233182027713
+          ],
+          [
+            "geomagnetic field",
+            0.01991240920819224
+          ],
+          [
+            "ionosphere",
+            0.0183827942942741
+          ]
+        ],
+        "count": 96
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6210738215344247,
+        -0.7005232032388805,
+        -0.48434389125390465,
+        -0.6877562751243842,
+        -0.7105360490252008,
+        -0.4138966526014194,
+        -0.5794158827467347,
+        -0.7214599357881015
+      ],
+      [
+        -0.6210738215344247,
+        1.0,
+        -0.733081868230209,
+        -0.6604121626681112,
+        -0.7205630131153357,
+        -0.6356149300857806,
+        -0.654609204163846,
+        -0.5276067763527624,
+        -0.6818195582147286
+      ],
+      [
+        -0.7005232032388805,
+        -0.733081868230209,
+        1.0,
+        -0.5206442127026104,
+        -0.4504128929457777,
+        -0.738891161894978,
+        -0.5991373799040355,
+        -0.7240768375801669,
+        -0.7282006960450609
+      ],
+      [
+        -0.48434389125390465,
+        -0.6604121626681112,
+        -0.5206442127026104,
+        1.0,
+        -0.5835364855500198,
+        -0.7266925018276694,
+        -0.37840956273635395,
+        -0.6657693363582239,
+        -0.708250719533678
+      ],
+      [
+        -0.6877562751243842,
+        -0.7205630131153357,
+        -0.4504128929457777,
+        -0.5835364855500198,
+        1.0,
+        -0.7398942077189817,
+        -0.6005607913564374,
+        -0.7205974869575823,
+        -0.7288396544913418
+      ],
+      [
+        -0.7105360490252008,
+        -0.6356149300857806,
+        -0.738891161894978,
+        -0.7266925018276694,
+        -0.7398942077189817,
+        1.0,
+        -0.7355163961030834,
+        -0.7125459546144338,
+        -0.51861934432442
+      ],
+      [
+        -0.4138966526014194,
+        -0.654609204163846,
+        -0.5991373799040355,
+        -0.37840956273635395,
+        -0.6005607913564374,
+        -0.7355163961030834,
+        1.0,
+        -0.6090956942651111,
+        -0.7269021582507762
+      ],
+      [
+        -0.5794158827467347,
+        -0.5276067763527624,
+        -0.7240768375801669,
+        -0.6657693363582239,
+        -0.7205974869575823,
+        -0.7125459546144338,
+        -0.6090956942651111,
+        1.0,
+        -0.7114587706584602
+      ],
+      [
+        -0.7214599357881015,
+        -0.6818195582147286,
+        -0.7282006960450609,
+        -0.708250719533678,
+        -0.7288396544913418,
+        -0.51861934432442,
+        -0.7269021582507762,
+        -0.7114587706584602,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        12,
+        2,
+        6,
+        3,
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "2020-02": [
+        15,
+        0,
+        5,
+        2,
+        3,
+        2,
+        0,
+        0,
+        4
+      ],
+      "2020-03": [
+        28,
+        3,
+        9,
+        5,
+        5,
+        2,
+        0,
+        2,
+        2
+      ],
+      "2020-04": [
+        14,
+        5,
+        8,
+        7,
+        8,
+        11,
+        0,
+        3,
+        1
+      ],
+      "2020-05": [
+        20,
+        0,
+        7,
+        4,
+        6,
+        2,
+        2,
+        0,
+        4
+      ],
+      "2020-06": [
+        22,
+        4,
+        10,
+        7,
+        8,
+        1,
+        2,
+        1,
+        1
+      ],
+      "2020-07": [
+        18,
+        5,
+        6,
+        5,
+        6,
+        6,
+        1,
+        2,
+        5
+      ],
+      "2020-08": [
+        20,
+        0,
+        8,
+        4,
+        2,
+        1,
+        1,
+        4,
+        6
+      ],
+      "2020-09": [
+        20,
+        2,
+        4,
+        8,
+        2,
+        1,
+        5,
+        1,
+        7
+      ],
+      "2020-10": [
+        23,
+        3,
+        7,
+        8,
+        1,
+        4,
+        2,
+        0,
+        6
+      ],
+      "2020-11": [
+        30,
+        4,
+        8,
+        4,
+        5,
+        5,
+        1,
+        1,
+        3
+      ],
+      "2020-12": [
+        15,
+        1,
+        5,
+        11,
+        6,
+        4,
+        2,
+        1,
+        4
+      ],
+      "2021-01": [
+        24,
+        0,
+        9,
+        5,
+        6,
+        5,
+        2,
+        0,
+        3
+      ],
+      "2021-02": [
+        16,
+        2,
+        6,
+        3,
+        4,
+        2,
+        5,
+        0,
+        4
+      ],
+      "2021-03": [
+        33,
+        0,
+        3,
+        5,
+        3,
+        6,
+        2,
+        0,
+        4
+      ],
+      "2021-04": [
+        27,
+        3,
+        14,
+        6,
+        12,
+        2,
+        1,
+        0,
+        3
+      ],
+      "2021-05": [
+        18,
+        6,
+        9,
+        8,
+        6,
+        3,
+        1,
+        0,
+        4
+      ],
+      "2021-06": [
+        17,
+        1,
+        5,
+        9,
+        5,
+        2,
+        2,
+        0,
+        3
+      ],
+      "2021-07": [
+        19,
+        0,
+        6,
+        5,
+        4,
+        4,
+        5,
+        0,
+        2
+      ],
+      "2021-08": [
+        19,
+        4,
+        9,
+        4,
+        7,
+        4,
+        1,
+        2,
+        4
+      ],
+      "2021-09": [
+        20,
+        6,
+        10,
+        5,
+        7,
+        5,
+        2,
+        0,
+        2
+      ],
+      "2021-10": [
+        19,
+        2,
+        11,
+        5,
+        7,
+        4,
+        3,
+        1,
+        3
+      ],
+      "2021-11": [
+        28,
+        3,
+        7,
+        4,
+        3,
+        1,
+        5,
+        1,
+        4
+      ],
+      "2021-12": [
+        29,
+        3,
+        9,
+        5,
+        3,
+        3,
+        3,
+        1,
+        5
+      ],
+      "2022-01": [
+        26,
+        2,
+        8,
+        1,
+        1,
+        9,
+        1,
+        1,
+        4
+      ],
+      "2022-02": [
+        18,
+        3,
+        7,
+        4,
+        4,
+        5,
+        2,
+        0,
+        3
+      ],
+      "2022-03": [
+        23,
+        3,
+        5,
+        5,
+        5,
+        2,
+        3,
+        3,
+        4
+      ],
+      "2022-04": [
+        25,
+        4,
+        11,
+        7,
+        8,
+        2,
+        0,
+        1,
+        5
+      ],
+      "2022-05": [
+        25,
+        5,
+        7,
+        8,
+        4,
+        2,
+        0,
+        1,
+        2
+      ],
+      "2022-06": [
+        22,
+        2,
+        11,
+        4,
+        1,
+        1,
+        5,
+        0,
+        4
+      ],
+      "2022-07": [
+        20,
+        5,
+        6,
+        6,
+        6,
+        1,
+        1,
+        2,
+        2
+      ],
+      "2022-08": [
+        18,
+        5,
+        6,
+        6,
+        5,
+        0,
+        3,
+        1,
+        3
+      ],
+      "2022-09": [
+        23,
+        3,
+        8,
+        2,
+        5,
+        2,
+        5,
+        0,
+        7
+      ],
+      "2022-10": [
+        20,
+        4,
+        5,
+        6,
+        6,
+        2,
+        5,
+        0,
+        2
+      ],
+      "2022-11": [
+        18,
+        4,
+        4,
+        8,
+        7,
+        3,
+        0,
+        2,
+        7
+      ],
+      "2022-12": [
+        26,
+        0,
+        9,
+        13,
+        8,
+        3,
+        5,
+        2,
+        3
+      ],
+      "2023-01": [
+        35,
+        5,
+        4,
+        12,
+        5,
+        0,
+        4,
+        2,
+        4
+      ],
+      "2023-02": [
+        20,
+        3,
+        9,
+        9,
+        9,
+        1,
+        3,
+        1,
+        9
+      ],
+      "2023-03": [
+        21,
+        2,
+        9,
+        10,
+        4,
+        3,
+        3,
+        0,
+        4
+      ],
+      "2023-04": [
+        17,
+        2,
+        14,
+        8,
+        10,
+        4,
+        6,
+        2,
+        2
+      ],
+      "2023-05": [
+        21,
+        2,
+        13,
+        2,
+        9,
+        2,
+        4,
+        3,
+        1
+      ],
+      "2023-06": [
+        17,
+        2,
+        6,
+        5,
+        5,
+        3,
+        2,
+        3,
+        2
+      ],
+      "2023-07": [
+        18,
+        5,
+        10,
+        5,
+        10,
+        2,
+        1,
+        1,
+        6
+      ],
+      "2023-08": [
+        27,
+        2,
+        9,
+        2,
+        5,
+        2,
+        3,
+        1,
+        3
+      ],
+      "2023-09": [
+        24,
+        5,
+        10,
+        9,
+        5,
+        4,
+        3,
+        1,
+        2
+      ],
+      "2023-10": [
+        31,
+        1,
+        7,
+        12,
+        9,
+        4,
+        2,
+        1,
+        1
+      ],
+      "2023-11": [
+        16,
+        4,
+        12,
+        5,
+        4,
+        4,
+        5,
+        1,
+        1
+      ],
+      "2023-12": [
+        14,
+        0,
+        8,
+        8,
+        6,
+        2,
+        5,
+        0,
+        3
+      ],
+      "2024-01": [
+        16,
+        0,
+        11,
+        10,
+        7,
+        3,
+        1,
+        0,
+        4
+      ],
+      "2024-02": [
+        22,
+        1,
+        8,
+        6,
+        6,
+        3,
+        5,
+        1,
+        6
+      ],
+      "2024-03": [
+        22,
+        1,
+        8,
+        7,
+        9,
+        2,
+        4,
+        1,
+        3
+      ],
+      "2024-04": [
+        24,
+        7,
+        8,
+        5,
+        8,
+        0,
+        4,
+        1,
+        7
+      ],
+      "2024-05": [
+        16,
+        4,
+        13,
+        5,
+        4,
+        3,
+        2,
+        1,
+        3
+      ],
+      "2024-06": [
+        27,
+        1,
+        10,
+        4,
+        5,
+        3,
+        6,
+        0,
+        4
+      ],
+      "2024-07": [
+        31,
+        2,
+        11,
+        12,
+        11,
+        1,
+        2,
+        0,
+        2
+      ],
+      "2024-08": [
+        24,
+        4,
+        16,
+        6,
+        5,
+        4,
+        2,
+        1,
+        2
+      ],
+      "2024-09": [
+        21,
+        0,
+        17,
+        9,
+        9,
+        6,
+        1,
+        0,
+        1
+      ],
+      "2024-10": [
+        21,
+        1,
+        17,
+        10,
+        16,
+        7,
+        5,
+        2,
+        6
+      ],
+      "2024-11": [
+        23,
+        4,
+        11,
+        8,
+        8,
+        4,
+        1,
+        1,
+        3
+      ],
+      "2024-12": [
+        26,
+        1,
+        10,
+        9,
+        3,
+        2,
+        2,
+        2,
+        7
+      ],
+      "2025-01": [
+        20,
+        2,
+        9,
+        9,
+        8,
+        2,
+        4,
+        1,
+        4
+      ],
+      "2025-02": [
+        25,
+        1,
+        10,
+        12,
+        13,
+        2,
+        2,
+        1,
+        1
+      ],
+      "2025-03": [
+        19,
+        3,
+        14,
+        8,
+        10,
+        1,
+        2,
+        1,
+        3
+      ],
+      "2025-04": [
+        26,
+        3,
+        11,
+        8,
+        10,
+        3,
+        5,
+        2,
+        3
+      ],
+      "2025-05": [
+        24,
+        4,
+        11,
+        7,
+        9,
+        4,
+        1,
+        2,
+        3
+      ],
+      "2025-06": [
+        35,
+        6,
+        14,
+        5,
+        8,
+        2,
+        6,
+        2,
+        4
+      ],
+      "2025-07": [
+        19,
+        4,
+        8,
+        10,
+        6,
+        7,
+        6,
+        0,
+        3
+      ],
+      "2025-08": [
+        18,
+        1,
+        7,
+        3,
+        8,
+        7,
+        1,
+        1,
+        3
+      ],
+      "2025-09": [
+        12,
+        0,
+        4,
+        4,
+        3,
+        2,
+        3,
+        0,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Investigations into the opening of fractures during hydraulic testing using a hybrid-dimensional flow formulation",
+          "year": "2021-03",
+          "abstract": "We applied a hybrid-dimensional flow model to pressure transients recorded\nduring pumping experiments conducted at the Reiche Zeche underground research\nlaboratory to study the normal opening behavior of fractures due to fluid\ninjection. Two distinct types of pressure responses to flow-rate steps were\nidentified and numerically modelled using a radial-symmetric flow formulation\nfor a fracture that comprises a non-linear constitutive relation for the\ncontact mechanics governing reversible fracture surface interaction. These two\ngroups represent radial-symmetric and plane-axisymmetric flow regimes from a\nconventional pressure-diffusion perspective. A comprehensive parameter study\ninto the sensitivity of the applied hydro-mechanical model to changes in\ncharacteristic fracture parameters revealed an interrelation between fracture\nlength and normal fracture stiffness that yield a match between field\nobservations and numerical results. Fracture stiffness values increase with\ncorresponding fracture length. Decomposition of the acting normal stresses into\na stresses associated with the deformation state of the global fracture\ngeometry and the contact stresses indicates that geometrically induced stresses\ncontribute the more the lower the total effective normal stress and the shorter\nthe fracture. Separating the contributions of the local contact mechanics and\nthe overall fracture geometry to fracture normal stiffness indicates that the\nlatter, the geometrical stiffness, constitutes a lower bound for total\nstiffness; its relevance increases with decreasing fracture length, too. Our\nstudy demonstrates that non-linear hydro-mechanical coupling can lead to vastly\ndifferent hydraulic responses and thus provides an alternative to conventional\npressure-diffusion analysis that requires changes in flow regime to cover the\nfull range of observations.",
+          "arxiv_id": "2103.14367v1"
+        },
+        {
+          "title": "Dilatancy stabilises shear failure in rock",
+          "year": "2021-01",
+          "abstract": "Failure and fault slip in crystalline rocks is associated with dilation. When\npore fluids are present and drainage is insufficient, dilation leads to pore\npressure drops, which in turn lead to strengthening of the material. We\nconducted laboratory rock fracture experiments with direct in-situ fluid\npressure measurements which demonstrate that dynamic rupture propagation and\nfault slip can be stabilised (i.e., become quasi-static) by such a dilatancy\nstrengthening effect. We also observe that, for the same effective pressures\nbut lower pore fluid pressures, the stabilisation process may be arrested when\nthe pore fluid pressure approaches zero and vaporises, resulting in dynamic\nshear failure. In case of a stable rupture, we witness continued prolonged slip\nafter the main failure event that is the result of pore pressure recharge of\nthe fault zone. All our observations are quantitatively explained by a\nspring-slider model combining slip-weakening behaviour, slip-induced dilation,\nand pore fluid diffusion. Using our data in an inverse problem, we estimate the\nkey parameters controlling rupture stabilisation, fault dilation rate and fault\nzone storage. These estimates are used to make predictions for the pore\npressure drop associated with faulting, and where in the crust we may expect\ndilatancy stabilisation or vaporisation during earthquakes. For intact rock and\nwell consolidated faults, we expect strong dilatancy strengthening between 4\nand 6 km depth regardless of ambient pore pressure, and at greater depths when\nthe ambient pore pressure approaches lithostatic pressure. In the uppermost\npart of the crust ($<4$ km), we predict vaporisation of pore fluids that limits\ndilatancy strengthening. The depth estimates where dilatant stabilisation is\nmost likely coincide with geothermal energy reservoirs in crystalline rock and\nin regions where slow slip events are observed.",
+          "arxiv_id": "2101.10036v2"
+        },
+        {
+          "title": "Hydro-mechanical earthquake cycles in a poro-visco-elasto-plastic fluid-bearing fault structure",
+          "year": "2022-01",
+          "abstract": "A major goal in earthquake physics is to derive a constitutive framework for\nfault slip that captures the dependence of shear strength on fault rheology,\nsliding velocity, and pore-fluid pressure. In this study, we present H-MEC\n(Hydro-Mechanical Earthquake Cycles), a newly-developed two-phase flow\nnumerical code - which couples solid rock deformation and pervasive fluid flow\n- to simulate how crustal stress and fluid pressure evolve during the\nearthquake cycle on a fluid-bearing fault structure. This unified,\ncontinuum-based model, incorporates a staggered finite\ndifference-marker-in-cell (SFD-MIC) method and accounts for full inertial (wave\nmediated) effects and fluid flow in poro-visco-elasto-plastic compressible\nmedium. Global Picard-iterations and an adaptive time stepping allows the\ncorrect resolution of both long- and short-time scales, ranging from years\nduring slow tectonic loading to milliseconds during the propagation of dynamic\nruptures. We present a comprehensive in-plane strike-slip setup in which we\ntest analytical poroelastic benchmarks of pore-fluid pressure diffusion from an\ninjection point along a finite fault width. We then investigate how pore-fluid\npressure evolution and solid-fluid compressibility control sequences of seismic\nand aseismic slip on geologic faults. While the onset of fluid-driven shear\ncracks is controlled by localized collapse of pores and dynamic\nself-pressurization of fluids inside the undrained fault zone, subsequent\ndynamic ruptures are driven by solitary pulse-like fluid pressure waves\npropagating at seismic speed. Furthermore, shear strength weakening associated\nwith rapid self-pressurization of pore-fluid can account for the slip-fracture\nenergy scaling observed for large earthquakes.",
+          "arxiv_id": "2201.11786v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Earth's accretion inferred from iron isotopic anomalies of supernova nuclear statistical equilibrium origin",
+          "year": "2021-10",
+          "abstract": "Nucleosynthetic Fe isotopic anomalies in meteorites may be used to\nreconstruct the early dynamical evolution of the solar system and to identify\nthe origin and nature of the material that built planets. Using high-precision\niron isotopic data of 23 iron meteorites from nine major chemical groups we\nshow that all iron meteorites show the same fundamental dichotomy between\nnon-carbonaceous (NC) and a carbonaceous (CC) meteorites previously observed\nfor other elements. The Fe isotopic anomalies are predominantly produced by\nvariation in 54Fe, where all CC iron meteorites are characterized by an excess\nin 54Fe relative to NC iron meteorites. This excess in 54Fe is accompanied by\nan excess in 58Ni observed in the same CC meteorite groups. Together, these\noverabundances of 54Fe and 58Ni are produced by nuclear statistical equilibrium\neither in type Ia supernovae or in the Si/S shell of core-collapse supernovae.\nThe new Fe isotopic data reveal that Earth's mantle plots on or close to\ncorrelations defined by Fe, Mo, and Ru isotopic anomalies in iron meteorites,\nindicating that throughout Earth's accretion, the isotopic composition of its\nbuilding blocks did not drastically change. While Earth's mantle has a similar\nFe isotopic composition to CI chondrites, the latter are clearly distinct from\nEarth's mantle for other elements (e.g., Cr and Ni) whose delivery to Earth\ncoincided with Fe. The fact that CI chondrites exhibit large Cr and Ni isotopic\nanomalies relative to Earth's mantle, therefore, demonstrates that CI\nchondrites are unlikely to have contributed significant Fe to Earth.",
+          "arxiv_id": "2110.06045v1"
+        },
+        {
+          "title": "The influence of bulk composition on long-term interior-atmosphere evolution of terrestrial exoplanets",
+          "year": "2020-07",
+          "abstract": "Aims: The secondary atmospheres of terrestrial planets form and evolve as a\nconsequence of interaction with the interior over geological time. We aim to\nquantify the influence of planetary bulk composition on the\ninterior--atmosphere evolution for Earth-sized terrestrial planets to aid in\nthe interpretation of future observations of terrestrial exoplanet atmospheres.\nMethods: We used a geochemical model to determine the major-element composition\nof planetary interiors (MgO, FeO, and SiO2) following the crystallization of a\nmagma ocean after planet formation, predicting a compositional profile of the\ninterior as an initial condition for our long-term thermal evolution model. Our\n1D evolution model predicts the pressure-temperature structure of the interior,\nwhich we used to evaluate near-surface melt production and subsequent volatile\noutgassing. Volatiles are exchanged between the interior and atmosphere\naccording to mass conservation. Results: Based on stellar compositions reported\nin the Hypatia catalog, we predict that about half of rocky exoplanets have a\nmantle that convects as a single layer (whole-mantle convection), and the other\nhalf exhibit double-layered convection due to the presence of a mid-mantle\ncompositional boundary. Double-layered convection is more likely for planets\nwith high bulk planetary Fe-content and low Mg/Si-ratio. We find that planets\nwith low Mg/Si-ratio tend to cool slowly because their mantle viscosity is\nhigh. Accordingly, low-Mg/Si planets also tend to lose volatiles swiftly\nthrough extensive melting. Moreover, the dynamic regime of the lithosphere\n(plate tectonics vs.\\ stagnant lid) has a first-order influence on the thermal\nevolution and volatile cycling. These results suggest that the composition of\nterrestrial exoplanetary atmospheres can provide information on the dynamic\nregime of the lithosphere and the thermo-chemical evolution of the interior.",
+          "arxiv_id": "2007.09021v2"
+        },
+        {
+          "title": "Earth and Mars -- distinct inner Solar System products",
+          "year": "2020-06",
+          "abstract": "Composition of terrestrial planets records planetary accretion, core-mantle\nand crust-mantle differentiation, and surface processes. Here we compare the\ncompositional models of Earth and Mars to reveal their characteristics and\nformation processes. Earth and Mars are equally enriched in refractory elements\n(1.9 $\\times$ CI), although Earth is more volatile-depleted and less oxidized\nthan Mars. Their chemical compositions were established by nebular\nfractionation, with negligible contributions from post-accretionary losses of\nmoderately volatile elements. The degree of planetary volatile element\ndepletion might correlate with the abundances of chondrules in the accreted\nmaterials, planetary size, and their accretion timescale, which provides\ninsights into composition and origin of Mercury, Venus, the Moon-forming giant\nimpactor, and the proto-Earth. During its formation before and after the\nnebular disk's lifetime, the Earth likely accreted more chondrules and less\nmatrix-like materials than Mars and chondritic asteroids, establishing its\nmarked volatile depletion. A giant impact of an oxidized, differentiated\nMars-like (i.e., composition and mass) body into a volatile-depleted, reduced\nproto-Earth produced a Moon-forming debris ring with mostly a proto-Earth's\nmantle composition. Chalcophile and some siderophile elements in the silicate\nEarth added by the Mars-like impactor were extracted into the core by a sulfide\nmelt. In contrast, the composition of Mars indicates its rapid accretion of\nlesser amounts of chondrules under nearly uniform oxidizing conditions. Mars'\nrapid cooling and early loss of its dynamo likely led to the absence of plate\ntectonics and surface water, and the present-day low surface heat flux. These\nsimilarities and differences between the Earth and Mars made the former\nhabitable and the other inhospitable to uninhabitable.",
+          "arxiv_id": "2006.11051v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "MS_ATpV-FWI: Full Waveform Inversion based on Multi-scale Structural Similarity Index Measure and Anisotropic Total p-Variation Regularization",
+          "year": "2025-04",
+          "abstract": "Full waveform inversion (FWI) is a high-resolution seismic inversion\ntechnique popularly used in oil and gas exploration. Traditional FWI employs\nthe $l_2$ norm measurement to minimize the misfit between observed and\npredicted seismic data. However, when the background velocity is inaccurate or\nthe seismic data lacks low-frequency components, the conventional FWI suffers\nfrom cycle skipping, leading to inaccurate inversion results. This paper\nintroduces a multiscale structural similarity index measure (M-SSIM) objective\nfunction for FWI. We also incorporate anisotropic total p-variation\nregularization (ATpV) to further improve the accuracy of FWI. M-SSIM extracts\nmulti-scale structural features of seismic data in terms of both phase and\namplitude. These features can reduce the risk of cycle skipping and improve the\nstability of FWI. Additionally, ATpV applies structural constraints to the\nvelocity gradients, which helps suppress artifacts and preserve the sharp\nboundaries of geological formations. We propose to use the automatic\ndifferentiation (AD) to efficiently and stably optimize this novelly introduced\nFWI objective function. Both synthetic and field seismic data demonstrate that\nthe proposed method accurately characterizes complex subsurface velocity\nstructures, even when the background velocity is crude, the data lacks\nlow-frequency components, or contains noise.",
+          "arxiv_id": "2504.01695v1"
+        },
+        {
+          "title": "Multiscale Data-driven Seismic Full-waveform Inversion with Field Data Study",
+          "year": "2021-03",
+          "abstract": "Seismic full-waveform inversion (FWI), which uses iterative methods to\nestimate high-resolution subsurface models from seismograms, is a powerful\nimaging technique in exploration geophysics. In recent years, the computational\ncost of FWI has grown exponentially due to the increasing size and resolution\nof seismic data. Moreover, it is a non-convex problem and can encounter local\nminima due to the limited accuracy of the initial velocity models or the\nabsence of low frequencies in the measurements. To overcome these computational\nissues, we develop a multiscale data-driven FWI method based on fully\nconvolutional networks (FCN). In preparing the training data, we first develop\na real-time style transform method to create a large set of synthetic\nsubsurface velocity models from natural images. We then develop two\nconvolutional neural networks with encoder-decoder structure to reconstruct the\nlow- and high-frequency components of the subsurface velocity models,\nseparately. To validate the performance of our data-driven inversion method and\nthe effectiveness of the synthesized training set, we compare it with\nconventional physics-based waveform inversion approaches using both synthetic\nand field data. These numerical results demonstrate that, once our model is\nfully trained, it can significantly reduce the computation time, and yield more\naccurate subsurface velocity models in comparison with conventional FWI.",
+          "arxiv_id": "2103.04007v3"
+        },
+        {
+          "title": "DiffusionInv: Prior-enhanced Bayesian Full Waveform Inversion using Diffusion models",
+          "year": "2025-05",
+          "abstract": "Full waveform inversion (FWI) is an advanced seismic inversion technique for\nquantitatively estimating subsurface properties. However, with FWI, it is hard\nto converge to a geologically-realistic subsurface model. Thus, we propose a\nDiffusionInv approach by integrating a pretrained diffusion model\nrepresentation of the velocity into FWI within a Bayesian framework. We first\ntrain the diffusion model on realistic and expected velocity model samples,\npreferably prepared based on our geological knowledge of the subsurface, to\nlearn their prior distribution. Once this pretraining is complete, we fine-tune\nthe neural network parameters of the diffusion model by using an L2 norm of\ndata misfit between simulated and observed seismic data as a loss function.\nThis process enables the model to elegantly learn the posterior distribution of\nvelocity models given seismic observations starting from the previously learned\nprior distribution. The approximate representation of the posterior probability\ndistribution provides valuable insights into the inversion uncertainty for\nphysics-constrained FWI given the seismic data and prior model information.\nCompared to regularized FWI methods, the diffusion model under a probabilistic\nframework allows for a more adaptable integration of prior information into\nFWI, thus mitigating the multi-solution issue and enhancing the reliability of\nthe inversion result. Compared to data-driven FWI methods, the integration of\nphysical constraints in DiffusionInv enhances its ability to generalize across\ndiverse seismic scenarios. The test results in the Hess and Otway examples\ndemonstrate that the DiffusionInv method is capable of recovering the velocity\nmodel with high resolution by incorporating the prior model information. The\nestimated posterior probability distribution helps us understand the inversion\nuncertainty.",
+          "arxiv_id": "2505.03138v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Emergent constraints on climate sensitivities",
+          "year": "2020-12",
+          "abstract": "Despite major advances in climate science over the last 30 years, persistent\nuncertainties in projections of future climate change remain. Climate\nprojections are produced with increasingly complex models which attempt to\nrepresent key processes in the Earth system, including atmospheric and oceanic\ncirculations, convection, clouds, snow, sea-ice, vegetation and interactions\nwith the carbon cycle. Uncertainties in the representation of these processes\nfeed through into a range of projections from the many state-of-the-art climate\nmodels now being developed and used worldwide. For example, despite major\nimprovements in climate models, the range of equilibrium global warming due to\ndoubling carbon dioxide still spans a range of more than three. Here we review\na promising way to make use of the ensemble of climate models to reduce the\nuncertainties in the sensitivities of the real climate system. The emergent\nconstraint approach uses the model ensemble to identify a relationship between\nan uncertain aspect of the future climate and an observable variation or trend\nin the contemporary climate. This review summarises previous published work on\nemergent constraints, and discusses the huge promise and potential dangers of\nthe approach. Most importantly, it argues that emergent constraints should be\nbased on well-founded physical principles such as the fluctuation-dissipation\ntheorem. It is hoped that this review will stimulate physicists to contribute\nto the rapidly developing field of emergent constraints on climate projections,\nbringing to it much needed rigour and physical insights.",
+          "arxiv_id": "2012.09468v1"
+        },
+        {
+          "title": "Network-based Approach and Climate Change Benefits for Forecasting the Amount of Indian Monsoon Rainfall",
+          "year": "2020-04",
+          "abstract": "The Indian summer monsoon rainfall (ISMR) has a decisive influence on India's\nagricultural output and economy. Extreme deviations from the normal seasonal\namount of rainfall can cause severe droughts or floods, affecting Indian food\nproduction and security. Despite the development of sophisticated statistical\nand dynamical climate models, a long-term and reliable prediction of the ISMR\nhas remained a challenging problem. Towards achieving this goal, here we\nconstruct a series of dynamical and physical climate networks based on the\nglobal near surface air temperature field. We uncover that some characteristics\nof the directed and weighted climate networks can serve as efficient long-term\npredictors for ISMR forecasting. The developed prediction method produces a\nforecast skill of 0.5 with a 5-month lead-time in advance by using the previous\ncalendar year's data. The skill of our ISMR forecast, is comparable to the\ncurrent state-of-the-art models, however, with quite a short (i.e., within one\nmonth) lead-time. We discuss the underlying mechanism of our predictor and\nassociate it with network-delayed-ENSO and ENSO-monsoon connections. Moreover,\nour approach allows predicting the all India rainfall, as well as forecasting\nthe different Indian homogeneous regions' rainfall, which is crucial for\nagriculture in India. We reveal that global warming affects the climate network\nby enhancing cross-equatorial teleconnections between Southwest Atlantic,\nWestern part of the Indian Ocean, and North Asia-Pacific with significant\nimpacts on the precipitation in India. We find a hotspots area in the\nmid-latitude South Atlantic, which is the basis for our predictor. Remarkably,\nthe significant warming trend in this area yields an improvement of the\nprediction skill.",
+          "arxiv_id": "2004.06628v1"
+        },
+        {
+          "title": "Long-term stability and generalization of observationally-constrained stochastic data-driven models for geophysical turbulence",
+          "year": "2022-05",
+          "abstract": "Recent years have seen a surge in interest in building deep learning-based\nfully data-driven models for weather prediction. Such deep learning models if\ntrained on observations can mitigate certain biases in current state-of-the-art\nweather models, some of which stem from inaccurate representation of\nsubgrid-scale processes. However, these data-driven models, being\nover-parameterized, require a lot of training data which may not be available\nfrom reanalysis (observational data) products. Moreover, an accurate,\nnoise-free, initial condition to start forecasting with a data-driven weather\nmodel is not available in realistic scenarios. Finally, deterministic\ndata-driven forecasting models suffer from issues with long-term stability and\nunphysical climate drift, which makes these data-driven models unsuitable for\ncomputing climate statistics. Given these challenges, previous studies have\ntried to pre-train deep learning-based weather forecasting models on a large\namount of imperfect long-term climate model simulations and then re-train them\non available observational data. In this paper, we propose a convolutional\nvariational autoencoder-based stochastic data-driven model that is pre-trained\non an imperfect climate model simulation from a 2-layer quasi-geostrophic flow\nand re-trained, using transfer learning, on a small number of noisy\nobservations from a perfect simulation. This re-trained model then performs\nstochastic forecasting with a noisy initial condition sampled from the perfect\nsimulation. We show that our ensemble-based stochastic data-driven model\noutperforms a baseline deterministic encoder-decoder-based convolutional model\nin terms of short-term skills while remaining stable for long-term climate\nsimulations yielding accurate climatology.",
+          "arxiv_id": "2205.04601v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Earthquake Phase Association using a Bayesian Gaussian Mixture Model",
+          "year": "2021-09",
+          "abstract": "Earthquake phase association algorithms aggregate picked seismic phases from\na network of seismometers into individual earthquakes and play an important\nrole in earthquake monitoring. Dense seismic networks and improved phase\npicking methods produce massive earthquake phase data sets, particularly for\nearthquake swarms and aftershocks occurring closely in time and space, making\nphase association a challenging problem. We present a new association method,\nthe Gaussian Mixture Model Association (GaMMA), that combines the Gaussian\nmixture model for phase measurements (both time and amplitude), with earthquake\nlocation, origin time, and magnitude estimation. We treat earthquake phase\nassociation as an unsupervised clustering problem in a probabilistic framework,\nwhere each earthquake corresponds to a cluster of P and S phases with\nhyperbolic moveout of arrival times and a decay of amplitude with distance. We\nuse a multivariate Gaussian distribution to model the collection of phase picks\nfor an event, the mean of which is given by the predicted arrival time and\namplitude from the causative event. We carry out the pick assignment for each\nearthquake and determine earthquake parameters (i.e., earthquake location,\norigin time, and magnitude) under the maximum likelihood criterion using the\nExpectation-Maximization (EM) algorithm. The GaMMA method does not require the\ntypical association steps of other algorithms, such as grid-search or\nsupervised training. The results on both synthetic test and the 2019 Ridgecrest\nearthquake sequence show that GaMMA effectively associates phases from a\ntemporally and spatially dense earthquake sequence while producing useful\nestimates of earthquake location and magnitude.",
+          "arxiv_id": "2109.09008v1"
+        },
+        {
+          "title": "QuakeFlow: A Scalable Machine-learning-based Earthquake Monitoring Workflow with Cloud Computing",
+          "year": "2022-08",
+          "abstract": "Earthquake monitoring workflows are designed to detect earthquake signals and\nto determine source characteristics from continuous waveform data. Recent\ndevelopments in deep learning seismology have been used to improve tasks within\nearthquake monitoring workflows that allow the fast and accurate detection of\nup to orders of magnitude more small events than are present in conventional\ncatalogs. To facilitate the application of machine-learning algorithms to\nlarge-volume seismic records, we developed a cloud-based earthquake monitoring\nworkflow, QuakeFlow, that applies multiple processing steps to generate\nearthquake catalogs from raw seismic data. QuakeFlow uses a deep learning\nmodel, PhaseNet, for picking P/S phases and a machine learning model, GaMMA,\nfor phase association with approximate earthquake location and magnitude. Each\ncomponent in QuakeFlow is containerized, allowing straightforward updates to\nthe pipeline with new deep learning/machine learning models, as well as the\nability to add new components, such as earthquake relocation algorithms. We\nbuilt QuakeFlow in Kubernetes to make it auto-scale for large datasets and to\nmake it easy to deploy on cloud platforms, which enables large-scale parallel\nprocessing. We used QuakeFlow to process three years of continuous archived\ndata from Puerto Rico, and found more than a factor of ten more events that\noccurred on much the same structures as previously known seismicity. We applied\nQuakeflow to monitoring frequent earthquakes in Hawaii and found over an order\nof magnitude more events than are in the standard catalog, including many\nevents that illuminate the deep structure of the magmatic system. We also added\nKafka and Spark streaming to deliver real-time earthquake monitoring results.\nQuakeFlow is an effective and efficient approach both for improving realtime\nearthquake monitoring and for mining archived seismic data sets.",
+          "arxiv_id": "2208.14564v1"
+        },
+        {
+          "title": "Real-time Earthquake Monitoring using Deep Learning: a case study on Turkey Earthquake Aftershock Sequence",
+          "year": "2022-11",
+          "abstract": "Seismic phase picking and magnitude estimation are essential components of\nreal time earthquake monitoring and earthquake early warning systems. Reliable\nphase picking enables the timely detection of seismic wave arrivals,\nfacilitating rapid earthquake characterization and early warning alerts.\nAccurate magnitude estimation provides crucial information about the size of an\nearthquake and potential impact. Together, these steps contribute to effective\nearthquake monitoring, enhancing our ability to implement appropriate response\nmeasures in seismically active regions and mitigate risks. In this study, we\nexplore the potential of deep learning in real time earthquake monitoring. To\nthat aim, we begin by introducing DynaPicker which leverages dynamic\nconvolutional neural networks to detect seismic body wave phases. Subsequently,\nDynaPicker is employed for seismic phase picking on continuous seismic\nrecordings. To showcase the efficacy of Dynapicker, several open source seismic\ndatasets including window format data and continuous seismic data are used for\nseismic phase identification, and arrival time picking. Additionally,the\nrobustness of DynaPicker in classifying seismic phases was tested on the low\nmagnitude seismic data polluted by noise. Finally, the phase arrival time\ninformation is integrated into a previously published deep learning model for\nmagnitude estimation. This workflow is then applied and tested on the\ncontinuous recording of the aftershock sequences following the Turkey\nearthquake to detect the earthquakes, seismic phase picking and estimate the\nmagnitude of the corresponding event. The results obtained in this case study\nexhibit a high level of reliability in detecting the earthquakes and estimating\nthe magnitude of aftershocks following the Turkey earthquake.",
+          "arxiv_id": "2211.09539v2"
+        }
+      ],
+      "5": [
+        {
+          "title": "The role of magnetic waves in tangent cylinder convection",
+          "year": "2023-10",
+          "abstract": "The secular variation of the geomagnetic field suggests that there are\nanticyclonic polar vortices in the Earth's core. Under the influence of a\nmagnetic field, the polar azimuthal flow is thought to be produced by one or\nmore coherent upwellings within the tangent cylinder, offset from the rotation\naxis. In this study, convection within the tangent cylinder in rapidly rotating\ndynamos is investigated through the analysis of forced magnetic waves. The\nfirst part of the study investigates the evolution of an isolated buoyancy\ndisturbance in an unstably stratified rotating fluid subjected to an axial\nmagnetic field. It is shown that the axial flow intensity of the slow\nMagnetic-Archimedean-Coriolis (MAC) waves becomes comparable to that of the\nfast MAC waves when $|\\omega_M/\\omega_C| \\sim 0.1$, where $\\omega_M$ and\n$\\omega_C$ are the Alfv\\'en wave and inertial wave frequencies respectively. In\nspherical shell dynamo simulations, the isolated upwellings within the tangent\ncylinder are shown to originate from the localized excitation of slow MAC waves\nin the dipole-dominated regime. Axial flow measurements in turn reveal the\napproximate parity between the slow and fast wave intensities in this regime,\nwhich corresponds to the existence of strong polar vortices in the Earth's\ncore. To obtain the observed peak azimuthal motions of\n$0.6$--$0.9^\\circ$yr$^{-1}$, the Rayleigh number in the low-inertia geodynamo\nmust be $\\sim 10^3$ times the Rayleigh number for the onset of nonmagnetic\nconvection. However, if the forcing is so strong as to cause polarity\nreversals, the field within the tangent cylinder decays away, and the\nconvection takes the form of an ensemble of plumes supported entirely by the\nfast waves of frequency $\\omega \\sim \\omega_C$. The resulting weak polar\ncirculation is comparable to that obtained in nonmagnetic convection.",
+          "arxiv_id": "2310.06487v1"
+        },
+        {
+          "title": "Effects of kinematic and magnetic boundary conditions on the dynamics of convection-driven plane layer dynamos",
+          "year": "2022-02",
+          "abstract": "Rapidly rotating convection-driven dynamos are investigated under different\nkinematic and magnetic boundary conditions using DNS. At a fixed rotation rate,\nrepresented by the Ekman number $E=5\\times10^{-7}$, the thermal forcing is\nvaried from 2 to 20 times its value at the onset of convection\n($\\mathcal{R}=Ra/Ra_c=2-20$), keeping the fluid properties constant\n($Pr=Pr_m=1$). The statistical behavior, force balance and heat transport\ncharacteristics of the dynamos depend on boundary conditions that dictate both\nboundary layer and the interior dynamics. At a fixed thermal forcing\n($\\mathcal{R}=3$), the Ekman plumes in the presence of viscous boundary layers\nlead to energetic vortices that result in higher enstrophy and kinetic helicity\nwith no-slip boundaries compared to free-slip boundaries. The structure and\nstrength of the magnetic field are also dictated by the boundary conditions.\nThough the leading order force balance remains geostrophic, Lorentz force\ndominates inside the thermal boundary layer with no-slip, electrically\nconducting walls. Here, the Lorentz work term in the turbulent kinetic energy\nbudget is found to have components that exchange energy from the velocity field\nto the magnetic field, and vice-versa. However, with no-slip, insulated walls,\nall Lorentz work components perform unidirectional energy transfer to produce\nmagnetic energy from the kinetic energy of the fluid. The heat transfer\nenhancement in dynamos, compared to non-magnetic rotating convection, exhibits\na peak in the range $\\mathcal{R}=3-5$. For free-slip conditions, dynamo action\nmay alter the heat transport by suppressing the formation of large-scale\nvortices. However, the highest heat transfer enhancement occurs when the\nboundaries are no-slip, electrically conducting walls.",
+          "arxiv_id": "2202.03235v1"
+        },
+        {
+          "title": "Asymptotic behaviour of rotating convection-driven dynamos in the plane layer geometry",
+          "year": "2022-02",
+          "abstract": "Dynamos driven by rotating convection in the plane layer geometry are\ninvestigated numerically for a range of Ekman number ($E$), magnetic Prandtl\nnumber ($Pm$) and Rayleigh number ($Ra$). The primary purpose of the\ninvestigation is to compare results of the simulations with previously\ndeveloped asymptotic theory that is applicable in the limit of rapid rotation.\nWe find that all of the simulations are in the quasi-geostrophic regime in\nwhich the Coriolis and pressure gradient forces are approximately balanced at\nleading order, whereas all other forces, including the Lorentz force, act as\nperturbations. Agreement between simulation output and asymptotic scalings for\nthe energetics, flow speeds, magnetic field amplitude and length scales is\nfound. The transition from large scale dynamos to small scale dynamos is well\ndescribed by the magnetic Reynolds number based on the small convective length\nscale, $\\widetilde{Rm}$, with large scale dynamos preferred when\n$\\widetilde{Rm} \\lesssim O(1)$. The magnitude of the large scale magnetic field\nis observed to saturate and become approximately constant with increasing\nRayleigh number. Energy spectra show that all length scales present in the flow\nfield and the small-scale magnetic field are consistent with a scaling of\n$E^{1/3}$, even in the turbulent regime. For a fixed value of $E$, we find that\nthe viscous dissipation length scale is approximately constant over a broad\nrange of $Ra$; the ohmic dissipation length scale is approximately constant\nwithin the large scale dynamo regime, but transitions to a\n$\\widetilde{Rm}^{-1/2}$ scaling in the small scale dynamo regime.",
+          "arxiv_id": "2202.01382v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "Use of Multifidelity Training Data and Transfer Learning for Efficient Construction of Subsurface Flow Surrogate Models",
+          "year": "2022-04",
+          "abstract": "Data assimilation presents computational challenges because many\nhigh-fidelity models must be simulated. Various deep-learning-based surrogate\nmodeling techniques have been developed to reduce the simulation costs\nassociated with these applications. However, to construct data-driven surrogate\nmodels, several thousand high-fidelity simulation runs may be required to\nprovide training samples, and these computations can make training\nprohibitively expensive. To address this issue, in this work we present a\nframework where most of the training simulations are performed on coarsened\ngeomodels. These models are constructed using a flow-based upscaling method.\nThe framework entails the use of a transfer-learning procedure, incorporated\nwithin an existing recurrent residual U-Net architecture, in which network\ntraining is accomplished in three steps. In the first step. where the bulk of\nthe training is performed, only low-fidelity simulation results are used. The\nsecond and third steps, in which the output layer is trained and the overall\nnetwork is fine-tuned, require a relatively small number of high-fidelity\nsimulations. Here we use 2500 low-fidelity runs and 200 high-fidelity runs,\nwhich leads to about a 90% reduction in training simulation costs. The method\nis applied for two-phase subsurface flow in 3D channelized systems, with flow\ndriven by wells. The surrogate model trained with multifidelity data is shown\nto be nearly as accurate as a reference surrogate trained with only\nhigh-fidelity data in predicting dynamic pressure and saturation fields in new\ngeomodels. Importantly, the network provides results that are significantly\nmore accurate than the low-fidelity simulations used for most of the training.\nThe multifidelity surrogate is also applied for history matching using an\nensemble-based procedure, where accuracy relative to reference results is again\ndemonstrated.",
+          "arxiv_id": "2204.11138v1"
+        },
+        {
+          "title": "Learning Large-scale Subsurface Simulations with a Hybrid Graph Network Simulator",
+          "year": "2022-06",
+          "abstract": "Subsurface simulations use computational models to predict the flow of fluids\n(e.g., oil, water, gas) through porous media. These simulations are pivotal in\nindustrial applications such as petroleum production, where fast and accurate\nmodels are needed for high-stake decision making, for example, for well\nplacement optimization and field development planning. Classical finite\ndifference numerical simulators require massive computational resources to\nmodel large-scale real-world reservoirs. Alternatively, streamline simulators\nand data-driven surrogate models are computationally more efficient by relying\non approximate physics models, however they are insufficient to model complex\nreservoir dynamics at scale. Here we introduce Hybrid Graph Network Simulator\n(HGNS), which is a data-driven surrogate model for learning reservoir\nsimulations of 3D subsurface fluid flows. To model complex reservoir dynamics\nat both local and global scale, HGNS consists of a subsurface graph neural\nnetwork (SGNN) to model the evolution of fluid flows, and a 3D-U-Net to model\nthe evolution of pressure. HGNS is able to scale to grids with millions of\ncells per time step, two orders of magnitude higher than previous surrogate\nmodels, and can accurately predict the fluid flow for tens of time steps (years\ninto the future). Using an industry-standard subsurface flow dataset (SPE-10)\nwith 1.1 million cells, we demonstrate that HGNS is able to reduce the\ninference time up to 18 times compared to standard subsurface simulators, and\nthat it outperforms other learning-based models by reducing long-term\nprediction errors by up to 21%.",
+          "arxiv_id": "2206.07680v1"
+        },
+        {
+          "title": "A Physics-Constrained Deep Learning Model for Simulating Multiphase Flow in 3D Heterogeneous Porous Media",
+          "year": "2021-04",
+          "abstract": "In this work, an efficient physics-constrained deep learning model is\ndeveloped for solving multiphase flow in 3D heterogeneous porous media. The\nmodel fully leverages the spatial topology predictive capability of\nconvolutional neural networks, and is coupled with an efficient\ncontinuity-based smoother to predict flow responses that need spatial\ncontinuity. Furthermore, the transient regions are penalized to steer the\ntraining process such that the model can accurately capture flow in these\nregions. The model takes inputs including properties of porous media, fluid\nproperties and well controls, and predicts the temporal-spatial evolution of\nthe state variables (pressure and saturation). While maintaining the continuity\nof fluid flow, the 3D spatial domain is decomposed into 2D images for reducing\ntraining cost, and the decomposition results in an increased number of training\ndata samples and better training efficiency. Additionally, a surrogate model is\nseparately constructed as a postprocessor to calculate well flow rate based on\nthe predictions of state variables from the deep learning model. We use the\nexample of CO2 injection into saline aquifers, and apply the\nphysics-constrained deep learning model that is trained from physics-based\nsimulation data and emulates the physics process. The model performs prediction\nwith a speedup of ~1400 times compared to physics-based simulations, and the\naverage temporal errors of predicted pressure and saturation plumes are 0.27%\nand 0.099% respectively. Furthermore, water production rate is efficiently\npredicted by a surrogate model for well flow rate, with a mean error less than\n5%. Therefore, with its unique scheme to cope with the fidelity in fluid flow\nin porous media, the physics-constrained deep learning model can become an\nefficient predictive model for computationally demanding inverse problems or\nother coupled processes.",
+          "arxiv_id": "2105.09467v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "GipsyX/RTGx, A New Tool Set for Space Geodetic Operations and Research",
+          "year": "2020-04",
+          "abstract": "GipsyX/RTGx is the Jet Propulsion Laboratory's (JPL) next generation software\npackage for positioning, navigation, timing, and Earth science using\nmeasurements from three geodetic techniques: Global Navigation Satellite\nSystems (GNSS), Satellite Laser Ranging (SLR), and Doppler Orbitography and\nRadiopositioning Integrated by Satellite (DORIS); with Very Long Baseline\nInterferometry (VLBI) under development. The software facilitates combined\nestimation of geodetic and geophysical parameters using a Kalman filter\napproach on real or simulated data in both post-processing and in real-time.\nThe estimated parameters include station coordinates and velocities, satellite\norbits and clocks, Earth orientation, ionospheric and tropospheric delays. The\nsoftware is also capable of full realization of a dynamic terrestrial reference\nthrough analysis and combination of time series of ground station coordinates.\n  We present some key aspects of its new architecture, and describe some of its\nmajor applications, including Real-time orbit determination and ephemeris\npredictions in the U.S. Air Force Next Generation GPS Operational Control\nSegment (OCX), as well as in JPL's Global Differential GPS (GDGPS) System,\nsupporting User Range Error (URE) of $<$ 5 cm RMS; precision post-processing\nGNSS orbit determination, including JPL's contributions to the International\nGNSS Service (IGS) with URE in the 2 cm RMS range; Precise point positioning\n(PPP) with ambiguity resolution, both statically and kinematically, for\ngeodetic applications with 2 mm horizontal, and 6.5 mm vertical repeatability\nfor static positioning; Operational orbit and clock determination for Low Earth\nOrbiting (LEO) satellites, such as NASA's Gravity Recovery and Climate\nExperiment (GRACE) mission with GRACE relative clock alignment at the 20 ps\nlevel.",
+          "arxiv_id": "2004.13124v1"
+        },
+        {
+          "title": "Potential and scientific requirements of optical clock networks for validating satellite gravity missions",
+          "year": "2020-12",
+          "abstract": "The GRACE and GRACE-FO missions have provided an unprecedented quantification\nof large-scale changes in the water cycle. However, it is still an open problem\nof how these missions' data sets can be referenced to a ground truth.\nMeanwhile, stationary optical clocks show fractional instabilities below\n$10^{-18}$ when averaged over an hour, and continue to be improved in terms of\nprecision and accuracy, uptime, and transportability. The frequency of a clock\nis affected by the gravitational redshift, and thus depends on the local\ngeopotential; a relative frequency change of $10^{-18}$ corresponds to a geoid\nheight change of about $1$ cm. Here we suggest that this effect could be\nfurther exploited for sensing large-scale temporal geopotential changes via a\nnetwork of clocks distributed at the Earth's surface. In fact, several projects\nhave already proposed to create an ensemble of optical clocks connected across\nEurope via optical fibre links. Our hypothesis is that a clock network with\ncollocated GNSS receivers spread over Europe - for which the physical\ninfrastructure is already partly in place - would enable us to determine\ntemporal variations of the Earth's gravity field at time scales of days and\nbeyond, and thus provide a new means for validating satellite missions such as\nGRACE-FO or a future gravity mission. Here, we show through simulations how\nice, hydrology and atmosphere variations over Europe could be observed with\nclock comparisons in a future network that follows current design concepts in\nthe metrology community. We assume different scenarios for clock and GNSS\nuncertainties and find that even under conservative assumptions - a clock error\nof $10^{-18}$ and vertical height control error of $1.4$ mm for daily\nmeasurements - hydrological signals at the annual time scale and atmospheric\nsignals down to the weekly time scale could be observed.",
+          "arxiv_id": "2012.02618v1"
+        },
+        {
+          "title": "Determining the gravity potential with the CVSTT technique using two hydrogen clocks",
+          "year": "2022-01",
+          "abstract": "According to general relativity theory (GRT), by comparing the frequencies\nbetween two precise clocks at two different stations, the gravity potential\n(geopotential) difference between the two stations can be determined due to the\ngravity frequency shift effect. Here, we provide experimental results of\ngeopotential difference determination based on frequency comparisons between\ntwo remote hydrogen atomic clocks, with the help of common-view satellite time\ntransfer (CVSTT) technique. For the first time we apply the ensemble empirical\nmode decomposition (EEMD) technique to the CVSTT observations for effectively\ndetermining the geopotential-related signals. Based on the net frequency shift\nbetween the two clocks in two different periods, the geopotential difference\nbetween stations of the Beijing 203 Institute Laboratory (BIL) and Luojiashan\nTime--Frequency Station (LTS) is determined. Comparisons show that the\northometric height (OH) of LTS determined by the clock comparison is deviated\nfrom that determined by the Earth gravity model EGM2008 by (38.5$\\pm$45.7)~m.\nThe results are consistent with the frequency stabilities of the hydrogen\nclocks (at the level of $10^{-15}$~day$^{-1}$) used in the experiment. Using\nmore precise atomic or optical clocks, the CVSTT method for geopotential\ndetermination could be applied effectively and extensively in geodesy in the\nfuture.",
+          "arxiv_id": "2201.06287v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "A decade of the fast-varying ionospheric and magnetospheric magnetic fields from ground and multi-satellite observations",
+          "year": "2024-12",
+          "abstract": "The time-varying geomagnetic field is a superposition of contributions from\nmultiple internal and external current systems. A major source of geomagnetic\nvariations at periods less than a few years are current systems external to the\nsolid Earth, namely the ionospheric and magnetospheric currents, as well as\nassociated induced currents. The separation of these three sources is\nmathematically underdetermined using either ground or satellite measurements\nalone, but becomes tractable when the two datasets are combined. Based on this\nconcept, we developed a new geomagnetic field modelling approach that allows us\nto simultaneously characterise the mid-latitude ionospheric, magnetospheric and\nthe internal induced magnetic fields using ground and satellite observations\nfor all local times and magnetic conditions, and without prescribing any\nharmonic behaviour on these current systems in time, as is typical in other\nmodels. By applying this new method to a 10-year dataset of ground observatory\nand multi-satellite measurements from 2014 to 2023, we obtained the time series\nof the spherical harmonic coefficients of the ionospheric, magnetospheric and\ninduced fields. These new time series allow the study of complex non-periodic\ndynamics of the external magnetic fields during global geomagnetic storms, as\nwell as periodicities in the magnetospheric coefficients linked to solar\nactivities and periodic ionospheric magnetic fields linked to lunar daily\nvariations, contributing to a more complete picture of the dynamics of the\nexternal currents and magnetosphere-ionosphere interactions, and facilitating\nmore accurate space weather nowcast and forecast. Finally, the new approach\nallows for a better characterisation of internal induced field sources, leading\nto higher quality electromagnetic transfer functions.",
+          "arxiv_id": "2412.10601v2"
+        },
+        {
+          "title": "Polar ionospheric currents and high temporal resolution geomagnetic field models",
+          "year": "2023-09",
+          "abstract": "Estimating high resolution models of the Earth's core magnetic field and its\ntime variation in the polar regions requires that one can adequately account\nfor magnetic signals produced by polar ionospheric currents, which vary on a\nwide range of time and length scales. Limitations of existing ionospheric field\nmodels in the challenging polar regions can adversely affect core field models,\nwhich in turn has important implications for studies of the core flow dynamics\nin those regions. Here we implement a new approach to co-estimate a\nclimatological model of the ionospheric field together with a model of the\ninternal and magnetospheric fields within the CHAOS geomagnetic field modelling\nframework. The parametrization of the ionospheric field exploits non-orthogonal\nmagnetic coordinates and scales linearly with external driving parameters\nrelated to the solar wind and the interplanetary magnetic field. Using this\napproach we derive a new geomagnetic field model from measurements of the\nmagnetic field collected by low Earth orbit satellites, which in addition to\nthe internal field provides estimates of the typical current system in the\npolar ionosphere. We find that the time derivative of the estimated internal\nfield is less contaminated by the polar currents, which is mostly visible in\nthe zonal and near-zonal terms at high spherical harmonic degrees. Distinctive\npatches of strong secular variation at the core-mantle boundary, which have\nimportant implications for core dynamics, persist. Relaxing the temporal\nregularisation reveals annual oscillations, which could indicate remaining\nionospheric field or related induced signals in the internal field model. Using\nprincipal component analysis we find that the annual oscillations mostly affect\nthe zonal low-degree spherical harmonics of the internal field.",
+          "arxiv_id": "2309.04286v1"
+        },
+        {
+          "title": "Datasets of the solar quiet (Sq) and solar disturbed (SD) variations of the geomagnetic field from the mid latitudinal Magnetic Observatory of Coimbra (Portugal) obtained by different methods",
+          "year": "2021-03",
+          "abstract": "Here we present datasets of daily variation obtained from the geomagnetic\nfield raw observations recorded at the Coimbra Magnetic Observatory (COI,\nPortugal) in 2007-2017, covering almost the entire solar cycle 24. Two methods\nwere used to extract daily variability from the raw geomagnetic hourly data.\nThe first method uses the so-called geomagnetically quiet days to calculate\nS-type variations as daily means resulting in the data sub-set named IQD Sq and\nSD. The second method uses the principal component analysis (PCA) to decompose\nthe original series into main variability modes. The first three modes produced\nby PCA and explaining up to 98 per cent of the variability of the raw data are\nin the data sub-set named PCA modes. Both methods allow to extract regular\ngeomagnetic field variations related to daily variations (S-type variations) in\nthe ionospheric dynamo region and some magnetospheric currents. The COI\nlocation near the mean latitude of the ionospheric Sq current vortex focus\nallows studying its variability using the S-type regular variations of the\ngeomagnetic field measured near the ground. The S-type variations for the X and\nY components of the geomagnetic field obtained at the COI observatory can also\nbe re-scaled and used to analyze field variations obtained at other European\ngeomagnetic observatories at close latitudes. The S-type variations for the Z\ncomponent of the geomagnetic field obtained at the COI observatory can be\ncompared to similar variations observed at more continental regions to study\nthe so-called coastal effect in the geomagnetic field variations. The dataset\ndescribed in this paper is analyzed in a companion paper Comparison of the\nsolar variations of the geomagnetic field at the Coimbra Magnetic Observatory\n(COI) obtained by different methods: effect of the solar and geomagnetic\nactivity by A. Morozova and R. Rebbah submitted to ASR.",
+          "arxiv_id": "2103.13899v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:40:59Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

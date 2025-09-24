@@ -1,0 +1,1628 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_AI_human_information_agents",
+        "keywords": [
+          [
+            "AI",
+            0.04429795112163203
+          ],
+          [
+            "human",
+            0.017765256067749122
+          ],
+          [
+            "information",
+            0.013323751743719503
+          ],
+          [
+            "agents",
+            0.013308575130414836
+          ],
+          [
+            "learning",
+            0.012142300315532551
+          ],
+          [
+            "models",
+            0.011947809658005659
+          ],
+          [
+            "agent",
+            0.011911592787150947
+          ],
+          [
+            "model",
+            0.01189323954732753
+          ],
+          [
+            "decision",
+            0.011533779907335123
+          ],
+          [
+            "economic",
+            0.00940914061942345
+          ]
+        ],
+        "count": 772
+      },
+      "1": {
+        "name": "1_energy_carbon_climate_emissions",
+        "keywords": [
+          [
+            "energy",
+            0.034170731490582314
+          ],
+          [
+            "carbon",
+            0.024315690083347392
+          ],
+          [
+            "climate",
+            0.019708826368804923
+          ],
+          [
+            "emissions",
+            0.016001148853890913
+          ],
+          [
+            "electricity",
+            0.015950799256730003
+          ],
+          [
+            "power",
+            0.014186604676891626
+          ],
+          [
+            "market",
+            0.01392554483777537
+          ],
+          [
+            "model",
+            0.013715233658938267
+          ],
+          [
+            "cost",
+            0.01355570672995142
+          ],
+          [
+            "economic",
+            0.01303927324706699
+          ]
+        ],
+        "count": 686
+      },
+      "2": {
+        "name": "2_effects_labor_data_health",
+        "keywords": [
+          [
+            "effects",
+            0.019470263962948497
+          ],
+          [
+            "labor",
+            0.01894361537423481
+          ],
+          [
+            "data",
+            0.016056316498597623
+          ],
+          [
+            "health",
+            0.015600912846606751
+          ],
+          [
+            "employment",
+            0.015220803353462355
+          ],
+          [
+            "education",
+            0.014420829000954257
+          ],
+          [
+            "gender",
+            0.014106577862828706
+          ],
+          [
+            "workers",
+            0.013832143600654798
+          ],
+          [
+            "effect",
+            0.01311633894072843
+          ],
+          [
+            "income",
+            0.013070346677630951
+          ]
+        ],
+        "count": 356
+      },
+      "3": {
+        "name": "3_financial_model_inflation_market",
+        "keywords": [
+          [
+            "financial",
+            0.02384172626842341
+          ],
+          [
+            "model",
+            0.01980813262971108
+          ],
+          [
+            "inflation",
+            0.019396112199986205
+          ],
+          [
+            "market",
+            0.018430864212647866
+          ],
+          [
+            "stock",
+            0.016519172520843055
+          ],
+          [
+            "rate",
+            0.016508961094334168
+          ],
+          [
+            "policy",
+            0.016065377557884994
+          ],
+          [
+            "monetary",
+            0.0159456839046579
+          ],
+          [
+            "price",
+            0.013970691791707488
+          ],
+          [
+            "risk",
+            0.01378754874504141
+          ]
+        ],
+        "count": 303
+      },
+      "4": {
+        "name": "4_travel_urban_transport_cities",
+        "keywords": [
+          [
+            "travel",
+            0.022517642784148695
+          ],
+          [
+            "urban",
+            0.017121931521073445
+          ],
+          [
+            "transport",
+            0.01618787719257336
+          ],
+          [
+            "cities",
+            0.015234772802590738
+          ],
+          [
+            "transportation",
+            0.015174499194163785
+          ],
+          [
+            "time",
+            0.015063659747016258
+          ],
+          [
+            "study",
+            0.0146892944518136
+          ],
+          [
+            "demand",
+            0.014298158025505072
+          ],
+          [
+            "spatial",
+            0.013607926887992842
+          ],
+          [
+            "data",
+            0.013494397279560656
+          ]
+        ],
+        "count": 275
+      },
+      "5": {
+        "name": "5_research_innovation_scientific_knowledge",
+        "keywords": [
+          [
+            "research",
+            0.032967654630381545
+          ],
+          [
+            "innovation",
+            0.03271349918414
+          ],
+          [
+            "scientific",
+            0.017369060328248597
+          ],
+          [
+            "knowledge",
+            0.01526675182705864
+          ],
+          [
+            "patent",
+            0.015206482088611592
+          ],
+          [
+            "digital",
+            0.01401735217360953
+          ],
+          [
+            "study",
+            0.013861660072834818
+          ],
+          [
+            "impact",
+            0.013486869666113779
+          ],
+          [
+            "technology",
+            0.013266996876734516
+          ],
+          [
+            "new",
+            0.011022109464916217
+          ]
+        ],
+        "count": 266
+      },
+      "6": {
+        "name": "6_trade_network_economic_production",
+        "keywords": [
+          [
+            "trade",
+            0.038753754966976146
+          ],
+          [
+            "network",
+            0.024676366345046434
+          ],
+          [
+            "economic",
+            0.02095752834370393
+          ],
+          [
+            "production",
+            0.020659071259469575
+          ],
+          [
+            "firms",
+            0.01977887165035363
+          ],
+          [
+            "countries",
+            0.019088884928950674
+          ],
+          [
+            "supply",
+            0.01811777919325477
+          ],
+          [
+            "firm",
+            0.018018393391921256
+          ],
+          [
+            "networks",
+            0.015837104416615313
+          ],
+          [
+            "complexity",
+            0.014413877268803171
+          ]
+        ],
+        "count": 241
+      },
+      "7": {
+        "name": "7_COVID_pandemic_health_social",
+        "keywords": [
+          [
+            "COVID",
+            0.04778441830765511
+          ],
+          [
+            "pandemic",
+            0.028362225202883902
+          ],
+          [
+            "health",
+            0.023311373410080605
+          ],
+          [
+            "social",
+            0.019402895832875678
+          ],
+          [
+            "economic",
+            0.016776900531460835
+          ],
+          [
+            "spread",
+            0.016498364482656402
+          ],
+          [
+            "distancing",
+            0.016183346067828414
+          ],
+          [
+            "infection",
+            0.015411113152845664
+          ],
+          [
+            "epidemic",
+            0.014737695342597166
+          ],
+          [
+            "disease",
+            0.014523498443930874
+          ]
+        ],
+        "count": 186
+      },
+      "8": {
+        "name": "8_blockchain_Bitcoin_digital_decentralized",
+        "keywords": [
+          [
+            "blockchain",
+            0.0381769895088131
+          ],
+          [
+            "Bitcoin",
+            0.03774933668376925
+          ],
+          [
+            "digital",
+            0.020548574401192635
+          ],
+          [
+            "decentralized",
+            0.01980386407900318
+          ],
+          [
+            "transaction",
+            0.018746862300782926
+          ],
+          [
+            "DeFi",
+            0.018309632839635076
+          ],
+          [
+            "market",
+            0.01621365954251258
+          ],
+          [
+            "transactions",
+            0.01568953265679004
+          ],
+          [
+            "currency",
+            0.015037207225207651
+          ],
+          [
+            "protocol",
+            0.014212984344494707
+          ]
+        ],
+        "count": 174
+      },
+      "9": {
+        "name": "9_income_inequality_wealth_distribution",
+        "keywords": [
+          [
+            "income",
+            0.0568856133378887
+          ],
+          [
+            "inequality",
+            0.052250071471758607
+          ],
+          [
+            "wealth",
+            0.04527617760340942
+          ],
+          [
+            "distribution",
+            0.03237231703710029
+          ],
+          [
+            "Gini",
+            0.022599366291388357
+          ],
+          [
+            "model",
+            0.02056043944852492
+          ],
+          [
+            "income inequality",
+            0.02041194871268599
+          ],
+          [
+            "dynamics",
+            0.01857599585755599
+          ],
+          [
+            "capital",
+            0.01748047027411242
+          ],
+          [
+            "index",
+            0.01600257323129765
+          ]
+        ],
+        "count": 98
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.7292931238566623,
+        -0.26914406453784756,
+        -0.6658997208162729,
+        -0.7241921421920537,
+        -0.6752703969862014,
+        -0.6907646047286478,
+        -0.7401789606983622,
+        -0.7277788684113629,
+        -0.7142479390175611
+      ],
+      [
+        -0.7292931238566623,
+        1.0,
+        -0.7162260514098678,
+        -0.6716496252364855,
+        -0.634084219016661,
+        -0.6643805395269169,
+        -0.7057960971873996,
+        -0.7509963123948202,
+        -0.7529277306741846,
+        -0.7365311158065486
+      ],
+      [
+        -0.26914406453784756,
+        -0.7162260514098678,
+        1.0,
+        -0.5500117290978462,
+        -0.7155081066219702,
+        -0.6845746183018036,
+        -0.6800704924323743,
+        -0.7163235685091454,
+        -0.7159688152075407,
+        -0.6767385116194917
+      ],
+      [
+        -0.6658997208162729,
+        -0.6716496252364855,
+        -0.5500117290978462,
+        1.0,
+        -0.638038322927718,
+        -0.6263376659818698,
+        -0.6881714790799287,
+        -0.7241837412150736,
+        -0.7078171118804246,
+        -0.7143105708187357
+      ],
+      [
+        -0.7241921421920537,
+        -0.634084219016661,
+        -0.7155081066219702,
+        -0.638038322927718,
+        1.0,
+        -0.5654403055669349,
+        -0.7215341495158965,
+        -0.731388027267205,
+        -0.7579777961945378,
+        -0.7331972903736192
+      ],
+      [
+        -0.6752703969862014,
+        -0.6643805395269169,
+        -0.6845746183018036,
+        -0.6263376659818698,
+        -0.5654403055669349,
+        1.0,
+        -0.7192396446787062,
+        -0.7376239077229265,
+        -0.7171918587000377,
+        -0.7312880167857079
+      ],
+      [
+        -0.6907646047286478,
+        -0.7057960971873996,
+        -0.6800704924323743,
+        -0.6881714790799287,
+        -0.7215341495158965,
+        -0.7192396446787062,
+        1.0,
+        -0.720271962435133,
+        -0.737028539026909,
+        -0.7190786767715633
+      ],
+      [
+        -0.7401789606983622,
+        -0.7509963123948202,
+        -0.7163235685091454,
+        -0.7241837412150736,
+        -0.731388027267205,
+        -0.7376239077229265,
+        -0.720271962435133,
+        1.0,
+        -0.7575726025866474,
+        -0.7271849493307412
+      ],
+      [
+        -0.7277788684113629,
+        -0.7529277306741846,
+        -0.7159688152075407,
+        -0.7078171118804246,
+        -0.7579777961945378,
+        -0.7171918587000377,
+        -0.737028539026909,
+        -0.7575726025866474,
+        1.0,
+        -0.7480024567218303
+      ],
+      [
+        -0.7142479390175611,
+        -0.7365311158065486,
+        -0.6767385116194917,
+        -0.7143105708187357,
+        -0.7331972903736192,
+        -0.7312880167857079,
+        -0.7190786767715633,
+        -0.7271849493307412,
+        -0.7480024567218303,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        21,
+        3,
+        3,
+        3,
+        2,
+        5,
+        6,
+        0,
+        0,
+        9
+      ],
+      "2020-02": [
+        12,
+        1,
+        1,
+        3,
+        0,
+        0,
+        5,
+        0,
+        0,
+        3
+      ],
+      "2020-03": [
+        18,
+        3,
+        2,
+        3,
+        3,
+        1,
+        6,
+        6,
+        1,
+        5
+      ],
+      "2020-04": [
+        20,
+        3,
+        0,
+        5,
+        0,
+        2,
+        3,
+        13,
+        0,
+        2
+      ],
+      "2020-05": [
+        19,
+        3,
+        1,
+        2,
+        1,
+        1,
+        2,
+        15,
+        0,
+        6
+      ],
+      "2020-06": [
+        18,
+        8,
+        2,
+        7,
+        1,
+        0,
+        1,
+        11,
+        2,
+        12
+      ],
+      "2020-07": [
+        17,
+        1,
+        3,
+        1,
+        0,
+        7,
+        3,
+        20,
+        0,
+        4
+      ],
+      "2020-08": [
+        7,
+        2,
+        0,
+        6,
+        1,
+        0,
+        4,
+        14,
+        0,
+        3
+      ],
+      "2020-09": [
+        20,
+        0,
+        2,
+        4,
+        0,
+        3,
+        4,
+        10,
+        0,
+        4
+      ],
+      "2020-10": [
+        33,
+        3,
+        2,
+        3,
+        2,
+        5,
+        3,
+        12,
+        2,
+        9
+      ],
+      "2020-11": [
+        35,
+        5,
+        0,
+        11,
+        2,
+        8,
+        4,
+        8,
+        1,
+        2
+      ],
+      "2020-12": [
+        43,
+        7,
+        5,
+        9,
+        1,
+        4,
+        4,
+        8,
+        0,
+        10
+      ],
+      "2021-01": [
+        29,
+        4,
+        3,
+        4,
+        1,
+        6,
+        10,
+        19,
+        1,
+        9
+      ],
+      "2021-02": [
+        43,
+        5,
+        2,
+        7,
+        1,
+        9,
+        7,
+        9,
+        6,
+        7
+      ],
+      "2021-03": [
+        26,
+        5,
+        3,
+        8,
+        1,
+        10,
+        9,
+        13,
+        0,
+        5
+      ],
+      "2021-04": [
+        39,
+        7,
+        2,
+        6,
+        2,
+        6,
+        4,
+        15,
+        2,
+        10
+      ],
+      "2021-05": [
+        30,
+        13,
+        5,
+        7,
+        2,
+        8,
+        5,
+        9,
+        1,
+        9
+      ],
+      "2021-06": [
+        30,
+        5,
+        1,
+        8,
+        0,
+        7,
+        9,
+        7,
+        0,
+        9
+      ],
+      "2021-07": [
+        34,
+        3,
+        1,
+        8,
+        3,
+        5,
+        8,
+        12,
+        2,
+        8
+      ],
+      "2021-08": [
+        28,
+        2,
+        2,
+        7,
+        2,
+        4,
+        3,
+        4,
+        0,
+        11
+      ],
+      "2021-09": [
+        18,
+        8,
+        1,
+        3,
+        1,
+        1,
+        4,
+        8,
+        5,
+        9
+      ],
+      "2021-10": [
+        19,
+        6,
+        3,
+        6,
+        1,
+        6,
+        3,
+        3,
+        1,
+        10
+      ],
+      "2021-11": [
+        26,
+        1,
+        2,
+        7,
+        2,
+        4,
+        6,
+        6,
+        3,
+        7
+      ],
+      "2021-12": [
+        23,
+        6,
+        3,
+        5,
+        2,
+        8,
+        3,
+        2,
+        1,
+        9
+      ],
+      "2022-01": [
+        36,
+        2,
+        1,
+        2,
+        0,
+        3,
+        3,
+        8,
+        4,
+        7
+      ],
+      "2022-02": [
+        21,
+        3,
+        4,
+        8,
+        1,
+        3,
+        5,
+        5,
+        3,
+        9
+      ],
+      "2022-03": [
+        23,
+        1,
+        3,
+        3,
+        0,
+        4,
+        3,
+        8,
+        0,
+        8
+      ],
+      "2022-04": [
+        22,
+        3,
+        3,
+        1,
+        0,
+        2,
+        3,
+        5,
+        2,
+        6
+      ],
+      "2022-05": [
+        22,
+        4,
+        7,
+        5,
+        1,
+        6,
+        6,
+        2,
+        2,
+        5
+      ],
+      "2022-06": [
+        41,
+        3,
+        2,
+        7,
+        3,
+        5,
+        6,
+        3,
+        3,
+        12
+      ],
+      "2022-07": [
+        12,
+        4,
+        1,
+        5,
+        2,
+        9,
+        4,
+        4,
+        2,
+        1
+      ],
+      "2022-08": [
+        18,
+        4,
+        4,
+        4,
+        1,
+        5,
+        2,
+        5,
+        0,
+        4
+      ],
+      "2022-09": [
+        29,
+        8,
+        3,
+        10,
+        0,
+        4,
+        4,
+        11,
+        0,
+        3
+      ],
+      "2022-10": [
+        22,
+        4,
+        4,
+        5,
+        1,
+        2,
+        4,
+        2,
+        3,
+        1
+      ],
+      "2022-11": [
+        26,
+        7,
+        0,
+        6,
+        0,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "2022-12": [
+        37,
+        5,
+        2,
+        4,
+        0,
+        6,
+        9,
+        6,
+        2,
+        5
+      ],
+      "2023-01": [
+        22,
+        4,
+        5,
+        6,
+        1,
+        4,
+        6,
+        6,
+        1,
+        0
+      ],
+      "2023-02": [
+        27,
+        8,
+        3,
+        7,
+        1,
+        6,
+        4,
+        1,
+        2,
+        5
+      ],
+      "2023-03": [
+        32,
+        2,
+        5,
+        8,
+        2,
+        6,
+        9,
+        3,
+        2,
+        7
+      ],
+      "2023-04": [
+        28,
+        9,
+        3,
+        4,
+        1,
+        7,
+        6,
+        1,
+        1,
+        14
+      ],
+      "2023-05": [
+        30,
+        4,
+        1,
+        13,
+        3,
+        8,
+        4,
+        3,
+        2,
+        3
+      ],
+      "2023-06": [
+        26,
+        5,
+        3,
+        6,
+        2,
+        8,
+        4,
+        5,
+        4,
+        5
+      ],
+      "2023-07": [
+        22,
+        6,
+        3,
+        5,
+        1,
+        4,
+        4,
+        4,
+        2,
+        8
+      ],
+      "2023-08": [
+        29,
+        3,
+        9,
+        8,
+        1,
+        9,
+        3,
+        3,
+        1,
+        3
+      ],
+      "2023-09": [
+        28,
+        6,
+        2,
+        3,
+        0,
+        6,
+        5,
+        2,
+        1,
+        6
+      ],
+      "2023-10": [
+        28,
+        9,
+        6,
+        9,
+        1,
+        6,
+        7,
+        5,
+        3,
+        4
+      ],
+      "2023-11": [
+        36,
+        9,
+        7,
+        5,
+        1,
+        12,
+        8,
+        4,
+        1,
+        3
+      ],
+      "2023-12": [
+        36,
+        10,
+        4,
+        6,
+        0,
+        14,
+        5,
+        7,
+        2,
+        11
+      ],
+      "2024-01": [
+        41,
+        7,
+        2,
+        8,
+        3,
+        7,
+        4,
+        3,
+        4,
+        3
+      ],
+      "2024-02": [
+        36,
+        8,
+        3,
+        15,
+        2,
+        8,
+        3,
+        2,
+        1,
+        8
+      ],
+      "2024-03": [
+        37,
+        4,
+        4,
+        5,
+        0,
+        7,
+        8,
+        3,
+        2,
+        3
+      ],
+      "2024-04": [
+        41,
+        4,
+        5,
+        4,
+        1,
+        8,
+        3,
+        3,
+        5,
+        6
+      ],
+      "2024-05": [
+        38,
+        10,
+        4,
+        12,
+        0,
+        9,
+        5,
+        3,
+        2,
+        6
+      ],
+      "2024-06": [
+        37,
+        9,
+        1,
+        3,
+        0,
+        2,
+        4,
+        2,
+        2,
+        3
+      ],
+      "2024-07": [
+        38,
+        6,
+        5,
+        10,
+        2,
+        2,
+        4,
+        1,
+        3,
+        5
+      ],
+      "2024-08": [
+        31,
+        9,
+        3,
+        5,
+        0,
+        2,
+        5,
+        4,
+        2,
+        8
+      ],
+      "2024-09": [
+        46,
+        4,
+        8,
+        5,
+        1,
+        8,
+        4,
+        3,
+        2,
+        4
+      ],
+      "2024-10": [
+        47,
+        3,
+        5,
+        6,
+        0,
+        4,
+        6,
+        1,
+        4,
+        8
+      ],
+      "2024-11": [
+        41,
+        9,
+        6,
+        8,
+        0,
+        5,
+        7,
+        2,
+        2,
+        9
+      ],
+      "2024-12": [
+        53,
+        11,
+        2,
+        7,
+        0,
+        6,
+        8,
+        2,
+        1,
+        6
+      ],
+      "2025-01": [
+        42,
+        8,
+        0,
+        7,
+        0,
+        10,
+        8,
+        3,
+        1,
+        10
+      ],
+      "2025-02": [
+        43,
+        10,
+        0,
+        11,
+        0,
+        6,
+        7,
+        7,
+        2,
+        8
+      ],
+      "2025-03": [
+        64,
+        14,
+        9,
+        2,
+        0,
+        9,
+        8,
+        5,
+        3,
+        12
+      ],
+      "2025-04": [
+        54,
+        12,
+        4,
+        5,
+        0,
+        7,
+        10,
+        3,
+        1,
+        5
+      ],
+      "2025-05": [
+        69,
+        13,
+        0,
+        12,
+        2,
+        13,
+        2,
+        5,
+        3,
+        3
+      ],
+      "2025-06": [
+        44,
+        5,
+        2,
+        8,
+        1,
+        9,
+        4,
+        10,
+        3,
+        11
+      ],
+      "2025-07": [
+        55,
+        8,
+        5,
+        9,
+        2,
+        5,
+        12,
+        4,
+        1,
+        7
+      ],
+      "2025-08": [
+        49,
+        10,
+        7,
+        15,
+        3,
+        5,
+        13,
+        5,
+        1,
+        9
+      ],
+      "2025-09": [
+        22,
+        7,
+        4,
+        4,
+        0,
+        5,
+        4,
+        0,
+        0,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Superhuman Artificial Intelligence Can Improve Human Decision Making by Increasing Novelty",
+          "year": "2023-03",
+          "abstract": "How will superhuman artificial intelligence (AI) affect human decision\nmaking? And what will be the mechanisms behind this effect? We address these\nquestions in a domain where AI already exceeds human performance, analyzing\nmore than 5.8 million move decisions made by professional Go players over the\npast 71 years (1950-2021). To address the first question, we use a superhuman\nAI program to estimate the quality of human decisions across time, generating\n58 billion counterfactual game patterns and comparing the win rates of actual\nhuman decisions with those of counterfactual AI decisions. We find that humans\nbegan to make significantly better decisions following the advent of superhuman\nAI. We then examine human players' strategies across time and find that novel\ndecisions (i.e., previously unobserved moves) occurred more frequently and\nbecame associated with higher decision quality after the advent of superhuman\nAI. Our findings suggest that the development of superhuman AI programs may\nhave prompted human players to break away from traditional strategies and\ninduced them to explore novel moves, which in turn may have improved their\ndecision-making.",
+          "arxiv_id": "2303.07462v2"
+        },
+        {
+          "title": "Human Learning about AI",
+          "year": "2024-06",
+          "abstract": "We study how people form expectations about the performance of artificial\nintelligence (AI) and consequences for AI adoption. Our main hypothesis is that\npeople rely on human-relevant task features when evaluating AI, treating AI\nfailures on human-easy tasks, and successes on human-difficult tasks, as highly\ninformative of its overall performance. In lab experiments, we show that\nprojection of human difficulty onto AI predictably distorts subjects' beliefs\nand can lead to suboptimal adoption, as failing human-easy tasks need not imply\npoor overall performance for AI. We find evidence for projection in a field\nexperiment with an AI giving parenting advice. Potential users strongly infer\nfrom answers that are equally uninformative but less humanly-similar to\nexpected answers, significantly reducing trust and future engagement. Our\nresults suggest AI \"anthropomorphism\" can backfire by increasing projection and\nde-aligning people's expectations and AI performance.",
+          "arxiv_id": "2406.05408v2"
+        },
+        {
+          "title": "Human aversion? Do AI Agents Judge Identity More Harshly Than Performance",
+          "year": "2025-03",
+          "abstract": "This study examines the understudied role of algorithmic evaluation of human\njudgment in hybrid decision-making systems, a critical gap in management\nresearch. While extant literature focuses on human reluctance to follow\nalgorithmic advice, we reverse the perspective by investigating how AI agents\nbased on large language models (LLMs) assess and integrate human input. Our\nwork addresses a pressing managerial constraint: firms barred from deploying\nLLMs directly due to privacy concerns can still leverage them as mediating\ntools (for instance, anonymized outputs or decision pipelines) to guide\nhigh-stakes choices like pricing or discounts without exposing proprietary\ndata. Through a controlled prediction task, we analyze how an LLM-based AI\nagent weights human versus algorithmic predictions. We find that the AI system\nsystematically discounts human advice, penalizing human errors more severely\nthan algorithmic errors--a bias exacerbated when the agent's identity (human vs\nAI) is disclosed and the human is positioned second. These results reveal a\ndisconnect between AI-generated trust metrics and the actual influence of human\njudgment, challenging assumptions about equitable human-AI collaboration. Our\nfindings offer three key contributions. First, we identify a reverse algorithm\naversion phenomenon, where AI agents undervalue human input despite comparable\nerror rates. Second, we demonstrate how disclosure and positional bias interact\nto amplify this effect, with implications for system design. Third, we provide\na framework for indirect LLM deployment that balances predictive power with\ndata privacy. For practitioners, this research emphasize the need to audit AI\nweighting mechanisms, calibrate trust dynamics, and strategically design\ndecision sequences in human-AI systems.",
+          "arxiv_id": "2504.13871v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Life cycle costing analysis of deep energy retrofits of a mid-rise building to understand the impact of energy conservation measures",
+          "year": "2023-04",
+          "abstract": "Building energy retrofits have been identified as key to realizing climate\nmitigation goals in Canada. This study aims to provide a roadmap for existing\nmid-rise building retrofits in order to understand the required capital\ninvestment, energy savings, energy cost savings, and carbon footprint for\nmid-rise residential buildings in Canada. This study employed EnergyPlus to\nexamine the energy performance of 11 energy retrofit measures for a typical\nmulti-unit residential building (MURB) in Metro Vancouver, British Columbia,\nCanada. The author employed the energy simulation software (EnergyPlus) to\nevaluate the pre-and post-retrofit operational energy performance of the\nselected MURB. Two base building models powered by natural gas (NG-building)\nand electricity (E-building) were created by SketchUP. The energy simulation\nresults were combined with cost and emission impact data to evaluate the\neconomic and environmental performance of the selected energy retrofit\nmeasures. The results indicated that the NG-building can produce significant\nGHG emission reductions (from 27.64 tCO2e to 3.77 tCO2e) by implementing these\nenergy retrofit measures. In terms of energy savings, solar PV, ASHP, water\nheater HP, and HRV enhancement have great energy saving potential compared to\nother energy retrofit measures. In addition, temperature setback, lighting, and\nairtightness enhancement present the best economic performance from a life\ncycle perspective. However, windows, ASHP, and solar PV, are not economical\nchoices because of higher life cycle costs. While ASHP can increase life cycle\ncosts for the NG-building, with the financial incentives provided by the\ngovernments, ASHP could be the best choice to reduce GHG emissions when\nstakeholders make decisions on implementing energy retrofits.",
+          "arxiv_id": "2304.00456v1"
+        },
+        {
+          "title": "Sector coupling via hydrogen to lower the cost of energy system decarbonization",
+          "year": "2021-03",
+          "abstract": "There is growing interest in hydrogen (H$_2$) use for long-duration energy\nstorage in a future electric grid dominated by variable renewable energy (VRE)\nresources. Modelling the role of H$_2$ as grid-scale energy storage, often\nreferred as \"power-to-gas-to-power (P2G2P)\" overlooks the cost-sharing and\nemission benefits from using the deployed H$_2$ production and storage assets\nto also supply H$_2$ for decarbonizing other end-use sectors where direct\nelectrification may be challenged. Here, we develop a generalized modelling\nframework for co-optimizing energy infrastructure investment and operation\nacross power and transportation sectors and the supply chains of electricity\nand H$_2$, while accounting for spatio-temporal variations in energy demand and\nsupply. Applying this sector-coupling framework to the U.S. Northeast under a\nrange of technology cost and carbon price scenarios, we find a greater value of\npower-to-H$_2$ (P2G) versus P2G2P routes. P2G provides flexible demand\nresponse, while the extra cost and efficiency penalties of P2G2P routes make\nthe solution less attractive for grid balancing. The effects of sector-coupling\nare significant, boosting VRE generation by 12-55% with both increased\ncapacities and reduced curtailments and reducing the total system cost (or\nlevelized costs of energy) by 6-14% under 96% decarbonization scenarios. Both\nthe cost savings and emission reductions from sector coupling increase with\nH$_2$ demand for other end-uses, more than doubling for a 96% decarbonization\nscenario as H$_2$ demand quadraples. Moreover, we found that the deployment of\ncarbon capture and storage is more cost-effective in the H$_2$ sector because\nof the lower cost and higher utilization rate. These findings highlight the\nimportance of using an integrated multi-sector energy system framework with\nmultiple energy vectors in planning energy system decarbonization pathways.",
+          "arxiv_id": "2103.03442v1"
+        },
+        {
+          "title": "De-carbonization of global energy use during the COVID-19 pandemic",
+          "year": "2021-02",
+          "abstract": "The COVID-19 pandemic has disrupted human activities, leading to\nunprecedented decreases in both global energy demand and GHG emissions. Yet a\nlittle known that there is also a low carbon shift of the global energy system\nin 2020. Here, using the near-real-time data on energy-related GHG emissions\nfrom 30 countries (about 70% of global power generation), we show that the\npandemic caused an unprecedented de-carbonization of global power system,\nrepresenting by a dramatic decrease in the carbon intensity of power sector\nthat reached a historical low of 414.9 tCO2eq/GWh in 2020. Moreover, the share\nof energy derived from renewable and low-carbon sources (nuclear, hydro-energy,\nwind, solar, geothermal, and biomass) exceeded that from coal and oil for the\nfirst time in history in May of 2020. The decrease in global net energy demand\n(-1.3% in the first half of 2020 relative to the average of the period in\n2016-2019) masks a large down-regulation of fossil-fuel-burning power plants\nsupply (-6.1%) coincident with a surge of low-carbon sources (+6.2%).\nConcomitant changes in the diurnal cycle of electricity demand also favored\nlow-carbon generators, including a flattening of the morning ramp, a lower\nmidday peak, and delays in both the morning and midday load peaks in most\ncountries. However, emission intensities in the power sector have since\nrebounded in many countries, and a key question for climate mitigation is thus\nto what extent countries can achieve and maintain lower, pandemic-level carbon\nintensities of electricity as part of a green recovery.",
+          "arxiv_id": "2102.03240v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "From Average Effects to Targeted Assignment: A Causal Machine Learning Analysis of Swiss Active Labor Market Policies",
+          "year": "2024-10",
+          "abstract": "Active labor market policies are widely used by the Swiss government,\nenrolling over half of all unemployed individuals. This paper evaluates the\neffectiveness of Swiss programs in improving employment and earnings outcomes\nusing causal machine learning and rich administrative data on unemployed\nindividuals in 2014 and 2015, including detailed labor market histories and\nother covariates. The findings for Swiss citizens and immigrants with permanent\nresidency indicate a small positive average effect of a Temporary Wage Subsidy\nprogram on employment and earnings in the third year after program start. In\ncontrast, Basic Courses, such as job application training, exhibit negative\neffects on both outcomes over the same period. No significant impacts are found\nfor Employment Programs conducted outside the regular labor market or for\nTraining Courses such as language or computer classes. The programs are most\neffective for individuals with a non-EU migration background, while Temporary\nWage Subsidies also benefit those with lower educational attainment. Finally,\nshallow policy trees provide practical guidance for improving the targeting of\nprogram assignments.",
+          "arxiv_id": "2410.23322v2"
+        },
+        {
+          "title": "A 22 percent increase in the German minimum wage: nothing crazy!",
+          "year": "2024-05",
+          "abstract": "We present the first empirical evidence on the 22 percent increase in the\nGerman minimum wage, implemented in 2022, raising it from Euro 9.82 to 10.45 in\nJuly and to Euro 12 in October. Leveraging the German Earnings Survey, a large\nand novel data source comprising around 8 million employee-level observations\nreported by employers each month, we apply a\ndifference-in-difference-in-differences approach to analyze the policy's impact\non hourly wages, monthly earnings, employment, and working hours. Our findings\nreveal significant positive effects on wages, affirming the policy's intended\nbenefits for low-wage workers. Interestingly, we identify a negative effect on\nworking hours, mainly driven by minijobbers. The hours effect results in an\nimplied labor demand elasticity in terms of the employment volume of -0.2 which\nonly partially offsets the monthly wage gains. We neither observe a negative\neffect on the individual's employment retention nor the regional employment\nlevels.",
+          "arxiv_id": "2405.12608v3"
+        },
+        {
+          "title": "Long-Term Employment Effects of the Minimum Wage in Germany: New Data and Estimators",
+          "year": "2023-10",
+          "abstract": "We study the long-term effects of the 2015 German minimum wage introduction\nand its subsequent increases on regional employment. Using data from two waves\nof the Structure of Earnings Survey allows us to estimate models that account\nfor changes in the minimum wage bite over time. While the introduction mainly\naffected the labour market in East Germany, the raises are also increasingly\naffecting low-wage regions in West Germany, such that around one third of\nregions have changed their (binary) treatment status over time. We apply\ndifferent specifications and extensions of the classic\ndifference-in-differences approach as well as a set of new estimators that\nenables for unbiased effect estimation with a staggered treatment adoption and\nheterogeneous treatment effects. Our results indicate a small negative effect\non dependent employment of 0.5 percent, no significant effect on employment\nsubject to social security contributions, and a significant negative effect of\nabout 2.4 percent on marginal employment until the first quarter of 2022. The\nextended specifications suggest additional effects of the minimum wage\nincreases, as well as stronger negative effects on total dependent and marginal\nemployment for those regions that were strongly affected by the minimum wage in\n2015 and 2019.",
+          "arxiv_id": "2310.15964v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "The Transmission of US Monetary Policy Shocks: The Role of Investment & Financial Heterogeneity",
+          "year": "2022-09",
+          "abstract": "This paper studies the transmission of US monetary policy shocks into\nEmerging Markets emphasizing the role of investment and financial\nheterogeneity. First, we use a panel SVAR model to show that a US interest\ntightening leads to a persistent recession in Emerging Markets driven by a\nsharp reduction in aggregate investment. Second, we study the role of firms'\nfinancial heterogeneity in the transmission of US interest rate shocks by\nexploiting detailed balance sheet dataset from Chile. We find that more\nindebted firms experience greater drops in investment in response to a US\ntightening shock than less indebted firms. This result is at odds with recent\nevidence from US firms, even when using the same identification strategy and\neconometric methods. Third, we rationalize this finding using a stylized model\nof heterogeneous firms subject to a tightening leverage constraint. Finally, we\npresent evidence in support of this hypothesis as well as robustness checks to\nour main results. Overall, our results suggests that the transmission channel\nof US monetary policy shocks within and outside the US differ, a result novel\nto the literature.",
+          "arxiv_id": "2209.11150v1"
+        },
+        {
+          "title": "A basic macroeconomic agent-based model for analyzing monetary regime shifts",
+          "year": "2022-05",
+          "abstract": "In macroeconomics, an emerging discussion of alternative monetary systems\naddresses the dimensions of systemic risk in advanced financial systems.\nMonetary regime changes with the aim of achieving a more sustainable financial\nsystem have already been discussed in several European parliaments and were the\nsubject of a referendum in Switzerland. However, their effectiveness and\nefficacy concerning macro-financial stability are not well-known. This paper\nintroduces a macroeconomic agent-based model (MABM) in a novel simulation\nenvironment to simulate the current monetary system, which may serve as a basis\nto implement and analyze monetary regime shifts. In this context, the monetary\nsystem affects the lending potential of banks and might impact the dynamics of\nfinancial crises. MABMs are predestined to replicate emergent financial crisis\ndynamics, analyze institutional changes within a financial system, and thus\nmeasure macro-financial stability. The used simulation environment makes the\nmodel more accessible and facilitates exploring the impact of different\nhypotheses and mechanisms in a less complex way. The model replicates a wide\nrange of stylized economic facts, including simplifying assumptions to reduce\nmodel complexity.",
+          "arxiv_id": "2205.00752v1"
+        },
+        {
+          "title": "Spillovers of US Interest Rates: Monetary Policy & Information Effects",
+          "year": "2021-11",
+          "abstract": "This paper quantifies the international spillovers of US monetary policy by\nexploiting the high-frequency movement of multiple financial assets around FOMC\nannouncements. I use the identification strategy introduced by Jarocinski &\nKaradi (2022) to identify two FOMC shocks: a pure US monetary policy and an\ninformation disclosure shock. These two FOMC shocks have intuitive and very\ndifferent international spillovers. On the one hand, a US tightening caused by\na pure US monetary policy shock leads to an economic recession, an exchange\nrate depreciation and tighter financial conditions. On the other hand, a\ntightening of US monetary policy caused by the FOMC disclosing positive\ninformation about the state of the US economy leads to an economic expansion,\nan exchange rate appreciation and looser financial conditions. Ignoring the\ndisclosure of information by the FOMC biases the impact of a US monetary policy\ntightening and may explain recent atypical findings.",
+          "arxiv_id": "2111.08631v3"
+        }
+      ],
+      "4": [
+        {
+          "title": "A nation-wide experiment: fuel tax cuts and almost free public transport for three months in Germany -- Report 5 Insights into four months of mobility tracking",
+          "year": "2022-11",
+          "abstract": "In spring 2022, the German federal government agreed on a set of measures\nthat aim at reducing households' financial burden resulting from a recent price\nincrease, especially in energy and mobility. These measures include among\nothers, a nation-wide public transport ticket for 9 EUR per month and a fuel\ntax cut that reduces fuel prices by more than 15%. In transportation research\nthis is an almost unprecedented behavioral experiment. It allows to study not\nonly behavioral responses in mode choice and induced demand but also to assess\nthe effectiveness of transport policy instruments. We observe this natural\nexperiment with a three-wave survey and an app-based travel diary on a sample\nof hundreds of participants as well as an analysis of traffic counts. In this\nfifth report, we present first analyses of the recorded tracking data. 910\nparticipants completed the tracking until September, 30th. First, an overview\nover the socio-demographic characteristics of the participants within our\ntracking sample is given. We observe an adequate representation of female and\nmale participants, a slight over-representation of young participants, and an\nincome distribution similar to the one known from the \"Mobilit\\\"at in\nDeutschland\" survey. Most participants of the tracking study live in Munich,\nGermany. General transportation statistics are derived from the data for all\nphases of the natural experiment - prior, during, and after the 9 EUR-Ticket -\nto assess potential changes in the participants' travel behavior on an\naggregated level. A significant impact of the 9 EUR-Ticket on modal shares can\nbe seen. An analysis of the participants' mobility behavior considering trip\npurposes, age, and income sheds light on how the 9 EUR-Ticket impacts different\nsocial groups and activities. We find that age, income, and trip purpose\nsignificantly influence the impact of the 9 EUR-Ticket on the observed modal\nsplit.",
+          "arxiv_id": "2211.10328v1"
+        },
+        {
+          "title": "A nation-wide experiment: fuel tax cuts and almost free public transport for three months in Germany -- Report 4 Third wave results",
+          "year": "2022-10",
+          "abstract": "In spring 2022, the German federal government agreed on a set of measures\nthat aimed at reducing households' financial burden resulting from a recent\nprice increase, especially in energy and mobility. These measures included\namong others, a nation-wide public transport ticket for 9EUR per month and a\nfuel tax cut that reduced fuel prices by more than 15%. In transportation\npolicy and travel behavior research this is an almost unprecedented behavioral\nexperiment. It allows to study not only behavioral responses in mode choice and\ninduced demand but also to assess the effectiveness of transport policy\ninstruments. We observe this natural experiment with a three-wave survey and an\napp-based travel diary on a sample 2'263 individuals; for the Munich Study, 919\nparticipants in the survey-and-app group and 425 in the survey-only group have\nbeen successfully recruited, while 919 participants have been recruited through\na professional panel provider to obtain a representative nation-wide reference\ngroup for the three-wave survey. In this fourth report we present the results\nof the third wave. At the end of the study, all three surveys have been\ncompleted by 1'484 participants and 642 participants completed all three\nsurveys and used the travel diary throughout the entire study. Based on our\nresults we conclude that when offering a 49EUR-Ticket as a successor to the\n9~EUR-Ticket and a local travel pass for 30EUR/month more than 60% of all\n9~EUR-Ticket owners would buy one of the two new travel passes. In other words,\na substantial increase in travel pass ownership in Germany can be expected,\nwith our modest estimate being around 20%. With the announcement of the\nintroduction of a successor ticket in 2023 as well as with the prevailing high\ninflation, this study will continue into the year 2023 to monitor the impact on\nmobility and daily activities.",
+          "arxiv_id": "2210.10538v1"
+        },
+        {
+          "title": "Germany's nationwide travel experiment in 2022: public transport for 9 Euro per month -- First findings of an empirical study",
+          "year": "2023-06",
+          "abstract": "In spring 2022, the German federal government agreed on a set of policy\nmeasures that aimed at reducing households' financial burden resulting from a\nrecent price increase, especially in energy and mobility. These included among\nothers, a nationwide public transport ticket for 9~Euro per month for three\nmonths in June, July, and August 2022. In transport policy research this is an\nalmost unprecedented behavioral experiment. It allows us to study not only\nbehavioral responses in mode choice and induced demand but also to assess the\neffectiveness of these instruments. We observe this natural experiment with a\nthree-wave survey and a smartphone-based travel diary with passive tracking on\nan initial sample of 2,261 participants with a focus on the Munich metropolitan\nregion. This area is chosen as it offers a variety of mode options with a dense\nand far-reaching public transport network that even provides good access to\nmany leisure destinations. The app has been providing data from 756\nparticipants until the end of September, the three-wave survey by 1,402, and\nthe app and the three waves by 637 participants. In this paper, we report on\nthe study design, the recruitment and study participation as well as the\nimpacts of the policy measures on the self-reported and app-observed travel\nbehavior; we present results on consumer choices for a successor ticket to the\n9-Euro-Ticket that started in May 2023. We find a substantial shift in the\nmodal share towards public transport from the car in our sample during the\n9-Euro-Ticket period in travel distance (around 5 %) and in trip frequency\n(around 7 %). The mobility outcomes of the 9-Euro-Ticket however provide\nevidence that cheap public transport as a policy instrument does not suffice to\nincentive sustainable travel behavior choices and that other policy instruments\nare required in addition.",
+          "arxiv_id": "2306.08297v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Startup Ecosystem Rankings",
+          "year": "2021-12",
+          "abstract": "The number, importance, and popularity of rankings measuring innovation\nperformance and the strength and resources of ecosystems that provide its\nspatial framework are on an increasing trend globally. In addition to\ninfluencing the specific decisions taken by economic actors, these rankings\nsignificantly impact the development of innovation-related policies at\nregional, national, and international levels. The importance of startup\necosystems is proven by the growing scientific interest, which is demonstrated\nby the increasing number of related scientific articles. The concept of the\nstartup ecosystem is a relatively new category, the application of which in\neveryday and scientific life has been gaining ground since the end of the\n2000s. In parallel, of course, the demand for measurability and comparability\nhas emerged among decision-makers and scholars. This demand is met by startup\necosystem rankings, which now measure and rank the performance of individual\necosystems on a continental and global scale. However, while the number of\nscientific publications examining rankings related to higher education,\neconomic performance, or even innovation, can be measured in the order of\nthousands, scientific research has so far rarely or tangentially addressed the\nrankings of startup ecosystems. This study and the related research intend to\nfill this gap by presenting and analysing the characteristics of global\nrankings and identifying possible future research directions.",
+          "arxiv_id": "2112.11931v1"
+        },
+        {
+          "title": "Order in Innovation",
+          "year": "2023-02",
+          "abstract": "Is calendar time the true clock of innovation? By combining complexity\nscience with innovation economics and using vaccine datasets containing over\nthree million citations and eight regulatory authorisations, we discover that\ncalendar time and network order describe innovation progress at varying\naccuracy. First, we present a method to establish a mathematical link between\ntechnological evolution and complex networks. The result is a path of events\nthat narrates innovation bottlenecks. Next, we quantify the position and\nproximity of documents to these innovation paths and find that research, by and\nlarge, proceed from basic research, applied research, development, to\ncommercialisation. By extension, we are able to causally quantify the\nparticipation of innovation funders. When it comes to vaccine innovation,\ndiffusion-oriented entities are preoccupied with basic, later-stage research;\nbiopharmaceuticals tend to participate in applied development activities and\nclinical trials at the later-stage; while mission-oriented entities tend to\ninitiate early-stage research. Future innovation programs and funding\nallocations would benefit from better understanding innovation orders.",
+          "arxiv_id": "2302.13076v1"
+        },
+        {
+          "title": "The relationship between social innovation and digital economy and society",
+          "year": "2022-12",
+          "abstract": "The information age is also an era of escalating social problems. The digital\ntransformation of society and the economy is already underway in all countries,\nalthough the progress in this transformation can vary widely. There are more\nsocial innovation projects addressing global and local social problems in some\ncountries than in others. This suggests that different levels of digital\ntransformation might influence the social innovation potential. Using the\nInternational Digital Economy and Society Index and the Social Innovation\nIndex, this study investigates how digital transformation of the economy and\nsociety affects the capacity for social innovation. A dataset of 29 countries\nwas analysed using both simple and multiple linear regressions and Pearsons\ncorrelation. Based on the research findings, it can be concluded that the\ndigital transformation of the economy and society has a significant positive\nimpact on the capacity for social innovation. It was also found that the\nintegration of digital technology plays a critical role in digital\ntransformation. Therefore, the progress in digital transformation is beneficial\nto social innovation capacity. In line with the research findings, this study\noutlines the implications and possible directions for policy.",
+          "arxiv_id": "2212.13840v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Evolution and determinants of firm-level systemic risk in local production networks",
+          "year": "2025-06",
+          "abstract": "Recent crises like the COVID-19 pandemic and geopolitical tensions have\nexposed vulnerabilities and caused disruptions of supply chains, leading to\nproduct shortages, increased costs, and economic instability. This has prompted\nincreasing efforts to assess systemic risk, namely the effects of firm\ndisruptions on entire economies. However, the ability of firms to react to\ncrises by rewiring their supply links has been largely overlooked, limiting our\nunderstanding of production networks resilience. Here we study dynamics and\ndeterminants of firm-level systemic risk in the Hungarian production network\nfrom 2015 to 2022. We use as benchmark a heuristic maximum entropy null model\nthat generates an ensemble of production networks at equilibrium, by preserving\nthe total input (demand) and output (supply) of each firm at the sector level.\nWe show that the fairly stable set of firms with highest systemic risk\nundergoes a structural change during COVID-19, as those enabling economic\nexchanges become key players in the economy -- a result which is not reproduced\nby the null model. Although the empirical systemic risk aligns well with the\nnull value until the onset of the pandemic, it becomes significantly smaller\nafterwards as the adaptive behavior of firms leads to a more resilient economy.\nFurthermore, firms' international trade volume (being a subject of disruption)\nbecomes a significant predictor of their systemic risk. However, international\nlinks cannot provide an unequivocal explanation for the observed trends, as\nimports and exports have opposing effects on local systemic risk through the\nsupply and demand channels.",
+          "arxiv_id": "2506.21426v1"
+        },
+        {
+          "title": "Global Supply Chain Reallocation and Shift under Triple Crises: A U.S.-China Perspective",
+          "year": "2025-08",
+          "abstract": "US-China trade tensions, the COVID-19 pandemic, and the Russia-Ukraine\nconflict have disrupted and reshaped global supply chains. Existing studies\ncaution that these tensions may not meaningfully reduce U.S. dependence on\nChina-linked supply chains. This study examines the drivers of this unmet\nreallocation under overlapping geopolitical and public health disruptions. It\ninvestigates how these shocks jointly reconfigured bilateral trade and global\nvalue chain (GVC) participation and positioning among the U.S., China, and\nmajor trading partners during 2016-2023. Using monthly bilateral trade data\nacross all sectors and multi-regional input-output tables for GVC\ndecomposition, we combine a multi-period event-study with structural analysis\nto evaluate trade-flow disruptions and shifts in participation and functional\npositioning within GVCs. We find that China's exports remained robust, expanded\nacross global markets, and sustained a rise in GVC participation, becoming more\nembedded in upstream segments through increased intermediate shipments to Asia\nand Europe. Meanwhile, U.S. imports increasingly shifted toward \"China+1\"\npartners, especially ASEAN, whose trade structures remain closely tied to\nChinese upstream supply chains. These strengthening triangular relationships\nreveal how global reallocation and GVCs have evolved around the U.S. and China\nacross successive shocks. Based on the evidence, we propose a supply chain\nresilience framework defined by three interacting dimensions: the level of GVC\nparticipation, the functional position within the value chain, and a country's\ncapacity to re-couple in the post-shock landscape, conditioned by market\ndiversification, economic complexity, and institutional capability. These\nfindings carry significant implications for trade policy and industrial\nstrategy in an era of geopolitical and geoeconomic fragmentation.",
+          "arxiv_id": "2508.06828v1"
+        },
+        {
+          "title": "Mapping intra firm trade in the automotive sector: a network approach",
+          "year": "2022-02",
+          "abstract": "Intra-firm trade describes the trade between affiliated firms and is\nincreasingly important as global production is fragmented. However, statistics\nand data on global intra-firm trade patterns are widely unavailable. This study\nproposes a novel multilevel approach combining firm and country level data to\nconstruct a set of country intra-firm trade networks for various segments of\nthe automotive production chain. A multilevel network is constructed with a\nnetwork of international trade at the macro level, a firm ownership network at\nthe micro level and a firm-country affiliation network linking the two, at the\nmeso level. A motif detection approach is used to filter these networks to\nextract potential intra-firm trade ties between countries, where the motif (or\nsubstructure) is two countries linked by trade, each affiliated with a firm,\nand these two firms linked by ownership. The motif detection is used to extract\npotential country level intra-firm trade ties. An Exponential Random Graph\nModel (ERGM) is applied to the country level intra-firm trade networks, one for\neach segment of the automotive production chain, to inform on the determinants\nof intra-firm trade at the country level.",
+          "arxiv_id": "2202.00409v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Local Eviction Moratoria and the Spread of COVID-19",
+          "year": "2023-07",
+          "abstract": "At various stages during the initial onset of the COVID-19 pandemic, various\nUS states and local municipalities enacted eviction moratoria. One of the main\naims of these moratoria was to slow the spread of COVID-19 infections. We\ndeploy a semiparametric difference-in-differences approach with an event study\nspecification to test whether the lifting of these local moratoria led to an\nincrease in COVID-19 cases and deaths. Our main findings, across a range of\nspecifications, are inconclusive regarding the impact of the moratoria -\nespecially after accounting for the number of actual evictions and conducting\nthe analysis at the county level. We argue that recently developed augmented\nsynthetic control (ASCM) methods are more appropriate in this setting. Our ASCM\nresults also suggest that the lifting of eviction moratoria had little to no\nimpact on COVID-19 cases and deaths. Thus, it seems that eviction moratoria had\nlittle to no robust effect on reducing the spread of COVID-19 throwing into\nquestion its use as a non-pharmaceutical intervention.",
+          "arxiv_id": "2307.00251v1"
+        },
+        {
+          "title": "Understanding the Relationship between Social Distancing Policies, Traffic Volume, Air Quality, and the Prevalence of COVID-19 Outcomes in Urban Neighborhoods",
+          "year": "2020-07",
+          "abstract": "In response to the COVID-19 pandemic, governments have implemented policies\nto curb the spread of the novel virus. Little is known about how these policies\nimpact various groups in society. This paper explores the relationship between\nsocial distancing policies, traffic volumes and air quality and how they impact\nvarious socioeconomic groups. This study aims to understand how disparate\ncommunities respond to Stay-at-Home Orders and other social distancing policies\nto understand how human behavior in response to policy may play a part in the\nprevalence of COVID-19 positive cases. We collected data on traffic density,\nair quality, socio-economic status, and positive cases rates of COVID-19 for\neach zip code of Salt Lake County, Utah (USA) between February 17 and June 12,\n2020. We studied the impact of social distancing policies across three periods\nof policy implementation. We found that wealthier and whiter zip codes\nexperienced a greater reduction in traffic and air pollution during the\nStay-at-Home period. However, air quality did not necessarily follow traffic\nvolumes in every case due to the complexity of interactions between emissions\nand meteorology. We also found a strong relationship between lower\nsocioeconomic status and positive COVID-19 rates. This study provides initial\nevidence for social distancing's effectiveness in limiting the spread of\nCOVID-19, while providing insight into how socioeconomic status has compounded\nvulnerability during this crisis. Behavior restrictions disproportionately\nbenefit whiter and wealthier communities both through protection from spread of\nCOVID-19 and reduction in air pollution. Such findings may be further\ncompounded by the impacts of air pollution, which likely exacerbate COVID-19\ntransmission and mortality rates. Policy makers need to consider adapting\nsocial distancing policies to maximize equity in health protection.",
+          "arxiv_id": "2008.01828v1"
+        },
+        {
+          "title": "The spatial dissemination of COVID-19 and associated socio-economic consequences",
+          "year": "2021-04",
+          "abstract": "The ongoing coronavirus disease 2019 (COVID-19) pandemic has wreaked havoc\nworldwide with millions of lives claimed, human travel restricted and economic\ndevelopment halted. Leveraging city-level mobility and case data, our analysis\nshows that the spatial dissemination of COVID-19 can be well explained by a\nlocal diffusion process in the mobility network rather than a global diffusion\nprocess, indicating the effectiveness of the implemented disease prevention and\ncontrol measures. Based on the constructed case prediction model, it is\nestimated that there could be distinct social consequences if the COVID-19\noutbreak happened in different areas. During the epidemic control period, human\nmobility experienced substantial reductions and the mobility network underwent\nremarkable local and global structural changes toward containing the spread of\nCOVID-19. Our work has important implications for the mitigation of disease and\nthe evaluation of the socio-economic consequences of COVID-19 on society.",
+          "arxiv_id": "2104.08213v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "Deciphering Bitcoin Blockchain Data by Cohort Analysis",
+          "year": "2021-02",
+          "abstract": "Bitcoin is a peer-to-peer electronic payment system that has rapidly grown in\npopularity in recent years. Usually, the complete history of Bitcoin blockchain\ndata must be queried to acquire variables with economic meaning. This task has\nrecently become increasingly difficult, as there are over 1.6 billion\nhistorical transactions on the Bitcoin blockchain. It is thus important to\nquery Bitcoin transaction data in a way that is more efficient and provides\neconomic insights. We apply cohort analysis that interprets Bitcoin blockchain\ndata using methods developed for population data in the social sciences.\nSpecifically, we query and process the Bitcoin transaction input and output\ndata within each daily cohort. This enables us to create datasets and\nvisualizations for some key Bitcoin transaction indicators, including the daily\nlifespan distributions of spent transaction output (STXO) and the daily age\ndistributions of the cumulative unspent transaction output (UTXO). We provide a\ncomputationally feasible approach for characterizing Bitcoin transactions that\npaves the way for future economic studies of Bitcoin.",
+          "arxiv_id": "2103.00173v3"
+        },
+        {
+          "title": "Is decentralized finance actually decentralized? A social network analysis of the Aave protocol on the Ethereum blockchain",
+          "year": "2022-06",
+          "abstract": "Decentralized finance (DeFi) has the potential to disrupt centralized finance\nby validating peer-to-peer transactions through tamper-proof smart contracts,\nthus significantly lowering the transaction cost charged by financial\nintermediaries. However, the actual realization of peer-to-peer transactions\nand the levels and effects of decentralization are largely unknown. Our\nresearch pioneers a blockchain network study that applies social network\nanalysis to measure the level, dynamics, and impacts of decentralization in\nDeFi token transactions on the Ethereum blockchain. First, we find a\nsignificant core-periphery structure in the AAVE token transaction network\nwhere the cores include the two largest centralized crypto exchanges. Second,\nwe provide evidence that multiple network features consistently characterize\ndecentralization dynamics. Finally, we document that a more decentralized\nnetwork significantly predicts a higher return and lower volatility of the\ndecentralized market of AAVE tokens on the Ethereum blockchain. We point out\nthat our approach is seminal for inspiring future extensions related to the\nfacets of application scenarios, research questions, and methodologies on the\nmechanics of blockchain decentralization.",
+          "arxiv_id": "2206.08401v4"
+        },
+        {
+          "title": "The economic dependency of the Bitcoin security",
+          "year": "2021-02",
+          "abstract": "We study to what extent the Bitcoin blockchain security permanently depends\non the underlying distribution of cryptocurrency market outcomes. We use daily\nblockchain and Bitcoin data for 2014-2019 and employ the ARDL approach. We test\nthree equilibrium hypotheses: (i) sensitivity of the Bitcoin blockchain to\nmining reward; (ii) security outcomes of the Bitcoin blockchain and the\nproof-of-work cost; and (iii) the speed of adjustment of the Bitcoin blockchain\nsecurity to deviations from the equilibrium path. Our results suggest that the\nBitcoin price and mining rewards are intrinsically linked to Bitcoin security\noutcomes. The Bitcoin blockchain security's dependency on mining costs is\ngeographically differenced - it is more significant for the global mining\nleader China than for other world regions. After input or output price shocks,\nthe Bitcoin blockchain security reverts to its equilibrium security level.",
+          "arxiv_id": "2102.08378v1"
+        }
+      ],
+      "9": [
+        {
+          "title": "Inequality Measures: The Kolkata index in comparison with other measures",
+          "year": "2020-05",
+          "abstract": "We provide a survey of the Kolkata index of social inequality, focusing in\nparticular on income inequality. Based on the observation that inequality\nfunctions (such as the Lorenz function), giving the measures of income or\nwealth against that of the population, to be generally nonlinear, we show that\nthe fixed point (like Kolkata index k) of such a nonlinear function (or\nrelated, like the complementary Lorenz function) offer better measure of\ninequality than the average quantities (like Gini index). Indeed the Kolkata\nindex can be viewed as a generalized Hirsch index for a normalized inequality\nfunction and gives the fraction k of the total wealth possessed by the rich\n(1-k) fraction of the population. We analyze the structures of the inequality\nindices for both continuous and discrete income distributions. We also compare\nthe Kolkata index to some other measures like the Gini coefficient and the\nPietra index. Lastly, we provide some empirical studies which illustrate the\ndifferences between the Kolkata index and the Gini coefficient.",
+          "arxiv_id": "2005.08762v2"
+        },
+        {
+          "title": "A simple method for measuring inequality",
+          "year": "2021-12",
+          "abstract": "To simultaneously overcome the limitation of the Gini index in that it is\nless sensitive to inequality at the tails of income distribution and the\nlimitation of the inter-decile ratios that ignore inequality in the middle of\nincome distribution, an inequality index is introduced. It comprises three\nindicators, namely, the Gini index, the income share held by the top 10%, and\nthe income share held by the bottom 10%. The data from the World Bank database\nand the Organization for Economic Co-operation and Development Income\nDistribution Database between 2005 and 2015 are used to demonstrate how the\ninequality index works. The results show that it can distinguish income\ninequality among countries that share the same Gini index but have different\nincome gaps between the top 10% and the bottom 10%. It could also distinguish\nincome inequality among countries that have the same ratio of income share held\nby the top 10% to income share held by the bottom 10% but differ in the values\nof the Gini index. In addition, the inequality index could capture the dynamics\nwhere the Gini index of a country is stable over time but the ratio of income\nshare of the top 10% to income share of the bottom 10% is increasing.\nFurthermore, the inequality index could be applied to other scientific\ndisciplines as a measure of statistical heterogeneity and for size\ndistributions of any non-negative quantities.",
+          "arxiv_id": "2112.15284v1"
+        },
+        {
+          "title": "Occupational Income Inequality of Thailand: A Case Study of Exploratory Data Analysis beyond Gini Coefficient",
+          "year": "2021-11",
+          "abstract": "Income inequality is an important issue that has to be solved in order to\nmake progress in our society. The study of income inequality is well received\nthrough the Gini coefficient, which is used to measure degrees of inequality in\ngeneral. While this method is effective in several aspects, the Gini\ncoefficient alone inevitably overlooks minority subpopulations (e.g.\noccupations) which results in missing undetected patterns of inequality in\nminority.\n  In this study, the surveys of incomes and occupations from more than 12\nmillions households across Thailand have been analyzed by using both Gini\ncoefficient and network densities of income domination networks to get insight\nregarding the degrees of general and occupational income inequality issues. The\nresults show that, in agricultural provinces, there are less issues in both\ntypes of inequality (low Gini coefficients and network densities), while some\nnon-agricultural provinces face an issue of occupational income inequality\n(high network densities) without any symptom of general income inequality (low\nGini coefficients). Moreover, the results also illustrate the gaps of income\ninequality using estimation statistics, which not only support whether income\ninequality exists, but that we are also able to tell the magnitudes of income\ngaps among occupations. These results cannot be obtained via Gini coefficients\nalone. This work serves as a use case of analyzing income inequality from both\ngeneral population and subpopulations perspectives that can be utilized in\nstudies of other countries.",
+          "arxiv_id": "2111.06224v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:44Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

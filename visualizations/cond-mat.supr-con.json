@@ -1,0 +1,578 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_superconducting_superconductivity_phase_temperature",
+        "keywords": [
+          [
+            "superconducting",
+            0.03274856745697916
+          ],
+          [
+            "superconductivity",
+            0.026118600181567055
+          ],
+          [
+            "phase",
+            0.02297170182969708
+          ],
+          [
+            "temperature",
+            0.02184664543610215
+          ],
+          [
+            "spin",
+            0.020834989536063667
+          ],
+          [
+            "magnetic",
+            0.020407882417891463
+          ],
+          [
+            "quantum",
+            0.019468530381134573
+          ],
+          [
+            "field",
+            0.019411943030370155
+          ],
+          [
+            "superconductors",
+            0.018712413250595153
+          ],
+          [
+            "state",
+            0.018685319935208604
+          ]
+        ],
+        "count": 10679
+      },
+      "1": {
+        "name": "1_field_UTe2_magnetic_triplet",
+        "keywords": [
+          [
+            "field",
+            0.0396406126786723
+          ],
+          [
+            "UTe2",
+            0.03846622168626924
+          ],
+          [
+            "magnetic",
+            0.037594684366198935
+          ],
+          [
+            "triplet",
+            0.02726018783420871
+          ],
+          [
+            "spin",
+            0.026691127079621787
+          ],
+          [
+            "superconducting",
+            0.025708537543885718
+          ],
+          [
+            "state",
+            0.025357636938561544
+          ],
+          [
+            "axis",
+            0.02533529923558136
+          ],
+          [
+            "superconductivity",
+            0.02362347248348752
+          ],
+          [
+            "spin triplet",
+            0.02248115555064069
+          ]
+        ],
+        "count": 167
+      },
+      "2": {
+        "name": "2_spin_superconducting_pairing_state",
+        "keywords": [
+          [
+            "spin",
+            0.025251971679858463
+          ],
+          [
+            "superconducting",
+            0.02503882699659571
+          ],
+          [
+            "pairing",
+            0.024144531460923713
+          ],
+          [
+            "state",
+            0.021110904259959314
+          ],
+          [
+            "strain",
+            0.020232012167357837
+          ],
+          [
+            "symmetry",
+            0.01933771982419496
+          ],
+          [
+            "order",
+            0.01914020404422394
+          ],
+          [
+            "wave",
+            0.016963274395351304
+          ],
+          [
+            "states",
+            0.013920272516505582
+          ],
+          [
+            "Sr2RuO4",
+            0.013596140125972368
+          ]
+        ],
+        "count": 124
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.37166311812425745,
+        -0.653628776451924
+      ],
+      [
+        -0.37166311812425745,
+        1.0,
+        -0.49989327088336066
+      ],
+      [
+        -0.653628776451924,
+        -0.49989327088336066,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        92,
+        29,
+        7
+      ],
+      "2020-02": [
+        84,
+        22,
+        11
+      ],
+      "2020-03": [
+        103,
+        26,
+        10
+      ],
+      "2020-04": [
+        102,
+        27,
+        10
+      ],
+      "2020-05": [
+        98,
+        18,
+        8
+      ],
+      "2020-06": [
+        98,
+        28,
+        16
+      ],
+      "2020-07": [
+        115,
+        27,
+        7
+      ],
+      "2020-08": [
+        99,
+        24,
+        10
+      ],
+      "2020-09": [
+        113,
+        30,
+        9
+      ],
+      "2020-10": [
+        106,
+        21,
+        16
+      ],
+      "2020-11": [
+        114,
+        28,
+        5
+      ],
+      "2020-12": [
+        130,
+        41,
+        16
+      ],
+      "2021-01": [
+        110,
+        24,
+        12
+      ],
+      "2021-02": [
+        118,
+        24,
+        8
+      ],
+      "2021-03": [
+        152,
+        34,
+        13
+      ],
+      "2021-04": [
+        118,
+        21,
+        7
+      ],
+      "2021-05": [
+        114,
+        30,
+        13
+      ],
+      "2021-06": [
+        137,
+        24,
+        14
+      ],
+      "2021-07": [
+        132,
+        29,
+        4
+      ],
+      "2021-08": [
+        119,
+        19,
+        11
+      ],
+      "2021-09": [
+        131,
+        37,
+        16
+      ],
+      "2021-10": [
+        108,
+        40,
+        9
+      ],
+      "2021-11": [
+        120,
+        23,
+        14
+      ],
+      "2021-12": [
+        133,
+        37,
+        5
+      ],
+      "2022-01": [
+        120,
+        24,
+        9
+      ],
+      "2022-02": [
+        116,
+        27,
+        9
+      ],
+      "2022-03": [
+        131,
+        29,
+        9
+      ],
+      "2022-04": [
+        108,
+        35,
+        9
+      ],
+      "2022-05": [
+        115,
+        31,
+        7
+      ],
+      "2022-06": [
+        97,
+        30,
+        6
+      ],
+      "2022-07": [
+        116,
+        35,
+        10
+      ],
+      "2022-08": [
+        106,
+        29,
+        4
+      ],
+      "2022-09": [
+        108,
+        29,
+        7
+      ],
+      "2022-10": [
+        139,
+        30,
+        9
+      ],
+      "2022-11": [
+        112,
+        34,
+        6
+      ],
+      "2022-12": [
+        119,
+        40,
+        3
+      ],
+      "2023-01": [
+        118,
+        16,
+        7
+      ],
+      "2023-02": [
+        104,
+        25,
+        8
+      ],
+      "2023-03": [
+        153,
+        32,
+        6
+      ],
+      "2023-04": [
+        109,
+        31,
+        9
+      ],
+      "2023-05": [
+        110,
+        42,
+        2
+      ],
+      "2023-06": [
+        126,
+        44,
+        15
+      ],
+      "2023-07": [
+        133,
+        31,
+        6
+      ],
+      "2023-08": [
+        193,
+        37,
+        6
+      ],
+      "2023-09": [
+        136,
+        32,
+        9
+      ],
+      "2023-10": [
+        144,
+        29,
+        8
+      ],
+      "2023-11": [
+        136,
+        38,
+        5
+      ],
+      "2023-12": [
+        154,
+        23,
+        7
+      ],
+      "2024-01": [
+        105,
+        36,
+        6
+      ],
+      "2024-02": [
+        108,
+        34,
+        7
+      ],
+      "2024-03": [
+        143,
+        36,
+        11
+      ],
+      "2024-04": [
+        102,
+        23,
+        3
+      ],
+      "2024-05": [
+        123,
+        29,
+        12
+      ],
+      "2024-06": [
+        119,
+        35,
+        7
+      ],
+      "2024-07": [
+        122,
+        32,
+        8
+      ],
+      "2024-08": [
+        132,
+        37,
+        9
+      ],
+      "2024-09": [
+        113,
+        31,
+        7
+      ],
+      "2024-10": [
+        142,
+        38,
+        9
+      ],
+      "2024-11": [
+        121,
+        28,
+        9
+      ],
+      "2024-12": [
+        142,
+        40,
+        9
+      ],
+      "2025-01": [
+        116,
+        33,
+        6
+      ],
+      "2025-02": [
+        125,
+        30,
+        9
+      ],
+      "2025-03": [
+        164,
+        44,
+        9
+      ],
+      "2025-04": [
+        105,
+        42,
+        5
+      ],
+      "2025-05": [
+        129,
+        32,
+        13
+      ],
+      "2025-06": [
+        124,
+        32,
+        8
+      ],
+      "2025-07": [
+        163,
+        32,
+        8
+      ],
+      "2025-08": [
+        118,
+        29,
+        6
+      ],
+      "2025-09": [
+        74,
+        24,
+        1
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Spin-Orbit Enhanced Superconductivity in Bernal Bilayer Graphene",
+          "year": "2022-05",
+          "abstract": "In the presence of a large perpendicular electric field, Bernal-stacked\nbilayer graphene (BLG) features several broken-symmetry metallic phases as well\nas magnetic-field-induced superconductivity. The superconducting state is quite\nfragile, however, appearing only in a narrow window of density and with a\nmaximum critical temperature $T_c\\approx30$~mK. Here, we show that placing\nmonolayer tungsten diselenide (WSe$_{2}$) on BLG promotes Cooper pairing to an\nextraordinary degree: superconductivity appears at zero magnetic field,\nexhibits an order of magnitude enhancement in $T_c$, and occurs over a density\nrange that is wider by a factor of eight. By mapping quantum oscillations in\nBLG-WSe$_2$ as a function of electric field and doping, we establish that\nsuperconductivity emerges throughout a region whose normal state is polarized,\nwith two out of four spin-valley flavours predominantly populated. In-plane\nmagnetic field measurements further reveal a striking dependence of the\ncritical field on doping, with the Chandrasekhar-Clogston (Pauli) limit roughly\nobeyed on one end of the superconducting dome yet sharply violated on the\nother. Moreover, the superconductivity arises only for perpendicular electric\nfields that push BLG hole wavefunctions towards WSe$_2$ -- suggesting that\nproximity-induced (Ising) spin-orbit coupling plays a key role in enhancing the\npairing. Our results pave the way for engineering robust, highly tunable, and\nultra-clean graphene-based superconductors.",
+          "arxiv_id": "2205.05087v1"
+        },
+        {
+          "title": "Interfacial spin-orbit coupling in superconducting hybrid systems",
+          "year": "2025-02",
+          "abstract": "We investigate the effects of interfacial spin-orbit coupling (ISOC) on\nsuperconductors, focusing on its impact on electronic transport and spin-charge\nconversion. Using a symmetry-based nonlinear sigma model, we derive effective\nboundary conditions for the Usadel and Maxwell equations that account for the\nspin-galvanic effect, spin relaxation, and spin precession. This approach\nallows for the analysis of various interfaces without relying on specific\nmicroscopic models. We apply these boundary conditions to derive ISOC-induced\nterms in the Ginzburg-Landau functional, which is then used to compute the\ncritical temperature of superconducting films with ISOC subjected to an\nexternal magnetic field. Our findings show that, contrary to a recent\nprediction, the critical temperature of a film cannot be enhanced by an\nexternal magnetic field. Additionally, we demonstrate that the combination of\nISOC and an external magnetic field leads to a superconducting diode effect.\nIts efficiency strongly depends on the interplay between the spin-galvanic and\nthe spin relaxation terms. Our results provide a framework for understanding\nISOC in superconducting systems and highlight the potential for optimizing\ndiode efficiency through careful interface engineering.",
+          "arxiv_id": "2502.10911v2"
+        },
+        {
+          "title": "One-dimensional spin-orbit coupled Dirac system with extended $s$-wave superconductivity: Majorana modes and Josephson effects",
+          "year": "2020-07",
+          "abstract": "Motivated by the spin-momentum locking of electrons at the boundaries of\ntopological insulators, we study a one-dimensional system of spin-orbit coupled\nmassless Dirac electrons with $s$-wave superconducting pairing. As a result of\nthe spin-orbit coupling, our model has only two kinds of linearly dispersing\nmodes, which we take to be right-moving spin-up and left-moving spin-down. Both\nlattice and continuum models are studied. In the lattice model, we find that a\nsingle Majorana zero energy mode appears at each end of a finite system\nprovided that the $s$-wave pairing has an extended form, with the\nnearest-neighbor pairing being larger than the on-site pairing. We confirm this\nboth numerically and analytically by calculating the winding number. Next we\nstudy a lattice version of a model with both Schr\\\"odinger and Dirac-like terms\nand find that the model hosts a topological transition between topologically\ntrivial and non-trivial phases depending on the relative strength of the\nSchr\\\"odinger and Dirac terms. We then study a continuum system consisting of\ntwo $s$-wave superconductors with different phases of the pairing. Remarkably,\nwe find that the system has a {\\it single} Andreev bound state which is\nlocalized at the junction. When the pairing phase difference crosses a multiple\nof $2 \\pi$, an Andreev bound state touches the top of the superconducting gap\nand disappears, and a different state appears from the bottom of the gap. We\nalso study the AC Josephson effect in such a junction with a voltage bias that\nhas both a constant $V_0$ and a term which oscillates with a frequency\n$\\omega$. We find that, in contrast to standard Josephson junctions, Shapiro\nplateaus appear when the Josephson frequency $\\omega_J= 2eV_0/\\hbar$ is a\nrational fraction of $\\omega$. We discuss experiments which can realize such\njunctions.",
+          "arxiv_id": "2007.00357v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Magnetic signatures of pressure-induced multicomponent superconductivity in UTe$_2$",
+          "year": "2024-03",
+          "abstract": "The phase diagram of the heavy fermion compound UTe$_2$ contains multiple\nsuperconducting phases, several of which show characteristics of odd-parity\npairing. We have investigated the pressure dependence of the superconducting\ntransition in high-quality crystals of UTe$_2$ by tracking its signature in the\nmagnetic susceptibility $\\chi(T)$. A single, sharp superconducting transition\nis observed at low pressures 0.3 GPa. At higher pressure, a second feature\nemerges in $\\chi(T)$, which is located at the lower-temperature thermodynamic\nphase boundary previously identified in specific heat measurements. This second\ntransition anomaly in $\\chi(T)$ can be attributed to a step change in the\nLondon penetration depth, providing direct evidence for a change in the\nsuperconducting order parameter of UTe$_2$. Thermodynamic constraints suggest\nthat the low temperature, high pressure superconducting state is distinct from\nzero pressure superconductivity as well as from the high pressure, high\ntemperature superconducting state, raising the possibility of multicomponent\nsuperconductivity in high pressure UTe$_2$.",
+          "arxiv_id": "2403.06650v2"
+        },
+        {
+          "title": "Superconducting order parameter in UTe$_2$ determined by Knight shift measurement",
+          "year": "2022-03",
+          "abstract": "This study investigates the spin susceptibility in U-based superconductor\nUTe$_2$ in the superconducting (SC) state by using Knight shift measurements\nfor a magnetic field $H$ along the $a$ axis, which is the magnetic easy axis of\nUTe$_2$. Although a tiny anomaly ascribed to the SC diamagnetic effect was\nobserved just below the SC transition temperature $T_{\\rm c}$, the $a$-axis\nKnight shift in the SC state shows no significant decrease, following the\nextrapolation from the normal-state temperature dependence. This indicates that\nthe spin susceptibility is nearly unchanged below $T_{\\rm c}$. Considering the\nprevious Knight shift results for $H \\parallel b$ and $H \\parallel c$, the\ndominant SC state is determined to be $B_{\\rm 3u}$ in the spin-triplet pairing,\nwhich is consistent with the spin anisotropy in the normal state. The present\nresult shows that UTe$_2$ is a spin-triplet superconductor with spin degrees of\nfreedom.",
+          "arxiv_id": "2203.08598v2"
+        },
+        {
+          "title": "Enhanced triplet superconductivity in next generation ultraclean UTe2",
+          "year": "2023-05",
+          "abstract": "The unconventional superconductor UTe$_2$ exhibits numerous signatures of\nspin-triplet superconductivity -- a rare state of matter which could enable\nquantum computation protected against decoherence. UTe$_2$ possesses a complex\nphase landscape comprising two magnetic field-induced superconducting phases, a\nmetamagnetic transition to a field-polarised state, along with pair- and\ncharge-density wave orders. However, contradictory reports between studies\nperformed on UTe$_2$ specimens of varying quality have severely impeded\ntheoretical efforts to understand the microscopic origins of the exotic\nsuperconductivity. Here, we report a comprehensive suite of high magnetic field\nmeasurements on a new generation of pristine quality UTe$_2$ crystals. Our\nexperiments reveal a significantly revised high magnetic field superconducting\nphase diagram in the ultraclean limit, showing a pronounced sensitivity of\nfield-induced superconductivity to the presence of crystalline disorder. We\nemploy a Ginzburg-Landau model that excellently captures this acute dependence\non sample quality. Our results suggest that in close proximity to a\nfield--induced metamagnetic transition the enhanced role of magnetic\nfluctuations -- that are strongly suppressed by disorder -- is likely\nresponsible for tuning UTe$_2$ between two distinct spin-triplet\nsuperconducting phases.",
+          "arxiv_id": "2305.19033v3"
+        }
+      ],
+      "2": [
+        {
+          "title": "Thermodynamic Evidence for a Two-Component Superconducting Order Parameter in Sr$_2$RuO$_4$",
+          "year": "2020-02",
+          "abstract": "Sr$_2$RuO$_4$ has stood as the leading candidate for a spin-triplet\nsuperconductor for 26 years. Recent NMR experiments have cast doubt on this\ncandidacy, however, and it is difficult to find a theory of superconductivity\nthat is consistent with all experiments. What is needed are symmetry-based\nexperiments that can rule out broad classes of possible superconducting order\nparameters. Here we use resonant ultrasound spectroscopy to measure the entire\nsymmetry-resolved elastic tensor of Sr$_2$RuO$_4$ through the superconducting\ntransition. We observe a thermodynamic discontinuity in the shear elastic\nmodulus $c_{66}$, requiring that the superconducting order parameter is\ntwo-component. A two-component $p$-wave order parameter, such as $p_x+i p_y$,\nnaturally satisfies this requirement. As this order parameter appears to be\nprecluded by recent NMR experiments, we suggest that two other two-component\norder parameters, namely $\\left\\{d_{xz},d_{yz}\\right\\}$ or\n$\\left\\{d_{x^2-y^2},g_{xy(x^2-y^2)}\\right\\}$, are now the prime candidates for\nthe order parameter of Sr$_2$RuO$_4$.",
+          "arxiv_id": "2002.06130v2"
+        },
+        {
+          "title": "A Review of Electronic Transport in Superconducting Sr$_2$RuO$_4$ Junctions",
+          "year": "2021-09",
+          "abstract": "We review electronic transport in superconducting junctions with\nSr$_2$RuO$_4$. Transport measurements provide evidence for chiral domain walls\nand, therefore, chiral superconductivity in superconducting Sr$_2$RuO$_4$, but\nso far, the symmetry of the underlying superconducting state remains\ninconclusive. Further studies involving density of states measurements and\nspin-polarised transport in local/non--local Sr$_2$RuO$_4$ junctions with\nmagnetic materials could lead to fundamental discoveries and a better\nunderstanding of the superconducting state.",
+          "arxiv_id": "2109.05851v2"
+        },
+        {
+          "title": "Fingerprints of possible even-parity superconducting states in Sr$_2$RuO$_4$ detected by planar tunneling spectroscopy",
+          "year": "2021-06",
+          "abstract": "After more than 25 years of research, three even-parity superconducting\nstates -- the $d+id$-wave, $d+ig$-wave, and $s+id$-wave states -- have emerged\nas leading candidates for the superconducting states of Sr$_2$RuO$_4$. In the\npresent work, we propose a tunneling spectroscopy experiment for distinguishing\namong these three superconducting states. The key component of our proposal is\nthat we examine the conductance spectra of normal-metal/Sr$_2$RuO$_4$ junctions\nwith various angles between the junction interface and the crystal axis of the\nSr$_2$RuO$_4$. The angle dependence of the conductance spectra shows a unique\npattern in each superconducting state, which can function as a fingerprint for\nverifying the pairing symmetry of Sr$_2$RuO$_4$.",
+          "arxiv_id": "2106.09413v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:16:01Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

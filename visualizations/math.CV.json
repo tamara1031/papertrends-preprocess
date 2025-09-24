@@ -1,0 +1,1628 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_complex_manifolds_manifold_projective",
+        "keywords": [
+          [
+            "complex",
+            0.025816352541975788
+          ],
+          [
+            "manifolds",
+            0.02281340922342479
+          ],
+          [
+            "manifold",
+            0.018486226887780545
+          ],
+          [
+            "projective",
+            0.01812716003976253
+          ],
+          [
+            "holomorphic",
+            0.01809040219369542
+          ],
+          [
+            "compact",
+            0.017346612066175125
+          ],
+          [
+            "metrics",
+            0.017083028938251157
+          ],
+          [
+            "bundle",
+            0.013981645652220317
+          ],
+          [
+            "varieties",
+            0.013511948074390292
+          ],
+          [
+            "curvature",
+            0.013292315773813181
+          ]
+        ],
+        "count": 1130
+      },
+      "1": {
+        "name": "1_spaces_operators_space_Bergman",
+        "keywords": [
+          [
+            "spaces",
+            0.04523916266005465
+          ],
+          [
+            "operators",
+            0.04394822992824014
+          ],
+          [
+            "space",
+            0.032203099341986376
+          ],
+          [
+            "Bergman",
+            0.03178442959610495
+          ],
+          [
+            "weighted",
+            0.028610520557661497
+          ],
+          [
+            "Hardy",
+            0.02473099149930065
+          ],
+          [
+            "operator",
+            0.02401341262108612
+          ],
+          [
+            "composition",
+            0.02229387245708444
+          ],
+          [
+            "Toeplitz",
+            0.019053442646272328
+          ],
+          [
+            "functions",
+            0.01788661844285587
+          ]
+        ],
+        "count": 524
+      },
+      "2": {
+        "name": "2_domains_metric_boundary_domain",
+        "keywords": [
+          [
+            "domains",
+            0.04971304813247345
+          ],
+          [
+            "metric",
+            0.02906916105755334
+          ],
+          [
+            "boundary",
+            0.028674097889091883
+          ],
+          [
+            "domain",
+            0.028346708913786576
+          ],
+          [
+            "pseudoconvex",
+            0.023084190999447387
+          ],
+          [
+            "bounded",
+            0.021505734325161563
+          ],
+          [
+            "Kobayashi",
+            0.020572693943829583
+          ],
+          [
+            "Gromov",
+            0.01846389071917318
+          ],
+          [
+            "hyperbolic",
+            0.017984202453722644
+          ],
+          [
+            "convex",
+            0.017082177989142657
+          ]
+        ],
+        "count": 415
+      },
+      "3": {
+        "name": "3_functions_Bohr_harmonic_class",
+        "keywords": [
+          [
+            "functions",
+            0.05428968029315585
+          ],
+          [
+            "Bohr",
+            0.04590573467572137
+          ],
+          [
+            "harmonic",
+            0.034072547587732385
+          ],
+          [
+            "class",
+            0.03027403340978395
+          ],
+          [
+            "radius",
+            0.026151964794418083
+          ],
+          [
+            "mappings",
+            0.02614654051400858
+          ],
+          [
+            "univalent",
+            0.02603753618772398
+          ],
+          [
+            "analytic",
+            0.026004551871809264
+          ],
+          [
+            "unit",
+            0.02517551340446009
+          ],
+          [
+            "sharp",
+            0.024883260207313757
+          ]
+        ],
+        "count": 409
+      },
+      "4": {
+        "name": "4_zeros_polynomials_function_functions",
+        "keywords": [
+          [
+            "zeros",
+            0.038036617626295066
+          ],
+          [
+            "polynomials",
+            0.03467931340469538
+          ],
+          [
+            "function",
+            0.028674773807819635
+          ],
+          [
+            "functions",
+            0.026699026122314975
+          ],
+          [
+            "polynomial",
+            0.022621241089695862
+          ],
+          [
+            "series",
+            0.016193035350801816
+          ],
+          [
+            "entire",
+            0.01593573406555031
+          ],
+          [
+            "coefficients",
+            0.015699866431142833
+          ],
+          [
+            "zeta",
+            0.015571298990427297
+          ],
+          [
+            "complex",
+            0.014981305163956349
+          ]
+        ],
+        "count": 318
+      },
+      "5": {
+        "name": "5_Monge_complex_plurisubharmonic_equations",
+        "keywords": [
+          [
+            "Monge",
+            0.053751629038797266
+          ],
+          [
+            "complex",
+            0.030042629863491675
+          ],
+          [
+            "plurisubharmonic",
+            0.029476814626822796
+          ],
+          [
+            "equations",
+            0.028222228369609102
+          ],
+          [
+            "equation",
+            0.024723315726943036
+          ],
+          [
+            "solutions",
+            0.021824269402993497
+          ],
+          [
+            "functions",
+            0.02052506856796259
+          ],
+          [
+            "Hessian",
+            0.019225023078752405
+          ],
+          [
+            "plurisubharmonic functions",
+            0.018740223786196396
+          ],
+          [
+            "Ampère",
+            0.018526826897858936
+          ]
+        ],
+        "count": 211
+      },
+      "6": {
+        "name": "6_slice_quaternionic_functions_regular",
+        "keywords": [
+          [
+            "slice",
+            0.09315670306116966
+          ],
+          [
+            "quaternionic",
+            0.06501360555023207
+          ],
+          [
+            "functions",
+            0.05946702444716806
+          ],
+          [
+            "regular",
+            0.05809822783036932
+          ],
+          [
+            "regular functions",
+            0.045382394273825406
+          ],
+          [
+            "monogenic",
+            0.04018620725414178
+          ],
+          [
+            "monogenic functions",
+            0.030429081177829234
+          ],
+          [
+            "Clifford",
+            0.024285571273260323
+          ],
+          [
+            "operator",
+            0.02374870751128196
+          ],
+          [
+            "function",
+            0.02092913822182174
+          ]
+        ],
+        "count": 170
+      },
+      "7": {
+        "name": "7_maps_dynamics_set_Julia",
+        "keywords": [
+          [
+            "maps",
+            0.04911903214946331
+          ],
+          [
+            "dynamics",
+            0.02561637658438469
+          ],
+          [
+            "set",
+            0.025279067551604837
+          ],
+          [
+            "Julia",
+            0.023093677351668396
+          ],
+          [
+            "points",
+            0.02294558263076921
+          ],
+          [
+            "rational",
+            0.02165523619911012
+          ],
+          [
+            "map",
+            0.02143988858236263
+          ],
+          [
+            "periodic",
+            0.019951785947449275
+          ],
+          [
+            "dynamical",
+            0.018885701079177458
+          ],
+          [
+            "rational maps",
+            0.01819471457178312
+          ]
+        ],
+        "count": 153
+      },
+      "8": {
+        "name": "8_meromorphic_differential_difference_solutions",
+        "keywords": [
+          [
+            "meromorphic",
+            0.058883112596450654
+          ],
+          [
+            "differential",
+            0.050605900347174756
+          ],
+          [
+            "difference",
+            0.046705470636864026
+          ],
+          [
+            "solutions",
+            0.04258118456281445
+          ],
+          [
+            "equations",
+            0.03797726135931408
+          ],
+          [
+            "entire",
+            0.03417599046246103
+          ],
+          [
+            "order",
+            0.03227246556956954
+          ],
+          [
+            "meromorphic functions",
+            0.03165242067614204
+          ],
+          [
+            "equation",
+            0.031505933903140305
+          ],
+          [
+            "results",
+            0.03095741160152496
+          ]
+        ],
+        "count": 139
+      },
+      "9": {
+        "name": "9_SLE_Loewner_random_loop",
+        "keywords": [
+          [
+            "SLE",
+            0.06495606365403715
+          ],
+          [
+            "Loewner",
+            0.0485314664995777
+          ],
+          [
+            "random",
+            0.019362523880181406
+          ],
+          [
+            "loop",
+            0.01814121319056162
+          ],
+          [
+            "energy",
+            0.01782277104575888
+          ],
+          [
+            "conformal",
+            0.017677792947373764
+          ],
+          [
+            "Brownian",
+            0.01706517432552656
+          ],
+          [
+            "welding",
+            0.01653788356584566
+          ],
+          [
+            "multiple",
+            0.016470275358510388
+          ],
+          [
+            "model",
+            0.015968944724792572
+          ]
+        ],
+        "count": 113
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6004952105181921,
+        -0.272743517466157,
+        -0.5564042378955951,
+        -0.39900963542970996,
+        -0.5834374360223075,
+        -0.6993963621095856,
+        -0.30284097056636583,
+        -0.5639699232994736,
+        -0.6607275641241391
+      ],
+      [
+        -0.6004952105181921,
+        1.0,
+        -0.5789137271452531,
+        -0.5761349195748795,
+        -0.6072740248679129,
+        -0.7029708486071238,
+        -0.709476074604986,
+        -0.6233753665863051,
+        -0.6614873199151726,
+        -0.69456963370281
+      ],
+      [
+        -0.272743517466157,
+        -0.5789137271452531,
+        1.0,
+        -0.5321469905039841,
+        -0.44013853054730423,
+        -0.6530682397408418,
+        -0.6884417194704473,
+        -0.3603858746886788,
+        -0.5485274444098707,
+        -0.6570103315508624
+      ],
+      [
+        -0.5564042378955951,
+        -0.5761349195748795,
+        -0.5321469905039841,
+        1.0,
+        -0.5424293667603471,
+        -0.7181517162457304,
+        -0.5534148428371117,
+        -0.6381593750331079,
+        -0.3827921353242167,
+        -0.7325527780476239
+      ],
+      [
+        -0.39900963542970996,
+        -0.6072740248679129,
+        -0.44013853054730423,
+        -0.5424293667603471,
+        1.0,
+        -0.6677118847571692,
+        -0.5812261683851871,
+        -0.3942562832310328,
+        -0.5421556016141988,
+        -0.6625343153352109
+      ],
+      [
+        -0.5834374360223075,
+        -0.7029708486071238,
+        -0.6530682397408418,
+        -0.7181517162457304,
+        -0.6677118847571692,
+        1.0,
+        -0.730151051901222,
+        -0.6699517517904496,
+        -0.6869424704661076,
+        -0.6702450485772562
+      ],
+      [
+        -0.6993963621095856,
+        -0.709476074604986,
+        -0.6884417194704473,
+        -0.5534148428371117,
+        -0.5812261683851871,
+        -0.730151051901222,
+        1.0,
+        -0.710123054025467,
+        -0.6874528491375355,
+        -0.7468592129080269
+      ],
+      [
+        -0.30284097056636583,
+        -0.6233753665863051,
+        -0.3603858746886788,
+        -0.6381593750331079,
+        -0.3942562832310328,
+        -0.6699517517904496,
+        -0.710123054025467,
+        1.0,
+        -0.6579503956434731,
+        -0.661744063230103
+      ],
+      [
+        -0.5639699232994736,
+        -0.6614873199151726,
+        -0.5485274444098707,
+        -0.3827921353242167,
+        -0.5421556016141988,
+        -0.6869424704661076,
+        -0.6874528491375355,
+        -0.6579503956434731,
+        1.0,
+        -0.7231019377629546
+      ],
+      [
+        -0.6607275641241391,
+        -0.69456963370281,
+        -0.6570103315508624,
+        -0.7325527780476239,
+        -0.6625343153352109,
+        -0.6702450485772562,
+        -0.7468592129080269,
+        -0.661744063230103,
+        -0.7231019377629546,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        22,
+        14,
+        12,
+        14,
+        8,
+        0,
+        3,
+        4,
+        7,
+        2
+      ],
+      "2020-02": [
+        18,
+        12,
+        9,
+        11,
+        8,
+        4,
+        1,
+        6,
+        5,
+        3
+      ],
+      "2020-03": [
+        28,
+        5,
+        12,
+        18,
+        4,
+        8,
+        4,
+        5,
+        4,
+        3
+      ],
+      "2020-04": [
+        42,
+        14,
+        19,
+        20,
+        5,
+        4,
+        3,
+        7,
+        11,
+        1
+      ],
+      "2020-05": [
+        28,
+        14,
+        15,
+        17,
+        6,
+        2,
+        2,
+        3,
+        8,
+        1
+      ],
+      "2020-06": [
+        30,
+        8,
+        6,
+        22,
+        7,
+        5,
+        7,
+        4,
+        5,
+        2
+      ],
+      "2020-07": [
+        33,
+        12,
+        9,
+        26,
+        8,
+        4,
+        3,
+        5,
+        10,
+        0
+      ],
+      "2020-08": [
+        35,
+        11,
+        10,
+        14,
+        12,
+        1,
+        2,
+        4,
+        8,
+        0
+      ],
+      "2020-09": [
+        23,
+        23,
+        16,
+        17,
+        9,
+        0,
+        2,
+        4,
+        13,
+        2
+      ],
+      "2020-10": [
+        32,
+        9,
+        5,
+        18,
+        4,
+        2,
+        2,
+        9,
+        8,
+        1
+      ],
+      "2020-11": [
+        25,
+        14,
+        13,
+        27,
+        7,
+        2,
+        5,
+        3,
+        11,
+        2
+      ],
+      "2020-12": [
+        30,
+        8,
+        5,
+        20,
+        11,
+        3,
+        4,
+        2,
+        8,
+        2
+      ],
+      "2021-01": [
+        20,
+        15,
+        7,
+        22,
+        14,
+        0,
+        0,
+        4,
+        12,
+        1
+      ],
+      "2021-02": [
+        19,
+        13,
+        4,
+        13,
+        5,
+        6,
+        0,
+        4,
+        5,
+        1
+      ],
+      "2021-03": [
+        23,
+        14,
+        8,
+        16,
+        10,
+        0,
+        1,
+        4,
+        17,
+        2
+      ],
+      "2021-04": [
+        14,
+        9,
+        12,
+        24,
+        7,
+        5,
+        2,
+        1,
+        9,
+        1
+      ],
+      "2021-05": [
+        24,
+        13,
+        13,
+        15,
+        7,
+        6,
+        2,
+        3,
+        11,
+        1
+      ],
+      "2021-06": [
+        31,
+        8,
+        12,
+        16,
+        8,
+        6,
+        2,
+        7,
+        7,
+        2
+      ],
+      "2021-07": [
+        31,
+        14,
+        11,
+        10,
+        8,
+        2,
+        4,
+        4,
+        8,
+        1
+      ],
+      "2021-08": [
+        26,
+        11,
+        8,
+        17,
+        5,
+        1,
+        2,
+        1,
+        4,
+        2
+      ],
+      "2021-09": [
+        29,
+        11,
+        9,
+        20,
+        7,
+        2,
+        4,
+        7,
+        3,
+        3
+      ],
+      "2021-10": [
+        24,
+        15,
+        5,
+        10,
+        4,
+        1,
+        3,
+        4,
+        12,
+        1
+      ],
+      "2021-11": [
+        35,
+        11,
+        14,
+        18,
+        2,
+        0,
+        8,
+        6,
+        7,
+        2
+      ],
+      "2021-12": [
+        29,
+        15,
+        3,
+        15,
+        7,
+        6,
+        4,
+        3,
+        10,
+        3
+      ],
+      "2022-01": [
+        27,
+        11,
+        7,
+        14,
+        6,
+        4,
+        2,
+        3,
+        8,
+        2
+      ],
+      "2022-02": [
+        27,
+        11,
+        6,
+        7,
+        4,
+        1,
+        2,
+        7,
+        10,
+        0
+      ],
+      "2022-03": [
+        24,
+        6,
+        16,
+        14,
+        6,
+        2,
+        3,
+        2,
+        5,
+        3
+      ],
+      "2022-04": [
+        22,
+        15,
+        8,
+        14,
+        6,
+        1,
+        0,
+        6,
+        6,
+        0
+      ],
+      "2022-05": [
+        19,
+        7,
+        8,
+        16,
+        3,
+        0,
+        3,
+        4,
+        6,
+        2
+      ],
+      "2022-06": [
+        23,
+        16,
+        8,
+        7,
+        11,
+        4,
+        3,
+        6,
+        12,
+        1
+      ],
+      "2022-07": [
+        30,
+        19,
+        8,
+        13,
+        4,
+        4,
+        2,
+        4,
+        5,
+        3
+      ],
+      "2022-08": [
+        22,
+        9,
+        16,
+        28,
+        2,
+        1,
+        2,
+        3,
+        11,
+        1
+      ],
+      "2022-09": [
+        26,
+        14,
+        8,
+        22,
+        5,
+        3,
+        2,
+        7,
+        3,
+        2
+      ],
+      "2022-10": [
+        35,
+        10,
+        14,
+        15,
+        13,
+        8,
+        5,
+        3,
+        8,
+        2
+      ],
+      "2022-11": [
+        34,
+        15,
+        10,
+        18,
+        2,
+        4,
+        3,
+        3,
+        5,
+        4
+      ],
+      "2022-12": [
+        32,
+        8,
+        7,
+        11,
+        4,
+        2,
+        2,
+        4,
+        8,
+        1
+      ],
+      "2023-01": [
+        24,
+        6,
+        6,
+        11,
+        5,
+        4,
+        0,
+        5,
+        7,
+        1
+      ],
+      "2023-02": [
+        17,
+        13,
+        10,
+        10,
+        3,
+        1,
+        1,
+        5,
+        6,
+        4
+      ],
+      "2023-03": [
+        26,
+        7,
+        12,
+        14,
+        4,
+        3,
+        0,
+        7,
+        7,
+        0
+      ],
+      "2023-04": [
+        18,
+        10,
+        11,
+        18,
+        4,
+        8,
+        2,
+        4,
+        3,
+        1
+      ],
+      "2023-05": [
+        29,
+        7,
+        10,
+        15,
+        9,
+        4,
+        3,
+        5,
+        7,
+        1
+      ],
+      "2023-06": [
+        24,
+        11,
+        11,
+        17,
+        4,
+        4,
+        3,
+        6,
+        5,
+        1
+      ],
+      "2023-07": [
+        27,
+        11,
+        7,
+        15,
+        6,
+        1,
+        1,
+        6,
+        10,
+        1
+      ],
+      "2023-08": [
+        21,
+        8,
+        9,
+        26,
+        10,
+        2,
+        4,
+        8,
+        4,
+        3
+      ],
+      "2023-09": [
+        32,
+        11,
+        14,
+        14,
+        6,
+        2,
+        3,
+        8,
+        9,
+        2
+      ],
+      "2023-10": [
+        29,
+        13,
+        9,
+        12,
+        5,
+        5,
+        6,
+        9,
+        6,
+        3
+      ],
+      "2023-11": [
+        32,
+        8,
+        8,
+        14,
+        4,
+        1,
+        5,
+        7,
+        5,
+        3
+      ],
+      "2023-12": [
+        22,
+        6,
+        12,
+        17,
+        18,
+        4,
+        5,
+        7,
+        7,
+        0
+      ],
+      "2024-01": [
+        21,
+        11,
+        12,
+        16,
+        13,
+        3,
+        7,
+        4,
+        8,
+        1
+      ],
+      "2024-02": [
+        24,
+        12,
+        4,
+        13,
+        6,
+        1,
+        8,
+        9,
+        6,
+        1
+      ],
+      "2024-03": [
+        25,
+        7,
+        7,
+        19,
+        8,
+        0,
+        2,
+        5,
+        8,
+        0
+      ],
+      "2024-04": [
+        29,
+        15,
+        6,
+        16,
+        4,
+        2,
+        5,
+        5,
+        3,
+        0
+      ],
+      "2024-05": [
+        30,
+        20,
+        10,
+        23,
+        11,
+        9,
+        4,
+        3,
+        9,
+        1
+      ],
+      "2024-06": [
+        26,
+        8,
+        12,
+        18,
+        8,
+        3,
+        1,
+        7,
+        6,
+        1
+      ],
+      "2024-07": [
+        25,
+        16,
+        15,
+        20,
+        7,
+        5,
+        3,
+        6,
+        5,
+        5
+      ],
+      "2024-08": [
+        27,
+        11,
+        10,
+        13,
+        7,
+        1,
+        1,
+        6,
+        6,
+        0
+      ],
+      "2024-09": [
+        36,
+        20,
+        16,
+        24,
+        7,
+        3,
+        2,
+        5,
+        3,
+        1
+      ],
+      "2024-10": [
+        26,
+        11,
+        16,
+        19,
+        8,
+        4,
+        4,
+        10,
+        9,
+        4
+      ],
+      "2024-11": [
+        26,
+        6,
+        7,
+        22,
+        6,
+        0,
+        5,
+        6,
+        5,
+        1
+      ],
+      "2024-12": [
+        17,
+        9,
+        9,
+        19,
+        8,
+        2,
+        5,
+        3,
+        9,
+        3
+      ],
+      "2025-01": [
+        26,
+        4,
+        7,
+        19,
+        4,
+        4,
+        2,
+        3,
+        7,
+        0
+      ],
+      "2025-02": [
+        29,
+        11,
+        10,
+        20,
+        7,
+        1,
+        7,
+        5,
+        5,
+        3
+      ],
+      "2025-03": [
+        34,
+        15,
+        8,
+        22,
+        5,
+        4,
+        3,
+        3,
+        7,
+        2
+      ],
+      "2025-04": [
+        18,
+        15,
+        13,
+        13,
+        12,
+        4,
+        6,
+        4,
+        6,
+        1
+      ],
+      "2025-05": [
+        28,
+        15,
+        10,
+        21,
+        12,
+        3,
+        1,
+        7,
+        7,
+        4
+      ],
+      "2025-06": [
+        23,
+        12,
+        17,
+        15,
+        6,
+        1,
+        5,
+        1,
+        7,
+        2
+      ],
+      "2025-07": [
+        30,
+        21,
+        12,
+        15,
+        7,
+        5,
+        1,
+        5,
+        4,
+        0
+      ],
+      "2025-08": [
+        24,
+        8,
+        7,
+        16,
+        10,
+        2,
+        1,
+        9,
+        12,
+        3
+      ],
+      "2025-09": [
+        14,
+        5,
+        4,
+        12,
+        1,
+        2,
+        2,
+        5,
+        9,
+        1
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Generalized almost-Kähler-Ricci solitons",
+          "year": "2024-02",
+          "abstract": "We generalize K\\\"ahler-Ricci solitons to the almost-K\\\"ahler setting as the\nzeros of Inoue's moment map \\cite{MR4017922}, and show that their existence is\nan obstruction to the existence of first-Chern-Einstein almost-K\\\"ahler metrics\non compact symplectic Fano manifolds. We prove deformation results of such\nmetrics in the $4$-dimensional case. Moreover, we study the Lie algebra of\nholomorphic vector fields on $2n$-dimensional compact symplectic Fano manifolds\nadmitting generalized almost-K\\\"ahler-Ricci solitons. In particular, we\npartially extend Matsushima's theorem \\cite{MR0094478} to compact\nfirst-Chern-Einstein almost-K\\\"ahler manifolds.",
+          "arxiv_id": "2402.03996v1"
+        },
+        {
+          "title": "Compact Kähler manifolds with partially semi-positive curvature",
+          "year": "2025-04",
+          "abstract": "In this paper, we study MRC fibrations of compact K\\\"ahler manifolds with\npartially semi-positive curvature. We first prove that a compact K\\\"ahler\nmanifold is rationally connected if its tangent bundle is BC-$p$ positive for\nall $1\\leq p\\leq \\dim X$. As applications, we confirm a conjecture that any\ncompact K\\\"ahler manifold with positive orthogonal Ricci curvature must be\nrationally connected, and generalize a result of Heier-Wong and Yang to the\nconformally K\\\"ahler case. The second result concern structure theorems for two\nimmediate curvature conditions. We prove that, a compact K\\\"ahler manifold with\n$k$-semi-positive Ricci curvature or semi-positive $k$-scalar curvature, either\nthe rational dimension $\\geq n-k+1$ or the universal cover is biholomorphic and\nisometric to the product of $\\mathbb{C}^m\\times F$ for some rationally\nconnected manifold $F$.",
+          "arxiv_id": "2504.13155v2"
+        },
+        {
+          "title": "Fundamental groups of compact Kähler manifolds with semi-positive holomorphic sectional curvature",
+          "year": "2025-02",
+          "abstract": "In this paper, we prove that a compact K\\\"ahler manifold $X$ with\nsemi-positive holomorphic sectional curvature admits a locally trivial\nfibration $\\phi \\colon X \\to Y$, where the fiber $F$ is a rationally connected\nprojective manifold and the base $Y$ is a finite \\'etale quotient of a torus.\nThis result extends the structure theorem, previously established for\nprojective manifolds, to compact K\\\"ahler manifolds. A key part of the proof\ninvolves analyzing the foliation generated by truly flat tangent vectors and\nshowing the abelianness of the topological fundamental group $\\pi_{1}(X)$, with\na focus on varieties of special type.",
+          "arxiv_id": "2502.00367v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Positive Toeplitz Operators from a Harmonic Bergman-Besov space into Another",
+          "year": "2022-02",
+          "abstract": "We define positive Toeplitz operators between harmonic Bergman-Besov spaces\n$b^p_\\alpha$ on the unit ball of $\\mathbb{R}^n$ for the full ranges of\nparameters $0<p<\\infty$, $\\alpha\\in\\mathbb{R}$. We give characterizations of\nbounded and compact Toeplitz operators taking one harmonic Bergman-Besov space\ninto another in terms of Carleson and vanishing Carleson measures. We also give\ncharacterizations for a positive Toeplitz operator on $b^{2}_{\\alpha}$ to be a\nSchatten class operator $S_{p}$ in terms of averaging functions and Berezin\ntransforms for $1\\leq p<\\infty$, $\\alpha\\in\\mathbb{R}$. Our results extend\nthose known for harmonic weighted Bergman spaces.",
+          "arxiv_id": "2202.12771v3"
+        },
+        {
+          "title": "Difference of composition operators on weight Bergman spaces with doubling weight",
+          "year": "2020-06",
+          "abstract": "In this paper, some characterizations for the compact difference of\ncomposition operators on Bergman spaces $A^p_\\omega$ with doubling weight are\ngiven, which extend Moorhouse's characterization for the difference of\ncomposition operators on the weighted Bergman space $A^2_\\alpha$.",
+          "arxiv_id": "2006.04563v1"
+        },
+        {
+          "title": "Toeplitz operators and weighted composition operators on variable exponent Bergman spaces",
+          "year": "2025-07",
+          "abstract": "In a recent paper [JFA, 278 (2020), 108401], Choe et al. obtained\ncharacterizations for bounded and compact differences of two weighted\ncomposition operators acting on standard weighted Bergman spaces over the unit\ndisk in terms of Carleson measures. Then they extended the results to the ball\nsetting. In this paper, we further generalize those results to variable\nexponent Bergman spaces over the unit ball. Our proofs, when restricted to the\ncase of constant variable, are new and simpler. Moreover, boundedness and\ncompactness of Toeplitz operators on variable exponent Bergman spaces are also\ncharacterized.",
+          "arxiv_id": "2507.13675v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Visibility of Kobayashi geodesics in convex domains and related properties",
+          "year": "2021-01",
+          "abstract": "Let $D\\subset \\mathbb C^n$ be a bounded domain. A pair of distinct boundary\npoints $\\{p,q\\}$ of $D$ has the visibility property provided there exist a\ncompact subset $K_{p,q}\\subset D$ and open neighborhoods $U_p$ of $p$ and $U_q$\nof $q$, such that the real geodesics for the Kobayashi metric of $D$ which join\npoints in $U_p$ and $U_q$ intersect $K_{p,q}$. Every Gromov hyperbolic convex\ndomain enjoys the visibility property for any couple of boundary points. The\nGoldilocks domains introduced by Bharali and Zimmer and the log-type domains of\nLiu and Wang also enjoy the visibility property.\n  In this paper we relate the growth of the Kobayashi distance near the\nboundary with visibility and provide new families of convex domains where that\nproperty holds. We use the same methods to provide refinements of localization\nresults for the Kobayashi distance, and give a localized sufficient condition\nfor visibility. We also exploit visibility to study the boundary behavior of\nbiholomorphic maps.",
+          "arxiv_id": "2101.04159v4"
+        },
+        {
+          "title": "Gromov hyperbolicity of intrinsic metrics from isoperimetric inequalities",
+          "year": "2024-11",
+          "abstract": "In this paper we investigate the Gromov hyperbolicity of the classical\nKobayashi and Hilbert metrics, and the recently introduced minimal metric.\nUsing the linear isoperimetric inequality characterization of Gromov\nhyperbolicity, we show if these metrics have an \"expanding property\" near the\nboundary, then they are Gromov hyperbolic. This provides a new characterization\nof the convex domains whose Hilbert metric is Gromov hyperbolic, a new proof of\nBalogh-Bonk's result that the Kobayashi metric is Gromov hyperbolic on a\nstrongly pseudoconvex domain, a new proof of the second author's result that\nthe Kobayashi metric is Gromov hyperbolic on a convex domain with finite type,\nand a new proof of Fiacchi's result that the minimal metric is Gromov\nhyperbolic on a strongly minimally convex domain. We also characterize the\nsmoothly bounded convex domains where the minimal metric is Gromov hyperbolic.",
+          "arxiv_id": "2411.06579v1"
+        },
+        {
+          "title": "The Gehring-Hayman type theorems on complex domains",
+          "year": "2020-05",
+          "abstract": "In this paper we establish Gehring-Hayman type theorems for some complex\ndomains. Suppose that $\\Omega\\subset \\mathbb{C}^n$ is a bounded $m$-convex\ndomain with Dini-smooth boundary, or a bounded strongly pseudoconvex domain\nwith $C^2$-smooth boundary. Then we prove that the Euclidean length of\nKobayashi geodesic $[x,y]$ in $\\Omega$ is less than $c_1|x-y|^{c_2}$.\nFurthermore, if $\\Omega$ endowed with the Kobayashi metric is Gromov\nhyperbolic, then we can generalize this result to quasi-geodesics with respect\nto Bergman metric, Carath\\'{e}odory metric or K\\\"{a}hler-Einstein metric.\n  As applications, we prove the bi-H\\\"{o}lder equivalence between the Euclidean\nboundary and the Gromov boundary. Moreover, by using this boundary\ncorrespondence, we can show some extension results for biholomorphisms, and\nmore general rough quasi-isometries with respect to the Kobayashi metrics\nbetween the domains.",
+          "arxiv_id": "2005.02594v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Bohr radius for certain classes of starlike and convex univalent functions",
+          "year": "2020-06",
+          "abstract": "We say that a class $\\mathcal{F}$ consisting of analytic functions\n$f(z)=\\sum_{n=0}^{\\infty} a_{n}z^{n}$ in the unit disk $\\mathbb{D}:=\\{z\\in\n\\mathbb{C}: |z|<1\\}$ satisfies a Bohr phenomenon if there exists $r_{f} \\in\n(0,1)$ such that $$\n  \\sum_{n=1}^{\\infty} |a_{n}z^{n}|\\leq d(f(0),\\partial f(\\mathbb{D})) $$ for\nevery function $f \\in \\mathcal{F}$ and $|z|=r\\leq r_{f}$, where $d$ is the\nEuclidean distance. The largest radius $r_{f}$ is the Bohr radius for the class\n$\\mathcal{F}$. In this paper, we establish the Bohr phenomenon for the classes\nconsisting of Ma-Minda type starlike functions and Ma-Minda type convex\nfunctions as well as for the class of starlike functions with respect to a\nboundary point.",
+          "arxiv_id": "2006.15299v1"
+        },
+        {
+          "title": "Bohr radius for certain close-to-convex harmonic mappings",
+          "year": "2020-12",
+          "abstract": "Let $ \\mathcal{H} $ be the class of harmonic functions $ f=h+\\bar{g} $ in the\nunit disk $\\mathbb{D}:=\\{z\\in\\mathbb{C} : |z|<1\\}$, where $ h $ and $ g $ are\nanalytic in $ \\mathbb{D} $. Let\n  $$\\mathcal{P}_{\\mathcal{H}}^{0}(\\alpha)=\\{f=h+\\overline{g} \\in \\mathcal{H} :\n\\real (h^{\\prime}(z)-\\alpha)>|g^{\\prime}(z)|\\; \\mbox{with}\\; 0\\leq\\alpha<1,\\;\ng^{\\prime}(0)=0,\\; z \\in \\mathbb{D}\\}\n  $$ be the class of close-to-convex mappings defined by Li and Ponnusamy\n\\cite{Injectivity section}. In this paper, we obtain the sharp Bohr-Rogosinski\nradius, improved Bohr radius and refined Bohr radius for the class $\n\\mathcal{P}_{\\mathcal{H}}^{0}(\\alpha) $.",
+          "arxiv_id": "2012.06829v1"
+        },
+        {
+          "title": "Bohr-Rogosinski and improved Bohr type inequalities for certain fully starlike harmonic mappings",
+          "year": "2021-04",
+          "abstract": "The classical Bohr inequality states that if $ f $ is an analytic function\nwith the power series representation $ f(z)=\\sum_{n=0}^{\\infty}a_nz^n $ in the\nunit disk $ \\mathbb{D}:=\\{z\\in\\mathbb{C} : |z|<1\\} $ such that $ |f(z)|\\leq 1 $\nfor all $ z\\in\\mathbb{D} $, then \\begin{equation*}\n  \\sum_{n=0}^{\\infty}|a_n|r^n\\leq 1\\;\\; \\text{for}\\;\\; |z|=r\\leq\\frac{1}{3}\n\\end{equation*} and the constant $ 1/3 $ cannot be improved. The constant $\nr_0=1/3 $ is known as Bohr radius and the inequality $\n\\sum_{n=0}^{\\infty}|a_n|r^n\\leq 1 $ is known as Bohr inequality. Let $\n\\mathcal{H} $ be the class of complex-valued harmonic mappings $ f=h+\\bar{g}$\ndefined in the unit disk $ \\mathbb{D} $, where $ h $ and $ g $ are analytic\nfunctions in $ \\mathbb{D} $ with the normalization $ h(0)=0=h^{\\prime}(0)-1 $\nand $ g(0)=0 $. Let $ \\mathcal{H}_{0}=\\{f=h+\\bar{g}\\in\\mathcal{H} :\ng^{\\prime}(0)=0\\}. $ Let $ \\mathcal{P}^{0}_{\\mathcal{H}}(M)\n:=\\{f=h+\\overline{g} \\in \\mathcal{H}_{0}: \\real (zh^{\\prime\\prime}(z))>\n-M+|zg^{\\prime\\prime}(z)|,\\; z \\in \\mathbb{D},\\; M>0\\} $. Functions in the\nclass $ \\mathcal{P}^{0}_{\\mathcal{H}}(M) $ are called fully starlike univalent\nfunctions for $ 0<M<1/\\log 4 $. In this paper, we obtain the sharp\nBohr-Rogosinski type inequality and improved Bohr inequality and the\ncorresponding Bohr radius for the class $ \\mathcal{P}_{\\mathcal{H}}^{0}(M) $.",
+          "arxiv_id": "2104.04509v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Overcrowding for zeros of Hyperbolic Gaussian analytic functions",
+          "year": "2022-09",
+          "abstract": "We consider the family $\\{f_L\\}_{L>0}$ of Gaussian analytic functions in the\nunit disk, distinguished by the invariance of their zero set with respect to\nhyperbolic isometries. Let $n_L\\left(r\\right)$ be the number of zeros of $f_L$\nin a disk of radius $r$. We study the asymptotic probability of the rare event\nwhere there is an overcrowding of the zeros as $r\\uparrow1$, i.e. for every\n$L>0$, we are looking for the asymptotics of the probability\n$\\mathbb{P}\\left[n_L(r)\\geq V(r)\\right]$ with $V\\left(r\\right)$ large compared\nto the $\\mathbb{E}\\left[n_L\\left(r\\right)\\right]$. Peres and Vir\\'ag showed\nthat for $L=1$ (and only then) the zero set forms a determinantal point\nprocess, making many explicit computations possible. Curiously, contrary to the\nmuch better understood planar model, it appears that for $L<1$ the exponential\norder of decay of the probability of overcrowding when $V$ is close to\n$\\mathbb{E}\\left[n_L\\left(r\\right)\\right]$ is much less than the probability of\na deficit of zeros.",
+          "arxiv_id": "2209.05854v2"
+        },
+        {
+          "title": "On the zeros of polyanalytic polynomials",
+          "year": "2024-03",
+          "abstract": "We give sufficient conditions under which a polyanalytic polynomial of degree\n$n$ has (i) at least one zero, and (ii) finitely many zeros. In the latter\ncase, we prove that the number of zeros is bounded by $n^2$. We then show that\nfor all $k \\in \\{0,\\dots, n^2, \\infty\\}$ there exists a polyanalytic polynomial\nof degree $n$ with exactly $k$ distinct zeros. Moreover, we generalize the\nLagrange and Cauchy bounds from analytic to polyanalytic polynomials and obtain\ninclusion disks for the zeros. Finally, we construct a harmonic and thus\npolyanalytic polynomial of degree $n$ with $n$ nonzero coefficients and the\nmaximum number of $n^2$ zeros.",
+          "arxiv_id": "2403.04591v2"
+        },
+        {
+          "title": "On the average number of zeros of random harmonic polynomials with i.i.d. coefficients: precise asymptotics",
+          "year": "2023-08",
+          "abstract": "Addressing a problem posed by W. Li and A. Wei (2009), we investigate the\naverage number of (complex) zeros of a random harmonic polynomial $p(z) +\n\\overline{q(z)}$ sampled from the Kac ensemble, i.e., where the coefficients\nare independent identically distributed centered complex Gaussian random\nvariables. We establish a precise asymptotic, showing that when $\\text{deg} p =\n\\text{deg} q = n$ tends to infinity the average number of zeros is asymptotic\nto $\\frac{1}{2} n \\log n$. We further consider the average number of zeros\nrestricted to various regions in the complex plane leading to interesting\ncomparisons with the classically studied case of analytic Kac polynomials. We\nalso consider deterministic extremal problems for harmonic polynomials with\ncoefficient constraints; using an indirect probabilistic method we show the\nexistence of harmonic polynomials with unimodular coefficients having at least\n$\\frac{2}{\\pi} n \\log n + O(n)$ zeros. We conclude with a list of open\nproblems.",
+          "arxiv_id": "2308.10333v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "A comparison principle for parabolic complex Monge-Ampère equations",
+          "year": "2021-06",
+          "abstract": "In this paper, we study the Cauchy-Dirichlet problem for Parabolic complex\nMonge-Amp\\`ere equations on strongly pseudoconvex domains using the viscosity\nmethod. We prove a comparison principle for Parabolic complex Monge-Amp\\`ere\nequations and use it to study the existence and uniqueness of viscosity\nsolution in certain cases where the sets $\\{z\\in\\Omega: f(t, z)=0 \\}$ may be\npairwise disjoint.",
+          "arxiv_id": "2106.03311v2"
+        },
+        {
+          "title": "The Eigenvalue Problem for the complex Monge-Ampère operator",
+          "year": "2023-06",
+          "abstract": "We prove the existence of the first eigenvalue and an associated\neigenfunction with Dirichlet condition for the complex Monge-Amp\\`ere operator\non a bounded strongly pseudoconvex domain in $\\C^n$. We show that the\neigenfunction is plurisubharmonic, smooth with bounded Laplacian in $\\Omega$\nand boundary values $0$. Moreover it is unique up to a positive multiplicative\nconstant.\n  To this end, we follow the strategy used by P.L. Lions in the real case.\nHowever, we have to prove a new theorem on the existence of solutions for some\nspecial complex degenerate Monge-Amp\\`ere equations. This requires establishing\nnew a priori estimates of the gradient and Laplacian of such solutions using\nmethods and results of L. Caffarelli, J.J. Kohn, L. Nirenberg and J. Spruck\n\\cite{CKNS85} and B. Guan \\cite{GuanB98}.\n  Finally we provide a Pluripotential variational approach to the problem and\nusing our new existence theorem, we prove a Rayleigh quotient type formula for\nthe first eigenvalue of the complex Monge-Amp\\`ere operator.",
+          "arxiv_id": "2306.03285v2"
+        },
+        {
+          "title": "Weak convergence of complex Monge-Ampère operators on compact Hermitian manifolds",
+          "year": "2024-12",
+          "abstract": "Let $(X,\\omega)$ be a compact Hermitian manifold and let $\\{\\beta\\}\\in\nH^{1,1}(X,\\mathbb R)$ be a real $(1,1)$-class with a smooth representative\n$\\beta$, such that $\\int_X\\beta^n>0$. Assume that there is a bounded\n$\\beta$-plurisubharmonic function $\\rho$ on $X$. First, we provide a criterion\nfor the weak convergence of non-pluripolar complex Monge-Amp\\`ere measures\nassociated to a sequence of $\\beta$-plurisubharmonic functions. Second, this\ncriterion is utilized to solve a degenerate complex Monge-Amp\\`ere equation\nwith an $L^1$-density. Finally, an $L^\\infty$-estimate of the solution to the\ncomplex Monge-Amp\\`ere equation for a finite positive Radon measure is given.",
+          "arxiv_id": "2412.11547v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Quaternionic slice regular functions and quaternionic Laplace transforms",
+          "year": "2020-06",
+          "abstract": "The functions studied in the paper are quaternion-valued functions of a\nquaternionic variable. It is show that the left slice regular functions and\nright slice regular functions are related by a particular involution. The\nrelation between left slice regular functions, right slice regular functions\nand intrinsic regular functions is revealed. The classical Laplace transform\ncan be naturally generalized to quaternions in two different ways, which\ntransform a quaternion-valued function of a real variable to a left or right\nslice regular quaternion-valued function of a quaternionic variable. The usual\nproperties of the classical Laplace transforms are generalized to quaternionic\nLaplace transforms.",
+          "arxiv_id": "2006.07511v1"
+        },
+        {
+          "title": "Zeroes of weakly slice regular functions of several quaternionic variables on non-axially symmetric domains",
+          "year": "2024-01",
+          "abstract": "In this research, we study zeroes of weakly slice regular functions within\nthe framework of several quaternionic variables, specifically focusing on\nnon-axially symmetric domains. Our recent work introduces path-slice stem\nfunctions, along with a novel $*$-product, tailored for weakly slice regular\nfunctions. This innovation allows us to explore new techniques for conjugating\nand symmetrizing path-slice functions. A key finding of our study is the\ndiscovery that the zeroes of a path-slice function are comprehensively\nencapsulated within the zeroes of its symmetrized counterpart. This insight is\nparticularly significant in the context of path-slice stem functions. We\nestablish that for weakly slice regular functions, the processes of conjugation\nand symmetrization gain prominence once the function's slice regularity is\naffirmed. Furthermore, our investigation sheds light on the intricate nature of\nthe zeroes of a slice regular function. We ascertain that these zeroes\nconstitute a path-slice analytic set. This conclusion is drawn from the\nobserved phenomenon that the zeroes of the symmetrization of a slice regular\nfunction also form a path-slice analytic set. This finding marks an advancement\nin understanding the complex structure and properties of weakly slice regular\nfunctions in quaternionic analysis.",
+          "arxiv_id": "2401.04899v2"
+        },
+        {
+          "title": "Algebra of slice regular functions on non-symmetric domains in several quaternionic variables",
+          "year": "2024-01",
+          "abstract": "The primary objective of this paper is to establish an algebraic framework\nfor the space of weakly slice regular functions over several quaternionic\nvariables. We recently introduced a $*$-product that maintains the path-slice\nproperty within the class of path-slice functions. It is noteworthy that this\n$*$-product is directly applicable to weakly slice regular functions, as every\nslice regular function defined on a slice-open set inherently possesses\npath-slice properties. Building on this foundation, we propose a precise\ndefinition of an open neighborhood for a path $\\gamma$ in the path space\n$\\mathscr{P}(\\mathbb{C}^n)$. This definition is pivotal in establishing the\nholomorphism of stem functions. Consequently, we demonstrate that the\n$*$-product of two weakly slice regular functions retains its weakly slice\nregular nature. This retention is facilitated by holomorphy of stem functions\nand their relationship with weakly slice regular functions, providing a\ncomprehensive algebraic structure for this class of functions.",
+          "arxiv_id": "2401.04895v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Horn maps of semi-parabolic Hénon maps",
+          "year": "2024-03",
+          "abstract": "We prove that horn maps associated to quadratic semi-parabolic fixed points\nof H\\'enon maps, first introduced by Bedford, Smillie, and Ueda, satisfy a weak\nform of the Ahlfors island property. As a consequence, two natural definitions\nof their Julia set (the non-normality locus of the family of iterates and the\nclosure of the set of the repelling periodic points) coincide. As another\nconsequence, we also prove that there exist small perturbations of\nsemi-parabolic H\\'enon maps for which the Hausdorff dimension of the forward\nJulia set $J^+$ is arbitrarily close to 4.",
+          "arxiv_id": "2403.20211v1"
+        },
+        {
+          "title": "Strong probabilistic stability in holomorphic families of endomorphisms of $\\mathbb{P}^k(\\mathbb{C})$ and polynomial-like maps",
+          "year": "2022-06",
+          "abstract": "We prove that, in stable families of endomorphisms of\n$\\mathbb{P}^k(\\mathbb{C})$, all invariant measures whose measure-theoretic\nentropy is strictly larger than $(k-1)\\log d$ at a given parameter can be\nfollowed holomorphically with the parameter in all the parameter space. As a\nconsequence, almost all points (with respect to any such measure at any\nparameter) in the Julia set can be followed holomorphically without\nintersections. This generalizes previous results by Berteloot, Dupont, and the\nfirst author for the measure of maximal entropy, and provides a parallel in\nthis setting to the probabilistic stability of H\\'enon maps by\nBerger-Dujardin-Lyubich. Our proof relies both on techniques from the theory of\nstability/bifurcation in any dimension and on an explicit lower bound for the\nLyapunov exponents for an ergodic measure in terms of its measure-theoretic\nentropy, due to de Th\\'elin and Dupont. A local version of our result holds\nalso for all measures supported on the Julia set with just strictly positive\nLyapunov exponents and not charging the post-critical set. Analogous results\nhold in families of polynomial-like maps of large topological degree. In this\ncase, as part of our proof, we also give a sufficient condition for the\npositivity of the Lyapunov exponents of an ergodic measure for a\npolynomial-like map in any dimension in term of its measure-theoretic entropy,\ngeneralizing to this setting the analogous result by de Th\\'elin and Dupont\nvalid on $\\mathbb{P}^k(\\mathbb{C})$.",
+          "arxiv_id": "2206.04165v2"
+        },
+        {
+          "title": "Prime orbit theorems for expanding Thurston maps: Lattès maps and split Ruelle operators",
+          "year": "2023-12",
+          "abstract": "We obtain an analog of the prime number theorem for a class of branched\ncovering maps on the $2$-sphere $S^2$ called expanding Thurston maps, which are\ntopological models of some non-uniformly expanding rational maps without any\nsmoothness or holomorphicity assumption. More precisely, we show that the\nnumber of primitive periodic orbits, ordered by a weight on each point induced\nby a non-constant (eventually) positive real-valued H\\\"{o}lder continuous\nfunction on $S^2$ satisfying the $\\alpha$-strong non-integrability condition,\nis asymptotically the same as the well-known logarithmic integral, with an\nexponential error bound. In particular, our results apply to\npostcritically-finite rational maps for which the Julia set is the whole\nRiemann sphere. Moreover, a stronger result is obtained for Latt\\`{e}s maps.",
+          "arxiv_id": "2312.06688v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "All possible orders less than 1 of transcendental entire solutions of linear difference equations with polynomial coefficients",
+          "year": "2023-01",
+          "abstract": "In this paper, we study all possible orders which are less than 1 of\ntranscendental entire solutions of linear difference equations\n  \\begin{equation}\n  P_m(z)\\Delta^mf(z)+\\cdots+P_1(z)\\Delta f(z)+P_0(z)f(z)=0,\\tag{+}\n  \\end{equation} where $P_j(z)$ are polynomials for $j=0,\\ldots,m$. Firstly, we\ngive the condition on existence of transcendental entire solutions of order\nless than 1 of difference equations (+). Secondly, we give a list of all\npossible orders which are less than 1 of transcendental entire solutions of\ndifference equations (+). Moreover, the maximum number of distinct orders which\nare less than 1 of transcendental entire solutions of difference equations (+)\nare shown. In addition, for any given rational number $0<\\rho<1$, we can\nconstruct a linear difference equation with polynomial coefficients which has a\ntranscendental entire solution of order $\\rho$. At least, some examples are\nillustrated for our main theorems.",
+          "arxiv_id": "2301.06290v1"
+        },
+        {
+          "title": "On the Fermat-type partial differential-difference equations on $\\mathbb{C}^n$",
+          "year": "2025-09",
+          "abstract": "Assume that $n$ is a positive integer, $p_{j}$ ($j=1,2, \\cdots, 6)$ are\npolynomials, $p$ is an irreducible polynomial, and $f$ is an entire function on\n$\\mathbb{C}^{n}.$ Let $ L(f)=\\sum_{j=1}^s q_{t_j}f_{z_{t_j}}$ and\n$\\overline{f}(z)=f(z_{1}+c_{1}, \\ldots, z_{n}+c_{n})$, where $q_{t_j}$ ($j=1,2,\n\\cdots, s\\le n$) are non-zero polynomials on $\\mathbb{C}^{n}$ and $c=(c_{1},\n\\ldots, c_{n})\\in \\mathbb{C}^{n}\\setminus\\{0\\}$. We show the structures of all\nentire solutions to the non-linear partial differential-difference equation\n$$(p_{1} L(f)+p_{2}\\overline{f}+p_5 f)^{2}+(p_{3}L(f)+p_{4}\\overline{f}+p_6\nf)^{2}=p.$$ The partial differential-difference equation is called a\nFermat-type partial differential-difference equation (PDDE). Further, we find\nmany sufficient conditions and/or necessary conditions for the existence, as\nwell as the concrete representations, of entire solutions to the Fermat-type\nPDDE. We also demonstrate several examples on $\\mathbb{C}^2$ with non-constant\ncoefficients to verify that all representations in our theorems exist and are\naccurate and that the entire solutions to the Fermat-type PDDEs could have\nfinite or infinite growth order. Our theorems unify and extend previous results\n(see, e.g., [2, 3, 10, 12, 32]).",
+          "arxiv_id": "2509.01862v1"
+        },
+        {
+          "title": "Entire solutions of a certain type differential-difference equation and differential-difference analogue of Bruck conjecture",
+          "year": "2025-09",
+          "abstract": "In the paper, we find out the precise form of the finite order entire\nsolutions of the following differential-difference equation\n\\[f^{(k)}(z)=\\sideset{}{^n_{j=0}}{\\sum} a_j f(z+jc),\\] where $a_0,\na_1,\\ldots,a_n(\\neq 0)\\in\\mathbb{C}$. Also in the paper we study the\ndifferential-difference analogue of Br\\\"{u}ck conjecture and derive a\nuniqueness result of finite order entire function $f(z)$ having a Borel\nexceptional small function of $f(z)$, when $f^{(k)}(z)$ and\n$\\sideset{}{^n_{j=0}}{\\sum} a_j f(z+jc)$ share a small function of $f(z)$. The\nobtained results, significantly generalize and improve the results due to Liu\nand Dong (Some results related to complex differential-difference equations of\ncertain types, Bull. Korean Math. Soc., 51 (5) (2014), 1453-1467). Some\nexamples are given to ensure the necessity of the condition (s) of our main\nresults.",
+          "arxiv_id": "2509.06783v1"
+        }
+      ],
+      "9": [
+        {
+          "title": "Conformal removability of non-simple Schramm-Loewner evolutions",
+          "year": "2023-02",
+          "abstract": "We consider the Schramm-Loewner evolution (SLE$_\\kappa$) for $\\kappa \\in\n(4,8)$, which is the regime that the curve is self-intersecting but not\nspace-filling. We let ${\\mathcal K}$ be the set of $\\kappa \\in (4,8)$ for which\nthe adjacency graph of connected components of the complement of an\nSLE$_\\kappa$ is a.s. connected, meaning that for every pair of complementary\ncomponents $U, V$ there exist complementary components $U_1,\\ldots,U_n$ with\n$U_1 = U$, $U_n = V$, and $\\partial U_i \\cap \\partial U_{i+1} \\neq \\emptyset$\nfor each $1 \\leq i \\leq n-1$. We show that the range of an SLE$_\\kappa$ for\n$\\kappa \\in {\\mathcal K}$ is a.s. conformally removable, which answers a\nquestion of Sheffield. As a step in the proof, we construct the canonical\nconformally covariant volume measure on the cut points of an SLE$_\\kappa$ for\n$\\kappa \\in (4,8)$ and establish a precise upper bound on the measure that it\nassigns to any Borel set in terms of its diameter.",
+          "arxiv_id": "2302.10857v1"
+        },
+        {
+          "title": "Coupling of radial multiple SLE with Gaussian free field, and the hydrodynamic limit",
+          "year": "2025-08",
+          "abstract": "Schramm--Loewner evolution (SLE) has been one of the central topics in the\nprobabilistic study of two-dimensional critical systems. It is a random curve\nin two dimensions to which a cluster interface in a critical lattice system is\nsupposed, or has been proved, to converge. The most archetypical setting for\nSLE is called chordal, where a random curve evolves in a simply-connected\ndomain from a boundary point to another, whereas in its variant called radial,\na random curve evolves from a boundary point to a distinguished interior point.\nMultiple SLE is a variant to another direction; it deals with multiple random\ncurves, and it is a natural direction as there are certainly multiple cluster\ninterfaces found in critical lattice systems. In this paper, we study multiple\nSLE in the radial setting, namely, radial multiple SLE.\n  We report two main results. One is regarding coupling between radial multiple\nSLE and Gaussian free field (GFF). Coupling between SLE and GFF has been\nextensively studied in the chordal setting, and serves as a foundation for many\nrecent developments. We show that coupling between radial multiple SLE and GFF\noccurs if and only if the radial multiple SLE is driven by the circular Dyson\nBrownian motions.\n  The circular Dyson Brownian motions are a typical example of stochastic\nlog-gases. This fact motivates us to study the hydrodynamic limit of the\ncorresponding radial multiple SLE, which refers to the dynamical law of large\nnumbers, when the number of curves tends to infinity. In our other main result,\nwe provide explicit description of the hydrodynamic limit.",
+          "arxiv_id": "2508.13622v2"
+        },
+        {
+          "title": "Schramm-Loewner evolution contains a topological Sierpiński carpet when $κ$ is close to 8",
+          "year": "2025-06",
+          "abstract": "We consider the Schramm-Loewner evolution (SLE$_\\kappa$) for $\\kappa \\in\n(4,8)$, which is the regime where the curve is self-intersecting but not\nspace-filling. We show that there exists $\\delta_0>0$ such that for $\\kappa \\in\n(8 - \\delta_0,8)$, the range of an SLE$_\\kappa$ curve almost surely contains a\ntopological Sierpi\\'nski carpet. Combined with a result of Ntalampekos (2021),\nthis implies that in this parameter range, SLE$_\\kappa$ is almost surely\nconformally non-removable, and the conformal welding problem for SLE$_\\kappa$\ndoes not have a unique solution. Our result also implies that for $\\kappa \\in\n(8 - \\delta_0,8)$, the adjacency graph of the complementary connected\ncomponents of the SLE$_\\kappa$ curve is disconnected.",
+          "arxiv_id": "2506.09609v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:31:29Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

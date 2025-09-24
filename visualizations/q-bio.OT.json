@@ -1,0 +1,722 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_CoV_SARS_pandemic_study",
+        "keywords": [
+          [
+            "CoV",
+            0.030913501683871965
+          ],
+          [
+            "SARS",
+            0.030463072342947737
+          ],
+          [
+            "pandemic",
+            0.019983503395508393
+          ],
+          [
+            "study",
+            0.019697717279040655
+          ],
+          [
+            "patients",
+            0.0194286977000367
+          ],
+          [
+            "data",
+            0.019371022304470333
+          ],
+          [
+            "disease",
+            0.01874950301472906
+          ],
+          [
+            "model",
+            0.018083235964610474
+          ],
+          [
+            "health",
+            0.017992297917413205
+          ],
+          [
+            "virus",
+            0.017780940843189406
+          ]
+        ],
+        "count": 137
+      },
+      "1": {
+        "name": "1_data_AI_research_software",
+        "keywords": [
+          [
+            "data",
+            0.05308999553198458
+          ],
+          [
+            "AI",
+            0.03973441042171152
+          ],
+          [
+            "research",
+            0.02774536358066372
+          ],
+          [
+            "software",
+            0.02308856576811521
+          ],
+          [
+            "community",
+            0.022200614478649745
+          ],
+          [
+            "models",
+            0.021405643776285767
+          ],
+          [
+            "scientific",
+            0.021074262465857974
+          ],
+          [
+            "computational",
+            0.017655962057970452
+          ],
+          [
+            "biology",
+            0.01668069163859046
+          ],
+          [
+            "new",
+            0.016459682308694074
+          ]
+        ],
+        "count": 133
+      },
+      "2": {
+        "name": "2_systems_life_model_dynamics",
+        "keywords": [
+          [
+            "systems",
+            0.029138365252953814
+          ],
+          [
+            "life",
+            0.024585914852173416
+          ],
+          [
+            "model",
+            0.02282953408715107
+          ],
+          [
+            "dynamics",
+            0.019769940340800388
+          ],
+          [
+            "time",
+            0.01667071037704576
+          ],
+          [
+            "biological",
+            0.01627731408844279
+          ],
+          [
+            "data",
+            0.0162493854348475
+          ],
+          [
+            "complex",
+            0.016091576821829556
+          ],
+          [
+            "biology",
+            0.01579686744811143
+          ],
+          [
+            "models",
+            0.01554268119636137
+          ]
+        ],
+        "count": 128
+      },
+      "3": {
+        "name": "3_plant_water_seeds_study",
+        "keywords": [
+          [
+            "plant",
+            0.02953934849562328
+          ],
+          [
+            "water",
+            0.028103959427253192
+          ],
+          [
+            "seeds",
+            0.02726830255272902
+          ],
+          [
+            "study",
+            0.024021138546022093
+          ],
+          [
+            "results",
+            0.02006067749815445
+          ],
+          [
+            "concentrations",
+            0.019287335951930284
+          ],
+          [
+            "genotypes",
+            0.018587980476759677
+          ],
+          [
+            "highest",
+            0.017510011465069922
+          ],
+          [
+            "compounds",
+            0.01748434295391611
+          ],
+          [
+            "different",
+            0.017438156623725793
+          ]
+        ],
+        "count": 72
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6316652207371206,
+        -0.5380239979929671,
+        -0.47717934840208276
+      ],
+      [
+        -0.6316652207371206,
+        1.0,
+        -0.3990067157270216,
+        -0.5369082020316878
+      ],
+      [
+        -0.5380239979929671,
+        -0.3990067157270216,
+        1.0,
+        -0.36280079320319986
+      ],
+      [
+        -0.47717934840208276,
+        -0.5369082020316878,
+        -0.36280079320319986,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "2020-02": [
+        2,
+        0,
+        2,
+        3
+      ],
+      "2020-03": [
+        8,
+        0,
+        2,
+        1
+      ],
+      "2020-04": [
+        3,
+        1,
+        2,
+        4
+      ],
+      "2020-05": [
+        8,
+        2,
+        4,
+        1
+      ],
+      "2020-06": [
+        9,
+        2,
+        2,
+        1
+      ],
+      "2020-07": [
+        8,
+        0,
+        1,
+        1
+      ],
+      "2020-08": [
+        7,
+        0,
+        3,
+        0
+      ],
+      "2020-09": [
+        5,
+        0,
+        2,
+        1
+      ],
+      "2020-10": [
+        6,
+        1,
+        1,
+        1
+      ],
+      "2020-11": [
+        4,
+        3,
+        2,
+        4
+      ],
+      "2020-12": [
+        3,
+        2,
+        1,
+        2
+      ],
+      "2021-01": [
+        2,
+        3,
+        0,
+        3
+      ],
+      "2021-02": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "2021-03": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "2021-04": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "2021-05": [
+        4,
+        2,
+        0,
+        1
+      ],
+      "2021-06": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "2021-07": [
+        4,
+        0,
+        4,
+        1
+      ],
+      "2021-08": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "2021-09": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "2021-10": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "2021-11": [
+        3,
+        1,
+        2,
+        1
+      ],
+      "2021-12": [
+        5,
+        3,
+        4,
+        1
+      ],
+      "2022-01": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "2022-02": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "2022-03": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "2022-04": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "2022-05": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "2022-06": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "2022-07": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "2022-08": [
+        5,
+        0,
+        2,
+        0
+      ],
+      "2022-09": [
+        3,
+        3,
+        0,
+        1
+      ],
+      "2022-10": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "2022-11": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "2022-12": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "2023-01": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "2023-02": [
+        2,
+        3,
+        2,
+        0
+      ],
+      "2023-03": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "2023-04": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "2023-05": [
+        0,
+        1,
+        3,
+        3
+      ],
+      "2023-06": [
+        1,
+        7,
+        1,
+        2
+      ],
+      "2023-07": [
+        1,
+        5,
+        2,
+        3
+      ],
+      "2023-08": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "2023-09": [
+        7,
+        6,
+        2,
+        3
+      ],
+      "2023-10": [
+        2,
+        1,
+        0,
+        4
+      ],
+      "2023-11": [
+        3,
+        3,
+        0,
+        1
+      ],
+      "2023-12": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "2024-01": [
+        0,
+        5,
+        1,
+        2
+      ],
+      "2024-02": [
+        3,
+        6,
+        3,
+        0
+      ],
+      "2024-03": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "2024-04": [
+        1,
+        5,
+        2,
+        3
+      ],
+      "2024-05": [
+        3,
+        3,
+        2,
+        4
+      ],
+      "2024-06": [
+        6,
+        4,
+        1,
+        3
+      ],
+      "2024-07": [
+        2,
+        5,
+        0,
+        2
+      ],
+      "2024-08": [
+        2,
+        5,
+        3,
+        2
+      ],
+      "2024-09": [
+        5,
+        4,
+        1,
+        3
+      ],
+      "2024-10": [
+        0,
+        3,
+        3,
+        2
+      ],
+      "2024-11": [
+        2,
+        2,
+        3,
+        2
+      ],
+      "2024-12": [
+        2,
+        2,
+        2,
+        3
+      ],
+      "2025-01": [
+        2,
+        5,
+        1,
+        2
+      ],
+      "2025-02": [
+        3,
+        6,
+        1,
+        4
+      ],
+      "2025-03": [
+        1,
+        4,
+        2,
+        4
+      ],
+      "2025-04": [
+        0,
+        5,
+        2,
+        1
+      ],
+      "2025-05": [
+        4,
+        7,
+        3,
+        2
+      ],
+      "2025-06": [
+        4,
+        2,
+        2,
+        3
+      ],
+      "2025-07": [
+        5,
+        9,
+        2,
+        2
+      ],
+      "2025-08": [
+        3,
+        3,
+        4,
+        4
+      ],
+      "2025-09": [
+        0,
+        2,
+        2,
+        3
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Data monitoring committees for clinical trials evaluating treatments of COVID-19",
+          "year": "2020-08",
+          "abstract": "The first cases of coronavirus disease 2019 (COVID-19) were reported in\nDecember 2019 and the outbreak of SARS-CoV-2 was declared a pandemic in March\n2020 by the World Health Organization. This sparked a plethora of\ninvestigations into diagnostics and vaccination for SARS-CoV-2, as well as\ntreatments for COVID-19. Since COVID-19 is a severe disease associated with a\nhigh mortality, clinical trials in this disease should be monitored by a data\nmonitoring committee (DMC), also known as data safety monitoring board (DSMB).\nDMCs in this indication face a number of challenges including fast recruitment\nrequiring an unusually high frequency of safety reviews, more frequent use of\ncomplex designs and virtually no prior experience with the disease. In this\npaper, we provide a perspective on the work of DMCs for clinical trials of\ntreatments for COVID-19. More specifically, we discuss organizational aspects\nof setting up and running DMCs for COVID-19 trials, in particular for trials\nwith more complex designs such as platform trials or adaptive designs.\nFurthermore, statistical aspects of monitoring clinical trials of treatments\nfor COVID-19 are considered. Some recommendations are made regarding the\npresentation of the data, stopping rules for safety monitoring and the use of\nexternal data. The proposed stopping boundaries are assessed in a simulation\nstudy motivated by clinical trials in COVID-19.",
+          "arxiv_id": "2008.10992v1"
+        },
+        {
+          "title": "Assessing the Impact of COVID-19 on the Objective and Analysis of Oncology Clinical Trials -- Application of the Estimand Framework",
+          "year": "2020-06",
+          "abstract": "COVID-19 outbreak has rapidly evolved into a global pandemic. The impact of\nCOVID-19 on patient journeys in oncology represents a new risk to\ninterpretation of trial results and its broad applicability for future clinical\npractice. We identify key intercurrent events that may occur due to COVID-19 in\noncology clinical trials with a focus on time-to-event endpoints and discuss\nconsiderations pertaining to the other estimand attributes introduced in the\nICH E9 addendum. We propose strategies to handle COVID-19 related intercurrent\nevents, depending on their relationship with malignancy and treatment and the\ninterpretability of data after them. We argue that the clinical trial objective\nfrom a world without COVID-19 pandemic remains valid. The estimand framework\nprovides a common language to discuss the impact of COVID-19 in a structured\nand transparent manner. This demonstrates that the applicability of the\nframework may even go beyond what it was initially intended for.",
+          "arxiv_id": "2006.04480v2"
+        },
+        {
+          "title": "Early Detection of Post-COVID-19 Fatigue Syndrome Using Deep Learning Models",
+          "year": "2023-09",
+          "abstract": "The research titled \"Early Detection of Post-COVID-19 Fatigue Syndrome using\nDeep Learning Models\" addresses a pressing concern arising from the COVID-19\npandemic. Post-COVID-19 Fatigue Syndrome (PCFS) has become a significant health\nissue affecting individuals who have recovered from COVID-19 infection. This\nstudy harnesses a robust dataset comprising 940 patients from diverse age\ngroups, whose medical records were collected from various hospitals in Iraq\nover the years 2022, 2022, and 2023. The primary objective of this research is\nto develop and evaluate deep learning models for the early detection of PCFS.\nLeveraging the power of deep learning, these models are trained on a\ncomprehensive set of clinical and demographic features extracted from the\ndataset. The goal is to enable timely identification of PCFS symptoms in\npost-COVID-19 patients, which can lead to more effective interventions and\nimproved patient outcomes. The study's findings underscore the potential of\ndeep learning in healthcare, particularly in the context of COVID-19 recovery.\nEarly detection of PCFS can aid healthcare professionals in providing timely\ncare and support to affected individuals, potentially reducing the long-term\nimpact of this syndrome on their quality of life. This research contributes to\nthe growing body of knowledge surrounding COVID-19-related health complications\nand highlights the importance of leveraging advanced machine learning\ntechniques for early diagnosis and intervention. Keywords: Early Detection,\nPost-COVID-19 Fatigue Syndrome, Deep Learning Models, Healthcare, COVID-19\nRecovery, Medical Data Analysis, Machine Learning, Health Interventions.",
+          "arxiv_id": "2310.03035v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Synthetic data: How could it be used for infectious disease research?",
+          "year": "2024-07",
+          "abstract": "Over the last three to five years, it has become possible to generate machine\nlearning synthetic data for healthcare-related uses. However, concerns have\nbeen raised about potential negative factors associated with the possibilities\nof artificial dataset generation. These include the potential misuse of\ngenerative artificial intelligence (AI) in fields such as cybercrime, the use\nof deepfakes and fake news to deceive or manipulate, and displacement of human\njobs across various market sectors.\n  Here, we consider both current and future positive advances and possibilities\nwith synthetic datasets. Synthetic data offers significant benefits,\nparticularly in data privacy, research, in balancing datasets and reducing bias\nin machine learning models. Generative AI is an artificial intelligence genre\ncapable of creating text, images, video or other data using generative models.\nThe recent explosion of interest in GenAI was heralded by the invention and\nspeedy move to use of large language models (LLM). These computational models\nare able to achieve general-purpose language generation and other natural\nlanguage processing tasks and are based on transformer architectures, which\nmade an evolutionary leap from previous neural network architectures.\n  Fuelled by the advent of improved GenAI techniques and wide scale usage, this\nis surely the time to consider how synthetic data can be used to advance\ninfectious disease research. In this commentary we aim to create an overview of\nthe current and future position of synthetic data in infectious disease\nresearch.",
+          "arxiv_id": "2407.06211v1"
+        },
+        {
+          "title": "MIFA: Metadata, Incentives, Formats, and Accessibility guidelines to improve the reuse of AI datasets for bioimage analysis",
+          "year": "2023-11",
+          "abstract": "Artificial Intelligence methods are powerful tools for biological image\nanalysis and processing. High-quality annotated images are key to training and\ndeveloping new methods, but access to such data is often hindered by the lack\nof standards for sharing datasets. We brought together community experts in a\nworkshop to develop guidelines to improve the reuse of bioimages and\nannotations for AI applications. These include standards on data formats,\nmetadata, data presentation and sharing, and incentives to generate new\ndatasets. We are positive that the MIFA (Metadata, Incentives, Formats, and\nAccessibility) recommendations will accelerate the development of AI tools for\nbioimage analysis by facilitating access to high quality training data.",
+          "arxiv_id": "2311.10443v2"
+        },
+        {
+          "title": "Applications and Challenges of AI and Microscopy in Life Science Research: A Review",
+          "year": "2025-01",
+          "abstract": "The complexity of human biology and its intricate systems holds immense\npotential for advancing human health, disease treatment, and scientific\ndiscovery. However, traditional manual methods for studying biological\ninteractions are often constrained by the sheer volume and complexity of\nbiological data. Artificial Intelligence (AI), with its proven ability to\nanalyze vast datasets, offers a transformative approach to addressing these\nchallenges. This paper explores the intersection of AI and microscopy in life\nsciences, emphasizing their potential applications and associated challenges.\nWe provide a detailed review of how various biological systems can benefit from\nAI, highlighting the types of data and labeling requirements unique to this\ndomain. Particular attention is given to microscopy data, exploring the\nspecific AI techniques required to process and interpret this information. By\naddressing challenges such as data heterogeneity and annotation scarcity, we\noutline potential solutions and emerging trends in the field. Written primarily\nfrom an AI perspective, this paper aims to serve as a valuable resource for\nresearchers working at the intersection of AI, microscopy, and biology. It\nsummarizes current advancements, key insights, and open problems, fostering an\nunderstanding that encourages interdisciplinary collaborations. By offering a\ncomprehensive yet concise synthesis of the field, this paper aspires to\ncatalyze innovation, promote cross-disciplinary engagement, and accelerate the\nadoption of AI in life science research.",
+          "arxiv_id": "2501.13135v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Emergent simulation of cell-like shapes satisfying the conditions of life using lattice-type multiset chemical model",
+          "year": "2022-04",
+          "abstract": "One of the great challenges in science is determining when, where, why, and\nhow life first arose as well as the form taken by this life. In the present\nstudy, life was assumed to be (1) bounded, (2) replicating, (3) able to inherit\ninformation, and (4) able to metabolize energy. The various existing hypotheses\nprovide little explanation of how these four conditions for life were\nestablished. Indeed, 'how' a chemical process that simultaneously satisfies all\nfour conditions emerged after the materials for life were in place is not\nalways clear. In this study, a 'multiset chemical lattice model', which allows\nvirtual molecules of multiple types to be placed in each cell on a\ntwo-dimensional space, was considered. Using only the processes of molecular\ndiffusion, reaction, and polymerization and modeling the chemical reactions of\n15 types of molecules and 2 types of polymerized molecules and using the\nmorphogenesis rule of the Turing model, the process of emergence of a cell-like\nform with the four conditions of life was modeled and demonstrated. Thus, in\nfuture research, this model will allow us to revisit and refine each of the\nhypotheses for the emergence of life.",
+          "arxiv_id": "2204.09680v3"
+        },
+        {
+          "title": "A twenty-first century statistical physics of life",
+          "year": "2024-10",
+          "abstract": "The molecular biology revolution of the last seventy five years has\ntransformed our view of living systems. Scientific explanations of biological\nphenomena are now synonymous with the identification of the genes, proteins,\nand signaling molecules involved. The hegemony of the molecular paradigm has\nonly become more pronounced as new technologies allow us to make measurements\nat scale. Combining this wealth of data with new ``artificial intelligence''\ntechniques is viewed as the future of biology. Here, we challenge this emerging\n``common sense'', laying out a roadmap for developing a theoretical\nunderstanding of life. We argue that a twenty-first century theoretical biology\nmust be founded on a new type of statistical physics suited to the living\nworld. Rather than merely constructing statistical models, a statistical theory\nrequires developing ``quantitative abstractions'' for understanding the\ngene-organism-environment triad. This necessitates overcoming four major\nchallenges that distinguish living matter: (1) living systems are composed of a\nlarge number of heterogeneous parts rather than a large number of identical\nobjects; (2) living systems control and manipulate the physical world in a\nmanner that is extremely different from the ways considered in traditional\nstatistical physics; (3) living systems necessarily operate out of equilibrium;\n(4) living systems are evolved objects with a function, resulting in new types\nof constraints that must be imposed on probabilistic ensembles. We conclude by\ndiscussing a few key themes that we view as promising directions for developing\na statistical physics of life: typicality, localized biological control, a\nlinear response of complex systems with non-reciprocal interactions, biological\nresource allocation, and learning and adaptation in overparameterized systems.",
+          "arxiv_id": "2410.20506v1"
+        },
+        {
+          "title": "A Review of Mathematical and Computational Methods in Cancer Dynamics",
+          "year": "2022-01",
+          "abstract": "Cancers are complex adaptive diseases regulated by the nonlinear feedback\nsystems between genetic instabilities, environmental signals, cellular protein\nflows, and gene regulatory networks. Understanding the cybernetics of cancer\nrequires the integration of information dynamics across multidimensional\nspatiotemporal scales, including genetic, transcriptional, metabolic,\nproteomic, epigenetic, and multi-cellular networks. However, the time-series\nanalysis of these complex networks remains vastly absent in cancer research.\nWith longitudinal screening and time-series analysis of cellular dynamics,\nuniversally observed causal patterns pertaining to dynamical systems, may\nself-organize in the signaling or gene expression state-space of cancer\ntriggering processes. A class of these patterns, strange attractors, may be\nmathematical biomarkers of cancer progression. The emergence of intracellular\nchaos and chaotic cell population dynamics remains a new paradigm in systems\noncology. As such, chaotic and complex dynamics are discussed as mathematical\nhallmarks of cancer cell fate dynamics herein. Given the assumption that\ntime-resolved single-cell datasets are made available, a survey of\ninterdisciplinary tools and algorithms from complexity theory, are hereby\nreviewed to investigate critical phenomena and chaotic dynamics in cancer\necosystems. To conclude, the perspective cultivates an intuition for\ncomputational systems oncology in terms of nonlinear dynamics, information\ntheory, inverse problems and complexity. We highlight the limitations we see in\nthe area of statistical machine learning but the opportunity at combining it\nwith the symbolic computational power offered by the mathematical tools\nexplored.",
+          "arxiv_id": "2201.02055v6"
+        }
+      ],
+      "3": [
+        {
+          "title": "Comparative study of the biological activities of the aqueous extracts of two spontaneous plants harvested in the Algerian Sahara",
+          "year": "2020-06",
+          "abstract": "The present study investigates the insecticidal and herbicidal effects of\nleaf extracts from two plants were harvested in the Northern Algerian Sahara.\nThese are Cleome arabica (Capparaceae) and Pergularia tomentosa\n(Asclepiadaceae). The efficacy of the extracts from the plants was evaluated by\nthe reflux extraction method. The phytochemical screening of the aqueous\nextracts of C. arabica shows a remarkable richness in active principles in\ncomparison with the extract of P. tomentosa; including flavonoids, saponosides,\nglycosides, terpenes, sterols, deoxyose, polyphenols and total alkaloids. The\nimago of Tribolium confusum treated with aqueous extracts of C. arabica and P.\ntomentosa at doses of 80% to 100% respectively have mortality rates of 73.33%\nto 96.67%, and 36.67% to 86.67%. The lethal time 50 (TL50%) of the aqueous\nextract of C. arabica was estimated about 6.41 days, and 6.94 days for the\nextract P. tomentosa for the imago of T. confusum. The extracts of P. tomentosa\nis less toxic than the extracts of C. arabica. The allelopathic potentials of\nC. arabica and P. tomentosa tested on germination of the seeds of a weed\nDactyloctenium aegyptium (Poaceae) and two cultivated species, including\nHordeumvulgare and Triticumdurum (Poaceae), show that the inhibitory effect of\nextracts of C. arabica is very highly significant. It manifests itself in the\ngrowth of the aerial and underground part of the H. vulgar and T. durum. The\ninhibition rate is more than 84.44% for D. aegyptium seeds treated with the\ndifferent concentrations. The inhibition rates range from 75.56% to 91.11% for\nT. durum wheat irrigate at 80% to 100%, but are only 55.56% to 77.78% for\nbarley seeds treated with the same concentrations (80% to 100%).",
+          "arxiv_id": "2006.07933v1"
+        },
+        {
+          "title": "Effect of some plant extracts on hardwood cuttings of Bottlebrush (Callistemon viminalis)",
+          "year": "2023-09",
+          "abstract": "The study was conducted at the Collage of Agricultural Engineering Sciences,\nUniversity of Sulaimani, Kurdistan Region-Iraq so as to investigate response\nhardwood cuttings of Callistemon viminalis to some plant extracts. The hardwood\ncuttings were taken on 11 March 2021 and soaked separately in 3 and 6 g/L\naqueous extracts of moringa leaf, licorice root, willow shoot, fenugreek seed\nand cinnamon bark for 1 hour. They were compared to the cuttings dipped in 3000\nppm IBA for 10s and control cuttings which were soaked in distilled water for 1\nhour. The experiment laid out in CRD with three replications in a greenhouse,\nand each replication included six cuttings which planted in a mixture of sand\nand rice husk medium. The results showed that the highest (86.66%) rooting was\nachieved in the cuttings treated with 6 g/L licorice extract and they were\nsignificantly different with control cuttings (53.33%), but they were not\nsignificantly different with 3000 ppm IBA (66.66%). Cinnamon 3g/L and fenugreek\n3g/L extracts gave the lowest (6.66% and 33.33%, respectively) rooting and\nother studied parameters. The cuttings dipped in 3000 ppm IBA gave the highest\n(18.91) root number and the highest (66.66%) survival cuttings after\ntransplanting. The longest root (15.54 cm) was found in cuttings were treated\nwith 6 g/L moringa extract. The longest (5.83 cm) shoot was observed in treated\ncuttings with 3 g/L willow extract. The highest chlorophyll a and b (10.08 and\n4.62 mg/L, respectively) were observed in cuttings treated with 6 g/L willow\nextract. Moreover, 3000 ppm IBA gave the highest (20.23%) total carbohydrate\nand (1.77 mg/g) IAA content along with 6 g/L licorice, moringa and fenugreek\nextracts, after 30 days from planting of the cuttings. Licorice root extract at\n6 g/L fairly improved the measurements similar to 3000 ppm IBA throughout the\nstudy.",
+          "arxiv_id": "2311.12032v1"
+        },
+        {
+          "title": "Comprehensive treatment and analysis of Fishpond sediments as a source of organic fertilizers",
+          "year": "2023-04",
+          "abstract": "Agricultural fertilizers are essential to enhance proper growth and crop\nyield. Chemical fertilizers endanger ecosystems, soil, plants, and animal and\nhuman lives. This has increased interest in biofertilizers which are products\nthat contain living microorganisms or natural compounds derived from organisms\nsuch as bacteria, fungi, and algae that improve soil chemical and biological\nproperties, stimulate plant growth and restore soil fertility. This study aimed\nto use natural coagulants in the management of fishpond sediment for the\npotential recovery of nutrients that can be utilized in crop production as\norganic fertilizers. Fishpond wastewater and sediment were collected, treated\nwith natural, powdered Moringa oleifera seed coagulant, and dried. Greenhouse\nevaluation of the dried sediment was carried out using maize seeds on soil\nprimed with the sediment. Growth parameters such as plant height, leaf length,\nroot length, plant weight, and percentage yield were determined. The nitrate,\ntotal nitrogen, phosphate, and total phosphorus content of the organic\nfertilizer were also determined. Plant height in maize showed a 35.8-44.4 %\nincrease in fertilized maize and a 20.3-39.3 % increase in the leaf length.\nThere was a 38.8-66 % increase in root length and a 23.9-36.5 % increase in\nplant weight in fertilized maize. The nutritive component was 59.80 mg/Kg,\n655.56 mg/Kg, 103.87 mg/Kg, and 426.60 mg/Kg respectively. For a period of 21\ndays of active growth, the growth rate of maize primed with organic fertilizer\nwas 0.93 cm/day with a total yield of 100 % while the control was 0.68 cm/day\nwith a total yield of 50 %. A dried biofertilizer that can improve plant\ngrowth, weight, and percentage yield without having to deal with smelly manure\nlooks promising and seems to be a better alternative to explore in agriculture.",
+          "arxiv_id": "2304.07630v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:08Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

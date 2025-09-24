@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_control_systems_time_model",
+        "keywords": [
+          [
+            "control",
+            0.03186262414661293
+          ],
+          [
+            "systems",
+            0.021840152107191632
+          ],
+          [
+            "time",
+            0.021118161037561613
+          ],
+          [
+            "model",
+            0.020090513887095332
+          ],
+          [
+            "paper",
+            0.01751760999018022
+          ],
+          [
+            "problem",
+            0.016168996838823092
+          ],
+          [
+            "data",
+            0.016133351771089925
+          ],
+          [
+            "approach",
+            0.01548502816266419
+          ],
+          [
+            "state",
+            0.015088216051293952
+          ],
+          [
+            "performance",
+            0.014578389756929497
+          ]
+        ],
+        "count": 23336
+      },
+      "1": {
+        "name": "1_power_energy_model_grid",
+        "keywords": [
+          [
+            "power",
+            0.04251486131096004
+          ],
+          [
+            "energy",
+            0.031820844737421354
+          ],
+          [
+            "model",
+            0.02194595451574681
+          ],
+          [
+            "grid",
+            0.021911832579163577
+          ],
+          [
+            "paper",
+            0.017307788538549303
+          ],
+          [
+            "control",
+            0.017205280248089115
+          ],
+          [
+            "systems",
+            0.01581769345048593
+          ],
+          [
+            "data",
+            0.015759283607737345
+          ],
+          [
+            "voltage",
+            0.01345077240956069
+          ],
+          [
+            "method",
+            0.013354040598530586
+          ]
+        ],
+        "count": 6247
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.2829584582361101
+      ],
+      [
+        -0.2829584582361101,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        199,
+        54
+      ],
+      "2020-02": [
+        222,
+        54
+      ],
+      "2020-03": [
+        341,
+        84
+      ],
+      "2020-04": [
+        313,
+        79
+      ],
+      "2020-05": [
+        288,
+        85
+      ],
+      "2020-06": [
+        277,
+        79
+      ],
+      "2020-07": [
+        248,
+        82
+      ],
+      "2020-08": [
+        254,
+        75
+      ],
+      "2020-09": [
+        295,
+        79
+      ],
+      "2020-10": [
+        269,
+        93
+      ],
+      "2020-11": [
+        348,
+        85
+      ],
+      "2020-12": [
+        279,
+        76
+      ],
+      "2021-01": [
+        247,
+        78
+      ],
+      "2021-02": [
+        279,
+        89
+      ],
+      "2021-03": [
+        466,
+        103
+      ],
+      "2021-04": [
+        310,
+        99
+      ],
+      "2021-05": [
+        273,
+        72
+      ],
+      "2021-06": [
+        280,
+        94
+      ],
+      "2021-07": [
+        247,
+        78
+      ],
+      "2021-08": [
+        250,
+        72
+      ],
+      "2021-09": [
+        331,
+        77
+      ],
+      "2021-10": [
+        309,
+        114
+      ],
+      "2021-11": [
+        288,
+        91
+      ],
+      "2021-12": [
+        256,
+        87
+      ],
+      "2022-01": [
+        236,
+        72
+      ],
+      "2022-02": [
+        254,
+        69
+      ],
+      "2022-03": [
+        391,
+        109
+      ],
+      "2022-04": [
+        310,
+        80
+      ],
+      "2022-05": [
+        296,
+        69
+      ],
+      "2022-06": [
+        269,
+        77
+      ],
+      "2022-07": [
+        296,
+        107
+      ],
+      "2022-08": [
+        273,
+        81
+      ],
+      "2022-09": [
+        373,
+        92
+      ],
+      "2022-10": [
+        322,
+        87
+      ],
+      "2022-11": [
+        352,
+        92
+      ],
+      "2022-12": [
+        301,
+        98
+      ],
+      "2023-01": [
+        249,
+        101
+      ],
+      "2023-02": [
+        234,
+        86
+      ],
+      "2023-03": [
+        401,
+        125
+      ],
+      "2023-04": [
+        409,
+        120
+      ],
+      "2023-05": [
+        344,
+        110
+      ],
+      "2023-06": [
+        279,
+        71
+      ],
+      "2023-07": [
+        296,
+        86
+      ],
+      "2023-08": [
+        290,
+        90
+      ],
+      "2023-09": [
+        421,
+        99
+      ],
+      "2023-10": [
+        366,
+        154
+      ],
+      "2023-11": [
+        368,
+        117
+      ],
+      "2023-12": [
+        361,
+        89
+      ],
+      "2024-01": [
+        364,
+        108
+      ],
+      "2024-02": [
+        336,
+        82
+      ],
+      "2024-03": [
+        538,
+        110
+      ],
+      "2024-04": [
+        362,
+        94
+      ],
+      "2024-05": [
+        406,
+        111
+      ],
+      "2024-06": [
+        335,
+        83
+      ],
+      "2024-07": [
+        326,
+        81
+      ],
+      "2024-08": [
+        340,
+        95
+      ],
+      "2024-09": [
+        462,
+        113
+      ],
+      "2024-10": [
+        458,
+        120
+      ],
+      "2024-11": [
+        397,
+        120
+      ],
+      "2024-12": [
+        335,
+        113
+      ],
+      "2025-01": [
+        375,
+        101
+      ],
+      "2025-02": [
+        384,
+        97
+      ],
+      "2025-03": [
+        566,
+        126
+      ],
+      "2025-04": [
+        529,
+        112
+      ],
+      "2025-05": [
+        472,
+        114
+      ],
+      "2025-06": [
+        423,
+        114
+      ],
+      "2025-07": [
+        460,
+        133
+      ],
+      "2025-08": [
+        416,
+        116
+      ],
+      "2025-09": [
+        263,
+        73
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Iterative Convex Optimization for Model Predictive Control with Discrete-Time High-Order Control Barrier Functions",
+          "year": "2022-10",
+          "abstract": "Safety is one of the fundamental challenges in control theory. Recently,\nmulti-step optimal control problems for discrete-time dynamical systems were\nformulated to enforce stability, while subject to input constraints as well as\nsafety-critical requirements using discrete-time control barrier functions\nwithin a model predictive control (MPC) framework. Existing work usually focus\non the feasibility or the safety for the optimization problem, and the majority\nof the existing work restrict the discussions to relative-degree one control\nbarrier functions. Additionally, the real-time computation is challenging when\na large horizon is considered in the MPC problem for relative-degree one or\nhigh-order control barrier functions. In this paper, we propose a framework\nthat solves the safety-critical MPC problem in an iterative optimization, which\nis applicable for any relative-degree control barrier functions. In the\nproposed formulation, the nonlinear system dynamics as well as the safety\nconstraints modeled as discrete-time high-order control barrier functions\n(DHOCBF) are linearized at each time step. Our formulation is generally valid\nfor any control barrier function with an arbitrary relative-degree. The\nadvantages of fast computational performance with safety guarantee are analyzed\nand validated with numerical results.",
+          "arxiv_id": "2210.04361v3"
+        },
+        {
+          "title": "Deterministic policy gradient based optimal control with probabilistic constraints",
+          "year": "2023-05",
+          "abstract": "This paper studies a deep deterministic policy gradient (DDPG) based actor\ncritic (AC) reinforcement learning (RL) technique to control a linear\ndiscrete-time system with a quadratic control cost while ensuring a constraint\non the probability of potentially risky or undesirable events. The proposed\nmethodology can be applied to both known and unknown system models with minor\nadjustments to the reward structure (negative cost). The problem is formulated\nby considering the average expected quadratic cost of the states and inputs\nover an infinite time horizon. Risky or undesirable events are represented as\nfunctions of the states at the next time step exceeding a user-defined limit.\nTwo strategies are employed to manage the probabilistic constraint in scenarios\nof known and unknown system models. In the case of a known system model, the\nprobabilistic constraint is replaced with an upper bound, such as the Chernoff\nbound. For unknown system models, the expected value of the indicator function\nof the occurrence of the risky or undesirable event is used. We have adopted a\ndeterministic policy gradient (DPG) based AC method to derive a parameterised\noptimal policy. Extensive numerical simulations are performed using a second-\nand a fourth-order system, and the proposed method is compared with the\nstandard risk-neutral linear quadratic regulator (LQR) and a chance-constrained\nmodel predictive control (MPC) method. The results demonstrate the\neffectiveness of the proposed approach in both known and unknown system model\nscenarios.",
+          "arxiv_id": "2305.15755v2"
+        },
+        {
+          "title": "Optimized Control Invariance Conditions for Uncertain Input-Constrained Nonlinear Control Systems",
+          "year": "2023-12",
+          "abstract": "Providing safety guarantees for learning-based controllers is important for\nreal-world applications. One approach to realizing safety for arbitrary control\npolicies is safety filtering. If necessary, the filter modifies control inputs\nto ensure that the trajectories of a closed-loop system stay within a given\nstate constraint set for all future time, referred to as the set being positive\ninvariant or the system being safe. Under the assumption of fully known\ndynamics, safety can be certified using control barrier functions (CBFs).\nHowever, the dynamics model is often either unknown or only partially known in\npractice. Learning-based methods have been proposed to approximate the CBF\ncondition for unknown or uncertain systems from data; however, these techniques\ndo not account for input constraints and, as a result, may not yield a valid\nCBF condition to render the safe set invariant. In this work, we study\nconditions that guarantee control invariance of the system under input\nconstraints and propose an optimization problem to reduce the conservativeness\nof CBF-based safety filters. Building on these theoretical insights, we further\ndevelop a probabilistic learning approach that allows us to build a safety\nfilter that guarantees safety for uncertain, input-constrained systems with\nhigh probability. We demonstrate the efficacy of our proposed approach in\nsimulation and real-world experiments on a quadrotor and show that we can\nachieve safe closed-loop behavior for a learned system while satisfying state\nand input constraints.",
+          "arxiv_id": "2312.09565v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "A Highly Compact Direct-Injection Power-Flow Controller and Line-Voltage Regulator with Shared Magnetics and Partial-Power Conversion for Full-Power Control",
+          "year": "2025-09",
+          "abstract": "An increasing integration of photovoltaic units, electric vehicle chargers,\nheat pumps, and energy storage systems challenges low-voltage power grids and\ncan cause voltage range violation, loss of stability, (local) overload of\nlines, and power management problems. Research suggested universal power-flow\ncontrol (UPFC) to solve power management problems. In contrast to bulky, slow,\nand costly conventional UPFCs with their shunt and series transformers, this\npaper presents a highly compact and current-dense power-flow controller, which\ncan serve between different feeders in the low-voltage power grids. The enabler\nis a systematic combination of silicon car-bide (SiC) with silicon (Si)\ntransistors and a strict partial-power topology built around a multi-active\nbridge. The circuit links an active-front-end converter as a shunt stage\nthrough a multi-active-bridge converter bidirectionally with low-voltage\nseries-injection modules floating with their respective phases. The topology\ncan use small power to control high currents through the low-voltage\nseries-injection modules. The multi-active bridge serves as a\nmulti-input-output power router that exchanges energy between all elements. We\nassess the design as well as the implementation considerations of the proposed\npower-flow controller mathematically and verify its performance in simulation\nand real systems.",
+          "arxiv_id": "2509.10955v1"
+        },
+        {
+          "title": "Aging-aware Energy Management for Residential Multi-Carrier Energy Systems",
+          "year": "2025-03",
+          "abstract": "In the context of building electrification, the operation of distributed\nenergy resources integrating multiple energy carriers (electricity, heat,\nmobility) poses a significant challenge due to the nonlinear device dynamics,\nuncertainty, and computational issues. As such, energy management systems seek\nto decide the power dispatch in the best way possible. The objective is to\nminimize and balance operative costs (energy bills or asset degradation) with\nuser requirements (mobility, heating, etc.). Current energy management uses\nempirical battery ageing models outside of their specific fitting conditions,\nresulting in inaccuracies and poor performance. Moreover, the link to thermal\nsystems is also overlooked. This paper presents an ageing-aware day-ahead\nalgorithm for electrified buildings that incorporates physics-based battery\nageing models. The models distinguish between energy storage systems and make\nexplicit the trade-off between grid cost and battery degradation. The proposed\nday-ahead algorithm can either cut down on grid costs or extend battery\nlifetime (electric vehicle or stationary battery packs). Moreover, it exploits\nthe differences between cathode chemistries improving grid costs by 25% when\nusing LFP cells, with respect to NMC cells. Finally, the performance using aged\nbatteries is also enhanced with 35% grid cost observed savings, when passing\nfrom new to aged batteries in the summer.",
+          "arxiv_id": "2503.16139v3"
+        },
+        {
+          "title": "Distribution grid power flexibility aggregation at multiple interconnections between the high and extra high voltage grid levels",
+          "year": "2023-03",
+          "abstract": "The energy transition towards renewable based power provision requires\nimproved monitoring and control of distributed energy resources (DERs),\ninstalled predominantly at the distribution grid level. Due to the gradual\nphase out of thermal generation, a shift of ancillary services provision like\nvoltage control, congestion management and dynamic support from DERs is\nunderway. Increased planning for procurement of ancillary services from\nunderlying grid levels is required. Therefore, provision of flexible active and\nreactive power potentials from distribution system operators to transmission\nsystem operators at the vertical system interface is a subject of current\nresearch. At present, provision of active and reactive power flexibilities\n(PQ-flexibilities) across radial system interconnections are investigated,\nwhich involves a single transformer branch interconnection across two different\nvoltage levels. Inclusion of multiple interconnections in a meshed grid\nstructure increases the complexity as proximal interdependencies of\ninterconnections to PQ-flexibilities require consideration. The objective of\nthis paper is to address the flexibility aggregation across multiple vertical\ninterconnections. Alternating current power transfer distribution factors\n(AC-PTDFs) are used to determine the power flow across the interconnections.\nSubsequent integration in a linear optimization environment controls the\ninterconnection power flows (IPF) using a weighted objective function.\nTherefore, power flow regulation is enabled according to the requirements and\nspecifications of both the underlying and overlaying grid level. The results\nshow interdependent concentric flexibility regions or Feasible Operating\nRegions (FORs) in accordance with the manipulation of the weighted objective\nfunction.",
+          "arxiv_id": "2303.01107v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:26:19Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

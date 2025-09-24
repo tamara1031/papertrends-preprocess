@@ -1,0 +1,868 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_distribution_model_results",
+        "keywords": [
+          [
+            "data",
+            0.01866364361276249
+          ],
+          [
+            "distribution",
+            0.015589454409536298
+          ],
+          [
+            "model",
+            0.014592301363191701
+          ],
+          [
+            "results",
+            0.012652640029746713
+          ],
+          [
+            "estimation",
+            0.01247568272289878
+          ],
+          [
+            "models",
+            0.012195596867937053
+          ],
+          [
+            "estimator",
+            0.011363231409832338
+          ],
+          [
+            "sample",
+            0.011359057048285555
+          ],
+          [
+            "paper",
+            0.011213770498918668
+          ],
+          [
+            "random",
+            0.010872029463841394
+          ]
+        ],
+        "count": 8723
+      },
+      "1": {
+        "name": "1_causal_treatment_effect_data",
+        "keywords": [
+          [
+            "causal",
+            0.03209993415733779
+          ],
+          [
+            "treatment",
+            0.030691413780417516
+          ],
+          [
+            "effect",
+            0.01992376640579282
+          ],
+          [
+            "data",
+            0.01924682115888473
+          ],
+          [
+            "models",
+            0.01856127171655147
+          ],
+          [
+            "effects",
+            0.018328476422577115
+          ],
+          [
+            "model",
+            0.017813295694932684
+          ],
+          [
+            "inference",
+            0.015016158170497155
+          ],
+          [
+            "estimators",
+            0.01370807330799807
+          ],
+          [
+            "estimator",
+            0.013579752868833972
+          ]
+        ],
+        "count": 1090
+      },
+      "2": {
+        "name": "2_graph_network_graphs_model",
+        "keywords": [
+          [
+            "graph",
+            0.034628529728552467
+          ],
+          [
+            "network",
+            0.03237722724383304
+          ],
+          [
+            "graphs",
+            0.02645229305804671
+          ],
+          [
+            "model",
+            0.0263339648706943
+          ],
+          [
+            "random",
+            0.0205265061630404
+          ],
+          [
+            "networks",
+            0.02000274272779377
+          ],
+          [
+            "community",
+            0.0189284302230773
+          ],
+          [
+            "models",
+            0.0159230218708502
+          ],
+          [
+            "degree",
+            0.01522153606311115
+          ],
+          [
+            "problem",
+            0.015188716218412696
+          ]
+        ],
+        "count": 507
+      },
+      "3": {
+        "name": "3_policy_regret_learning_optimal",
+        "keywords": [
+          [
+            "policy",
+            0.042847886516528884
+          ],
+          [
+            "regret",
+            0.038514009130066425
+          ],
+          [
+            "learning",
+            0.027547093372275108
+          ],
+          [
+            "optimal",
+            0.022785623412711523
+          ],
+          [
+            "algorithm",
+            0.02168874474261929
+          ],
+          [
+            "bandit",
+            0.021038064383940926
+          ],
+          [
+            "bandits",
+            0.02098705673307778
+          ],
+          [
+            "RL",
+            0.020329577341237585
+          ],
+          [
+            "reward",
+            0.019860883984361033
+          ],
+          [
+            "algorithms",
+            0.01792339154232798
+          ]
+        ],
+        "count": 264
+      },
+      "4": {
+        "name": "4_privacy_private_differential privacy_differential",
+        "keywords": [
+          [
+            "privacy",
+            0.09452932648117797
+          ],
+          [
+            "private",
+            0.04680580728511891
+          ],
+          [
+            "differential privacy",
+            0.03926869906900949
+          ],
+          [
+            "differential",
+            0.034176573010368215
+          ],
+          [
+            "data",
+            0.03285204864014698
+          ],
+          [
+            "DP",
+            0.023901135012066144
+          ],
+          [
+            "estimation",
+            0.018769462877383482
+          ],
+          [
+            "mechanism",
+            0.01829494057609461
+          ],
+          [
+            "Privacy",
+            0.015386784016702616
+          ],
+          [
+            "optimal",
+            0.015144280572238593
+          ]
+        ],
+        "count": 203
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.4550514919753726,
+        -0.48066462596515624,
+        -0.5058187117269537,
+        -0.5065637404056212
+      ],
+      [
+        -0.4550514919753726,
+        1.0,
+        -0.41263774161763966,
+        -0.38355128193702553,
+        -0.7019553685677434
+      ],
+      [
+        -0.48066462596515624,
+        -0.41263774161763966,
+        1.0,
+        -0.4436435776575841,
+        -0.6981841465356523
+      ],
+      [
+        -0.5058187117269537,
+        -0.38355128193702553,
+        -0.4436435776575841,
+        1.0,
+        -0.7099753780126545
+      ],
+      [
+        -0.5065637404056212,
+        -0.7019553685677434,
+        -0.6981841465356523,
+        -0.7099753780126545,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        83,
+        9,
+        17,
+        7,
+        2
+      ],
+      "2020-02": [
+        113,
+        21,
+        22,
+        15,
+        15
+      ],
+      "2020-03": [
+        110,
+        10,
+        19,
+        7,
+        7
+      ],
+      "2020-04": [
+        104,
+        17,
+        20,
+        4,
+        4
+      ],
+      "2020-05": [
+        98,
+        17,
+        17,
+        10,
+        3
+      ],
+      "2020-06": [
+        139,
+        22,
+        25,
+        11,
+        10
+      ],
+      "2020-07": [
+        125,
+        13,
+        17,
+        7,
+        8
+      ],
+      "2020-08": [
+        98,
+        9,
+        18,
+        5,
+        5
+      ],
+      "2020-09": [
+        109,
+        19,
+        15,
+        3,
+        5
+      ],
+      "2020-10": [
+        114,
+        24,
+        16,
+        15,
+        15
+      ],
+      "2020-11": [
+        102,
+        23,
+        18,
+        12,
+        13
+      ],
+      "2020-12": [
+        118,
+        12,
+        22,
+        10,
+        2
+      ],
+      "2021-01": [
+        89,
+        18,
+        14,
+        10,
+        12
+      ],
+      "2021-02": [
+        109,
+        20,
+        14,
+        11,
+        5
+      ],
+      "2021-03": [
+        116,
+        19,
+        13,
+        5,
+        6
+      ],
+      "2021-04": [
+        106,
+        22,
+        9,
+        5,
+        5
+      ],
+      "2021-05": [
+        102,
+        16,
+        22,
+        8,
+        8
+      ],
+      "2021-06": [
+        124,
+        17,
+        20,
+        7,
+        9
+      ],
+      "2021-07": [
+        114,
+        21,
+        18,
+        11,
+        10
+      ],
+      "2021-08": [
+        82,
+        15,
+        24,
+        3,
+        7
+      ],
+      "2021-09": [
+        94,
+        23,
+        12,
+        8,
+        8
+      ],
+      "2021-10": [
+        129,
+        18,
+        33,
+        18,
+        7
+      ],
+      "2021-11": [
+        79,
+        23,
+        12,
+        8,
+        9
+      ],
+      "2021-12": [
+        108,
+        23,
+        27,
+        11,
+        6
+      ],
+      "2022-01": [
+        78,
+        13,
+        8,
+        3,
+        10
+      ],
+      "2022-02": [
+        90,
+        22,
+        21,
+        10,
+        7
+      ],
+      "2022-03": [
+        103,
+        12,
+        20,
+        7,
+        6
+      ],
+      "2022-04": [
+        84,
+        14,
+        15,
+        4,
+        7
+      ],
+      "2022-05": [
+        111,
+        14,
+        19,
+        5,
+        13
+      ],
+      "2022-06": [
+        135,
+        26,
+        24,
+        9,
+        16
+      ],
+      "2022-07": [
+        111,
+        9,
+        20,
+        4,
+        10
+      ],
+      "2022-08": [
+        112,
+        18,
+        10,
+        8,
+        9
+      ],
+      "2022-09": [
+        119,
+        20,
+        23,
+        12,
+        15
+      ],
+      "2022-10": [
+        132,
+        23,
+        17,
+        11,
+        16
+      ],
+      "2022-11": [
+        112,
+        19,
+        22,
+        14,
+        15
+      ],
+      "2022-12": [
+        109,
+        22,
+        17,
+        8,
+        7
+      ],
+      "2023-01": [
+        101,
+        16,
+        13,
+        9,
+        12
+      ],
+      "2023-02": [
+        86,
+        18,
+        20,
+        12,
+        12
+      ],
+      "2023-03": [
+        124,
+        17,
+        18,
+        7,
+        6
+      ],
+      "2023-04": [
+        80,
+        17,
+        16,
+        7,
+        4
+      ],
+      "2023-05": [
+        123,
+        23,
+        20,
+        21,
+        17
+      ],
+      "2023-06": [
+        117,
+        22,
+        14,
+        13,
+        11
+      ],
+      "2023-07": [
+        105,
+        22,
+        22,
+        11,
+        10
+      ],
+      "2023-08": [
+        78,
+        17,
+        15,
+        5,
+        3
+      ],
+      "2023-09": [
+        98,
+        21,
+        15,
+        7,
+        7
+      ],
+      "2023-10": [
+        132,
+        28,
+        27,
+        9,
+        12
+      ],
+      "2023-11": [
+        116,
+        25,
+        19,
+        7,
+        11
+      ],
+      "2023-12": [
+        99,
+        13,
+        15,
+        6,
+        6
+      ],
+      "2024-01": [
+        88,
+        19,
+        28,
+        5,
+        14
+      ],
+      "2024-02": [
+        143,
+        18,
+        31,
+        16,
+        19
+      ],
+      "2024-03": [
+        131,
+        15,
+        18,
+        12,
+        13
+      ],
+      "2024-04": [
+        116,
+        15,
+        14,
+        6,
+        10
+      ],
+      "2024-05": [
+        142,
+        21,
+        18,
+        11,
+        17
+      ],
+      "2024-06": [
+        113,
+        28,
+        22,
+        12,
+        15
+      ],
+      "2024-07": [
+        123,
+        20,
+        17,
+        6,
+        8
+      ],
+      "2024-08": [
+        91,
+        18,
+        14,
+        3,
+        8
+      ],
+      "2024-09": [
+        127,
+        15,
+        13,
+        7,
+        10
+      ],
+      "2024-10": [
+        142,
+        32,
+        26,
+        11,
+        8
+      ],
+      "2024-11": [
+        94,
+        35,
+        24,
+        4,
+        5
+      ],
+      "2024-12": [
+        102,
+        15,
+        17,
+        9,
+        13
+      ],
+      "2025-01": [
+        114,
+        19,
+        18,
+        10,
+        12
+      ],
+      "2025-02": [
+        134,
+        28,
+        26,
+        14,
+        15
+      ],
+      "2025-03": [
+        120,
+        19,
+        27,
+        6,
+        6
+      ],
+      "2025-04": [
+        112,
+        22,
+        22,
+        9,
+        14
+      ],
+      "2025-05": [
+        147,
+        22,
+        20,
+        21,
+        18
+      ],
+      "2025-06": [
+        135,
+        32,
+        25,
+        5,
+        9
+      ],
+      "2025-07": [
+        123,
+        16,
+        21,
+        6,
+        15
+      ],
+      "2025-08": [
+        112,
+        24,
+        16,
+        6,
+        10
+      ],
+      "2025-09": [
+        65,
+        10,
+        7,
+        5,
+        8
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Balancing the edge effect and dimension of spectral spatial statistics under irregular sampling with applications to isotropy testing",
+          "year": "2024-01",
+          "abstract": "We investigate distributional properties of a class of spectral spatial\nstatistics under irregular sampling of a random field that is defined on\n$\\mathbb{R}^d$, and use this to obtain a test for isotropy. Within this\ncontext, edge effects are well-known to create a bias in classical estimators\ncommonly encountered in the analysis of spatial data. This bias increases with\ndimension $d$ and, for $d>1$, can become non-negligible in the limiting\ndistribution of such statistics to the extent that a nondegenerate distribution\ndoes not exist. We provide a general theory for a class of (integrated)\nspectral statistics that enables to 1) significantly reduce this bias and 2)\nthat ensures that asymptotically Gaussian limits can be derived for $d \\le 3$\nfor appropriately tapered versions of such statistics. We use this to address\nsome crucial gaps in the literature, and demonstrate that tapering with a\nsufficiently smooth function is necessary to achieve such results. Our findings\nspecifically shed a new light on a recent result in Subba Rao (2018a). Our\ntheory then is used to propose a novel test for isotropy. In contrast to most\nof the literature, which validates this assumption on a finite number of\nspatial locations (or a finite number of Fourier frequencies), we develop a\ntest for isotropy on the full spatial domain by means of its characterization\nin the frequency domain. More precisely, we derive an explicit expression for\nthe minimum $L^2$-distance between the spectral density of the random field and\nits best approximation by a spectral density of an isotropic process. We prove\nasymptotic normality of an estimator of this quantity in the mixed increasing\ndomain framework and use this result to derive an asymptotic level\n$\\alpha$-test.",
+          "arxiv_id": "2401.07522v1"
+        },
+        {
+          "title": "Jump detection in high-frequency order prices",
+          "year": "2024-02",
+          "abstract": "We propose methods to infer jumps of a semi-martingale, which describes\nlong-term price dynamics, based on discrete, noisy, high-frequency\nobservations. Different to the classical model of additive, centered market\nmicrostructure noise, we consider one-sided microstructure noise for order\nprices in a limit order book.\n  We develop methods to estimate, locate and test for jumps using local minima\nof best ask quotes. We provide a local jump test and show that we can\nconsistently estimate jump sizes and jump times. One main contribution is a\nglobal test for jumps. We establish the asymptotic properties and optimality of\nthis test. We derive the asymptotic distribution of a maximum statistic under\nthe null hypothesis of no jumps based on extreme value theory. We prove\nconsistency under the alternative hypothesis. The rate of convergence for local\nalternatives is determined and shown to be much faster than optimal rates for\nthe standard market microstructure noise model. This allows the identification\nof smaller jumps. In the process, we establish uniform consistency for spot\nvolatility estimation under one-sided noise. Online jump detection based on the\nnew approach is shown to achieve a speed advantage compared to standard methods\napplied to mid quotes.\n  A simulation study sheds light on the finite-sample implementation and\nproperties of the new approach and draws a comparison to a popular method for\nmarket microstructure noise. We showcase how our new approach helps to improve\njump detection in an empirical analysis of intra-daily limit order book data.",
+          "arxiv_id": "2403.00819v2"
+        },
+        {
+          "title": "The high-dimensional asymptotics of first order methods with random data",
+          "year": "2021-12",
+          "abstract": "We study a class of deterministic flows in ${\\mathbb R}^{d\\times k}$,\nparametrized by a random matrix ${\\boldsymbol X}\\in {\\mathbb R}^{n\\times d}$\nwith i.i.d. centered subgaussian entries. We characterize the asymptotic\nbehavior of these flows over bounded time horizons, in the high-dimensional\nlimit in which $n,d\\to\\infty$ with $k$ fixed and converging aspect ratios\n$n/d\\to\\delta$. The asymptotic characterization we prove is in terms of a\nsystem of a nonlinear stochastic process in $k$ dimensions, whose parameters\nare determined by a fixed point condition. This type of characterization is\nknown in physics as dynamical mean field theory. Rigorous results of this type\nhave been obtained in the past for a few spin glass models. Our proof is based\non time discretization and a reduction to certain iterative schemes known as\napproximate message passing (AMP) algorithms, as opposed to earlier work that\nwas based on large deviations theory and stochastic processes theory. The new\napproach provides a unified view of a general class of algorithms and implies\nthat the high-dimensional behavior of the flow is universal with respect to the\ndistribution of the entries of ${\\boldsymbol X}$.\n  As specific applications, we obtain high-dimensional characterizations of\ngradient flow in some classical models from statistics and machine learning,\nunder a random design assumption.",
+          "arxiv_id": "2112.07572v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Conditional separable effects",
+          "year": "2020-06",
+          "abstract": "Researchers are often interested in treatment effects on outcomes that are\nonly defined conditional on a post-treatment event status. For example, in a\nstudy of the effect of different cancer treatments on quality of life at end of\nfollow-up, the quality of life of individuals who die during the study is\nundefined. In these settings, a naive contrast of outcomes conditional on the\npost-treatment variable is not an average causal effect, even in a randomized\nexperiment. Therefore the effect in the principal stratum of those who would\nhave the same value of the post-treatment variable regardless of treatment,\nsuch as the always survivors in a truncation by death setting, is often\nadvocated for causal inference. While this principal stratum effect is a well\ndefined causal contrast, it is often hard to justify that it is relevant to\nscientists, patients or policy makers, and it cannot be identified without\nrelying on unfalsifiable assumptions. Here we formulate alternative estimands,\nthe conditional separable effects, that have a natural causal interpretation\nunder assumptions that can be falsified in a randomized experiment. We provide\nidentification results and introduce different estimators, including a doubly\nrobust estimator derived from the nonparametric influence function. As an\nillustration, we estimate a conditional separable effect of chemotherapies on\nquality of life in patients with prostate cancer, using data from a randomized\nclinical trial.",
+          "arxiv_id": "2006.15681v3"
+        },
+        {
+          "title": "Semiparametric proximal causal inference",
+          "year": "2020-11",
+          "abstract": "Skepticism about the assumption of no unmeasured confounding, also known as\nexchangeability, is often warranted in making causal inferences from\nobservational data; because exchangeability hinges on an investigator's ability\nto accurately measure covariates that capture all potential sources of\nconfounding. In practice, the most one can hope for is that covariate\nmeasurements are at best proxies of the true underlying confounding mechanism\noperating in a given observational study. In this paper, we consider the\nframework of proximal causal inference introduced by Miao et al. (2018);\nTchetgen Tchetgen et al. (2020), which while explicitly acknowledging covariate\nmeasurements as imperfect proxies of confounding mechanisms, offers an\nopportunity to learn about causal effects in settings where exchangeability on\nthe basis of measured covariates fails. We make a number of contributions to\nproximal inference including (i) an alternative set of conditions for\nnonparametric proximal identification of the average treatment effect; (ii)\ngeneral semiparametric theory for proximal estimation of the average treatment\neffect including efficiency bounds for key semiparametric models of interest;\n(iii) a characterization of proximal doubly robust and locally efficient\nestimators of the average treatment effect. Moreover, we provide analogous\nidentification and efficiency results for the average treatment effect on the\ntreated. Our approach is illustrated via simulation studies and a data\napplication on evaluating the effectiveness of right heart catheterization in\nthe intensive care unit of critically ill patients.",
+          "arxiv_id": "2011.08411v4"
+        },
+        {
+          "title": "A Cross-Moment Approach for Causal Effect Estimation",
+          "year": "2023-06",
+          "abstract": "We consider the problem of estimating the causal effect of a treatment on an\noutcome in linear structural causal models (SCM) with latent confounders when\nwe have access to a single proxy variable. Several methods (such as\ndifference-in-difference (DiD) estimator or negative outcome control) have been\nproposed in this setting in the literature. However, these approaches require\neither restrictive assumptions on the data generating model or having access to\nat least two proxy variables. We propose a method to estimate the causal effect\nusing cross moments between the treatment, the outcome, and the proxy variable.\nIn particular, we show that the causal effect can be identified with simple\narithmetic operations on the cross moments if the latent confounder in linear\nSCM is non-Gaussian. In this setting, DiD estimator provides an unbiased\nestimate only in the special case where the latent confounder has exactly the\nsame direct causal effects on the outcomes in the pre-treatment and\npost-treatment phases. This translates to the common trend assumption in DiD,\nwhich we effectively relax. Additionally, we provide an impossibility result\nthat shows the causal effect cannot be identified if the observational\ndistribution over the treatment, the outcome, and the proxy is jointly\nGaussian.\n  Our experiments on both synthetic and real-world datasets showcase the\neffectiveness of the proposed approach in estimating the causal effect.",
+          "arxiv_id": "2306.06263v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Spectral Recovery of Binary Censored Block Models",
+          "year": "2021-07",
+          "abstract": "Community detection is the problem of identifying community structure in\ngraphs. Often the graph is modeled as a sample from the Stochastic Block Model,\nin which each vertex belongs to a community. The probability that two vertices\nare connected by an edge depends on the communities of those vertices. In this\npaper, we consider a model of {\\em censored} community detection with two\ncommunities, where most of the data is missing as the status of only a small\nfraction of the potential edges is revealed. In this model, vertices in the\nsame community are connected with probability $p$ while vertices in opposite\ncommunities are connected with probability $q$. The connectivity status of a\ngiven pair of vertices $\\{u,v\\}$ is revealed with probability $\\alpha$,\nindependently across all pairs, where $\\alpha = \\frac{t \\log(n)}{n}$. We\nestablish the information-theoretic threshold $t_c(p,q)$, such that no\nalgorithm succeeds in recovering the communities exactly when $t < t_c(p,q)$.\nWe show that when $t > t_c(p,q)$, a simple spectral algorithm based on a\nweighted, signed adjacency matrix succeeds in recovering the communities\nexactly.\n  While spectral algorithms are shown to have near-optimal performance in the\nsymmetric case, we show that they may fail in the asymmetric case where the\nconnection probabilities inside the two communities are allowed to be\ndifferent. In particular, we show the existence of a parameter regime where a\nsimple two-phase algorithm succeeds but any algorithm based on the top two\neigenvectors of the weighted, signed adjacency matrix fails.",
+          "arxiv_id": "2107.06338v2"
+        },
+        {
+          "title": "Misspecification Tests on Models of Random Graphs",
+          "year": "2022-02",
+          "abstract": "A class of models that have been widely used are the exponential random graph\n(ERG) models, which form a comprehensive family of models that include\nindependent and dyadic edge models, Markov random graphs, and many other graph\ndistributions, in addition to allow the inclusion of covariates that can lead\nto a better fit of the model.\n  Another increasingly popular class of models in statistical network analysis\nare stochastic block models (SBMs). They can be used for the purpose of\ngrouping nodes into communities or discovering and analyzing a latent structure\nof a network. The stochastic block model is a generative model for random\ngraphs that tends to produce graphs containing subsets of nodes characterized\nby being connected to each other, called communities.\n  Many researchers from various areas have been using computational tools to\nadjust these models without, however, analyzing their suitability for the data\nof the networks they are studying. The complexity involved in the estimation\nprocess and in the goodness-of-fit verification methodologies for these models\ncan be factors that make the analysis of adequacy difficult and a possible\ndiscard of one model in favor of another.\n  And it is clear that the results obtained through an inappropriate model can\nlead the researcher to very wrong conclusions about the phenomenon studied.\n  The purpose of this work is to present a simple methodology, based on\nHypothesis Tests, to verify if there is a model specification error for these\ntwo cases widely used in the literature to represent complex networks: the ERGM\nand the SBM. We believe that this tool can be very useful for those who want to\nuse these models in a more careful way, verifying beforehand if the models are\nsuitable for the data under study.",
+          "arxiv_id": "2202.01825v1"
+        },
+        {
+          "title": "Exact Community Recovery in Correlated Stochastic Block Models",
+          "year": "2022-03",
+          "abstract": "We consider the problem of learning latent community structure from multiple\ncorrelated networks. We study edge-correlated stochastic block models with two\nbalanced communities, focusing on the regime where the average degree is\nlogarithmic in the number of vertices. Our main result derives the precise\ninformation-theoretic threshold for exact community recovery using multiple\ncorrelated graphs. This threshold captures the interplay between the community\nrecovery and graph matching tasks. In particular, we uncover and characterize a\nregion of the parameter space where exact community recovery is possible using\nmultiple correlated graphs, even though (1) this is information-theoretically\nimpossible using a single graph and (2) exact graph matching is also\ninformation-theoretically impossible. In this regime, we develop a novel\nalgorithm that carefully synthesizes algorithms from the community recovery and\ngraph matching literatures.",
+          "arxiv_id": "2203.15736v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "A Simple and Optimal Policy Design with Safety against Heavy-Tailed Risk for Stochastic Bandits",
+          "year": "2022-06",
+          "abstract": "We study the stochastic multi-armed bandit problem and design new policies\nthat enjoy both worst-case optimality for expected regret and light-tailed risk\nfor regret distribution. Specifically, our policy design (i) enjoys the\nworst-case optimality for the expected regret at order $O(\\sqrt{KT\\ln T})$ and\n(ii) has the worst-case tail probability of incurring a regret larger than any\n$x>0$ being upper bounded by $\\exp(-\\Omega(x/\\sqrt{KT}))$, a rate that we prove\nto be best achievable with respect to $T$ for all worst-case optimal policies.\nOur proposed policy achieves a delicate balance between doing more exploration\nat the beginning of the time horizon and doing more exploitation when\napproaching the end, compared to standard confidence-bound-based policies. We\nalso enhance the policy design to accommodate the \"any-time\" setting where $T$\nis unknown a priori, and prove equivalently desired policy performances as\ncompared to the \"fixed-time\" setting with known $T$. Numerical experiments are\nconducted to illustrate the theoretical findings. We find that from a\nmanagerial perspective, our new policy design yields better tail distributions\nand is preferable than celebrated policies especially when (i) there is a risk\nof under-estimating the volatility profile, or (ii) there is a challenge of\ntuning policy hyper-parameters. We conclude by extending our proposed policy\ndesign to the stochastic linear bandit setting that leads to both worst-case\noptimality in terms of expected regret and light-tailed risk on the regret\ndistribution.",
+          "arxiv_id": "2206.02969v6"
+        },
+        {
+          "title": "High-probability sample complexities for policy evaluation with linear function approximation",
+          "year": "2023-05",
+          "abstract": "This paper is concerned with the problem of policy evaluation with linear\nfunction approximation in discounted infinite horizon Markov decision\nprocesses. We investigate the sample complexities required to guarantee a\npredefined estimation error of the best linear coefficients for two widely-used\npolicy evaluation algorithms: the temporal difference (TD) learning algorithm\nand the two-timescale linear TD with gradient correction (TDC) algorithm. In\nboth the on-policy setting, where observations are generated from the target\npolicy, and the off-policy setting, where samples are drawn from a behavior\npolicy potentially different from the target policy, we establish the first\nsample complexity bound with high-probability convergence guarantee that\nattains the optimal dependence on the tolerance level. We also exhihit an\nexplicit dependence on problem-related quantities, and show in the on-policy\nsetting that our upper bound matches the minimax lower bound on crucial problem\nparameters, including the choice of the feature maps and the problem dimension.",
+          "arxiv_id": "2305.19001v2"
+        },
+        {
+          "title": "Instance-Dependent Complexity of Contextual Bandits and Reinforcement Learning: A Disagreement-Based Perspective",
+          "year": "2020-10",
+          "abstract": "In the classical multi-armed bandit problem, instance-dependent algorithms\nattain improved performance on \"easy\" problems with a gap between the best and\nsecond-best arm. Are similar guarantees possible for contextual bandits? While\npositive results are known for certain special cases, there is no general\ntheory characterizing when and how instance-dependent regret bounds for\ncontextual bandits can be achieved for rich, general classes of policies. We\nintroduce a family of complexity measures that are both sufficient and\nnecessary to obtain instance-dependent regret bounds. We then introduce new\noracle-efficient algorithms which adapt to the gap whenever possible, while\nalso attaining the minimax rate in the worst case. Finally, we provide\nstructural results that tie together a number of complexity measures previously\nproposed throughout contextual bandits, reinforcement learning, and active\nlearning and elucidate their role in determining the optimal instance-dependent\nregret. In a large-scale empirical evaluation, we find that our approach often\ngives superior results for challenging exploration problems.\n  Turning our focus to reinforcement learning with function approximation, we\ndevelop new oracle-efficient algorithms for reinforcement learning with rich\nobservations that obtain optimal gap-dependent sample complexity.",
+          "arxiv_id": "2010.03104v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "About the Cost of Central Privacy in Density Estimation",
+          "year": "2023-06",
+          "abstract": "We study non-parametric density estimation for densities in Lipschitz and\nSobolev spaces, and under central privacy. In particular, we investigate\nregimes where the privacy budget is not supposed to be constant. We consider\nthe classical definition of central differential privacy, but also the more\nrecent notion of central concentrated differential privacy. We recover the\nresult of Barber and Duchi (2014) stating that histogram estimators are optimal\nagainst Lipschitz distributions for the L2 risk, and under regular differential\nprivacy, and we extend it to other norms and notions of privacy. Then, we\ninvestigate higher degrees of smoothness, drawing two conclusions: First, and\ncontrary to what happens with constant privacy budget (Wasserman and Zhou,\n2010), there are regimes where imposing privacy degrades the regular minimax\nrisk of estimation on Sobolev densities. Second, so-called projection\nestimators are near-optimal against the same classes of densities in this new\nsetup with pure differential privacy, but contrary to the constant privacy\nbudget case, it comes at the cost of relaxation. With zero concentrated\ndifferential privacy, there is no need for relaxation, and we prove that the\nestimation is optimal.",
+          "arxiv_id": "2306.14535v4"
+        },
+        {
+          "title": "Private sampling: a noiseless approach for generating differentially private synthetic data",
+          "year": "2021-09",
+          "abstract": "In a world where artificial intelligence and data science become omnipresent,\ndata sharing is increasingly locking horns with data-privacy concerns.\nDifferential privacy has emerged as a rigorous framework for protecting\nindividual privacy in a statistical database, while releasing useful\nstatistical information about the database. The standard way to implement\ndifferential privacy is to inject a sufficient amount of noise into the data.\nHowever, in addition to other limitations of differential privacy, this process\nof adding noise will affect data accuracy and utility. Another approach to\nenable privacy in data sharing is based on the concept of synthetic data. The\ngoal of synthetic data is to create an as-realistic-as-possible dataset, one\nthat not only maintains the nuances of the original data, but does so without\nrisk of exposing sensitive information. The combination of differential privacy\nwith synthetic data has been suggested as a best-of-both-worlds solutions. In\nthis work, we propose the first noisefree method to construct differentially\nprivate synthetic data; we do this through a mechanism called \"private\nsampling\". Using the Boolean cube as benchmark data model, we derive explicit\nbounds on accuracy and privacy of the constructed synthetic data. The key\nmathematical tools are hypercontractivity, duality, and empirical processes. A\ncore ingredient of our private sampling mechanism is a rigorous \"marginal\ncorrection\" method, which has the remarkable property that importance\nreweighting can be utilized to exactly match the marginals of the sample to the\nmarginals of the population.",
+          "arxiv_id": "2109.14839v1"
+        },
+        {
+          "title": "A Statistical Viewpoint on Differential Privacy: Hypothesis Testing, Representation and Blackwell's Theorem",
+          "year": "2024-09",
+          "abstract": "Differential privacy is widely considered the formal privacy for\nprivacy-preserving data analysis due to its robust and rigorous guarantees,\nwith increasingly broad adoption in public services, academia, and industry.\nDespite originating in the cryptographic context, in this review paper we argue\nthat, fundamentally, differential privacy can be considered a \\textit{pure}\nstatistical concept. By leveraging David Blackwell's informativeness theorem,\nour focus is to demonstrate based on prior work that all definitions of\ndifferential privacy can be formally motivated from a hypothesis testing\nperspective, thereby showing that hypothesis testing is not merely convenient\nbut also the right language for reasoning about differential privacy. This\ninsight leads to the definition of $f$-differential privacy, which extends\nother differential privacy definitions through a representation theorem. We\nreview techniques that render $f$-differential privacy a unified framework for\nanalyzing privacy bounds in data analysis and machine learning. Applications of\nthis differential privacy definition to private deep learning, private convex\noptimization, shuffled mechanisms, and U.S.\\ Census data are discussed to\nhighlight the benefits of analyzing privacy bounds under this framework\ncompared to existing alternatives.",
+          "arxiv_id": "2409.09558v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:36:54Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

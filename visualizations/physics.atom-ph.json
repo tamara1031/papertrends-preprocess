@@ -1,0 +1,2108 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_quantum_phase_dynamics_systems",
+        "keywords": [
+          [
+            "quantum",
+            0.026107977047401674
+          ],
+          [
+            "phase",
+            0.01565229885441242
+          ],
+          [
+            "dynamics",
+            0.015315284945369316
+          ],
+          [
+            "systems",
+            0.015129343564221012
+          ],
+          [
+            "spin",
+            0.01449705849116045
+          ],
+          [
+            "Bose",
+            0.013757676779282734
+          ],
+          [
+            "interactions",
+            0.013410981881430641
+          ],
+          [
+            "body",
+            0.013012652519857807
+          ],
+          [
+            "states",
+            0.012637924440823465
+          ],
+          [
+            "non",
+            0.01139669625272529
+          ]
+        ],
+        "count": 795
+      },
+      "1": {
+        "name": "1_ionization_electron_laser_time",
+        "keywords": [
+          [
+            "ionization",
+            0.032363252388644764
+          ],
+          [
+            "electron",
+            0.029387371502286905
+          ],
+          [
+            "laser",
+            0.02383910416187279
+          ],
+          [
+            "time",
+            0.020594603636683344
+          ],
+          [
+            "field",
+            0.0203475653145374
+          ],
+          [
+            "attosecond",
+            0.01920126652488484
+          ],
+          [
+            "pulse",
+            0.018102172962542257
+          ],
+          [
+            "pulses",
+            0.01771013326097469
+          ],
+          [
+            "harmonic",
+            0.0169824925273184
+          ],
+          [
+            "photoelectron",
+            0.015468372672566118
+          ]
+        ],
+        "count": 695
+      },
+      "2": {
+        "name": "2_nuclear_corrections_hydrogen_QED",
+        "keywords": [
+          [
+            "nuclear",
+            0.025802409014119246
+          ],
+          [
+            "corrections",
+            0.025303816918353674
+          ],
+          [
+            "hydrogen",
+            0.024877583736954742
+          ],
+          [
+            "QED",
+            0.02152477026485528
+          ],
+          [
+            "muonic",
+            0.02037054610553306
+          ],
+          [
+            "electron",
+            0.01951570909631976
+          ],
+          [
+            "energy",
+            0.018747399769485706
+          ],
+          [
+            "order",
+            0.018054672437906438
+          ],
+          [
+            "like",
+            0.017488129823481576
+          ],
+          [
+            "calculations",
+            0.016215046058539715
+          ]
+        ],
+        "count": 321
+      },
+      "3": {
+        "name": "3_quantum_atom_interferometer_interferometry",
+        "keywords": [
+          [
+            "quantum",
+            0.027439831112186324
+          ],
+          [
+            "atom",
+            0.025711467923146217
+          ],
+          [
+            "interferometer",
+            0.024526172462471713
+          ],
+          [
+            "interferometry",
+            0.017260442041176167
+          ],
+          [
+            "gravity",
+            0.015924539814464865
+          ],
+          [
+            "measurement",
+            0.015535412205123379
+          ],
+          [
+            "noise",
+            0.01487982571540767
+          ],
+          [
+            "phase",
+            0.014312420562703832
+          ],
+          [
+            "sensitivity",
+            0.014192687456134013
+          ],
+          [
+            "interferometers",
+            0.014075770225939036
+          ]
+        ],
+        "count": 303
+      },
+      "4": {
+        "name": "4_data_lines_energy_spectra",
+        "keywords": [
+          [
+            "data",
+            0.02058013147888432
+          ],
+          [
+            "lines",
+            0.018305440231192564
+          ],
+          [
+            "energy",
+            0.016653502747593994
+          ],
+          [
+            "spectra",
+            0.016222935357355223
+          ],
+          [
+            "plasma",
+            0.015749221381781496
+          ],
+          [
+            "electron",
+            0.015596186027363968
+          ],
+          [
+            "cross",
+            0.015506209330345666
+          ],
+          [
+            "calculations",
+            0.014578229400402324
+          ],
+          [
+            "ions",
+            0.014550599197834468
+          ],
+          [
+            "atomic",
+            0.013984037230050041
+          ]
+        ],
+        "count": 289
+      },
+      "5": {
+        "name": "5_field_Rydberg_frequency_sensitivity",
+        "keywords": [
+          [
+            "field",
+            0.0388631798012976
+          ],
+          [
+            "Rydberg",
+            0.03696354873442929
+          ],
+          [
+            "frequency",
+            0.02999758613418263
+          ],
+          [
+            "sensitivity",
+            0.026202961615596175
+          ],
+          [
+            "magnetic",
+            0.022601381326223885
+          ],
+          [
+            "microwave",
+            0.021671892872062826
+          ],
+          [
+            "atomic",
+            0.021201059324226883
+          ],
+          [
+            "fields",
+            0.020624995561181206
+          ],
+          [
+            "electric",
+            0.017870651179414318
+          ],
+          [
+            "magnetic field",
+            0.015860557750073122
+          ]
+        ],
+        "count": 267
+      },
+      "6": {
+        "name": "6_molecules_ultracold_collisions_state",
+        "keywords": [
+          [
+            "molecules",
+            0.03753639556531788
+          ],
+          [
+            "ultracold",
+            0.03397537022724803
+          ],
+          [
+            "collisions",
+            0.02180180700168034
+          ],
+          [
+            "state",
+            0.020026000412192272
+          ],
+          [
+            "molecular",
+            0.016945196865854693
+          ],
+          [
+            "resonances",
+            0.01679892146346279
+          ],
+          [
+            "Rydberg",
+            0.01644499333054491
+          ],
+          [
+            "Feshbach",
+            0.015650613493723525
+          ],
+          [
+            "range",
+            0.015546829659077159
+          ],
+          [
+            "atom",
+            0.015289643151275737
+          ]
+        ],
+        "count": 261
+      },
+      "7": {
+        "name": "7_nuclear_relativistic_calculations_cluster",
+        "keywords": [
+          [
+            "nuclear",
+            0.027829036434174646
+          ],
+          [
+            "relativistic",
+            0.021428569465559797
+          ],
+          [
+            "calculations",
+            0.017864594348354388
+          ],
+          [
+            "cluster",
+            0.017264099663770068
+          ],
+          [
+            "dipole",
+            0.016361291359742052
+          ],
+          [
+            "electron",
+            0.015237311913535959
+          ],
+          [
+            "structure",
+            0.014498978409490508
+          ],
+          [
+            "electric",
+            0.014496230510521086
+          ],
+          [
+            "hyperfine",
+            0.014441172531358348
+          ],
+          [
+            "state",
+            0.013488559175681297
+          ]
+        ],
+        "count": 252
+      },
+      "8": {
+        "name": "8_frequency_clock_laser_optical",
+        "keywords": [
+          [
+            "frequency",
+            0.044438290055553276
+          ],
+          [
+            "clock",
+            0.03191904871618657
+          ],
+          [
+            "laser",
+            0.03170278554274098
+          ],
+          [
+            "optical",
+            0.027168743226794374
+          ],
+          [
+            "clocks",
+            0.01955409876871969
+          ],
+          [
+            "nm",
+            0.0176514249854931
+          ],
+          [
+            "atomic",
+            0.017569256426466645
+          ],
+          [
+            "noise",
+            0.017313533376736894
+          ],
+          [
+            "cavity",
+            0.017041984092191285
+          ],
+          [
+            "transition",
+            0.01691191456435059
+          ]
+        ],
+        "count": 234
+      },
+      "9": {
+        "name": "9_quantum_qubit_gate_qubits",
+        "keywords": [
+          [
+            "quantum",
+            0.04221404320042404
+          ],
+          [
+            "qubit",
+            0.033202653477303404
+          ],
+          [
+            "gate",
+            0.030614388981731563
+          ],
+          [
+            "qubits",
+            0.027688261724374802
+          ],
+          [
+            "fidelity",
+            0.026927463137109867
+          ],
+          [
+            "gates",
+            0.02527155884793528
+          ],
+          [
+            "atom",
+            0.022585193968225788
+          ],
+          [
+            "error",
+            0.020522464229768757
+          ],
+          [
+            "atoms",
+            0.020446723696072432
+          ],
+          [
+            "neutral",
+            0.018008267819323652
+          ]
+        ],
+        "count": 218
+      },
+      "10": {
+        "name": "10_dark matter_dark_matter_axion",
+        "keywords": [
+          [
+            "dark matter",
+            0.057194291880217706
+          ],
+          [
+            "dark",
+            0.05687188891354113
+          ],
+          [
+            "matter",
+            0.05014815741510423
+          ],
+          [
+            "axion",
+            0.030769328961169403
+          ],
+          [
+            "scalar",
+            0.026264406593850133
+          ],
+          [
+            "mass",
+            0.019831568633811213
+          ],
+          [
+            "search",
+            0.019295552021100656
+          ],
+          [
+            "ultralight",
+            0.01894158086513622
+          ],
+          [
+            "sensitivity",
+            0.016596099770503022
+          ],
+          [
+            "DM",
+            0.01550439701976575
+          ]
+        ],
+        "count": 128
+      },
+      "11": {
+        "name": "11_cooling_ion_trap_trapped",
+        "keywords": [
+          [
+            "cooling",
+            0.05884931559139627
+          ],
+          [
+            "ion",
+            0.0321517445000144
+          ],
+          [
+            "trap",
+            0.022022575925098153
+          ],
+          [
+            "trapped",
+            0.021022733724793723
+          ],
+          [
+            "laser",
+            0.01996561450709622
+          ],
+          [
+            "optical",
+            0.019695939375361446
+          ],
+          [
+            "atoms",
+            0.01610906215674279
+          ],
+          [
+            "laser cooling",
+            0.015871427404720532
+          ],
+          [
+            "atom",
+            0.014995699623218657
+          ],
+          [
+            "integrated",
+            0.014425653100638907
+          ]
+        ],
+        "count": 95
+      },
+      "12": {
+        "name": "12_molecules_cooling_cycling_laser",
+        "keywords": [
+          [
+            "molecules",
+            0.05096505745963504
+          ],
+          [
+            "cooling",
+            0.04003536797597858
+          ],
+          [
+            "cycling",
+            0.03281497158846974
+          ],
+          [
+            "laser",
+            0.028796769149762508
+          ],
+          [
+            "laser cooling",
+            0.028726239783669488
+          ],
+          [
+            "optical",
+            0.02666978907366067
+          ],
+          [
+            "optical cycling",
+            0.021542172566624822
+          ],
+          [
+            "molecular",
+            0.020163897176601827
+          ],
+          [
+            "polyatomic",
+            0.019111030511267547
+          ],
+          [
+            "state",
+            0.019010463466190525
+          ]
+        ],
+        "count": 88
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.648657448867762,
+        -0.7276232905146021,
+        -0.5795450514589805,
+        -0.7270314921809835,
+        -0.6663469295707198,
+        -0.6447739691645906,
+        -0.7258038404314995,
+        -0.6878222033028917,
+        -0.6026135490936957,
+        -0.7208741816215212,
+        -0.7160221203725688,
+        -0.7102451864207927
+      ],
+      [
+        -0.648657448867762,
+        1.0,
+        -0.7038718984489193,
+        -0.6942879332095757,
+        -0.6844213107864465,
+        -0.643567941450049,
+        -0.6753435497151732,
+        -0.7156974003622376,
+        -0.6710758001828527,
+        -0.7168188956792747,
+        -0.7225035555990078,
+        -0.7263920188851989,
+        -0.6659792187226288
+      ],
+      [
+        -0.7276232905146021,
+        -0.7038718984489193,
+        1.0,
+        -0.7406214744253787,
+        -0.5531679426167411,
+        -0.7304441207704309,
+        -0.7173011891707958,
+        -0.6249285072291868,
+        -0.7387929884089146,
+        -0.7391832979106778,
+        -0.7496097535509856,
+        -0.7499166092017804,
+        -0.7478122432980288
+      ],
+      [
+        -0.5795450514589805,
+        -0.6942879332095757,
+        -0.7406214744253787,
+        1.0,
+        -0.7421840669172255,
+        -0.7047161422186274,
+        -0.6964186588165824,
+        -0.750657297480273,
+        -0.6798854768828236,
+        -0.49815827104739874,
+        -0.7074314759138889,
+        -0.7130554721066089,
+        -0.7274919521704515
+      ],
+      [
+        -0.7270314921809835,
+        -0.6844213107864465,
+        -0.5531679426167411,
+        -0.7421840669172255,
+        1.0,
+        -0.7336827118831902,
+        -0.7110507631486513,
+        -0.7277830221647221,
+        -0.7472223848366744,
+        -0.7394215196670094,
+        -0.751282841118964,
+        -0.7387496865252183,
+        -0.7412166304565089
+      ],
+      [
+        -0.6663469295707198,
+        -0.643567941450049,
+        -0.7304441207704309,
+        -0.7047161422186274,
+        -0.7336827118831902,
+        1.0,
+        -0.6599442620011056,
+        -0.7128457934384846,
+        -0.610008265891335,
+        -0.6779156354955673,
+        -0.7194711388233976,
+        -0.6961340209793064,
+        -0.6952375627215357
+      ],
+      [
+        -0.6447739691645906,
+        -0.6753435497151732,
+        -0.7173011891707958,
+        -0.6964186588165824,
+        -0.7110507631486513,
+        -0.6599442620011056,
+        1.0,
+        -0.6851399120768717,
+        -0.6981233906126227,
+        -0.7049876449586857,
+        -0.7295771129769845,
+        -0.6735935747541161,
+        -0.3634543794419949
+      ],
+      [
+        -0.7258038404314995,
+        -0.7156974003622376,
+        -0.6249285072291868,
+        -0.750657297480273,
+        -0.7277830221647221,
+        -0.7128457934384846,
+        -0.6851399120768717,
+        1.0,
+        -0.7200389699648898,
+        -0.7482942499110787,
+        -0.7421949331442936,
+        -0.7356896381877194,
+        -0.6909290853369513
+      ],
+      [
+        -0.6878222033028917,
+        -0.6710758001828527,
+        -0.7387929884089146,
+        -0.6798854768828236,
+        -0.7472223848366744,
+        -0.610008265891335,
+        -0.6981233906126227,
+        -0.7200389699648898,
+        1.0,
+        -0.7009165794781315,
+        -0.7140067058745202,
+        -0.6757213107725055,
+        -0.6228487494998607
+      ],
+      [
+        -0.6026135490936957,
+        -0.7168188956792747,
+        -0.7391832979106778,
+        -0.49815827104739874,
+        -0.7394215196670094,
+        -0.6779156354955673,
+        -0.7049876449586857,
+        -0.7482942499110787,
+        -0.7009165794781315,
+        1.0,
+        -0.7370674289213929,
+        -0.6384756872323565,
+        -0.7108076707585458
+      ],
+      [
+        -0.7208741816215212,
+        -0.7225035555990078,
+        -0.7496097535509856,
+        -0.7074314759138889,
+        -0.751282841118964,
+        -0.7194711388233976,
+        -0.7295771129769845,
+        -0.7421949331442936,
+        -0.7140067058745202,
+        -0.7370674289213929,
+        1.0,
+        -0.7408893786074399,
+        -0.724564824572115
+      ],
+      [
+        -0.7160221203725688,
+        -0.7263920188851989,
+        -0.7499166092017804,
+        -0.7130554721066089,
+        -0.7387496865252183,
+        -0.6961340209793064,
+        -0.6735935747541161,
+        -0.7356896381877194,
+        -0.6757213107725055,
+        -0.6384756872323565,
+        -0.7408893786074399,
+        1.0,
+        -0.39261883310643175
+      ],
+      [
+        -0.7102451864207927,
+        -0.6659792187226288,
+        -0.7478122432980288,
+        -0.7274919521704515,
+        -0.7412166304565089,
+        -0.6952375627215357,
+        -0.3634543794419949,
+        -0.6909290853369513,
+        -0.6228487494998607,
+        -0.7108076707585458,
+        -0.724564824572115,
+        -0.39261883310643175,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        24,
+        4,
+        1,
+        2,
+        3,
+        10,
+        10,
+        4,
+        8,
+        9,
+        3,
+        9,
+        4
+      ],
+      "2020-02": [
+        26,
+        13,
+        5,
+        4,
+        4,
+        14,
+        6,
+        5,
+        8,
+        3,
+        4,
+        8,
+        7
+      ],
+      "2020-03": [
+        33,
+        22,
+        4,
+        4,
+        5,
+        12,
+        5,
+        4,
+        19,
+        7,
+        4,
+        8,
+        3
+      ],
+      "2020-04": [
+        31,
+        9,
+        5,
+        5,
+        4,
+        10,
+        6,
+        4,
+        5,
+        3,
+        3,
+        8,
+        3
+      ],
+      "2020-05": [
+        21,
+        13,
+        3,
+        5,
+        3,
+        18,
+        7,
+        3,
+        10,
+        3,
+        3,
+        18,
+        5
+      ],
+      "2020-06": [
+        31,
+        13,
+        4,
+        4,
+        3,
+        9,
+        7,
+        4,
+        7,
+        6,
+        3,
+        4,
+        4
+      ],
+      "2020-07": [
+        36,
+        15,
+        2,
+        6,
+        7,
+        19,
+        12,
+        2,
+        10,
+        6,
+        5,
+        10,
+        4
+      ],
+      "2020-08": [
+        31,
+        14,
+        6,
+        5,
+        0,
+        12,
+        5,
+        5,
+        11,
+        4,
+        3,
+        12,
+        6
+      ],
+      "2020-09": [
+        20,
+        9,
+        11,
+        4,
+        2,
+        11,
+        6,
+        3,
+        7,
+        4,
+        5,
+        5,
+        2
+      ],
+      "2020-10": [
+        24,
+        13,
+        5,
+        7,
+        4,
+        15,
+        8,
+        3,
+        10,
+        5,
+        1,
+        9,
+        3
+      ],
+      "2020-11": [
+        28,
+        8,
+        4,
+        5,
+        1,
+        16,
+        7,
+        2,
+        6,
+        4,
+        3,
+        11,
+        0
+      ],
+      "2020-12": [
+        16,
+        11,
+        6,
+        3,
+        2,
+        7,
+        15,
+        5,
+        9,
+        5,
+        5,
+        8,
+        5
+      ],
+      "2021-01": [
+        29,
+        18,
+        3,
+        4,
+        3,
+        8,
+        7,
+        7,
+        5,
+        6,
+        2,
+        15,
+        2
+      ],
+      "2021-02": [
+        27,
+        14,
+        1,
+        4,
+        0,
+        10,
+        10,
+        3,
+        7,
+        1,
+        4,
+        8,
+        1
+      ],
+      "2021-03": [
+        31,
+        16,
+        2,
+        2,
+        5,
+        13,
+        9,
+        5,
+        7,
+        7,
+        6,
+        12,
+        5
+      ],
+      "2021-04": [
+        22,
+        9,
+        4,
+        4,
+        0,
+        12,
+        8,
+        2,
+        3,
+        6,
+        3,
+        8,
+        5
+      ],
+      "2021-05": [
+        35,
+        17,
+        2,
+        4,
+        6,
+        14,
+        10,
+        7,
+        9,
+        7,
+        5,
+        9,
+        3
+      ],
+      "2021-06": [
+        26,
+        19,
+        5,
+        1,
+        4,
+        8,
+        9,
+        4,
+        8,
+        9,
+        3,
+        7,
+        3
+      ],
+      "2021-07": [
+        23,
+        14,
+        6,
+        6,
+        1,
+        12,
+        6,
+        3,
+        11,
+        7,
+        5,
+        13,
+        4
+      ],
+      "2021-08": [
+        18,
+        10,
+        1,
+        4,
+        0,
+        6,
+        11,
+        7,
+        6,
+        2,
+        5,
+        17,
+        5
+      ],
+      "2021-09": [
+        16,
+        11,
+        1,
+        0,
+        1,
+        16,
+        7,
+        3,
+        9,
+        4,
+        3,
+        12,
+        2
+      ],
+      "2021-10": [
+        25,
+        12,
+        1,
+        4,
+        1,
+        8,
+        8,
+        3,
+        8,
+        10,
+        4,
+        4,
+        3
+      ],
+      "2021-11": [
+        28,
+        9,
+        8,
+        4,
+        2,
+        14,
+        7,
+        2,
+        5,
+        9,
+        4,
+        9,
+        1
+      ],
+      "2021-12": [
+        17,
+        10,
+        2,
+        5,
+        4,
+        12,
+        6,
+        4,
+        10,
+        11,
+        8,
+        6,
+        7
+      ],
+      "2022-01": [
+        22,
+        11,
+        7,
+        6,
+        4,
+        11,
+        4,
+        6,
+        11,
+        4,
+        3,
+        4,
+        4
+      ],
+      "2022-02": [
+        30,
+        9,
+        1,
+        5,
+        1,
+        9,
+        12,
+        5,
+        5,
+        7,
+        4,
+        10,
+        7
+      ],
+      "2022-03": [
+        28,
+        14,
+        9,
+        6,
+        4,
+        11,
+        6,
+        3,
+        9,
+        5,
+        7,
+        11,
+        3
+      ],
+      "2022-04": [
+        30,
+        8,
+        1,
+        2,
+        3,
+        2,
+        6,
+        6,
+        8,
+        7,
+        7,
+        7,
+        3
+      ],
+      "2022-05": [
+        25,
+        6,
+        3,
+        5,
+        0,
+        6,
+        8,
+        4,
+        7,
+        8,
+        5,
+        7,
+        8
+      ],
+      "2022-06": [
+        23,
+        10,
+        7,
+        4,
+        4,
+        11,
+        2,
+        8,
+        6,
+        3,
+        5,
+        10,
+        1
+      ],
+      "2022-07": [
+        26,
+        9,
+        7,
+        5,
+        1,
+        15,
+        7,
+        4,
+        7,
+        8,
+        1,
+        6,
+        2
+      ],
+      "2022-08": [
+        21,
+        15,
+        4,
+        3,
+        1,
+        9,
+        14,
+        5,
+        8,
+        8,
+        5,
+        5,
+        5
+      ],
+      "2022-09": [
+        34,
+        12,
+        5,
+        7,
+        2,
+        13,
+        5,
+        4,
+        3,
+        9,
+        4,
+        6,
+        5
+      ],
+      "2022-10": [
+        31,
+        12,
+        5,
+        4,
+        5,
+        11,
+        5,
+        3,
+        8,
+        7,
+        8,
+        5,
+        5
+      ],
+      "2022-11": [
+        27,
+        12,
+        4,
+        3,
+        2,
+        4,
+        13,
+        9,
+        11,
+        4,
+        4,
+        7,
+        3
+      ],
+      "2022-12": [
+        21,
+        15,
+        2,
+        5,
+        3,
+        9,
+        11,
+        7,
+        11,
+        14,
+        5,
+        9,
+        1
+      ],
+      "2023-01": [
+        29,
+        14,
+        3,
+        0,
+        4,
+        8,
+        10,
+        4,
+        7,
+        9,
+        5,
+        6,
+        6
+      ],
+      "2023-02": [
+        16,
+        8,
+        3,
+        0,
+        1,
+        12,
+        5,
+        1,
+        4,
+        5,
+        7,
+        11,
+        5
+      ],
+      "2023-03": [
+        24,
+        11,
+        7,
+        7,
+        3,
+        12,
+        11,
+        3,
+        19,
+        7,
+        4,
+        10,
+        7
+      ],
+      "2023-04": [
+        28,
+        9,
+        8,
+        2,
+        3,
+        15,
+        5,
+        2,
+        7,
+        6,
+        4,
+        9,
+        3
+      ],
+      "2023-05": [
+        32,
+        7,
+        8,
+        6,
+        2,
+        19,
+        4,
+        5,
+        6,
+        11,
+        6,
+        7,
+        3
+      ],
+      "2023-06": [
+        28,
+        13,
+        5,
+        6,
+        0,
+        14,
+        9,
+        5,
+        10,
+        10,
+        7,
+        8,
+        6
+      ],
+      "2023-07": [
+        26,
+        5,
+        2,
+        2,
+        2,
+        19,
+        9,
+        2,
+        9,
+        9,
+        3,
+        6,
+        7
+      ],
+      "2023-08": [
+        19,
+        15,
+        5,
+        10,
+        6,
+        14,
+        6,
+        4,
+        11,
+        7,
+        2,
+        6,
+        2
+      ],
+      "2023-09": [
+        36,
+        11,
+        10,
+        4,
+        3,
+        14,
+        4,
+        6,
+        14,
+        4,
+        10,
+        9,
+        2
+      ],
+      "2023-10": [
+        31,
+        9,
+        3,
+        3,
+        0,
+        10,
+        9,
+        5,
+        8,
+        6,
+        5,
+        12,
+        3
+      ],
+      "2023-11": [
+        22,
+        6,
+        4,
+        6,
+        0,
+        17,
+        4,
+        3,
+        12,
+        13,
+        3,
+        13,
+        4
+      ],
+      "2023-12": [
+        25,
+        10,
+        3,
+        2,
+        1,
+        12,
+        4,
+        3,
+        8,
+        14,
+        5,
+        10,
+        6
+      ],
+      "2024-01": [
+        26,
+        9,
+        4,
+        3,
+        0,
+        8,
+        9,
+        0,
+        9,
+        16,
+        3,
+        9,
+        5
+      ],
+      "2024-02": [
+        25,
+        10,
+        2,
+        4,
+        2,
+        17,
+        5,
+        3,
+        9,
+        6,
+        8,
+        8,
+        2
+      ],
+      "2024-03": [
+        29,
+        20,
+        8,
+        6,
+        2,
+        11,
+        3,
+        3,
+        9,
+        8,
+        9,
+        12,
+        3
+      ],
+      "2024-04": [
+        21,
+        13,
+        2,
+        2,
+        1,
+        16,
+        7,
+        3,
+        9,
+        8,
+        2,
+        12,
+        3
+      ],
+      "2024-05": [
+        21,
+        13,
+        9,
+        8,
+        11,
+        12,
+        5,
+        6,
+        11,
+        4,
+        5,
+        6,
+        3
+      ],
+      "2024-06": [
+        23,
+        4,
+        5,
+        6,
+        1,
+        13,
+        7,
+        1,
+        12,
+        12,
+        6,
+        16,
+        4
+      ],
+      "2024-07": [
+        27,
+        13,
+        3,
+        4,
+        4,
+        18,
+        7,
+        5,
+        7,
+        8,
+        10,
+        6,
+        2
+      ],
+      "2024-08": [
+        23,
+        9,
+        5,
+        2,
+        4,
+        18,
+        11,
+        10,
+        11,
+        7,
+        10,
+        7,
+        3
+      ],
+      "2024-09": [
+        25,
+        13,
+        8,
+        5,
+        3,
+        14,
+        7,
+        3,
+        16,
+        6,
+        0,
+        7,
+        4
+      ],
+      "2024-10": [
+        29,
+        14,
+        9,
+        5,
+        4,
+        16,
+        2,
+        4,
+        11,
+        10,
+        9,
+        4,
+        4
+      ],
+      "2024-11": [
+        27,
+        12,
+        5,
+        5,
+        3,
+        11,
+        5,
+        5,
+        13,
+        7,
+        4,
+        8,
+        5
+      ],
+      "2024-12": [
+        33,
+        11,
+        6,
+        3,
+        4,
+        10,
+        14,
+        3,
+        5,
+        7,
+        5,
+        10,
+        2
+      ],
+      "2025-01": [
+        24,
+        10,
+        3,
+        2,
+        5,
+        12,
+        7,
+        6,
+        12,
+        15,
+        3,
+        11,
+        3
+      ],
+      "2025-02": [
+        33,
+        11,
+        5,
+        7,
+        1,
+        11,
+        6,
+        7,
+        10,
+        8,
+        7,
+        10,
+        8
+      ],
+      "2025-03": [
+        29,
+        11,
+        1,
+        3,
+        1,
+        26,
+        8,
+        9,
+        7,
+        8,
+        6,
+        8,
+        2
+      ],
+      "2025-04": [
+        26,
+        12,
+        7,
+        8,
+        2,
+        19,
+        8,
+        5,
+        15,
+        6,
+        7,
+        4,
+        2
+      ],
+      "2025-05": [
+        39,
+        11,
+        7,
+        5,
+        2,
+        17,
+        7,
+        3,
+        20,
+        8,
+        5,
+        12,
+        4
+      ],
+      "2025-06": [
+        24,
+        17,
+        9,
+        3,
+        6,
+        16,
+        8,
+        4,
+        10,
+        31,
+        3,
+        16,
+        4
+      ],
+      "2025-07": [
+        33,
+        16,
+        6,
+        4,
+        3,
+        17,
+        8,
+        8,
+        8,
+        11,
+        3,
+        11,
+        4
+      ],
+      "2025-08": [
+        32,
+        10,
+        5,
+        5,
+        7,
+        19,
+        5,
+        6,
+        11,
+        7,
+        3,
+        7,
+        4
+      ],
+      "2025-09": [
+        13,
+        11,
+        6,
+        2,
+        4,
+        10,
+        1,
+        3,
+        7,
+        9,
+        3,
+        7,
+        3
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Non-equilibrium quantum dynamics and formation of the Bose polaron",
+          "year": "2020-05",
+          "abstract": "Advancing our understanding of non-equilibrium phenomena in quantum many-body\nsystems remains among the greatest challenges in physics. Here, we report on\nthe experimental observation of a paradigmatic many-body problem, namely the\nnon-equilibrium dynamics of a quantum impurity immersed in a bosonic\nenvironment. We use an interferometric technique to prepare coherent\nsuperposition states of atoms in a Bose-Einstein condensate with a small\nimpurity-state component, and monitor the evolution of such quantum\nsuperpositions into polaronic quasiparticles. These results offer a systematic\npicture of polaron formation from weak to strong impurity interactions. They\nreveal three distinct regimes of evolution with dynamical transitions that\nprovide a link between few-body processes and many-body dynamics. Our\nmeasurements reveal universal dynamical behavior in interacting many-body\nsystems and demonstrate new pathways to study non-equilibrium quantum\nphenomena.",
+          "arxiv_id": "2005.00424v2"
+        },
+        {
+          "title": "Dipolar quantum solids emerging in a Hubbard quantum simulator",
+          "year": "2023-06",
+          "abstract": "In quantum mechanical many-body systems, long-range and anisotropic\ninteractions promote rich spatial structure and can lead to quantum\nfrustration, giving rise to a wealth of complex, strongly correlated quantum\nphases. Long-range interactions play an important role in nature; however,\nquantum simulations of lattice systems have largely not been able to realize\nsuch interactions. A wide range of efforts are underway to explore long-range\ninteracting lattice systems using polar molecules, Rydberg atoms, optical\ncavities, and magnetic atoms. Here, we realize novel quantum phases in a\nstrongly correlated lattice system with long-range dipolar interactions using\nultracold magnetic erbium atoms. As we tune the dipolar interaction to be the\ndominant energy scale in our system, we observe quantum phase transitions from\na superfluid into dipolar quantum solids, which we directly detect using\nquantum gas microscopy with accordion lattices. Controlling the interaction\nanisotropy by orienting the dipoles enables us to realize a variety of stripe\nordered states. Furthermore, by transitioning non-adiabatically through the\nstrongly correlated regime, we observe the emergence of a range of metastable\nstripe-ordered states. This work demonstrates that novel strongly correlated\nquantum phases can be realized using long-range dipolar interaction in optical\nlattices, opening the door to quantum simulations of a wide range of lattice\nmodels with long-range and anisotropic interactions.",
+          "arxiv_id": "2306.00888v2"
+        },
+        {
+          "title": "Phases, instabilities and excitations in a two-component lattice model with photon-mediated interactions",
+          "year": "2022-10",
+          "abstract": "Engineering long-range interacting spin systems with ultra cold atoms offers\nthe possibility to explore exotic magnetically ordered phases in\nstrongly-correlated scenarios. Quantum gases in optical cavities provide a\nversatile experimental platform to further engineer photon-mediated\ninteractions and access the underlying microscopic processes by probing the\ncavity field. Here, we study a two-component spin Bose-Hubbard system with\ncavity-mediated interactions. We provide a comprehensive overview of its phase\ndiagram and transitions in experimentally relevant regimes. The interplay of\ndifferent energy scales yields a rich phase diagram with superfluid and\ninsulating phases exhibiting density modulation or spin ordering. In\nparticular, the combined effect of contact and global-range interactions gives\nrise to an antiferromagnetically ordered phase for arbitrarily small\nspin-dependent light-matter coupling, while long-range and inter-spin contact\ninteractions introduce regions of instability and phase separation in the phase\ndiagram. We further study the low energy excitations above the\nantiferrogmagnetic phase. Besides particle-hole branches, it hosts\nspin-exchange excitations with a tunable energy gap. The studied lattice model\ncan be readily realized in cold-atom experiments with optical cavities.",
+          "arxiv_id": "2210.11313v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Parametric attosecond pulse amplification far from the ionization threshold from high order harmonic generation in He$^+$",
+          "year": "2020-03",
+          "abstract": "Parametric amplification of attosecond coherent pulses around 100 eV at the\nsingle-atom level is demonstrated for the first time by using the 3D\ntime-dependent Schr{\\\"o}dinger equation in high-harmonic generation processes\nfrom excited states of He$^+$. We present the attosecond dynamics of the\namplification process far from the ionization threshold and resolve the physics\nbehind it. The amplification of a particular central photon energy requires the\nseed XUV pulses to be perfectly synchronized in time with the driving laser\nfield for stimulated recombination to the He$^+$ ground state and is only\nproduced in a few specific laser cycles in agreement with the experimental\nmeasurements. Our simulations show that the amplified photon energy region can\nbe controlled by varying the peak intensity of the laser field. Our results\npave the way to the realization of compact attosecond pulse intense XUV lasers\nwith broad applications.",
+          "arxiv_id": "2003.12292v2"
+        },
+        {
+          "title": "Manipulating Twisted Electrons in Strong-Field Ionization",
+          "year": "2020-10",
+          "abstract": "We investigate the discrete orbital angular momentum (OAM) of photoelectrons\nfreed in strongfield ionization. We use these `twisted' electrons to provide an\nalternative interpretation on existing experimental work of vortex\ninterferences caused by strong field ionization mediated by two counterrotating\ncircularly polarized pulses separated by a delay. Using the strong field\napproximation, we derive an interference condition for the vortices. In\ncomputations for a neon target we find very good agreement of the vortex\ncondition with photoelectron momentum distributions computed with the strong\nfield approximation, as well as with the time-dependent methods Qprop and\nR-Matrix. For each of these approaches we examine the OAM of the\nphotoelectrons, finding a small number of vortex states localized in separate\nenergy regions. We demonstrate that the vortices arise from the interference of\npairs of twisted electron states. The OAM of each twisted electron state can be\ndirectly related to the number of arms of the spiral in that region. We gain\nfurther understanding by recreating the vortices with pairs of twisted\nelectrons and use this to determine a semiclassical relation for the OAM. A\ndiscussion is included on measuring the OAM in strong field ionization directly\nor by employing specific laser pulse schemes as well as utilizing the OAM in\ntime-resolved imaging of photo-induced dynamics.",
+          "arxiv_id": "2010.08355v1"
+        },
+        {
+          "title": "Temporal characterization of electron dynamics in attosecond XUV and infrared laser fields",
+          "year": "2021-04",
+          "abstract": "We use a Wigner distribution-like function based on the strong field\napproximation theory to obtain the time-energy distributions and the ionization\ntime distributions of electrons ionized by an XUV pulse alone and in the\npresence of an infrared (IR) pulse. In the case of a single XUV pulse, although\nthe overall shape of the ionization time distribution resembles the\nXUV-envelope, its detail shows dependence on the emission direction of the\nelectron and the carrier-envelope phase of the pulse, which mainly results from\nthe low-energy interference structure. It is further found that the electron\nfrom the counter-rotating term plays an important role in the interference. In\nthe case of the two-color pulse, both the time-energy distributions and the\nionization time distributions change with varying IR field. Our analysis\ndemonstrates that the IR field not only modifies the final electron kinetic\nenergy but also changes the electron's emission time, which results from the\nchange of the electric field induced by the IR pulse. Moreover, the ionization\ntime distributions of the photoelectrons emitted from atoms with higher\nionization energy are also given, which show less impact of the IR field on the\nelectron dynamics.",
+          "arxiv_id": "2104.04198v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Two-photon exchange corrections to the $g$ factor of Li-like ions",
+          "year": "2021-06",
+          "abstract": "We report calculations of QED corrections to the $g$ factor of Li-like ions\ninduced by the exchange of two virtual photons between the electrons. The\ncalculations are performed within QED theory to all orders in the nuclear\nbinding strength parameter $Z\\alpha$, where $Z$ is the nuclear charge number\nand $\\alpha$ is the fine-structure constant. In the region of low nuclear\ncharges we compare results from three different methods: QED, relativistic\nmany-body perturbation theory, and nonrelativistic QED. All three methods are\nshown to yield consistent results. With our calculations we improve the\naccuracy of the theoretical predictions of the $g$ factor of the ground state\nof Li-like carbon and oxygen by about an order of magnitude. Our theoretical\nresults agree with those from previous calculations but differ by 3-4 standard\ndeviations from the experimental results available for silicon and calcium.",
+          "arxiv_id": "2106.08095v1"
+        },
+        {
+          "title": "Hydrogen and hydrogen-like-ion bound states and hyperfine splittings: finite nuclear size effects}",
+          "year": "2023-02",
+          "abstract": "Using the Dirac equation, we study corrections to electron binding energies\nand hyperfine splittings of atomic hydrogen and hydrogen-like ions due to\nfinite nuclear size (FNS) effects, relativistic QED radiative corrections and\nnuclear recoil corrections. Three models for the charge distribution and the\nmagnetic moment distribution within the nucleus are considered. Calculations\nare carried for light atoms (H, He and K) and heavy atoms (Rb, Cs, Pb, Bi, U).\nThe FNS corrections to the ground-state energy are shown to be smaller than the\nelectron-nucleus reduced mass corrections, and comparable to the relativistic\nQED radiative corrections for the light nuclei, but much larger than both these\ncorrections for heavy nuclei. Comparison is made with an experiment on the\n$1s$-$2s$ transition frequency for hydrogen. FNS corrections to the ground\nstate hyperfine splitting are comparable in size to the relativistic QED\nradiative corrections for light nuclei, but are larger for heavy nuclei.",
+          "arxiv_id": "2302.06288v2"
+        },
+        {
+          "title": "Finite-nuclear-size effect in hydrogen-like ions with relativistic nuclear structure",
+          "year": "2023-09",
+          "abstract": "The finite-nuclear-size (FNS) effect has a large contribution to the atomic\nspectral properties especially for heavy nuclei. By adopting the microscopic\nnuclear charge density distributions obtained from the relativistic continuum\nHartree-Bogoliubov (RCHB) theory, we systematically investigate the FNS\ncorrections to atomic energy levels and bound-electron $g$ factors of\nhydrogen-like ions with nuclear charge up to $118$. The comparison of the\npresent numerical calculations with the predictions from empirical nuclear\ncharge models, the non-relativistic Skyrme-Hartree-Fock calculations, and the\nresults based on experimental charge densities indicate that both the nuclear\ncharge radius and the detailed shape of charge density distribution play\nimportant roles in determining the FNS corrections. The variation of FNS\ncorrections to energy levels and $g$ factors with respect to the nuclear charge\nare investigated for the lowest several bound states of hydrogen-like ions. It\nis shown that they both increase by orders of magnitude with increasing the\nnuclear charge, while the ratio between them has a relatively weak dependence\non the nuclear charge. The FNS corrections to the $s_{1/2}$ and $p_{1/2}$ bound\nstate energies from the RCHB calculations are generally in good agreement with\nthe analytical estimations by Shabaev [J. Phys. B, 26, 1103 (1993)] based on\nthe homogeneously charged sphere nuclear model, with the discrepancy indicating\nthe distinct contribution of microscopic nuclear structure to the FNS effects.",
+          "arxiv_id": "2309.15456v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Interferometry of Atomic Matter Waves in the Cold Atom Lab onboard the International Space Station",
+          "year": "2024-02",
+          "abstract": "Ultracold atomic gases hold unique promise for space science by capitalizing\non quantum advantages and extended freefall, afforded in a microgravity\nenvironment, to enable next-generation precision sensors. Atom interferometers\nare a class of quantum sensors which can use freely falling gases of atoms\ncooled to sub-photon-recoil temperatures to provide unprecedented sensitivities\nto accelerations, rotations, and gravitational forces, and are currently being\ndeveloped for space-based applications in gravitational, earth, and planetary\nsciences, as well as to search for subtle forces that could signify physics\nbeyond General Relativity and the Standard Model. NASA's Cold Atom Lab (CAL)\noperates onboard the International Space Station as a multi-user facility for\nstudies of ultracold atoms and to mature quantum technologies, including atom\ninterferometry, in persistent microgravity. In this paper, we report on\npath-finding experiments utilizing ultracold $^{87}$Rb atoms in the CAL atom\ninterferometer, which was enabled by an on-orbit upgrade of the CAL science\nmodule: A three-pulse Mach-Zehnder interferometer was studied to understand\nlimitations from the influence of ISS vibrations. Additionally, Ramsey\nshear-wave interferometry was used to manifest interference patterns in a\nsingle run that were observable for over 150 ms free-expansion time. Finally,\nthe CAL atom interferometer was used to remotely measure the photon recoil from\nthe atom interferometer laser as a demonstration of the first quantum sensor\nusing matter-wave interferometry in space.",
+          "arxiv_id": "2402.14685v1"
+        },
+        {
+          "title": "Noise Resilience in a High-Bandwidth Atom Interferometer",
+          "year": "2025-04",
+          "abstract": "The utility of inertial sensors depends on resilience against real-world\ndynamics and noise. Atom interferometry offers a sensing technology with the\nadvantage of good long-term stability, high sensitivity, and accuracy. High\nmeasurement bandwidth improves an atom interferometer's ability to reject\nerrors due to dynamics and noise. Here we demonstrate resilience against\ntime-varying environmental noise by rapidly switching the direction of inertial\nsensitivity in the atom interferometer through a common technique known as\nk-reversal. We demonstrate sub-interrogation-time k-reversal at 592 Hz in a\ncold-beam atomic interferometer with an inverse interrogation time of 148 Hz.\nThe interferometer fringe output is read out continuously and post-processed\nusing nonlinear Kalman filters to determine both the inertial and error\ncontributions to the output phase. The resulting power spectral densities show\na significant reduction of phase error due to a noisy magnetic field as the\nk-reversal frequency increases.",
+          "arxiv_id": "2504.07236v1"
+        },
+        {
+          "title": "Closed-Loop Dual-Atom-Interferometer Inertial Sensor with Continuous Cold Atomic Beams",
+          "year": "2022-10",
+          "abstract": "We demonstrate a closed-loop light-pulse atom interferometer inertial sensor\nthat can realize continuous decoupled measurements of acceleration and rotation\nrate. The sensor operates with double-loop atom interferometers, which share\nthe same Raman light pulses in a spatially separated Mach-Zehnder configuration\nand use continuous cold atomic beams propagating in opposite directions from\ntwo 2D$^+$ magneto-optical trappings. Acceleration and the rotation rate are\ndecoupled and simultaneously measured by the sum and difference of dual\natom-interferometer signals, respectively. The sensitivities of inertial\nmeasurements are also increased to be approximately 1.86 times higher than that\nof a single atom interferometer. The acceleration phase shift is compensated in\nreal time by phase-locking these interferometers via the Raman laser phases\nfrom the sum interferometer signal, and the gyroscope perfomance is improved.\nWe achieve long-term stabilities of $6.1 \\ \\mu g$ and 840 nrad/s for the\nacceleration and the rotation rate, respectively, using a short interrogation\ntime of 0.87ms (interference area $A=0.097$ mm$^2$). This work provides a\nbuilding block for an atomic interferometer based inertial measurement unit for\nuse in field applications that require a high data-rate and high stability.",
+          "arxiv_id": "2210.15346v3"
+        }
+      ],
+      "4": [
+        {
+          "title": "Dielectronic recombination studies of ions relevant to kilonovae and non-LTE plasma",
+          "year": "2025-04",
+          "abstract": "This study presents calculations of rate coefficients, resonance strengths,\nand cross sections for the dielectronic recombination (DR) of $\\text{Y}^{+}$,\n$\\text{Sr}^{+}$, $\\text{Te}^{2+}$, and $\\text{Ce}^{2+}$-low-charge ions\nrelevant to kilonovae and non-local thermodynamic equilibrium (non-LTE)\nplasmas. Using relativistic atomic structure methods, we computed DR rate\ncoefficients under conditions typical of these environments. These DR rate\ncoefficients and cross sections were calculated using the Flexible Atomic Code\n(FAC). The DR resonance features were identified by comparing theoretical\nresonance energies, estimated as the difference between NIST excitation\nenergies and Dirac binding energies, with dominant autoionizing states\nconfirmed through analysis of autoionization rates. Our results highlight the\ncritical role of low-lying DR resonances in shaping rate coefficients at\nkilonova temperatures ($\\sim 10^4$ K) and regulating charge-state\ndistributions. Pronounced near-threshold DR resonances significantly influence\nthe evolving ionization states and opacity of neutron star merger ejecta.\nComparisons with previous studies emphasize the necessity of including high-$n$\nRydberg states for accurate DR rate coefficients, especially for complex heavy\nions with dense energy levels. Discrepancies with existing datasets underscore\nthe need for refined computational techniques to minimize uncertainties. These\nresults provide essential input for interpreting spectroscopic observations of\nneutron star mergers, including James Webb Space Telescope data. We also put\nforward suitable candidates for experimental studies, recognizing the\nchallenges involved in such measurements. The data presented here have the\npotential to refine models of heavy-element nucleosynthesis, enhance plasma\nsimulation accuracy, and improve non-LTE plasma modeling in astrophysical and\nlaboratory settings.",
+          "arxiv_id": "2504.06639v2"
+        },
+        {
+          "title": "X-ray spectra of the Fe-L complex II: atomic data constraints from EBIT experiment and X-ray grating observations of Capella",
+          "year": "2020-07",
+          "abstract": "The Hitomi results for the Perseus cluster have shown that accurate atomic\nmodels are essential to the success of X-ray spectroscopic missions, and just\nas important as knowledge on instrumental calibration and astrophysical\nmodeling. Preparing the models requires a multifaceted approach, including\ntheoretical calculations, laboratory measurements, and calibration using real\nobservations. In a previous paper, we presented a calculation of the electron\nimpact cross sections on the transitions forming the Fe-L complex. In the\npresent work, we systematically test the calculation against cross sections of\nions measured in an electron beam ion trap experiment. A two-dimensional\nanalysis in the electron beam energies and X-ray photon energies is utilized to\ndisentangle radiative channels following dielectronic recombination, direct\nelectron-impact excitation, and resonant excitation processes in the\nexperimental data. The data calibrated through laboratory measurements are\nfurther fed into global modeling of the Chandra grating spectrum of Capella. We\ninvestigate and compare the fit quality, as well as sensitivity of the derived\nphysical parameters to the underlying atomic data and the astrophysical plasma\nmodeling. We further list the potential areas of disagreement between the\nobservation and the present calculations, which in turn calls for renewed\nefforts in theoretical calculations and targeted laboratory measurements.",
+          "arxiv_id": "2007.03843v1"
+        },
+        {
+          "title": "R-matrix electron-impact excitation data for the N-like iso-electronic sequence",
+          "year": "2020-09",
+          "abstract": "Spectral lines from N-like ions can be used to measure the temperature and\ndensity of various types of astrophysical plasmas. The atomic databases of\nastrophysical plasma modelling codes still have room for improvement in their\nelectron-impact excitation data sets for N-like ions, especially $R$-matrix\ndata. This is particularly relevant for future observatories (e.g. Arcus) which\nwill host high-resolution spectrometers. We aim to obtain level-resolved\neffective collision strengths for all transitions up to $nl=5d$ over a wide\nrange of temperatures for N-like ions from O II to Zn XXIV (i.e., O$^{+}$ to\nZn$^{23+}$) and to assess the accuracy of the present work. We also examine the\nimpact of our new data on plasma diagnostics by modelling solar observations\nwith CHIANTI. We have carried-out systematic $R$-matrix calculations for N-like\nions which included 725 fine-structure target levels in both the configuration\ninteraction target and close-coupling collision expansions. The $R$-matrix\nintermediate coupling frame transformation method was used to calculate the\ncollision strengths, while the AUTOSTRUCTURE code was used for the atomic\nstructures. We compare the present results for selected ions with those in\narchival databases and the literature. The comparison covers energy levels,\noscillator strengths, and effective collision strengths. We show examples of\nimproved plasma diagnostics when compared to CHIANTI models which use only\ndistorted wave data as well as some which use previous $R$-matrix data. The\nelectron-impact excitation data are archived according to the Atomic Data and\nAnalysis Structure (ADAS) data class it adf04 and will be available in\nOPEN-ADAS. The data can be used to improve the atomic databases for\nastrophysical plasma diagnostics.",
+          "arxiv_id": "2009.09506v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Electric field measurement and application based on Rydberg atoms",
+          "year": "2023-05",
+          "abstract": "Microwave sensing has important applications in areas such as data\ncommunication and remote sensing, so it has received much attention from\ninternational academia, industry, and governments. Atomic wireless sensing uses\nthe strong response of the large electric dipole moment of a Rydberg atom to an\nexternal field to achieve precise measurement of a radio frequency (RF)\nelectric field. This has advantages over traditional wireless sensing. The\nadvantage of a Rydberg atom is its ultra-wide energy level transitions, which\nmake it responsive to RF electric fields over a wide bandwidth. Here, we\nbriefly review the progress of electric field measurement based on Rydberg\natoms. The main contents include the properties of Rydberg atoms, measurement\nusing Rydberg atoms, and experimental progress in electric field measurement in\ndifferent bands. We show the different methods for detecting electric fields\nsuch as atomic superheterodyne, machine learning, and critically enhanced\nmeasurement. The development of Rydberg atomic measurement focuses on the\nadvantages of Rydberg atomic sensing, especially compared with conventional\nmicrowave receivers. This is of major significance to developing Rydberg-based\nmeasurement in astronomy, remote sensing, and other fields.",
+          "arxiv_id": "2305.16696v1"
+        },
+        {
+          "title": "RF E-field enhanced sensing based on Rydberg-atom-based superheterodyne receiver",
+          "year": "2024-01",
+          "abstract": "We present enhanced sensing of radio frequency (RF) electric fields\n(E-fields) by the combined polarizability of Rydberg atoms and the optimized\nlocal oscillator (LO) fields of supergheterodyne receiving. Our modified\ntheoretical model reveals the dependencies of sensitivity of E-field amplitude\nmeasurement on the polarizability of Rydberg states and the strength of the LO\nRF field. The enhanced sensitivity of megahertz(MHz) E-field are demonstrated\nat an optimal LO field for three different Rydberg states $\\rm 43D_{5/2}$, $\\rm\n60S_{1/2}$, and $\\rm 90S_{1/2}$. The sensitivity of 63 MHz for the $\\rm\n90S_{1/2}$ state reaches 0.96 $\\mu \\rm V/cm/\\sqrt{Hz}$ that is about an order\nof magnitude higher than those already published. This result closely\napproaches the theoretical sensitivity limit of RF dipole antennas, and\nindicates the potential for breaking the limit in measuring sub-MHz E-fields.\nThis atomic sensor based on Rydberg Stark effect with heterodyne technique is\nexpected to boost an alternative solution to electric dipole antennas.",
+          "arxiv_id": "2401.01663v1"
+        },
+        {
+          "title": "Continuous-frequency weak electric field measurement with Rydberg atoms",
+          "year": "2022-01",
+          "abstract": "We demonstrate a continuous frequency electric field measurement based on the\nfar off-resonant AC stark effect in a Rydberg atomic vapor cell. In this\nconfiguration, a strong far off-resonant field, denoted as a local oscillator\n(LO) field, acts as a gain shifting the Rydberg level to a high sensitivity\nregion. An incident weak signal field with a few hundreds of kHz difference\nfrom the LO field is mixed with the LO field in Rydberg system to generate an\nintermediate frequency (IF) signal, which is read out by the Rydberg\nelectromagnetically induced transparency (Rydberg-EIT) spectroscopy. Not like\nresonant EIT-AT spectra, we realize the electric field measurement of the\nsignal frequency from 2 GHz to 5 GHz using a single Rydberg state. A minimum\ndetectable filed strength is down to 2.31~$\\mu$V/cm and a linear dynamic range\nis over 65~dB. The minimum detectable filed is comparable with a resonant\nmicrowave-dressed Rydberg heterodyne receiver using the same system, which is\n1.45~$\\mu$V/cm. We also show the system has an inherent polarization\nselectivity feature. Our method can provide a high sensitivity of electric\nfield measurement and be extended to arbitrary frequency measurements.",
+          "arxiv_id": "2201.10068v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Photoassociation of ultracold long-range polyatomic molecules",
+          "year": "2020-07",
+          "abstract": "We explore the feasibility of optically forming long-range tetratomic and\nlarger polyatomic molecules in their ground electronic state from ultracold\npairs of polar molecules aligned by external fields. Depending on the relative\norientation of the interacting diatomic molecules, we find that a tetratomic\ncan be formed either as a weakly bound complex in a very extended halo state or\nas a pure long-range molecule composed of collinear or nearly-collinear\ndiatomic molecules. The latter is a novel type of tetratomic molecule comprised\nof two diatomic molecules bound at long intermolecular range and predicted to\nbe stable in cold and ultracold regimes. Our numerical studies were conducted\nfor ultracold KRb and RbCs, resulting in production of (KRb)$_2$ and (RbCs)$_2$\ncomplexes, respectively. Based on universal properties of long-range\ninteractions between polar molecules, we identify triatomic and tetratomic\nlinear polar molecules with favorable ratio of dipole and quadrupole moments\nfor which the apporach could be generalized to form polyatomic molecules.",
+          "arxiv_id": "2007.00261v2"
+        },
+        {
+          "title": "Improved characterization of Feshbach resonances and interaction potentials between $^{23}$Na and $^{87}$Rb atoms",
+          "year": "2021-08",
+          "abstract": "The ultracold mixture of \\Na and \\Rb atoms has become an important system for\ninvestigating physics in Bose-Bose atomic mixtures and for forming ultracold\nground-state polar molecules. In this work, we provide an improved\ncharacterization of the most commonly used Feshbach resonance near 347.64 G\nbetween \\Na and \\Rb in their absolute ground states. We form Feshbach molecules\nusing this resonance and measure their binding energies by dissociating them\nvia magnetic field modulation. We use the binding energies to refine the\nsinglet and triplet potential energy curves, using coupled-channel bound-state\ncalculations. We then use coupled-channel scattering calculations on the\nresulting potentials to produce a high-precision mapping between magnetic field\nand scattering length. We also observe 10 additional $s$-wave Feshbach\nresonances for \\Na and \\Rb in different combinations of Zeeman sublevels of the\n$F = 1$ hyperfine states. Some of the resonances show 2-body inelastic decay\ndue to spin exchange. We compare the resonance properties with coupled-channel\nscattering calculations that full take account of inelastic properties.",
+          "arxiv_id": "2108.01856v3"
+        },
+        {
+          "title": "Observation of photoassociation resonances in ultracold atom-molecule collisions",
+          "year": "2023-07",
+          "abstract": "Photoassociation of ultracold atoms is a resonant light-assisted collision\nprocess, in which two colliding atoms absorb a photon and form an excited\nmolecule. Since the first observation about three decades ago, the\nphotoassociation of ultracold atoms has made a significant impact on the study\nof ultracold atoms and molecules. Extending the photoassociation of atoms to\nthe photoassociation of atom-molecule pairs or molecule-molecule pairs will\noffer many new opportunities in the study of precision polyatomic molecular\nspectroscopy, formation of ultracold polyatomic molecules, and quantum control\nof molecular collisions and reactions. However, the high density of states and\nthe photoexcitation of the collision complex by the trapping laser make\nphotoassociation into well-defined quantum states of polyatomic molecules\nextremely difficult. Here we report on the observation of photoassociation\nresonances in ultracold collisions between $^{23}$Na$^{40}$K molecules and\n$^{40}$K atoms. We perform photoassociation in a long-wavelength optical dipole\ntrap to form deeply bound triatomic molecules in the electronically excited\nstates. The atom-molecule Feshbach resonance is used to enhance the free-bound\nFranck-Condon overlap. The photoassociation into well-defined quantum states of\nexcited triatomic molecules is identified by observing resonantly enhanced loss\nfeatures. These loss features depend on the polarization of the\nphotoassociation lasers, allowing us to assign the rotational quantum numbers.\nThe observation of ultracold atom-molecule photoassociation resonances paves\nthe way toward preparing ground-state triatomic molecules, provides a new\nhigh-resolution spectroscopy technique for polyatomic molecules, and is also\nimportant to atom-molecule Feshbach resonances.",
+          "arxiv_id": "2307.15917v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Precision calculation of hyperfine constants for extracting nuclear moments of 229Th",
+          "year": "2021-07",
+          "abstract": "Determination of nuclear moments for many nuclei relies on the computation of\nhyperfine constants, with theoretical uncertainties directly affecting the\nresulting uncertainties of the nuclear moments. In this work we improve the\nprecision of such method by including for the first time an iterative solution\nof equations for the core triple cluster amplitudes into the relativistic\ncoupled-cluster method, with large-scale complete basis sets. We carried out\ncalculations of the energies and magnetic dipole and electric quadrupole\nhyperfine structure constants for the low-lying states of 229Th^(3+) in the\nframework of such relativistic coupled-cluster single double triple (CCSDT)\nmethod. We present a detailed study of various corrections to all calculated\nproperties. Using the theory results and experimental data we found the nuclear\nmagnetic dipole and electric quadrupole moments to be mu = 0.366(6)*mu_N and Q\n= 3.11(2) eb, and reducing the uncertainty of the quadrupole moment by a factor\nof three. The Bohr-Weisskopf effect of the finite nuclear magnetization is\ninvestigated, with bounds placed on the deviation of the magnetization\ndistribution from the uniform one.",
+          "arxiv_id": "2107.14723v1"
+        },
+        {
+          "title": "Probing transition rates, nuclear moments and electric dipole polarizability in nobelium using multireference FSRCC and PRCC theories",
+          "year": "2025-07",
+          "abstract": "We employ an all-particle multireference Fock-space relativistic\ncoupled-cluster (FSRCC) theory to compute the ionization potential, excitation\nenergy, transition rate and hyperfine structure constants associated with\n$7s^2\\;^{1}S_{0}\\rightarrow 7s7p\\;^{3}P_{1}$ and $7s^2\\;^{1}S_{0}\\rightarrow\n7s7p\\;^1P_{1}$ transitions in nobelium (No). Using our state-of-the-art\ncalculations in conjunction with available experimental data \\cite{raeder-18},\nwe extract the values of nuclear magnetic dipole ($\\mu$) and electric\nquadrupole ($Q$) moments for $^{253}$No. Further, information on nuclear\ndeformation in even-mass isotopes is extracted from the isotope shift\ncalculations. Moreover, we employ a perturbed relativistic coupled-cluster\n(PRCC) theory to compute the ground state electric dipole polarizability of No.\nIn addition, to assess the accuracy of our calculations, we compute the\nionization potential and dipole polarizability of lighter homolog ytterbium\n(Yb). To account for strong relativistic and quantum electrodynamical (QED)\neffects in No, we incorporate the corrections from Breit interaction, vacuum\npolarization and self-energy in our calculations. The contributions from triple\nexcitations in coupled-cluster is accounted perturbatively. Our calculations\nreveal a significant contribution of $\\approx$10\\% from the perturbative\ntriples to the transition rate of $7s^2\\;^1S_{0}\\rightarrow 7s7p\\;^3P_{1}$\ntransition. The largest cumulative contribution from Breit+QED is observed to\nbe $\\approx$4\\%, to the magnetic dipole hyperfine structure constant of\n$7s7p\\;^1P_{1}$ state. Our study provides a comprehensive understanding of\natomic and nuclear properties of nobelium with valuable insights into the\nelectron correlation and relativistic effects in superheavy elements.",
+          "arxiv_id": "2507.20875v1"
+        },
+        {
+          "title": "Relativistic coupled-cluster calculation of hyperfine-structure constants of $^{229}$Th$^{3+}$ and evaluation of the electromagnetic nuclear moments of $^{229}$Th",
+          "year": "2021-08",
+          "abstract": "$^{229}$Th is a promising candidate for developing a nuclear optical clock\nand searching the new physics beyond the standard model. Accurate knowledge of\nthe nuclear properties of $^{229}$Th is very important. In this work, we\ncalculate hyperfine-structure constants for the first four states of\n$^{229}$Th$^{3+}$ using the relativistic coupled-cluster method based on the\nGauss basis set. The no-pair Dirac-Coulomb-Breit Hamiltonian with the\nlowest-order quantum electrodynamics (QED) correction is the starting point,\ntogether with all linear and non-linear terms of single and double excitations\nare included in coupled-cluster calculation. With the measured value of the\nhyperfine-structure constants [Phys. Rev. Lett. 106. 223001(2011)], we get the\nmagnetic dipole moment, $\\mu=0.359(9)$, and the electric quadrupole moment,\n$Q=2.95(7)$, of the $^{229}$Th nucleus. Our magnetic dipole moment is perfectly\nconsistent with the recommended values, $\\mu=0.360(7)$, from the all-order\ncalculation by Safronova \\textit{et. al.}[Phys.Rev.A 88, 060501 (2013)], but\nour electric quadrupole moment is smaller than their recommended value,\n$Q=3.11(6)$, about 5\\%. Our results show that the non-linear terms of single\nand double excitations, which were not included in the all-order calculation by\nSafronova \\textit{et. al.}, are very crucial to produce a precise $Q$ value of\n$^{229}$Th. Additionally, we also present magnetic octupole hyperfine-structure\nconstants and some important non-diagonal hyperfine transition matrix elements,\nwhich are required for further extracting the magnetic octupole moment $\\Omega$\nof $^{229}$Th nucleus.",
+          "arxiv_id": "2108.01000v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "Demonstration of chronometric leveling using transportable optical clocks beyond laser coherence limit",
+          "year": "2023-10",
+          "abstract": "Optical clock network requires the establishment of optical frequency\ntransmission link between multiple optical clocks, utilizing narrow linewidth\nlasers. Despite achieving link noise levels of 10${^{-20}}$, the final accuracy\nis limited by the phase noise of the clock laser. Correlation spectroscopy is\ndeveloped to transmit frequency information between two optical clocks\ndirectly, enabling optical clock comparison beyond the phase noise limit of\nclock lasers, and significantly enhancing the measurement accuracy or shorten\nthe measurement time. In this letter, two compact transportable\n${^{40}}$Ca${^+}$ clocks are employed to accomplish the correlation\nspectroscopy comparison, demonstrating an 10 cm level measurement accuracy of\nchronometric leveling using a mediocre clock laser with linewidth of 200 Hz.\nThe relative frequency instability reaches $6.0\\times10{^{-15}}/\\sqrt{\\tau/s}$,\nwhich is about 20 times better than the result with Rabi spectroscopy using the\nsame clock laser. This research greatly reduces the harsh requirements on the\nperformance of the clock laser, so that an ordinary stable-laser can also be\nemployed in the construction of optical clock network, which is essential for\nthe field applications, especially for the chronometric leveling.",
+          "arxiv_id": "2310.08835v1"
+        },
+        {
+          "title": "Optical Atomic Clock Interrogation Via an Integrated Spiral Cavity Laser",
+          "year": "2024-03",
+          "abstract": "Optical atomic clocks have demonstrated revolutionary advances in precision\ntimekeeping, but their applicability to the real world is critically dependent\non whether such clocks can operate outside a laboratory setting. The challenge\nto clock portability stems from the many obstacles not only in miniaturizing\nthe underlying components of the clock $-$ namely the ultrastable laser, the\nfrequency comb, and the atomic reference itself $-$ but also in making the\nclock resilient to environmental fluctuations. Photonic integration offers one\ncompelling solution to simultaneously address the problems of miniaturization\nand ruggedization, but brings with it a new set of challenges in recreating the\nfunctionality of an optical clock using chip-scale building blocks. The clock\nlaser used for atom interrogation is one particular point of uncertainty, as\nthe performance of the meticulously-engineered bulk-cavity stabilized lasers\nwould be exceptionally difficult to transfer to chip. Here we demonstrate that\na chip-integrated ultrahigh quality factor (Q) spiral cavity, when interfaced\nwith a 1348 nm seed laser, reaches a fractional frequency instability of $7.5\n\\times 10^{-14}$, meeting the stability requirements for interrogating the\nnarrow-linewidth transition of $^{88}$Sr$^+$ upon frequency doubling to 674 nm.\nIn addition to achieving the record for laser stability on chip, we use this\nlaser to showcase the operation of a Sr-ion clock with short-term instability\naveraging down as $3.9 \\times 10^{-14} / \\sqrt{\\tau}$, where $\\tau$ is the\naveraging time. Our demonstration of an optical atomic clock interrogated by an\nintegrated spiral cavity laser opens the door for future advanced clock systems\nto be entirely constructed using lightweight, portable, and mass-manufacturable\nintegrated optics and electronics.",
+          "arxiv_id": "2403.12794v1"
+        },
+        {
+          "title": "Compact laser system with frequency stability dissemination for optical clocks and quantum computing",
+          "year": "2025-04",
+          "abstract": "Modern experiments in quantum metrology, sensing, and quantum computing\nrequire precise control of the state of atoms and molecules, achieved through\nthe use of highly stable lasers and microwave generators with low phase noise.\nOne of the most effective methods for ensuring high frequency stability is\nstabilization using a high-finesse Fabry-P\\'erot reference cavity. However,\nimplementing separate stabilization systems for each laser increases the\ncomplexity and size of the setup, limiting its use to laboratory conditions. An\nalternative approach is the use of a femtosecond optical frequency comb, which\ntransfers the noise characteristics of a single stabilized frequency reference\nto other wavelengths in the optical and microwave ranges. In this work, we\ndemonstrate a scheme for transferring frequency stability from an ultrastable\nlaser at 871 nm to a laser at 1550 nm. Measurements using the three-cornered\nhat method show that the stabilized laser exhibits a fractional frequency\ninstability of less than 4e-15 for averaging times between 0.4 and 2 s, and\nbelow 1e-14 for intervals ranging from 0.2 to 500 s. The femtosecond optical\nfrequency comb and the cavity-stabilized laser were designed to meet\ncompactness and portability requirements to enable field and onboard\napplications.",
+          "arxiv_id": "2504.11105v1"
+        }
+      ],
+      "9": [
+        {
+          "title": "High-fidelity gates with mid-circuit erasure conversion in a metastable neutral atom qubit",
+          "year": "2023-05",
+          "abstract": "The development of scalable, high-fidelity qubits is a key challenge in\nquantum information science. Neutral atom qubits have progressed rapidly in\nrecent years, demonstrating programmable processors and quantum simulators with\nscaling to hundreds of atoms. Exploring new atomic species, such as alkaline\nearth atoms, or combining multiple species can provide new paths to improving\ncoherence, control and scalability. For example, for eventual application in\nquantum error correction, it is advantageous to realize qubits with structured\nerror models, such as biased Pauli errors or conversion of errors into\ndetectable erasures. In this work, we demonstrate a new neutral atom qubit,\nusing the nuclear spin of a long-lived metastable state in ${}^{171}$Yb. The\nlong coherence time and fast excitation to the Rydberg state allow one- and\ntwo-qubit gates with fidelities of 0.9990(1) and 0.980(1), respectively.\nImportantly, a significant fraction of all gate errors result in decays out of\nthe qubit subspace, to the ground state. By performing fast, mid-circuit\ndetection of these errors, we convert them into erasure errors; during\ndetection, the induced error probability on qubits remaining in the\ncomputational space is less than $10^{-5}$. This work establishes metastable\n${}^{171}$Yb as a promising platform for realizing fault-tolerant quantum\ncomputing.",
+          "arxiv_id": "2305.05493v1"
+        },
+        {
+          "title": "Logical quantum processor based on reconfigurable atom arrays",
+          "year": "2023-12",
+          "abstract": "Suppressing errors is the central challenge for useful quantum computing,\nrequiring quantum error correction for large-scale processing. However, the\noverhead in the realization of error-corrected ``logical'' qubits, where\ninformation is encoded across many physical qubits for redundancy, poses\nsignificant challenges to large-scale logical quantum computing. Here we report\nthe realization of a programmable quantum processor based on encoded logical\nqubits operating with up to 280 physical qubits. Utilizing logical-level\ncontrol and a zoned architecture in reconfigurable neutral atom arrays, our\nsystem combines high two-qubit gate fidelities, arbitrary connectivity, as well\nas fully programmable single-qubit rotations and mid-circuit readout. Operating\nthis logical processor with various types of encodings, we demonstrate\nimprovement of a two-qubit logic gate by scaling surface code distance from d=3\nto d=7, preparation of color code qubits with break-even fidelities,\nfault-tolerant creation of logical GHZ states and feedforward entanglement\nteleportation, as well as operation of 40 color code qubits. Finally, using\nthree-dimensional [[8,3,2]] code blocks, we realize computationally complex\nsampling circuits with up to 48 logical qubits entangled with hypercube\nconnectivity with 228 logical two-qubit gates and 48 logical CCZ gates. We find\nthat this logical encoding substantially improves algorithmic performance with\nerror detection, outperforming physical qubit fidelities at both cross-entropy\nbenchmarking and quantum simulations of fast scrambling. These results herald\nthe advent of early error-corrected quantum computation and chart a path toward\nlarge-scale logical processors.",
+          "arxiv_id": "2312.03982v1"
+        },
+        {
+          "title": "High-fidelity parallel entangling gates on a neutral atom quantum computer",
+          "year": "2023-04",
+          "abstract": "The ability to perform entangling quantum operations with low error rates in\na scalable fashion is a central element of useful quantum information\nprocessing. Neutral atom arrays have recently emerged as a promising quantum\ncomputing platform, featuring coherent control over hundreds of qubits and\nany-to-any gate connectivity in a flexible, dynamically reconfigurable\narchitecture. The major outstanding challenge has been to reduce errors in\nentangling operations mediated through Rydberg interactions. Here we report the\nrealization of two-qubit entangling gates with 99.5% fidelity on up to 60 atoms\nin parallel, surpassing the surface code threshold for error correction. Our\nmethod employs fast single-pulse gates based on optimal control, atomic dark\nstates to reduce scattering, and improvements to Rydberg excitation and atom\ncooling. We benchmark fidelity using several methods based on repeated gate\napplications, characterize the physical error sources, and outline future\nimprovements. Finally, we generalize our method to design entangling gates\ninvolving a higher number of qubits, which we demonstrate by realizing\nlow-error three-qubit gates. By enabling high-fidelity operation in a scalable,\nhighly connected system, these advances lay the groundwork for large-scale\nimplementation of quantum algorithms, error-corrected circuits, and digital\nsimulations.",
+          "arxiv_id": "2304.05420v1"
+        }
+      ],
+      "10": [
+        {
+          "title": "Laboratory constraints on ultralight axion-like particles from precision atomic spectroscopy",
+          "year": "2022-06",
+          "abstract": "Ultralight bosonic dark matter has come under increasing scrutiny as a dark\nmatter candidate that has the potential to resolve puzzles in astronomical\nobservation. We demonstrate that high-precision measurements of time variation\nin the frequency ratios of atomic transitions achieves leading sensitivity to\nultralight axion-like particle dark matter at low masses. These bounds are the\nfirst laboratory-based bounds on this class of dark matter models. We propose\nfurther measurements that could enhance sensitivity to ultralight axion-like\nparticles.",
+          "arxiv_id": "2206.06364v2"
+        },
+        {
+          "title": "Direct limits on the interaction of antiprotons with axion-like dark matter",
+          "year": "2020-05",
+          "abstract": "Astrophysical observations indicate that there is roughly five times more\ndark matter in the Universe than ordinary baryonic matter, with an even larger\namount of the Universe's energy content due to dark energy. So far, the\nmicroscopic properties of these dark components have remained shrouded in\nmystery. In addition, even the five percent of ordinary matter in our Universe\nhas yet to be understood, since the Standard Model of particle physics lacks\nany consistent explanation for the predominance of matter over antimatter.\nInspired by these central problems of modern physics, we present here a direct\nsearch for interactions of antimatter with dark matter, and place direct\nconstraints on the interaction of ultra-light axion-like particles $-$ one of\nthe dark-matter candidates $-$ and antiprotons. If antiprotons exhibit a\nstronger coupling to these dark-matter particles than protons, such a CPT-odd\ncoupling could provide a link between dark matter and the baryon asymmetry in\nthe Universe. We analyse spin-flip resonance data acquired with a single\nantiproton in a Penning trap [Smorra et al., Nature 550, 371 (2017)] in the\nfrequency domain to search for spin-precession effects from ultra-light axions\nwith a characteristic frequency governed by the mass of the underlying\nparticle. Our analysis constrains the axion-antiproton interaction parameter\n$f_a/C_{\\overline{p}}$ to values greater than $0.1$ to $0.6$ GeV in the mass\nrange from $2 \\times 10^{-23}$ to $4 \\times 10^{-17}\\,$eV/$c^2$, improving over\nastrophysical antiproton bounds by up to five orders of magnitude. In addition,\nwe derive limits on six combinations of previously unconstrained\nLorentz-violating and CPT-violating terms of the non-minimal Standard Model\nExtension.",
+          "arxiv_id": "2006.00255v1"
+        },
+        {
+          "title": "SpaceQ -- Direct Detection of Ultralight Dark Matter with Space Quantum Sensors",
+          "year": "2021-12",
+          "abstract": "Recent advances in quantum sensors, including atomic clocks, enable searches\nfor a broad range of dark matter candidates. The question of the dark matter\ndistribution in the Solar system critically affects the reach of dark matter\ndirect detection experiments. Partly motivated by the NASA Deep Space Atomic\nClock (DSAC), we show that space quantum sensors present new opportunities for\nultralight dark matter searches, especially for dark matter states bound to the\nSun. We show that space quantum sensors can probe unexplored parameter space of\nultralight dark matter, covering theoretical relaxion targets motivated by\nnaturalness and Higgs mixing. If an atomic clock were able to make measurements\non the interior of the solar system, it could probe this highly sensitive\nregion directly and set very strong constraints on the existence of such a\nbound-state halo in our solar system. We present sensitivity projections for\nspace-based probes of ultralight dark matter which couples to electron, photon,\nand gluon fields, based on current and future atomic, molecular, and nuclear\nclocks.",
+          "arxiv_id": "2112.07674v1"
+        }
+      ],
+      "11": [
+        {
+          "title": "Systematic study of tunable laser cooling for trapped-ion experiments",
+          "year": "2023-01",
+          "abstract": "We report on a comparative analysis of quenched sideband cooling in trapped\nions. We introduce a theoretical approach for time-efficient simulation of the\ntemporal cooling characteristics and derive the optimal conditions providing\nfast laser cooling into the ion's motional ground state. The simulations were\nexperimentally benchmarked with a single $^{172}$Yb$^+$ ion confined in a\nlinear Paul trap. Sideband cooling was carried out on a narrow quadrupole\ntransition, enhanced with an additional clear-out laser for controlling the\neffective linewidth of the cooling transition. Quench cooling was thus for the\nfirst time studied in the resolved sideband, intermediate and semi-classical\nregime. We discuss the non-thermal distribution of Fock states during laser\ncooling and reveal its impact on time dilation shifts in optical atomic clocks.",
+          "arxiv_id": "2301.03276v1"
+        },
+        {
+          "title": "Trapped-ion laser cooling in structured light fields",
+          "year": "2024-11",
+          "abstract": "Laser cooling is fundamental to quantum computation and metrology with\ntrapped ions, and can occupy a majority of runtime in current systems. A key\nlimitation to cooling arises from unwanted carrier excitation, which in\ntypically used running wave (RW) fields invariably accompanies the sideband\ntransitions effecting cooling. We consider laser cooling in structured light\nprofiles enabling selective sideband excitation with nulled carrier drive;\nmotivated by integrated photonic approaches' passive phase and amplitude\nstability, we propose simple configurations realizable with waveguide\naddressing using either standing wave (SW) or first-order Hermite-Gauss (HG)\nmodes. We quantify performance of Doppler cooling from beyond the Lamb-Dicke\nregime (LDR), and ground-state (GS) cooling using electromagnetically induced\ntransparency (EIT) leveraging these field profiles. Carrier-free EIT offers\nsignificant benefits simultaneously in cooling rate, motional frequency\nbandwidth, and final phonon number. Carrier-free Doppler cooling's advantage is\nsignificantly compromised beyond the LDR but continues to hold, indicating such\nconfigurations are applicable for highly excited ions. Our simulations focus on\nlevel structure relevant to $^{40}$Ca$^+$, though the carrier-free\nconfigurations can be generally applied to other species. We also quantify\nperformance limitations due to polarization and modal impurities relevant to\nexperimental implementation. Our results indicate potential for simple\nstructured light profiles to alleviate bottlenecks in laser cooling, and for\nscalable photonic devices to improve basic operation quality in trapped-ion\nsystems.",
+          "arxiv_id": "2411.08844v3"
+        },
+        {
+          "title": "Integrated-Photonics-Based Systems for Polarization-Gradient Cooling of Trapped Ions",
+          "year": "2024-11",
+          "abstract": "Trapped ions are a promising modality for quantum systems, with demonstrated\nutility as the basis for quantum processors and optical clocks. However,\ntraditional trapped-ion systems are implemented using complex free-space\noptical configurations, whose large size and susceptibility to vibrations and\ndrift inhibit scaling to large numbers of qubits. In recent years,\nintegrated-photonics-based systems have been demonstrated as an avenue to\naddress the challenge of scaling trapped-ion systems while maintaining high\nfidelities. While these previous demonstrations have implemented both Doppler\nand resolved-sideband cooling of trapped ions, these cooling techniques are\nfundamentally limited in efficiency. In contrast, polarization-gradient cooling\ncan enable faster and more power-efficient cooling and, therefore, improved\ncomputational efficiencies in trapped-ion systems. While free-space\nimplementations of polarization-gradient cooling have demonstrated advantages\nover other cooling mechanisms, polarization-gradient cooling has never\npreviously been implemented using integrated photonics. In this paper, we\ndesign and experimentally demonstrate key polarization-diverse\nintegrated-photonics devices and utilize them to implement a variety of\nintegrated-photonics-based polarization-gradient-cooling systems, culminating\nin the first experimental demonstration of polarization-gradient cooling of a\ntrapped ion by an integrated-photonics-based system. By demonstrating\npolarization-gradient cooling using an integrated-photonics-based system and,\nin general, opening up the field of polarization-diverse\nintegrated-photonics-based devices and systems for trapped ions, this work\nfacilitates new capabilities for integrated-photonics-based trapped-ion\nplatforms.",
+          "arxiv_id": "2411.06025v1"
+        }
+      ],
+      "12": [
+        {
+          "title": "Direct laser cooling of calcium monohydride molecules",
+          "year": "2022-03",
+          "abstract": "We demonstrate optical cycling and sub-Doppler laser cooling of a cryogenic\nbuffer-gas beam of calcium monohydride (CaH) molecules. We measure vibrational\nbranching ratios for laser cooling transitions for both excited electronic\nstates A and B. We measure further that repeated photon scattering via the\n$A\\leftarrow X$ transition is achievable at a rate of $\\sim$ $1.6\\times10^6$\nphotons/s and demonstrate the interaction-time limited scattering of $\\sim$\n$200$ photons by repumping the largest vibrational decay channel. We also\ndemonstrate the ability to sub-Doppler cool a molecular beam of CaH through the\nmagnetically assisted Sisyphus effect. Using a standing wave of light, we lower\nthe molecular beam's transverse temperature from $12.2(1.2)$ mK to $5.7(1.1)$\nmK. We compare these results to sub-Doppler forces modeled using optical Bloch\nequations and Monte Carlo simulations of the molecular beam trajectories. This\nwork establishes a clear pathway for creating a magneto-optical trap (MOT) of\nCaH molecules. Such a MOT could serve as a starting point for production of\nultracold hydrogen gas via dissociation of a trapped CaH cloud.",
+          "arxiv_id": "2203.04841v1"
+        },
+        {
+          "title": "Direct measurement of high-lying vibrational repumping transitions for molecular laser cooling",
+          "year": "2023-03",
+          "abstract": "Molecular laser cooling and trapping requires addressing all spontaneous\ndecays to excited vibrational states that occur at the $\\gtrsim 10^{-4} -\n10^{-5}$ level, which is accomplished by driving repumping transitions out of\nthese states. However, the transitions must first be identified\nspectroscopically at high-resolution. A typical approach is to prepare\nmolecules in excited vibrational states via optical cycling and pumping, which\nrequires multiple high-power lasers. Here, we demonstrate a general method to\nperform this spectroscopy without the need for optical cycling. We produce\nmolecules in excited vibrational states by using optically-driven chemical\nreactions in a cryogenic buffer gas cell, and implement frequency-modulated\nabsorption to perform direct, sensitive, high-resolution spectroscopy. We\ndemonstrate this technique by measuring the spectrum of the\n$\\tilde{A}^2\\Pi_{1/2}(1,0,0)-\\tilde{X}^2\\Sigma^+(3,0,0)$ band in $^{174}$YbOH.\nWe identify the specific vibrational repump transitions needed for photon\ncycling, and combine our data with previous measurements of the\n$\\tilde{A}^2\\Pi_{1/2}(1,0,0)-\\tilde{X}^2\\Sigma^+(0,0,0)$ band to determine all\nof the relevant spectral constants of the $\\tilde{X}^2\\Sigma^+(3,0,0)$ state.\nThis technique achieves high signal-to-noise, can be further improved to\nmeasure increasingly high-lying vibrational states, and is applicable to other\nmolecular species favorable for laser cooling.",
+          "arxiv_id": "2303.03233v1"
+        },
+        {
+          "title": "Inner-shell excitation in the YbF molecule and its impact on laser cooling",
+          "year": "2022-01",
+          "abstract": "The YbF molecule is a sensitive system for measuring the electron's electric\ndipole moment. The precision of this measurement can be improved by direct\nlaser cooling of the molecules to ultracold temperature. However, low-lying\nelectronic states arising from excitation of a 4f electron may hinder laser\ncooling. One set of these \"4f hole\" states lies below the $A^2\\Pi_{1/2}$\nexcited state used for laser cooling, and radiative decay to these intermediate\nlevels, even with branching ratios as small as $10^{-5}$, can be a hindrance.\nOther 4f hole states lie very close to the $A^2\\Pi_{1/2}$ state, and a\nperturbation results in states of mixed character that are involved in the\nlaser cooling cycle. This perturbation may enhance the loss of molecules to\nstates outside of the laser cooling cycle. We model the perturbation of the\n$A^2\\Pi_{1/2}$ state to determine the strength of the coupling between the\nstates, the de-perturbed potential energy curves, and the radiative branching\nratios to various vibrational levels of the ground state, $X ^{2}\\Sigma^+$. We\nuse electronic structure calculations to characterise the 4f hole states and\nthe strengths of transitions between these states and the $A^2\\Pi_{1/2}$ and $X\n^{2}\\Sigma^+$ states. We identify a leak out of the cooling cycle with a\nbranching ratio of roughly $5 \\times 10^{-4}$, dominated by the contribution of\nthe ground state configuration in a 4f hole state. Finally, we assess the\nimpact of these results for laser cooling of YbF and molecules with similar\nstructure.",
+          "arxiv_id": "2201.07871v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:39:13Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

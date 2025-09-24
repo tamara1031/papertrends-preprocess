@@ -1,0 +1,716 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_cell_model_transport_cells",
+        "keywords": [
+          [
+            "cell",
+            0.03884780400997204
+          ],
+          [
+            "model",
+            0.03120512848046366
+          ],
+          [
+            "transport",
+            0.030113494436293936
+          ],
+          [
+            "cells",
+            0.026489961936350087
+          ],
+          [
+            "dynamics",
+            0.02467376622855451
+          ],
+          [
+            "membrane",
+            0.02306827982278713
+          ],
+          [
+            "motor",
+            0.02188254157128712
+          ],
+          [
+            "microtubule",
+            0.02137718003833867
+          ],
+          [
+            "proteins",
+            0.01978617379563654
+          ],
+          [
+            "motors",
+            0.019223443640887208
+          ]
+        ],
+        "count": 124
+      },
+      "1": {
+        "name": "1_gene_models_model_cell",
+        "keywords": [
+          [
+            "gene",
+            0.028764468146433343
+          ],
+          [
+            "models",
+            0.026736029098970382
+          ],
+          [
+            "model",
+            0.02402610831819326
+          ],
+          [
+            "cell",
+            0.023889455474195895
+          ],
+          [
+            "transcription",
+            0.022147123583752006
+          ],
+          [
+            "processes",
+            0.019718468243320627
+          ],
+          [
+            "state",
+            0.019074340880769838
+          ],
+          [
+            "expression",
+            0.018821352496544548
+          ],
+          [
+            "data",
+            0.017603652835936977
+          ],
+          [
+            "stochastic",
+            0.017162160018550282
+          ]
+        ],
+        "count": 92
+      },
+      "2": {
+        "name": "2_calcium_model_channels_synaptic",
+        "keywords": [
+          [
+            "calcium",
+            0.050396683237561225
+          ],
+          [
+            "model",
+            0.03349383506393064
+          ],
+          [
+            "channels",
+            0.030348387377333193
+          ],
+          [
+            "synaptic",
+            0.028561986238484143
+          ],
+          [
+            "channel",
+            0.027026574310471393
+          ],
+          [
+            "voltage",
+            0.02551237983830287
+          ],
+          [
+            "activation",
+            0.025397144308691555
+          ],
+          [
+            "release",
+            0.024831220685605664
+          ],
+          [
+            "signal",
+            0.024806271072812938
+          ],
+          [
+            "membrane",
+            0.024000613165073584
+          ]
+        ],
+        "count": 37
+      },
+      "3": {
+        "name": "3_phase_liquid_separation_phase separation",
+        "keywords": [
+          [
+            "phase",
+            0.10360012347151017
+          ],
+          [
+            "liquid",
+            0.07538190480343049
+          ],
+          [
+            "separation",
+            0.06924390432442735
+          ],
+          [
+            "phase separation",
+            0.06910732944333933
+          ],
+          [
+            "droplets",
+            0.03346575328485041
+          ],
+          [
+            "cells",
+            0.030166623591219317
+          ],
+          [
+            "surface",
+            0.025668436650383184
+          ],
+          [
+            "stress",
+            0.024808417923789412
+          ],
+          [
+            "species",
+            0.023585775434188237
+          ],
+          [
+            "protein",
+            0.023233055303625138
+          ]
+        ],
+        "count": 21
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.1824204832892688,
+        -0.46624747500323094,
+        -0.6770038758916492
+      ],
+      [
+        -0.1824204832892688,
+        1.0,
+        -0.5980399501161724,
+        -0.7056551389836447
+      ],
+      [
+        -0.46624747500323094,
+        -0.5980399501161724,
+        1.0,
+        -0.7409706408293772
+      ],
+      [
+        -0.6770038758916492,
+        -0.7056551389836447,
+        -0.7409706408293772,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        5,
+        2,
+        0,
+        1
+      ],
+      "2020-02": [
+        8,
+        2,
+        1,
+        0
+      ],
+      "2020-03": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "2020-04": [
+        7,
+        2,
+        0,
+        0
+      ],
+      "2020-05": [
+        8,
+        0,
+        2,
+        1
+      ],
+      "2020-06": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "2020-07": [
+        7,
+        1,
+        0,
+        2
+      ],
+      "2020-08": [
+        7,
+        2,
+        0,
+        0
+      ],
+      "2020-09": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "2020-10": [
+        5,
+        1,
+        0,
+        3
+      ],
+      "2020-11": [
+        5,
+        1,
+        1,
+        0
+      ],
+      "2020-12": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "2021-01": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "2021-02": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "2021-03": [
+        4,
+        3,
+        0,
+        0
+      ],
+      "2021-04": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "2021-05": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "2021-06": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "2021-07": [
+        6,
+        1,
+        0,
+        1
+      ],
+      "2021-09": [
+        3,
+        1,
+        1,
+        0
+      ],
+      "2021-10": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "2021-11": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "2021-12": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "2022-01": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "2022-02": [
+        2,
+        3,
+        0,
+        0
+      ],
+      "2022-03": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "2022-04": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "2022-05": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "2022-06": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "2022-07": [
+        5,
+        2,
+        1,
+        0
+      ],
+      "2022-08": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "2022-09": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "2022-10": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "2022-11": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "2022-12": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "2023-01": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "2023-02": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "2023-03": [
+        5,
+        1,
+        0,
+        0
+      ],
+      "2023-04": [
+        5,
+        2,
+        0,
+        0
+      ],
+      "2023-05": [
+        7,
+        0,
+        0,
+        0
+      ],
+      "2023-06": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "2023-07": [
+        5,
+        2,
+        2,
+        1
+      ],
+      "2023-08": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "2023-09": [
+        2,
+        3,
+        2,
+        0
+      ],
+      "2023-10": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "2023-11": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "2023-12": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "2024-01": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "2024-02": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "2024-03": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "2024-04": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "2024-05": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "2024-06": [
+        3,
+        1,
+        3,
+        2
+      ],
+      "2024-07": [
+        4,
+        1,
+        2,
+        0
+      ],
+      "2024-08": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "2024-09": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "2024-10": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "2024-11": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "2024-12": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "2025-01": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "2025-02": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "2025-03": [
+        4,
+        0,
+        0,
+        3
+      ],
+      "2025-04": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "2025-05": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "2025-06": [
+        4,
+        2,
+        0,
+        0
+      ],
+      "2025-07": [
+        4,
+        0,
+        2,
+        1
+      ],
+      "2025-08": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "2025-09": [
+        2,
+        1,
+        1,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Stochastic model of T Cell repolarization during target elimination (I)",
+          "year": "2020-02",
+          "abstract": "Cytotoxic T lymphocytes (T) and natural killer (NK) cells are the main\ncytotoxic killer cells of the human body to eliminate pathogen-infected or\ntumorigenic cells (i.e. target cells). Once a NK or T cell has identified a\ntarget cell, they form a tight contact zone, the immunological synapse (IS).\nOne then observes repolarization of the cell involving the rotation of the\nmicrotubule (MT) cytoskeleton and a movement of the microtubule organizing\ncenter (MTOC) to a position that is just underneath the plasma membrane at the\nIS. Concomitantly a massive relocation of organelles attached to MTs is\nobserved, including the Golgi apparatus, lytic granules and mitochondria. Since\nthe mechanism of this relocation is still elusive we devise a theoretical model\nfor the molecular motor driven motion of the MT cytoskeleton confined between\nmembrane and nucleus. We analyze scenarios currently discussed in the\nliterature, the cortical sliding and the capture-shrinkage mechanisms, and\ncompare quantitative predictions about the spatio-temporal evolution of MTOC\nposition and MT cytoskeleton morphology with experiments. The model predicts\nthe experimentally observed biphasic nature of the process due to an interplay\nbetween MT cytoskeleton geometry and motor forces and confirms the dominance of\nthe capture-shrinkage over the cortical sliding mechanism when MTOC and IS are\ninitially diametrically opposed. We also find that the two mechanisms act\nsynergistically, reducing the resources necessary for repositioning. The\nlocalization of dyneins in the pSMAC facilitates their interaction with the\nMTs. Our model also opens a way to infer details of the dynein distribution\nfrom the experimentally observed features of the MT cytoskeleton dynamics. In a\nsubsequent publication, we will address the issue of general initial\nconfigurations and situations in which the T cell established two immunological\nsynapses.",
+          "arxiv_id": "2002.09325v1"
+        },
+        {
+          "title": "Motor protein transport along inhomogeneous microtubules",
+          "year": "2020-05",
+          "abstract": "Many cellular processes rely on the cell's ability to transport material to\nand from the nucleus. Networks consisting of many microtubules and actin\nfilaments are key to this transport. Recently, the inhibition of intracellular\ntransport has been implicated in neurodegenerative diseases such as Alzheimer's\ndisease and Amyotrophic Lateral Sclerosis (ALS). Furthermore, microtubules may\ncontain so-called defective regions where motor protein velocity is reduced due\nto accumulation of other motors and microtubule associated proteins. In this\nwork, we propose a new mathematical model describing the motion of motor\nproteins on microtubules which incorporate a defective region. We take a\nmean-field approach derived from a first principle lattice model to study motor\nprotein dynamics and density profiles. In particular, given a set of model\nparameters we obtain a closed-form expression for the equilibrium density\nprofile along a given microtubule. We then verify the analytic results using\nmathematical analysis on the discrete model and Monte Carlo simulations. This\nwork will contribute to the fundamental understanding of inhomogeneous\nmicrotubules providing insight into microscopic interactions that may result in\nthe onset of neurodegenerative diseases. Our results for inhomogeneous\nmicrotubules are consistent with prior work studying the homogeneous case.",
+          "arxiv_id": "2005.01955v1"
+        },
+        {
+          "title": "A first-principles geometric model for dynamics of motor-driven centrosomal asters",
+          "year": "2024-06",
+          "abstract": "The centrosomal aster is a mobile cellular organelle that exerts and\ntransmits forces necessary for nuclear migration and spindle positioning.\nRecent experimental and theoretical studies of nematode and human cells\ndemonstrate that pulling forces on asters by cortical force generators are\ndominant during such processes. We present a comprehensive investigation of a\nfirst-principles model of aster dynamics, the S-model (S for stoichiometry),\nbased solely on such forces. The model evolves the astral centrosome position,\na probability field of cell-surface motor occupancy by centrosomal microtubules\n(under an assumption of stoichiometric binding), and free boundaries of\nunattached, growing microtubules. We show how cell shape affects the centering\nstability of the aster, and its transition to oscillations with increasing\nmotor number. Seeking to understand observations in single-cell nematode\nembryos, we use accurate simulations to examine the nonlinear structures of the\nbifurcations, and demonstrate the importance of binding domain overlap to\ninterpreting genetic perturbation experiments. We find a rich dynamical\nlandscape, dependent upon cell shape, such as internal equatorial orbits of\nasters that can be seen as traveling wave solutions. Finally, we study the\ninteractions of multiple asters and demonstrate an effective mutual repulsion\ndue to their competition for cortical force generators. We find, amazingly,\nthat asters can relax onto the vertices of platonic and non-platonic solids,\nclosely mirroring the results of the classical Thomson problem for\nenergy-minimizing configurations of electrons constrained to a sphere and\ninteracting via repulsive Coulomb potentials. Our findings both explain\nexperimental observations, providing insights into the mechanisms governing\nspindle positioning and cell division dynamics, and show the possibility of new\nnonlinear phenomena in cell biology.",
+          "arxiv_id": "2406.14350v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Steady-state fluctuations of a genetic feedback loop with fluctuating rate parameters using the unified colored noise approximation",
+          "year": "2020-04",
+          "abstract": "A common model of stochastic auto-regulatory gene expression describes\npromoter switching via cooperative protein binding, effective protein\nproduction in the active state and dilution of proteins. Here we consider an\nextension of this model whereby colored noise with a short correlation time is\nadded to the reaction rate parameters -- we show that when the size and\ntimescale of the noise is appropriately chosen it accounts for fast reactions\nthat are not explicitly modelled, e.g., in models with no mRNA description,\nfluctuations in the protein production rate can account for rapid multiple\nstages of nuclear mRNA processing which precede translation in eukaryotes. We\nshow how the unified colored noise approximation can be used to derive\nexpressions for the protein number distribution that is in good agreement with\nstochastic simulations. We find that even when the noise in the rate parameters\nis small, the protein distributions predicted by our model can be significantly\ndifferent than models assuming constant reaction rates.",
+          "arxiv_id": "2004.02011v1"
+        },
+        {
+          "title": "Gene expression in growing cells: A biophysical primer",
+          "year": "2023-11",
+          "abstract": "Cell growth and gene expression, essential elements of all living systems,\nhave long been the focus of biophysical interrogation. Advances in single-cell\nmethods have invigorated theoretical studies into these processes. However,\nuntil recently, there was little dialog between the two areas of study. Most\ntheoretical models for gene regulation assumed gene activity to be oblivious to\nthe progression of the cell cycle between birth and division. But there are\nnumerous ways in which the periodic character of all cellular observables can\nmodulate gene expression. The molecular factors required for transcription and\ntranslation increase in number during the cell cycle, but are also diluted due\nto the continuous increase in cell volume. The replication of the genome\nchanges the dosage of those same cellular players but also provides competing\ntargets for regulatory binding. Finally, cell division reduces their number\nagain, and so forth. Stochasticity is inherent to all these biological\nprocesses, manifested in fluctuations in the synthesis and degradation of new\ncellular components as well as the random partitioning of molecules at each\ncell division. The notion of gene expression as stationary is thus hard to\njustify. In this review, we survey the emerging paradigm of cell-cycle\nregulated gene expression, with an emphasis on the global expression patterns\nrather than gene-specific regulation. We discuss recent experimental reports\nwhere cell growth and gene expression were simultaneously measured in\nindividual cells, providing first glimpses into the coupling between the two.\nWhile the experimental findings, not surprisingly, differ among genes and\norganisms, several theoretical models have emerged that attempt to reconcile\nthese differences and form a unifying framework for understanding gene\nexpression in growing cells.",
+          "arxiv_id": "2311.12143v1"
+        },
+        {
+          "title": "Analysis of a detailed multi-stage model of stochastic gene expression using queueing theory and model reduction",
+          "year": "2024-01",
+          "abstract": "We introduce a biologically detailed, stochastic model of gene expression\ndescribing the multiple rate-limiting steps of transcription, nuclear pre-mRNA\nprocessing, nuclear mRNA export, cytoplasmic mRNA degradation and translation\nof mRNA into protein. The processes in sub-cellular compartments are described\nby an arbitrary number of processing stages, thus accounting for a\nsignificantly finer molecular description of gene expression than conventional\nmodels such as the telegraph, two-stage and three-stage models of gene\nexpression. We use two distinct tools, queueing theory and model reduction\nusing the slow-scale linear-noise approximation, to derive exact or approximate\nanalytic expressions for the moments or distributions of nuclear mRNA,\ncytoplasmic mRNA and protein fluctuations, as well as lower bounds for their\nFano factors in steady-state conditions. We use these to study the phase\ndiagram of the stochastic model; in particular we derive parametric conditions\ndetermining three types of transitions in the properties of mRNA fluctuations:\nfrom sub-Poissonian to super-Poissonian noise, from high noise in the nucleus\nto high noise in the cytoplasm, and from a monotonic increase to a monotonic\ndecrease of the Fano factor with the number of processing stages. In contrast,\nprotein fluctuations are always super-Poissonian and show weak dependence on\nthe number of mRNA processing stages. Our results delineate the region of\nparameter space where conventional models give qualitatively incorrect results\nand provide insight into how the number of processing stages, e.g. the number\nof rate-limiting steps in initiation, splicing and mRNA degradation, shape\nstochastic gene expression by modulation of molecular memory.",
+          "arxiv_id": "2401.12661v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Formation and Regulation of Calcium Sparks on a Nonlinear Spatial Network of Ryanodine Receptors",
+          "year": "2025-07",
+          "abstract": "Accurate regulation of calcium release is essential for cellular signaling,\nwith the spatial distribution of ryanodine receptors (RyRs) playing a critical\nrole. In this study, we present a nonlinear spatial network model that\nsimulates RyR spatial organization to investigate calcium release dynamics by\nintegrating RyR behavior, calcium buffering, and calsequestrin (CSQ)\nregulation. The model successfully reproduces calcium sparks, shedding light on\ntheir initiation, duration, and termination mechanisms under clamped calcium\nconditions. Our simulations demonstrate that RyR clusters act as on-off\nswitches for calcium release, producing short-lived calcium quarks and\nlonger-lasting calcium sparks based on distinct activation patterns. Spark\ntermination is governed by calcium gradients and stochastic RyR dynamics, with\nCSQ facilitating RyR closure and spark termination. We also uncover the dual\nrole of CSQ as both a calcium buffer and a regulator of RyRs. Elevated CSQ\nlevels prolong calcium release due to buffering effects, while CSQ-RyR\ninteractions induce excessive refractoriness, a phenomenon linked to\npathological conditions such as ventricular arrhythmias. Dysregulated CSQ\nfunction disrupts the on-off switching behavior of RyRs, impairing calcium\nrelease dynamics. These findings provide new insights into RyR-mediated calcium\nsignaling, highlighting CSQ's pivotal role in maintaining calcium homeostasis\nand its implications for pathological conditions. This work advances the\nunderstanding of calcium spark regulation and underscores its significance for\ncardiomyocyte function.",
+          "arxiv_id": "2507.08258v1"
+        },
+        {
+          "title": "A Chemical Master Equation Model for Synaptic Molecular Communication",
+          "year": "2021-09",
+          "abstract": "In synaptic molecular communication, the activation of postsynaptic receptors\nby neurotransmitters (NTs) is governed by a stochastic reaction-diffusion\nprocess and, hence, inherently random. It is currently not fully understood how\nthis randomness impacts downstream signaling in the target cell and,\nultimately, neural computation and learning. The statistical characterization\nof the reaction-diffusion process is difficult because the reversible\nbi-molecular reaction of NTs and receptors renders the system nonlinear.\nConsequently, existing models for the receptor occupancy in the synaptic cleft\nrely on simplifying assumptions and approximations which limit their practical\napplicability. In this work, we propose a novel statistical model for the\nreaction-diffusion process governing synaptic signal transmission in terms of\nthe chemical master equation (CME). We show how to compute the CME efficiently\nand verify the accuracy of the obtained results with stochastic particle-based\ncomputer simulations (PBSs). Furthermore, we compare the proposed model to two\nbenchmark models proposed in the literature and show that it provides more\naccurate results when compared to PBSs. Finally, the proposed model is used to\nstudy the impact of the system parameters on the statistical dependence between\nbinding events of NTs and receptors. In summary, the proposed model provides a\nstep forward towards a complete statistical characterization of synaptic signal\ntransmission.",
+          "arxiv_id": "2109.14986v2"
+        },
+        {
+          "title": "Molecular Noise In Synaptic Communication",
+          "year": "2022-01",
+          "abstract": "In synaptic molecular communication (MC), the activation of postsynaptic\nreceptors by neurotransmitters (NTs) is governed by a stochastic\nreaction-diffusion process. This randomness of synaptic MC contributes to the\nrandomness of the electrochemical downstream signal in the postsynaptic cell,\ncalled postsynaptic membrane potential (PSP). Since the randomness of the PSP\nis relevant for neural computation and learning, characterizing the statistics\nof the PSP is critical. However, the statistical characterization of the\nsynaptic reaction-diffusion process is difficult because the reversible\nbi-molecular reaction of NTs with receptors renders the system nonlinear.\nConsequently, there is currently no model available which characterizes the\nimpact of the statistics of postsynaptic receptor activation on the PSP. In\nthis work, we propose a novel statistical model for the synaptic\nreaction-diffusion process in terms of the chemical master equation (CME). We\nfurther propose a novel numerical method which allows to compute the CME\nefficiently and we use this method to characterize the statistics of the PSP.\nFinally, we present results from stochastic particle-based computer simulations\nwhich validate the proposed models. We show that the biophysical parameters\ngoverning synaptic transmission shape the autocovariance of the receptor\nactivation and, ultimately, the statistics of the PSP. Our results suggest that\nthe processing of the synaptic signal by the postsynaptic cell effectively\nmitigates synaptic noise while the statistical characteristics of the synaptic\nsignal are preserved. The results presented in this paper contribute to a\nbetter understanding of the impact of the randomness of synaptic signal\ntransmission on neuronal information processing.",
+          "arxiv_id": "2201.05431v3"
+        }
+      ],
+      "3": [
+        {
+          "title": "Membraneless organelles formed by liquid-liquid phase separation increase bacterial fitness",
+          "year": "2021-06",
+          "abstract": "Liquid-liquid phase separation is emerging as a crucial phenomenon in several\nfundamental cell processes. A range of eukaryotic systems exhibit liquid\ncondensates. However, their function in bacteria, which in general lack\nmembrane-bound compartments, remains less clear. Here, we used high-resolution\noptical microscopy to observe single bacterial aggresomes, nanostructured\nintracellular assemblies of proteins, to undercover their role in cell stress.\nWe find that proteins inside aggresomes are mobile and undergo dynamic\nturnover, consistent with a liquid state. Our observations are in quantitative\nagreement with phase-separated liquid droplet formation driven by interacting\nproteins under thermal equilibrium that nucleate following diffusive collisions\nin the cytoplasm. We have discovered aggresomes in multiple species of\nbacteria, and show that these emergent, metastable liquid-structured protein\nassemblies increase bacterial fitness by enabling cells to tolerate\nenvironmental stresses.",
+          "arxiv_id": "2106.13148v1"
+        },
+        {
+          "title": "Non-equilibrium phase separation in mixtures of catalytically active particles: size dispersity and screening effects",
+          "year": "2021-05",
+          "abstract": "Biomolecular condensates in cells are often rich in catalytically-active\nenzymes. This is particularly true in the case of the large enzymatic complexes\nknown as metabolons, which contain different enzymes that participate in the\nsame catalytic pathway. One possible explanation for this self-organization is\nthe combination of the catalytic activity of the enzymes and a chemotactic\nresponse to gradients of their substrate, which leads to a substrate-mediated\neffective interaction between enzymes. These interactions constitute a purely\nnon-equilibrium effect and show exotic features such as non-reciprocity. Here,\nwe analytically study a model describing the phase separation of a mixture of\nsuch catalytically-active particles. We show that a Michaelis-Menten-like\ndependence of the particles' activities manifests itself as a screening of the\ninteractions, and that a mixture of two differently-sized active species can\nexhibit phase separation with transient oscillations. We also derive a rich\nstability phase diagram for a mixture of two species with both\nconcentration-dependent activity and size dispersity. This work highlights the\nvariety of possible phase separation behaviours in mixtures of\nchemically-active particles, which provides an alternative pathway to the\npassive interactions more commonly associated with phase separation in cells.\nOur results highlight non-equilibrium organizing principles that can be\nimportant for biologically relevant liquid-liquid phase separation.",
+          "arxiv_id": "2105.02069v3"
+        },
+        {
+          "title": "The Role of RNA Condensation in Reducing Gene Expression Noise",
+          "year": "2022-12",
+          "abstract": "Biomolecular condensates have been shown to play a fundamental role in\nlocalizing biochemistry in a cell. RNA is a common constituent of condensates,\nand can determine their biophysical properties. Functions of biomolecular\ncondensates are varied including activating, inhibiting, and localizing\nreactions. Recent theoretical work has shown that the phase separation of\nproteins into droplets can diminish cell to cell variability in protein\nabundance. However, the extent to which phase separation involving mRNAs may\nalso buffer noise has yet to be explored. In this paper, we introduce a\nphenomenological model for the phase separation of mRNAs into RNP condensates,\nand quantify noise suppression as a function of gene expression kinetic\nparameters. Through stochastic simulations, we highlight the ability for\ncondensates formed from just a handful of mRNAs to regulate the abundance and\nsuppress the fluctuations of proteins. We place particular emphasis on how this\nmechanism can facilitate efficient transcription by reducing noise even in the\nsituation of infrequent bursts of transcription by exploiting the physics of a\nconcentration-dependent, deterministic phase separation threshold. We\ninvestigate two biologically relevant models in which phase separation acts to\neither \"buffer\" noise by storing mRNA in inert droplets, or \"filter\" phase\nseparated mRNAs by accelerating their decay, and quantify expression noise as a\nfunction of kinetic parameters. In either case the most efficient expression\noccurs when bursts produce mRNAs close the phase separation threshold, which we\nfind to be broadly consistent with observations of an RNP-droplet forming\ncyclinin multinucleate Ashbya gossypii cells. We finally consider the\ncontribution of noise in the phase separation threshold, and show that protein\ncopy number noise can be suppressed by phase separation threshold fluctuations\nin certain conditions.",
+          "arxiv_id": "2212.09923v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:29Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

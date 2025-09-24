@@ -1,0 +1,1946 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_social_media_social media_Twitter",
+        "keywords": [
+          [
+            "social",
+            0.023079163618000026
+          ],
+          [
+            "media",
+            0.022334438179080297
+          ],
+          [
+            "social media",
+            0.01859509250928141
+          ],
+          [
+            "Twitter",
+            0.017075520512101948
+          ],
+          [
+            "users",
+            0.016560428294101526
+          ],
+          [
+            "news",
+            0.015016221826050094
+          ],
+          [
+            "content",
+            0.01462231892215578
+          ],
+          [
+            "online",
+            0.01426742676574341
+          ],
+          [
+            "data",
+            0.012001309607357647
+          ],
+          [
+            "information",
+            0.011517306952966164
+          ]
+        ],
+        "count": 2903
+      },
+      "1": {
+        "name": "1_mobility_data_model_epidemic",
+        "keywords": [
+          [
+            "mobility",
+            0.02247155222365713
+          ],
+          [
+            "data",
+            0.019192571321730245
+          ],
+          [
+            "model",
+            0.01515472376643044
+          ],
+          [
+            "epidemic",
+            0.013223670056947103
+          ],
+          [
+            "urban",
+            0.012616515693323576
+          ],
+          [
+            "network",
+            0.012433552938150166
+          ],
+          [
+            "time",
+            0.011654862599309123
+          ],
+          [
+            "contact",
+            0.011422844513616416
+          ],
+          [
+            "networks",
+            0.011123167096421098
+          ],
+          [
+            "spatial",
+            0.011031082267627685
+          ]
+        ],
+        "count": 969
+      },
+      "2": {
+        "name": "2_graph_node_Graph_learning",
+        "keywords": [
+          [
+            "graph",
+            0.0425683966278486
+          ],
+          [
+            "node",
+            0.02898608572265382
+          ],
+          [
+            "Graph",
+            0.02280681735613719
+          ],
+          [
+            "learning",
+            0.021473261545590407
+          ],
+          [
+            "graphs",
+            0.019943596530575123
+          ],
+          [
+            "nodes",
+            0.01745766200771319
+          ],
+          [
+            "GNNs",
+            0.016922292913064955
+          ],
+          [
+            "prediction",
+            0.01586518211152935
+          ],
+          [
+            "tasks",
+            0.01472007188412564
+          ],
+          [
+            "classification",
+            0.01430419206560923
+          ]
+        ],
+        "count": 920
+      },
+      "3": {
+        "name": "3_community_detection_community detection_networks",
+        "keywords": [
+          [
+            "community",
+            0.04346547163246473
+          ],
+          [
+            "detection",
+            0.026354365588015138
+          ],
+          [
+            "community detection",
+            0.025782393664838074
+          ],
+          [
+            "networks",
+            0.02488069758354014
+          ],
+          [
+            "communities",
+            0.023893488167600577
+          ],
+          [
+            "algorithm",
+            0.019586764080908543
+          ],
+          [
+            "Community",
+            0.018301109121298363
+          ],
+          [
+            "network",
+            0.01772728251132764
+          ],
+          [
+            "algorithms",
+            0.01574375807061096
+          ],
+          [
+            "graph",
+            0.015516926349338747
+          ]
+        ],
+        "count": 578
+      },
+      "4": {
+        "name": "4_opinion_agents_opinions_social",
+        "keywords": [
+          [
+            "opinion",
+            0.042111664891940646
+          ],
+          [
+            "agents",
+            0.028357074245120368
+          ],
+          [
+            "opinions",
+            0.02782409958046891
+          ],
+          [
+            "social",
+            0.02585910082671025
+          ],
+          [
+            "dynamics",
+            0.025633952738732695
+          ],
+          [
+            "model",
+            0.025442524618521815
+          ],
+          [
+            "network",
+            0.022032335125535634
+          ],
+          [
+            "networks",
+            0.018009959022951945
+          ],
+          [
+            "agent",
+            0.015609363332173474
+          ],
+          [
+            "opinion dynamics",
+            0.014218629389514327
+          ]
+        ],
+        "count": 464
+      },
+      "5": {
+        "name": "5_research_citation_scientific_papers",
+        "keywords": [
+          [
+            "research",
+            0.03663349672619982
+          ],
+          [
+            "citation",
+            0.03254263304257872
+          ],
+          [
+            "scientific",
+            0.03134648572489385
+          ],
+          [
+            "papers",
+            0.020647130155493947
+          ],
+          [
+            "knowledge",
+            0.019345780354642954
+          ],
+          [
+            "science",
+            0.019327327230768458
+          ],
+          [
+            "collaboration",
+            0.017725152517696196
+          ],
+          [
+            "citations",
+            0.01711135269399662
+          ],
+          [
+            "network",
+            0.015609142081547877
+          ],
+          [
+            "authors",
+            0.014058531569598723
+          ]
+        ],
+        "count": 392
+      },
+      "6": {
+        "name": "6_user_recommendation_item_users",
+        "keywords": [
+          [
+            "user",
+            0.03716627871363261
+          ],
+          [
+            "recommendation",
+            0.03422822399201906
+          ],
+          [
+            "item",
+            0.024375341514919754
+          ],
+          [
+            "users",
+            0.022165700484732636
+          ],
+          [
+            "items",
+            0.017891122726003173
+          ],
+          [
+            "social",
+            0.017541692077288177
+          ],
+          [
+            "model",
+            0.017323182591286478
+          ],
+          [
+            "recommender",
+            0.01602110048462748
+          ],
+          [
+            "Recommendation",
+            0.0158916524866076
+          ],
+          [
+            "information",
+            0.015768716320849897
+          ]
+        ],
+        "count": 281
+      },
+      "7": {
+        "name": "7_temporal_dynamic_time_networks",
+        "keywords": [
+          [
+            "temporal",
+            0.05528137896064971
+          ],
+          [
+            "dynamic",
+            0.03491849975296751
+          ],
+          [
+            "time",
+            0.027680783665591423
+          ],
+          [
+            "networks",
+            0.023924236630158906
+          ],
+          [
+            "graphs",
+            0.022627305811625267
+          ],
+          [
+            "graph",
+            0.02178368716926269
+          ],
+          [
+            "Temporal",
+            0.020915588176116454
+          ],
+          [
+            "network",
+            0.017458446455188854
+          ],
+          [
+            "model",
+            0.01549156027835238
+          ],
+          [
+            "node",
+            0.014580528355137599
+          ]
+        ],
+        "count": 205
+      },
+      "8": {
+        "name": "8_influence_problem_Influence_IM",
+        "keywords": [
+          [
+            "influence",
+            0.04174011465477256
+          ],
+          [
+            "problem",
+            0.03187682108378381
+          ],
+          [
+            "Influence",
+            0.031440307323468704
+          ],
+          [
+            "IM",
+            0.030622588445794876
+          ],
+          [
+            "Maximization",
+            0.02581614921725384
+          ],
+          [
+            "seed",
+            0.024929439490470467
+          ],
+          [
+            "maximization",
+            0.024362270607579117
+          ],
+          [
+            "network",
+            0.021074032641959412
+          ],
+          [
+            "nodes",
+            0.01966834785460838
+          ],
+          [
+            "networks",
+            0.0192286190970541
+          ]
+        ],
+        "count": 204
+      },
+      "9": {
+        "name": "9_blockchain_transaction_Bitcoin_Ethereum",
+        "keywords": [
+          [
+            "blockchain",
+            0.037827201408640626
+          ],
+          [
+            "transaction",
+            0.028658906776039675
+          ],
+          [
+            "Bitcoin",
+            0.025296374086692587
+          ],
+          [
+            "Ethereum",
+            0.024171609002378327
+          ],
+          [
+            "transactions",
+            0.02372145081977781
+          ],
+          [
+            "network",
+            0.021153924602537594
+          ],
+          [
+            "money",
+            0.01601167937006983
+          ],
+          [
+            "laundering",
+            0.014994102256936372
+          ],
+          [
+            "decentralized",
+            0.014747056810748255
+          ],
+          [
+            "data",
+            0.014738904353780394
+          ]
+        ],
+        "count": 195
+      },
+      "10": {
+        "name": "10_networks_network_random_degree",
+        "keywords": [
+          [
+            "networks",
+            0.04487159351532004
+          ],
+          [
+            "network",
+            0.03164876452736495
+          ],
+          [
+            "random",
+            0.027252755143978614
+          ],
+          [
+            "degree",
+            0.02124948926496862
+          ],
+          [
+            "graphs",
+            0.01917831553965677
+          ],
+          [
+            "distribution",
+            0.016016380244996315
+          ],
+          [
+            "model",
+            0.015578254798876203
+          ],
+          [
+            "real",
+            0.015401106374518298
+          ],
+          [
+            "world",
+            0.015027451240301365
+          ],
+          [
+            "graph",
+            0.014742902811737433
+          ]
+        ],
+        "count": 179
+      },
+      "11": {
+        "name": "11_centrality_measures_nodes_network",
+        "keywords": [
+          [
+            "centrality",
+            0.08766710830280895
+          ],
+          [
+            "measures",
+            0.03322404080301448
+          ],
+          [
+            "nodes",
+            0.03321107625181428
+          ],
+          [
+            "network",
+            0.030859489441485952
+          ],
+          [
+            "networks",
+            0.02948126594576642
+          ],
+          [
+            "centrality measures",
+            0.027741736672825743
+          ],
+          [
+            "Centrality",
+            0.02317509148036588
+          ],
+          [
+            "node",
+            0.02194020586296461
+          ],
+          [
+            "importance",
+            0.016702860606600048
+          ],
+          [
+            "centralities",
+            0.016508896613102533
+          ]
+        ],
+        "count": 161
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.4074021482124196,
+        -0.7302684770665356,
+        -0.6755830500802857,
+        -0.45265847598221276,
+        -0.6804047810326994,
+        -0.5508712209257572,
+        -0.6603799156254209,
+        -0.6579603134708703,
+        -0.7294082452832775,
+        -0.6785128645629657,
+        -0.7096906333686182
+      ],
+      [
+        -0.4074021482124196,
+        1.0,
+        -0.7217663320259339,
+        -0.7162630570676554,
+        -0.659222008654335,
+        -0.7230620246961671,
+        -0.7195533662673252,
+        -0.666541525312893,
+        -0.7120742529337925,
+        -0.7392310232547734,
+        -0.7052944341440641,
+        -0.7186286141048874
+      ],
+      [
+        -0.7302684770665356,
+        -0.7217663320259339,
+        1.0,
+        -0.6641033484396555,
+        -0.6723294447256357,
+        -0.7246790290575257,
+        -0.7084104815654317,
+        -0.49655718147233946,
+        -0.686695189063341,
+        -0.7238484468383124,
+        -0.5928500950023794,
+        -0.6042168323882556
+      ],
+      [
+        -0.6755830500802857,
+        -0.7162630570676554,
+        -0.6641033484396555,
+        1.0,
+        -0.6343042478303151,
+        -0.714630707934697,
+        -0.7011076690722494,
+        -0.6006301823018851,
+        -0.6656932699983786,
+        -0.696284462614289,
+        -0.46853392274940675,
+        -0.5401191412122985
+      ],
+      [
+        -0.45265847598221276,
+        -0.659222008654335,
+        -0.6723294447256357,
+        -0.6343042478303151,
+        1.0,
+        -0.7042150897897772,
+        -0.658743292558057,
+        -0.6223020582692703,
+        -0.4940978922492575,
+        -0.5994913155509303,
+        -0.4430085459856994,
+        -0.5619902987684056
+      ],
+      [
+        -0.6804047810326994,
+        -0.7230620246961671,
+        -0.7246790290575257,
+        -0.714630707934697,
+        -0.7042150897897772,
+        1.0,
+        -0.7280274095727699,
+        -0.7148871807102569,
+        -0.721282407528876,
+        -0.7439573471791269,
+        -0.7052320925226259,
+        -0.7210755366485957
+      ],
+      [
+        -0.5508712209257572,
+        -0.7195533662673252,
+        -0.7084104815654317,
+        -0.7011076690722494,
+        -0.658743292558057,
+        -0.7280274095727699,
+        1.0,
+        -0.6952087658760617,
+        -0.6812095110969245,
+        -0.7403235193817974,
+        -0.6937109170932017,
+        -0.7330410709116426
+      ],
+      [
+        -0.6603799156254209,
+        -0.666541525312893,
+        -0.49655718147233946,
+        -0.6006301823018851,
+        -0.6223020582692703,
+        -0.7148871807102569,
+        -0.6952087658760617,
+        1.0,
+        -0.6727822345552114,
+        -0.6976611360527916,
+        -0.5236096636300311,
+        -0.5758333476420873
+      ],
+      [
+        -0.6579603134708703,
+        -0.7120742529337925,
+        -0.686695189063341,
+        -0.6656932699983786,
+        -0.4940978922492575,
+        -0.721282407528876,
+        -0.6812095110969245,
+        -0.6727822345552114,
+        1.0,
+        -0.7061478059683333,
+        -0.5456375284222186,
+        -0.6353256026674723
+      ],
+      [
+        -0.7294082452832775,
+        -0.7392310232547734,
+        -0.7238484468383124,
+        -0.696284462614289,
+        -0.5994913155509303,
+        -0.7439573471791269,
+        -0.7403235193817974,
+        -0.6976611360527916,
+        -0.7061478059683333,
+        1.0,
+        -0.5232987525938501,
+        -0.5346621459258167
+      ],
+      [
+        -0.6785128645629657,
+        -0.7052944341440641,
+        -0.5928500950023794,
+        -0.46853392274940675,
+        -0.4430085459856994,
+        -0.7052320925226259,
+        -0.6937109170932017,
+        -0.5236096636300311,
+        -0.5456375284222186,
+        -0.5232987525938501,
+        1.0,
+        -0.30436774756974583
+      ],
+      [
+        -0.7096906333686182,
+        -0.7186286141048874,
+        -0.6042168323882556,
+        -0.5401191412122985,
+        -0.5619902987684056,
+        -0.7210755366485957,
+        -0.7330410709116426,
+        -0.5758333476420873,
+        -0.6353256026674723,
+        -0.5346621459258167,
+        -0.30436774756974583,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        49,
+        2,
+        15,
+        18,
+        21,
+        6,
+        12,
+        2,
+        7,
+        2,
+        14,
+        9
+      ],
+      "2020-02": [
+        31,
+        9,
+        14,
+        16,
+        10,
+        8,
+        11,
+        9,
+        9,
+        4,
+        15,
+        9
+      ],
+      "2020-03": [
+        55,
+        10,
+        15,
+        11,
+        15,
+        3,
+        7,
+        10,
+        8,
+        2,
+        11,
+        11
+      ],
+      "2020-04": [
+        94,
+        20,
+        5,
+        17,
+        21,
+        12,
+        13,
+        13,
+        20,
+        4,
+        22,
+        2
+      ],
+      "2020-05": [
+        89,
+        5,
+        16,
+        15,
+        18,
+        9,
+        10,
+        17,
+        9,
+        1,
+        15,
+        15
+      ],
+      "2020-06": [
+        85,
+        8,
+        30,
+        18,
+        30,
+        5,
+        10,
+        15,
+        19,
+        1,
+        23,
+        14
+      ],
+      "2020-07": [
+        63,
+        9,
+        20,
+        14,
+        19,
+        7,
+        11,
+        20,
+        4,
+        5,
+        12,
+        12
+      ],
+      "2020-08": [
+        80,
+        14,
+        15,
+        8,
+        21,
+        8,
+        10,
+        15,
+        7,
+        2,
+        30,
+        10
+      ],
+      "2020-09": [
+        61,
+        9,
+        25,
+        13,
+        20,
+        7,
+        10,
+        13,
+        9,
+        1,
+        14,
+        4
+      ],
+      "2020-10": [
+        64,
+        12,
+        16,
+        11,
+        17,
+        5,
+        5,
+        12,
+        14,
+        2,
+        14,
+        8
+      ],
+      "2020-11": [
+        54,
+        7,
+        12,
+        12,
+        20,
+        3,
+        2,
+        11,
+        10,
+        3,
+        15,
+        7
+      ],
+      "2020-12": [
+        51,
+        7,
+        13,
+        12,
+        23,
+        6,
+        8,
+        10,
+        11,
+        1,
+        25,
+        9
+      ],
+      "2021-01": [
+        58,
+        5,
+        12,
+        14,
+        17,
+        9,
+        7,
+        9,
+        3,
+        1,
+        14,
+        11
+      ],
+      "2021-02": [
+        51,
+        15,
+        25,
+        13,
+        18,
+        1,
+        6,
+        8,
+        6,
+        3,
+        7,
+        10
+      ],
+      "2021-03": [
+        50,
+        5,
+        16,
+        13,
+        21,
+        7,
+        9,
+        7,
+        0,
+        1,
+        25,
+        10
+      ],
+      "2021-04": [
+        61,
+        9,
+        25,
+        7,
+        17,
+        6,
+        10,
+        12,
+        7,
+        1,
+        8,
+        3
+      ],
+      "2021-05": [
+        40,
+        7,
+        23,
+        17,
+        28,
+        9,
+        10,
+        11,
+        8,
+        4,
+        13,
+        15
+      ],
+      "2021-06": [
+        52,
+        8,
+        21,
+        13,
+        20,
+        10,
+        11,
+        13,
+        11,
+        1,
+        14,
+        10
+      ],
+      "2021-07": [
+        41,
+        6,
+        8,
+        12,
+        18,
+        7,
+        8,
+        11,
+        6,
+        0,
+        14,
+        11
+      ],
+      "2021-08": [
+        30,
+        5,
+        13,
+        9,
+        7,
+        6,
+        10,
+        8,
+        4,
+        2,
+        14,
+        5
+      ],
+      "2021-09": [
+        50,
+        6,
+        14,
+        11,
+        15,
+        4,
+        7,
+        8,
+        11,
+        1,
+        14,
+        5
+      ],
+      "2021-10": [
+        51,
+        1,
+        19,
+        13,
+        14,
+        5,
+        9,
+        18,
+        11,
+        2,
+        22,
+        6
+      ],
+      "2021-11": [
+        45,
+        9,
+        9,
+        14,
+        13,
+        3,
+        3,
+        12,
+        3,
+        0,
+        18,
+        7
+      ],
+      "2021-12": [
+        20,
+        4,
+        20,
+        17,
+        18,
+        6,
+        10,
+        9,
+        2,
+        4,
+        17,
+        12
+      ],
+      "2022-01": [
+        42,
+        9,
+        13,
+        16,
+        17,
+        3,
+        9,
+        7,
+        6,
+        2,
+        11,
+        13
+      ],
+      "2022-02": [
+        46,
+        5,
+        22,
+        10,
+        13,
+        4,
+        7,
+        9,
+        4,
+        1,
+        9,
+        8
+      ],
+      "2022-03": [
+        51,
+        4,
+        13,
+        18,
+        20,
+        3,
+        9,
+        18,
+        9,
+        5,
+        10,
+        9
+      ],
+      "2022-04": [
+        36,
+        5,
+        8,
+        8,
+        21,
+        4,
+        8,
+        8,
+        8,
+        6,
+        6,
+        6
+      ],
+      "2022-05": [
+        39,
+        6,
+        11,
+        12,
+        12,
+        7,
+        4,
+        11,
+        4,
+        4,
+        16,
+        12
+      ],
+      "2022-06": [
+        34,
+        3,
+        20,
+        10,
+        19,
+        7,
+        4,
+        11,
+        11,
+        2,
+        18,
+        6
+      ],
+      "2022-07": [
+        42,
+        3,
+        14,
+        7,
+        13,
+        2,
+        8,
+        14,
+        4,
+        3,
+        15,
+        9
+      ],
+      "2022-08": [
+        37,
+        4,
+        14,
+        6,
+        17,
+        5,
+        9,
+        8,
+        3,
+        1,
+        11,
+        7
+      ],
+      "2022-09": [
+        43,
+        2,
+        17,
+        9,
+        13,
+        6,
+        5,
+        7,
+        7,
+        3,
+        20,
+        8
+      ],
+      "2022-10": [
+        54,
+        6,
+        17,
+        14,
+        14,
+        10,
+        10,
+        16,
+        4,
+        2,
+        16,
+        9
+      ],
+      "2022-11": [
+        42,
+        1,
+        25,
+        15,
+        16,
+        5,
+        6,
+        11,
+        10,
+        5,
+        12,
+        9
+      ],
+      "2022-12": [
+        29,
+        7,
+        19,
+        20,
+        18,
+        2,
+        7,
+        10,
+        6,
+        1,
+        13,
+        6
+      ],
+      "2023-01": [
+        42,
+        6,
+        18,
+        13,
+        9,
+        5,
+        4,
+        11,
+        8,
+        3,
+        8,
+        7
+      ],
+      "2023-02": [
+        47,
+        0,
+        17,
+        11,
+        8,
+        3,
+        5,
+        19,
+        8,
+        0,
+        14,
+        1
+      ],
+      "2023-03": [
+        49,
+        5,
+        13,
+        13,
+        19,
+        9,
+        5,
+        14,
+        6,
+        5,
+        16,
+        10
+      ],
+      "2023-04": [
+        43,
+        2,
+        13,
+        9,
+        19,
+        10,
+        3,
+        10,
+        5,
+        1,
+        11,
+        3
+      ],
+      "2023-05": [
+        48,
+        4,
+        30,
+        11,
+        19,
+        5,
+        10,
+        9,
+        11,
+        2,
+        14,
+        10
+      ],
+      "2023-06": [
+        35,
+        3,
+        34,
+        12,
+        17,
+        13,
+        12,
+        18,
+        7,
+        2,
+        11,
+        12
+      ],
+      "2023-07": [
+        46,
+        6,
+        19,
+        17,
+        19,
+        4,
+        5,
+        17,
+        7,
+        3,
+        15,
+        6
+      ],
+      "2023-08": [
+        33,
+        5,
+        27,
+        10,
+        13,
+        13,
+        11,
+        9,
+        9,
+        1,
+        14,
+        14
+      ],
+      "2023-09": [
+        50,
+        7,
+        17,
+        11,
+        15,
+        5,
+        2,
+        8,
+        8,
+        3,
+        15,
+        11
+      ],
+      "2023-10": [
+        56,
+        3,
+        17,
+        10,
+        19,
+        6,
+        6,
+        8,
+        8,
+        6,
+        15,
+        9
+      ],
+      "2023-11": [
+        41,
+        8,
+        26,
+        15,
+        20,
+        8,
+        4,
+        16,
+        9,
+        1,
+        11,
+        4
+      ],
+      "2023-12": [
+        50,
+        4,
+        23,
+        12,
+        14,
+        8,
+        6,
+        10,
+        10,
+        3,
+        12,
+        5
+      ],
+      "2024-01": [
+        55,
+        6,
+        35,
+        16,
+        17,
+        5,
+        9,
+        10,
+        3,
+        1,
+        13,
+        10
+      ],
+      "2024-02": [
+        66,
+        2,
+        39,
+        18,
+        22,
+        12,
+        10,
+        13,
+        9,
+        2,
+        14,
+        12
+      ],
+      "2024-03": [
+        54,
+        3,
+        30,
+        16,
+        24,
+        8,
+        9,
+        13,
+        7,
+        2,
+        13,
+        8
+      ],
+      "2024-04": [
+        56,
+        2,
+        16,
+        7,
+        13,
+        5,
+        4,
+        11,
+        5,
+        1,
+        8,
+        5
+      ],
+      "2024-05": [
+        46,
+        7,
+        17,
+        17,
+        4,
+        5,
+        7,
+        13,
+        10,
+        2,
+        15,
+        10
+      ],
+      "2024-06": [
+        50,
+        5,
+        22,
+        18,
+        23,
+        11,
+        4,
+        11,
+        12,
+        2,
+        16,
+        9
+      ],
+      "2024-07": [
+        68,
+        3,
+        26,
+        11,
+        17,
+        6,
+        7,
+        5,
+        4,
+        5,
+        11,
+        6
+      ],
+      "2024-08": [
+        36,
+        4,
+        18,
+        15,
+        12,
+        10,
+        6,
+        8,
+        3,
+        1,
+        12,
+        6
+      ],
+      "2024-09": [
+        52,
+        3,
+        22,
+        13,
+        14,
+        7,
+        3,
+        14,
+        7,
+        4,
+        18,
+        8
+      ],
+      "2024-10": [
+        60,
+        9,
+        16,
+        22,
+        28,
+        9,
+        14,
+        9,
+        12,
+        4,
+        8,
+        5
+      ],
+      "2024-11": [
+        42,
+        4,
+        22,
+        13,
+        14,
+        5,
+        4,
+        10,
+        5,
+        6,
+        12,
+        5
+      ],
+      "2024-12": [
+        51,
+        8,
+        13,
+        20,
+        15,
+        7,
+        6,
+        17,
+        12,
+        3,
+        7,
+        8
+      ],
+      "2025-01": [
+        49,
+        4,
+        15,
+        23,
+        23,
+        11,
+        9,
+        15,
+        6,
+        1,
+        6,
+        5
+      ],
+      "2025-02": [
+        54,
+        6,
+        15,
+        21,
+        23,
+        14,
+        10,
+        7,
+        8,
+        3,
+        22,
+        8
+      ],
+      "2025-03": [
+        62,
+        4,
+        13,
+        9,
+        13,
+        12,
+        5,
+        11,
+        10,
+        3,
+        18,
+        4
+      ],
+      "2025-04": [
+        48,
+        6,
+        7,
+        16,
+        17,
+        10,
+        5,
+        7,
+        8,
+        1,
+        12,
+        5
+      ],
+      "2025-05": [
+        61,
+        7,
+        15,
+        19,
+        22,
+        7,
+        7,
+        17,
+        7,
+        1,
+        18,
+        10
+      ],
+      "2025-06": [
+        47,
+        3,
+        14,
+        14,
+        16,
+        5,
+        4,
+        10,
+        4,
+        4,
+        7,
+        9
+      ],
+      "2025-07": [
+        52,
+        7,
+        7,
+        11,
+        12,
+        7,
+        9,
+        14,
+        3,
+        4,
+        11,
+        10
+      ],
+      "2025-08": [
+        49,
+        3,
+        6,
+        16,
+        7,
+        4,
+        6,
+        5,
+        7,
+        1,
+        12,
+        10
+      ],
+      "2025-09": [
+        29,
+        2,
+        1,
+        7,
+        12,
+        4,
+        4,
+        7,
+        3,
+        1,
+        5,
+        3
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "An Exploratory Study of COVID-19 Misinformation on Twitter",
+          "year": "2020-05",
+          "abstract": "During the COVID-19 pandemic, social media has become a home ground for\nmisinformation. To tackle this infodemic, scientific oversight, as well as a\nbetter understanding by practitioners in crisis management, is needed. We have\nconducted an exploratory study into the propagation, authors and content of\nmisinformation on Twitter around the topic of COVID-19 in order to gain early\ninsights. We have collected all tweets mentioned in the verdicts of\nfact-checked claims related to COVID-19 by over 92 professional fact-checking\norganisations between January and mid-July 2020 and share this corpus with the\ncommunity. This resulted in 1 500 tweets relating to 1 274 false and 276\npartially false claims, respectively. Exploratory analysis of author accounts\nrevealed that the verified twitter handle(including Organisation/celebrity) are\nalso involved in either creating (new tweets) or spreading (retweet) the\nmisinformation. Additionally, we found that false claims propagate faster than\npartially false claims. Compare to a background corpus of COVID-19 tweets,\ntweets with misinformation are more often concerned with discrediting other\ninformation on social media. Authors use less tentative language and appear to\nbe more driven by concerns of potential harm to others. Our results enable us\nto suggest gaps in the current scientific coverage of the topic as well as\npropose actions for authorities and social media users to counter\nmisinformation.",
+          "arxiv_id": "2005.05710v2"
+        },
+        {
+          "title": "What social media told about us in the time of COVID-19: a scoping review",
+          "year": "2021-01",
+          "abstract": "With the onset of COVID-19 pandemic, social media has rapidly become a\ncrucial communication tool for information generation, dissemination, and\nconsumption. In this scoping review, we selected and examined peer-reviewed\nempirical studies relating to COVID-19 and social media during the first\noutbreak starting in November 2019 until May 2020. From an analysis of 81\nstudies, we identified five overarching public health themes concerning the\nrole of online social platforms and COVID-19. These themes focused on: (i)\nsurveying public attitudes, (ii) identifying infodemics, (iii) assessing mental\nhealth, (iv) detecting or predicting COVID-19 cases, (v) analyzing government\nresponses to the pandemic, and (vi) evaluating quality of health information in\nprevention education videos. Furthermore, our review highlights the paucity of\nstudies on the application of machine learning on social media data related to\nCOVID-19 and a lack of studies documenting real-time surveillance developed\nwith social media data on COVID-19. For COVID-19, social media can play a\ncrucial role in disseminating health information as well as tackling infodemics\nand misinformation.",
+          "arxiv_id": "2101.01688v2"
+        },
+        {
+          "title": "Bridging the Gap: Commonality and Differences between Online and Offline COVID-19 Data",
+          "year": "2022-08",
+          "abstract": "With the onset of the COVID-19 pandemic, news outlets and social media have\nbecome central tools for disseminating and consuming information. Because of\ntheir ease of access, users seek COVID-19-related information from online\nsocial media (i.e., online news) and news outlets (i.e., offline news). Online\nand offline news are often connected, sharing common topics while each has\nunique, different topics. A gap between these two news sources can lead to\nmisinformation propagation. For instance, according to the Guardian, most\nCOVID-19 misinformation comes from users on social media. Without fact-checking\nsocial media news, misinformation can lead to health threats. In this paper, we\nfocus on the novel problem of bridging the gap between online and offline data\nby monitoring their common and distinct topics generated over time. We employ\nTwitter (online) and local news (offline) data for a time span of two years.\nUsing online matrix factorization, we analyze and study online and offline\nCOVID-19-related data differences and commonalities. We design experiments to\nshow how online and offline data are linked together and what trends they\nfollow.",
+          "arxiv_id": "2208.03907v3"
+        }
+      ],
+      "1": [
+        {
+          "title": "Examining COVID-19 Forecasting using Spatio-Temporal Graph Neural Networks",
+          "year": "2020-07",
+          "abstract": "In this work, we examine a novel forecasting approach for COVID-19 case\nprediction that uses Graph Neural Networks and mobility data. In contrast to\nexisting time series forecasting models, the proposed approach learns from a\nsingle large-scale spatio-temporal graph, where nodes represent the\nregion-level human mobility, spatial edges represent the human mobility based\ninter-region connectivity, and temporal edges represent node features through\ntime. We evaluate this approach on the US county level COVID-19 dataset, and\ndemonstrate that the rich spatial and temporal information leveraged by the\ngraph neural network allows the model to learn complex dynamics. We show a 6%\nreduction of RMSLE and an absolute Pearson Correlation improvement from 0.9978\nto 0.998 compared to the best performing baseline models. This novel source of\ninformation combined with graph based deep learning approaches can be a\npowerful tool to understand the spread and evolution of COVID-19. We encourage\nothers to further develop a novel modeling paradigm for infectious disease\nbased on GNNs and high resolution mobility data.",
+          "arxiv_id": "2007.03113v1"
+        },
+        {
+          "title": "WorldMove, a global open data for human mobility",
+          "year": "2025-04",
+          "abstract": "High-quality human mobility data is crucial for applications such as urban\nplanning, transportation management, and public health, yet its collection is\noften hindered by privacy concerns and data scarcity-particularly in\nless-developed regions. To address this challenge, we introduce WorldMove, a\nlarge-scale synthetic mobility dataset covering over 1,600 cities across 179\ncountries and 6 continents. Our method leverages publicly available\nmulti-source data, including gridded population distribution, point-of-interest\n(POI) maps, and commuting origin-destination (OD) flows-to generate realistic\ncity-scale mobility trajectories using a diffusion-based generative model. The\ngeneration process involves defining city boundaries, collecting multi-source\ninput features, and simulating individual-level movements that reflect\nplausible daily mobility behavior. Comprehensive validation demonstrates that\nthe generated data closely aligns with real-world observations, both in terms\nof fine-grained individual mobility behavior and city-scale population flows.\nAlongside the pre-generated datasets, we release the trained model and a\ncomplete open-source pipeline, enabling researchers and practitioners to\ngenerate custom synthetic mobility data for any city worldwide. This work not\nonly fills critical data gaps, but also lays a global foundation for scalable,\nprivacy-preserving, and inclusive mobility research-empowering data-scarce\nregions and enabling universal access to human mobility insights.",
+          "arxiv_id": "2504.10506v1"
+        },
+        {
+          "title": "How mobility patterns drive disease spread: A case study using public transit passenger card travel data",
+          "year": "2020-04",
+          "abstract": "Outbreaks of infectious diseases present a global threat to human health and\nare considered a major health-care challenge. One major driver for the rapid\nspatial spread of diseases is human mobility. In particular, the travel\npatterns of individuals determine their spreading potential to a great extent.\nThese travel behaviors can be captured and modelled using novel location-based\ndata sources, e.g., smart travel cards, social media, etc. Previous studies\nhave shown that individuals who cannot be characterized by their most\nfrequently visited locations spread diseases farther and faster; however, these\nstudies are based on GPS data and mobile call records which have position\nuncertainty and do not capture explicit contacts. It is unclear if the same\nconclusions hold for large scale real-world transport networks. In this paper,\nwe investigate how mobility patterns impact disease spread in a large-scale\npublic transit network of empirical data traces. In contrast to previous\nfindings, our results reveal that individuals with mobility patterns\ncharacterized by their most frequently visited locations and who typically\ntravel large distances pose the highest spreading risk.",
+          "arxiv_id": "2004.01466v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "GCC: Graph Contrastive Coding for Graph Neural Network Pre-Training",
+          "year": "2020-06",
+          "abstract": "Graph representation learning has emerged as a powerful technique for\naddressing real-world problems. Various downstream graph learning tasks have\nbenefited from its recent developments, such as node classification, similarity\nsearch, and graph classification. However, prior arts on graph representation\nlearning focus on domain specific problems and train a dedicated model for each\ngraph dataset, which is usually non-transferable to out-of-domain data.\nInspired by the recent advances in pre-training from natural language\nprocessing and computer vision, we design Graph Contrastive Coding (GCC) -- a\nself-supervised graph neural network pre-training framework -- to capture the\nuniversal network topological properties across multiple networks. We design\nGCC's pre-training task as subgraph instance discrimination in and across\nnetworks and leverage contrastive learning to empower graph neural networks to\nlearn the intrinsic and transferable structural representations. We conduct\nextensive experiments on three graph learning tasks and ten graph datasets. The\nresults show that GCC pre-trained on a collection of diverse datasets can\nachieve competitive or better performance to its task-specific and\ntrained-from-scratch counterparts. This suggests that the pre-training and\nfine-tuning paradigm presents great potential for graph representation\nlearning.",
+          "arxiv_id": "2006.09963v3"
+        },
+        {
+          "title": "Conditional Local Feature Encoding for Graph Neural Networks",
+          "year": "2024-05",
+          "abstract": "Graph neural networks (GNNs) have shown great success in learning from\ngraph-based data. The key mechanism of current GNNs is message passing, where a\nnode's feature is updated based on the information passing from its local\nneighbourhood. A limitation of this mechanism is that node features become\nincreasingly dominated by the information aggregated from the neighbourhood as\nwe use more rounds of message passing. Consequently, as the GNN layers become\ndeeper, adjacent node features tends to be similar, making it more difficult\nfor GNNs to distinguish adjacent nodes, thereby, limiting the performance of\nGNNs. In this paper, we propose conditional local feature encoding (CLFE) to\nhelp prevent the problem of node features being dominated by the information\nfrom local neighbourhood. The idea of our method is to extract the node hidden\nstate embedding from message passing process and concatenate it with the nodes\nfeature from previous stage, then we utilise linear transformation to form a\nCLFE based on the concatenated vector. The CLFE will form the layer output to\nbetter preserve node-specific information, thus help to improve the performance\nof GNN models. To verify the feasibility of our method, we conducted extensive\nexperiments on seven benchmark datasets for four graph domain tasks:\nsuper-pixel graph classification, node classification, link prediction, and\ngraph regression. The experimental results consistently demonstrate that our\nmethod improves model performance across a variety of baseline GNN models for\nall four tasks.",
+          "arxiv_id": "2405.04755v1"
+        },
+        {
+          "title": "CAGNN: Cluster-Aware Graph Neural Networks for Unsupervised Graph Representation Learning",
+          "year": "2020-09",
+          "abstract": "Unsupervised graph representation learning aims to learn low-dimensional node\nembeddings without supervision while preserving graph topological structures\nand node attributive features. Previous graph neural networks (GNN) require a\nlarge number of labeled nodes, which may not be accessible in real-world graph\ndata. In this paper, we present a novel cluster-aware graph neural network\n(CAGNN) model for unsupervised graph representation learning using\nself-supervised techniques. In CAGNN, we perform clustering on the node\nembeddings and update the model parameters by predicting the cluster\nassignments. Moreover, we observe that graphs often contain inter-class edges,\nwhich mislead the GNN model to aggregate noisy information from neighborhood\nnodes. We further refine the graph topology by strengthening intra-class edges\nand reducing node connections between different classes based on cluster\nlabels, which better preserves cluster structures in the embedding space. We\nconduct comprehensive experiments on two benchmark tasks using real-world\ndatasets. The results demonstrate the superior performance of the proposed\nmodel over existing baseline methods. Notably, our model gains over 7%\nimprovements in terms of accuracy on node clustering over state-of-the-arts.",
+          "arxiv_id": "2009.01674v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "The Role of Community Detection Methods in Performance Variations of Graph Mining Tasks",
+          "year": "2025-09",
+          "abstract": "In real-world scenarios, large graphs represent relationships among entities\nin complex systems. Mining these large graphs often containing millions of\nnodes and edges helps uncover structural patterns and meaningful insights.\nDividing a large graph into smaller subgraphs facilitates complex system\nanalysis by revealing local information. Community detection extracts clusters\nor communities of graphs based on statistical methods and machine learning\nmodels using various optimization techniques. Structure based community\ndetection methods are more suitable for applying to graphs because they do not\nrely heavily on rich node or edge attribute information. The features derived\nfrom these communities can improve downstream graph mining tasks, such as link\nprediction and node classification. In real-world applications, we often lack\nground truth community information. Additionally, there is neither a\nuniversally accepted gold standard for community detection nor a single method\nthat is consistently optimal across diverse applications. In many cases, it is\nunclear how practitioners select community detection methods, and choices are\noften made without explicitly considering their potential impact on downstream\ntasks. In this study, we investigate whether the choice of community detection\nalgorithm significantly influences the performance of downstream applications.\nWe propose a framework capable of integrating various community detection\nmethods to systematically evaluate their effects on downstream task outcomes.\nOur comparative analysis reveals that specific community detection algorithms\nyield superior results in certain applications, highlighting that method\nselection substantially affects performance.",
+          "arxiv_id": "2509.09045v1"
+        },
+        {
+          "title": "A stochastic block model for community detection in attributed networks",
+          "year": "2023-08",
+          "abstract": "Community detection is an important content in complex network analysis. The\nexisting community detection methods in attributed networks mostly focus on\nonly using network structure, while the methods of integrating node attributes\nis mainly for the traditional community structures, and cannot detect\nmultipartite structures and mixture structures in network. In addition, the\nmodel-based community detection methods currently proposed for attributed\nnetworks do not fully consider unique topology information of nodes, such as\nbetweenness centrality and clustering coefficient. Therefore, a stochastic\nblock model that integrates betweenness centrality and clustering coefficient\nof nodes for community detection in attributed networks, named BCSBM, is\nproposed in this paper. Different from other generative models for attributed\nnetworks, the generation process of links and attributes in BCSBM model follows\nthe Poisson distribution, and the probability between community is considered\nbased on the stochastic block model. Moreover, the betweenness centrality and\nclustering coefficient of nodes are introduced into the process of links and\nattributes generation. Finally, the expectation maximization algorithm is\nemployed to estimate the parameters of the BCSBM model, and the node-community\nmemberships is obtained through the hard division process, so the community\ndetection is completed. By experimenting on six real-work networks containing\ndifferent network structures, and comparing with the community detection\nresults of five algorithms, the experimental results show that the BCSBM model\nnot only inherits the advantages of the stochastic block model and can detect\nvarious network structures, but also has good data fitting ability due to\nintroducing the betweenness centrality and clustering coefficient of nodes.\nOverall, the performance of this model is superior to other five compared\nalgorithms.",
+          "arxiv_id": "2308.16382v1"
+        },
+        {
+          "title": "Implicit models, latent compression, intrinsic biases, and cheap lunches in community detection",
+          "year": "2022-10",
+          "abstract": "The task of community detection, which aims to partition a network into\nclusters of nodes to summarize its large-scale structure, has spawned the\ndevelopment of many competing algorithms with varying objectives. Some\ncommunity detection methods are inferential, explicitly deriving the clustering\nobjective through a probabilistic generative model, while other methods are\ndescriptive, dividing a network according to an objective motivated by a\nparticular application, making it challenging to compare these methods on the\nsame scale. Here we present a solution to this problem that associates any\ncommunity detection objective, inferential or descriptive, with its\ncorresponding implicit network generative model. This allows us to compute the\ndescription length of a network and its partition under arbitrary objectives,\nproviding a principled measure to compare the performance of different\nalgorithms without the need for \"ground truth\" labels. Our approach also gives\naccess to instances of the community detection problem that are optimal to any\ngiven algorithm, and in this way reveals intrinsic biases in popular\ndescriptive methods, explaining their tendency to overfit. Using our framework,\nwe compare a number of community detection methods on artificial networks, and\non a corpus of over 500 structurally diverse empirical networks. We find that\nmore expressive community detection methods exhibit consistently superior\ncompression performance on structured data instances, without having degraded\nperformance on a minority of situations where more specialized algorithms\nperform optimally. Our results undermine the implications of the \"no free\nlunch\" theorem for community detection, both conceptually and in practice,\nsince it is confined to unstructured data instances, unlike relevant community\ndetection problems which are structured by requirement.",
+          "arxiv_id": "2210.09186v7"
+        }
+      ],
+      "4": [
+        {
+          "title": "Stochastic Bounded Confidence Opinion Dynamics: How Far Apart Do Opinions Drift?",
+          "year": "2021-12",
+          "abstract": "In this era of fast and large-scale opinion formation, a mathematical\nunderstanding of opinion evolution, a.k.a. opinion dynamics, is especially\nimportant. Linear graph-based dynamics and bounded confidence dynamics are the\ntwo most popular models for opinion dynamics in social networks. Recently,\nstochastic bounded confidence opinion dynamics were proposed as a general\nframework that incorporates both these dynamics as special cases and also\ncaptures the inherent stochasticity and noise (errors) in real-life social\nexchanges. Although these dynamics are quite general and realistic, their\nanalysis is particularly challenging compared to other opinion dynamics models.\nThis is because these dynamics are nonlinear and stochastic, and belong to the\nclass of Markov processes that have asymptotically zero drift and unbounded\njumps. The asymptotic behavior of these dynamics was characterized in prior\nworks. However, they do not shed light on their finite-time behavior, which is\noften of interest in practice. We take a stride in this direction by analyzing\nthe finite time behavior of a two-agent system, which is fundamental to the\nunderstanding of multi-agent dynamics. In particular, we show that the opinion\ndifference between the two agents is well concentrated around zero under the\nconditions that lead to asymptotic stability of the dynamics.",
+          "arxiv_id": "2112.04373v1"
+        },
+        {
+          "title": "Opinion Dynamics for Utility Maximizing Agents: Exploring the Impact of the Resource Penalty",
+          "year": "2024-04",
+          "abstract": "We propose a continuous-time nonlinear model of opinion dynamics with\nutility-maximizing agents connected via a social influence network. A\ndistinguishing feature of the proposed model is the inclusion of an\nopinion-dependent resource-penalty term in the utilities, which limits the\nagents from holding opinions of large magnitude. This model is applicable in\nscenarios where the opinions pertain to the usage of resources, such as money,\ntime, computational resources etc. Each agent myopically seeks to maximize its\nutility by revising its opinion in the gradient ascent direction of its utility\nfunction, thus leading to the proposed opinion dynamics. We show that, for any\narbitrary social influence network, opinions are ultimately bounded. For\nnetworks with weak antagonistic relations, we show that there exists a globally\nexponentially stable equilibrium using contraction theory. We establish\nconditions for the existence of consensus equilibrium and analyze the relative\ndominance of the agents at consensus. We also conduct a game-theoretic analysis\nof the underlying opinion formation game, including on Nash equilibria and on\nprices of anarchy in terms of satisfaction ratios. Additionally, we also\ninvestigate the oscillatory behavior of opinions in a two-agent scenario.\nFinally, simulations illustrate our findings.",
+          "arxiv_id": "2404.04912v2"
+        },
+        {
+          "title": "Oscillatory and Excitable Dynamics in an Opinion Model with Group Opinions",
+          "year": "2024-08",
+          "abstract": "In traditional models of opinion dynamics, each agent in a network has an\nopinion and changes in opinions arise from pairwise (i.e., dyadic) interactions\nbetween agents. However, in many situations, groups of individuals possess a\ncollective opinion that can differ from the opinions of its constituent\nindividuals. In this paper, we study the effects of group opinions on opinion\ndynamics. We formulate a hypergraph model in which both individual agents and\ngroups of 3 agents have opinions, and we examine how opinions evolve through\nboth dyadic interactions and group memberships. In some parameter regimes, we\nfind that the presence of group opinions can lead to oscillatory and excitable\nopinion dynamics. In the oscillatory regime, the mean opinion of the agents in\na network has self-sustained oscillations. In the excitable regime, finite-size\neffects create large but short-lived opinion swings (as in social fads). We\ndevelop a mean-field approximation of our model and obtain good agreement with\ndirect numerical simulations. We also show -- both numerically and via our\nmean-field description -- that oscillatory dynamics occur only when the number\nof dyadic and polyadic interactions per agent are not completely correlated.\nOur results illustrate how polyadic structures, such as groups of agents, can\nhave important effects on collective opinion dynamics.",
+          "arxiv_id": "2408.13336v2"
+        }
+      ],
+      "5": [
+        {
+          "title": "Exploring the dynamics of self-citations and their role in shaping scientific impact",
+          "year": "2025-03",
+          "abstract": "Understanding the mechanisms driving the distribution of scientific citations\nis a key challenge in assessing the scientific impact of authors. We\ninvestigate the influence of the preferential attachment rule (PAR) in this\nprocess by analyzing individual citation events from the DBLP dataset, enabling\nus to estimate the probability of citations being assigned preferentially. Our\nfindings reveal that, for the aggregated dataset, PAR dominates the citation\ndistribution process, with approximately 70% of citations adhering to this\nmechanism. However, analysis at the individual level shows significant\nvariability, with some authors experiencing a greater prevalence of\npreferential citations, particularly in the context of external citations. In\ncontrast, self-citations exhibit notably different behaviour, with only 20%\nfollowing PAR. We also demonstrate that the prominence of PAR increases with an\nauthor's citability (average citations per paper), suggesting that more citable\nauthors are preferentially cited, while less-cited authors experience more\nrandom citation patterns. Furthermore, we show that self-citations may\ninfluence bibliometric indexes. Our results emphasise the distinct dynamics of\nself-citations compared to external citations, raising questions about the\nmechanisms driving self-citation patterns. These findings provide new insights\ninto citation behaviours and highlight the limitations of existing approaches\nin capturing the nuances of scientific impact.",
+          "arxiv_id": "2503.09811v1"
+        },
+        {
+          "title": "Utilizing Citation Network Structure to Predict Citation Counts: A Deep Learning Approach",
+          "year": "2020-09",
+          "abstract": "With the advancement of science and technology, the number of academic papers\npublished in the world each year has increased almost exponentially. While a\nlarge number of research papers highlight the prosperity of science and\ntechnology, they also give rise to some problems. As we all know, academic\npapers are the most intuitive embodiment of the research results of scholars,\nwhich can reflect the level of researchers. It is also the evaluation standard\nfor decision-making such as promotion and allocation of funds. Therefore, how\nto measure the quality of an academic paper is very important. The most common\nstandard for measuring academic papers is the number of citation counts of\npapers, because this indicator is widely used in the evaluation of scientific\npublications, and it also serves as the basis for many other indicators (such\nas the h-index). Therefore, it is very important to be able to accurately\npredict the citation counts of academic papers.\n  This paper proposes an end-to-end deep learning network, DeepCCP, which\ncombines the effect of information cascade and looks at the citation counts\nprediction problem from the perspective of information cascade prediction.\nDeepCCP directly uses the citation network formed in the early stage of the\npaper as the input, and the output is the citation counts of the corresponding\npaper after a period of time. DeepCCP only uses the structure and temporal\ninformation of the citation network, and does not require other additional\ninformation, but it can still achieve outstanding performance. According to\nexperiments on 6 real data sets, DeepCCP is superior to the state-of-the-art\nmethods in terms of the accuracy of citation count prediction.",
+          "arxiv_id": "2009.02647v1"
+        },
+        {
+          "title": "Research Explosion: More Effort to Climb onto Shoulders of the Giant",
+          "year": "2023-07",
+          "abstract": "Fast-growing scientific publications present challenges to the scientific\ncommunity. In this paper, we describe their implications to researchers. As\nreferences form explicit foundations for researchers to conduct a study, we\ninvestigate the evolution in reference patterns based on 60.8 million papers\npublished from 1960 to 2015. The results demonstrate that recent papers contain\nmore references than older ones, especially the well-cited papers compared with\nother papers. Well-cited papers receive 10 or more citations within 5 years of\npublication. Their references cover a longer period from classic research to\nvery recent studies. Authors of well-cited papers are also farsighted to\ndiscover the reference papers with good potential to receive high citation\nnumbers in near future. We also discover that the number of accumulative\npublications has a negative impact on next-5-year citation count for most\nfields except Chemistry, Materials science, Environmental science, Biology, and\nEngineering. Our findings suggest that researchers are expected to devote more\neffort to producing impactful research. Based on all these findings, we\nstrongly advise against judging researchers simply based on the number of their\npublications. On the other hand, authors and reviewers should ensure that\npublished papers contain adequate contributions. The code for our analysis is\non GitHub: https://github.com/ECNU-Text-Computing/Research-Explosion.",
+          "arxiv_id": "2307.06506v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Balancing User Preferences by Social Networks: A Condition-Guided Social Recommendation Model for Mitigating Popularity Bias",
+          "year": "2024-05",
+          "abstract": "Social recommendation models weave social interactions into their design to\nprovide uniquely personalized recommendation results for users. However, social\nnetworks not only amplify the popularity bias in recommendation models,\nresulting in more frequent recommendation of hot items and fewer long-tail\nitems, but also include a substantial amount of redundant information that is\nessentially meaningless for the model's performance. Existing social\nrecommendation models fail to address the issues of popularity bias and the\nredundancy of social information, as they directly characterize social\ninfluence across the entire social network without making targeted adjustments.\nIn this paper, we propose a Condition-Guided Social Recommendation Model (named\nCGSoRec) to mitigate the model's popularity bias by denoising the social\nnetwork and adjusting the weights of user's social preferences. More\nspecifically, CGSoRec first includes a Condition-Guided Social Denoising Model\n(CSD) to remove redundant social relations in the social network for capturing\nusers' social preferences with items more precisely. Then, CGSoRec calculates\nusers' social preferences based on denoised social network and adjusts the\nweights in users' social preferences to make them can counteract the popularity\nbias present in the recommendation model. At last, CGSoRec includes a\nCondition-Guided Diffusion Recommendation Model (CGD) to introduce the adjusted\nsocial preferences as conditions to control the recommendation results for a\ndebiased direction. Comprehensive experiments on three real-world datasets\ndemonstrate the effectiveness of our proposed method. The code is in:\nhttps://github.com/hexin5515/CGSoRec.",
+          "arxiv_id": "2405.16772v1"
+        },
+        {
+          "title": "FairSR: Fairness-aware Sequential Recommendation through Multi-Task Learning with Preference Graph Embeddings",
+          "year": "2022-04",
+          "abstract": "Sequential recommendation (SR) learns from the temporal dynamics of user-item\ninteractions to predict the next ones. Fairness-aware recommendation mitigates\na variety of algorithmic biases in the learning of user preferences. This paper\naims at bringing a marriage between SR and algorithmic fairness. We propose a\nnovel fairness-aware sequential recommendation task, in which a new metric,\ninteraction fairness, is defined to estimate how recommended items are fairly\ninteracted by users with different protected attribute groups. We propose a\nmulti-task learning based deep end-to-end model, FairSR, which consists of two\nparts. One is to learn and distill personalized sequential features from the\ngiven user and her item sequence for SR. The other is fairness-aware preference\ngraph embedding (FPGE). The aim of FPGE is two-fold: incorporating the\nknowledge of users' and items' attributes and their correlation into entity\nrepresentations, and alleviating the unfair distributions of user attributes on\nitems. Extensive experiments conducted on three datasets show FairSR can\noutperform state-of-the-art SR models in recommendation performance. In\naddition, the recommended items by FairSR also exhibit promising interaction\nfairness.",
+          "arxiv_id": "2205.00313v1"
+        },
+        {
+          "title": "Causal Disentanglement for Regulating Social Influence Bias in Social Recommendation",
+          "year": "2024-03",
+          "abstract": "Social recommendation systems face the problem of social influence bias,\nwhich can lead to an overemphasis on recommending items that friends have\ninteracted with. Addressing this problem is crucial, and existing methods often\nrely on techniques such as weight adjustment or leveraging unbiased data to\neliminate this bias. However, we argue that not all biases are detrimental,\ni.e., some items recommended by friends may align with the user's interests.\nBlindly eliminating such biases could undermine these positive effects,\npotentially diminishing recommendation accuracy. In this paper, we propose a\nCausal Disentanglement-based framework for Regulating Social influence Bias in\nsocial recommendation, named CDRSB, to improve recommendation performance. From\nthe perspective of causal inference, we find that the user social network could\nbe regarded as a confounder between the user and item embeddings (treatment)\nand ratings (outcome). Due to the presence of this social network confounder,\ntwo paths exist from user and item embeddings to ratings: a non-causal social\ninfluence path and a causal interest path. Building upon this insight, we\npropose a disentangled encoder that focuses on disentangling user and item\nembeddings into interest and social influence embeddings. Mutual\ninformation-based objectives are designed to enhance the distinctiveness of\nthese disentangled embeddings, eliminating redundant information. Additionally,\na regulatory decoder that employs a weight calculation module to dynamically\nlearn the weights of social influence embeddings for effectively regulating\nsocial influence bias has been designed. Experimental results on four\nlarge-scale real-world datasets Ciao, Epinions, Dianping, and Douban book\ndemonstrate the effectiveness of CDRSB compared to state-of-the-art baselines.",
+          "arxiv_id": "2403.03578v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "CTRL: Continuous-Time Representation Learning on Temporal Heterogeneous Information Network",
+          "year": "2024-05",
+          "abstract": "Inductive representation learning on temporal heterogeneous graphs is crucial\nfor scalable deep learning on heterogeneous information networks (HINs) which\nare time-varying, such as citation networks. However, most existing approaches\nare not inductive and thus cannot handle new nodes or edges. Moreover, previous\ntemporal graph embedding methods are often trained with the temporal link\nprediction task to simulate the link formation process of temporal graphs,\nwhile ignoring the evolution of high-order topological structures on temporal\ngraphs. To fill these gaps, we propose a Continuous-Time Representation\nLearning (CTRL) model on temporal HINs. To preserve heterogeneous node features\nand temporal structures, CTRL integrates three parts in a single layer, they\nare 1) a \\emph{heterogeneous attention} unit that measures the semantic\ncorrelation between nodes, 2) a \\emph{edge-based Hawkes process} to capture\ntemporal influence between heterogeneous nodes, and 3) \\emph{dynamic\ncentrality} that indicates the dynamic importance of a node. We train the CTRL\nmodel with a future event (a subgraph) prediction task to capture the evolution\nof the high-order network structure. Extensive experiments have been conducted\non three benchmark datasets. The results demonstrate that our model\nsignificantly boosts performance and outperforms various state-of-the-art\napproaches. Ablation studies are conducted to demonstrate the effectiveness of\nthe model design.",
+          "arxiv_id": "2405.08013v1"
+        },
+        {
+          "title": "DyCSC: Modeling the Evolutionary Process of Dynamic Networks Based on Cluster Structure",
+          "year": "2022-10",
+          "abstract": "Temporal networks are an important type of network whose topological\nstructure changes over time. Compared with methods on static networks, temporal\nnetwork embedding (TNE) methods are facing three challenges: 1) it cannot\ndescribe the temporal dependence across network snapshots; 2) the node\nembedding in the latent space fails to indicate changes in the network\ntopology; and 3) it cannot avoid a lot of redundant computation via parameter\ninheritance on a series of snapshots. To this end, we propose a novel temporal\nnetwork embedding method named Dynamic Cluster Structure Constraint model\n(DyCSC), whose core idea is to capture the evolution of temporal networks by\nimposing a temporal constraint on the tendency of the nodes in the network to a\ngiven number of clusters. It not only generates low-dimensional embedding\nvectors for nodes but also preserves the dynamic nonlinear features of temporal\nnetworks. Experimental results on multiple realworld datasets have demonstrated\nthe superiority of DyCSC for temporal graph embedding, as it consistently\noutperforms competing methods by significant margins in multiple temporal link\nprediction tasks. Moreover, the ablation study further validates the\neffectiveness of the proposed temporal constraint.",
+          "arxiv_id": "2210.12690v2"
+        },
+        {
+          "title": "From Static to Dynamic Node Embeddings",
+          "year": "2020-09",
+          "abstract": "We introduce a general framework for leveraging graph stream data for\ntemporal prediction-based applications. Our proposed framework includes novel\nmethods for learning an appropriate graph time-series representation, modeling\nand weighting the temporal dependencies, and generalizing existing embedding\nmethods for such data. While previous work on dynamic modeling and embedding\nhas focused on representing a stream of timestamped edges using a time-series\nof graphs based on a specific time-scale (e.g., 1 month), we propose the notion\nof an $\\epsilon$-graph time-series that uses a fixed number of edges for each\ngraph, and show its superiority over the time-scale representation used in\nprevious work. In addition, we propose a number of new temporal models based on\nthe notion of temporal reachability graphs and weighted temporal summary\ngraphs. These temporal models are then used to generalize existing base\n(static) embedding methods by enabling them to incorporate and appropriately\nmodel temporal dependencies in the data. From the 6 temporal network models\ninvestigated (for each of the 7 base embedding methods), we find that the top-3\ntemporal models are always those that leverage the new $\\epsilon$-graph\ntime-series representation. Furthermore, the dynamic embedding methods from the\nframework almost always achieve better predictive performance than existing\nstate-of-the-art dynamic node embedding methods that are developed specifically\nfor such temporal prediction tasks. Finally, the findings of this work are\nuseful for designing better dynamic embedding methods.",
+          "arxiv_id": "2009.10017v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "Provably Efficient Reinforcement Learning for Online Adaptive Influence Maximization",
+          "year": "2022-06",
+          "abstract": "Online influence maximization aims to maximize the influence spread of a\ncontent in a social network with unknown network model by selecting a few seed\nnodes. Recent studies followed a non-adaptive setting, where the seed nodes are\nselected before the start of the diffusion process and network parameters are\nupdated when the diffusion stops. We consider an adaptive version of\ncontent-dependent online influence maximization problem where the seed nodes\nare sequentially activated based on real-time feedback. In this paper, we\nformulate the problem as an infinite-horizon discounted MDP under a linear\ndiffusion process and present a model-based reinforcement learning solution.\nOur algorithm maintains a network model estimate and selects seed users\nadaptively, exploring the social network while improving the optimal policy\noptimistically. We establish $\\widetilde O(\\sqrt{T})$ regret bound for our\nalgorithm. Empirical evaluations on synthetic network demonstrate the\nefficiency of our algorithm.",
+          "arxiv_id": "2206.14846v1"
+        },
+        {
+          "title": "Influence maximization in multilayer networks based on adaptive coupling degree",
+          "year": "2023-11",
+          "abstract": "Influence Maximization(IM) aims to identify highly influential nodes to\nmaximize influence spread in a network. Previous research on the IM problem has\nmainly concentrated on single-layer networks, disregarding the comprehension of\nthe coupling structure that is inherent in multilayer networks. To solve the IM\nproblem in multilayer networks, we first propose an independent cascade model\n(MIC) in a multilayer network where propagation occurs simultaneously across\ndifferent layers. Consequently, a heuristic algorithm, i.e., Adaptive Coupling\nDegree (ACD), which selects seed nodes with high spread influence and a low\ndegree of overlap of influence, is proposed to identify seed nodes for IM in a\nmultilayer network. By conducting experiments based on MIC, we have\ndemonstrated that our proposed method is superior to the baselines in terms of\ninfluence spread and time cost in 6 synthetic and 4 real-world multilayer\nnetworks.",
+          "arxiv_id": "2311.08663v1"
+        },
+        {
+          "title": "VAIM: Visual Analytics for Influence Maximization",
+          "year": "2020-08",
+          "abstract": "In social networks, individuals' decisions are strongly influenced by\nrecommendations from their friends and acquaintances. The influence\nmaximization (IM) problem asks to select a seed set of users that maximizes the\ninfluence spread, i.e., the expected number of users influenced through a\nstochastic diffusion process triggered by the seeds. In this paper, we present\nVAIM, a visual analytics system that supports users in analyzing the\ninformation diffusion process determined by different IM algorithms. By using\nVAIM one can: (i) simulate the information spread for a given seed set on a\nlarge network, (ii) analyze and compare the effectiveness of different seed\nsets, and (iii) modify the seed sets to improve the corresponding influence\nspread.",
+          "arxiv_id": "2008.08821v1"
+        }
+      ],
+      "9": [
+        {
+          "title": "Understanding Money Trails of Suspicious Activities in a cryptocurrency-based Blockchain",
+          "year": "2021-08",
+          "abstract": "The decentralization, redundancy, and pseudo-anonymity features have made\npermission-less public blockchain platforms attractive for adoption as\ntechnology platforms for cryptocurrencies. However, such adoption has enabled\ncybercriminals to exploit vulnerabilities in blockchain platforms and target\nthe users through social engineering to carry out malicious activities. Most of\nthe state-of-the-art techniques for detecting malicious actors depend on the\ntransactional behavior of individual wallet addresses but do not analyze the\nmoney trails. We propose a heuristics-based approach that adds new features\nassociated with money trails to analyze and find suspicious activities in\ncryptocurrency blockchains. Here, we focus only on the cyclic behavior and\nidentify hidden patterns present in the temporal transactions graphs in a\nblockchain. We demonstrate our methods on the transaction data of the Ethereum\nblockchain. We find that malicious activities (such as Gambling, Phishing, and\nMoney Laundering) have different cyclic patterns in Ethereum. We also identify\ntwo suspicious temporal cyclic path-based transfers in Ethereum. Our techniques\nmay apply to other cryptocurrency blockchains with appropriate modifications\nadapted to the nature of the crypto-currency under investigation.",
+          "arxiv_id": "2108.11818v1"
+        },
+        {
+          "title": "BlockGC: A Joint Learning Framework for Account Identity Inference on Blockchain with Graph Contrast",
+          "year": "2021-12",
+          "abstract": "Blockchain technology has the characteristics of decentralization,\ntraceability and tamper proof, which creates a reliable decentralized\ntransaction mode, further accelerating the development of the blockchain\nplatforms. However, with the popularization of various financial applications,\nsecurity problems caused by blockchain digital assets, such as money\nlaundering, illegal fundraising and phishing fraud, are constantly on the rise.\nTherefore, financial security has become an important issue in the blockchain\necosystem, and identifying the types of accounts in blockchain (e.g. miners,\nphishing accounts, Ponzi contracts, etc.) is of great significance in risk\nassessment and market supervision. In this paper, we construct an account\ninteraction graph using raw blockchain data in a graph perspective, and\nproposes a joint learning framework for account identity inference on\nblockchain with graph contrast. We first capture transaction feature and\ncorrelation feature from interaction graph, and then perform sampling and data\naugmentation to generate multiple views for account subgraphs, finally jointly\ntrain the subgraph contrast and account classification task. Extensive\nexperiments on Ethereum datasets show that our method achieves significant\nadvantages in account identity inference task in terms of classification\nperformance, scalability and generalization.",
+          "arxiv_id": "2112.03659v1"
+        },
+        {
+          "title": "Towards Understanding Crypto Money Laundering in Web3 Through the Lenses of Ethereum Heists",
+          "year": "2023-05",
+          "abstract": "With the overall momentum of the blockchain industry, crypto-based crimes are\nbecoming more and more prevalent. After committing a crime, the main goal of\ncybercriminals is to obfuscate the source of the illicit funds in order to\nconvert them into cash and get away with it. Many studies have analyzed money\nlaundering in the field of the traditional financial sector and\nblockchain-based Bitcoin. But so far, little is known about the characteristics\nof crypto money laundering in the blockchain-based Web3 ecosystem. To fill this\ngap, and considering that Ethereum is the largest platform on Web3, in this\npaper, we systematically study the behavioral characteristics and economic\nimpact of money laundering accounts through the lenses of Ethereum heists.\nBased on a very small number of tagged accounts of exchange hackers, DeFi\nexploiters, and scammers, we mine untagged money laundering groups through\nheuristic transaction tracking methods, to carve out a full picture of security\nincidents. By analyzing account characteristics and transaction networks, we\nobtain many interesting findings about crypto money laundering in Web3,\nobserving the escalating money laundering methods such as creating counterfeit\ntokens and masquerading as speculators. Finally, based on these findings we\nprovide inspiration for anti-money laundering to promote the healthy\ndevelopment of the Web3 ecosystem.",
+          "arxiv_id": "2305.14748v1"
+        }
+      ],
+      "10": [
+        {
+          "title": "Generating Simple Directed Social Network Graphs for Information Spreading",
+          "year": "2022-05",
+          "abstract": "Online social networks are a dominant medium in everyday life to stay in\ncontact with friends and to share information. In Twitter, users can connect\nwith other users by following them, who in turn can follow back. In recent\nyears, researchers studied several properties of social networks and designed\nrandom graph models to describe them. Many of these approaches either focus on\nthe generation of undirected graphs or on the creation of directed graphs\nwithout modeling the dependencies between reciprocal (i.e., two directed edges\nof opposite direction between two nodes) and directed edges. We propose an\napproach to generate directed social network graphs that creates reciprocal and\ndirected edges and considers the correlation between the respective degree\nsequences.\n  Our model relies on crawled directed graphs in Twitter, on which information\nw.r.t. a topic is exchanged or disseminated. While these graphs exhibit a high\nclustering coefficient and small average distances between random node pairs\n(which is typical in real-world networks), their degree sequences seem to\nfollow a $\\chi^2$-distribution rather than power law. To achieve high\nclustering coefficients, we apply an edge rewiring procedure that preserves the\nnode degrees.\n  We compare the crawled and the created graphs, and simulate certain\nalgorithms for information dissemination and epidemic spreading on them. The\nresults show that the created graphs exhibit very similar topological and\nalgorithmic properties as the real-world graphs, providing evidence that they\ncan be used as surrogates in social network analysis. Furthermore, our model is\nhighly scalable, which enables us to create graphs of arbitrary size with\nalmost the same properties as the corresponding real-world networks.",
+          "arxiv_id": "2205.02485v1"
+        },
+        {
+          "title": "Robust subgraph counting with distribution-free random graph analysis",
+          "year": "2021-07",
+          "abstract": "Subgraphs such as cliques, loops and stars form crucial connections in the\ntopologies of real-world networks. Random graph models provide estimates for\nhow often certain subgraphs appear, which in turn can be tested against\nreal-world networks. These subgraph counts, however, crucially depend on the\nassumed degree distribution. Fitting a degree distribution to network data is\nchallenging, in particular for scale-free networks with power-law degrees. In\nthis paper we develop robust subgraph counts that do not depend on the entire\ndegree distribution, but only on the mean and mean absolute deviation (MAD),\nsummary statistics that are easy to obtain for most real-world networks. By\nsolving an optimization problem, we provide tight (the sharpest possible)\nbounds for the subgraph counts, for all possible subgraphs, and for all\nnetworks with degree distributions that share the same mean and MAD. We\nidentify the extremal random graph that attains the tight bounds as the graph\nwith a specific three-point degree distribution. We leverage the bounds to\nobtain robust scaling laws for how the numbers of subgraphs grow as function of\nthe network size. The scaling laws indicate that sparse power-law networks are\nnot the most extreme networks in terms of subgraph counts, but dense power-law\nnetworks are. The robust bounds are also shown to hold for several real-world\ndata sets.",
+          "arxiv_id": "2107.10089v1"
+        },
+        {
+          "title": "Assortativity in geometric and scale-free networks",
+          "year": "2025-08",
+          "abstract": "The assortative behavior of a network is the tendency of similar (or\ndissimilar) nodes to connect to each other. This tendency can have an influence\non various properties of the network, such as its robustness or the dynamics of\nspreading processes. In this paper, we study degree assortativity both in\nreal-world networks and in several generative models for networks with\nheavy-tailed degree distribution based on latent spaces. In particular, we\nstudy Chung-Lu Graphs and Geometric Inhomogeneous Random Graphs (GIRGs).\n  Previous research on assortativity has primarily focused on measuring the\ndegree assortativity in real-world networks using the Pearson assortativity\ncoefficient, despite reservations against this coefficient. We rigorously\nconfirm these reservations by mathematically proving that the Pearson\nassortativity coefficient does not measure assortativity in any network with\nsufficiently heavy-tailed degree distributions, which is typical for real-world\nnetworks. Moreover, we find that other single-valued assortativity coefficients\nalso do not sufficiently capture the wiring preferences of nodes, which often\nvary greatly by node degree. We therefore take a more fine-grained approach,\nanalyzing a wide range of conditional and joint weight and degree distributions\nof connected nodes, both numerically in real-world networks and mathematically\nin the generative graph models. We provide several methods of visualizing the\nresults.\n  We show that the generative models are assortativity-neutral, while many\nreal-world networks are not. Therefore, we also propose an extension of the\nGIRG model which retains the manifold desirable properties induced by the\ndegree distribution and the latent space, but also exhibits tunable\nassortativity. We analyze the resulting model mathematically, and give a\nfine-grained quantification of its assortativity.",
+          "arxiv_id": "2508.04608v1"
+        }
+      ],
+      "11": [
+        {
+          "title": "Adjustable reach in a network centrality based on current flows",
+          "year": "2020-05",
+          "abstract": "Centrality, which quantifies the \"importance\" of individual nodes, is among\nthe most essential concepts in modern network theory. Most prominent centrality\nmeasures can be expressed as an aggregation of influence flows between pairs of\nnodes. As there are many ways in which influence can be defined, many different\ncentrality measures are in use. Parametrized centralities allow further\nflexibility and utility by tuning the centrality calculation to the regime most\nappropriate for a given network. Here, we identify two categories of centrality\nparameters. Reach parameters control the attenuation of influence flows between\ndistant nodes. Grasp parameters control the centrality's potential to send\ninfluence flows along multiple, often nongeodesic paths. Combining these\ncategories with Borgatti's centrality types [S. P. Borgatti, Social Networks\n27, 55-71 (2005)], we arrive at a novel classification system for parametrized\ncentralities. Using this classification, we identify the notable absence of any\ncentrality measures that are radial, reach parametrized, and based on acyclic,\nconservative flows of influence. We therefore introduce the ground-current\ncentrality, which is a measure of precisely this type. Because of its unique\nposition in the taxonomy, the ground-current centrality has significant\nadvantages over similar centralities. We demonstrate that, compared to other\nconserved-flow centralities, it has a simpler mathematical description.\nCompared to other reach centralities, it robustly preserves an intuitive rank\nordering across a wide range of network architectures. We also show that it\nproduces a consistent distribution of centrality values among the nodes,\nneither trivially equally spread (delocalization), nor overly focused on a few\nnodes (localization). Other reach centralities exhibit both of these behaviors\non regular networks and hub networks, respectively.",
+          "arxiv_id": "2005.14356v2"
+        },
+        {
+          "title": "Map Equation Centrality: Community-aware Centrality based on the Map Equation",
+          "year": "2022-01",
+          "abstract": "To measure node importance, network scientists employ centrality scores that\ntypically take a microscopic or macroscopic perspective, relying on node\nfeatures or global network structure. However, traditional centrality measures\nsuch as degree centrality, betweenness centrality, or PageRank neglect the\ncommunity structure found in real-world networks. To study node importance\nbased on network flows from a mesoscopic perspective, we analytically derive a\ncommunity-aware information-theoretic centrality score based on network flow\nand the coding principles behind the map equation: map equation centrality. Map\nequation centrality measures how much further we can compress the network's\nmodular description by not coding for random walker transitions to the\nrespective node, using an adapted coding scheme and determining node importance\nfrom a network flow-based point of view. The information-theoretic centrality\nmeasure can be determined from a node's local network context alone because\nchanges to the coding scheme only affect other nodes in the same module. Map\nequation centrality is agnostic to the chosen network flow model and allows\nresearchers to select the model that best reflects the dynamics of the process\nunder study. Applied to synthetic networks, we highlight how our approach\nenables a more fine-grained differentiation between nodes than node-local or\nnetwork-global measures. Predicting influential nodes for two different\ndynamical processes on real-world networks with traditional and other\ncommunity-aware centrality measures, we find that activating nodes based on map\nequation centrality scores tends to create the largest cascades in a linear\nthreshold model.",
+          "arxiv_id": "2201.12590v2"
+        },
+        {
+          "title": "Centrality Measures in Complex Networks: A Survey",
+          "year": "2020-11",
+          "abstract": "In complex networks, each node has some unique characteristics that define\nthe importance of the node based on the given application-specific context.\nThese characteristics can be identified using various centrality metrics\ndefined in the literature. Some of these centrality measures can be computed\nusing local information of the node, such as degree centrality and semi-local\ncentrality measure. Others use global information of the network like closeness\ncentrality, betweenness centrality, eigenvector centrality, Katz centrality,\nPageRank, and so on. In this survey, we discuss these centrality measures and\nthe state of the art literature that includes the extension of centrality\nmeasures to different types of networks, methods to update centrality values in\ndynamic networks, methods to identify top-k nodes, approximation algorithms,\nopen research problems related to the domain, and so on. The paper is concluded\nwith a discussion on application specific centrality measures that will help to\nchoose a centrality measure based on the network type and application\nrequirements.",
+          "arxiv_id": "2011.07190v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:22:24Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

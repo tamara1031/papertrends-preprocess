@@ -1,0 +1,868 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_model_quantum_disorder_phase",
+        "keywords": [
+          [
+            "model",
+            0.0196468863708154
+          ],
+          [
+            "quantum",
+            0.019625825440815033
+          ],
+          [
+            "disorder",
+            0.019581065632498087
+          ],
+          [
+            "phase",
+            0.018824292501168165
+          ],
+          [
+            "systems",
+            0.017487758074337677
+          ],
+          [
+            "transition",
+            0.016783995764698863
+          ],
+          [
+            "localization",
+            0.01598591397095198
+          ],
+          [
+            "non",
+            0.015904296092377333
+          ],
+          [
+            "spin",
+            0.014592626747005498
+          ],
+          [
+            "states",
+            0.014233764059098588
+          ]
+        ],
+        "count": 4449
+      },
+      "1": {
+        "name": "1_networks_network_learning_neural",
+        "keywords": [
+          [
+            "networks",
+            0.034524682806717596
+          ],
+          [
+            "network",
+            0.025673600381322093
+          ],
+          [
+            "learning",
+            0.021521424913236723
+          ],
+          [
+            "neural",
+            0.020470488978040303
+          ],
+          [
+            "model",
+            0.02046958409234368
+          ],
+          [
+            "dynamics",
+            0.01592329300403053
+          ],
+          [
+            "data",
+            0.01508427031917526
+          ],
+          [
+            "models",
+            0.01506257506857395
+          ],
+          [
+            "neural networks",
+            0.012823295567852555
+          ],
+          [
+            "random",
+            0.012081656075363469
+          ]
+        ],
+        "count": 1560
+      },
+      "2": {
+        "name": "2_quantum_neural_learning_network",
+        "keywords": [
+          [
+            "quantum",
+            0.05794942389484185
+          ],
+          [
+            "neural",
+            0.03348871118629531
+          ],
+          [
+            "learning",
+            0.029407139538428523
+          ],
+          [
+            "network",
+            0.02285216539212535
+          ],
+          [
+            "machine",
+            0.020592758340858424
+          ],
+          [
+            "neural network",
+            0.020513049836797366
+          ],
+          [
+            "states",
+            0.019365115186977484
+          ],
+          [
+            "state",
+            0.019178371160784104
+          ],
+          [
+            "machine learning",
+            0.01832030120075957
+          ],
+          [
+            "variational",
+            0.018009530691404808
+          ]
+        ],
+        "count": 418
+      },
+      "3": {
+        "name": "3_problems_optimization_quantum_problem",
+        "keywords": [
+          [
+            "problems",
+            0.04524157888810454
+          ],
+          [
+            "optimization",
+            0.040097264170070236
+          ],
+          [
+            "quantum",
+            0.03588801155062009
+          ],
+          [
+            "problem",
+            0.03340950562451461
+          ],
+          [
+            "annealing",
+            0.027953301275300043
+          ],
+          [
+            "Ising",
+            0.026431760877810084
+          ],
+          [
+            "algorithms",
+            0.025522704274668642
+          ],
+          [
+            "optimization problems",
+            0.022244823946725174
+          ],
+          [
+            "algorithm",
+            0.0201586806378643
+          ],
+          [
+            "solutions",
+            0.019592841764108814
+          ]
+        ],
+        "count": 206
+      },
+      "4": {
+        "name": "4_neuromorphic_computing_networks_neural",
+        "keywords": [
+          [
+            "neuromorphic",
+            0.03252769419025487
+          ],
+          [
+            "computing",
+            0.031139090561329227
+          ],
+          [
+            "networks",
+            0.028262789415539086
+          ],
+          [
+            "neural",
+            0.02517749678880591
+          ],
+          [
+            "network",
+            0.024838176016851666
+          ],
+          [
+            "learning",
+            0.024540369340456603
+          ],
+          [
+            "devices",
+            0.021007825489854536
+          ],
+          [
+            "physical",
+            0.020807080624890294
+          ],
+          [
+            "hardware",
+            0.019635533860265324
+          ],
+          [
+            "memory",
+            0.017647943484620118
+          ]
+        ],
+        "count": 175
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.07612470794950132,
+        -0.5269263904591345,
+        -0.6681297297478057,
+        -0.6949330897317187
+      ],
+      [
+        -0.07612470794950132,
+        1.0,
+        -0.3974095456964095,
+        -0.6620998893175949,
+        -0.24717498564942153
+      ],
+      [
+        -0.5269263904591345,
+        -0.3974095456964095,
+        1.0,
+        -0.583618128732472,
+        -0.39788981985466765
+      ],
+      [
+        -0.6681297297478057,
+        -0.6620998893175949,
+        -0.583618128732472,
+        1.0,
+        -0.6991678557776773
+      ],
+      [
+        -0.6949330897317187,
+        -0.24717498564942153,
+        -0.39788981985466765,
+        -0.6991678557776773,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        56,
+        20,
+        17,
+        7,
+        2
+      ],
+      "2020-02": [
+        41,
+        15,
+        24,
+        3,
+        4
+      ],
+      "2020-03": [
+        51,
+        17,
+        19,
+        1,
+        3
+      ],
+      "2020-04": [
+        46,
+        9,
+        23,
+        4,
+        3
+      ],
+      "2020-05": [
+        54,
+        19,
+        27,
+        9,
+        4
+      ],
+      "2020-06": [
+        48,
+        29,
+        19,
+        10,
+        2
+      ],
+      "2020-07": [
+        56,
+        20,
+        22,
+        5,
+        2
+      ],
+      "2020-08": [
+        63,
+        19,
+        21,
+        4,
+        0
+      ],
+      "2020-09": [
+        65,
+        21,
+        25,
+        7,
+        0
+      ],
+      "2020-10": [
+        63,
+        15,
+        15,
+        6,
+        2
+      ],
+      "2020-11": [
+        53,
+        15,
+        31,
+        1,
+        2
+      ],
+      "2020-12": [
+        62,
+        13,
+        35,
+        9,
+        3
+      ],
+      "2021-01": [
+        53,
+        16,
+        18,
+        11,
+        2
+      ],
+      "2021-02": [
+        51,
+        15,
+        30,
+        4,
+        1
+      ],
+      "2021-03": [
+        53,
+        17,
+        21,
+        6,
+        1
+      ],
+      "2021-04": [
+        40,
+        12,
+        27,
+        4,
+        2
+      ],
+      "2021-05": [
+        72,
+        17,
+        18,
+        6,
+        2
+      ],
+      "2021-06": [
+        58,
+        20,
+        15,
+        6,
+        3
+      ],
+      "2021-07": [
+        51,
+        14,
+        30,
+        3,
+        4
+      ],
+      "2021-08": [
+        49,
+        16,
+        27,
+        10,
+        2
+      ],
+      "2021-09": [
+        52,
+        11,
+        23,
+        9,
+        1
+      ],
+      "2021-10": [
+        56,
+        18,
+        17,
+        8,
+        3
+      ],
+      "2021-11": [
+        52,
+        22,
+        32,
+        5,
+        1
+      ],
+      "2021-12": [
+        61,
+        17,
+        19,
+        3,
+        1
+      ],
+      "2022-01": [
+        50,
+        13,
+        22,
+        8,
+        1
+      ],
+      "2022-02": [
+        58,
+        21,
+        24,
+        6,
+        1
+      ],
+      "2022-03": [
+        59,
+        13,
+        39,
+        3,
+        4
+      ],
+      "2022-04": [
+        45,
+        14,
+        21,
+        3,
+        0
+      ],
+      "2022-05": [
+        66,
+        14,
+        28,
+        6,
+        1
+      ],
+      "2022-06": [
+        55,
+        14,
+        20,
+        5,
+        1
+      ],
+      "2022-07": [
+        58,
+        17,
+        28,
+        5,
+        1
+      ],
+      "2022-08": [
+        68,
+        10,
+        27,
+        7,
+        0
+      ],
+      "2022-09": [
+        55,
+        11,
+        20,
+        9,
+        1
+      ],
+      "2022-10": [
+        57,
+        13,
+        24,
+        10,
+        0
+      ],
+      "2022-11": [
+        39,
+        14,
+        24,
+        9,
+        2
+      ],
+      "2022-12": [
+        47,
+        17,
+        28,
+        4,
+        2
+      ],
+      "2023-01": [
+        54,
+        9,
+        20,
+        6,
+        2
+      ],
+      "2023-02": [
+        50,
+        23,
+        23,
+        7,
+        1
+      ],
+      "2023-03": [
+        44,
+        24,
+        25,
+        12,
+        1
+      ],
+      "2023-04": [
+        47,
+        14,
+        25,
+        3,
+        3
+      ],
+      "2023-05": [
+        62,
+        17,
+        21,
+        8,
+        1
+      ],
+      "2023-06": [
+        74,
+        27,
+        27,
+        3,
+        1
+      ],
+      "2023-07": [
+        49,
+        17,
+        27,
+        11,
+        4
+      ],
+      "2023-08": [
+        52,
+        10,
+        31,
+        3,
+        1
+      ],
+      "2023-09": [
+        57,
+        19,
+        22,
+        12,
+        6
+      ],
+      "2023-10": [
+        61,
+        24,
+        22,
+        8,
+        2
+      ],
+      "2023-11": [
+        59,
+        21,
+        25,
+        13,
+        0
+      ],
+      "2023-12": [
+        60,
+        19,
+        27,
+        5,
+        3
+      ],
+      "2024-01": [
+        56,
+        13,
+        20,
+        3,
+        2
+      ],
+      "2024-02": [
+        43,
+        19,
+        26,
+        3,
+        4
+      ],
+      "2024-03": [
+        47,
+        18,
+        32,
+        8,
+        0
+      ],
+      "2024-04": [
+        55,
+        15,
+        32,
+        4,
+        1
+      ],
+      "2024-05": [
+        52,
+        26,
+        29,
+        8,
+        1
+      ],
+      "2024-06": [
+        50,
+        25,
+        29,
+        10,
+        1
+      ],
+      "2024-07": [
+        42,
+        21,
+        21,
+        9,
+        2
+      ],
+      "2024-08": [
+        56,
+        12,
+        34,
+        7,
+        2
+      ],
+      "2024-09": [
+        61,
+        23,
+        22,
+        11,
+        1
+      ],
+      "2024-10": [
+        71,
+        18,
+        39,
+        11,
+        3
+      ],
+      "2024-11": [
+        84,
+        12,
+        25,
+        11,
+        2
+      ],
+      "2024-12": [
+        64,
+        17,
+        29,
+        7,
+        6
+      ],
+      "2025-01": [
+        58,
+        20,
+        27,
+        7,
+        2
+      ],
+      "2025-02": [
+        41,
+        22,
+        29,
+        8,
+        1
+      ],
+      "2025-03": [
+        54,
+        21,
+        29,
+        5,
+        3
+      ],
+      "2025-04": [
+        44,
+        16,
+        24,
+        14,
+        3
+      ],
+      "2025-05": [
+        60,
+        30,
+        28,
+        14,
+        5
+      ],
+      "2025-06": [
+        66,
+        20,
+        30,
+        16,
+        1
+      ],
+      "2025-07": [
+        88,
+        26,
+        43,
+        8,
+        0
+      ],
+      "2025-08": [
+        33,
+        15,
+        30,
+        3,
+        3
+      ],
+      "2025-09": [
+        23,
+        8,
+        16,
+        1,
+        4
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Localization and mobility edges in non-Hermitian disorder-free lattices",
+          "year": "2023-06",
+          "abstract": "The non-Hermitian skin effect (NHSE) is a significant phenomenon observed in\nnon-Hermitian systems under open boundary conditions, where the extensive bulk\neigenstates tend to accumulate at the lattice edges. In this article, we\ninvestigate how an electric field affects the localization properties in a\nnon-Hermitian mosaic Stark lattice, exploring the interplay between the Stark\nlocalization, mobility edge (ME), and the NHSE induced by nonreciprocity. We\nanalytically obtain the Lyapunov exponent and the phase transition points as\nwell as numerically calculate the density distributions and the spectral\nwinding number. We reveal that in the nonreciprocal Stark lattice with the\nmosaic periodic parameter $\\kappa=1$, there exists a critical electric field\nstrength that describes the transition of the existence-nonexistence of NHSE\nand is inversely proportional to the lattice size. This transition is\nconsistent with the real-complex transition and topological transition\ncharacterized by spectral winding number under periodic boundary conditions. In\nthe strong fields, the Wannier-Stark ladder is recovered, and the Stark\nlocalization is sufficient to suppress the NHSE. When the mosaic period\n$\\kappa=2$, we show that the system manifests an exact non-Hermitian ME and the\nskin states are still existing in the strong fields, in contrast to the\ngigantic field can restrain the NHSE in the $\\kappa=1$ case. Moreover, we\nfurther study the expansion dynamics of an initially localized state and\ndynamically probe the existence of the NHSE and the non-Hermitian ME. These\nresults could help us to control the NHSE and the non-Hermitian ME by using\nelectric fields in the disorder-free systems.",
+          "arxiv_id": "2306.03807v1"
+        },
+        {
+          "title": "Emergent pair localization in a many-body quantum spin system",
+          "year": "2022-07",
+          "abstract": "Understanding how closed quantum systems dynamically approach thermal\nequilibrium presents a major unresolved problem in statistical physics.\nGenerically, non-integrable quantum systems are expected to thermalize as they\ncomply with the Eigenstate Thermalization Hypothesis. However, in the presence\nof strong disorder, the dynamics can possibly slow down to a degree that\nsystems fail to thermalize on experimentally accessible timescales, as in spin\nglasses or many-body localized systems. In general, particularly in long-range\ninteracting quantum systems, the specific nature of the disorder necessary for\nthe emergence of a prethermal, metastable state--distinctly separating the\ntimescales of initial relaxation and subsequent slow thermalization--remains an\nopen question. We study an ensemble of Heisenberg spins with a tunable\ndistribution of random coupling strengths realized by a Rydberg quantum\nsimulator. We observe a drastic change in the late-time magnetization when\nincreasing disorder strength. The data is well described by models based on\npairs of strongly interacting spins, which are treated as thermal for weak\ndisorder and isolated for strong disorder. Our results indicate a crossover\ninto a pair-localized prethermal regime in a closed quantum system of thousands\nof spins in the critical case where the exponent of the power law interaction\nmatches the spatial dimension.",
+          "arxiv_id": "2207.14216v2"
+        },
+        {
+          "title": "Entanglement and localization in long-range quadratic Lindbladians",
+          "year": "2023-03",
+          "abstract": "Existence of Anderson localization is considered a manifestation of coherence\nof classical and quantum waves in disordered systems. Signatures of\nlocalization have been observed in condensed matter and cold atomic systems\nwhere the coupling to the environment can be significantly suppressed but not\neliminated. In this work we explore the phenomena of localization in random\nLindbladian dynamics describing open quantum systems. We propose a model of\none-dimensional chain of non-interacting, spinless fermions coupled to a local\nensemble of baths. The jump operator mediating the interaction with the bath\nlinked to each site has a power-law tail with an exponent $p$. We show that the\nsteady state of the system undergoes a localization entanglement phase\ntransition by tuning $p$ which remains stable in the presence of coherent\nhopping. Unlike the entanglement transition in the quantum trajectories of open\nsystems, this transition is exhibited by the averaged steady state density\nmatrix of the Lindbladian. The steady state in the localized phase is\ncharacterised by a heterogeneity in local population imbalance, while the jump\noperators exhibit a constant participation ratio of the sites they affect. Our\nwork provides a novel realisation of localization physics in open quantum\nsystems.",
+          "arxiv_id": "2303.07070v3"
+        }
+      ],
+      "1": [
+        {
+          "title": "Dynamic Mean-Field Theory for Continuous Random Networks",
+          "year": "2024-10",
+          "abstract": "This article studies the dynamics of the mean-field approximation of\ncontinuous random networks. These networks are stochastic integrodifferential\nequations driven by Gaussian noise. The kernels in the integral operators are\nrealizations of generalized Gaussian random variables. The equation controls\nthe time evolution of a macroscopic state interpreted as neural activity, which\ndepends on position and time. The position is an element of a measurable space.\nSuch a network corresponds to a statistical field theory (STF) given by a\nmomenta-generating functional. Discrete versions of the mentioned networks\nappeared in spin glasses and as models of artificial neural networks (NNs).\nEach of these discrete networks corresponds to a lattice SFT, where the action\ncontains a finite number of neurons and two scalar fields for each neuron. In\nthis article, we develop mathematically rigorous, continuous versions of the\nmean-field theory approximation and the double-copy system that allow us to\nderive a condition for the criticality of continuous stochastic networks via\nthe largest Lyapunov exponent. We use two basic architectures; in the first\none, the space of neurons is the real line, and then the neurons are organized\nin one layer; in the second one, the space of neurons is the p-adic line, and\nthen the neurons are organized in an infinite, fractal, tree-like structure. We\nalso studied a toy model of a continuous Gaussian network with a continuous\nphase transition. This behavior matches the critical brain hypothesis, which\nstates that certain biological neuronal networks work near phase transitions.",
+          "arxiv_id": "2410.02206v2"
+        },
+        {
+          "title": "Microscopic and collective signatures of feature learning in neural networks",
+          "year": "2025-08",
+          "abstract": "Feature extraction - the ability to identify relevant properties of data - is\na key factor underlying the success of deep learning. Yet, it has proved\ndifficult to elucidate its nature within existing predictive theories, to the\nextent that there is no consensus on the very definition of feature learning. A\npromising hint in this direction comes from previous phenomenological\nobservations of quasi-universal aspects in the training dynamics of neural\nnetworks, displayed by simple properties of feature geometry. We address this\nproblem within a statistical-mechanics framework for Bayesian learning in one\nhidden layer neural networks with standard parameterization. Analytical\ncomputations in the proportional limit (when both the network width and the\nsize of the training set are large) can quantify fingerprints of feature\nlearning, both collective ones (related to manifold geometry) and microscopic\nones (related to the weights). In particular, (i) the distance between\ndifferent class manifolds in feature space is a nonmonotonic function of the\ntemperature, which we interpret as the equilibrium counterpart of a phenomenon\nobserved under gradient descent (GD) dynamics, and (ii) the microscopic\nlearnable parameters in the network undergo a finite data-dependent\ndisplacement with respect to the infinite-width limit, and develop\ncorrelations. These results indicate that nontrivial feature learning is at\nplay in a regime where the posterior predictive distribution is that of\nGaussian process regression with a trivially rescaled prior.",
+          "arxiv_id": "2508.20989v1"
+        },
+        {
+          "title": "Opening the Black Box: predicting the trainability of deep neural networks with reconstruction entropy",
+          "year": "2024-06",
+          "abstract": "An important challenge in machine learning is to predict the initial\nconditions under which a given neural network will be trainable. We present a\nmethod for predicting the trainable regime in parameter space for deep\nfeedforward neural networks (DNNs) based on reconstructing the input from\nsubsequent activation layers via a cascade of single-layer auxiliary networks.\nWe show that a single epoch of training of the shallow cascade networks is\nsufficient to predict the trainability of the deep feedforward network on a\nrange of datasets (MNIST, CIFAR10, FashionMNIST, and white noise), thereby\nproviding a significant reduction in overall training time. We achieve this by\ncomputing the relative entropy between reconstructed images and the original\ninputs, and show that this probe of information loss is sensitive to the phase\nbehaviour of the network. We further demonstrate that this method generalizes\nto residual neural networks (ResNets) and convolutional neural networks (CNNs).\nMoreover, our method illustrates the network's decision making process by\ndisplaying the changes performed on the input data at each layer, which we\ndemonstrate for both a DNN trained on MNIST and the vgg16 CNN trained on the\nImageNet dataset. Our results provide a technique for significantly\naccelerating the training of large neural networks.",
+          "arxiv_id": "2406.12916v3"
+        }
+      ],
+      "2": [
+        {
+          "title": "VSQL: Variational Shadow Quantum Learning for Classification",
+          "year": "2020-12",
+          "abstract": "Classification of quantum data is essential for quantum machine learning and\nnear-term quantum technologies. In this paper, we propose a new hybrid\nquantum-classical framework for supervised quantum learning, which we call\nVariational Shadow Quantum Learning (VSQL). Our method in particular utilizes\nthe classical shadows of quantum data, which fundamentally represent the side\ninformation of quantum data with respect to certain physical observables.\nSpecifically, we first use variational shadow quantum circuits to extract\nclassical features in a convolution way and then utilize a fully-connected\nneural network to complete the classification task. We show that this method\ncould sharply reduce the number of parameters and thus better facilitate\nquantum circuit training. Simultaneously, less noise will be introduced since\nfewer quantum gates are employed in such shadow circuits. Moreover, we show\nthat the Barren Plateau issue, a significant gradient vanishing problem in\nquantum machine learning, could be avoided in VSQL. Finally, we demonstrate the\nefficiency of VSQL in quantum classification via numerical experiments on the\nclassification of quantum states and the recognition of multi-labeled\nhandwritten digits. In particular, our VSQL approach outperforms existing\nvariational quantum classifiers in the test accuracy in the binary case of\nhandwritten digit recognition and notably requires much fewer parameters.",
+          "arxiv_id": "2012.08288v1"
+        },
+        {
+          "title": "Finding Quantum Critical Points with Neural-Network Quantum States",
+          "year": "2020-02",
+          "abstract": "Finding the precise location of quantum critical points is of particular\nimportance to characterise quantum many-body systems at zero temperature.\nHowever, quantum many-body systems are notoriously hard to study because the\ndimension of their Hilbert space increases exponentially with their size.\nRecently, machine learning tools known as neural-network quantum states have\nbeen shown to effectively and efficiently simulate quantum many-body systems.\nWe present an approach to finding the quantum critical points of the quantum\nIsing model using neural-network quantum states, analytically constructed\ninnate restricted Boltzmann machines, transfer learning and unsupervised\nlearning. We validate the approach and evaluate its efficiency and\neffectiveness in comparison with other traditional approaches.",
+          "arxiv_id": "2002.02618v1"
+        },
+        {
+          "title": "Entanglement transition in deep neural quantum states",
+          "year": "2023-12",
+          "abstract": "Despite the huge theoretical potential of neural quantum states, their use in\ndescribing generic, highly-correlated quantum many-body systems still often\nposes practical difficulties. Customized network architectures are under active\ninvestigation to address these issues. For a guided search of suited network\narchitectures a deepened understanding of the link between neural network\nproperties and attributes of the physical system one is trying to describe, is\nimperative. Drawing inspiration from the field of machine learning, in this\nwork we show how information propagation in deep neural networks impacts the\nphysical entanglement properties of deep neural quantum states. In fact, we\nlink a previously identified information propagation phase transition of a\nneural network to a similar transition of entanglement in neural quantum\nstates. With this bridge we can identify optimal neural quantum state\nhyperparameter regimes for representing area as well as volume law entangled\nstates. The former are easily accessed by alternative methods, such as tensor\nnetwork representations, at least in low physical dimensions, while the latter\nare challenging to describe generally due to their extensive quantum\nentanglement. This advance of our understanding of network configurations for\naccurate quantum state representation helps to develop effective\nrepresentations to deal with volume-law quantum states, and we apply these\nfindings to describe the ground state (area law state) vs. the excited state\n(volume law state) properties of the prototypical next-nearest neighbor\nspin-1/2 Heisenberg model.",
+          "arxiv_id": "2312.11941v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Breaking limitation of quantum annealer in solving optimization problems under constraints",
+          "year": "2020-02",
+          "abstract": "Quantum annealing is a generic solver for optimization problems that uses\nfictitious quantum fluctuation. The most groundbreaking progress in the\nresearch field of quantum annealing is its hardware implementation, i.e., the\nso-called quantum annealer, using artificial spins. However, the connectivity\nbetween the artificial spins is sparse and limited on a special network known\nas the chimera graph. Several embedding techniques have been proposed, but the\nnumber of logical spins, which represents the optimization problems to be\nsolved, is drastically reduced. In particular, an optimization problem\nincluding fully or even partly connected spins suffers from low embeddable size\non the chimera graph. In the present study, we propose an alternative approach\nto solve a large-scale optimization problem on the chimera graph via a\nwell-known method in statistical mechanics called the Hubbard-Stratonovich\ntransformation or its variants. The proposed method can be used to deal with a\nfully connected Ising model without embedding on the chimera graph and leads to\nnontrivial results of the optimization problem. We tested the proposed method\nwith a number of partition problems involving solving linear equations and the\ntraffic flow optimization problem in Sendai and Kyoto cities in Japan.",
+          "arxiv_id": "2002.05298v1"
+        },
+        {
+          "title": "Scaling Advantage in Approximate Optimization with Quantum Annealing",
+          "year": "2024-01",
+          "abstract": "Quantum annealing is a heuristic optimization algorithm that exploits quantum\nevolution to approximately find lowest energy states. Quantum annealers have\nscaled up in recent years to tackle increasingly larger and more highly\nconnected discrete optimization and quantum simulation problems. Nevertheless,\ndespite numerous attempts, a computational quantum advantage in exact\noptimization using quantum annealing hardware has so far remained elusive.\nHere, we present evidence for a quantum annealing scaling advantage in\napproximate optimization. The advantage is relative to the top classical\nheuristic algorithm: parallel tempering with isoenergetic cluster moves\n(PT-ICM). The setting is a family of 2D spin-glass problems with high-precision\nspin-spin interactions. To achieve this advantage, we implement quantum\nannealing correction (QAC): an embedding of a bit-flip error-correcting code\nwith energy penalties that leverages the properties of the D-Wave Advantage\nquantum annealer to yield over 1,300 error-suppressed logical qubits on a\ndegree-5 interaction graph. We generate random spin-glass instances on this\ngraph and benchmark their time-to-epsilon, a generalization of the\ntime-to-solution metric for low-energy states. We demonstrate that with QAC,\nquantum annealing exhibits a scaling advantage over PT-ICM at sampling low\nenergy states with an optimality gap of at least 1.0%. This amounts to the\nfirst demonstration of an algorithmic quantum speedup in approximate\noptimization.",
+          "arxiv_id": "2401.07184v1"
+        },
+        {
+          "title": "Increasing the Hardness of Posiform Planting Using Random QUBOs for Programmable Quantum Annealer Benchmarking",
+          "year": "2024-11",
+          "abstract": "Posiform planting is a method for constructing QUBO problems with a single\nunique planted solution that can be tailored to arbitrary connectivity graphs.\nIn this study we investigate making posiform planted QUBOs computationally\nharder by fusing many smaller random discrete coefficient spin-glass Ising\nmodels, whose global minimum energy is computed classically using classical\nbinary integer programming optimization software, with posiform-planted QUBOs.\nThe single unique ground-state solution of the resulting QUBO problem is the\nconcatenation of (exactly one of) the ground-states of each of the smaller\nproblems. We apply these modified posiform planted QUBOs to the task of\nbenchmarking programmable D-Wave quantum annealers. The proposed method enables\ngenerating binary variable combinatorial optimization problems that cover the\nentire quantum annealing processor hardware graph, have a unique solution, are\nentirely hardware-graph-native, and can have tunable computational hardness. We\nbenchmark the capabilities of three D-Wave superconducting qubit quantum\nannealing processors, having from 563 up to 5627 qubits, to sample the optimal\nunique planted solution of problems generated by our proposed method and\ncompare them against simulated annealing and Gurobi. We find that the D-Wave\nQPU ground-state sampling success rate does not change with respect to the size\nof the random QUBOs we employ. Surprisingly, we find that some of these classes\nof QUBOs are solved at very high success rates at short annealing times\ncompared to longer annealing times for the Zephyr connectivity graph QPUs.",
+          "arxiv_id": "2411.03626v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Solving classification tasks by a receptron based on nonlinear optical speckle fields",
+          "year": "2022-11",
+          "abstract": "Among several approaches to tackle the problem of energy consumption in\nmodern computing systems, two solutions are currently investigated: one\nconsists of artificial neural networks (ANNs) based on photonic technologies,\nthe other is a different paradigm compared to ANNs and it is based on random\nnetworks of nonlinear nanoscale junctions resulting from the assembling of\nnanoparticles or nanowires as substrates for neuromorphic computing. These\nnetworks show the presence of emergent complexity and collective phenomena in\nanalogy with biological neural networks characterized by self-organization,\nredundancy, non-linearity. Starting from this background, we propose and\nformalize a generalization of the perceptron model to describe a classification\ndevice based on a network of interacting units where the input weights are\nnonlinearly dependent. We show that this model, called \"receptron\", provides\nsubstantial advantages compared to the perceptron as, for example, the solution\nof non-linearly separable Boolean functions with a single device. The receptron\nmodel is used as a starting point for the implementation of an all-optical\ndevice that exploits the non-linearity of optical speckle fields produced by a\nsolid scatterer. By encoding these speckle fields we generated a large variety\nof target Boolean functions without the need for time-consuming machine\nlearning algorithms. We demonstrate that by properly setting the model\nparameters, different classes of functions with different multiplicity can be\nsolved efficiently. The optical implementation of the receptron scheme opens\nthe way for the fabrication of a completely new class of optical devices for\nneuromorphic data processing based on a very simple hardware.",
+          "arxiv_id": "2211.01161v1"
+        },
+        {
+          "title": "A self-learning magnetic Hopfield neural network with intrinsic gradient descent adaption",
+          "year": "2025-01",
+          "abstract": "Physical neural networks using physical materials and devices to mimic\nsynapses and neurons offer an energy-efficient way to implement artificial\nneural networks. Yet, training physical neural networks are difficult and\nheavily relies on external computing resources. An emerging concept to solve\nthis issue is called physical self-learning that uses intrinsic physical\nparameters as trainable weights. Under external inputs (i.e. training data),\ntraining is achieved by the natural evolution of physical parameters that\nintrinsically adapt modern learning rules via autonomous physical process,\neliminating the requirements on external computation resources.Here, we\ndemonstrate a real spintronic system that mimics Hopfield neural networks (HNN)\nand unsupervised learning is intrinsically performed via the evolution of\nphysical process. Using magnetic texture defined conductance matrix as\ntrainable weights, we illustrate that under external voltage inputs, the\nconductance matrix naturally evolves and adapts Oja's learning algorithm in a\ngradient descent manner. The self-learning HNN is scalable and can achieve\nassociative memories on patterns with high similarities. The fast spin dynamics\nand reconfigurability of magnetic textures offer an advantageous platform\ntowards efficient autonomous training directly in materials.",
+          "arxiv_id": "2501.01853v2"
+        },
+        {
+          "title": "Graphene oxide based synaptic memristor device for neuromorphic computing",
+          "year": "2020-12",
+          "abstract": "Brain-inspired neuromorphic computing which consist neurons and synapses,\nwith an ability to perform complex information processing has unfolded a new\nparadigm of computing to overcome the von Neumann bottleneck. Electronic\nsynaptic memristor devices which can compete with the biological synapses are\nindeed significant for neuromorphic computing. In this work, we demonstrate our\nefforts to develop and realize the graphene oxide (GO) based memristor device\nas a synaptic device, which mimic as a biological synapse. Indeed, this device\nexhibits the essential synaptic learning behavior including analog memory\ncharacteristics, potentiation and depression. Furthermore,\nspike-timing-dependent-plasticity learning rule is mimicked by engineering the\npre- and post-synaptic spikes. In addition, non-volatile properties such as\nendurance, retentivity, multilevel switching of the device are explored. These\nresults suggest that Ag/GO/FTO memristor device would indeed be a potential\ncandidate for future neuromorphic computing applications.\n  Keywords: RRAM, Graphene oxide, neuromorphic computing, synaptic device,\npotentiation, depression",
+          "arxiv_id": "2012.13556v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:11:54Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

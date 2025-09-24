@@ -1,0 +1,1472 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_brain_data_EEG_functional",
+        "keywords": [
+          [
+            "brain",
+            0.030942535822520312
+          ],
+          [
+            "data",
+            0.019088875977086566
+          ],
+          [
+            "EEG",
+            0.018005605909708858
+          ],
+          [
+            "functional",
+            0.01385497384523524
+          ],
+          [
+            "network",
+            0.012650102544162867
+          ],
+          [
+            "model",
+            0.011949757614337916
+          ],
+          [
+            "fMRI",
+            0.011580198948041721
+          ],
+          [
+            "neural",
+            0.011180135103975362
+          ],
+          [
+            "connectivity",
+            0.010884449499827574
+          ],
+          [
+            "models",
+            0.010744918010388784
+          ]
+        ],
+        "count": 1935
+      },
+      "1": {
+        "name": "1_neurons_dynamics_model_network",
+        "keywords": [
+          [
+            "neurons",
+            0.027422051903301714
+          ],
+          [
+            "dynamics",
+            0.025533346983176296
+          ],
+          [
+            "model",
+            0.020417588055512092
+          ],
+          [
+            "network",
+            0.019856534325494318
+          ],
+          [
+            "networks",
+            0.018955581579704606
+          ],
+          [
+            "neural",
+            0.018804086320859635
+          ],
+          [
+            "neuronal",
+            0.01814190328119558
+          ],
+          [
+            "phase",
+            0.017759006661099985
+          ],
+          [
+            "activity",
+            0.016539630337945758
+          ],
+          [
+            "field",
+            0.014757986162996985
+          ]
+        ],
+        "count": 454
+      },
+      "2": {
+        "name": "2_visual_human_neural_models",
+        "keywords": [
+          [
+            "visual",
+            0.037997271640060025
+          ],
+          [
+            "human",
+            0.020648283268494362
+          ],
+          [
+            "neural",
+            0.019636157967659953
+          ],
+          [
+            "models",
+            0.018849836615562287
+          ],
+          [
+            "model",
+            0.01770405631693881
+          ],
+          [
+            "vision",
+            0.017005640082059174
+          ],
+          [
+            "image",
+            0.01685639406926997
+          ],
+          [
+            "object",
+            0.016743886024628663
+          ],
+          [
+            "representations",
+            0.01589562683276683
+          ],
+          [
+            "learning",
+            0.01358773127376748
+          ]
+        ],
+        "count": 342
+      },
+      "3": {
+        "name": "3_learning_memory_networks_neural",
+        "keywords": [
+          [
+            "learning",
+            0.03431780950689543
+          ],
+          [
+            "memory",
+            0.029830650398033013
+          ],
+          [
+            "networks",
+            0.027514049104037354
+          ],
+          [
+            "neural",
+            0.027437201058647102
+          ],
+          [
+            "network",
+            0.019587355753799603
+          ],
+          [
+            "recurrent",
+            0.01817855651238701
+          ],
+          [
+            "neural networks",
+            0.017993307284091972
+          ],
+          [
+            "dynamics",
+            0.01613473816442631
+          ],
+          [
+            "synaptic",
+            0.01578461749372091
+          ],
+          [
+            "plasticity",
+            0.015017700507956934
+          ]
+        ],
+        "count": 318
+      },
+      "4": {
+        "name": "4_consciousness_quantum_theory_conscious",
+        "keywords": [
+          [
+            "consciousness",
+            0.05118520782220057
+          ],
+          [
+            "quantum",
+            0.03243914430898851
+          ],
+          [
+            "theory",
+            0.023522164698346476
+          ],
+          [
+            "conscious",
+            0.022667707283030417
+          ],
+          [
+            "cognitive",
+            0.01798912996687461
+          ],
+          [
+            "experience",
+            0.017585301430486897
+          ],
+          [
+            "human",
+            0.017534562584748364
+          ],
+          [
+            "systems",
+            0.01649892092771485
+          ],
+          [
+            "physical",
+            0.015260716445400488
+          ],
+          [
+            "information",
+            0.01518807870315711
+          ]
+        ],
+        "count": 265
+      },
+      "5": {
+        "name": "5_spiking_SNNs_neural_neuromorphic",
+        "keywords": [
+          [
+            "spiking",
+            0.03660450605550483
+          ],
+          [
+            "SNNs",
+            0.02759306228736671
+          ],
+          [
+            "neural",
+            0.024315356876983146
+          ],
+          [
+            "neuromorphic",
+            0.02412871340619419
+          ],
+          [
+            "spike",
+            0.024075680346114795
+          ],
+          [
+            "Spiking",
+            0.02396729891758425
+          ],
+          [
+            "networks",
+            0.022631165195175766
+          ],
+          [
+            "neurons",
+            0.02254224755738179
+          ],
+          [
+            "learning",
+            0.02240310945252296
+          ],
+          [
+            "SNN",
+            0.021594828646906098
+          ]
+        ],
+        "count": 147
+      },
+      "6": {
+        "name": "6_language_word_LLMs_human",
+        "keywords": [
+          [
+            "language",
+            0.06505840931599093
+          ],
+          [
+            "word",
+            0.03319564650243617
+          ],
+          [
+            "LLMs",
+            0.028321115781828183
+          ],
+          [
+            "human",
+            0.025589676729877463
+          ],
+          [
+            "models",
+            0.02467163006715058
+          ],
+          [
+            "language models",
+            0.022736627124118038
+          ],
+          [
+            "words",
+            0.020422028013875517
+          ],
+          [
+            "brain",
+            0.019102715740124992
+          ],
+          [
+            "processing",
+            0.018798497636499996
+          ],
+          [
+            "Language",
+            0.01738821425066887
+          ]
+        ],
+        "count": 135
+      },
+      "7": {
+        "name": "7_neural_latent_activity_model",
+        "keywords": [
+          [
+            "neural",
+            0.04117782068021126
+          ],
+          [
+            "latent",
+            0.03152500425730032
+          ],
+          [
+            "activity",
+            0.02509895508837576
+          ],
+          [
+            "model",
+            0.025018055558346148
+          ],
+          [
+            "models",
+            0.024147942841980043
+          ],
+          [
+            "data",
+            0.023336345439210517
+          ],
+          [
+            "dynamics",
+            0.022207238151432895
+          ],
+          [
+            "population",
+            0.019003630677792094
+          ],
+          [
+            "neural activity",
+            0.014363476576546387
+          ],
+          [
+            "time",
+            0.013990338984519556
+          ]
+        ],
+        "count": 126
+      },
+      "8": {
+        "name": "8_inference_active_learning_active inference",
+        "keywords": [
+          [
+            "inference",
+            0.035283060871774394
+          ],
+          [
+            "active",
+            0.029446531264209996
+          ],
+          [
+            "learning",
+            0.028927218281351436
+          ],
+          [
+            "active inference",
+            0.028164861006351034
+          ],
+          [
+            "agents",
+            0.0257614395630018
+          ],
+          [
+            "reward",
+            0.021176353240250904
+          ],
+          [
+            "free energy",
+            0.02023610777053072
+          ],
+          [
+            "decision",
+            0.02005024935722621
+          ],
+          [
+            "free",
+            0.02005024935722621
+          ],
+          [
+            "energy",
+            0.01749661868329908
+          ]
+        ],
+        "count": 112
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6467168270380925,
+        -0.6827683497780638,
+        -0.6270020642001743,
+        -0.6855265947961429,
+        -0.6735234268333449,
+        -0.6000523661827013,
+        -0.5052631616645878,
+        -0.7069681738288128
+      ],
+      [
+        -0.6467168270380925,
+        1.0,
+        -0.6434415649438054,
+        -0.49960014268427566,
+        -0.6931259403679023,
+        -0.3468440375692913,
+        -0.6952447502278658,
+        -0.1830617371132492,
+        -0.693749629603223
+      ],
+      [
+        -0.6827683497780638,
+        -0.6434415649438054,
+        1.0,
+        -0.6060482996010378,
+        -0.7257635944827523,
+        -0.63029594620833,
+        -0.6398209428474884,
+        -0.6135443388184091,
+        -0.7271950692028284
+      ],
+      [
+        -0.6270020642001743,
+        -0.49960014268427566,
+        -0.6060482996010378,
+        1.0,
+        -0.714195488655214,
+        -0.1874351844192845,
+        -0.6762867211652669,
+        -0.5265981886732695,
+        -0.6233791272691093
+      ],
+      [
+        -0.6855265947961429,
+        -0.6931259403679023,
+        -0.7257635944827523,
+        -0.714195488655214,
+        1.0,
+        -0.7225260052953606,
+        -0.6845240492066615,
+        -0.7007257345958101,
+        -0.7067360410357446
+      ],
+      [
+        -0.6735234268333449,
+        -0.3468440375692913,
+        -0.63029594620833,
+        -0.1874351844192845,
+        -0.7225260052953606,
+        1.0,
+        -0.7044710710773785,
+        -0.5487706458380021,
+        -0.6596249768837128
+      ],
+      [
+        -0.6000523661827013,
+        -0.6952447502278658,
+        -0.6398209428474884,
+        -0.6762867211652669,
+        -0.6845240492066615,
+        -0.7044710710773785,
+        1.0,
+        -0.5642877410705563,
+        -0.7123651605823033
+      ],
+      [
+        -0.5052631616645878,
+        -0.1830617371132492,
+        -0.6135443388184091,
+        -0.5265981886732695,
+        -0.7007257345958101,
+        -0.5487706458380021,
+        -0.5642877410705563,
+        1.0,
+        -0.6701104659377873
+      ],
+      [
+        -0.7069681738288128,
+        -0.693749629603223,
+        -0.7271950692028284,
+        -0.6233791272691093,
+        -0.7067360410357446,
+        -0.6596249768837128,
+        -0.7123651605823033,
+        -0.6701104659377873,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        24,
+        3,
+        2,
+        6,
+        5,
+        3,
+        3,
+        11,
+        6
+      ],
+      "2020-02": [
+        29,
+        6,
+        5,
+        13,
+        6,
+        6,
+        2,
+        9,
+        1
+      ],
+      "2020-03": [
+        28,
+        2,
+        2,
+        8,
+        0,
+        8,
+        2,
+        8,
+        4
+      ],
+      "2020-04": [
+        23,
+        4,
+        6,
+        12,
+        4,
+        0,
+        3,
+        8,
+        5
+      ],
+      "2020-05": [
+        28,
+        1,
+        4,
+        7,
+        2,
+        3,
+        4,
+        7,
+        3
+      ],
+      "2020-06": [
+        24,
+        5,
+        13,
+        20,
+        5,
+        6,
+        7,
+        16,
+        11
+      ],
+      "2020-07": [
+        22,
+        5,
+        2,
+        15,
+        2,
+        6,
+        1,
+        11,
+        5
+      ],
+      "2020-08": [
+        21,
+        8,
+        1,
+        6,
+        4,
+        3,
+        6,
+        7,
+        3
+      ],
+      "2020-09": [
+        14,
+        4,
+        2,
+        15,
+        1,
+        6,
+        3,
+        6,
+        3
+      ],
+      "2020-10": [
+        27,
+        7,
+        5,
+        20,
+        4,
+        3,
+        2,
+        13,
+        3
+      ],
+      "2020-11": [
+        27,
+        5,
+        5,
+        10,
+        2,
+        7,
+        4,
+        9,
+        2
+      ],
+      "2020-12": [
+        20,
+        2,
+        4,
+        10,
+        7,
+        3,
+        1,
+        7,
+        1
+      ],
+      "2021-01": [
+        19,
+        2,
+        4,
+        4,
+        3,
+        3,
+        2,
+        7,
+        2
+      ],
+      "2021-02": [
+        23,
+        4,
+        3,
+        7,
+        1,
+        4,
+        2,
+        9,
+        2
+      ],
+      "2021-03": [
+        30,
+        3,
+        5,
+        12,
+        4,
+        3,
+        1,
+        8,
+        2
+      ],
+      "2021-04": [
+        21,
+        3,
+        3,
+        6,
+        2,
+        4,
+        3,
+        10,
+        3
+      ],
+      "2021-05": [
+        16,
+        2,
+        3,
+        15,
+        4,
+        3,
+        1,
+        8,
+        3
+      ],
+      "2021-06": [
+        29,
+        3,
+        9,
+        16,
+        5,
+        6,
+        6,
+        7,
+        8
+      ],
+      "2021-07": [
+        29,
+        4,
+        0,
+        11,
+        2,
+        1,
+        1,
+        9,
+        3
+      ],
+      "2021-08": [
+        22,
+        5,
+        1,
+        2,
+        1,
+        3,
+        4,
+        9,
+        3
+      ],
+      "2021-09": [
+        25,
+        7,
+        3,
+        11,
+        4,
+        5,
+        3,
+        10,
+        1
+      ],
+      "2021-10": [
+        29,
+        6,
+        6,
+        17,
+        2,
+        5,
+        4,
+        12,
+        5
+      ],
+      "2021-11": [
+        19,
+        4,
+        7,
+        10,
+        2,
+        3,
+        1,
+        10,
+        2
+      ],
+      "2021-12": [
+        33,
+        2,
+        3,
+        10,
+        4,
+        2,
+        2,
+        11,
+        9
+      ],
+      "2022-01": [
+        27,
+        2,
+        2,
+        8,
+        3,
+        3,
+        5,
+        7,
+        4
+      ],
+      "2022-02": [
+        18,
+        3,
+        5,
+        6,
+        1,
+        3,
+        6,
+        9,
+        1
+      ],
+      "2022-03": [
+        29,
+        3,
+        3,
+        14,
+        2,
+        3,
+        3,
+        11,
+        3
+      ],
+      "2022-04": [
+        23,
+        2,
+        3,
+        12,
+        5,
+        8,
+        8,
+        10,
+        2
+      ],
+      "2022-05": [
+        27,
+        1,
+        3,
+        11,
+        1,
+        9,
+        4,
+        19,
+        4
+      ],
+      "2022-06": [
+        26,
+        8,
+        5,
+        10,
+        3,
+        6,
+        5,
+        13,
+        5
+      ],
+      "2022-07": [
+        21,
+        5,
+        2,
+        7,
+        5,
+        2,
+        6,
+        9,
+        5
+      ],
+      "2022-08": [
+        23,
+        3,
+        1,
+        10,
+        5,
+        2,
+        2,
+        6,
+        8
+      ],
+      "2022-09": [
+        26,
+        4,
+        6,
+        14,
+        2,
+        3,
+        3,
+        11,
+        3
+      ],
+      "2022-10": [
+        33,
+        1,
+        1,
+        19,
+        4,
+        9,
+        7,
+        13,
+        9
+      ],
+      "2022-11": [
+        33,
+        3,
+        3,
+        18,
+        2,
+        3,
+        6,
+        12,
+        3
+      ],
+      "2022-12": [
+        24,
+        3,
+        5,
+        11,
+        6,
+        2,
+        5,
+        8,
+        6
+      ],
+      "2023-01": [
+        28,
+        3,
+        3,
+        18,
+        5,
+        2,
+        5,
+        6,
+        2
+      ],
+      "2023-02": [
+        24,
+        2,
+        3,
+        10,
+        7,
+        3,
+        6,
+        6,
+        2
+      ],
+      "2023-03": [
+        22,
+        1,
+        5,
+        10,
+        2,
+        6,
+        6,
+        11,
+        2
+      ],
+      "2023-04": [
+        20,
+        3,
+        8,
+        6,
+        5,
+        1,
+        1,
+        9,
+        1
+      ],
+      "2023-05": [
+        33,
+        5,
+        8,
+        13,
+        3,
+        5,
+        6,
+        18,
+        4
+      ],
+      "2023-06": [
+        34,
+        3,
+        7,
+        15,
+        5,
+        6,
+        3,
+        19,
+        6
+      ],
+      "2023-07": [
+        25,
+        1,
+        4,
+        14,
+        0,
+        4,
+        5,
+        4,
+        4
+      ],
+      "2023-08": [
+        28,
+        1,
+        8,
+        12,
+        3,
+        2,
+        3,
+        11,
+        4
+      ],
+      "2023-09": [
+        29,
+        2,
+        6,
+        11,
+        2,
+        5,
+        6,
+        17,
+        3
+      ],
+      "2023-10": [
+        30,
+        2,
+        6,
+        16,
+        4,
+        5,
+        13,
+        18,
+        6
+      ],
+      "2023-11": [
+        40,
+        4,
+        4,
+        15,
+        2,
+        4,
+        8,
+        16,
+        4
+      ],
+      "2023-12": [
+        25,
+        2,
+        9,
+        16,
+        1,
+        2,
+        1,
+        12,
+        7
+      ],
+      "2024-01": [
+        20,
+        4,
+        6,
+        4,
+        9,
+        4,
+        7,
+        8,
+        3
+      ],
+      "2024-02": [
+        27,
+        5,
+        5,
+        18,
+        7,
+        2,
+        5,
+        14,
+        4
+      ],
+      "2024-03": [
+        28,
+        1,
+        10,
+        9,
+        6,
+        2,
+        10,
+        11,
+        5
+      ],
+      "2024-04": [
+        27,
+        1,
+        8,
+        9,
+        3,
+        7,
+        5,
+        5,
+        5
+      ],
+      "2024-05": [
+        26,
+        6,
+        3,
+        22,
+        4,
+        4,
+        16,
+        25,
+        1
+      ],
+      "2024-06": [
+        31,
+        3,
+        5,
+        12,
+        10,
+        4,
+        11,
+        22,
+        8
+      ],
+      "2024-07": [
+        43,
+        5,
+        7,
+        12,
+        5,
+        3,
+        5,
+        10,
+        2
+      ],
+      "2024-08": [
+        29,
+        5,
+        6,
+        12,
+        4,
+        0,
+        5,
+        11,
+        6
+      ],
+      "2024-09": [
+        34,
+        6,
+        4,
+        13,
+        6,
+        8,
+        16,
+        14,
+        5
+      ],
+      "2024-10": [
+        48,
+        6,
+        11,
+        20,
+        7,
+        4,
+        13,
+        23,
+        6
+      ],
+      "2024-11": [
+        31,
+        1,
+        5,
+        12,
+        4,
+        5,
+        3,
+        17,
+        3
+      ],
+      "2024-12": [
+        42,
+        3,
+        6,
+        10,
+        8,
+        1,
+        9,
+        26,
+        4
+      ],
+      "2025-01": [
+        29,
+        6,
+        4,
+        6,
+        2,
+        5,
+        9,
+        8,
+        4
+      ],
+      "2025-02": [
+        43,
+        3,
+        5,
+        16,
+        7,
+        3,
+        18,
+        19,
+        9
+      ],
+      "2025-03": [
+        36,
+        2,
+        4,
+        7,
+        5,
+        6,
+        15,
+        15,
+        3
+      ],
+      "2025-04": [
+        39,
+        4,
+        4,
+        10,
+        7,
+        2,
+        8,
+        10,
+        2
+      ],
+      "2025-05": [
+        35,
+        7,
+        8,
+        17,
+        8,
+        2,
+        16,
+        20,
+        8
+      ],
+      "2025-06": [
+        28,
+        3,
+        6,
+        17,
+        10,
+        5,
+        23,
+        27,
+        8
+      ],
+      "2025-07": [
+        45,
+        6,
+        6,
+        15,
+        7,
+        3,
+        15,
+        20,
+        7
+      ],
+      "2025-08": [
+        43,
+        7,
+        7,
+        13,
+        6,
+        9,
+        12,
+        15,
+        7
+      ],
+      "2025-09": [
+        21,
+        3,
+        5,
+        5,
+        1,
+        0,
+        0,
+        6,
+        5
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "How Does a Single EEG Channel Tell Us About Brain States in Brain-Computer Interfaces ?",
+          "year": "2024-07",
+          "abstract": "Over recent decades, neuroimaging tools, particularly electroencephalography\n(EEG), have revolutionized our understanding of the brain and its functions.\nEEG is extensively used in traditional brain-computer interface (BCI) systems\ndue to its low cost, non-invasiveness, and high temporal resolution. This makes\nit invaluable for identifying different brain states relevant to both medical\nand non-medical applications. Although this practice is widely recognized,\ncurrent methods are mainly confined to lab or clinical environments because\nthey rely on data from multiple EEG electrodes covering the entire head.\nNonetheless, a significant advancement for these applications would be their\nadaptation for \"real-world\" use, using portable devices with a single-channel.\nIn this study, we tackle this challenge through two distinct strategies: the\nfirst approach involves training models with data from multiple channels and\nthen testing new trials on data from a single channel individually. The second\nmethod focuses on training with data from a single channel and then testing the\nperformances of the models on data from all the other channels individually. To\nefficiently classify cognitive tasks from EEG data, we propose Convolutional\nNeural Networks (CNNs) with only a few parameters and fast learnable\nspectral-temporal features. We demonstrated the feasibility of these approaches\non EEG data recorded during mental arithmetic and motor imagery tasks from\nthree datasets. We achieved the highest accuracies of 100%, 91.55% and 73.45%\nin binary and 3-class classification on specific channels across three\ndatasets. This study can contribute to the development of single-channel BCI\nand provides a robust EEG biomarker for brain states classification.",
+          "arxiv_id": "2407.16249v1"
+        },
+        {
+          "title": "High-Accuracy Machine Learning Techniques for Functional Connectome Fingerprinting and Cognitive State Decoding",
+          "year": "2022-11",
+          "abstract": "The human brain is a complex network comprised of functionally and\nanatomically interconnected brain regions. A growing number of studies have\nsuggested that empirical estimates of brain networks may be useful for\ndiscovery of biomarkers of disease and cognitive state. A prerequisite for\nrealizing this aim, however, is that brain networks also serve as reliable\nmarkers of an individual. Here, using Human Connectome Project data, we build\nupon recent studies examining brain-based fingerprints of individual subjects\nand cognitive states based on cognitively-demanding tasks that assess, for\nexample, working memory, theory of mind, and motor function. Our approach\nachieves accuracy of up to 99\\% for both identification of the subject of an\nfMRI scan, and for classification of the cognitive state of a previously-unseen\nsubject in a scan. More broadly, we explore the accuracy and reliability of\nfive different machine learning techniques on subject fingerprinting and\ncognitive state decoding objectives, using functional connectivity data from\nfMRI scans of a high number of subjects (865) across a number of cognitive\nstates (8). These results represent an advance on existing techniques for\nfunctional connectivity-based brain fingerprinting and state decoding.\nAdditionally, 16 different pre-processing pipelines are compared in order to\ncharacterize the effects of different aspects of the production of functional\nconnectomes (FCs) on the accuracy of subject and task classification, and to\nidentify possible confounds.",
+          "arxiv_id": "2211.07507v1"
+        },
+        {
+          "title": "Application of Time-Aware PC algorithm to compute Causal Functional Connectivity in Alzheimer's Disease from fMRI data",
+          "year": "2023-07",
+          "abstract": "Functional Connectivity between brain regions is known to be altered in\nAlzheimer's disease, and promises to be a biomarker for early diagnosis of the\ndisease. While several approaches for functional connectivity obtain an\nun-directed network representing stochastic associations (correlations) between\nbrain regions, association does not necessarily imply causation. In contrast,\nCausal Functional Connectivity is more informative, providing a directed\nnetwork representing causal relationships between brain regions. In this paper,\nwe obtained the causal functional connectome for the whole brain from\nrecordings of resting-state functional magnetic resonance imaging (rs-fMRI) for\nsubjects from three clinical groups: cognitively normal, mild cognitive\nimpairment, and Alzheimer's disease. We applied the recently developed\nTime-aware PC (TPC) algorithm to infer the causal functional connectome for the\nwhole brain. TPC supports model-free estimation of whole brain causal\nfunctional connectivity based on directed graphical modeling in a time series\nsetting. We then perform an exploratory analysis to identify the causal brain\nconnections between brain regions which have altered strengths between pairs of\nsubject groups, and over the three subject groups, based on edge-wise p-values\nfrom statistical tests. We used the altered causal brain connections thus\nobtained to compile a comprehensive list of brain regions impacted by\nAlzheimer's disease according to the current data set. The brain regions thus\nidentified are found to be in agreement with literature on brain regions\nimpacted by Alzheimer's disease, published by researchers from clinical/medical\ninstitutions.",
+          "arxiv_id": "2307.00253v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Exact mean-field models for spiking neural networks with adaptation",
+          "year": "2022-03",
+          "abstract": "Networks of spiking neurons with adaption have been shown to be able to\nreproduce a wide range of neural activities, including the emergent population\nbursting and spike synchrony that underpin brain disorders and normal function.\nExact mean-field models derived from spiking neural networks are extremely\nvaluable, as such models can be used to determine how individual neuron and\nnetwork parameters interact to produce macroscopic network behaviour. In the\npaper, we derive and analyze a set of exact mean-field equations for the neural\nnetwork with spike frequency adaptation. Specifically, our model is a network\nof Izhikevich neurons, where each neuron is modeled by a two dimensional system\nconsisting of a quadratic integrate and fire equation plus an equation which\nimplements spike frequency adaptation. Previous work deriving a mean-field\nmodel for this type of network, relied on the assumption of sufficiently slow\ndynamics of the adaptation variable. However, this approximation did not\nsucceeded in establishing an exact correspondence between the macroscopic\ndescription and the realistic neural network, especially when the adaptation\ntime constant was not large. The challenge lies in how to achieve a closed set\nof mean-field equations with the inclusion of the mean-field expression of the\nadaptation variable. We address this challenge by using a Lorentzian ansatz\ncombined with the moment closure approach to arrive at the mean-field system in\nthe thermodynamic limit. The resulting macroscopic description is capable of\nqualitatively and quantitatively describing the collective dynamics of the\nneural network, including transition between tonic firing and bursting.",
+          "arxiv_id": "2203.08341v1"
+        },
+        {
+          "title": "Synaptic delay induced macroscopic dynamics of the large-scale network of Izhikevich neurons",
+          "year": "2023-10",
+          "abstract": "We consider a large network of Izhikevich neurons. Each neuron has a\nquadratic integrate-and-fire type model with a recovery variable modelling\nspike frequency adaptation (SFA). We introduce a biologically motivated\nsynaptic current expression and a delay in the synaptic transmission. Following\nthe Ott-Antonsen theory, we reduce the network model to a mean-field system of\ndelayed differential equations. Numerical bifurcation analysis allows us to\nlocate higher-codimension bifurcations and to identify the regions in the\nparameter space where the network exhibits changes in the macroscopic dynamics,\nincluding transitions between states where the individual neurons exhibit\nasynchronous tonic firing and different types of synchronous bursting. We\ninvestigate the impact of the heterogeneity of the quenched input current, the\nSFA mechanism and the synaptic delay on macroscopic dynamics. In the limit that\nthe heterogeneity goes to zero, our perturbation and bifurcation analysis shows\nthat the behaviour of the mean-field model remains consistent, although this\nlimit breaks an assumption of the model reduction. For a single population of\nneurons with SFA, the synaptic delay has little effect on the generation of COs\nfor weak coupling, but favours their emergence beyond that, and even induces\nnew macroscopic dynamics. In particular, Torus bifurcations may occur, and\nthese are a crucial mechanism for the emergence of population bursting with two\nnested frequencies. We discuss how these solutions may relate to\ncross-frequency coupling which is potentially relevant for understanding\nhealthy and pathological brain functions.",
+          "arxiv_id": "2310.04596v1"
+        },
+        {
+          "title": "Macroscopic Dynamics of Neural Networks with Heterogeneous Spiking Thresholds",
+          "year": "2022-09",
+          "abstract": "Mean-field theory links the physiological properties of individual neurons to\nthe emergent dynamics of neural population activity. These models provide an\nessential tool for studying brain function at different scales; however, for\ntheir application to neural populations on large scale, they need to account\nfor differences between distinct neuron types. The Izhikevich single neuron\nmodel can account for a broad range of different neuron types and spiking\npatterns, thus rendering it an optimal candidate for a mean-field theoretic\ntreatment of brain dynamics in heterogeneous networks. Here, we derive the\nmean-field equations for networks of all-to-all coupled Izhikevich neurons with\nheterogeneous spiking thresholds. Using methods from bifurcation theory, we\nexamine the conditions under which the mean-field theory accurately predicts\nthe dynamics of the Izhikevich neuron network. To this end, we focus on three\nimportant features of the Izhikevich model that are subject here to simplifying\nassumptions: (i) spike-frequency adaptation, (ii) the spike reset conditions,\nand (iii) the distribution of single-cell spike thresholds across neurons.\n  Our results indicate that, while the mean-field model is not an exact model\nof the Izhikevich network dynamics, it faithfully captures its different\ndynamic regimes and phase transitions. We thus present a mean-field model that\ncan represent different neuron types and spiking dynamics. The model is\ncomprised of biophysical state variables and parameters, incorporates realistic\nspike resetting conditions, and accounts for heterogeneity in neural spiking\nthresholds. These features allow for a broad applicability of the model as well\nas for a direct comparison to experimental data.",
+          "arxiv_id": "2209.03501v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Brain Mapping with Dense Features: Grounding Cortical Semantic Selectivity in Natural Images With Vision Transformers",
+          "year": "2024-10",
+          "abstract": "We introduce BrainSAIL, a method for linking neural selectivity with\nspatially distributed semantic visual concepts in natural scenes. BrainSAIL\nleverages recent advances in large-scale artificial neural networks, using them\nto provide insights into the functional topology of the brain. To overcome the\nchallenge presented by the co-occurrence of multiple categories in natural\nimages, BrainSAIL exploits semantically consistent, dense spatial features from\npre-trained vision models, building upon their demonstrated ability to robustly\npredict neural activity. This method derives clean, spatially dense embeddings\nwithout requiring any additional training, and employs a novel denoising\nprocess that leverages the semantic consistency of images under random\naugmentations. By unifying the space of whole-image embeddings and dense visual\nfeatures and then applying voxel-wise encoding models to these features, we\nenable the identification of specific subregions of each image which drive\nselectivity patterns in different areas of the higher visual cortex. This\nprovides a powerful tool for dissecting the neural mechanisms that underlie\nsemantic visual processing for natural images. We validate BrainSAIL on\ncortical regions with known category selectivity, demonstrating its ability to\naccurately localize and disentangle selectivity to diverse visual concepts.\nNext, we demonstrate BrainSAIL's ability to characterize high-level visual\nselectivity to scene properties and low-level visual features such as depth,\nluminance, and saturation, providing insights into the encoding of complex\nvisual information. Finally, we use BrainSAIL to directly compare the feature\nselectivity of different brain encoding models across different regions of\ninterest in visual cortex. Our innovative method paves the way for significant\nadvances in mapping and decomposing high-level visual representations in the\nhuman brain.",
+          "arxiv_id": "2410.05266v2"
+        },
+        {
+          "title": "Biologically Inspired Visual System Architecture for Object Recognition in Autonomous Systems",
+          "year": "2020-02",
+          "abstract": "Findings in recent years on the sensitivity of convolutional neural networks\nto additive noise, light conditions and to the wholeness of the training\ndataset, indicate that this technology still lacks the robustness needed for\nthe autonomous robotic industry. In an attempt to bring computer vision\nalgorithms closer to the capabilities of a human operator, the mechanisms of\nthe human visual system was analyzed in this work. Recent studies show that the\nmechanisms behind the recognition process in the human brain include continuous\ngeneration of predictions based on prior knowledge of the world. These\npredictions enable rapid generation of contextual hypotheses that bias the\noutcome of the recognition process. This mechanism is especially advantageous\nin situations of uncertainty, when visual input is ambiguous. In addition, the\nhuman visual system continuously updates its knowledge about the world based on\nthe gaps between its prediction and the visual feedback. Convolutional neural\nnetworks are feed forward in nature and lack such top-down contextual\nattenuation mechanisms. As a result, although they process massive amounts of\nvisual information during their operation, the information is not transformed\ninto knowledge that can be used to generate contextual predictions and improve\ntheir performance. In this work, an architecture was designed that aims to\nintegrate the concepts behind the top-down prediction and learning processes of\nthe human visual system with the state of the art bottom-up object recognition\nmodels, e.g., deep convolutional neural networks. The work focuses on two\nmechanisms of the human visual system: anticipation-driven perception and\nreinforcement-driven learning. Imitating these top-down mechanisms, together\nwith the state of the art bottom-up feed-forward algorithms, resulted in an\naccurate, robust, and continuously improving target recognition model.",
+          "arxiv_id": "2002.03472v2"
+        },
+        {
+          "title": "Prune and distill: similar reformatting of image information along rat visual cortex and deep neural networks",
+          "year": "2022-05",
+          "abstract": "Visual object recognition has been extensively studied in both neuroscience\nand computer vision. Recently, the most popular class of artificial systems for\nthis task, deep convolutional neural networks (CNNs), has been shown to provide\nexcellent models for its functional analogue in the brain, the ventral stream\nin visual cortex. This has prompted questions on what, if any, are the common\nprinciples underlying the reformatting of visual information as it flows\nthrough a CNN or the ventral stream. Here we consider some prominent\nstatistical patterns that are known to exist in the internal representations of\neither CNNs or the visual cortex and look for them in the other system. We show\nthat intrinsic dimensionality (ID) of object representations along the rat\nhomologue of the ventral stream presents two distinct expansion-contraction\nphases, as previously shown for CNNs. Conversely, in CNNs, we show that\ntraining results in both distillation and active pruning (mirroring the\nincrease in ID) of low- to middle-level image information in single units, as\nrepresentations gain the ability to support invariant discrimination, in\nagreement with previous observations in rat visual cortex. Taken together, our\nfindings suggest that CNNs and visual cortex share a similarly tight\nrelationship between dimensionality expansion/reduction of object\nrepresentations and reformatting of image information.",
+          "arxiv_id": "2205.13816v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Learning fixed points of recurrent neural networks by reparameterizing the network model",
+          "year": "2023-07",
+          "abstract": "In computational neuroscience, fixed points of recurrent neural networks are\ncommonly used to model neural responses to static or slowly changing stimuli.\nThese applications raise the question of how to train the weights in a\nrecurrent neural network to minimize a loss function evaluated on fixed points.\nA natural approach is to use gradient descent on the Euclidean space of\nsynaptic weights. We show that this approach can lead to poor learning\nperformance due, in part, to singularities that arise in the loss surface. We\nuse a reparameterization of the recurrent network model to derive two\nalternative learning rules that produces more robust learning dynamics. We show\nthat these learning rules can be interpreted as steepest descent and gradient\ndescent, respectively, under a non-Euclidean metric on the space of recurrent\nweights. Our results question the common, implicit assumption that learning in\nthe brain should be expected to follow the negative Euclidean gradient of\nsynaptic weights.",
+          "arxiv_id": "2307.06732v2"
+        },
+        {
+          "title": "The computational and learning benefits of Daleian neural networks",
+          "year": "2022-10",
+          "abstract": "Dale's principle implies that biological neural networks are composed of\nneurons that are either excitatory or inhibitory. While the number of possible\narchitectures of such Daleian networks is exponentially smaller than\nnon-Daleian ones, the computational and functional implications of using\nDaleian networks by the brain are mostly unknown. Here, we use models of\nrecurrent spiking neural networks and rate-based networks to show,\nsurprisingly, that despite the structural limitations on Daleian networks, they\ncan approximate the computation performed by non-Daleian networks to a very\nhigh degree of accuracy. Moreover, we find that Daleian networks are more\nfunctionally robust to synaptic noise. We then show that unlike non-Daleian\nnetworks, Daleian ones can learn efficiently by tuning single neuron features,\nnearly as well as learning by tuning individual synaptic weights - suggesting a\nsimpler and more biologically plausible learning mechanism. We thus suggest\nthat in addition to architectural simplicity, Dale's principle confers\ncomputational and learning benefits for biological networks, and offers new\ndirections for constructing and training biologically-inspired artificial\nneural networks",
+          "arxiv_id": "2210.05961v1"
+        },
+        {
+          "title": "Biological learning in key-value memory networks",
+          "year": "2021-10",
+          "abstract": "In neuroscience, classical Hopfield networks are the standard biologically\nplausible model of long-term memory, relying on Hebbian plasticity for storage\nand attractor dynamics for recall. In contrast, memory-augmented neural\nnetworks in machine learning commonly use a key-value mechanism to store and\nread out memories in a single step. Such augmented networks achieve impressive\nfeats of memory compared to traditional variants, yet their biological\nrelevance is unclear. We propose an implementation of basic key-value memory\nthat stores inputs using a combination of biologically plausible three-factor\nplasticity rules. The same rules are recovered when network parameters are\nmeta-learned. Our network performs on par with classical Hopfield networks on\nautoassociative memory tasks and can be naturally extended to continual recall,\nheteroassociative memory, and sequence learning. Our results suggest a\ncompelling alternative to the classical Hopfield network as a model of\nbiological long-term memory.",
+          "arxiv_id": "2110.13976v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Quantum information theoretic approach to the hard problem of consciousness",
+          "year": "2025-04",
+          "abstract": "Functional theories of consciousness, based on emergence of conscious\nexperiences from the execution of a particular function by an insentient brain,\nface the hard problem of consciousness of explaining why the insentient brain\nshould produce any conscious experiences at all. This problem is exacerbated by\nthe determinism characterizing the laws of classical physics, due to the\nresulting lack of causal potency of the emergent consciousness, which is not\npresent already as a physical quantity in the deterministic equations of motion\nof the brain. Here, we present a quantum information theoretic approach to the\nhard problem of consciousness that avoids all of the drawbacks of emergence.\nThis is achieved through reductive identification of first-person subjective\nconscious states with unobservable quantum state vectors in the brain, whereas\nthe anatomically observable brain is viewed as a third-person objective\nconstruct created by classical bits of information obtained during the\nmeasurement of a subset of commuting quantum brain observables by the\nenvironment. Quantum resource theory further implies that the quantum features\nof consciousness granted by quantum no-go theorems cannot be replicated by any\nclassical physical device.",
+          "arxiv_id": "2504.18550v1"
+        },
+        {
+          "title": "Understanding Physical Processes in Describing a State of Consciousness: A Review",
+          "year": "2023-01",
+          "abstract": "The way we view the reality of nature, including ourselves, depend on\nconsciousness.It also defines the identity of the person, since we know people\nin terms of their experiences. In general, consciousness defines human\nexistence in this universe. Furthermore, consciousness is associated with the\nmost debated problems in physics such as the notion of observation, observer,in\nthe measurement problem. However,its nature, occurrence mechanism in the brain\nand the definite universal locality of the consciousness are not clearly known.\nDue to this consciousness is considered asan essential unresolved scientific\nproblem of the current era.Here, we review the physical processes which are\nassociated in tackling these challenges. Firstly, we discuss the association of\nconsciousness with transmission of signals in the brain, chain of events,\nquantum phenomena process and integrated information. We also highlight the\nroles of structure of matter,field, and the concept of universality towards\nunderstanding consciousness. Finally, we propose further studies for achieving\nbetter understanding of consciousness.",
+          "arxiv_id": "2301.09576v1"
+        },
+        {
+          "title": "Is artificial consciousness achievable? Lessons from the human brain",
+          "year": "2024-04",
+          "abstract": "We here analyse the question of developing artificial consciousness from an\nevolutionary perspective, taking the evolution of the human brain and its\nrelation with consciousness as a reference model. This kind of analysis reveals\nseveral structural and functional features of the human brain that appear to be\nkey for reaching human-like complex conscious experience and that current\nresearch on Artificial Intelligence (AI) should take into account in its\nattempt to develop systems capable of conscious processing. We argue that, even\nif AI is limited in its ability to emulate human consciousness for both\nintrinsic (structural and architectural) and extrinsic (related to the current\nstage of scientific and technological knowledge) reasons, taking inspiration\nfrom those characteristics of the brain that make conscious processing possible\nand/or modulate it, is a potentially promising strategy towards developing\nconscious AI. Also, it is theoretically possible that AI research can develop\npartial or potentially alternative forms of consciousness that is qualitatively\ndifferent from the human, and that may be either more or less sophisticated\ndepending on the perspectives. Therefore, we recommend neuroscience-inspired\ncaution in talking about artificial consciousness: since the use of the same\nword consciousness for humans and AI becomes ambiguous and potentially\nmisleading, we propose to clearly specify what is common and what differs in AI\nconscious processing from full human conscious experience.",
+          "arxiv_id": "2405.04540v2"
+        }
+      ],
+      "5": [
+        {
+          "title": "A Synapse-Threshold Synergistic Learning Approach for Spiking Neural Networks",
+          "year": "2022-06",
+          "abstract": "Spiking neural networks (SNNs) have demonstrated excellent capabilities in\nvarious intelligent scenarios. Most existing methods for training SNNs are\nbased on the concept of synaptic plasticity; however, learning in the realistic\nbrain also utilizes intrinsic non-synaptic mechanisms of neurons. The spike\nthreshold of biological neurons is a critical intrinsic neuronal feature that\nexhibits rich dynamics on a millisecond timescale and has been proposed as an\nunderlying mechanism that facilitates neural information processing. In this\nstudy, we develop a novel synergistic learning approach that involves\nsimultaneously training synaptic weights and spike thresholds in SNNs. SNNs\ntrained with synapse-threshold synergistic learning~(STL-SNNs) achieve\nsignificantly superior performance on various static and neuromorphic datasets\nthan SNNs trained with two degenerated single-learning models. During training,\nthe synergistic learning approach optimizes neural thresholds, providing the\nnetwork with stable signal transmission via appropriate firing rates. Further\nanalysis indicates that STL-SNNs are robust to noisy data and exhibit low\nenergy consumption for deep network structures. Additionally, the performance\nof STL-SNN can be further improved by introducing a generalized joint decision\nframework. Overall, our findings indicate that biologically plausible synergies\nbetween synaptic and intrinsic non-synaptic mechanisms may provide a promising\napproach for developing highly efficient SNN learning methods.",
+          "arxiv_id": "2206.06129v3"
+        },
+        {
+          "title": "SparseProp: Efficient Event-Based Simulation and Training of Sparse Recurrent Spiking Neural Networks",
+          "year": "2023-12",
+          "abstract": "Spiking Neural Networks (SNNs) are biologically-inspired models that are\ncapable of processing information in streams of action potentials. However,\nsimulating and training SNNs is computationally expensive due to the need to\nsolve large systems of coupled differential equations. In this paper, we\nintroduce SparseProp, a novel event-based algorithm for simulating and training\nsparse SNNs. Our algorithm reduces the computational cost of both the forward\nand backward pass operations from O(N) to O(log(N)) per network spike, thereby\nenabling numerically exact simulations of large spiking networks and their\nefficient training using backpropagation through time. By leveraging the\nsparsity of the network, SparseProp eliminates the need to iterate through all\nneurons at each spike, employing efficient state updates instead. We\ndemonstrate the efficacy of SparseProp across several classical\nintegrate-and-fire neuron models, including a simulation of a sparse SNN with\none million LIF neurons. This results in a speed-up exceeding four orders of\nmagnitude relative to previous event-based implementations. Our work provides\nan efficient and exact solution for training large-scale spiking neural\nnetworks and opens up new possibilities for building more sophisticated\nbrain-inspired models.",
+          "arxiv_id": "2312.17216v1"
+        },
+        {
+          "title": "Event-Based Backpropagation can compute Exact Gradients for Spiking Neural Networks",
+          "year": "2020-09",
+          "abstract": "Spiking neural networks combine analog computation with event-based\ncommunication using discrete spikes. While the impressive advances of deep\nlearning are enabled by training non-spiking artificial neural networks using\nthe backpropagation algorithm, applying this algorithm to spiking networks was\npreviously hindered by the existence of discrete spike events and\ndiscontinuities. For the first time, this work derives the backpropagation\nalgorithm for a continuous-time spiking neural network and a general loss\nfunction by applying the adjoint method together with the proper partial\nderivative jumps, allowing for backpropagation through discrete spike events\nwithout approximations. This algorithm, EventProp, backpropagates errors at\nspike times in order to compute the exact gradient in an event-based,\ntemporally and spatially sparse fashion. We use gradients computed via\nEventProp to train networks on the Yin-Yang and MNIST datasets using either a\nspike time or voltage based loss function and report competitive performance.\nOur work supports the rigorous study of gradient-based learning algorithms in\nspiking neural networks and provides insights toward their implementation in\nnovel brain-inspired hardware.",
+          "arxiv_id": "2009.08378v3"
+        }
+      ],
+      "6": [
+        {
+          "title": "Training language models to summarize narratives improves brain alignment",
+          "year": "2022-12",
+          "abstract": "Building systems that achieve a deeper understanding of language is one of\nthe central goals of natural language processing (NLP). Towards this goal,\nrecent works have begun to train language models on narrative datasets which\nrequire extracting the most critical information by integrating across long\ncontexts. However, it is still an open question whether these models are\nlearning a deeper understanding of the text, or if the models are simply\nlearning a heuristic to complete the task. This work investigates this further\nby turning to the one language processing system that truly understands complex\nlanguage: the human brain. We show that training language models for deeper\nnarrative understanding results in richer representations that have improved\nalignment to human brain activity. We further find that the improvements in\nbrain alignment are larger for character names than for other discourse\nfeatures, which indicates that these models are learning important narrative\nelements. Taken together, these results suggest that this type of training can\nindeed lead to deeper language understanding. These findings have consequences\nboth for cognitive neuroscience by revealing some of the significant factors\nbehind brain-NLP alignment, and for NLP by highlighting that understanding of\nlong-range context can be improved beyond language modeling.",
+          "arxiv_id": "2212.10898v2"
+        },
+        {
+          "title": "Path to Intelligence: Measuring Similarity between Human Brain and Large Language Model Beyond Language Task",
+          "year": "2025-08",
+          "abstract": "Large language models (LLMs) have demonstrated human-like abilities in\nlanguage-based tasks. While language is a defining feature of human\nintelligence, it emerges from more fundamental neurophysical processes rather\nthan constituting the basis of intelligence itself. In this work, we study the\nsimilarity between LLM internal states and human brain activity in a\nsensory-motor task rooted in anticipatory and visuospatial behavior. These\nabilities are essential for cognitive performance that constitute human\nintelligence. We translate the sensory-motor task into natural language in\norder to replicate the process for LLMs. We extract hidden states from\npre-trained LLMs at key time steps and compare them to human intracranial EEG\nsignals. Our results reveal that LLM-derived reactions can be linearly mapped\nonto human neural activity. These findings suggest that LLMs, with a simple\nnatural language translation to make them understand temporal-relevant tasks,\ncan approximate human neurophysical behavior in experiments involving sensory\nstimulants. In all, our contribution is two-fold: (1) We demonstrate similarity\nbetween LLM and human brain activity beyond language-based tasks. (2) We\ndemonstrate that with such similarity, LLMs could help us understand human\nbrains by enabling us to study topics in neuroscience that are otherwise\nchallenging to tackle.",
+          "arxiv_id": "2509.08831v1"
+        },
+        {
+          "title": "Word class representations spontaneously emerge in a deep neural network trained on next word prediction",
+          "year": "2023-02",
+          "abstract": "How do humans learn language, and can the first language be learned at all?\nThese fundamental questions are still hotly debated. In contemporary\nlinguistics, there are two major schools of thought that give completely\nopposite answers. According to Chomsky's theory of universal grammar, language\ncannot be learned because children are not exposed to sufficient data in their\nlinguistic environment. In contrast, usage-based models of language assume a\nprofound relationship between language structure and language use. In\nparticular, contextual mental processing and mental representations are assumed\nto have the cognitive capacity to capture the complexity of actual language use\nat all levels. The prime example is syntax, i.e., the rules by which words are\nassembled into larger units such as sentences. Typically, syntactic rules are\nexpressed as sequences of word classes. However, it remains unclear whether\nword classes are innate, as implied by universal grammar, or whether they\nemerge during language acquisition, as suggested by usage-based approaches.\nHere, we address this issue from a machine learning and natural language\nprocessing perspective. In particular, we trained an artificial deep neural\nnetwork on predicting the next word, provided sequences of consecutive words as\ninput. Subsequently, we analyzed the emerging activation patterns in the hidden\nlayers of the neural network. Strikingly, we find that the internal\nrepresentations of nine-word input sequences cluster according to the word\nclass of the tenth word to be predicted as output, even though the neural\nnetwork did not receive any explicit information about syntactic rules or word\nclasses during training. This surprising result suggests, that also in the\nhuman brain, abstract representational categories such as word classes may\nnaturally emerge as a consequence of predictive coding and processing during\nlanguage acquisition.",
+          "arxiv_id": "2302.07588v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Targeted Neural Dynamical Modeling",
+          "year": "2021-10",
+          "abstract": "Latent dynamics models have emerged as powerful tools for modeling and\ninterpreting neural population activity. Recently, there has been a focus on\nincorporating simultaneously measured behaviour into these models to further\ndisentangle sources of neural variability in their latent space. These\napproaches, however, are limited in their ability to capture the underlying\nneural dynamics (e.g. linear) and in their ability to relate the learned\ndynamics back to the observed behaviour (e.g. no time lag). To this end, we\nintroduce Targeted Neural Dynamical Modeling (TNDM), a nonlinear state-space\nmodel that jointly models the neural activity and external behavioural\nvariables. TNDM decomposes neural dynamics into behaviourally relevant and\nbehaviourally irrelevant dynamics; the relevant dynamics are used to\nreconstruct the behaviour through a flexible linear decoder and both sets of\ndynamics are used to reconstruct the neural activity through a linear decoder\nwith no time lag. We implement TNDM as a sequential variational autoencoder and\nvalidate it on simulated recordings and recordings taken from the premotor and\nmotor cortex of a monkey performing a center-out reaching task. We show that\nTNDM is able to learn low-dimensional latent dynamics that are highly\npredictive of behaviour without sacrificing its fit to the neural data.",
+          "arxiv_id": "2110.14853v1"
+        },
+        {
+          "title": "Deep inference of latent dynamics with spatio-temporal super-resolution using selective backpropagation through time",
+          "year": "2021-10",
+          "abstract": "Modern neural interfaces allow access to the activity of up to a million\nneurons within brain circuits. However, bandwidth limits often create a\ntrade-off between greater spatial sampling (more channels or pixels) and the\ntemporal frequency of sampling. Here we demonstrate that it is possible to\nobtain spatio-temporal super-resolution in neuronal time series by exploiting\nrelationships among neurons, embedded in latent low-dimensional population\ndynamics. Our novel neural network training strategy, selective backpropagation\nthrough time (SBTT), enables learning of deep generative models of latent\ndynamics from data in which the set of observed variables changes at each time\nstep. The resulting models are able to infer activity for missing samples by\ncombining observations with learned latent dynamics. We test SBTT applied to\nsequential autoencoders and demonstrate more efficient and higher-fidelity\ncharacterization of neural population dynamics in electrophysiological and\ncalcium imaging data. In electrophysiology, SBTT enables accurate inference of\nneuronal population dynamics with lower interface bandwidths, providing an\navenue to significant power savings for implanted neuroelectronic interfaces.\nIn applications to two-photon calcium imaging, SBTT accurately uncovers\nhigh-frequency temporal structure underlying neural population activity,\nsubstantially outperforming the current state-of-the-art. Finally, we\ndemonstrate that performance could be further improved by using limited,\nhigh-bandwidth sampling to pretrain dynamics models, and then using SBTT to\nadapt these models for sparsely-sampled data.",
+          "arxiv_id": "2111.00070v1"
+        },
+        {
+          "title": "Time-Dependent VAE for Building Latent Representations from Visual Neural Activity with Complex Dynamics",
+          "year": "2024-08",
+          "abstract": "Seeking high-quality representations with latent variable models (LVMs) to\nreveal the intrinsic correlation between neural activity and behavior or\nsensory stimuli has attracted much interest. Most work has focused on analyzing\nmotor neural activity that controls clear behavioral traces and has modeled\nneural temporal relationships in a way that does not conform to natural\nreality. For studies of visual brain regions, naturalistic visual stimuli are\nhigh-dimensional and time-dependent, making neural activity exhibit intricate\ndynamics. To cope with such conditions, we propose Time-Dependent Split VAE\n(TiDeSPL-VAE), a sequential LVM that decomposes visual neural activity into two\nlatent representations while considering time dependence. We specify content\nlatent representations corresponding to the component of neural activity driven\nby the current visual stimulus, and style latent representations corresponding\nto the neural dynamics influenced by the organism's internal state. To\nprogressively generate the two latent representations over time, we introduce\nstate factors to construct conditional distributions with time dependence and\napply self-supervised contrastive learning to shape them. By this means,\nTiDeSPL-VAE can effectively analyze complex visual neural activity and model\ntemporal relationships in a natural way. We compare our model with alternative\napproaches on synthetic data and neural data from the mouse visual cortex. The\nresults show that our model not only yields the best decoding performance on\nnaturalistic scenes/movies but also extracts explicit neural dynamics,\ndemonstrating that it builds latent representations more relevant to visual\nstimuli.",
+          "arxiv_id": "2408.07908v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "Deep active inference agents using Monte-Carlo methods",
+          "year": "2020-06",
+          "abstract": "Active inference is a Bayesian framework for understanding biological\nintelligence. The underlying theory brings together perception and action under\none single imperative: minimizing free energy. However, despite its theoretical\nutility in explaining intelligence, computational implementations have been\nrestricted to low-dimensional and idealized situations. In this paper, we\npresent a neural architecture for building deep active inference agents\noperating in complex, continuous state-spaces using multiple forms of\nMonte-Carlo (MC) sampling. For this, we introduce a number of techniques, novel\nto active inference. These include: i) selecting free-energy-optimal policies\nvia MC tree search, ii) approximating this optimal policy distribution via a\nfeed-forward `habitual' network, iii) predicting future parameter belief\nupdates using MC dropouts and, finally, iv) optimizing state transition\nprecision (a high-end form of attention). Our approach enables agents to learn\nenvironmental dynamics efficiently, while maintaining task performance, in\nrelation to reward-based counterparts. We illustrate this in a new toy\nenvironment, based on the dSprites data-set, and demonstrate that active\ninference agents automatically create disentangled representations that are apt\nfor modeling state transitions. In a more complex Animal-AI environment, our\nagents (using the same neural architecture) are able to simulate future state\ntransitions and actions (i.e., plan), to evince reward-directed navigation -\ndespite temporary suspension of visual input. These results show that deep\nactive inference - equipped with MC methods - provides a flexible framework to\ndevelop biologically-inspired intelligent agents, with applications in both\nmachine learning and cognitive science.",
+          "arxiv_id": "2006.04176v2"
+        },
+        {
+          "title": "The Free Energy Principle for Perception and Action: A Deep Learning Perspective",
+          "year": "2022-07",
+          "abstract": "The free energy principle, and its corollary active inference, constitute a\nbio-inspired theory that assumes biological agents act to remain in a\nrestricted set of preferred states of the world, i.e., they minimize their free\nenergy. Under this principle, biological agents learn a generative model of the\nworld and plan actions in the future that will maintain the agent in an\nhomeostatic state that satisfies its preferences. This framework lends itself\nto being realized in silico, as it comprehends important aspects that make it\ncomputationally affordable, such as variational inference and amortized\nplanning. In this work, we investigate the tool of deep learning to design and\nrealize artificial agents based on active inference, presenting a deep-learning\noriented presentation of the free energy principle, surveying works that are\nrelevant in both machine learning and active inference areas, and discussing\nthe design choices that are involved in the implementation process. This\nmanuscript probes newer perspectives for the active inference framework,\ngrounding its theoretical aspects into more pragmatic affairs, offering a\npractical guide to active inference newcomers and a starting point for deep\nlearning practitioners that would like to investigate implementations of the\nfree energy principle.",
+          "arxiv_id": "2207.06415v1"
+        },
+        {
+          "title": "Reward Maximisation through Discrete Active Inference",
+          "year": "2020-09",
+          "abstract": "Active inference is a probabilistic framework for modelling the behaviour of\nbiological and artificial agents, which derives from the principle of\nminimising free energy. In recent years, this framework has successfully been\napplied to a variety of situations where the goal was to maximise reward,\noffering comparable and sometimes superior performance to alternative\napproaches. In this paper, we clarify the connection between reward\nmaximisation and active inference by demonstrating how and when active\ninference agents perform actions that are optimal for maximising reward.\nPrecisely, we show the conditions under which active inference produces the\noptimal solution to the Bellman equation--a formulation that underlies several\napproaches to model-based reinforcement learning and control. On partially\nobserved Markov decision processes, the standard active inference scheme can\nproduce Bellman optimal actions for planning horizons of 1, but not beyond. In\ncontrast, a recently developed recursive active inference scheme (sophisticated\ninference) can produce Bellman optimal actions on any finite temporal horizon.\nWe append the analysis with a discussion of the broader relationship between\nactive inference and reinforcement learning.",
+          "arxiv_id": "2009.08111v4"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:05Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

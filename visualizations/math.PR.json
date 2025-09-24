@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_random_time_stochastic_model",
+        "keywords": [
+          [
+            "random",
+            0.03880019193714956
+          ],
+          [
+            "time",
+            0.026960899308319932
+          ],
+          [
+            "stochastic",
+            0.024841452432574504
+          ],
+          [
+            "model",
+            0.023967827392883
+          ],
+          [
+            "process",
+            0.023294177555551247
+          ],
+          [
+            "results",
+            0.021001759241586468
+          ],
+          [
+            "distribution",
+            0.019681845371254156
+          ],
+          [
+            "probability",
+            0.019287160134374266
+          ],
+          [
+            "processes",
+            0.018321401582198905
+          ],
+          [
+            "study",
+            0.01820377608190461
+          ]
+        ],
+        "count": 23104
+      },
+      "1": {
+        "name": "1_queue_service_time_server",
+        "keywords": [
+          [
+            "queue",
+            0.047083845122887026
+          ],
+          [
+            "service",
+            0.04009965915671336
+          ],
+          [
+            "time",
+            0.034484814405148036
+          ],
+          [
+            "server",
+            0.032696083644266676
+          ],
+          [
+            "queueing",
+            0.025748224968727834
+          ],
+          [
+            "traffic",
+            0.02435593866878406
+          ],
+          [
+            "servers",
+            0.02279101375626
+          ],
+          [
+            "arrival",
+            0.022020339958888215
+          ],
+          [
+            "policy",
+            0.021243511830709955
+          ],
+          [
+            "systems",
+            0.01993218327211866
+          ]
+        ],
+        "count": 564
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.08669708414245236
+      ],
+      [
+        -0.08669708414245236,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        271,
+        16
+      ],
+      "2020-02": [
+        256,
+        10
+      ],
+      "2020-03": [
+        323,
+        20
+      ],
+      "2020-04": [
+        322,
+        24
+      ],
+      "2020-05": [
+        306,
+        25
+      ],
+      "2020-06": [
+        343,
+        14
+      ],
+      "2020-07": [
+        343,
+        12
+      ],
+      "2020-08": [
+        302,
+        16
+      ],
+      "2020-09": [
+        311,
+        7
+      ],
+      "2020-10": [
+        346,
+        12
+      ],
+      "2020-11": [
+        314,
+        16
+      ],
+      "2020-12": [
+        335,
+        20
+      ],
+      "2021-01": [
+        300,
+        10
+      ],
+      "2021-02": [
+        320,
+        15
+      ],
+      "2021-03": [
+        330,
+        19
+      ],
+      "2021-04": [
+        318,
+        17
+      ],
+      "2021-05": [
+        327,
+        16
+      ],
+      "2021-06": [
+        340,
+        14
+      ],
+      "2021-07": [
+        304,
+        18
+      ],
+      "2021-08": [
+        267,
+        17
+      ],
+      "2021-09": [
+        298,
+        20
+      ],
+      "2021-10": [
+        310,
+        24
+      ],
+      "2021-11": [
+        341,
+        16
+      ],
+      "2021-12": [
+        306,
+        11
+      ],
+      "2022-01": [
+        284,
+        14
+      ],
+      "2022-02": [
+        262,
+        13
+      ],
+      "2022-03": [
+        344,
+        15
+      ],
+      "2022-04": [
+        254,
+        14
+      ],
+      "2022-05": [
+        323,
+        16
+      ],
+      "2022-06": [
+        316,
+        17
+      ],
+      "2022-07": [
+        334,
+        19
+      ],
+      "2022-08": [
+        304,
+        17
+      ],
+      "2022-09": [
+        344,
+        11
+      ],
+      "2022-10": [
+        311,
+        15
+      ],
+      "2022-11": [
+        353,
+        14
+      ],
+      "2022-12": [
+        342,
+        9
+      ],
+      "2023-01": [
+        281,
+        10
+      ],
+      "2023-02": [
+        275,
+        15
+      ],
+      "2023-03": [
+        334,
+        14
+      ],
+      "2023-04": [
+        289,
+        17
+      ],
+      "2023-05": [
+        318,
+        15
+      ],
+      "2023-06": [
+        293,
+        20
+      ],
+      "2023-07": [
+        351,
+        12
+      ],
+      "2023-08": [
+        294,
+        14
+      ],
+      "2023-09": [
+        342,
+        16
+      ],
+      "2023-10": [
+        369,
+        15
+      ],
+      "2023-11": [
+        343,
+        13
+      ],
+      "2023-12": [
+        350,
+        18
+      ],
+      "2024-01": [
+        322,
+        13
+      ],
+      "2024-02": [
+        359,
+        18
+      ],
+      "2024-03": [
+        383,
+        9
+      ],
+      "2024-04": [
+        285,
+        13
+      ],
+      "2024-05": [
+        369,
+        17
+      ],
+      "2024-06": [
+        313,
+        12
+      ],
+      "2024-07": [
+        355,
+        19
+      ],
+      "2024-08": [
+        305,
+        5
+      ],
+      "2024-09": [
+        368,
+        12
+      ],
+      "2024-10": [
+        427,
+        13
+      ],
+      "2024-11": [
+        353,
+        16
+      ],
+      "2024-12": [
+        424,
+        15
+      ],
+      "2025-01": [
+        390,
+        17
+      ],
+      "2025-02": [
+        365,
+        17
+      ],
+      "2025-03": [
+        430,
+        20
+      ],
+      "2025-04": [
+        365,
+        15
+      ],
+      "2025-05": [
+        361,
+        17
+      ],
+      "2025-06": [
+        374,
+        5
+      ],
+      "2025-07": [
+        388,
+        14
+      ],
+      "2025-08": [
+        350,
+        15
+      ],
+      "2025-09": [
+        209,
+        6
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Constrained-degree percolation on the hypercubic lattice: uniqueness and some of its consequences",
+          "year": "2024-05",
+          "abstract": "We consider the constrained-degree percolation (CDP) model on the hypercubic\nlattice. This is a continuous-time percolation model defined by a sequence\n$(U_e)_{e\\in\\mathcal{E}^d}$ of i.i.d. uniform random variables and a positive\ninteger $k$, referred to as the constraint. The model evolves as follows: each\nedge $e$ attempts to open at a random time $U_e$, independently of all other\nedges. It succeeds if, at time $U_e$, both of its end-vertices have degrees\nstrictly smaller than $k$. It is known \\cite{hartarsky2022weakly} that this\nmodel undergoes a phase transition when $d\\geq3$ for most nontrivial values of\n$k$. In this work, we prove that, for any fixed constraint, the number of\ninfinite clusters at any time $t\\in[0,1)$ is almost surely either 0 or 1. This\nuniqueness result implies the continuity of the percolation function in the\nsupercritical regime, $t\\in(t_c,1)$, where $t_c$ denotes the percolation\ncritical threshold. The proof relies on a key time-regularity property of the\nmodel: the law of the process is continuous with respect to time for local\nevents. In fact, we establish differentiability in time, thereby extending the\nresult of \\cite{SSS} to the CDP setting.",
+          "arxiv_id": "2405.09343v2"
+        },
+        {
+          "title": "Solving the Kuramoto-Sivashinsky-Burgers equation until the $6p$-th dimension: the Brownian-time paradigm",
+          "year": "2023-05",
+          "abstract": "We use our earlier Brownian-time framework to formulate and establish global\nuniqueness and local-in-time existence of the Burgers incarnation of the\nKuramoto-Sivashinsky PDE on $\\mathbb{R}_+\\times\\mathbb{R}^d$, in the class of\ntime-continuous $L^{2p}$-valued solutions, $p\\ge1$, for every $d<6p$. We assume\nneither space compactness, nor spatial coordinates dependence, nor smallness of\ninitial data. The surprising discovery of the $6p$-th dimension bound, even for\nlocal solutions, is revealed by our approach and the Brownian-time kernel --\nthe Brownian average of an angled $d$-dimensional Schr\\\"odinger propagator --\nat its heart. We use this kernel to give a systematic approach, for all\ndimensions simultaneously, including a novel formulation -- even in the\nwell-known $d=1$ case -- of the KS equation. This yields the estimates leading\nto this article's conclusions. We achieve the stated results by fusing some of\nour earlier Brownian-time stochastic processes constructions and ideas --\nencoded in the aforementioned kernel -- with analytic ones, including complex\nand harmonic analysis; by employing suitable $N$-ball approximations together\nwith fixed point theory; and by an adaptation of the stochastic analytic\nstopping-time technique to our deterministic setting. Using a separate\nstrategy, that is also built on our Brownian-time paradigm, we treat the global\nwellposedness of the multidimensional KS equation in a followup upcoming\narticle. This work also serves as a template for another forthcoming article in\nwhich we prove similar results for the time-fractional Burgers equation in\nmultidimensional space.",
+          "arxiv_id": "2305.00745v1"
+        },
+        {
+          "title": "The high-dimensional asymptotics of first order methods with random data",
+          "year": "2021-12",
+          "abstract": "We study a class of deterministic flows in ${\\mathbb R}^{d\\times k}$,\nparametrized by a random matrix ${\\boldsymbol X}\\in {\\mathbb R}^{n\\times d}$\nwith i.i.d. centered subgaussian entries. We characterize the asymptotic\nbehavior of these flows over bounded time horizons, in the high-dimensional\nlimit in which $n,d\\to\\infty$ with $k$ fixed and converging aspect ratios\n$n/d\\to\\delta$. The asymptotic characterization we prove is in terms of a\nsystem of a nonlinear stochastic process in $k$ dimensions, whose parameters\nare determined by a fixed point condition. This type of characterization is\nknown in physics as dynamical mean field theory. Rigorous results of this type\nhave been obtained in the past for a few spin glass models. Our proof is based\non time discretization and a reduction to certain iterative schemes known as\napproximate message passing (AMP) algorithms, as opposed to earlier work that\nwas based on large deviations theory and stochastic processes theory. The new\napproach provides a unified view of a general class of algorithms and implies\nthat the high-dimensional behavior of the flow is universal with respect to the\ndistribution of the entries of ${\\boldsymbol X}$.\n  As specific applications, we obtain high-dimensional characterizations of\ngradient flow in some classical models from statistics and machine learning,\nunder a random design assumption.",
+          "arxiv_id": "2112.07572v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Workload analysis of a two-queue fluid polling model",
+          "year": "2021-12",
+          "abstract": "In this paper, we analyze a two-queue random time-limited Markov modulated\npolling model. In the first part of the paper, we investigate the fluid\nversion: Fluid arrives at the two queues as two independent flows with\ndeterministic rate. There is a single server that serves both queues at\nconstant speeds. The server spends an exponentially distributed amount of time\nin each queue. After the completion of such a visit time to one queue, the\nserver instantly switches to the other queue, i.e., there is no switchover\ntime.\n  For this model, we first derive the Laplace-Stieltjes Transform (LST) of the\nstationary marginal fluid content/workload at each queue. Subsequently, we\nderive a functional equation for the LST of the two-dimensional workload\ndistribution that leads to a Riemann-Hilbert boundary value problem (BVP).\nAfter taking a heavy-traffic limit, and restricting ourselves to the symmetric\ncase, the boundary value problem simplifies and can be solved explicitly.\n  In the second part of the paper, allowing for more general (L\\'evy) input\nprocesses and server switching policies, we investigate the transient\nprocess-limit of the joint workload in heavy traffic. Again solving a BVP, we\ndetermine the stationary distribution of the limiting process. We show that, in\nthe symmetric case, this distribution coincides with our earlier solution of\nthe BVP, implying that in this case the two limits (stationarity and heavy\ntraffic) commute.",
+          "arxiv_id": "2112.04819v1"
+        },
+        {
+          "title": "A Robust Queueing Network Analyzer Based on Indices of Dispersion",
+          "year": "2020-03",
+          "abstract": "We develop a robust queueing network analyzer algorithm to approximate the\nsteady-state performance of a single-class open queueing network of\nsingle-server queues with Markovian routing. The algorithm allows non-renewal\nexternal arrival processes, general service-time distributions and customer\nfeedback. We focus on the customer flows, defined as the continuous-time\nprocesses counting customers flowing into or out of the network, or flowing\nfrom one queue to another. Each flow is partially characterized by its rate and\na continuous function that measures the stochastic variability over time. This\nfunction is a scaled version of the variance-time curve, called the index of\ndispersion for counts (IDC). The required IDC functions for the flows can be\ncalculated from the model primitives, estimated from data or approximated by\nsolving a set of linear equations. A robust queueing technique is used to\ngenerate approximations of the mean steady-state performance at each queue from\nthe IDC of the total arrival flow and the service specification at that queue.\nThe algorithm effectiveness is supported by extensive simulation studies and\nheavy-traffic limits.",
+          "arxiv_id": "2003.11174v1"
+        },
+        {
+          "title": "Diffusion approximation of the stationary distribution of a two-level single server queue",
+          "year": "2023-12",
+          "abstract": "We consider a single server queue which has a threshold to change its arrival\nprocess and service speed by its queue length, which is referred to as a\ntwo-level single server queue. This model is motivated by an energy saving\nproblem for a single server queue whose arrival process and service speed are\ncontrolled. To get its performance in tractable form, we study the limit of the\nstationary distribution of the queue length in this two-level queue under\nscaling in heavy traffic. Except for a special case, this limit corresponds to\nits diffusion approximation. It is shown that this limiting distribution is\ntruncated exponential (or uniform if the drift is null) below the threshold\nlevel and exponential above it under suitably chosen system parameters and\ngenerally distributed inter-arrival times and workloads brought by customers.\nThis result is proved under a mild limitation on arrival parameters using the\nso called BAR approach studied in Braverman, Dai and Miyazawa (2017, 2023) and\nMiyazawa (2017, 2023). We also intuitively discuss about a diffusion process\ncorresponding to the limit of the stationary distribution under scaling.",
+          "arxiv_id": "2312.11284v9"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:36:06Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

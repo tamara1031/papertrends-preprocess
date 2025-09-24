@@ -1,0 +1,868 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_genome_sequences_genomes_sequence",
+        "keywords": [
+          [
+            "genome",
+            0.03127917420305497
+          ],
+          [
+            "sequences",
+            0.023020210636045955
+          ],
+          [
+            "genomes",
+            0.022197693307157866
+          ],
+          [
+            "sequence",
+            0.021667476501616077
+          ],
+          [
+            "SARS",
+            0.021031468199952413
+          ],
+          [
+            "data",
+            0.01952112621886366
+          ],
+          [
+            "analysis",
+            0.01867783496587486
+          ],
+          [
+            "sequencing",
+            0.01855684934432425
+          ],
+          [
+            "DNA",
+            0.017673729671433835
+          ],
+          [
+            "species",
+            0.014941297948546
+          ]
+        ],
+        "count": 369
+      },
+      "1": {
+        "name": "1_cell_single_single cell_data",
+        "keywords": [
+          [
+            "cell",
+            0.07454861383924197
+          ],
+          [
+            "single",
+            0.040190155324701576
+          ],
+          [
+            "single cell",
+            0.03987966633740798
+          ],
+          [
+            "data",
+            0.03956630743580029
+          ],
+          [
+            "seq",
+            0.03672649565899519
+          ],
+          [
+            "scRNA",
+            0.028920381880006812
+          ],
+          [
+            "gene",
+            0.024569363791602728
+          ],
+          [
+            "RNA",
+            0.023468104910497455
+          ],
+          [
+            "analysis",
+            0.020410273236843544
+          ],
+          [
+            "cells",
+            0.019461645860015562
+          ]
+        ],
+        "count": 169
+      },
+      "2": {
+        "name": "2_DNA_models_sequences_language",
+        "keywords": [
+          [
+            "DNA",
+            0.03515111414544872
+          ],
+          [
+            "models",
+            0.034797778790632915
+          ],
+          [
+            "sequences",
+            0.027296090110542272
+          ],
+          [
+            "language",
+            0.026983721188928837
+          ],
+          [
+            "model",
+            0.026914208097084558
+          ],
+          [
+            "data",
+            0.02277492397744245
+          ],
+          [
+            "sequence",
+            0.02263756861827663
+          ],
+          [
+            "genomic",
+            0.020707330307394915
+          ],
+          [
+            "tasks",
+            0.02017229533898341
+          ],
+          [
+            "learning",
+            0.0176710630898451
+          ]
+        ],
+        "count": 146
+      },
+      "3": {
+        "name": "3_cancer_data_omics_multi",
+        "keywords": [
+          [
+            "cancer",
+            0.045035360722627836
+          ],
+          [
+            "data",
+            0.04225376971345828
+          ],
+          [
+            "omics",
+            0.038515729049691555
+          ],
+          [
+            "multi",
+            0.026859715474857507
+          ],
+          [
+            "learning",
+            0.024962696780155683
+          ],
+          [
+            "omics data",
+            0.021752337123122023
+          ],
+          [
+            "survival",
+            0.020808117749301146
+          ],
+          [
+            "gene",
+            0.017237108716993795
+          ],
+          [
+            "models",
+            0.016972298791104526
+          ],
+          [
+            "feature",
+            0.016594167059745576
+          ]
+        ],
+        "count": 134
+      },
+      "4": {
+        "name": "4_genetic_GWAS_variants_disease",
+        "keywords": [
+          [
+            "genetic",
+            0.04497119991418281
+          ],
+          [
+            "GWAS",
+            0.029090999073467794
+          ],
+          [
+            "variants",
+            0.028153552016490824
+          ],
+          [
+            "disease",
+            0.025246379919032242
+          ],
+          [
+            "traits",
+            0.021794549594705868
+          ],
+          [
+            "data",
+            0.02084027269214589
+          ],
+          [
+            "risk",
+            0.020196979570522106
+          ],
+          [
+            "genes",
+            0.02017710133595631
+          ],
+          [
+            "associated",
+            0.019371838371253804
+          ],
+          [
+            "association",
+            0.018675336015028552
+          ]
+        ],
+        "count": 102
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6655802424574604,
+        -0.4799808048096673,
+        -0.664175275614644,
+        -0.6488463493611529
+      ],
+      [
+        -0.6655802424574604,
+        1.0,
+        -0.6209587421770566,
+        -0.41739194480048225,
+        -0.6829418093626348
+      ],
+      [
+        -0.4799808048096673,
+        -0.6209587421770566,
+        1.0,
+        -0.6382962307721621,
+        -0.6767029239259496
+      ],
+      [
+        -0.664175275614644,
+        -0.41739194480048225,
+        -0.6382962307721621,
+        1.0,
+        -0.6440848269642183
+      ],
+      [
+        -0.6488463493611529,
+        -0.6829418093626348,
+        -0.6767029239259496,
+        -0.6440848269642183,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        4,
+        3,
+        0,
+        2,
+        3
+      ],
+      "2020-02": [
+        3,
+        3,
+        2,
+        3,
+        3
+      ],
+      "2020-03": [
+        8,
+        4,
+        3,
+        0,
+        2
+      ],
+      "2020-04": [
+        13,
+        3,
+        0,
+        5,
+        1
+      ],
+      "2020-05": [
+        8,
+        8,
+        1,
+        2,
+        3
+      ],
+      "2020-06": [
+        6,
+        5,
+        2,
+        1,
+        0
+      ],
+      "2020-07": [
+        10,
+        4,
+        2,
+        2,
+        2
+      ],
+      "2020-08": [
+        6,
+        2,
+        1,
+        3,
+        0
+      ],
+      "2020-09": [
+        6,
+        0,
+        2,
+        2,
+        1
+      ],
+      "2020-10": [
+        6,
+        3,
+        5,
+        5,
+        2
+      ],
+      "2020-11": [
+        13,
+        3,
+        2,
+        4,
+        2
+      ],
+      "2020-12": [
+        8,
+        2,
+        2,
+        0,
+        4
+      ],
+      "2021-01": [
+        5,
+        7,
+        3,
+        3,
+        5
+      ],
+      "2021-02": [
+        5,
+        5,
+        3,
+        2,
+        3
+      ],
+      "2021-03": [
+        4,
+        2,
+        2,
+        4,
+        0
+      ],
+      "2021-04": [
+        3,
+        5,
+        2,
+        2,
+        1
+      ],
+      "2021-05": [
+        9,
+        0,
+        1,
+        4,
+        0
+      ],
+      "2021-06": [
+        8,
+        3,
+        2,
+        1,
+        1
+      ],
+      "2021-07": [
+        6,
+        2,
+        0,
+        5,
+        5
+      ],
+      "2021-08": [
+        6,
+        2,
+        0,
+        3,
+        1
+      ],
+      "2021-09": [
+        6,
+        3,
+        1,
+        3,
+        2
+      ],
+      "2021-10": [
+        6,
+        7,
+        3,
+        0,
+        2
+      ],
+      "2021-11": [
+        5,
+        5,
+        0,
+        5,
+        0
+      ],
+      "2021-12": [
+        10,
+        4,
+        4,
+        3,
+        3
+      ],
+      "2022-01": [
+        6,
+        3,
+        1,
+        3,
+        4
+      ],
+      "2022-02": [
+        3,
+        4,
+        0,
+        0,
+        1
+      ],
+      "2022-03": [
+        1,
+        3,
+        1,
+        3,
+        3
+      ],
+      "2022-04": [
+        1,
+        3,
+        5,
+        1,
+        1
+      ],
+      "2022-05": [
+        7,
+        4,
+        2,
+        0,
+        2
+      ],
+      "2022-06": [
+        8,
+        3,
+        2,
+        0,
+        2
+      ],
+      "2022-07": [
+        5,
+        4,
+        2,
+        2,
+        3
+      ],
+      "2022-08": [
+        4,
+        6,
+        1,
+        1,
+        2
+      ],
+      "2022-09": [
+        9,
+        5,
+        2,
+        1,
+        0
+      ],
+      "2022-10": [
+        5,
+        3,
+        3,
+        3,
+        6
+      ],
+      "2022-11": [
+        6,
+        4,
+        6,
+        10,
+        0
+      ],
+      "2022-12": [
+        2,
+        4,
+        5,
+        5,
+        2
+      ],
+      "2023-01": [
+        5,
+        7,
+        0,
+        3,
+        6
+      ],
+      "2023-02": [
+        7,
+        4,
+        0,
+        5,
+        1
+      ],
+      "2023-03": [
+        6,
+        5,
+        3,
+        4,
+        1
+      ],
+      "2023-04": [
+        9,
+        7,
+        3,
+        3,
+        2
+      ],
+      "2023-05": [
+        3,
+        3,
+        7,
+        2,
+        2
+      ],
+      "2023-06": [
+        2,
+        3,
+        6,
+        4,
+        3
+      ],
+      "2023-07": [
+        3,
+        4,
+        4,
+        4,
+        1
+      ],
+      "2023-08": [
+        5,
+        4,
+        2,
+        5,
+        1
+      ],
+      "2023-09": [
+        6,
+        7,
+        4,
+        1,
+        1
+      ],
+      "2023-10": [
+        9,
+        9,
+        3,
+        1,
+        3
+      ],
+      "2023-11": [
+        8,
+        10,
+        8,
+        2,
+        2
+      ],
+      "2023-12": [
+        4,
+        3,
+        3,
+        3,
+        2
+      ],
+      "2024-01": [
+        4,
+        7,
+        4,
+        5,
+        1
+      ],
+      "2024-02": [
+        4,
+        5,
+        6,
+        4,
+        4
+      ],
+      "2024-03": [
+        6,
+        7,
+        1,
+        5,
+        2
+      ],
+      "2024-04": [
+        1,
+        3,
+        1,
+        0,
+        3
+      ],
+      "2024-05": [
+        10,
+        6,
+        2,
+        1,
+        2
+      ],
+      "2024-06": [
+        6,
+        4,
+        3,
+        1,
+        2
+      ],
+      "2024-07": [
+        9,
+        6,
+        8,
+        1,
+        5
+      ],
+      "2024-08": [
+        2,
+        9,
+        2,
+        8,
+        3
+      ],
+      "2024-09": [
+        8,
+        7,
+        3,
+        3,
+        2
+      ],
+      "2024-10": [
+        10,
+        7,
+        15,
+        7,
+        4
+      ],
+      "2024-11": [
+        10,
+        6,
+        7,
+        4,
+        5
+      ],
+      "2024-12": [
+        5,
+        8,
+        11,
+        4,
+        4
+      ],
+      "2025-01": [
+        6,
+        9,
+        5,
+        2,
+        3
+      ],
+      "2025-02": [
+        2,
+        8,
+        8,
+        1,
+        1
+      ],
+      "2025-03": [
+        9,
+        5,
+        6,
+        4,
+        4
+      ],
+      "2025-04": [
+        10,
+        6,
+        5,
+        3,
+        2
+      ],
+      "2025-05": [
+        10,
+        13,
+        14,
+        5,
+        3
+      ],
+      "2025-06": [
+        8,
+        13,
+        10,
+        3,
+        4
+      ],
+      "2025-07": [
+        7,
+        12,
+        4,
+        2,
+        2
+      ],
+      "2025-08": [
+        3,
+        10,
+        7,
+        5,
+        4
+      ],
+      "2025-09": [
+        5,
+        2,
+        3,
+        2,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Accelerating Genome Sequence Analysis via Efficient Hardware/Algorithm Co-Design",
+          "year": "2021-11",
+          "abstract": "Genome sequence analysis plays a pivotal role in enabling many medical and\nscientific advancements in personalized medicine, outbreak tracing, and\nforensics. However, the analysis of genome sequencing data is currently\nbottlenecked by the computational power and memory bandwidth limitations of\nexisting systems. In this dissertation, we propose four major works, where we\ncharacterize the real-system behavior of the genome sequence analysis pipeline\nand its associated tools, expose the bottlenecks and tradeoffs, and co-design\nfast and efficient algorithms along with scalable and energy-efficient\ncustomized hardware accelerators for the key bottlenecks to enable faster\ngenome sequence analysis.\n  First, we comprehensively analyze the tools in the genome assembly pipeline\nfor long reads in multiple dimensions, uncovering bottlenecks and tradeoffs\nthat different combinations of tools and different underlying systems lead to.\nSecond, we propose GenASM, an acceleration framework that builds upon\nbitvector-based approximate string matching to accelerate multiple steps of the\ngenome sequence analysis pipeline. We co-design our highly-parallel, scalable\nand memory-efficient algorithms with low-power and area-efficient hardware\naccelerators. Third, we implement an FPGA-based prototype for GenASM, where\nstate-of-the-art 3D-stacked memory offers high memory bandwidth and FPGA\nresources offer high parallelism. Fourth, we propose SeGraM, the first hardware\nacceleration framework for sequence-to-graph mapping and alignment. We\nco-design algorithms and accelerators for memory-efficient minimizer-based\nseeding and bitvector-based, highly-parallel sequence-to-graph alignment.\n  Overall, we demonstrate that genome sequence analysis can be accelerated by\nco-designing scalable and energy-efficient customized accelerators along with\nefficient algorithms for the key steps of genome sequence analysis.",
+          "arxiv_id": "2111.01916v1"
+        },
+        {
+          "title": "GRAMEP: an alignment-free method based on the Maximum Entropy Principle for identifying SNPs",
+          "year": "2024-05",
+          "abstract": "Background: Advances in high throughput sequencing technologies provide a\nhuge number of genomes to be analyzed. Thus, computational methods play a\ncrucial role in analyzing and extracting knowledge from the data generated.\nInvestigating genomic mutations is critical because of their impact on\nchromosomal evolution, genetic disorders, and diseases. It is common to adopt\naligning sequences for analyzing genomic variations. However, this approach can\nbe computationally expensive and restrictive in scenarios with large datasets.\nResults: We present a novel method for identifying single nucleotide\npolymorphisms (SNPs) in DNA sequences from assembled genomes. This study\nproposes GRAMEP, an alignment-free approach that adopts the principle of\nmaximum entropy to discover the most informative k-mers specific to a genome or\nset of sequences under investigation. The informative k-mers enable the\ndetection of variant-specific mutations in comparison to a reference genome or\nother set of sequences. In addition, our method offers the possibility of\nclassifying novel sequences with no need for organism-specific information.\nGRAMEP demonstrated high accuracy in both in silico simulations and analyses of\nviral genomes, including Dengue, HIV, and SARS-CoV-2. Our approach maintained\naccurate SARS-CoV-2 variant identification while demonstrating a lower\ncomputational cost compared to methods with the same purpose. Conclusions:\nGRAMEP is an open and user-friendly software based on maximum entropy that\nprovides an efficient alignment-free approach to identifying and classifying\nunique genomic subsequences and SNPs with high accuracy, offering advantages\nover comparative methods. The instructions for use, applicability, and\nusability of GRAMEP are open access at\nhttps://github.com/omatheuspimenta/GRAMEP",
+          "arxiv_id": "2405.01715v2"
+        },
+        {
+          "title": "GenStore: A High-Performance and Energy-Efficient In-Storage Computing System for Genome Sequence Analysis",
+          "year": "2022-02",
+          "abstract": "Read mapping is a fundamental, yet computationally-expensive step in many\ngenomics applications. It is used to identify potential matches and differences\nbetween fragments (called reads) of a sequenced genome and an already known\ngenome (called a reference genome). To address the computational challenges in\ngenome analysis, many prior works propose various approaches such as filters\nthat select the reads that must undergo expensive computation, efficient\nheuristics, and hardware acceleration. While effective at reducing the\ncomputation overhead, all such approaches still require the costly movement of\na large amount of data from storage to the rest of the system, which can\nsignificantly lower the end-to-end performance of read mapping in conventional\nand emerging genomics systems.\n  We propose GenStore, the first in-storage processing system designed for\ngenome sequence analysis that greatly reduces both data movement and\ncomputational overheads of genome sequence analysis by exploiting low-cost and\naccurate in-storage filters. GenStore leverages hardware/software co-design to\naddress the challenges of in-storage processing, supporting reads with 1)\ndifferent read lengths and error rates, and 2) different degrees of genetic\nvariation. Through rigorous analysis of read mapping processes, we meticulously\ndesign low-cost hardware accelerators and data/computation flows inside a NAND\nflash-based SSD. Our evaluation using a wide range of real genomic datasets\nshows that GenStore, when implemented in three modern SSDs, significantly\nimproves the read mapping performance of state-of-the-art software (hardware)\nbaselines by 2.07-6.05$\\times$ (1.52-3.32$\\times$) for read sets with high\nsimilarity to the reference genome and 1.45-33.63$\\times$ (2.70-19.2$\\times$)\nfor read sets with low similarity to the reference genome.",
+          "arxiv_id": "2202.10400v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Review of Single-cell RNA-seq Data Clustering for Cell Type Identification and Characterization",
+          "year": "2020-01",
+          "abstract": "In recent years, the advances in single-cell RNA-seq techniques have enabled\nus to perform large-scale transcriptomic profiling at single-cell resolution in\na high-throughput manner. Unsupervised learning such as data clustering has\nbecome the central component to identify and characterize novel cell types and\ngene expression patterns. In this study, we review the existing single-cell\nRNA-seq data clustering methods with critical insights into the related\nadvantages and limitations. In addition, we also review the upstream\nsingle-cell RNA-seq data processing techniques such as quality control,\nnormalization, and dimension reduction. We conduct performance comparison\nexperiments to evaluate several popular single-cell RNA-seq clustering\napproaches on two single-cell transcriptomic datasets.",
+          "arxiv_id": "2001.01006v1"
+        },
+        {
+          "title": "scSiameseClu: A Siamese Clustering Framework for Interpreting single-cell RNA Sequencing Data",
+          "year": "2025-05",
+          "abstract": "Single-cell RNA sequencing (scRNA-seq) reveals cell heterogeneity, with cell\nclustering playing a key role in identifying cell types and marker genes.\nRecent advances, especially graph neural networks (GNNs)-based methods, have\nsignificantly improved clustering performance. However, the analysis of\nscRNA-seq data remains challenging due to noise, sparsity, and high\ndimensionality. Compounding these challenges, GNNs often suffer from\nover-smoothing, limiting their ability to capture complex biological\ninformation. In response, we propose scSiameseClu, a novel Siamese Clustering\nframework for interpreting single-cell RNA-seq data, comprising of 3 key steps:\n(1) Dual Augmentation Module, which applies biologically informed perturbations\nto the gene expression matrix and cell graph relationships to enhance\nrepresentation robustness; (2) Siamese Fusion Module, which combines\ncross-correlation refinement and adaptive information fusion to capture complex\ncellular relationships while mitigating over-smoothing; and (3) Optimal\nTransport Clustering, which utilizes Sinkhorn distance to efficiently align\ncluster assignments with predefined proportions while maintaining balance.\nComprehensive evaluations on seven real-world datasets demonstrate\nthat~\\methodname~outperforms state-of-the-art methods in single-cell\nclustering, cell type annotation, and cell type classification, providing a\npowerful tool for scRNA-seq data interpretation.",
+          "arxiv_id": "2505.12626v1"
+        },
+        {
+          "title": "scBiGNN: Bilevel Graph Representation Learning for Cell Type Classification from Single-cell RNA Sequencing Data",
+          "year": "2023-12",
+          "abstract": "Single-cell RNA sequencing (scRNA-seq) technology provides high-throughput\ngene expression data to study the cellular heterogeneity and dynamics of\ncomplex organisms. Graph neural networks (GNNs) have been widely used for\nautomatic cell type classification, which is a fundamental problem to solve in\nscRNA-seq analysis. However, existing methods do not sufficiently exploit both\ngene-gene and cell-cell relationships, and thus the true potential of GNNs is\nnot realized. In this work, we propose a bilevel graph representation learning\nmethod, named scBiGNN, to simultaneously mine the relationships at both gene\nand cell levels for more accurate single-cell classification. Specifically,\nscBiGNN comprises two GNN modules to identify cell types. A gene-level GNN is\nestablished to adaptively learn gene-gene interactions and cell representations\nvia the self-attention mechanism, and a cell-level GNN builds on the cell-cell\ngraph that is constructed from the cell representations generated by the\ngene-level GNN. To tackle the scalability issue for processing a large number\nof cells, scBiGNN adopts an Expectation Maximization (EM) framework in which\nthe two modules are alternately trained via the E-step and M-step to learn from\neach other. Through this interaction, the gene- and cell-level structural\ninformation is integrated to gradually enhance the classification performance\nof both GNN modules. Experiments on benchmark datasets demonstrate that our\nscBiGNN outperforms a variety of existing methods for cell type classification\nfrom scRNA-seq data.",
+          "arxiv_id": "2312.10310v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "GENERator: A Long-Context Generative Genomic Foundation Model",
+          "year": "2025-02",
+          "abstract": "Advancements in DNA sequencing technologies have significantly improved our\nability to decode genomic sequences. However, the prediction and interpretation\nof these sequences remain challenging due to the intricate nature of genetic\nmaterial. Large language models (LLMs) have introduced new opportunities for\nbiological sequence analysis. Recent developments in genomic language models\nhave underscored the potential of LLMs in deciphering DNA sequences.\nNonetheless, existing models often face limitations in robustness and\napplication scope, primarily due to constraints in model structure and training\ndata scale. To address these limitations, we present GENERator, a generative\ngenomic foundation model featuring a context length of 98k base pairs (bp) and\n1.2B parameters. Trained on an expansive dataset comprising 386B bp of\neukaryotic DNA, the GENERator demonstrates state-of-the-art performance across\nboth established and newly proposed benchmarks. The model adheres to the\ncentral dogma of molecular biology, accurately generating protein-coding\nsequences that translate into proteins structurally analogous to known\nfamilies. It also shows significant promise in sequence optimization,\nparticularly through the prompt-responsive generation of enhancer sequences\nwith specific activity profiles. These capabilities position the GENERator as a\npivotal tool for genomic research and biotechnological advancement, enhancing\nour ability to interpret and predict complex biological systems and enabling\nprecise genomic interventions. Implementation details and supplementary\nresources are available at https://github.com/GenerTeam/GENERator.",
+          "arxiv_id": "2502.07272v3"
+        },
+        {
+          "title": "DNAHLM -- DNA sequence and Human Language mixed large language Model",
+          "year": "2024-10",
+          "abstract": "There are already many DNA large language models, but most of them still\nfollow traditional uses, such as extracting sequence features for\nclassification tasks. More innovative applications of large language models,\nsuch as prompt engineering, RAG, and zero-shot or few-shot prediction, remain\nchallenging for DNA-based models. The key issue lies in the fact that DNA\nmodels and human natural language models are entirely separate; however,\ntechniques like prompt engineering require the use of natural language, thereby\nsignificantly limiting the application of DNA large language models. This paper\nintroduces a pre-trained model trained on the GPT-2 network, combining DNA\nsequences and English text, and uses a unified BPE tokenization method. We then\nconvert classification and other downstream tasks into Alpaca format\ninstruction data, and perform instruction fine-tuning on this pre-trained model\nto create a fine-tuned model capable of handling multiple tasks. The model has\ndemonstrated its effectiveness in DNA related zero-shot prediction and\nmultitask application. This research provides a highly promising direction for\nbuilding a unified DNA sequence task framework.",
+          "arxiv_id": "2410.16917v2"
+        },
+        {
+          "title": "Find Central Dogma Again: Leveraging Multilingual Transfer in Large Language Models",
+          "year": "2025-02",
+          "abstract": "In recent years, large language models (LLMs) have achieved state-of-the-art\nresults in various biological sequence analysis tasks, such as sequence\nclassification, structure prediction, and function prediction. Similar to\nadvancements in AI for other scientific fields, deeper research into biological\nLLMs has begun to focus on using these models to rediscover important existing\nbiological laws or uncover entirely new patterns in biological sequences. This\nstudy leverages GPT-like LLMs to utilize language transfer capabilities to\nrediscover the genetic code rules of the central dogma. In our experimental\ndesign, we transformed the central dogma into a binary classification problem\nof aligning DNA sequences with protein sequences, where positive examples are\nmatching DNA and protein sequences, and negative examples are non-matching\npairs. We first trained a GPT-2 model from scratch using a dataset comprising\nprotein sequences, DNA sequences, and sequences from languages such as English\nand Chinese. Subsequently, we fine-tuned the model using the natural language\nsentences similarity judgment dataset from PAWS-X. When tested on a dataset for\nDNA and protein sequence alignment judgment, the fine-tuned model achieved a\nclassification accuracy of 81%. The study also analyzed factors contributing to\nthis zero-shot capability, including model training stability and types of\ntraining data. This research demonstrates that LLMs can, through the transfer\nof natural language capabilities and solely relying on the analysis of\nsequences themselves, rediscover the central dogma without prior knowledge of\nit. This study bridges natural language and genetic language, opening a new\ndoor for AI-driven biological research.",
+          "arxiv_id": "2502.06253v3"
+        }
+      ],
+      "3": [
+        {
+          "title": "OmiEmbed: a unified multi-task deep learning framework for multi-omics data",
+          "year": "2021-02",
+          "abstract": "High-dimensional omics data contains intrinsic biomedical information that is\ncrucial for personalised medicine. Nevertheless, it is challenging to capture\nthem from the genome-wide data due to the large number of molecular features\nand small number of available samples, which is also called 'the curse of\ndimensionality' in machine learning. To tackle this problem and pave the way\nfor machine learning aided precision medicine, we proposed a unified multi-task\ndeep learning framework named OmiEmbed to capture biomedical information from\nhigh-dimensional omics data with the deep embedding and downstream task\nmodules. The deep embedding module learnt an omics embedding that mapped\nmultiple omics data types into a latent space with lower dimensionality. Based\non the new representation of multi-omics data, different downstream task\nmodules were trained simultaneously and efficiently with the multi-task\nstrategy to predict the comprehensive phenotype profile of each sample.\nOmiEmbed support multiple tasks for omics data including dimensionality\nreduction, tumour type classification, multi-omics integration, demographic and\nclinical feature reconstruction, and survival prediction. The framework\noutperformed other methods on all three types of downstream tasks and achieved\nbetter performance with the multi-task strategy comparing to training them\nindividually. OmiEmbed is a powerful and unified framework that can be widely\nadapted to various application of high-dimensional omics data and has a great\npotential to facilitate more accurate and personalised clinical decision\nmaking.",
+          "arxiv_id": "2102.02669v2"
+        },
+        {
+          "title": "CLCLSA: Cross-omics Linked embedding with Contrastive Learning and Self Attention for multi-omics integration with incomplete multi-omics data",
+          "year": "2023-04",
+          "abstract": "Integration of heterogeneous and high-dimensional multi-omics data is\nbecoming increasingly important in understanding genetic data. Each omics\ntechnique only provides a limited view of the underlying biological process and\nintegrating heterogeneous omics layers simultaneously would lead to a more\ncomprehensive and detailed understanding of diseases and phenotypes. However,\none obstacle faced when performing multi-omics data integration is the\nexistence of unpaired multi-omics data due to instrument sensitivity and cost.\nStudies may fail if certain aspects of the subjects are missing or incomplete.\nIn this paper, we propose a deep learning method for multi-omics integration\nwith incomplete data by Cross-omics Linked unified embedding with Contrastive\nLearning and Self Attention (CLCLSA). Utilizing complete multi-omics data as\nsupervision, the model employs cross-omics autoencoders to learn the feature\nrepresentation across different types of biological data. The multi-omics\ncontrastive learning, which is used to maximize the mutual information between\ndifferent types of omics, is employed before latent feature concatenation. In\naddition, the feature-level self-attention and omics-level self-attention are\nemployed to dynamically identify the most informative features for multi-omics\ndata integration. Extensive experiments were conducted on four public\nmulti-omics datasets. The experimental results indicated that the proposed\nCLCLSA outperformed the state-of-the-art approaches for multi-omics data\nclassification using incomplete multi-omics data.",
+          "arxiv_id": "2304.05542v1"
+        },
+        {
+          "title": "A Multimodal Graph Neural Network Framework of Cancer Molecular Subtype Classification",
+          "year": "2023-02",
+          "abstract": "The recent development of high-throughput sequencing creates a large\ncollection of multi-omics data, which enables researchers to better investigate\ncancer molecular profiles and cancer taxonomy based on molecular subtypes.\nIntegrating multi-omics data has been proven to be effective for building more\nprecise classification models. Current multi-omics integrative models mainly\nuse early fusion by concatenation or late fusion based on deep neural networks.\nDue to the nature of biological systems, graphs are a better representation of\nbio-medical data. Although few graph neural network (GNN) based multi-omics\nintegrative methods have been proposed, they suffer from three common\ndisadvantages. One is most of them use only one type of connection, either\ninter-omics or intra-omic connection; second, they only consider one kind of\nGNN layer, either graph convolution network (GCN) or graph attention network\n(GAT); and third, most of these methods lack testing on a more complex cancer\nclassification task. We propose a novel end-to-end multi-omics GNN framework\nfor accurate and robust cancer subtype classification. The proposed model\nutilizes multi-omics data in the form of heterogeneous multi-layer graphs that\ncombines both inter-omics and intra-omic connections from established\nbiological knowledge. The proposed model incorporates learned graph features\nand global genome features for accurate classification. We test the proposed\nmodel on TCGA Pan-cancer dataset and TCGA breast cancer dataset for molecular\nsubtype and cancer subtype classification, respectively. The proposed model\noutperforms four current state-of-the-art baseline models in multiple\nevaluation metrics. The comparative analysis of GAT-based models and GCN-based\nmodels reveals that GAT-based models are preferred for smaller graphs with less\ninformation and GCN-based models are preferred for larger graphs with extra\ninformation.",
+          "arxiv_id": "2302.12838v2"
+        }
+      ],
+      "4": [
+        {
+          "title": "rfPhen2Gen: A machine learning based association study of brain imaging phenotypes to genotypes",
+          "year": "2022-03",
+          "abstract": "Imaging genetic studies aim to find associations between genetic variants and\nimaging quantitative traits. Traditional genome-wide association studies (GWAS)\nare based on univariate statistical tests, but when multiple traits are\nanalyzed together they suffer from a multiple-testing problem and from not\ntaking into account correlations among the traits. An alternative approach to\nmulti-trait GWAS is to reverse the functional relation between genotypes and\ntraits, by fitting a multivariate regression model to predict genotypes from\nmultiple traits simultaneously. However, current reverse genotype prediction\napproaches are mostly based on linear models. Here, we evaluated random forest\nregression (RFR) as a method to predict SNPs from imaging QTs and identify\nbiologically relevant associations. We learned machine learning models to\npredict 518,484 SNPs using 56 brain imaging QTs. We observed that genotype\nregression error is a better indicator of permutation p-value significance than\ngenotype classification accuracy. SNPs within the known Alzheimer disease (AD)\nrisk gene APOE had lowest RMSE for lasso and random forest, but not ridge\nregression. Moreover, random forests identified additional SNPs that were not\nprioritized by the linear models but are known to be associated with\nbrain-related disorders. Feature selection identified well-known brain regions\nassociated with AD,like the hippocampus and amygdala, as important predictors\nof the most significant SNPs. In summary, our results indicate that non-linear\nmethods like random forests may offer additional insights into\nphenotype-genotype associations compared to traditional linear multi-variate\nGWAS methods.",
+          "arxiv_id": "2204.00067v1"
+        },
+        {
+          "title": "A framework to decipher the genetic architecture of combinations of complex diseases: applications in cardiovascular medicine",
+          "year": "2020-03",
+          "abstract": "Genome-wide association studies(GWAS) have proven to be highly useful in\nrevealing the genetic basis of complex diseases. At present, most GWAS are\nstudies of a particular single disease diagnosis against controls. However, in\npractice, an individual is often affected by more than one condition/disorder.\nFor example, patients with coronary artery disease(CAD) are often comorbid with\ndiabetes mellitus(DM). Along a similar line, it is often clinically meaningful\nto study patients with one disease but without a comorbidity. For example,\nobese DM may have different pathophysiology from non-obese DM.\n  Here we developed a statistical framework to uncover susceptibility variants\nfor comorbid disorders (or a disorder without comorbidity), using GWAS summary\nstatistics only. In essence, we mimicked a case-control GWAS in which the cases\nare affected with comorbidities or a disease without a relevant comorbid\ncondition (in either case, we may consider the cases as those affected by a\nspecific subtype of disease, as characterized by the presence or absence of\ncomorbid conditions). We extended our methodology to deal with continuous\ntraits with clinically meaningful categories (e.g. lipids). In addition, we\nillustrated how the analytic framework may be extended to more than two traits.\nWe verified the feasibility and validity of our method by applying it to\nsimulated scenarios and four cardiometabolic (CM) traits. We also analyzed the\ngenes, pathways, cell-types/tissues involved in CM disease subtypes. LD-score\nregression analysis revealed some subtypes may indeed be biologically distinct\nwith low genetic correlations. Further Mendelian randomization analysis found\ndifferential causal effects of different subtypes to relevant complications. We\nbelieve the findings are of both scientific and clinical value, and the\nproposed method may open a new avenue to analyzing GWAS data.",
+          "arxiv_id": "2003.08518v4"
+        },
+        {
+          "title": "A network-driven framework for enhancing gene-disease association studies in coronary artery disease",
+          "year": "2025-01",
+          "abstract": "Over the last decade, genome-wide association studies (GWAS) have\nsuccessfully identified numerous genetic variants associated with complex\ndiseases. These associations have the potential to reveal the molecular\nmechanisms underlying complex diseases and lead to the identification of novel\ndrug targets. Despite these advancements, the biological pathways and\nmechanisms linking genetic variants to complex diseases are still not fully\nunderstood. Most trait-associated variants reside in non-coding regions and are\npresumed to influence phenotypes through regulatory effects on gene expression.\nYet, it is often unclear which genes they regulate and in which cell types this\nregulation occurs. Transcriptome-wide association studies (TWAS) aim to bridge\nthis gap by detecting trait-associated tissue gene expression regulated by GWAS\nvariants. However, traditional TWAS approaches frequently overlook the critical\ncontributions of trans-regulatory effects and fail to integrate comprehensive\nregulatory networks. Here, we present a novel framework that leverages\ntissue-specific gene regulatory networks (GRNs) to integrate cis- and\ntrans-genetic regulatory effects into the TWAS framework for complex diseases.\nWe validate our approach using coronary artery disease (CAD), utilizing data\nfrom the STARNET project, which provides multi-tissue gene expression and\ngenetic data from around 600 living patients with cardiovascular disease.\nPreliminary results demonstrate the potential of our GRN-driven framework to\nuncover more genes and pathways that may underlie CAD. This framework extends\ntraditional TWAS methodologies by utilizing tissue-specific regulatory insights\nand advancing the understanding of complex disease genetic architecture.",
+          "arxiv_id": "2501.19030v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:42:52Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

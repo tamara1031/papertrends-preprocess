@@ -1,0 +1,868 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_algorithm_polynomial_polynomials_algorithms",
+        "keywords": [
+          [
+            "algorithm",
+            0.04197951853917001
+          ],
+          [
+            "polynomial",
+            0.033117414610460486
+          ],
+          [
+            "polynomials",
+            0.02637219345323307
+          ],
+          [
+            "algorithms",
+            0.024507021708754524
+          ],
+          [
+            "matrix",
+            0.02177940060843427
+          ],
+          [
+            "In",
+            0.02124838319536683
+          ],
+          [
+            "complexity",
+            0.019281298501142907
+          ],
+          [
+            "linear",
+            0.01867752986926102
+          ],
+          [
+            "basis",
+            0.01831168240674662
+          ],
+          [
+            "computing",
+            0.016948607280738957
+          ]
+        ],
+        "count": 435
+      },
+      "1": {
+        "name": "1_systems_proof_SMT_verification",
+        "keywords": [
+          [
+            "systems",
+            0.019281002514270947
+          ],
+          [
+            "proof",
+            0.018738397014700967
+          ],
+          [
+            "SMT",
+            0.01822934545888375
+          ],
+          [
+            "verification",
+            0.018107175407953983
+          ],
+          [
+            "logic",
+            0.01671140682322937
+          ],
+          [
+            "paper",
+            0.01589834960184666
+          ],
+          [
+            "new",
+            0.01580998134814537
+          ],
+          [
+            "linear",
+            0.014180720115256933
+          ],
+          [
+            "order",
+            0.013900508266960866
+          ],
+          [
+            "approach",
+            0.013593715330270447
+          ]
+        ],
+        "count": 186
+      },
+      "2": {
+        "name": "2_reasoning_knowledge_learning_models",
+        "keywords": [
+          [
+            "reasoning",
+            0.04168353893441145
+          ],
+          [
+            "knowledge",
+            0.03635184385215009
+          ],
+          [
+            "learning",
+            0.029203494798483064
+          ],
+          [
+            "models",
+            0.02671981566785156
+          ],
+          [
+            "model",
+            0.023507223565588802
+          ],
+          [
+            "symbolic",
+            0.02343645787656445
+          ],
+          [
+            "human",
+            0.02213566611836121
+          ],
+          [
+            "language",
+            0.021998756050618077
+          ],
+          [
+            "tasks",
+            0.020697161231217037
+          ],
+          [
+            "data",
+            0.0198857740058029
+          ]
+        ],
+        "count": 154
+      },
+      "3": {
+        "name": "3_symbolic_data_models_model",
+        "keywords": [
+          [
+            "symbolic",
+            0.0335932898853898
+          ],
+          [
+            "data",
+            0.029745584359117824
+          ],
+          [
+            "models",
+            0.02843291997563849
+          ],
+          [
+            "model",
+            0.027374768070814227
+          ],
+          [
+            "regression",
+            0.024628644876606674
+          ],
+          [
+            "systems",
+            0.02200539526510464
+          ],
+          [
+            "symbolic regression",
+            0.021685838294315127
+          ],
+          [
+            "equations",
+            0.02157282104628111
+          ],
+          [
+            "SR",
+            0.021168355672385394
+          ],
+          [
+            "dynamics",
+            0.01814742254065755
+          ]
+        ],
+        "count": 124
+      },
+      "4": {
+        "name": "4_systems_differential_method_methods",
+        "keywords": [
+          [
+            "systems",
+            0.04653406726237567
+          ],
+          [
+            "differential",
+            0.04613301374035216
+          ],
+          [
+            "method",
+            0.034207336264094564
+          ],
+          [
+            "methods",
+            0.027864259580049375
+          ],
+          [
+            "polynomial",
+            0.02642790703095724
+          ],
+          [
+            "algebraic",
+            0.025761820705513642
+          ],
+          [
+            "symbolic",
+            0.02572521982475041
+          ],
+          [
+            "solution",
+            0.025218104689703945
+          ],
+          [
+            "solutions",
+            0.024604949502571423
+          ],
+          [
+            "algorithm",
+            0.02359387259393999
+          ]
+        ],
+        "count": 41
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.14161206335342724,
+        -0.6964216008913948,
+        -0.6748638840148118,
+        -0.5766666973778847
+      ],
+      [
+        -0.14161206335342724,
+        1.0,
+        -0.6421410373514916,
+        -0.6343435024242687,
+        -0.6183300449946924
+      ],
+      [
+        -0.6964216008913948,
+        -0.6421410373514916,
+        1.0,
+        -0.46411748332330005,
+        -0.7044162823404473
+      ],
+      [
+        -0.6748638840148118,
+        -0.6343435024242687,
+        -0.46411748332330005,
+        1.0,
+        -0.5901541978496673
+      ],
+      [
+        -0.5766666973778847,
+        -0.6183300449946924,
+        -0.7044162823404473,
+        -0.5901541978496673,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        10,
+        0,
+        1,
+        0,
+        2
+      ],
+      "2020-02": [
+        15,
+        2,
+        0,
+        2,
+        2
+      ],
+      "2020-03": [
+        15,
+        1,
+        2,
+        0,
+        1
+      ],
+      "2020-04": [
+        11,
+        1,
+        0,
+        0,
+        4
+      ],
+      "2020-05": [
+        17,
+        0,
+        2,
+        1,
+        4
+      ],
+      "2020-06": [
+        11,
+        0,
+        4,
+        1,
+        2
+      ],
+      "2020-07": [
+        11,
+        1,
+        0,
+        2,
+        5
+      ],
+      "2020-08": [
+        9,
+        0,
+        1,
+        0,
+        1
+      ],
+      "2020-09": [
+        7,
+        3,
+        1,
+        0,
+        4
+      ],
+      "2020-10": [
+        21,
+        1,
+        1,
+        2,
+        1
+      ],
+      "2020-11": [
+        11,
+        0,
+        0,
+        1,
+        3
+      ],
+      "2020-12": [
+        11,
+        0,
+        2,
+        2,
+        2
+      ],
+      "2021-01": [
+        14,
+        2,
+        1,
+        0,
+        3
+      ],
+      "2021-02": [
+        17,
+        1,
+        0,
+        0,
+        2
+      ],
+      "2021-03": [
+        7,
+        1,
+        3,
+        3,
+        1
+      ],
+      "2021-04": [
+        7,
+        0,
+        1,
+        0,
+        3
+      ],
+      "2021-05": [
+        7,
+        1,
+        1,
+        3,
+        5
+      ],
+      "2021-06": [
+        12,
+        0,
+        0,
+        4,
+        2
+      ],
+      "2021-07": [
+        10,
+        0,
+        1,
+        2,
+        2
+      ],
+      "2021-08": [
+        5,
+        0,
+        0,
+        1,
+        0
+      ],
+      "2021-09": [
+        8,
+        1,
+        4,
+        0,
+        1
+      ],
+      "2021-10": [
+        9,
+        1,
+        0,
+        2,
+        3
+      ],
+      "2021-11": [
+        6,
+        0,
+        1,
+        1,
+        5
+      ],
+      "2021-12": [
+        8,
+        5,
+        3,
+        3,
+        1
+      ],
+      "2022-01": [
+        12,
+        1,
+        3,
+        3,
+        4
+      ],
+      "2022-02": [
+        23,
+        1,
+        2,
+        1,
+        4
+      ],
+      "2022-03": [
+        10,
+        2,
+        2,
+        2,
+        1
+      ],
+      "2022-04": [
+        8,
+        2,
+        1,
+        0,
+        1
+      ],
+      "2022-05": [
+        6,
+        1,
+        4,
+        3,
+        6
+      ],
+      "2022-06": [
+        6,
+        0,
+        1,
+        2,
+        2
+      ],
+      "2022-07": [
+        7,
+        3,
+        0,
+        2,
+        3
+      ],
+      "2022-08": [
+        11,
+        0,
+        1,
+        1,
+        2
+      ],
+      "2022-09": [
+        11,
+        1,
+        2,
+        0,
+        2
+      ],
+      "2022-10": [
+        13,
+        1,
+        1,
+        1,
+        5
+      ],
+      "2022-11": [
+        9,
+        2,
+        0,
+        4,
+        1
+      ],
+      "2022-12": [
+        7,
+        2,
+        0,
+        2,
+        1
+      ],
+      "2023-01": [
+        4,
+        1,
+        2,
+        7,
+        3
+      ],
+      "2023-02": [
+        23,
+        3,
+        2,
+        2,
+        1
+      ],
+      "2023-03": [
+        11,
+        2,
+        4,
+        2,
+        4
+      ],
+      "2023-04": [
+        13,
+        0,
+        0,
+        1,
+        6
+      ],
+      "2023-05": [
+        12,
+        0,
+        3,
+        4,
+        5
+      ],
+      "2023-06": [
+        9,
+        2,
+        2,
+        1,
+        2
+      ],
+      "2023-07": [
+        10,
+        2,
+        5,
+        4,
+        2
+      ],
+      "2023-08": [
+        7,
+        2,
+        3,
+        1,
+        1
+      ],
+      "2023-09": [
+        7,
+        2,
+        2,
+        2,
+        0
+      ],
+      "2023-10": [
+        6,
+        1,
+        2,
+        2,
+        1
+      ],
+      "2023-11": [
+        10,
+        2,
+        0,
+        1,
+        2
+      ],
+      "2023-12": [
+        13,
+        3,
+        0,
+        3,
+        0
+      ],
+      "2024-01": [
+        19,
+        1,
+        1,
+        3,
+        4
+      ],
+      "2024-02": [
+        16,
+        1,
+        2,
+        2,
+        3
+      ],
+      "2024-03": [
+        14,
+        1,
+        4,
+        1,
+        1
+      ],
+      "2024-04": [
+        11,
+        3,
+        1,
+        3,
+        2
+      ],
+      "2024-05": [
+        19,
+        1,
+        6,
+        4,
+        4
+      ],
+      "2024-06": [
+        11,
+        3,
+        4,
+        4,
+        3
+      ],
+      "2024-07": [
+        11,
+        0,
+        5,
+        0,
+        3
+      ],
+      "2024-08": [
+        8,
+        3,
+        2,
+        2,
+        1
+      ],
+      "2024-09": [
+        5,
+        0,
+        1,
+        3,
+        1
+      ],
+      "2024-10": [
+        9,
+        2,
+        3,
+        3,
+        4
+      ],
+      "2024-11": [
+        7,
+        1,
+        3,
+        2,
+        0
+      ],
+      "2024-12": [
+        17,
+        3,
+        3,
+        1,
+        5
+      ],
+      "2025-01": [
+        4,
+        0,
+        4,
+        4,
+        2
+      ],
+      "2025-02": [
+        16,
+        1,
+        5,
+        3,
+        3
+      ],
+      "2025-03": [
+        18,
+        2,
+        1,
+        4,
+        3
+      ],
+      "2025-04": [
+        19,
+        0,
+        0,
+        1,
+        4
+      ],
+      "2025-05": [
+        19,
+        3,
+        4,
+        9,
+        4
+      ],
+      "2025-06": [
+        10,
+        3,
+        5,
+        1,
+        2
+      ],
+      "2025-07": [
+        15,
+        1,
+        6,
+        2,
+        2
+      ],
+      "2025-08": [
+        12,
+        2,
+        6,
+        4,
+        1
+      ],
+      "2025-09": [
+        4,
+        0,
+        2,
+        1,
+        1
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "A new algorithm for computing $μ$-bases of the univariate polynomial vector",
+          "year": "2020-11",
+          "abstract": "In this paper, we characterized the relationship between Groebner bases and\nu-bases: any minimal Groebner basis of the syzygy module for n univariate\npolynomials with respect to the term-over-position monomial order is its\nu-basis. Moreover, based on the gcd computation, we construct a free basis of\nthe syzygy module by the recursive way. According to this relationship and the\nconstructed free basis, a new algorithm for computing u-bases of the syzygy\nmodule is presented. The theoretical complexity of the algorithm is O(n^3d^2)\nunder a reasonable assumption, where d is the maximum degree of the input n\npolynomials. We have implemented this algorithm (MinGb) in Maple. Experimental\ndata and performance comparison with the existing algorithms developed by Song\nand Goldman (2009) (SG algorithm) and Hong et al. (2017) (HHK algorithm) show\nthat MinGb algorithm is more efficient than SG algorithm when n and d are\nsufficiently large, while MinGb algorithm and HHK algorithm both have their own\nadvantages.",
+          "arxiv_id": "2011.10924v2"
+        },
+        {
+          "title": "Sparse Polynomial Interpolation Based on Diversification",
+          "year": "2020-01",
+          "abstract": "We consider the problem of interpolating a sparse multivariate polynomial\nover a finite field, represented with a black box. Building on the algorithm of\nBen-Or and Tiwari for interpolating polynomials over rings with characteristic\nzero, we develop a new Monte Carlo algorithm over the finite field by doing\nadditional probes. To interpolate a polynomial $f\\in F_q[x_1,\\dots,x_n]$ with a\npartial degree bound $D$ and a term bound $T$, our new algorithm costs\n$O^\\thicksim(nT\\log ^2q+nT\\sqrt{D}\\log q)$ bit operations and uses $2(n+1)T$\nprobes to the black box. If $q\\geq O(nT^2D)$, it has constant success rate to\nreturn the correct polynomial. Compared with previous algorithms over general\nfinite field, our algorithm has better complexity in the parameters $n,T,D$ and\nis the first one to achieve the complexity of fractional power about $D$, while\nkeeping linear in $n,T$. A key technique is a randomization which makes all\ncoefficients of the unknown polynomial distinguishable, producing a diverse\npolynomial. This approach, called diversification, was proposed by Giesbrecht\nand Roche in 2011. Our algorithm interpolates each variable independently using\n$O(T)$ probes, and then uses the diversification to correlate terms in\ndifferent images. At last, we get the exponents by solving the discrete\nlogarithms and obtain coefficients by solving a linear system. We have\nimplemented our algorithm in Maple. Experimental results shows that our\nalgorithm can applied to sparse polynomials with large degree. We also analyze\nthe success rate of the algorithm.",
+          "arxiv_id": "2002.03706v1"
+        },
+        {
+          "title": "Gröbner bases and critical values: The asymptotic combinatorics of determinantal systems",
+          "year": "2022-03",
+          "abstract": "We consider ideals involving the maximal minors of a polynomial matrix. For\nexample, those arising in the computation of the critical values of a\npolynomial restricted to a variety for polynomial optimisation. Gr\\\"obner bases\nare a classical tool for solving polynomial systems. For practical\ncomputations, this consists of two stages. First, a Gr\\\"obner basis is computed\nwith respect to a DRL (degree reverse lexicographic) ordering. Then, a change\nof ordering algorithm, such as \\textsf{Sparse-FGLM}, designed by Faug\\`ere and\nMou, is used to find a Gr\\\"obner basis of the same ideal but with respect to a\nlexicographic ordering. The complexity of this latter step, in terms of\narithmetic operations, is $O(mD^2)$, where $D$ is the degree of the ideal and\n$m$ is the number of non-trivial columns of a certain $D \\times D$ matrix.\nWhile asymptotic estimates are known for $m$ for generic polynomial systems,\nthus far, the complexity of \\textsf{Sparse-FGLM} was unknown for determinantal\nsystems.\n  By assuming Fr\\\"oberg's conjecture we expand the work of Moreno-Soc\\'ias by\ndetailing the structure of the DRL staircase in the determinantal setting. Then\nwe study the asymptotics of the quantity $m$ by relating it to the coefficients\nof these Hilbert series. Consequently, we arrive at a new bound on the\ncomplexity of the \\textsf{Sparse-FGLM} algorithm for generic determinantal\nsystems and for generic critical point systems. We consider the ideal in the\npolynomial ring $\\mathbb{K}[x_1, \\dots, x_n]$, where $\\mathbb{K}$ is some\ninfinite field, generated by $p$ generic polynomials of degree $d$ and the\nmaximal minors of a $p \\times (n-1)$ polynomial matrix with generic entries of\ndegree $d-1$. Then for the case $d=2$ and for $n \\gg p$ we give an exact\nformula for $m$ in terms of $n$ and $p$. Moreover, for $d \\geq 3$, we give an\nasymptotic formula, as $n \\to \\infty$, for $m$ in terms of $n,p$ and $d$.",
+          "arxiv_id": "2203.10021v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Levelwise construction of a single cylindrical algebraic cell",
+          "year": "2022-12",
+          "abstract": "Satisfiability Modulo Theories (SMT) solvers check the satisfiability of\nquantifier-free first-order logic formulas. We consider the theory of\nnon-linear real arithmetic where the formulae are logical combinations of\npolynomial constraints. Here a commonly used tool is the Cylindrical Algebraic\nDecomposition (CAD) to decompose real space into cells where the constraints\nare truth-invariant through the use of projection polynomials.\n  An improved approach is to repackage the CAD theory into a search-based\nalgorithm: one that guesses sample points to satisfy the formula, and\ngeneralizes guesses that conflict constraints to cylindrical cells around\nsamples which are avoided in the continuing search. Such an approach can lead\nto a satisfying assignment more quickly, or conclude unsatisfiability with\nfewer cells. A notable example of this approach is Jovanovi\\'c and de Moura's\nNLSAT algorithm. Since these cells are produced locally to a sample we might\nneed fewer projection polynomials than the traditional CAD projection. The\noriginal NLSAT algorithm reduced the set a little; while Brown's single cell\nconstruction reduced it much further still. However, the shape and size of the\ncell produced depends on the order in which the polynomials are considered.\n  This paper proposes a method to construct such cells levelwise, i.e. built\nlevel-by-level according to a variable ordering. We still use a reduced number\nof projection polynomials, but can now consider a variety of different\nreductions and use heuristics to select the projection polynomials in order to\noptimise the shape of the cell under construction. We formulate all the\nnecessary theory as a proof system: while not a common presentation for work in\nthis field, it allows an elegant decoupling of heuristics from the algorithm\nand its proof of correctness.",
+          "arxiv_id": "2212.09309v2"
+        },
+        {
+          "title": "Model Checking for Rectangular Hybrid Systems: A Quantified Encoding Approach",
+          "year": "2022-07",
+          "abstract": "Satisfiability Modulo Theories (SMT) solvers have been successfully applied\nto solve many problems in formal verification such as bounded model checking\n(BMC) for many classes of systems from integrated circuits to cyber-physical\nsystems. Typically, BMC is performed by checking satisfiability of a possibly\nlong, but quantifier-free formula. However, BMC problems can naturally be\nencoded as quantified formulas over the number of BMC steps. In this approach,\nwe then use decision procedures supporting quantifiers to check satisfiability\nof these quantified formulas. This approach has previously been applied to\nperform BMC using a Quantified Boolean Formula (QBF) encoding for purely\ndiscrete systems, and then discharges the QBF checks using QBF solvers. In this\npaper, we present a new quantified encoding of BMC for rectangular hybrid\nautomata (RHA), which requires using more general logics due to the real\n(dense) time and real-valued state variables modeling continuous states. We\nhave implemented a preliminary experimental prototype of the method using the\nHyST model transformation tool to generate the quantified BMC (QBMC) queries\nfor the Z3 SMT solver. We describe experimental results on several timed and\nhybrid automata benchmarks, such as the Fischer and Lynch-Shavit mutual\nexclusion algorithms. We compare our approach to quantifier-free BMC\napproaches, such as those in the dReach tool that uses the dReal SMT solver,\nand the HyComp tool built on top of nuXmv that uses the MathSAT SMT solver.\nBased on our promising experimental results, QBMC may in the future be an\neffective and scalable analysis approach for RHA and other classes of hybrid\nautomata as further improvements are made in quantifier handling in SMT solvers\nsuch as Z3.",
+          "arxiv_id": "2207.08775v1"
+        },
+        {
+          "title": "Theorem Proving and Algebra",
+          "year": "2021-01",
+          "abstract": "This book can be seen either as a text on theorem proving that uses\ntechniques from general algebra, or else as a text on general algebra\nillustrated and made concrete by practical exercises in theorem proving. The\nbook considers several different logical systems, including first-order logic,\nHorn clause logic, equational logic, and first-order logic with equality.\nSimilarly, several different proof paradigms are considered. However, we do\nemphasize equational logic, and for simplicity we use only the OBJ3 software\nsystem, though it is used in a rather flexible manner. We do not pursue the\nlofty goal of mechanizing proofs like those of which mathematicians are justly\nso proud; instead, we seek to take steps towards providing mechanical\nassistance for proofs that are useful for computer scientists in developing\nsoftware and hardware. This more modest goal has the advantage of both being\nachievable and having practical benefits.\n  The following topics are covered: many-sorted signature, algebra and\nhomomorphism; term algebra and substitution; equation and satisfaction;\nconditional equations; equational deduction and its completeness; deduction for\nconditional equations; the theorem of constants; interpretation and equivalence\nof theories; term rewriting, termination, confluence and normal form; abstract\nrewrite systems; standard models, abstract data types, initiality, and\ninduction; rewriting and deduction modulo equations; first-order logic, models,\nand proof planning; second-order algebra; order-sorted algebra and rewriting;\nmodules; unification and completion; and hidden algebra. In parallel with these\nare a gradual introduction to OBJ3, applications to group theory, various\nabstract data types (such as number systems, lists, and stacks), propositional\ncalculus, hardware verification, the {\\lambda}-calculus, correctness of\nfunctional programs, and other topics.",
+          "arxiv_id": "2101.02690v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "A Comparative Study of Neurosymbolic AI Approaches to Interpretable Logical Reasoning",
+          "year": "2025-08",
+          "abstract": "General logical reasoning, defined as the ability to reason deductively on\ndomain-agnostic tasks, continues to be a challenge for large language models\n(LLMs). Current LLMs fail to reason deterministically and are not\ninterpretable. As such, there has been a recent surge in interest in\nneurosymbolic AI, which attempts to incorporate logic into neural networks. We\nfirst identify two main neurosymbolic approaches to improving logical\nreasoning: (i) the integrative approach comprising models where symbolic\nreasoning is contained within the neural network, and (ii) the hybrid approach\ncomprising models where a symbolic solver, separate from the neural network,\nperforms symbolic reasoning. Both contain AI systems with promising results on\ndomain-specific logical reasoning benchmarks. However, their performance on\ndomain-agnostic benchmarks is understudied. To the best of our knowledge, there\nhas not been a comparison of the contrasting approaches that answers the\nfollowing question: Which approach is more promising for developing general\nlogical reasoning? To analyze their potential, the following best-in-class\ndomain-agnostic models are introduced: Logic Neural Network (LNN), which uses\nthe integrative approach, and LLM-Symbolic Solver (LLM-SS), which uses the\nhybrid approach. Using both models as case studies and representatives of each\napproach, our analysis demonstrates that the hybrid approach is more promising\nfor developing general logical reasoning because (i) its reasoning chain is\nmore interpretable, and (ii) it retains the capabilities and advantages of\nexisting LLMs. To support future works using the hybrid approach, we propose a\ngeneralizable framework based on LLM-SS that is modular by design,\nmodel-agnostic, domain-agnostic, and requires little to no human input.",
+          "arxiv_id": "2508.03366v1"
+        },
+        {
+          "title": "Neural Collaborative Reasoning",
+          "year": "2020-05",
+          "abstract": "Existing Collaborative Filtering (CF) methods are mostly designed based on\nthe idea of matching, i.e., by learning user and item embeddings from data\nusing shallow or deep models, they try to capture the associative relevance\npatterns in data, so that a user embedding can be matched with relevant item\nembeddings using designed or learned similarity functions. However, as a\ncognition rather than a perception intelligent task, recommendation requires\nnot only the ability of pattern recognition and matching from data, but also\nthe ability of cognitive reasoning in data. In this paper, we propose to\nadvance Collaborative Filtering (CF) to Collaborative Reasoning (CR), which\nmeans that each user knows part of the reasoning space, and they collaborate\nfor reasoning in the space to estimate preferences for each other. Technically,\nwe propose a Neural Collaborative Reasoning (NCR) framework to bridge learning\nand reasoning. Specifically, we integrate the power of representation learning\nand logical reasoning, where representations capture similarity patterns in\ndata from perceptual perspectives, and logic facilitates cognitive reasoning\nfor informed decision making. An important challenge, however, is to bridge\ndifferentiable neural networks and symbolic reasoning in a shared architecture\nfor optimization and inference. To solve the problem, we propose a modularized\nreasoning architecture, which learns logical operations such as AND ($\\wedge$),\nOR ($\\vee$) and NOT ($\\neg$) as neural modules for implication reasoning\n($\\rightarrow$). In this way, logical expressions can be equivalently organized\nas neural networks, so that logical reasoning and prediction can be conducted\nin a continuous space. Experiments on real-world datasets verified the\nadvantages of our framework compared with both shallow, deep and reasoning\nmodels.",
+          "arxiv_id": "2005.08129v5"
+        },
+        {
+          "title": "Speaking in Words, Thinking in Logic: A Dual-Process Framework in QA Systems",
+          "year": "2025-07",
+          "abstract": "Recent advances in large language models (LLMs) have significantly enhanced\nquestion-answering (QA) capabilities, particularly in open-domain contexts.\nHowever, in closed-domain scenarios such as education, healthcare, and law,\nusers demand not only accurate answers but also transparent reasoning and\nexplainable decision-making processes. While neural-symbolic (NeSy) frameworks\nhave emerged as a promising solution, leveraging LLMs for natural language\nunderstanding and symbolic systems for formal reasoning, existing approaches\noften rely on large-scale models and exhibit inefficiencies in translating\nnatural language into formal logic representations.\n  To address these limitations, we introduce Text-JEPA (Text-based\nJoint-Embedding Predictive Architecture), a lightweight yet effective framework\nfor converting natural language into first-order logic (NL2FOL). Drawing\ninspiration from dual-system cognitive theory, Text-JEPA emulates System 1 by\nefficiently generating logic representations, while the Z3 solver operates as\nSystem 2, enabling robust logical inference. To rigorously evaluate the\nNL2FOL-to-reasoning pipeline, we propose a comprehensive evaluation framework\ncomprising three custom metrics: conversion score, reasoning score, and\nSpearman rho score, which collectively capture the quality of logical\ntranslation and its downstream impact on reasoning accuracy.\n  Empirical results on domain-specific datasets demonstrate that Text-JEPA\nachieves competitive performance with significantly lower computational\noverhead compared to larger LLM-based systems. Our findings highlight the\npotential of structured, interpretable reasoning frameworks for building\nefficient and explainable QA systems in specialized domains.",
+          "arxiv_id": "2507.20491v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Symbolic Foundation Regressor on Complex Networks",
+          "year": "2025-05",
+          "abstract": "In science, we are interested not only in forecasting but also in\nunderstanding how predictions are made, specifically what the interpretable\nunderlying model looks like. Data-driven machine learning technology can\nsignificantly streamline the complex and time-consuming traditional manual\nprocess of discovering scientific laws, helping us gain insights into\nfundamental issues in modern science. In this work, we introduce a pre-trained\nsymbolic foundation regressor that can effectively compress complex data with\nnumerous interacting variables while producing interpretable physical\nrepresentations. Our model has been rigorously tested on non-network symbolic\nregression, symbolic regression on complex networks, and the inference of\nnetwork dynamics across various domains, including physics, biochemistry,\necology, and epidemiology. The results indicate a remarkable improvement in\nequation inference efficiency, being three times more effective than baseline\napproaches while maintaining accurate predictions. Furthermore, we apply our\nmodel to uncover more intuitive laws of interaction transmission from global\nepidemic outbreak data, achieving optimal data fitting. This model extends the\napplication boundary of pre-trained symbolic regression models to complex\nnetworks, and we believe it provides a foundational solution for revealing the\nhidden mechanisms behind changes in complex phenomena, enhancing\ninterpretability, and inspiring further scientific discoveries.",
+          "arxiv_id": "2505.21879v1"
+        },
+        {
+          "title": "Interactive Symbolic Regression through Offline Reinforcement Learning: A Co-Design Framework",
+          "year": "2025-02",
+          "abstract": "Symbolic Regression (SR) holds great potential for uncovering underlying\nmathematical and physical relationships from observed data. However, the vast\ncombinatorial space of possible expressions poses significant challenges for\nboth online search methods and pre-trained transformer models. Additionally,\ncurrent state-of-the-art approaches typically do not consider the integration\nof domain experts' prior knowledge and do not support iterative interactions\nwith the model during the equation discovery process. To address these\nchallenges, we propose the Symbolic Q-network (Sym-Q), an advanced interactive\nframework for large-scale symbolic regression. Unlike previous large-scale\ntransformer-based SR approaches, Sym-Q leverages reinforcement learning without\nrelying on a transformer-based decoder. This formulation allows the agent to\nlearn through offline reinforcement learning using any type of tree encoder,\nenabling more efficient training and inference. Furthermore, we propose a\nco-design mechanism, where the reinforcement learning-based Sym-Q facilitates\neffective interaction with domain experts at any stage of the equation\ndiscovery process. Users can dynamically modify generated nodes of the\nexpression, collaborating with the agent to tailor the mathematical expression\nto best fit the problem and align with the assumed physical laws, particularly\nwhen there is prior partial knowledge of the expected behavior. Our experiments\ndemonstrate that the pre-trained Sym-Q surpasses existing SR algorithms on the\nchallenging SSDNC benchmark. Moreover, we experimentally show on real-world\ncases that its performance can be further enhanced by the interactive co-design\nmechanism, with Sym-Q achieving greater performance gains than other\nstate-of-the-art models. Our reproducible code is available at\nhttps://github.com/EPFL-IMOS/Sym-Q.",
+          "arxiv_id": "2502.02917v2"
+        },
+        {
+          "title": "Automated Data-Driven Discovery of Material Models Based on Symbolic Regression: A Case Study on Human Brain Cortex",
+          "year": "2024-02",
+          "abstract": "We introduce a data-driven framework to automatically identify interpretable\nand physically meaningful hyperelastic constitutive models from sparse data.\nLeveraging symbolic regression, an algorithm based on genetic programming, our\napproach generates elegant hyperelastic models that achieve accurate data\nfitting through parsimonious mathematic formulae, while strictly adhering to\nhyperelasticity constraints such as polyconvexity. Our investigation spans\nthree distinct hyperelastic models -- invariant-based, principal stretch-based,\nand normal strain-based -- and highlights the versatility of symbolic\nregression. We validate our new approach using synthetic data from five classic\nhyperelastic models and experimental data from the human brain to demonstrate\nalgorithmic efficacy. Our results suggest that our symbolic regression robustly\ndiscovers accurate models with succinct mathematic expressions in\ninvariant-based, stretch-based, and strain-based scenarios. Strikingly, the\nstrain-based model exhibits superior accuracy, while both stretch- and\nstrain-based models effectively capture the nonlinearity and\ntension-compression asymmetry inherent to human brain tissue. Polyconvexity\nexaminations affirm the rigor of convexity within the training regime and\ndemonstrate excellent extrapolation capabilities beyond this regime for all\nthree models. However, the stretch-based models raise concerns regarding\npotential convexity loss under large deformations. Finally, robustness tests on\nnoise-embedded data underscore the reliability of our symbolic regression\nalgorithms. Our study confirms the applicability and accuracy of symbolic\nregression in the automated discovery of hyperelastic models for the human\nbrain and gives rise to a wide variety of applications in other soft matter\nsystems.",
+          "arxiv_id": "2402.05238v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Index Reduction for Degenerated Differential-Algebraic Equations by Embedding",
+          "year": "2022-10",
+          "abstract": "To find consistent initial data points for a system of differential-algebraic\nequations, requires the identification of its missing constraints. An efficient\nclass of structural methods exploiting a dependency graph for this task was\ninitiated by Pantiledes. More complete methods rely on differential-algebraic\ngeometry but suffer from other issues (e.g. high complexity). In this paper we\ngive a new class of efficient structural methods combined with new tools from\nnumerical real algebraic geometry that has much improved completeness\nproperties. Existing structural methods may fail for a system of\ndifferential-algebraic equations if its Jacobian matrix after differentiation\nis still singular due to symbolic cancellation or numerical degeneration.\nExisting structural methods can only handle degenerated cases caused by\nsymbolic cancellation. However, if a system has parameters, then its parametric\nJacobian matrix may be still singular after application of the structural\nmethod for certain values of the parameters. This case is called numerical\ndegeneration.\n  For polynomially nonlinear systems of differential-algebraic equations,\nnumerical methods are given to solve both degenerated cases using numerical\nreal algebraic geometry. First, we introduce a witness point method, which\nproduces at least one witness point on every constraint component. This can\nhelp to ensure constant rank and detection of degeneration on all components of\nsuch systems. Secondly, we present a Constant Rank Embedding Lemma, and based\non it propose an Index Reduction by Embedding (IRE) method which can construct\nan equivalent system with a full rank Jacobian matrix. Thirdly, IRE leads to a\nglobal structural differentiation method, to solve degenerated\ndifferential-algebraic equations on all components numerically. Application\nexamples from circuits, mechanics, are used to demonstrate our method.",
+          "arxiv_id": "2210.16707v1"
+        },
+        {
+          "title": "Algorithmic Averaging for Studying Periodic Orbits of Planar Differential Systems",
+          "year": "2020-05",
+          "abstract": "One of the main open problems in the qualitative theory of real planar\ndifferential systems is the study of limit cycles. In this article, we present\nan algorithmic approach for detecting how many limit cycles can bifurcate from\nthe periodic orbits of a given polynomial differential center when it is\nperturbed inside a class of polynomial differential systems via the averaging\nmethod. We propose four symbolic algorithms to implement the averaging method.\nThe first algorithm is based on the change of polar coordinates that allows one\nto transform a considered differential system to the normal form of averaging.\nThe second algorithm is used to derive the solutions of certain differential\nsystems associated to the unperturbed term of the normal of averaging. The\nthird algorithm exploits the partial Bell polynomials and allows one to compute\nthe integral formula of the averaged functions at any order. The last algorithm\nis based on the aforementioned algorithms and determines the exact expressions\nof the averaged functions for the considered differential systems. The\nimplementation of our algorithms is discussed and evaluated using several\nexamples. The experimental results have extended the existing relevant results\nfor certain classes of differential systems.",
+          "arxiv_id": "2005.03487v2"
+        },
+        {
+          "title": "Using Symbolic Computation to Analyze Zero-Hopf Bifurcations of Polynomial Differential Systems",
+          "year": "2023-05",
+          "abstract": "This paper is devoted to the study of infinitesimal limit cycles that can\nbifurcate from zero-Hopf equilibria of differential systems based on the\naveraging method. We develop an efficient symbolic program using Maple for\ncomputing the averaged functions of any order for continuous differential\nsystems in arbitrary dimension. The program allows us to systematically analyze\nzero-Hopf bifurcations of polynomial differential systems using symbolic\ncomputation methods. We show that for the first-order averaging,\n$\\ell\\in\\{0,1,\\ldots,2^{n-3}\\}$ limit cycles can bifurcate from the zero-Hopf\nequilibrium for the general class of perturbed differential systems and up to\nthe second-order averaging, the maximum number of limit cycles can be\ndetermined by computing the mixed volume of a polynomial system obtained from\nthe averaged functions. A number of examples are presented to demonstrate the\neffectiveness of the proposed algorithmic approach.",
+          "arxiv_id": "2305.11109v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:21:15Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

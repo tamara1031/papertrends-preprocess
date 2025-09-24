@@ -1,0 +1,1318 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_boundary_eigenvalues_eigenvalue_Laplacian",
+        "keywords": [
+          [
+            "boundary",
+            0.022994669941394656
+          ],
+          [
+            "eigenvalues",
+            0.02183880715272329
+          ],
+          [
+            "eigenvalue",
+            0.021314345248874274
+          ],
+          [
+            "Laplacian",
+            0.02015765023112387
+          ],
+          [
+            "Steklov",
+            0.019405247317528927
+          ],
+          [
+            "manifolds",
+            0.019143122124828
+          ],
+          [
+            "domains",
+            0.017919022800179128
+          ],
+          [
+            "Dirichlet",
+            0.01680360586302293
+          ],
+          [
+            "Riemannian",
+            0.01645566822191501
+          ],
+          [
+            "manifold",
+            0.013944526938535488
+          ]
+        ],
+        "count": 675
+      },
+      "1": {
+        "name": "1_operators_potentials_periodic_operator",
+        "keywords": [
+          [
+            "operators",
+            0.032819964062636056
+          ],
+          [
+            "potentials",
+            0.022615444102188815
+          ],
+          [
+            "periodic",
+            0.019775967044158134
+          ],
+          [
+            "operator",
+            0.019120218687733212
+          ],
+          [
+            "potential",
+            0.018528224800623026
+          ],
+          [
+            "spectrum",
+            0.017536587872650784
+          ],
+          [
+            "spectral",
+            0.014072721240301856
+          ],
+          [
+            "Schrödinger",
+            0.013306154511260448
+          ],
+          [
+            "discrete",
+            0.012947595467247464
+          ],
+          [
+            "dimensional",
+            0.012592090444387718
+          ]
+        ],
+        "count": 637
+      },
+      "2": {
+        "name": "2_matrix_matrices_operators_spectral",
+        "keywords": [
+          [
+            "matrix",
+            0.0302336642282545
+          ],
+          [
+            "matrices",
+            0.02981094140845544
+          ],
+          [
+            "operators",
+            0.023033022997314637
+          ],
+          [
+            "spectral",
+            0.021008042349208528
+          ],
+          [
+            "operator",
+            0.020877733764470018
+          ],
+          [
+            "space",
+            0.014757366581389937
+          ],
+          [
+            "spectrum",
+            0.014049807200131513
+          ],
+          [
+            "results",
+            0.013536453095853001
+          ],
+          [
+            "polynomials",
+            0.012477264180721473
+          ],
+          [
+            "paper",
+            0.012409734944752067
+          ]
+        ],
+        "count": 473
+      },
+      "3": {
+        "name": "3_graph_graphs_Laplacian_matrix",
+        "keywords": [
+          [
+            "graph",
+            0.07710283647915174
+          ],
+          [
+            "graphs",
+            0.06838598075418353
+          ],
+          [
+            "Laplacian",
+            0.034481131590633055
+          ],
+          [
+            "matrix",
+            0.028789185733481302
+          ],
+          [
+            "spectral",
+            0.024244332629252054
+          ],
+          [
+            "eigenvalues",
+            0.024203044593070107
+          ],
+          [
+            "vertices",
+            0.022275244477093115
+          ],
+          [
+            "adjacency",
+            0.021719427787978314
+          ],
+          [
+            "number",
+            0.020473519785118702
+          ],
+          [
+            "connected",
+            0.018357906988999886
+          ]
+        ],
+        "count": 217
+      },
+      "4": {
+        "name": "4_inverse_problem_Sturm_Liouville",
+        "keywords": [
+          [
+            "inverse",
+            0.06944033324678799
+          ],
+          [
+            "problem",
+            0.05636800677466826
+          ],
+          [
+            "Sturm",
+            0.05374769090341143
+          ],
+          [
+            "Liouville",
+            0.05278295336136342
+          ],
+          [
+            "inverse problem",
+            0.03410883038093702
+          ],
+          [
+            "boundary",
+            0.03229750807974446
+          ],
+          [
+            "problems",
+            0.031830218682370695
+          ],
+          [
+            "spectral",
+            0.03176057174130524
+          ],
+          [
+            "differential",
+            0.027987217541735623
+          ],
+          [
+            "conditions",
+            0.026853610886833815
+          ]
+        ],
+        "count": 133
+      },
+      "5": {
+        "name": "5_magnetic_magnetic field_field_Laplacian",
+        "keywords": [
+          [
+            "magnetic",
+            0.15871176843905346
+          ],
+          [
+            "magnetic field",
+            0.07227471013182374
+          ],
+          [
+            "field",
+            0.06977161014373558
+          ],
+          [
+            "Laplacian",
+            0.03501261464020927
+          ],
+          [
+            "Aharonov",
+            0.027320173913545732
+          ],
+          [
+            "Bohm",
+            0.026362316013638865
+          ],
+          [
+            "operator",
+            0.02288429509995136
+          ],
+          [
+            "magnetic fields",
+            0.02091136841477495
+          ],
+          [
+            "Neumann",
+            0.020613526239062246
+          ],
+          [
+            "eigenvalue",
+            0.0203238598203592
+          ]
+        ],
+        "count": 104
+      },
+      "6": {
+        "name": "6_graphs_graph_metric_quantum",
+        "keywords": [
+          [
+            "graphs",
+            0.0820478616228835
+          ],
+          [
+            "graph",
+            0.06111505388579962
+          ],
+          [
+            "metric",
+            0.051471437553578185
+          ],
+          [
+            "quantum",
+            0.04616162732058891
+          ],
+          [
+            "quantum graphs",
+            0.03444924278662795
+          ],
+          [
+            "metric graphs",
+            0.033691810150003686
+          ],
+          [
+            "metric graph",
+            0.028478436110026175
+          ],
+          [
+            "vertex",
+            0.028232140664270072
+          ],
+          [
+            "conditions",
+            0.026021078564457324
+          ],
+          [
+            "Laplacian",
+            0.021796208708827546
+          ]
+        ],
+        "count": 76
+      },
+      "7": {
+        "name": "7_boundary_operator_Maxwell_problem",
+        "keywords": [
+          [
+            "boundary",
+            0.029198796466428013
+          ],
+          [
+            "operator",
+            0.025998477785304033
+          ],
+          [
+            "Maxwell",
+            0.024857352985284135
+          ],
+          [
+            "problem",
+            0.024633308711519794
+          ],
+          [
+            "domain",
+            0.022494944655433627
+          ],
+          [
+            "spectrum",
+            0.020611581219451794
+          ],
+          [
+            "transmission",
+            0.01762395765122857
+          ],
+          [
+            "convergence",
+            0.0175552327003738
+          ],
+          [
+            "cavities",
+            0.0170099681572078
+          ],
+          [
+            "non",
+            0.016216278801047104
+          ]
+        ],
+        "count": 74
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.1371611967481125,
+        -0.2895656128636023,
+        -0.5763764474107196,
+        -0.5607670058995553,
+        -0.7123970696176289,
+        -0.6249407000250561,
+        -0.28509358003020846
+      ],
+      [
+        -0.1371611967481125,
+        1.0,
+        -0.2556490843514213,
+        -0.6293109241200603,
+        -0.5776237742478838,
+        -0.6924339924873919,
+        -0.6409272133466326,
+        -0.4060426421565022
+      ],
+      [
+        -0.2895656128636023,
+        -0.2556490843514213,
+        1.0,
+        -0.5733273799632591,
+        -0.5552725953093565,
+        -0.723908106169902,
+        -0.6464885219168097,
+        -0.33320178031492376
+      ],
+      [
+        -0.5763764474107196,
+        -0.6293109241200603,
+        -0.5733273799632591,
+        1.0,
+        -0.7005032348281292,
+        -0.7395345126937879,
+        0.030894098711161708,
+        -0.6382031976984821
+      ],
+      [
+        -0.5607670058995553,
+        -0.5776237742478838,
+        -0.5552725953093565,
+        -0.7005032348281292,
+        1.0,
+        -0.744404731621959,
+        -0.6984984890154186,
+        -0.529734538095672
+      ],
+      [
+        -0.7123970696176289,
+        -0.6924339924873919,
+        -0.723908106169902,
+        -0.7395345126937879,
+        -0.744404731621959,
+        1.0,
+        -0.7362018196519629,
+        -0.7171833182050096
+      ],
+      [
+        -0.6249407000250561,
+        -0.6409272133466326,
+        -0.6464885219168097,
+        0.030894098711161708,
+        -0.6984984890154186,
+        -0.7362018196519629,
+        1.0,
+        -0.6464914406216653
+      ],
+      [
+        -0.28509358003020846,
+        -0.4060426421565022,
+        -0.33320178031492376,
+        -0.6382031976984821,
+        -0.529734538095672,
+        -0.7171833182050096,
+        -0.6464914406216653,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        14,
+        14,
+        4,
+        2,
+        5,
+        1,
+        3,
+        1
+      ],
+      "2020-02": [
+        16,
+        11,
+        5,
+        4,
+        6,
+        2,
+        2,
+        2
+      ],
+      "2020-03": [
+        17,
+        14,
+        1,
+        5,
+        9,
+        8,
+        6,
+        1
+      ],
+      "2020-04": [
+        17,
+        13,
+        6,
+        6,
+        8,
+        1,
+        1,
+        2
+      ],
+      "2020-05": [
+        18,
+        15,
+        7,
+        4,
+        3,
+        4,
+        3,
+        1
+      ],
+      "2020-06": [
+        16,
+        20,
+        11,
+        3,
+        8,
+        3,
+        3,
+        0
+      ],
+      "2020-07": [
+        21,
+        11,
+        11,
+        6,
+        6,
+        2,
+        1,
+        2
+      ],
+      "2020-08": [
+        18,
+        6,
+        6,
+        7,
+        2,
+        1,
+        4,
+        3
+      ],
+      "2020-09": [
+        21,
+        16,
+        7,
+        6,
+        6,
+        1,
+        2,
+        1
+      ],
+      "2020-10": [
+        19,
+        15,
+        4,
+        7,
+        4,
+        3,
+        1,
+        2
+      ],
+      "2020-11": [
+        20,
+        16,
+        4,
+        7,
+        6,
+        0,
+        1,
+        1
+      ],
+      "2020-12": [
+        14,
+        14,
+        6,
+        7,
+        7,
+        2,
+        8,
+        2
+      ],
+      "2021-01": [
+        14,
+        11,
+        4,
+        5,
+        6,
+        2,
+        0,
+        3
+      ],
+      "2021-02": [
+        15,
+        13,
+        1,
+        1,
+        2,
+        2,
+        6,
+        2
+      ],
+      "2021-03": [
+        21,
+        15,
+        6,
+        4,
+        9,
+        2,
+        0,
+        2
+      ],
+      "2021-04": [
+        19,
+        16,
+        4,
+        0,
+        4,
+        0,
+        5,
+        3
+      ],
+      "2021-05": [
+        14,
+        12,
+        7,
+        3,
+        3,
+        3,
+        1,
+        4
+      ],
+      "2021-06": [
+        14,
+        8,
+        7,
+        7,
+        4,
+        2,
+        6,
+        3
+      ],
+      "2021-07": [
+        13,
+        22,
+        6,
+        8,
+        7,
+        2,
+        3,
+        0
+      ],
+      "2021-08": [
+        15,
+        17,
+        5,
+        1,
+        4,
+        6,
+        3,
+        0
+      ],
+      "2021-09": [
+        15,
+        15,
+        4,
+        5,
+        5,
+        3,
+        1,
+        1
+      ],
+      "2021-10": [
+        17,
+        12,
+        6,
+        3,
+        5,
+        1,
+        4,
+        2
+      ],
+      "2021-11": [
+        11,
+        7,
+        5,
+        5,
+        8,
+        3,
+        3,
+        0
+      ],
+      "2021-12": [
+        10,
+        11,
+        8,
+        6,
+        5,
+        2,
+        4,
+        2
+      ],
+      "2022-01": [
+        17,
+        16,
+        6,
+        5,
+        3,
+        7,
+        1,
+        4
+      ],
+      "2022-02": [
+        14,
+        16,
+        7,
+        2,
+        5,
+        4,
+        3,
+        1
+      ],
+      "2022-03": [
+        13,
+        16,
+        6,
+        1,
+        9,
+        2,
+        2,
+        3
+      ],
+      "2022-04": [
+        13,
+        14,
+        4,
+        3,
+        3,
+        3,
+        4,
+        3
+      ],
+      "2022-05": [
+        15,
+        10,
+        6,
+        4,
+        5,
+        3,
+        1,
+        1
+      ],
+      "2022-06": [
+        22,
+        17,
+        3,
+        4,
+        5,
+        2,
+        2,
+        0
+      ],
+      "2022-07": [
+        15,
+        12,
+        5,
+        2,
+        2,
+        5,
+        5,
+        0
+      ],
+      "2022-08": [
+        12,
+        15,
+        5,
+        2,
+        4,
+        3,
+        1,
+        0
+      ],
+      "2022-09": [
+        18,
+        13,
+        2,
+        4,
+        2,
+        0,
+        7,
+        1
+      ],
+      "2022-10": [
+        9,
+        8,
+        5,
+        4,
+        2,
+        1,
+        1,
+        0
+      ],
+      "2022-11": [
+        14,
+        10,
+        8,
+        5,
+        7,
+        1,
+        1,
+        0
+      ],
+      "2022-12": [
+        11,
+        14,
+        4,
+        4,
+        3,
+        3,
+        4,
+        3
+      ],
+      "2023-01": [
+        11,
+        10,
+        7,
+        5,
+        3,
+        3,
+        2,
+        0
+      ],
+      "2023-02": [
+        8,
+        6,
+        8,
+        3,
+        3,
+        2,
+        1,
+        1
+      ],
+      "2023-03": [
+        12,
+        8,
+        7,
+        7,
+        4,
+        3,
+        2,
+        2
+      ],
+      "2023-04": [
+        11,
+        11,
+        5,
+        6,
+        4,
+        3,
+        3,
+        4
+      ],
+      "2023-05": [
+        18,
+        14,
+        9,
+        7,
+        9,
+        6,
+        2,
+        1
+      ],
+      "2023-06": [
+        13,
+        15,
+        6,
+        4,
+        5,
+        4,
+        4,
+        1
+      ],
+      "2023-07": [
+        17,
+        10,
+        5,
+        5,
+        7,
+        2,
+        3,
+        0
+      ],
+      "2023-08": [
+        16,
+        8,
+        2,
+        2,
+        7,
+        6,
+        3,
+        5
+      ],
+      "2023-09": [
+        18,
+        16,
+        3,
+        3,
+        4,
+        5,
+        2,
+        1
+      ],
+      "2023-10": [
+        13,
+        10,
+        7,
+        4,
+        8,
+        2,
+        7,
+        1
+      ],
+      "2023-11": [
+        15,
+        15,
+        5,
+        4,
+        4,
+        4,
+        2,
+        1
+      ],
+      "2023-12": [
+        24,
+        9,
+        5,
+        10,
+        5,
+        4,
+        3,
+        5
+      ],
+      "2024-01": [
+        11,
+        15,
+        6,
+        2,
+        2,
+        5,
+        5,
+        2
+      ],
+      "2024-02": [
+        18,
+        17,
+        4,
+        10,
+        9,
+        1,
+        1,
+        1
+      ],
+      "2024-03": [
+        21,
+        13,
+        3,
+        9,
+        3,
+        4,
+        7,
+        2
+      ],
+      "2024-04": [
+        23,
+        5,
+        4,
+        2,
+        4,
+        1,
+        1,
+        3
+      ],
+      "2024-05": [
+        17,
+        18,
+        6,
+        3,
+        3,
+        5,
+        1,
+        2
+      ],
+      "2024-06": [
+        14,
+        10,
+        4,
+        4,
+        1,
+        2,
+        3,
+        4
+      ],
+      "2024-07": [
+        18,
+        22,
+        6,
+        4,
+        10,
+        3,
+        0,
+        1
+      ],
+      "2024-08": [
+        11,
+        19,
+        7,
+        3,
+        4,
+        2,
+        1,
+        0
+      ],
+      "2024-09": [
+        11,
+        14,
+        6,
+        8,
+        7,
+        5,
+        0,
+        0
+      ],
+      "2024-10": [
+        24,
+        11,
+        7,
+        9,
+        7,
+        4,
+        2,
+        1
+      ],
+      "2024-11": [
+        20,
+        10,
+        8,
+        11,
+        3,
+        4,
+        2,
+        0
+      ],
+      "2024-12": [
+        25,
+        9,
+        7,
+        6,
+        5,
+        6,
+        4,
+        2
+      ],
+      "2025-01": [
+        21,
+        10,
+        6,
+        2,
+        5,
+        4,
+        2,
+        2
+      ],
+      "2025-02": [
+        17,
+        10,
+        8,
+        6,
+        5,
+        4,
+        4,
+        1
+      ],
+      "2025-03": [
+        18,
+        18,
+        8,
+        4,
+        3,
+        4,
+        2,
+        2
+      ],
+      "2025-04": [
+        18,
+        16,
+        8,
+        6,
+        4,
+        1,
+        3,
+        2
+      ],
+      "2025-05": [
+        21,
+        25,
+        5,
+        9,
+        22,
+        6,
+        2,
+        0
+      ],
+      "2025-06": [
+        22,
+        14,
+        9,
+        5,
+        8,
+        1,
+        2,
+        3
+      ],
+      "2025-07": [
+        11,
+        14,
+        6,
+        11,
+        7,
+        4,
+        6,
+        1
+      ],
+      "2025-08": [
+        15,
+        8,
+        11,
+        10,
+        8,
+        3,
+        4,
+        2
+      ],
+      "2025-09": [
+        6,
+        7,
+        3,
+        4,
+        5,
+        2,
+        2,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Lower bounds for the first eigenvalue of the Laplacian on Kähler manifolds",
+          "year": "2020-10",
+          "abstract": "We establish lower bound for the first nonzero eigenvalue of the Laplacian on\na closed K\\\"ahler manifold in terms of dimension, diameter, and lower bounds of\nholomorphic sectional curvature and orthogonal Ricci curvature. On compact\nK\\\"ahler manifolds with boundary, we prove lower bounds for the first nonzero\nNeumann or Dirichlet eigenvalue in terms of geometric data. Our results are\nK\\\"ahler analogues of well-known results for Riemannian manifolds.",
+          "arxiv_id": "2010.12792v1"
+        },
+        {
+          "title": "Steklov isospectrality of conformal metrics",
+          "year": "2025-01",
+          "abstract": "The Steklov spectrum of a smooth compact Riemannian manifold $(M,g)$ with\nboundary is the set of eigenvalues counted with multiplicities of its\nDirichlet-to-Neumann map. (DN map) This article is devoted to the Steklov\nspectral inverse problem of recovering the metric $g$, up to natural gauge\ninvariance, from its Steklov spectrum. Positive results are established in\ndimension $n\\geq 3$ for conformal metrics under the assumption that the\ngeodesic flow on the boundary is Anosov with simple length spectrum. The paper\ncombines wave trace formula techniques with the injectivity of the geodesic\nX-ray transform for functions on closed Anosov manifolds. It is shown that\nknowledge of the Steklov spectrum determines the jet at the boundary of the\nunderlying Riemannian metric within its conformal class. In this particular\ncontext, this parallels the well-known results of the Calder\\'on problem, where\nwe are given the entire Dirichlet-to-Neumann map instead. As a simple\ncorollary, assuming real-analyticity of the conformal factor, Steklov\nisospectral metrics must coincide. Using similar arguments, we are also able to\nprove under the same assumption of hyperbolicity of the geodesic flow on the\nboundary, that generically any smooth potential $q$ can be recovered from the\nSteklov spectrum, in the sense that its jet at the boundary is determined by\nthe spectrum of the DN map for the Schr\\\"odinger operator with potential $q$.\nConsequently, in this case, two analytic Steklov isospectral potentials must be\nequal.",
+          "arxiv_id": "2501.15535v2"
+        },
+        {
+          "title": "Large Steklov eigenvalues via homogenisation on manifolds",
+          "year": "2020-04",
+          "abstract": "Using methods in the spirit of deterministic homogenisation theory we obtain\nconvergence of the Steklov eigenvalues of a sequence of domains in a Riemannian\nmanifold to weighted Laplace eigenvalues of that manifold. The domains are\nobtained by removing small geodesic balls that are asymptotically densely\nuniformly distributed as their radius tends to zero. We use this relationship\nto construct manifolds that have large Steklov eigenvalues.\n  In dimension two, and with constant weight equal to 1, we prove that\nKokarev's upper bound of $8\\pi$ for the first nonzero normalised Steklov\neigenvalue on orientable surfaces of genus 0 is saturated. For other\ntopological types and eigenvalue indices, we also obtain lower bounds on the\nbest upper bound for the eigenvalue in terms of Laplace maximisers. For the\nfirst two eigenvalues, these lower bounds become equalities. A surprising\nconsequence is the existence of free boundary minimal surfaces immersed in the\nunit ball by first Steklov eigenfunctions and with area strictly larger than\n$2\\pi$. This was previously thought to be impossible. We provide numerical\nevidence that some of the already known examples of free boundary minimal\nsurfaces have these properties and also exhibit simulations of new free\nboundary minimal surfaces of genus 0 in the unit ball with even larger area.\nThe first nonzero Steklov eigenvalue of all these examples is equal to 1, as a\nconsequence of their symmetries and topology, so that they verify a general\nconjecture by Fraser and Li.\n  In dimension three and larger, we prove that the isoperimetric inequality of\nColbois--El Soufi--Girouard is sharp and implies an upper bound for weighted\nLaplace eigenvalues. We also show that in any manifold with a fixed metric, one\ncan construct by varying the weight a domain with connected boundary whose\nfirst nonzero normalised Steklov eigenvalue is arbitrarily large.",
+          "arxiv_id": "2004.04044v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Quantitative reducibility of Gevrey quasi-periodic cocycles and its applications",
+          "year": "2021-12",
+          "abstract": "We establish a quantitative version of strong almost reducibility result for\n$\\mathrm{sl}(2,\\mathbb{R})$ quasi-periodic cocycle close to a constant in\nGevrey class. We prove that, for the quasi-periodic Schr\\\"odinger operators\nwith small Gevrey potentials, the length of spectral gaps decays\nsub-exponentially with respect to its labelling, the long range duality\noperator has pure point spectrum with sub-exponentially decaying eigenfunctions\nfor almost all phases and the spectrum is an interval for discrete\nSchr\\\"odinger operator acting on $ \\mathbb{Z}^d $ with small separable\npotentials. All these results are based on a refined KAM scheme, and thus are\nperturbative.",
+          "arxiv_id": "2112.07251v1"
+        },
+        {
+          "title": "Resonances for Schrödinger operators on infinite cylinders and other products",
+          "year": "2020-11",
+          "abstract": "We study the resonances of Schr\\\"odinger operators on the infinite product\n$X=\\mathbb{R}^d\\times \\mathbb{S}^1$, where $d$ is odd, $\\mathbb{S}^1$ is the\nunit circle, and the potential $V\\in L^\\infty_c(X)$. This paper shows that at\nhigh energy, resonances of the Schr\\\"odinger operator $-\\Delta +V$ on\n$X=\\mathbb{R}^d\\times \\mathbb{S}^1$ which are near the continuous spectrum are\napproximated by the resonances of $-\\Delta +V_0$ on $X$, where the potential\n$V_0$ given by averaging $V$ over the unit circle. These resonances are, in\nturn, given in terms of the resonances of a Schr\\\"odinger operator on\n$\\mathbb{R}^d$ which lie in a bounded set. If the potential is smooth, we\nobtain improved localization of the resonances, particularly in the case of\nsimple, rank one poles of the corresponding scattering resolvent on\n$\\mathbb{R}^d$. In that case, we obtain the leading order correction for the\nlocation of the corresponding high energy resonances. In addition to direct\nresults about the location of resonances, we show that at high energies away\nfrom the resonances, the resolvent of the model operator $-\\Delta+V_0$ on $X$\napproximates that of $-\\Delta+V$ on $X$. If $d=1$, in certain cases this\nimplies the existence of an asymptotic expansion of solutions of the wave\nequation. Again for the special case of $d=1$, we obtain a resonant rigidity\ntype result for the zero potential among all real-valued potentials.",
+          "arxiv_id": "2011.14513v2"
+        },
+        {
+          "title": "Spectral properties of Schrödinger operators with locally $H^{-1}$ potentials",
+          "year": "2022-06",
+          "abstract": "We study half-line Schr\\\"odinger operators with locally $H^{-1}$ potentials.\nIn the first part, we focus on a general spectral theoretic framework for such\noperators, including a Last--Simon-type description of the absolutely\ncontinuous spectrum and sufficient conditions for different spectral types. In\nthe second part, we focus on potentials which are decaying in a local $H^{-1}$\nsense; we establish a spectral transition between short-range and long-range\npotentials and an $\\ell^2$ spectral transition for sparse singular potentials.\nThe regularization procedure used to handle distributional potentials is also\nwell suited for controlling rapid oscillations in the potential; thus, even\nwithin the class of smooth potentials, our results apply in situations which\nwould not classically be considered decaying or even bounded.",
+          "arxiv_id": "2206.07079v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Spectral decomposition of some non-self-adjoint operators",
+          "year": "2022-03",
+          "abstract": "We consider non-self-adjoint operators in Hilbert spaces of the form\n$H=H_0+CWC$, where $H_0$ is self-adjoint, $W$ is bounded and $C$ is a metric\noperator, $C$ bounded and relatively compact with respect to $H_0$. We suppose\nthat $C(H_0-z)^{-1}C$ is uniformly bounded in\n$z\\in\\mathbb{C}\\setminus\\mathbb{R}$. We define the spectral singularities of\n$H$ as the points of the essential spectrum\n$\\lambda\\in\\sigma_{\\mathrm{ess}}(H)$ such that $C(H\\pm i\\varepsilon)^{-1}CW$\ndoes not have a limit as $\\varepsilon\\to0^+$. We prove that the spectral\nsingularities of $H$ are in one-to-one correspondence with the eigenvalues,\nassociated to resonant states, of an extension of $H$ to a larger Hilbert\nspace. Next, we show that the asymptotically disappearing states for $H$, i.e.\nthe set of vectors $\\varphi$ such that $e^{\\pm itH}\\varphi\\to0$ as\n$t\\to\\infty$, coincide with the generalized eigenstates of $H$ corresponding to\neigenvalues $\\lambda\\in\\mathbb{C}$, $\\mp\\mathrm{Im}(\\lambda)>0$. Finally, we\ndefine the absolutely continuous spectral subspace of $H$ and show that it\nsatisfies $\\mathcal{H}_{\\mathrm{ac}}(H)=\\mathcal{H}_{\\mathrm{p}}(H^*)^\\perp$,\nwhere $\\mathcal{H}_{\\mathrm{p}}(H^*)$ stands for the point spectrum of $H^*$.\nWe thus obtain a direct sum decomposition of the Hilbert spaces in terms of\nspectral subspaces of $H$. One of the main ingredients of our proofs is a\nspectral resolution formula for a bounded operator $r(H)$ regularizing the\nidentity at spectral singularities. Our results apply to Schr\\\"odinger\noperators with complex potentials.",
+          "arxiv_id": "2203.12406v1"
+        },
+        {
+          "title": "Outliers of perturbations of banded Toeplitz matrices",
+          "year": "2024-10",
+          "abstract": "Toeplitz matrices form a rich class of possibly non-normal matrices whose\nasymptotic spectral analysis in high dimension is well-understood. The spectra\nof these matrices are notoriously highly sensitive to small perturbations. In\nthis work, we analyze the spectrum of a banded Toeplitz matrix perturbed by a\nrandom matrix with iid entries of variance $\\sigma_n^2 / n$ in the asymptotic\nof high dimension and $\\sigma_n$ converging to $\\sigma \\geq 0$. Our results\ncomplement and provide new proofs on recent progresses in the case $\\sigma =\n0$. For any $\\sigma \\geq 0$, we show that the point process of outlier\neigenvalues is governed by a low-dimensional random analytic matrix field,\ntypically Gaussian, alongside an explicit deterministic matrix that captures\nthe algebraic structure of the resonances responsible for the outlier\neigenvalues. On our way, we prove a new functional central limit theorem for\ntrace of polynomials in deterministic and random matrices and present new\nvariations around Szego's strong limit theorem.",
+          "arxiv_id": "2410.16439v1"
+        },
+        {
+          "title": "Spectral Theory of Self-adjoint Finitely Cyclic Operators and Introduction to Matrix Measure $L^2$-spaces",
+          "year": "2022-12",
+          "abstract": "We study finitely cyclic self-adjoint operators in a Hilbert space, i.e.\nself-adjoint operators that posses such a finite subset in the domain that the\norbits of all its elements with respect to the operator are linearly dense in\nthe space. One of the main goals here is to obtain the representation theorem\nfor such operators in a form analogous to the one well-known in the cyclic\nself-adjoint operators case. To do this, we present here a detailed\nintroduction to matrix measures, to the matrix measure $L^2$ spaces, and to the\nmultiplication by scalar functions operators in such spaces. This allows us to\nformulate and prove in all the details the less known representation result,\nsaying that the finitely cyclic self-adjoint operator is unitary equivalent to\nthe multiplication by the identity function on $\\mathbb{R}$ in the appropriate\nmatrix measure $L^2$ space. We study also some detailed spectral problems for\nfinitely cyclic self-adjoint operators, like the absolute continuity.",
+          "arxiv_id": "2212.13953v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Laplacian integral graphs with a given degree sequence constraint",
+          "year": "2020-09",
+          "abstract": "Let G be a graph on n vertices. The Laplacian matrix of G, denoted by L(G),\nis defined as L(G) = D(G) - A(G), where A(G) is the adjacency matrix of G and\nD(G) is the diagonal matrix of the vertex degrees of G. A graph G is said to be\nL-integral is all eigenvalues of the matrix L(G) are integers. In this paper,\nwe characterize all L-integral non-bipartite graphs among all connected graphs\nwith at most two vertices of degree larger than or equal to three.",
+          "arxiv_id": "2009.11985v1"
+        },
+        {
+          "title": "On distance Laplacian energy in terms of graph invariants",
+          "year": "2021-12",
+          "abstract": "For a simple connected graph $G$ of order $n$ having distance Laplacian\neigenvalues $ \\rho^{L}_{1}\\geq \\rho^{L}_{2}\\geq \\cdots \\geq \\rho^{L}_{n}$, the\ndistance Laplacian energy $DLE(G)$ is defined as\n$DLE(G)=\\sum_{i=1}^{n}\\left|\\rho^{L}_i-\\frac{2 W(G)}{n}\\right|$, where $W(G)$\nis the Wiener index of $G$. We obtain a relationship between the Laplacian\nenergy and distance Laplacian energy for graphs with diameter 2. We obtain\nlower bounds for the distance Laplacian energy $DLE(G)$ in terms of the order\n$n$, the Wiener index $W(G)$, independence number, vertex connectivity number\nand other given parameters. We characterize the extremal graphs attaining these\nbounds. We show that the complete bipartite graph has the minimum distance\nLaplacian energy among all connected bipartite graphs and complete split graph\nhas the minimum distance Laplacian energy among all connected graphs with given\nindependence number. Further, we obtain the distance Laplacian spectrum of the\njoin of a graph with the union of two other graphs. We show that the graph\n$K_{k}\\bigtriangledown(K_{t}\\cup K_{n-k-t}), 1\\leq t \\leq\n\\lfloor\\frac{n-k}{2}\\rfloor $, has the minimum distance Laplacian energy among\nall connected graphs with vertex connectivity $k$. We conclude this paper with\na discussion on trace norm of a matrix and the importance of our results in the\ntheory of trace norm of the matrix $D^L(G)-\\frac{2W(G)}{n}I_n$.",
+          "arxiv_id": "2112.02527v1"
+        },
+        {
+          "title": "A moment inequality and positivity for signed graph Laplacians",
+          "year": "2020-05",
+          "abstract": "A number of recent papers have considered signed graph Laplacians, a\ngeneralization of the classical graph Laplacian, where the edge weights are\nallowed to take either sign. In the classical case, where the edge weights are\nall positive, the Laplacian is positive semi-definite with the dimension of the\nkernel representing the number of connected components of the graph. In many\napplications one is interested in establishing conditions which guarantee the\npositive semi-definiteness of the matrix. In this paper we present an\ninequality on the eigenvalues of a weighted graph Laplacian (where the weights\nneed not have any particular sign) in terms of the first two moments of the\nedge weights. This bound involves the eigenvalues of the equally weighted\nLaplacian on the graph as well as the eigenvalues of the adjacency matrix of\nthe line graph (the edge-to-vertex dual graph). For a regular graph the bound\ncan be expressed entirely in terms of the second eigenvalue of the equally\nweighted Laplacian, an object that has been extensively studied in connection\nwith expander graphs and spectral measures of graph connectivity. We present\nseveral examples including Erd\\H{o}s-R\\'enyi random graphs in the critical and\nsubcritical regimes, random large $d$-regular graphs, and the complete graph,\nfor which the inequalities here are tight.",
+          "arxiv_id": "2005.09608v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Inverse Sturm-Liouville problem with polynomials in the boundary condition and multiple eigenvalues",
+          "year": "2024-02",
+          "abstract": "In this paper, the inverse Sturm-Liouville problem with distribution\npotential and with polynomials of the spectral parameter in one of the boundary\nconditions is considered. We for the first time prove local solvability and\nstability of this inverse problem in the general non-self-adjoint case, taking\npossible splitting of multiple eigenvalues into account. The proof is based on\nthe reduction of the nonlinear inverse problem to a linear equation in the\nBanach space of continuous functions on some circular contour. Moreover, we\nintroduce the generalized Cauchy data, which will be useful for investigation\nof partial inverse Sturm-Liouville problems with polynomials in the boundary\nconditions. Local solvability and stability of recovering the potential and the\npolynomials from the generalized Cauchy data are obtained. Thus, the results of\nthis paper include the first existence theorems for solution of the inverse\nSturm-Liouville problems with polynomial dependence on the spectral parameter\nin the boundary conditions in the case of multiple eigenvalues. In addition,\nour stability results can be used for justification of numerical methods.",
+          "arxiv_id": "2402.06215v1"
+        },
+        {
+          "title": "Uniform stability for the matrix inverse Sturm-Liouville problems",
+          "year": "2025-06",
+          "abstract": "In this paper, the uniform stability of the inverse spectral problem is\nproved for the matrix Sturm-Liouville operator on a finite interval. Namely, we\ndescribe the sets of spectral data, on which the inverse spectral mapping is\nbounded and, consequently, the uniform estimates hold for the differences of\nthe matrix potentials and of the corresponding coefficients of the boundary\nconditions. Our approach is based on a constructive procedure for solving the\ninverse problem by developing ideas of the method of spectral mappings. In\naddition, we apply our technique to obtain the uniform stability of the inverse\nSturm-Liouville problem on the star-shaped graph.",
+          "arxiv_id": "2506.15300v1"
+        },
+        {
+          "title": "Inverse Sturm-Liouville problem with analytical functions in the boundary condition",
+          "year": "2020-02",
+          "abstract": "The inverse spectral problem is studied for the Sturm-Liouville operator with\na complex-valued potential and arbitrary entire functions in one of the\nboundary conditions. We obtain necessary and sufficient conditions for\nuniqueness, and develop a constructive algorithm for the inverse problem\nsolution. The main results are applied to the Hochstadt-Lieberman half-inverse\nproblem. As an auxiliary proposition, we prove local solvability and stability\nfor the inverse Sturm-Liouville problem by the Cauchy data in the\nnon-self-adjoint case.",
+          "arxiv_id": "2002.12076v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "The Laplacian with complex magnetic fields",
+          "year": "2024-10",
+          "abstract": "We study the two-dimensional magnetic Laplacian when the magnetic field is\nallowed to be complex-valued. Under the assumption that the imaginary part of\nthe magnetic potential is relatively form-bounded with respect to the real part\nof the magnetic Laplacian, we introduce the operator as an m-sectorial\noperator. In two dimensions, sufficient conditions are established to guarantee\nthat the resolvent is compact. In the case of non-critical complex magnetic\nfields, a WKB approach is used to construct semiclassical pseudomodes, which do\nnot exist when the magnetic field is real-valued.",
+          "arxiv_id": "2410.01377v2"
+        },
+        {
+          "title": "Eigenvalues of the magnetic Dirichlet Laplacian with constant magnetic field on disks in the strong field limit",
+          "year": "2024-02",
+          "abstract": "We consider the magnetic Dirichlet Laplacian with constant magnetic field on\ndomains of finite measure. First, in the case of a disk, we prove that the\neigenvalue branches with respect to the field strength behave asymptotically\nlinear with an exponentially small remainder term as the field strength goes to\ninfinity. We compute the asymptotic expression for this remainder term. Second,\nwe show that for sufficiently large magnetic field strengths, the spectral\nbound corresponding to the P\\'olya conjecture for the non-magnetic Dirichlet\nLaplacian is violated up to a sharp excess factor which is independent of the\ndomain.",
+          "arxiv_id": "2402.01474v3"
+        },
+        {
+          "title": "On shape optimization with large magnetic fields in two dimensions",
+          "year": "2025-09",
+          "abstract": "This paper aims to show that, in the limit of strong magnetic fields, the\noptimal domains for eigenvalues of magnetic Laplacians tend to exhibit\nsymmetry. We establish several asymptotic bounds on magnetic eigenvalues to\nsupport this conclusion. Our main result implies that if, for a bounded\nsimply-connected planar domain, the n-th eigenvalue of the magnetic Dirichlet\nLaplacian with uniform magnetic field is smaller than the corresponding\neigenvalue for a disk of the same area, then the Fraenkel asymmetry of that\ndomain tends to zero in the strong magnetic field limit. Comparable results are\nalso derived for the magnetic Dirichlet Laplacian on rectangles, as well as the\nmagnetic Dirac operator with infinite mass boundary conditions on smooth\ndomains. As part of our analysis, we additionally provide a new estimate for\nthe torsion function on rectangles.",
+          "arxiv_id": "2509.08412v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Generating isospectral but not isomorphic quantum graphs",
+          "year": "2021-04",
+          "abstract": "Quantum graphs are defined by having a Laplacian defined on the edges of a\nmetric graph with boundary conditions on each vertex such that the resulting\noperator, $\\mathbf{L}$, is self-adjoint. We use Neumann boundary conditions\nalthough we do a slight excursion into graphs with Dirichlet and $\\delta$-type\nboundary condititons towards the end of the paper. The spectrum of $\\mathbf{L}$\ndoes not determine the graph uniquely, that is, there exist non-isomorphic\ngraphs with the same spectra. There are few known examples of pairs of\nnon-isomorphic but isospectral quantum graphs. In this paper we start to\ncorrectify this situation by finding hundreds of isospectral sets, using\ncomputer algebra.\n  We have found all sets of isospectral but non-isomorphic equilateral\nconnected quantum graphs with at most nine vertices. This includes thirteen\nisospectral triplets and one isospectral set of four. One of the isospectral\ntriplets involves a loop where we could prove isospectrality. We also present\nseveral different combinatorial methods to generate arbitrarily large sets of\nisospectral graphs, including infinite graphs in different dimensions. As part\nof this we have found a method to determine if two vertices have the same\nTitchmarsh-Weyl $M$-function. We give combinatorial methods to generate sets of\ngraphs with arbitrarily large number of vertices with the same $M$-function. We\nalso find several sets of graphs that are isospectral under both Neumann and\nDirichlet boundary conditions as well as under more general, $\\delta$-type and\n$\\delta'_s$-type, boundary conditions. We discuss the possibilities that our\nprogram is incorrect, present our tests and open source it for inspection at\nhttp://github.com/meapistol/Spectra-of-graphs",
+          "arxiv_id": "2104.12885v15"
+        },
+        {
+          "title": "Spectrally grown graphs",
+          "year": "2022-07",
+          "abstract": "Quantum graphs have attracted attention from mathematicians for some time. A\nquantum graph is defined by having a Laplacian on each edge of a metric graph\nand imposing boundary conditions at the vertices to get an eigenvalue problem.\nA problem studying such quantum graphs is that the spectrum is timeconsuming to\ncompute by hand and the inverse problem of finding a quantum graph having a\nspecified spectrum is difficult. We solve the forward problem, to find the\neigenvalues, using a previously developed computer program. We obtain all\neigenvalues analytically for not too big graphs that have rationally dependent\nedges. We solve the inverse problem using \"spectrally grown graphs\". The\nspectrally grown graphs are evolved from a starting (parent) graph such that\nthe child graphs have eigenvalues are close to some criterion. Our experiments\nshow that the method works and we can usually find graphs having spectra which\nare numerically close to a prescribed spectrum. There are naturally exceptions,\nsuch as if no graph has the prescribed spectrum. The selection criteria (goals)\nstrongly influence the shape of the evolved graphs. Our experiments allows us\nto make new conjectures concerning the spectra of quantum graphs. We\nopen-source our software at https://github.com/meapistol/Spectra-of-graphs.",
+          "arxiv_id": "2207.11998v1"
+        },
+        {
+          "title": "Mean distance on metric graphs",
+          "year": "2023-12",
+          "abstract": "We introduce a natural notion of mean (or average) distance in the context of\ncompact metric graphs, and study its relation to geometric properties of the\ngraph. We show that it exhibits a striking number of parallels to the\nreciprocal of the spectral gap of the graph Laplacian with standard vertex\nconditions: it is maximised among all graphs of fixed length by the path graph\n(interval), or by the loop in the restricted class of doubly connected graphs,\nand it is minimised among all graphs of fixed length and number of edges by the\nequilateral flower graph. We also establish bounds for the correctly scaled\nproduct of the spectral gap and the square of the mean distance which depend\nonly on combinatorial, and not metric, features of the graph. This raises the\nopen question whether this product admits absolute upper and lower bounds valid\non all compact metric graphs.",
+          "arxiv_id": "2312.04952v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Operator estimates for Neumann sieve problem",
+          "year": "2022-09",
+          "abstract": "Let $\\Omega$ be a domain in $\\mathbb{R}^n$, $\\Gamma$ be a hyperplane\nintersecting $\\Omega$, $\\varepsilon>0$ be a small parameter, and\n$D_{k,\\varepsilon}$, $k=1,2,3\\dots$ be a family of small \"holes\" in\n$\\Gamma\\cap\\Omega$; when $\\varepsilon \\to 0$, the number of holes tends to\ninfinity, while their diameters tends to zero. Let $\\mathscr{A}_\\varepsilon$ be\nthe Neumann Laplacian in the perforated domain\n$\\Omega_\\varepsilon=\\Omega\\setminus\\Gamma_\\varepsilon$, where\n$\\Gamma_\\varepsilon=\\Gamma\\setminus (\\cup_k D_{k,\\varepsilon})$ (\"sieve\"). It\nis well-known that if the sizes of holes are carefully chosen,\n$\\mathscr{A}_\\varepsilon$ converges in the strong resolvent sense to the\nLaplacian on $\\Omega\\setminus\\Gamma$ subject to the so-called\n$\\delta'$-conditions on $\\Gamma$. In the current work we improve this result:\nunder rather general assumptions on the shapes and locations of the holes we\nderive estimates on the rate of convergence in terms of $L^2\\to L^2$ and\n$L^2\\to H^1$ operator norms; in the latter case a special corrector is\nrequired.",
+          "arxiv_id": "2209.08775v1"
+        },
+        {
+          "title": "Spectrum of the Laplacian on a domain perturbed by small resonators",
+          "year": "2022-03",
+          "abstract": "It is widely known that the spectrum of the Dirichlet Laplacian is stable\nunder small perturbations of a domain, while in the case of the Neumann or\nmixed boundary conditions the spectrum may abruptly change. In this work we\ndiscuss an example of such a domain perturbation. Let $\\Omega$ be a (not\n{necessarily} bounded) domain in $\\mathbb{R}^n$. We perturb it to $\n\\Omega_\\varepsilon=\\Omega\\setminus \\cup_{k=1}^m S_{k,\\varepsilon},$ where\n$S_{k,\\varepsilon}$ are closed surfaces with small suitably scaled holes\n(``windows'') through which the bounded domains enclosed by these surfaces\n(``resonators'') are connected to the outer domain. When $\\varepsilon$ goes to\nzero, the resonators shrink to points. We prove that in the limit\n$\\varepsilon\\to 0$ the spectrum of the Laplacian on $\\Omega_\\varepsilon$ with\nthe Neumann boundary conditions on $S_{k,\\varepsilon}$ and the Dirichlet\nboundary conditions on the outer boundary converges to the union of the\nspectrum of the Dirichlet Laplacian on $\\Omega$ and the numbers $\\gamma_k$,\n$k=1,\\dots,m$, being equal $1/4$ times the limit of the ratio between the\ncapacity of the $k$th window and the volume of the $k$th resonator. We obtain\nan estimate on the rate of this convergence with respect to the Hausdorff-type\nmetrics. Also, an application of this result is presented: we construct an\nunbounded waveguide-like domain with inserted resonators such that the\neigenvalues of the Laplacian on this domain lying below the essential spectrum\nthreshold do coincide with prescribed numbers.",
+          "arxiv_id": "2203.01971v2"
+        },
+        {
+          "title": "Operator estimates for homogenization of the Robin Laplacian in a perforated domain",
+          "year": "2021-06",
+          "abstract": "Let $\\varepsilon>0$ be a small parameter. We consider the domain\n$\\Omega_\\varepsilon:=\\Omega\\setminus D_\\varepsilon$, where $\\Omega$ is an open\ndomain in $\\mathbb{R}^n$, and $D_\\varepsilon$ is a family of small balls of the\nradius $d_\\varepsilon=o(\\varepsilon)$ distributed periodically with period\n$\\varepsilon$. Let $\\Delta_\\varepsilon$ be the Laplace operator in\n$\\Omega_\\varepsilon$ subject to the Robin condition ${\\partial u\\over \\partial\nn}+\\gamma_\\varepsilon u = 0$ with $\\gamma_\\varepsilon\\ge 0$ on the boundary of\nthe holes and the Dirichlet condition on the exterior boundary. Kaizu (1985,\n1989) and Brillard (1988) have shown that, under appropriate assumptions on\n$d_\\varepsilon$ and $\\gamma_\\varepsilon$, the operator $\\Delta_\\varepsilon$\nconverges in the strong resolvent sense to the sum of the Dirichlet Laplacian\nin $\\Omega$ and a constant potential. We improve this result deriving estimates\non the rate of convergence in terms of $L^2\\to L^2$ and $L^2\\to H^1$ operator\nnorms. As a byproduct we establish the estimate on the distance between the\nspectra of the associated operators.",
+          "arxiv_id": "2106.10216v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:36:38Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

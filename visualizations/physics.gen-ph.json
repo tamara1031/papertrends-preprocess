@@ -1,0 +1,868 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_dark_model_energy_matter",
+        "keywords": [
+          [
+            "dark",
+            0.03733451797055336
+          ],
+          [
+            "model",
+            0.03674548269539342
+          ],
+          [
+            "energy",
+            0.03381856367924745
+          ],
+          [
+            "matter",
+            0.031428004745220735
+          ],
+          [
+            "black",
+            0.02723421856566643
+          ],
+          [
+            "universe",
+            0.025215418019128306
+          ],
+          [
+            "cosmological",
+            0.023804890327865435
+          ],
+          [
+            "gravity",
+            0.02297508798187899
+          ],
+          [
+            "dark matter",
+            0.02295543115695021
+          ],
+          [
+            "field",
+            0.0194334248458727
+          ]
+        ],
+        "count": 227
+      },
+      "1": {
+        "name": "1_quantum_model_theory_space",
+        "keywords": [
+          [
+            "quantum",
+            0.033457698332588146
+          ],
+          [
+            "model",
+            0.022896161832656536
+          ],
+          [
+            "theory",
+            0.022614642105385423
+          ],
+          [
+            "space",
+            0.02193754590579626
+          ],
+          [
+            "field",
+            0.02049934751029811
+          ],
+          [
+            "gravity",
+            0.02048021280593185
+          ],
+          [
+            "gauge",
+            0.019565715997247993
+          ],
+          [
+            "spacetime",
+            0.018911407510929876
+          ],
+          [
+            "fields",
+            0.018870570168915364
+          ],
+          [
+            "group",
+            0.017081476948070475
+          ]
+        ],
+        "count": 224
+      },
+      "2": {
+        "name": "2_quantum_Bell_Quantum_mechanics",
+        "keywords": [
+          [
+            "quantum",
+            0.0710851695604953
+          ],
+          [
+            "Bell",
+            0.03340747645308781
+          ],
+          [
+            "Quantum",
+            0.027792139418453553
+          ],
+          [
+            "mechanics",
+            0.024469417347833842
+          ],
+          [
+            "quantum mechanics",
+            0.02319683670308342
+          ],
+          [
+            "classical",
+            0.023191280434756253
+          ],
+          [
+            "theory",
+            0.021543039524184467
+          ],
+          [
+            "measurement",
+            0.020824829430626114
+          ],
+          [
+            "physical",
+            0.019186932026004105
+          ],
+          [
+            "state",
+            0.019176576198732954
+          ]
+        ],
+        "count": 166
+      },
+      "3": {
+        "name": "3_momentum_electromagnetic_field_equations",
+        "keywords": [
+          [
+            "momentum",
+            0.02877130959513265
+          ],
+          [
+            "electromagnetic",
+            0.027415795055579745
+          ],
+          [
+            "field",
+            0.025718455899109184
+          ],
+          [
+            "equations",
+            0.020705365883028282
+          ],
+          [
+            "energy",
+            0.020682045973112167
+          ],
+          [
+            "electric",
+            0.017667833567638166
+          ],
+          [
+            "equation",
+            0.017588347554829856
+          ],
+          [
+            "magnetic",
+            0.016532689235313206
+          ],
+          [
+            "fields",
+            0.015765869812795878
+          ],
+          [
+            "octonion",
+            0.015659544167135615
+          ]
+        ],
+        "count": 126
+      },
+      "4": {
+        "name": "4_left_right_field_quantum",
+        "keywords": [
+          [
+            "left",
+            0.03762016206996693
+          ],
+          [
+            "right",
+            0.03701262036672691
+          ],
+          [
+            "field",
+            0.028989190497612533
+          ],
+          [
+            "quantum",
+            0.026508318674065015
+          ],
+          [
+            "Dirac",
+            0.026396070352967156
+          ],
+          [
+            "dynamics",
+            0.02388464540577416
+          ],
+          [
+            "gauge",
+            0.02126539938975536
+          ],
+          [
+            "symmetry",
+            0.0210197349893662
+          ],
+          [
+            "equation",
+            0.02100225641145789
+          ],
+          [
+            "electron",
+            0.018946461710496427
+          ]
+        ],
+        "count": 52
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.5265794891881158,
+        -0.5775933665547264,
+        -0.5797637818644487,
+        -0.6237260867161039
+      ],
+      [
+        -0.5265794891881158,
+        1.0,
+        -0.27335284441465,
+        -0.514939423592981,
+        -0.5469465882480588
+      ],
+      [
+        -0.5775933665547264,
+        -0.27335284441465,
+        1.0,
+        -0.5428898954023691,
+        -0.5594646420768344
+      ],
+      [
+        -0.5797637818644487,
+        -0.514939423592981,
+        -0.5428898954023691,
+        1.0,
+        -0.3863966072480437
+      ],
+      [
+        -0.6237260867161039,
+        -0.5469465882480588,
+        -0.5594646420768344,
+        -0.3863966072480437,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        11,
+        2,
+        4,
+        7,
+        0
+      ],
+      "2020-02": [
+        18,
+        3,
+        8,
+        8,
+        1
+      ],
+      "2020-03": [
+        21,
+        3,
+        9,
+        4,
+        1
+      ],
+      "2020-04": [
+        12,
+        2,
+        3,
+        4,
+        0
+      ],
+      "2020-05": [
+        11,
+        1,
+        10,
+        2,
+        0
+      ],
+      "2020-06": [
+        13,
+        2,
+        5,
+        6,
+        0
+      ],
+      "2020-07": [
+        9,
+        1,
+        7,
+        5,
+        0
+      ],
+      "2020-08": [
+        9,
+        3,
+        7,
+        2,
+        0
+      ],
+      "2020-09": [
+        21,
+        1,
+        3,
+        4,
+        1
+      ],
+      "2020-10": [
+        12,
+        3,
+        5,
+        4,
+        0
+      ],
+      "2020-11": [
+        11,
+        0,
+        3,
+        5,
+        0
+      ],
+      "2020-12": [
+        12,
+        1,
+        6,
+        3,
+        1
+      ],
+      "2021-01": [
+        9,
+        1,
+        3,
+        2,
+        0
+      ],
+      "2021-02": [
+        6,
+        0,
+        0,
+        3,
+        0
+      ],
+      "2021-03": [
+        11,
+        4,
+        14,
+        5,
+        2
+      ],
+      "2021-04": [
+        10,
+        4,
+        5,
+        7,
+        1
+      ],
+      "2021-05": [
+        11,
+        3,
+        5,
+        4,
+        1
+      ],
+      "2021-06": [
+        16,
+        2,
+        5,
+        3,
+        0
+      ],
+      "2021-07": [
+        17,
+        0,
+        10,
+        4,
+        1
+      ],
+      "2021-08": [
+        12,
+        7,
+        12,
+        4,
+        3
+      ],
+      "2021-09": [
+        10,
+        4,
+        5,
+        6,
+        0
+      ],
+      "2021-10": [
+        17,
+        2,
+        3,
+        3,
+        2
+      ],
+      "2021-11": [
+        7,
+        1,
+        6,
+        1,
+        0
+      ],
+      "2021-12": [
+        6,
+        2,
+        5,
+        6,
+        0
+      ],
+      "2022-01": [
+        8,
+        3,
+        4,
+        2,
+        1
+      ],
+      "2022-02": [
+        7,
+        2,
+        6,
+        8,
+        1
+      ],
+      "2022-03": [
+        15,
+        0,
+        5,
+        2,
+        0
+      ],
+      "2022-04": [
+        12,
+        1,
+        4,
+        1,
+        1
+      ],
+      "2022-05": [
+        17,
+        2,
+        10,
+        5,
+        1
+      ],
+      "2022-06": [
+        5,
+        2,
+        10,
+        4,
+        1
+      ],
+      "2022-07": [
+        10,
+        3,
+        4,
+        1,
+        1
+      ],
+      "2022-08": [
+        8,
+        4,
+        5,
+        2,
+        0
+      ],
+      "2022-09": [
+        12,
+        4,
+        6,
+        6,
+        0
+      ],
+      "2022-10": [
+        9,
+        2,
+        4,
+        1,
+        0
+      ],
+      "2022-11": [
+        9,
+        2,
+        6,
+        4,
+        0
+      ],
+      "2022-12": [
+        10,
+        0,
+        7,
+        4,
+        0
+      ],
+      "2023-01": [
+        9,
+        4,
+        6,
+        2,
+        0
+      ],
+      "2023-02": [
+        11,
+        3,
+        6,
+        3,
+        0
+      ],
+      "2023-03": [
+        9,
+        5,
+        6,
+        2,
+        1
+      ],
+      "2023-04": [
+        10,
+        0,
+        3,
+        2,
+        0
+      ],
+      "2023-05": [
+        13,
+        1,
+        3,
+        6,
+        0
+      ],
+      "2023-06": [
+        9,
+        1,
+        5,
+        3,
+        0
+      ],
+      "2023-07": [
+        10,
+        3,
+        7,
+        3,
+        1
+      ],
+      "2023-08": [
+        10,
+        3,
+        12,
+        3,
+        0
+      ],
+      "2023-09": [
+        7,
+        0,
+        4,
+        1,
+        0
+      ],
+      "2023-10": [
+        9,
+        1,
+        7,
+        3,
+        0
+      ],
+      "2023-11": [
+        8,
+        1,
+        10,
+        1,
+        0
+      ],
+      "2023-12": [
+        10,
+        3,
+        3,
+        5,
+        0
+      ],
+      "2024-01": [
+        10,
+        3,
+        5,
+        4,
+        1
+      ],
+      "2024-02": [
+        11,
+        2,
+        7,
+        3,
+        1
+      ],
+      "2024-03": [
+        8,
+        0,
+        4,
+        6,
+        1
+      ],
+      "2024-04": [
+        9,
+        2,
+        6,
+        4,
+        1
+      ],
+      "2024-05": [
+        8,
+        3,
+        7,
+        4,
+        0
+      ],
+      "2024-06": [
+        8,
+        2,
+        4,
+        1,
+        0
+      ],
+      "2024-07": [
+        10,
+        1,
+        4,
+        3,
+        0
+      ],
+      "2024-08": [
+        7,
+        2,
+        5,
+        3,
+        0
+      ],
+      "2024-09": [
+        9,
+        1,
+        8,
+        3,
+        0
+      ],
+      "2024-10": [
+        12,
+        1,
+        6,
+        6,
+        1
+      ],
+      "2024-11": [
+        10,
+        1,
+        4,
+        0,
+        0
+      ],
+      "2024-12": [
+        7,
+        1,
+        3,
+        1,
+        1
+      ],
+      "2025-01": [
+        15,
+        6,
+        4,
+        4,
+        0
+      ],
+      "2025-02": [
+        11,
+        1,
+        9,
+        8,
+        0
+      ],
+      "2025-03": [
+        10,
+        2,
+        9,
+        6,
+        0
+      ],
+      "2025-04": [
+        18,
+        1,
+        10,
+        3,
+        3
+      ],
+      "2025-05": [
+        9,
+        1,
+        3,
+        0,
+        0
+      ],
+      "2025-06": [
+        10,
+        2,
+        4,
+        0,
+        0
+      ],
+      "2025-07": [
+        7,
+        2,
+        7,
+        1,
+        2
+      ],
+      "2025-08": [
+        11,
+        2,
+        3,
+        1,
+        0
+      ],
+      "2025-09": [
+        1,
+        0,
+        5,
+        1,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Stability, dark energy parameterization and swampland aspect of Bianchi Type-$ VI_{h}$ cosmological models with f(R, T)-gravity",
+          "year": "2020-03",
+          "abstract": "Stability, dark energy (DE) parameterization and swampland aspects for the\nBianchi form-$VI_{h}$ universe have been formulated in an extended gravity\nhypothesis. Here we have assumed a minimally coupled geometry field with a\nrescaled function of $f(R, T)$ replaced in the geometric action by the Ricci\nscalar $R$. Exact solutions are sought under certain basic conditions for the\nrelated field equations. For the following theoretically valid premises, the\nfield equations in this scalar-tensor theory have been solved. It is observed\nunder appropriate conditions that our model shows a decelerating to\naccelerating phase transition property. Results are observed to be coherent\nwith recent observations. Here, our models predict that the universe's rate of\nexpansion will increase with the passage of time. The physical and geometric\naspects of the models are discussed in detail. In this model, we also analyze\nthe parameterizations of dark energy by fitting the EoS parameter $\\omega(z)$\nwith redshift. The results obtained would be useful in clarifying the\nrelationship between dark energy parameters. In this, we also explore the\ncorrespondence of swampland dark energy. The swampland criteria have also been\nshown the nature of the scalar field and the potential of the scalar field.",
+          "arxiv_id": "2003.14242v2"
+        },
+        {
+          "title": "The cosmic microwave background and mass power spectrum profiles for a novel and efficient model of dark energy",
+          "year": "2022-03",
+          "abstract": "In a previous work it was shown that by considering the quantum nature of the\ngravitational field mediator, it is possible to introduce the momentum energy\nof the graviton into the Einstein equations as an effective cosmological\nconstant. The Compton Mass Dark Energy (CMaDE) model proposes that this\nmomentum can be interpreted as dark energy, with a Compton wavelength given by\nthe size of the observable universe $R_H$, implying that the dark energy varies\ndepending on this size. The main result of this previous work is the existence\nof an effective cosmological constant $\\Lambda=2\\pi^2/\\lambda^2$ that varies\nvery slowly, being $\\lambda=(c/H_0) R_H$ the graviton Compton wavelength. In\nthe present work we use that the dark energy density parameter is given by\n$\\Omega_\\Lambda=2\\pi^2/3/R_H^2$, it only has the curvature $\\Omega_k$ as a free\nconstant and depends exclusively on the radiation density parameter $\\Omega_r$.\nUsing $\\Omega_{0r} = 9.54\\times10^{- 5}$, the theoretical prediction for a flat\nuniverse of the dark energy density parameter is $\\Omega_{0\\Lambda} = 0.6922$.\nWe perform a general study for a non-flat universe, using the Planck data and a\nmodified version of the CLASS code we find an excellent concordance with the\nCosmic Microwave Background and Mass Power Spectrum profiles, provided that the\nHubble parameter today is $H_0 = 72.6$ km/s/Mpc for an universe with curvature\n$\\Omega_{0k}=-0.003$. We conclude that the CMaDE model provides a natural\nexplanation for the accelerated expansion and the coincidence problem of the\nuniverse.",
+          "arxiv_id": "2203.07876v1"
+        },
+        {
+          "title": "Galactic model with a phase transition from dark matter to dark energy",
+          "year": "2021-09",
+          "abstract": "This work continues the construction of a recently proposed model of dark\nmatter stars. In this model, dark matter quanta are sterile massless particles\nthat are emitted from the central regions of the galaxy in the radial\ndirection. As a result, at large distances $r$ from the center of the galaxy,\nthe mass density of dark matter has the form $\\rho \\sim r^{-2}$, in contrast to\nthe homogeneous model $\\rho=Const$. In the cosmological context, the\nhomogeneous model with massless particles corresponds to the radiation epoch of\nthe expansion of the universe, while the proposed inhomogeneous model turns out\nto be equivalent to $\\Lambda$CDM. In this paper, scenarios will be considered\nin which the radial emission of dark matter is brought into hydrostatic\nequilibrium with a uniform background. It is shown that solutions exist if the\nuniform background has an equation of state typical for dark energy. Thus, this\nmodel describes a phase transition from dark matter inside the galaxy to dark\nenergy outside of it. The specific mechanism for such a transition could be\nBose-Einstein condensation. In addition, the question of what happens if dark\nmatter particles are not sterile, for example, are photons of the Standard\nModel, is considered.",
+          "arxiv_id": "2110.00366v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Clifford odd and even objects offer the description of the internal space of fermions and bosons, respectively, opening new insight into the second quantization of fields",
+          "year": "2022-09",
+          "abstract": "In a long series of works the author has demonstrated that the model named\nthe {\\it spin-charge-family} theory offers the explanation for all in the {\\it\nstandard model} assumed properties of the fermion and boson fields, as well as\nfor many of their so far observed properties if the space-time is $\\ge (13 +1)$\nwhile fermions interact with gravity only. In this paper, I briefly report on\nthe so far achievements of the theory. The main contribution demonstrates the\noffer of the Clifford odd and even objects for the description of the internal\nspaces of fermion (Clifford odd) and boson (Clifford even) fields, which is\nopening up a new understanding of the second quantization postulates for the\nfermion and boson fields: The \"basis vectors\" determined by the Clifford odd\nobjects demonstrate all the properties of the internal space of fermions and\ntransfer their anticommutativity to their creation and annihilation operators,\nwhile the \"basis vectors\" determined by the Clifford even objects demonstrate\nall the properties of the internal space of boson fields and transfer their\ncommutativity to their creation and annihilation operators. The toy model with\n$d=(5+1)$ illustrates the statements.",
+          "arxiv_id": "2210.07004v1"
+        },
+        {
+          "title": "Gravitation, and quantum theory, as emergent phenomena",
+          "year": "2023-08",
+          "abstract": "There must exist a reformulation of quantum field theory, even at low\nenergies, which does not depend on classical time. The octonionic theory\nproposes such a reformulation, leading to a pre-quantum pre-spacetime theory.\nThe ingredients for constructing such a theory, which is also a unification of\nthe standard model with gravitation, are : (i) the pre-quantum theory of trace\ndynamics: a matrix-valued Lagrangian dynamics, (ii) the spectral action\nprinciple of non-commutative geometry, (iii) the number system known as the\noctonions, for constructing a non-commutative manifold and for defining\nelementary particles via Clifford algebras, (iv) a Lagrangian with $E_8 \\times\nE_8$ symmetry. The split bioctonions define a sixteen dimensional space (with\nleft-right symmetry) whose geometry (evolving in Connes time) relates to the\nfour known fundamental forces, while predicting two new forces, $SU(3)_{grav}$\nand $U(1)_{grav}$. This latter interaction is possibly the theoretical origin\nof MOND. Coupling constants of the standard model result from left-right\nsymmetry breaking, and their values are theoretically determined by the\ncharacteristic equation of the exceptional Jordan algebra of the octonions. The\nquantum-to-classical transition, precipitated by the entanglement of a critical\nnumber of fermions, is responsible for the emergence of classical spacetime,\nand also for the familiar formulation of quantum theory on a spacetime\nbackground.",
+          "arxiv_id": "2308.16216v1"
+        },
+        {
+          "title": "Clifford algebra Cl(0,6) approach to beyond the standard model and naturalness problems",
+          "year": "2024-01",
+          "abstract": "Is there more to Dirac's gamma matrices than meets the eye? It turns out that\ngamma zero can be factorized into a product of three operators. This revelation\nfacilitates the expansion of Dirac's space-time algebra to Clifford algebra\nCl(0,6). The resultant rich geometric structure can be leveraged to establish a\ncombined framework of the standard model and gravity, wherein a gravi-weak\ninteraction between the extended vierbein field and the extended weak gauge\nfield is allowed. In conjunction with the composite Higgs model, we examine the\nvierbein field as a Cooper-pair-like fermion-antifermion condensation. Quantum\ngravity is realized indirectly via the quantized standard model spinor fields\nwhich underlie the composite space-time metric. We propose that the fundamental\nenergy scales of the universe including the Planck scale are emergent and\nresulted from quantum condensations, thus possibly addressing the cosmological\nconstant problem through an unconventional multi-scale renormalization\nprocedure for multiplications of divergent Feynman integrals. The Clifford\nalgebra approach also permits a weaker form of charge conjugation without\nparticle-antiparticle interchange, leading to a Majorana-type mass that\nconserves lepton number. Additionally, with reshuffling the traditional\nquark-lepton pairing pattern of three generations of fermions, we explore a\nthree-Higgs-doublet model with Higgs VEVs 246 GeV, 42 GeV and 2.5 GeV which\ncould explain the mass hierarchies of fermions.",
+          "arxiv_id": "2401.05678v7"
+        }
+      ],
+      "2": [
+        {
+          "title": "The magical \"Born Rule\" & quantum \"measurement\": Implications for Physics",
+          "year": "2023-10",
+          "abstract": "I. The arena of quantum mechanics and quantum field theory is the abstract,\nunobserved and unobservable, M-dimensional formal Hilbert space [not equal to]\nspacetime. II. The arena of observations and, more generally, of all events\n(i.e. everything) in the real physical world, is the classical 4-dimensional\nphysical spacetime. III. The \"Born Rule\" is the random process \"magically\"\ntransforming I. into II. Wavefunctions are superposed and entangled only in the\nabstract space I., never in spacetime II. Attempted formulations of quantum\ntheory directly in real physical spacetime actually constitute examples of\n\"locally real\" theories, as defined by Clauser & Horne, and are therefore\nalready empirically refuted by the numerous tests of Bell's theorem in real,\ncontrolled experiments in laboratories here on Earth. Observed quantum\nentities, i.e. events, are never superposed or entangled as they: 1)\nExclusively \"live\" (manifest) in real physical spacetime, 2) Are not described\nby entangled wavefunctions after \"measurement\", effectuated by III. When\nseparated and treated correctly in this way, a number of fundamental problems\nand \"paradoxes\" of quantum theory vs. relativity (i.e. spacetime) simply\nvanish, such as the black hole information paradox, infinite zero-point energy\nof quantum field theory and quantization of general relativity.",
+          "arxiv_id": "2310.02283v1"
+        },
+        {
+          "title": "Quantum Relativity",
+          "year": "2023-02",
+          "abstract": "Starting with a consideration of the implication of Bell inequalities in\nquantum mechanics, a new quantum postulate is suggested in order to restore\nclassical locality and causality to quantum physics: only the relative\ncoordinates between detected quantum events are valid observables. This\npostulate supports the EPR view that quantum mechanics is incomplete, while\nalso staying compatible to the Bohr view that nothing exists beyond the\nquantum. The new postulate follows from a more general principle of quantum\nrelativity, which states that only correlations between experimental detections\nof quantum events have a real classical existence. Quantum relativity provides\na framework to differentiate the quantum and classical world.",
+          "arxiv_id": "2302.10216v1"
+        },
+        {
+          "title": "Unraveling the Mystery of Quantum Measurement with A New Space-Time Approach to Relativistic Quantum Mechanics",
+          "year": "2023-06",
+          "abstract": "Quantum measurement is a fundamental concept in the field of quantum\nmechanics. The action of quantum measurement, leading the superposition state\nof the measured quantum system into a definite output state, not only\nreconciles contradictions between quantum and classical mechanics but also\nfacilitates quantum state manipulations, including reading and resetting.\nDespite its significance, four fundamental issues -- randomness,\ninstantaneousness, irreversibility, and preferred-basis -- continue to pose\nsignificant challenges to the broader application of quantum measurement and\nour overall understanding of quantum mechanics. In this work, we employ a new\nspace-time approach to relativistic quantum mechanics to address these issues\nsystematically. Our approach provides a comprehensive elucidation of the\nintricate connections between quantum measurement and quantum unitary\nevolution, as well as an in-depth analysis for the interdependence of non-local\ncorrelations and relativistic theories. We thereby reveal a more fundamental\ndynamical theory, beyond the traditional time-evolution equation in quantum\nmechanics, where the axioms of quantum measurement naturally emerge as a\ncorollary. These findings contribute to the advancement of related fields, and\nour work holds potential implications for future research and applications in\nthe realm of quantum mechanics.",
+          "arxiv_id": "2306.01026v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Frequencies of astrophysical jets and gravitational strengths in the octonion spaces",
+          "year": "2022-02",
+          "abstract": "The paper focuses on applying the octonions to explore the electromagnetic\nand gravitational equations in the presence of some material media, exploring\nthe frequencies of astrophysical jets. Maxwell was the first to use the algebra\nof quaternions to describe the electromagnetic equations. This method\nencourages scholars in adopting the quaternions and octonions to study the\nphysical properties of electromagnetic and gravitational fields, including the\nfield strength, field source, linear momentum, and angular momentum and so\nforth. In the paper, the field strength and angular momentum in the vacuum can\nbe combined together to become one new physical quantity, that is, the\ncomposite field strength within the material media. Substituting the latter for\nthe field strength in the vacuum will deduce the field equations within\nmaterial media, including the electromagnetic and gravitational equations in\nthe presence of some material media. In terms of the electromagnetic fields,\nthe electromagnetic equations in the presence of some electromagnetic media are\nable to explore a few new physical properties of electromagnetic media.\nEspecially, in case the magnetic flux density and magnetization intensity both\nfluctuate at a single-frequency, their frequencies must be identical to each\nother within electromagnetic media. In some extreme cases, the electromagnetic\nequations within electromagnetic media will be degenerated into the Maxwell's\nequations in the vacuum. The above reveals that the electromagnetic equations\nwithin electromagnetic media are capable of extending the scope of application\nof electromagnetic theory. For the gravitational fields, there are some similar\ninferences and conclusions within gravitational media. Further they can be\nutilized to research the frequencies of astrophysical jets.",
+          "arxiv_id": "2202.06818v1"
+        },
+        {
+          "title": "One underlying mechanism for two piezoelectric effects in the octonion spaces",
+          "year": "2022-06",
+          "abstract": "The paper aims to apply the algebra of octonions to explore the contributions\nof external derivative of electric moments and so forth on the induced electric\ncurrents, revealing a few major influencing factors relevant to the direct and\ninverse piezoelectric effects. J. C. Maxwell was the first to adopt the algebra\nof quaternions to describe the physical quantities of electromagnetic fields.\nThe contemporary scholars utilize the quaternions and octonions to research the\nphysical properties of electromagnetic and gravitational fields. The\napplication of octonions is able to study the physical quantities of\nelectromagnetic and gravitational fields, including the octonion field\nstrength, field source, linear moment, angular moment, torque and force. When\nthe octonion force is equal to zero, it is capable of achieving eight\nindependent equations, including the force equilibrium equation, fluid\ncontinuity equation, current continuity equation, and second-precession\nequilibrium equation and others. One of inferences derived from the\nsecond-precession equilibrium equation is that the electric current and\nderivative of electric moments are able to excite each other. The external\nderivative of electric moments can induce the electric currents. Meanwhile the\nexternal electric currents are capable of inducing the derivative of electric\nmoments. The research states that this inference can be considered as the\nunderlying mechanism for the direct and inverse piezoelectric effects. Further\nthe second-precession equilibrium equation is able to predict several new\ninfluencing factors of direct and inverse piezoelectric effects.",
+          "arxiv_id": "2209.06081v1"
+        },
+        {
+          "title": "Eight Equilibrium and continuity equations within the material media",
+          "year": "2022-01",
+          "abstract": "The paper aims to apply the octonions to explore the torques and forces and\nso forth in the electromagnetic and gravitational fields, investigating the\ninfluences of material media on the equilibrium and continuity equations. The\ncontemporary scholars utilize the quaternions and octonions to research the\nelectromagnetic fields and gravitational fields and so forth. In the paper, the\noctonions are capable of surveying the electromagnetic and gravitational fields\nwithin material media, including the octonion field strength, field source,\nangular momentum, torque, and force. Further, the octonion field strength and\nangular momentum can be combined together to become the octonion composite\nfield strength, deducing the octonion composite torque and force and others.\nWhen the octonion composite force is equal to zero under certain circumstances,\nit is able to achieve eight equations independent of each other, including the\nforce equilibrium equation, fluid continuity equation, and current continuity\nequation and so on. The above reveals that the material media and octonion\nfield strength can make a contribution to the eight equilibrium and continuity\nequations. And it is beneficial to deepen the understanding of equilibrium and\ncontinuity equations within material media.",
+          "arxiv_id": "2202.02153v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Symmetries in the many-body problems, a method to find its analytical solution, and Helium atom spectrum",
+          "year": "2024-01",
+          "abstract": "In this work it is shown that there are symmetries beyond the Euclidean group\n$E\\left(3\\right)$ in 3-body problem, and by extension in many-body problem,\nwith inverse squared distance inter particle force. The symmetries in 3-body\nproblem form a group:\n$SO\\left(4\\times3,2\\times3\\right)/\\left(C\\left(3\\times2\\right)\\right)$, where\n$C\\left(n\\right)$ is the planar translation group in n dimensions, which forms\nits Spectrum-Generating group. Some of these quantities commute with the\nHamiltonian. The existence of these conserved quantities was verified by\ncalculating energy spectrum of the Helium atom. This method can also be used to\nfind symmetries in many-body problem, and to calculate energy levels, and\nwave-functions of more complicated systems, which include every possible atomic\nand molecular systems in chemistry.",
+          "arxiv_id": "2401.15019v3"
+        },
+        {
+          "title": "A rigorous Hermitian proof about the G-dynamics and analogy with Berry-Keating's Hamiltonian",
+          "year": "2021-08",
+          "abstract": "Quantum covariant Hamiltonian system theory provides a coherent framework for\nmodelling the complex dynamics of quantum systems. In this paper, we centrally\ndeal with the Hermiticity of quantum operators that directly links to the\nphysical observable, thusly, we give a rigorous proof to verify one-dimensional\nG-dynamics ${{\\hat{w}}^{\\left( cl \\right)}}={{\\hat{w}}^{\\left( cl\n\\right)\\dagger }}\\in Her$ that is a Hermitian operator satisfying $\\left(\n{{{\\hat{w}}}^{\\left( cl \\right)}}\\phi ,\\varphi \\right)=\\left( \\phi\n,{{{\\hat{w}}}^{\\left( cl \\right)}}\\varphi \\right)$ for any two states $\\phi$\nand $\\varphi$, and its eigenvalues are real. We also prove that curvature\noperator is a skew-Hermitian operator as well. The act of finishing this\nHermitian proof valuably enables us to ensure the non-Hermitian Hamiltonian\noperator ${{\\hat{H}}^{\\left( ri \\right)}} ={{\\hat{H}}^{\\left( g \\right)}}\n-{{\\hat{H}}^{\\left( \\operatorname{clm} \\right)}}\\in NHer$ that is divided into\nthe Hermitian operator ${{\\hat{H}}^{\\left( g \\right)}} ={{\\hat{H}}^{\\left( cl\n\\right)}}-{{E}^{\\left( s \\right)}}/2\\in Her$ and the skew-Hermitian operator\n${{\\hat{H}}^{\\left( \\operatorname{clm} \\right)}}=\\sqrt{-1}\\hbar\n{{\\hat{w}}^{\\left( cl \\right)}}\\in SHer$ generally, and ${{\\hat{H}}^{\\left( ri\n\\right)}}$ always has the complex eigenvalues. We use the formula of the\nG-dynamics to evaluate the Berry-Keating's Hamiltonian operator\n${{\\hat{H}}^{\\left( \\text{bk}\\right)}}=-\\sqrt{-1}\\hbar \\hat{\\theta }/2\\in Her$\nand its extensive version $\\hat{H}^{\\left( \\text{gbk}\\right)}\\in NHer$ as the\napplications of the G-dynamics, to see how the similarity appears in the light\nof obvious factor $\\hat{\\theta }/2=x\\frac{d}{dx}+1/2\\in SHer$, etc.",
+          "arxiv_id": "2109.03068v1"
+        },
+        {
+          "title": "On one-dimensional G-dynamics and non-Hermitian Hamiltonian operators",
+          "year": "2021-08",
+          "abstract": "Focusing on the algebraical analysis of two various kinds of one-dimensional\nG-dynamics ${{\\hat{w}}^{\\left( cl \\right)}}$ and ${{\\hat{w}}^{\\left(\nri\\right)}}$ separately induced by different Hamiltonian operators $\\hat{H} $\nare the keypoints. In this work, it's evidently proved that an identity\n${{\\hat{w}}^{\\left( cl \\right)}}{{u}^{-1/2}}\\equiv0$ always holds for any $u>0$\nbased on the formula of one-dimensional G-dynamics ${{\\hat{w}}^{\\left( cl\n\\right)}}$. We prove that the G-dynamics ${{\\hat{w}}^{\\left( cl \\right)}}$ and\n${{\\hat{w}}^{\\left( ri\\right)}}$ obey Leibniz identity if and only if\n${{\\hat{w}}^{\\left( cl \\right)}}1=0$ and ${{\\hat{w}}^{\\left( ri\\right)}}1=0$,\nrespectively. \\par In accordance with the G-dynamics ${{\\hat{w}}^{\\left( cl\n\\right)}}$, we investigate the unique eigenvalues equation ${{\\hat{w}}^{\\left(\ncl \\right)}}L\\left( u,t,\\lambda \\right)=-\\sqrt{-1}\\lambda L\\left( u,t,\\lambda\n\\right)$ of the G-dynamics with a precise geometric eigenfunction $L\\left(\nu,t,\\lambda \\right)={{u}^{-1/2}}{{e}^{{{\\lambda }}t}},~u>0$ as time $t\\in\n\\left[ 0,T \\right]$ develops and the equation of energy spectrum is then\ninduced. The non-Hermitian Hamiltonian operators are studied as well, we obtain\na series of ODE with their special solutions, and we prove multiplicative\nproperty of the geometric eigenfunction. The coordinate derivative and time\nevolution of the G-dynamics are respectively considered. Seeking the invariance\nof G-dynamics ${{\\hat{w}}^{\\left( cl \\right)}}$ under coordinate transformation\nis considered, so that we think of one-dimensional G-dynamics\n${{\\hat{w}}^{\\left( cl \\right)}}$ on coordinate transformation, it gives the\nrule of conversion between two coordinate systems. As a application, some\nexamples are given for such rule of conversion. Meanwhile, we search the\nconditions that quantum geometric bracket vanishes and a specific case follows.",
+          "arxiv_id": "2108.01947v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:40:51Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

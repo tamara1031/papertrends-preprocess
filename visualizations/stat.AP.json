@@ -1,0 +1,578 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_model_models_time",
+        "keywords": [
+          [
+            "data",
+            0.039255995324533645
+          ],
+          [
+            "model",
+            0.03164502210448738
+          ],
+          [
+            "models",
+            0.022726885869204672
+          ],
+          [
+            "time",
+            0.019411424608546772
+          ],
+          [
+            "methods",
+            0.017193832707875573
+          ],
+          [
+            "approach",
+            0.016941265023940808
+          ],
+          [
+            "analysis",
+            0.016460687074009748
+          ],
+          [
+            "study",
+            0.016114246499530555
+          ],
+          [
+            "method",
+            0.016073362637024993
+          ],
+          [
+            "Bayesian",
+            0.012931530464559521
+          ]
+        ],
+        "count": 11589
+      },
+      "1": {
+        "name": "1_players_team_player_game",
+        "keywords": [
+          [
+            "players",
+            0.03784977408416567
+          ],
+          [
+            "team",
+            0.03751837707084751
+          ],
+          [
+            "player",
+            0.03399724137921917
+          ],
+          [
+            "game",
+            0.028930454785661117
+          ],
+          [
+            "teams",
+            0.027718380912746084
+          ],
+          [
+            "football",
+            0.025197702359197164
+          ],
+          [
+            "model",
+            0.02365730739128999
+          ],
+          [
+            "sports",
+            0.022872292341768755
+          ],
+          [
+            "performance",
+            0.02123666897445967
+          ],
+          [
+            "data",
+            0.020908589157437037
+          ]
+        ],
+        "count": 297
+      },
+      "2": {
+        "name": "2_data_method_model_stellar",
+        "keywords": [
+          [
+            "data",
+            0.022184351922722365
+          ],
+          [
+            "method",
+            0.020676666156100754
+          ],
+          [
+            "model",
+            0.018287715887469455
+          ],
+          [
+            "stellar",
+            0.017981965089794605
+          ],
+          [
+            "Bayesian",
+            0.015509157851790911
+          ],
+          [
+            "detection",
+            0.014571444063213293
+          ],
+          [
+            "analysis",
+            0.013857779745929784
+          ],
+          [
+            "inference",
+            0.013773365147378678
+          ],
+          [
+            "galaxies",
+            0.013346632402232975
+          ],
+          [
+            "astronomical",
+            0.012412486929017412
+          ]
+        ],
+        "count": 152
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6118085681255758,
+        0.10911665246093807
+      ],
+      [
+        -0.6118085681255758,
+        1.0,
+        -0.593219734709773
+      ],
+      [
+        0.10911665246093807,
+        -0.593219734709773,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        121,
+        4,
+        5
+      ],
+      "2020-02": [
+        132,
+        3,
+        6
+      ],
+      "2020-03": [
+        171,
+        7,
+        13
+      ],
+      "2020-04": [
+        185,
+        2,
+        10
+      ],
+      "2020-05": [
+        188,
+        7,
+        19
+      ],
+      "2020-06": [
+        171,
+        5,
+        13
+      ],
+      "2020-07": [
+        210,
+        4,
+        6
+      ],
+      "2020-08": [
+        169,
+        1,
+        10
+      ],
+      "2020-09": [
+        154,
+        4,
+        10
+      ],
+      "2020-10": [
+        171,
+        4,
+        8
+      ],
+      "2020-11": [
+        179,
+        5,
+        11
+      ],
+      "2020-12": [
+        169,
+        5,
+        13
+      ],
+      "2021-01": [
+        158,
+        3,
+        10
+      ],
+      "2021-02": [
+        149,
+        3,
+        14
+      ],
+      "2021-03": [
+        180,
+        8,
+        8
+      ],
+      "2021-04": [
+        144,
+        3,
+        11
+      ],
+      "2021-05": [
+        152,
+        6,
+        11
+      ],
+      "2021-06": [
+        174,
+        4,
+        12
+      ],
+      "2021-07": [
+        144,
+        4,
+        8
+      ],
+      "2021-08": [
+        125,
+        2,
+        0
+      ],
+      "2021-09": [
+        146,
+        6,
+        7
+      ],
+      "2021-10": [
+        166,
+        3,
+        9
+      ],
+      "2021-11": [
+        165,
+        1,
+        10
+      ],
+      "2021-12": [
+        150,
+        6,
+        10
+      ],
+      "2022-01": [
+        137,
+        3,
+        10
+      ],
+      "2022-02": [
+        150,
+        4,
+        11
+      ],
+      "2022-03": [
+        177,
+        4,
+        11
+      ],
+      "2022-04": [
+        124,
+        3,
+        7
+      ],
+      "2022-05": [
+        133,
+        5,
+        10
+      ],
+      "2022-06": [
+        150,
+        5,
+        10
+      ],
+      "2022-07": [
+        147,
+        3,
+        10
+      ],
+      "2022-08": [
+        151,
+        4,
+        5
+      ],
+      "2022-09": [
+        144,
+        1,
+        7
+      ],
+      "2022-10": [
+        183,
+        7,
+        8
+      ],
+      "2022-11": [
+        173,
+        2,
+        10
+      ],
+      "2022-12": [
+        121,
+        3,
+        6
+      ],
+      "2023-01": [
+        132,
+        5,
+        3
+      ],
+      "2023-02": [
+        151,
+        2,
+        9
+      ],
+      "2023-03": [
+        175,
+        5,
+        8
+      ],
+      "2023-04": [
+        128,
+        5,
+        5
+      ],
+      "2023-05": [
+        184,
+        4,
+        11
+      ],
+      "2023-06": [
+        162,
+        0,
+        12
+      ],
+      "2023-07": [
+        137,
+        2,
+        8
+      ],
+      "2023-08": [
+        128,
+        2,
+        7
+      ],
+      "2023-09": [
+        134,
+        3,
+        8
+      ],
+      "2023-10": [
+        178,
+        7,
+        10
+      ],
+      "2023-11": [
+        181,
+        2,
+        5
+      ],
+      "2023-12": [
+        160,
+        3,
+        14
+      ],
+      "2024-01": [
+        182,
+        7,
+        7
+      ],
+      "2024-02": [
+        140,
+        6,
+        12
+      ],
+      "2024-03": [
+        136,
+        5,
+        8
+      ],
+      "2024-04": [
+        158,
+        4,
+        12
+      ],
+      "2024-05": [
+        164,
+        4,
+        6
+      ],
+      "2024-06": [
+        169,
+        8,
+        12
+      ],
+      "2024-07": [
+        152,
+        4,
+        9
+      ],
+      "2024-08": [
+        143,
+        4,
+        7
+      ],
+      "2024-09": [
+        174,
+        9,
+        16
+      ],
+      "2024-10": [
+        195,
+        5,
+        9
+      ],
+      "2024-11": [
+        188,
+        5,
+        11
+      ],
+      "2024-12": [
+        173,
+        7,
+        4
+      ],
+      "2025-01": [
+        171,
+        4,
+        12
+      ],
+      "2025-02": [
+        165,
+        6,
+        7
+      ],
+      "2025-03": [
+        227,
+        6,
+        10
+      ],
+      "2025-04": [
+        182,
+        2,
+        5
+      ],
+      "2025-05": [
+        211,
+        5,
+        16
+      ],
+      "2025-06": [
+        214,
+        7,
+        12
+      ],
+      "2025-07": [
+        191,
+        4,
+        11
+      ],
+      "2025-08": [
+        167,
+        3,
+        11
+      ],
+      "2025-09": [
+        108,
+        2,
+        5
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Uncertainty quantification in mechanistic epidemic models via cross-entropy approximate Bayesian computation",
+          "year": "2022-07",
+          "abstract": "This paper proposes a data-driven approximate Bayesian computation framework\nfor parameter estimation and uncertainty quantification of epidemic models,\nwhich incorporates two novelties: (i) the identification of the initial\nconditions by using plausible dynamic states that are compatible with\nobservational data; (ii) learning of an informative prior distribution for the\nmodel parameters via the cross-entropy method. The new methodology's\neffectiveness is illustrated with the aid of actual data from the COVID-19\nepidemic in Rio de Janeiro city in Brazil, employing an ordinary differential\nequation-based model with a generalized SEIR mechanistic structure that\nincludes time-dependent transmission rate, asymptomatics, and hospitalizations.\nA minimization problem with two cost terms (number of hospitalizations and\ndeaths) is formulated, and twelve parameters are identified. The calibrated\nmodel provides a consistent description of the available data, able to\nextrapolate forecasts over a few weeks, making the proposed methodology very\nappealing for real-time epidemic modeling.",
+          "arxiv_id": "2207.12111v2"
+        },
+        {
+          "title": "Global sensitivity analysis informed model reduction and selection applied to a Valsalva maneuver model",
+          "year": "2020-05",
+          "abstract": "In this study, we develop a methodology for model reduction and selection\ninformed by global sensitivity analysis (GSA) methods. We apply these\ntechniques to a control model that takes systolic blood pressure and thoracic\ntissue pressure data as inputs and predicts heart rate in response to the\nValsalva maneuver (VM). The study compares four GSA methods based on Sobol'\nindices (SIs) quantifying the parameter influence on the difference between the\nmodel output and the heart rate data. The GSA methods include standard scalar\nSIs determining the average parameter influence over the time interval studied\nand three time-varying methods analyzing how parameter influence changes over\ntime. The time-varying methods include a new technique, termed limited-memory\nSIs, predicting parameter influence using a moving window approach. Using the\nlimited-memory SIs, we perform model reduction and selection to analyze the\nnecessity of modeling both the aortic and carotid baroreceptor regions in\nresponse to the VM. We compare the original model to three systematically\nreduced models including (i) the aortic and carotid regions, (ii) the aortic\nregion only, and (iii) the carotid region only. Model selection is done\nquantitatively using the Akaike and Bayesian Information Criteria and\nqualitatively by comparing the neurological predictions. Results show that it\nis necessary to incorporate both the aortic and carotid regions to model the\nVM.",
+          "arxiv_id": "2005.12879v3"
+        },
+        {
+          "title": "Applying the Network Item Response Model to Student Assessment Data",
+          "year": "2020-03",
+          "abstract": "This study discusses an alternative tool for modeling student assessment\ndata. The model constructs networks from a matrix item responses and attempts\nto represent these data in low dimensional Euclidean space. This procedure has\nadvantages over common methods used for modeling student assessment data such\nas Item Response Theory because it relaxes the highly restrictive\nlocal-independence assumption. This article provides a deep discussion of the\nmodel and the steps one must take to estimate it. To enable extending a present\nmodel by adding data, two methods for estimating the positions of new\nindividuals in the network are discussed. Then, a real data analysis is then\nprovided as a case study on using the model and how to interpret the results.\nFinally, the model is compared and contrasted to other popular models in\npsychological and educational measurement: Item response theory (IRT) and\nnetwork psychometric Ising model for binary data.",
+          "arxiv_id": "2003.07657v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "The SIDO Performance Model for League of Legends",
+          "year": "2024-03",
+          "abstract": "League of Legends (LoL) has been a dominant esport for a decade, yet the\ninherent complexity of the game has stymied the creation of analytical measures\nof player skill and performance. Current industry standards are limited to\neasy-to-procure individual player statistics that are incomplete and lacking\ncontext as they do not take into account teamplay or game state. We present a\nunified performance model for League of Legends which blends together measures\nof a player's contribution within the context of their team, insights from\ntraditional sports metrics such as the Plus-Minus model, and the intricacies of\nLoL as a complex team invasion sport. Using hierarchical Bayesian models, we\noutline the use of gold and damage dealt as a measure of skill, detailing\nplayers' impact on their own-, their allies'- and their enemies' statistics\nthroughout the course of the game. Our results showcase the model's increased\nefficacy in separating professional players when compared to a Plus-Minus model\nand to current esports industry standards, while metric quality is rigorously\nassessed for discrimination, independence, and stability. Readers might also\nfind additional qualitative analytics which explore champion proficiency and\nthe impact of collaborative team-play. Future work is proposed to refine and\nexpand the SIDO performance model, offering a comprehensive framework for\nesports analytics in team performance management, scouting and research realms.",
+          "arxiv_id": "2403.04873v2"
+        },
+        {
+          "title": "Modeling Player and Team Performance in Basketball",
+          "year": "2020-07",
+          "abstract": "In recent years, analytics has started to revolutionize the game of\nbasketball: quantitative analyses of the game inform team strategy, management\nof player health and fitness, and how teams draft, sign, and trade players. In\nthis review, we focus on methods for quantifying and characterizing basketball\ngameplay. At the team level, we discuss methods for characterizing team\nstrategy and performance, while at the player level, we take a deep look into a\nmyriad of tools for player evaluation. This includes metrics for overall player\nvalue, defensive ability, and shot modeling, and methods for understanding\nperformance over multiple seasons via player production curves. We conclude\nwith a discussion on the future of basketball analytics, and in particular\nhighlight the need for causal inference in sports.",
+          "arxiv_id": "2007.10550v1"
+        },
+        {
+          "title": "Optimal selection of the starting lineup for a football team",
+          "year": "2023-03",
+          "abstract": "The success of a football team depends on various individual skills and\nperformances of the selected players as well as how cohesively they perform. We\npropose a two-stage process for selecting optimal playing eleven of a football\nteam from its pool of available players. In the first stage a LASSO-induced\nmodified multinomial logistic regression model is derived to analyse the\nprobabilities of the three possible outcomes. The model considers strengths of\nthe players in the team as well as those of the opponent, home advantage, and\nalso the effects of individual players and player combinations beyond the\nrecorded performances of these players. In the second stage, a GRASP-type\nmeta-heuristic is implemented for the team selection which maximises its\nprobability of winning. The work is illustrated with English Premier League\ndata from 2008/09 to 2015/16. The application demonstrates that the model in\nthe first stage furnishes valuable insights about the deciding factors for\ndifferent teams whereas the optimisation steps can be effectively used to\ndetermine the best possible starting lineup under various circumstances. We\npropose a measure of efficiency in team selection by the team management and\nanalyse the performance of the teams on this front.",
+          "arxiv_id": "2303.12385v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "Rapid parameter estimation with the full symphony of compact binary mergers using meshfree approximation",
+          "year": "2025-08",
+          "abstract": "We present a fast Bayesian inference framework to address the growing\ncomputational cost of gravitational-wave parameter estimation. The increased\ncost is driven by improved broadband detector sensitivity, particularly at low\nfrequencies due to advances in detector commissioning, resulting in longer\nin-band signals and a higher detection rate. Waveform models now incorporate\nfeatures like higher-order modes, further increasing the complexity of standard\ninference methods. Our framework employs meshfree likelihood interpolation with\nradial basis functions to accelerate Bayesian inference using the IMRPhenomXHM\nwaveform model that incorporates higher modes of the gravitational-wave signal.\nIn the initial start-up stage, interpolation nodes are placed within a\nconstant-match metric ellipsoid in the intrinsic parameter space. During\nsampling, likelihood is evaluated directly using the precomputed interpolants,\nbypassing the costly steps of on-the-fly waveform generation and\noverlap-integral computation. We improve efficiency by sampling in a rotated\nparameter space aligned with the eigenbasis of the metric ellipsoid, where\nparameters are uncorrelated by construction. This speeds up sampler\nconvergence. This method yields unbiased parameter recovery when applied to 100\nsimulated neutron-star-black-hole signals (NSBH) in LIGO-Virgo data, while\nreducing computational cost by up to an order of magnitude for the\nlongest-duration signal. The meshfree framework equally applies to symmetric\ncompact binary systems dominated by the quadrupole mode, supporting parameter\nestimation across a broad range of sources. Applied to a simulated NSBH signal\nin Einstein Telescope data, where the effects of Earth's rotation are neglected\nfor simplicity, our method achieves an O(10^4) speed-up, demonstrating its\npotential use in the third-generation (3G) era.",
+          "arxiv_id": "2508.04172v1"
+        },
+        {
+          "title": "Bayesian functional data analysis in astronomy",
+          "year": "2024-08",
+          "abstract": "Cosmic demographics -- the statistical study of populations of astrophysical\nobjects -- has long relied on *multivariate statistics*, providing methods for\nanalyzing data comprising fixed-length vectors of properties of objects, as\nmight be compiled in a tabular astronomical catalog (say, with sky coordinates,\nand brightness measurements in a fixed number of spectral passbands). But\nbeginning with the emergence of automated digital sky surveys, ca. ~2000,\nastronomers began producing large collections of data with more complex\nstructure: light curves (brightness time series) and spectra (brightness vs.\nwavelength). These comprise what statisticians call *functional data* --\nmeasurements of populations of functions. Upcoming automated sky surveys will\nsoon provide astronomers with a flood of functional data. New methods are\nneeded to accurately and optimally analyze large ensembles of light curves and\nspectra, accumulating information both along and across measured functions.\nFunctional data analysis (FDA) provides tools for statistical modeling of\nfunctional data. Astronomical data presents several challenges for FDA\nmethodology, e.g., sparse, irregular, and asynchronous sampling, and\nheteroscedastic measurement error. Bayesian FDA uses hierarchical Bayesian\nmodels for function populations, and is well suited to addressing these\nchallenges. We provide an overview of astronomical functional data, and of some\nkey Bayesian FDA modeling approaches, including functional mixed effects\nmodels, and stochastic process models. We briefly describe a Bayesian FDA\nframework combining FDA and machine learning methods to build low-dimensional\nparametric models for galaxy spectra.",
+          "arxiv_id": "2408.14466v1"
+        },
+        {
+          "title": "An application of Saddlepoint Approximation for period detection of stellar light observations",
+          "year": "2022-01",
+          "abstract": "One of the main features of interest in analysing the light curves of stars\nis the underlying periodic behaviour. The corresponding observations are a\ncomplex type of time series with unequally spaced time points and are sometimes\naccompanied by varying measures of accuracy.\n  The main tools for analysing these type of data rely on the periodogram-like\nfunctions, constructed with a desired feature so that the peaks indicate the\npresence of a potential period. In this paper, we explore a particular\nperiodogram for the irregularly observed time series data, similar to Thieler\net. al. (2013). We identify the potential periods at the appropriate peaks and\nmore importantly with a quantifiable uncertainty. Our approach is shown to\neasily generalise to non-parametric methods including a weighted Gaussian\nprocess regression periodogram. We also extend this approach to correlated\nbackground noise. The proposed method for period detection relies on a test\nbased on quadratic forms with normally distributed components. We implement the\nsaddlepoint approximation, as a faster and more accurate alternative to the\nsimulation-based methods that are currently used. The power analysis of the\ntesting methodology is reported together with applications using light curves\nfrom the Hunting Outbursting Young Stars citizen science project.",
+          "arxiv_id": "2201.11762v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:46:10Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

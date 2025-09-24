@@ -1,0 +1,1472 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_magnetic_wind_field_solar",
+        "keywords": [
+          [
+            "magnetic",
+            0.024090447377824953
+          ],
+          [
+            "wind",
+            0.022074138916303734
+          ],
+          [
+            "field",
+            0.021088189988787774
+          ],
+          [
+            "solar",
+            0.01979455962467468
+          ],
+          [
+            "solar wind",
+            0.019697422630157137
+          ],
+          [
+            "plasma",
+            0.019307156178087603
+          ],
+          [
+            "turbulence",
+            0.018812261579880973
+          ],
+          [
+            "energy",
+            0.018615972213311016
+          ],
+          [
+            "waves",
+            0.018401276397258182
+          ],
+          [
+            "electron",
+            0.01651215000918152
+          ]
+        ],
+        "count": 956
+      },
+      "1": {
+        "name": "1_CME_CMEs_magnetic_solar",
+        "keywords": [
+          [
+            "CME",
+            0.03872235163368468
+          ],
+          [
+            "CMEs",
+            0.02748502250725719
+          ],
+          [
+            "magnetic",
+            0.026119045997880126
+          ],
+          [
+            "solar",
+            0.020651054374261905
+          ],
+          [
+            "coronal",
+            0.018782613008327485
+          ],
+          [
+            "flux",
+            0.015873585168973883
+          ],
+          [
+            "model",
+            0.015203443725338796
+          ],
+          [
+            "observations",
+            0.013762585424249685
+          ],
+          [
+            "flare",
+            0.013584319020936859
+          ],
+          [
+            "reconnection",
+            0.013421607315118433
+          ]
+        ],
+        "count": 281
+      },
+      "2": {
+        "name": "2_Mars_atmosphere_planetary_Jupiter",
+        "keywords": [
+          [
+            "Mars",
+            0.018408044462497063
+          ],
+          [
+            "atmosphere",
+            0.016625438679717768
+          ],
+          [
+            "planetary",
+            0.014337076353703076
+          ],
+          [
+            "Jupiter",
+            0.014235888869777086
+          ],
+          [
+            "Io",
+            0.014137722883991339
+          ],
+          [
+            "planet",
+            0.013734607058936837
+          ],
+          [
+            "planets",
+            0.013488027420949084
+          ],
+          [
+            "magnetic",
+            0.012790426075087395
+          ],
+          [
+            "Martian",
+            0.012748127113606627
+          ],
+          [
+            "surface",
+            0.012530484358819398
+          ]
+        ],
+        "count": 211
+      },
+      "3": {
+        "name": "3_space_orbit_sail_design",
+        "keywords": [
+          [
+            "space",
+            0.026355294283961432
+          ],
+          [
+            "orbit",
+            0.022352095673096758
+          ],
+          [
+            "sail",
+            0.02140073179343009
+          ],
+          [
+            "design",
+            0.020077874650747115
+          ],
+          [
+            "mission",
+            0.018803360863027665
+          ],
+          [
+            "control",
+            0.01868407440779483
+          ],
+          [
+            "Earth",
+            0.018094471138564674
+          ],
+          [
+            "spacecraft",
+            0.017520648595315318
+          ],
+          [
+            "missions",
+            0.016774475624510916
+          ],
+          [
+            "satellite",
+            0.01652376878332917
+          ]
+        ],
+        "count": 199
+      },
+      "4": {
+        "name": "4_solar_Solar_SEP_cosmic",
+        "keywords": [
+          [
+            "solar",
+            0.03086724026639361
+          ],
+          [
+            "Solar",
+            0.026252424018541116
+          ],
+          [
+            "SEP",
+            0.020979453346973726
+          ],
+          [
+            "cosmic",
+            0.018509108450319396
+          ],
+          [
+            "events",
+            0.016296531079244496
+          ],
+          [
+            "event",
+            0.01512823218047703
+          ],
+          [
+            "PSP",
+            0.014974266054877089
+          ],
+          [
+            "ray",
+            0.014701812755911522
+          ],
+          [
+            "magnetic",
+            0.014504524594444113
+          ],
+          [
+            "observed",
+            0.014140704193379094
+          ]
+        ],
+        "count": 185
+      },
+      "5": {
+        "name": "5_solar_data_model_learning",
+        "keywords": [
+          [
+            "solar",
+            0.03093427730959302
+          ],
+          [
+            "data",
+            0.027393002965713464
+          ],
+          [
+            "model",
+            0.02595835975436457
+          ],
+          [
+            "learning",
+            0.02445487424537388
+          ],
+          [
+            "wind",
+            0.022926726517877066
+          ],
+          [
+            "solar wind",
+            0.02134857800507462
+          ],
+          [
+            "forecasting",
+            0.020144234082460653
+          ],
+          [
+            "models",
+            0.019999880968813305
+          ],
+          [
+            "space",
+            0.018157375101979182
+          ],
+          [
+            "weather",
+            0.017783591936009688
+          ]
+        ],
+        "count": 101
+      },
+      "6": {
+        "name": "6_noise_gravitational_orbital_black",
+        "keywords": [
+          [
+            "noise",
+            0.03015994735931942
+          ],
+          [
+            "gravitational",
+            0.029614173381768614
+          ],
+          [
+            "orbital",
+            0.029382487297980153
+          ],
+          [
+            "black",
+            0.02361956055907512
+          ],
+          [
+            "LISA",
+            0.020606354350911904
+          ],
+          [
+            "space",
+            0.019822968193486775
+          ],
+          [
+            "gravity",
+            0.019419316255730665
+          ],
+          [
+            "Newtonian",
+            0.018545720467818542
+          ],
+          [
+            "hole",
+            0.018516092243836216
+          ],
+          [
+            "test",
+            0.01793570951208103
+          ]
+        ],
+        "count": 84
+      },
+      "7": {
+        "name": "7_storm_geomagnetic_nT_storms",
+        "keywords": [
+          [
+            "storm",
+            0.04927645414519227
+          ],
+          [
+            "geomagnetic",
+            0.045560136343537956
+          ],
+          [
+            "nT",
+            0.03396755778356696
+          ],
+          [
+            "storms",
+            0.033399409417768706
+          ],
+          [
+            "TEC",
+            0.02566250928550943
+          ],
+          [
+            "ionospheric",
+            0.023554604193289804
+          ],
+          [
+            "solar",
+            0.022031840577022812
+          ],
+          [
+            "Dst",
+            0.019981470847664412
+          ],
+          [
+            "geomagnetic storm",
+            0.019674506905936466
+          ],
+          [
+            "geomagnetic storms",
+            0.01966891367432932
+          ]
+        ],
+        "count": 62
+      },
+      "8": {
+        "name": "8_cycle_solar_sunspot_activity",
+        "keywords": [
+          [
+            "cycle",
+            0.06410456752541267
+          ],
+          [
+            "solar",
+            0.06158354443372953
+          ],
+          [
+            "sunspot",
+            0.04068435778013568
+          ],
+          [
+            "activity",
+            0.04063129074008041
+          ],
+          [
+            "dynamo",
+            0.0405453945764534
+          ],
+          [
+            "cycles",
+            0.036003113840756495
+          ],
+          [
+            "solar activity",
+            0.029700844483079275
+          ],
+          [
+            "years",
+            0.028296972034673684
+          ],
+          [
+            "solar cycle",
+            0.026022870448380878
+          ],
+          [
+            "magnetic",
+            0.022924266280528023
+          ]
+        ],
+        "count": 61
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.13907003725476977,
+        -0.48043608628824763,
+        -0.7089008545159954,
+        -0.1623773804154508,
+        -0.27723214065870816,
+        -0.7172718177365836,
+        -0.7125442747247503,
+        -0.30867703950041675
+      ],
+      [
+        -0.13907003725476977,
+        1.0,
+        -0.4751211890331071,
+        -0.65732840862946,
+        -0.3223812840054565,
+        -0.3788452193607783,
+        -0.7384387407487376,
+        -0.6593734124784592,
+        -0.347272872665847
+      ],
+      [
+        -0.48043608628824763,
+        -0.4751211890331071,
+        1.0,
+        -0.5837406352591542,
+        -0.4918573549931773,
+        -0.6131312408061445,
+        -0.703694185883819,
+        -0.7248973243265201,
+        -0.5556963792185121
+      ],
+      [
+        -0.7089008545159954,
+        -0.65732840862946,
+        -0.5837406352591542,
+        1.0,
+        -0.6825830986216301,
+        -0.6624179603520853,
+        -0.7041616161358281,
+        -0.7423466405364687,
+        -0.7042511595556553
+      ],
+      [
+        -0.1623773804154508,
+        -0.3223812840054565,
+        -0.4918573549931773,
+        -0.6825830986216301,
+        1.0,
+        -0.3412589484370514,
+        -0.7255262488144276,
+        -0.7025534252540631,
+        -0.3222576660788058
+      ],
+      [
+        -0.27723214065870816,
+        -0.3788452193607783,
+        -0.6131312408061445,
+        -0.6624179603520853,
+        -0.3412589484370514,
+        1.0,
+        -0.7213443565612365,
+        -0.6589305691901604,
+        -0.35360293157694855
+      ],
+      [
+        -0.7172718177365836,
+        -0.7384387407487376,
+        -0.703694185883819,
+        -0.7041616161358281,
+        -0.7255262488144276,
+        -0.7213443565612365,
+        1.0,
+        -0.7554853430342541,
+        -0.7387371614245887
+      ],
+      [
+        -0.7125442747247503,
+        -0.6593734124784592,
+        -0.7248973243265201,
+        -0.7423466405364687,
+        -0.7025534252540631,
+        -0.6589305691901604,
+        -0.7554853430342541,
+        1.0,
+        -0.6753544789149859
+      ],
+      [
+        -0.30867703950041675,
+        -0.347272872665847,
+        -0.5556963792185121,
+        -0.7042511595556553,
+        -0.3222576660788058,
+        -0.35360293157694855,
+        -0.7387371614245887,
+        -0.6753544789149859,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        9,
+        3,
+        0,
+        2,
+        6,
+        6,
+        0,
+        2,
+        1
+      ],
+      "2020-02": [
+        12,
+        6,
+        4,
+        2,
+        4,
+        3,
+        2,
+        1,
+        3
+      ],
+      "2020-03": [
+        13,
+        6,
+        1,
+        0,
+        4,
+        3,
+        1,
+        2,
+        7
+      ],
+      "2020-04": [
+        13,
+        4,
+        3,
+        2,
+        7,
+        7,
+        1,
+        1,
+        2
+      ],
+      "2020-05": [
+        17,
+        4,
+        3,
+        2,
+        5,
+        7,
+        0,
+        3,
+        3
+      ],
+      "2020-06": [
+        15,
+        4,
+        3,
+        1,
+        6,
+        6,
+        1,
+        2,
+        6
+      ],
+      "2020-07": [
+        19,
+        8,
+        0,
+        3,
+        4,
+        6,
+        2,
+        2,
+        4
+      ],
+      "2020-08": [
+        7,
+        9,
+        4,
+        3,
+        5,
+        10,
+        0,
+        3,
+        5
+      ],
+      "2020-09": [
+        13,
+        4,
+        0,
+        1,
+        11,
+        6,
+        2,
+        1,
+        5
+      ],
+      "2020-10": [
+        16,
+        1,
+        1,
+        0,
+        11,
+        5,
+        3,
+        2,
+        2
+      ],
+      "2020-11": [
+        20,
+        3,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0,
+        3
+      ],
+      "2020-12": [
+        21,
+        7,
+        3,
+        4,
+        2,
+        9,
+        2,
+        1,
+        5
+      ],
+      "2021-01": [
+        15,
+        4,
+        3,
+        2,
+        6,
+        8,
+        1,
+        1,
+        4
+      ],
+      "2021-02": [
+        14,
+        5,
+        1,
+        2,
+        8,
+        4,
+        4,
+        2,
+        5
+      ],
+      "2021-03": [
+        23,
+        1,
+        4,
+        2,
+        3,
+        6,
+        0,
+        1,
+        4
+      ],
+      "2021-04": [
+        26,
+        2,
+        3,
+        0,
+        8,
+        6,
+        0,
+        1,
+        5
+      ],
+      "2021-05": [
+        12,
+        0,
+        0,
+        4,
+        1,
+        8,
+        2,
+        1,
+        4
+      ],
+      "2021-06": [
+        14,
+        6,
+        3,
+        1,
+        3,
+        4,
+        2,
+        0,
+        1
+      ],
+      "2021-07": [
+        27,
+        2,
+        2,
+        5,
+        4,
+        9,
+        3,
+        1,
+        4
+      ],
+      "2021-08": [
+        23,
+        5,
+        2,
+        3,
+        3,
+        12,
+        1,
+        3,
+        1
+      ],
+      "2021-09": [
+        22,
+        3,
+        2,
+        4,
+        9,
+        10,
+        1,
+        1,
+        3
+      ],
+      "2021-10": [
+        24,
+        4,
+        3,
+        0,
+        7,
+        7,
+        1,
+        0,
+        2
+      ],
+      "2021-11": [
+        13,
+        6,
+        2,
+        4,
+        7,
+        5,
+        2,
+        0,
+        4
+      ],
+      "2021-12": [
+        15,
+        5,
+        0,
+        6,
+        7,
+        2,
+        1,
+        4,
+        2
+      ],
+      "2022-01": [
+        18,
+        3,
+        4,
+        2,
+        7,
+        7,
+        0,
+        0,
+        4
+      ],
+      "2022-02": [
+        9,
+        7,
+        2,
+        2,
+        6,
+        3,
+        0,
+        1,
+        4
+      ],
+      "2022-03": [
+        23,
+        8,
+        5,
+        2,
+        0,
+        8,
+        2,
+        4,
+        6
+      ],
+      "2022-04": [
+        17,
+        2,
+        3,
+        3,
+        7,
+        3,
+        4,
+        1,
+        6
+      ],
+      "2022-05": [
+        20,
+        14,
+        2,
+        2,
+        3,
+        7,
+        1,
+        2,
+        3
+      ],
+      "2022-06": [
+        14,
+        3,
+        1,
+        4,
+        5,
+        9,
+        0,
+        2,
+        4
+      ],
+      "2022-07": [
+        15,
+        10,
+        4,
+        1,
+        5,
+        5,
+        1,
+        3,
+        2
+      ],
+      "2022-08": [
+        21,
+        1,
+        6,
+        3,
+        3,
+        5,
+        3,
+        1,
+        4
+      ],
+      "2022-09": [
+        18,
+        8,
+        5,
+        2,
+        11,
+        10,
+        2,
+        1,
+        5
+      ],
+      "2022-10": [
+        17,
+        9,
+        2,
+        2,
+        11,
+        11,
+        2,
+        1,
+        16
+      ],
+      "2022-11": [
+        26,
+        8,
+        1,
+        7,
+        7,
+        9,
+        0,
+        4,
+        2
+      ],
+      "2022-12": [
+        9,
+        13,
+        0,
+        3,
+        4,
+        8,
+        2,
+        2,
+        4
+      ],
+      "2023-01": [
+        22,
+        5,
+        2,
+        1,
+        9,
+        6,
+        1,
+        3,
+        9
+      ],
+      "2023-02": [
+        12,
+        7,
+        4,
+        0,
+        3,
+        11,
+        1,
+        4,
+        4
+      ],
+      "2023-03": [
+        23,
+        6,
+        2,
+        8,
+        9,
+        11,
+        1,
+        1,
+        9
+      ],
+      "2023-04": [
+        13,
+        6,
+        0,
+        2,
+        1,
+        9,
+        4,
+        1,
+        5
+      ],
+      "2023-05": [
+        23,
+        6,
+        0,
+        1,
+        5,
+        5,
+        1,
+        3,
+        6
+      ],
+      "2023-06": [
+        19,
+        7,
+        3,
+        8,
+        9,
+        9,
+        2,
+        0,
+        7
+      ],
+      "2023-07": [
+        18,
+        9,
+        2,
+        3,
+        7,
+        12,
+        0,
+        1,
+        7
+      ],
+      "2023-08": [
+        15,
+        5,
+        4,
+        3,
+        4,
+        15,
+        1,
+        1,
+        6
+      ],
+      "2023-09": [
+        20,
+        7,
+        1,
+        1,
+        10,
+        4,
+        0,
+        0,
+        7
+      ],
+      "2023-10": [
+        17,
+        8,
+        1,
+        4,
+        6,
+        4,
+        7,
+        2,
+        2
+      ],
+      "2023-11": [
+        14,
+        7,
+        3,
+        1,
+        5,
+        8,
+        0,
+        2,
+        2
+      ],
+      "2023-12": [
+        19,
+        4,
+        4,
+        0,
+        4,
+        5,
+        0,
+        2,
+        2
+      ],
+      "2024-01": [
+        16,
+        4,
+        3,
+        4,
+        14,
+        4,
+        1,
+        1,
+        6
+      ],
+      "2024-02": [
+        16,
+        2,
+        3,
+        4,
+        5,
+        9,
+        2,
+        3,
+        5
+      ],
+      "2024-03": [
+        24,
+        2,
+        3,
+        0,
+        5,
+        8,
+        2,
+        3,
+        5
+      ],
+      "2024-04": [
+        17,
+        3,
+        2,
+        1,
+        3,
+        7,
+        1,
+        4,
+        3
+      ],
+      "2024-05": [
+        20,
+        9,
+        4,
+        4,
+        6,
+        12,
+        2,
+        2,
+        5
+      ],
+      "2024-06": [
+        13,
+        7,
+        0,
+        3,
+        2,
+        8,
+        3,
+        5,
+        3
+      ],
+      "2024-07": [
+        18,
+        10,
+        3,
+        3,
+        6,
+        8,
+        1,
+        5,
+        7
+      ],
+      "2024-08": [
+        19,
+        7,
+        3,
+        4,
+        5,
+        7,
+        0,
+        5,
+        4
+      ],
+      "2024-09": [
+        20,
+        8,
+        2,
+        2,
+        5,
+        10,
+        3,
+        4,
+        7
+      ],
+      "2024-10": [
+        22,
+        5,
+        2,
+        2,
+        11,
+        9,
+        1,
+        2,
+        5
+      ],
+      "2024-11": [
+        16,
+        7,
+        1,
+        5,
+        4,
+        5,
+        4,
+        5,
+        4
+      ],
+      "2024-12": [
+        23,
+        5,
+        3,
+        2,
+        4,
+        6,
+        4,
+        4,
+        4
+      ],
+      "2025-01": [
+        11,
+        7,
+        1,
+        2,
+        11,
+        8,
+        1,
+        4,
+        8
+      ],
+      "2025-02": [
+        21,
+        3,
+        2,
+        0,
+        11,
+        9,
+        5,
+        4,
+        6
+      ],
+      "2025-03": [
+        16,
+        3,
+        0,
+        2,
+        7,
+        4,
+        3,
+        3,
+        3
+      ],
+      "2025-04": [
+        15,
+        2,
+        3,
+        2,
+        4,
+        7,
+        2,
+        0,
+        4
+      ],
+      "2025-05": [
+        20,
+        5,
+        3,
+        3,
+        5,
+        10,
+        0,
+        2,
+        5
+      ],
+      "2025-06": [
+        20,
+        4,
+        0,
+        3,
+        5,
+        5,
+        2,
+        2,
+        4
+      ],
+      "2025-07": [
+        22,
+        2,
+        2,
+        3,
+        7,
+        7,
+        1,
+        4,
+        6
+      ],
+      "2025-08": [
+        13,
+        1,
+        1,
+        1,
+        7,
+        8,
+        3,
+        5,
+        3
+      ],
+      "2025-09": [
+        10,
+        2,
+        3,
+        6,
+        4,
+        3,
+        0,
+        0,
+        1
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Evolution of large-amplitude Alfvén waves and generation of switchbacks in the expanding solar wind",
+          "year": "2021-04",
+          "abstract": "Motivated by recent Parker Solar Probe (PSP) observations of \"switchbacks\"\n(abrupt, large-amplitude reversals in the radial magnetic field, which exhibit\nAlfv\\'enic correlations) we examine the dynamics of large-amplitude Alfv\\'en\nwaves in the expanding solar wind. We develop an analytic model which makes\nseveral predictions: switchbacks should preferentially occur in regions where\nthe solar wind plasma has undergone a greater expansion, the switchback\nfraction at radii comparable to PSP should be an increasing function of radius,\nand switchbacks should have their gradients preferentially perpendicular to the\nmean magnetic field direction. The expansion of the plasma generates small\ncompressive components as part of the wave's nonlinear evolution: these are\nmaximized when the normalized fluctuation amplitude is comparable to\n$\\sin\\theta$, where $\\theta$ is the angle between the propagation direction and\nthe mean magnetic field. These compressive components steepen the primary\nAlfv\\'enic waveform, keeping the solution in a state of nearly constant\nmagnetic field strength as its normalized amplitude $\\delta B/B$ grows due to\nexpansion. The small fluctuations in the magnetic-field-strength are minimized\nat a particular $\\theta$-dependent value of $\\beta$, usually of order unity,\nand the density and magnetic-field-strength fluctuations can be correlated or\nanticorrelated depending on $\\beta$ and $\\theta$. Example solutions of our\ndynamical equation are presented; some do indeed form magnetic-field reversals.\nOur predictions appear to match some previously unexplained phenomena in\nobservations and numerical simulations, providing evidence that the observed\nswitchbacks result from the nonlinear evolution of the initially\nsmall-amplitude Alfv\\'en waves already known to be present at the coronal base.",
+          "arxiv_id": "2104.08321v1"
+        },
+        {
+          "title": "Alfvénic versus non-Alfvénic turbulence in the inner heliosphere as observed by Parker Solar Probe",
+          "year": "2021-01",
+          "abstract": "We make use of the Parker Solar Probe (PSP) data to explore the nature of\nsolar wind turbulence focusing on the Alfv\\'enic character and power spectra of\nthe fluctuations and their dependence on distance and context (i.e. large scale\nsolar wind properties), aiming to understand the role that different effects\nsuch as source properties, solar wind expansion, stream interaction might play\nin determining the turbulent state. We carry out a statistical survey of the\ndata from the first five orbits of PSP with a focus on how the fluctuation\nproperties at the large, MHD scales, vary with different solar wind streams and\ndistance from the Sun. A more in-depth analysis from several selected periods\nis also presented. Our results show that as fluctuations are transported\noutward by the solar wind, the magnetic field spectrum steepens while the shape\nof the velocity spectrum remains unchanged. The steepening process is\ncontrolled by the \"age\" of the turbulence, determined by the wind speed\ntogether with the radial distance. Statistically, faster solar wind has higher\n\"Alfv\\'enicity\", with more dominant outward propagating wave component and more\nbalanced magnetic/kinetic energies. The outward wave dominance gradually\nweakens with radial distance, while the excess of magnetic energy is found to\nbe stronger as we move closer toward the Sun. We show that the turbulence\nproperties can vary significantly stream to stream even if these streams are of\nsimilar speed, indicating very different origins of these streams. Especially,\nthe slow wind that originates near the polar coronal holes has much lower\nAlfv\\'enicity compared with the slow wind that originates from the active\nregions/pseudostreamers. We show that structures such as heliospheric current\nsheets and velocity shears can play an important role in modifying the\nproperties of the turbulence.",
+          "arxiv_id": "2101.00830v2"
+        },
+        {
+          "title": "The Independence of Magnetic Turbulent Power Spectra to the Presence of Switchbacks in the Inner Heliosphere",
+          "year": "2024-04",
+          "abstract": "An outstanding gap in our knowledge of the solar wind is the relationship\nbetween switchbacks and solar wind turbulence. Switchbacks are large\nfluctuations, even reversals, of the background magnetic field embedded in the\nsolar wind flow. It has been proposed that switchbacks may form as a product of\nturbulence and decay via coupling with the turbulent cascade. In this work, we\nexamine how properties of solar wind magnetic field turbulence vary in the\npresence or absence of switchbacks. Specifically, we use in-situ particle and\nfields measurements from Parker Solar Probe to measure magnetic field turbulent\nwave power, separately in the inertial and kinetic ranges, as a function of\nswitchback magnetic deflection angle. We demonstrate that the angle between the\nbackground magnetic field and the solar wind velocity in the spacecraft frame\n($\\theta_{vB}$) strongly determines whether Parker Solar Probe samples wave\npower parallel or perpendicular to the background magnetic field. Further, we\nshow that $\\theta_{vB}$ is strongly modulated by the switchback magnetic\ndeflection angle. In this analysis, we demonstrate that switchback deflection\nangle does not correspond to any significant increase in wave power in either\nthe inertial range or at kinetic scales. This result implies that switchbacks\ndo not strongly couple to the turbulent cascade in the inertial or kinetic\nranges via turbulent wave-particle interactions. Therefore, we do not expect\nswitchbacks to contribute significantly to solar wind heating through this type\nof energy conversion pathway, although contributions via other mechanisms, such\nas magnetic reconnection may still be significant.",
+          "arxiv_id": "2404.03075v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Exploring the radial evolution of Interplanetary Coronal Mass Ejections using EUHFORIA",
+          "year": "2021-02",
+          "abstract": "Coronal Mass Ejections (CMEs) are large-scale eruptions from the Sun into\ninterplanetary space. Despite being major space weather drivers, our knowledge\nof the CME properties in the inner heliosphere remains constrained by the\nscarcity of observations at distances other than 1 au. Furthermore, most CMEs\nare observed in situ by single spacecraft, requiring numerical models to\ncomplement the sparse observations available. We aim to assess the ability of\nthe linear force-free spheromak CME model in EUHFORIA to describe the radial\nevolution of interplanetary CMEs, yielding new context for observational\nstudies. We model one well-studied CME, and investigate its radial evolution by\nplacing virtual spacecraft along the Sun-Earth line in the simulation domain.\nTo directly compare observational and modelling results, we characterise the\ninterplanetary CME signatures between 0.2 and 1.9 au from modelled time series,\nexploiting techniques traditionally employed to analyse real in situ data.\nResults show that the modelled radial evolution of the mean solar wind and CME\nvalues is consistent with observational and theoretical expectations. The CME\nexpands as a consequence of the decaying pressure in the surrounding wind: the\nexpansion is rapid within 0.4 au, and moderate at larger distances. The early\nrapid expansion could not explain the overestimated CME radial size in our\nsimulation, suggesting this is an intrinsic limitation of the spheromak\ngeometry used. The magnetic field profile indicates a relaxation of the CME\nduring propagation, while ageing is most probably not a substantial source of\nmagnetic asymmetry beyond 0.4 au. We also report a CME wake that is\nsignificantly shorter than suggested by observations. Overall, EUHFORIA\nprovides a consistent description of the radial evolution of solar wind and\nCMEs; nevertheless, improvements are required to better reproduce the CME\nradial extension.",
+          "arxiv_id": "2102.07569v1"
+        },
+        {
+          "title": "Interplanetary Rotation of 2021 December 4 CME",
+          "year": "2024-10",
+          "abstract": "The magnetic orientation of coronal mass ejections (CMEs) is of great\nimportance to understand their space weather effects. Although many evidences\nsuggest that CMEs can undergo significant rotation during the early phases of\nevolution in the solar corona, there are few reports that CMEs rotate in the\ninterplanetary space. In this work, we use multi-spacecraft observations and a\nnumerical simulation starting from the lower corona close to the solar surface\nto understand the CME event on 2021 December 4, with an emphatic investigation\nof its rotation. This event is observed as a partial halo CME from the back\nside of the Sun by coronagraphs, and reaches the BepiColombo spacecraft and the\nMAVEN/Tianwen-1 as a magnetic flux rope-like structure. The simulation\ndiscloses that in the solar corona the CME is approximately a translational\nmotion, while the interplanetary propagation process evidences a gradual change\nof axis orientation of the CME's flux rope-like structure. It is also found\nthat the downside and the right flank of the CME moves with the fast solar\nwind, and the upside does in the slow-speed stream. The different parts of the\nCME with different speeds generate the nonidentical displacements of its\nmagnetic structure, resulting in the rotation of the CME in the interplanetary\nspace. Furthermore, at the right flank of the CME exists a corotating\ninteraction region (CIR), which makes the orientation of the CME alter, and\nalso deviates from its route due to the CME. These results provide new insight\non interpreting CMEs' dynamics and structures during their travelling through\nthe heliosphere.",
+          "arxiv_id": "2410.20803v1"
+        },
+        {
+          "title": "MHD modeling of a geoeffective interplanetary CME with the magnetic topology informed by in-situ observations",
+          "year": "2024-05",
+          "abstract": "Variations of the magnetic field within solar coronal mass ejections (CMEs)\nin the heliosphere depend on the CME`s magnetic structure as it leaves the\nsolar corona and its subsequent evolution through interplanetary space. To\naccount for this evolution, we developed a new numerical model of the inner\nheliosphere that simulates the propagation of a CME through a realistic\nbackground solar wind and allows various CME magnetic topologies. To this end,\nwe incorporate the Gibson-Low CME model within our global MHD model of the\ninner heliosphere, GAMERA-Helio. We apply the model to study the propagation of\nthe geoeffective CME that erupted on 3 April, 2010 with the aim to reproduce\nthe temporal variations of the magnetic field vector during the CME passage by\nEarth. Parameters of the Gibson-Low CME are informed by STEREO white-light\nobservations near the Sun. The magnetic topology for this CME - the tethered\nflux rope - is informed by in-situ magnetic field observations near Earth. We\nperformed two simulations testing different CME propagation directions. For an\nin-ecliptic direction, the simulation shows a rotation of all three magnetic\nfield components within the CME, as seen at Earth, similar to that observed.\nWith a southward propagation direction, suggested by coronal imaging\nobservations, the modeled By and Bz components are consistent with the ACE\ndata, but the Bx component lacks the observed change from negative to positive.\nIn both cases, the model favors the East-West orientation of the CME flux rope,\nconsistent with the orientation previously inferred from the STEREO/HI\nheliospheric images.",
+          "arxiv_id": "2405.13069v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Atmospheric Escape Processes and Planetary Atmospheric Evolution",
+          "year": "2020-03",
+          "abstract": "The habitability of the surface of any planet is determined by a complex\nevolution of its interior, surface, and atmosphere. The electromagnetic and\nparticle radiation of stars drive thermal, chemical and physical alteration of\nplanetary atmospheres, including escape. Many known extrasolar planets\nexperience vastly different stellar environments than those in our Solar\nsystem: it is crucial to understand the broad range of processes that lead to\natmospheric escape and evolution under a wide range of conditions if we are to\nassess the habitability of worlds around other stars. One problem encountered\nbetween the planetary and the astrophysics communities is a lack of common\nlanguage for describing escape processes. Each community has customary\napproximations that may be questioned by the other, such as the hypothesis of\nH-dominated thermosphere for astrophysicists, or the Sun-like nature of the\nstars for planetary scientists. Since exoplanets are becoming one of the main\ntargets for the detection of life, a common set of definitions and hypotheses\nare required. We review the different escape mechanisms proposed for the\nevolution of planetary and exoplanetary atmospheres. We propose a common\ndefinition for the different escape mechanisms, and we show the important\nparameters to take into account when evaluating the escape at a planet in time.\nWe show that the paradigm of the magnetic field as an atmospheric shield should\nbe changed and that recent work on the history of Xenon in Earth's atmosphere\ngives an elegant explanation to its enrichment in heavier isotopes: the\nso-called Xenon paradox.",
+          "arxiv_id": "2003.03231v1"
+        },
+        {
+          "title": "Properties of Mars' Dayside Low-Altitude Induced Magnetic Field and Comparisons with Venus",
+          "year": "2023-11",
+          "abstract": "Our research objective is to characterize Mars' low-altitude (250 km) induced\nmagnetic fields using data from NASA's MAVEN (Mars Atmosphere and Volatile\nEvolutioN) Mission. We aim to assess how the induced magnetic fields behave\nunder different solar zenith angles and solar wind conditions, and\nadditionally, understand how planet-specific properties (such as Mars crustal\nmagnetism) alter the formation and structure of the magnetic fields. We then\nuse data from the Pioneer Venus Orbiter to compare induced magnetic fields at\nVenus with those at Mars. At Venus, the vertical structure of the magnetic\nfield tends to exist in one of two states (magnetized or unmagnetized) but we\nfind the induced fields at Mars are more complicated, and we are unable to use\nthis simple classification scheme. We also find the low-altitude induced field\nstrength in the ionospheres of both Venus and Mars vary with as cosine of the\nangle between solar wind velocity and the magnetic pileup boundary. The\nlow-altitude field strength at Venus tends to be higher than Mars. However,\nVenus field strengths are lower than theoretical predictions assuming pressure\nbalance and negligible thermal pressure. For Mars, low-altitude field strengths\nare higher than expected given these assumptions. Induced field strengths\nexhibit a trend with solar wind dynamic pressure that is consistent with\npressure balance expectations at both planets, however there is significant\nuncertainty in the Venus fit due to lack of upstream solar wind data. Our\nresults highlight major differences between the induced magnetic fields at\nVenus and Mars, suggesting planet-specific properties such as size and the\npresence of crustal magnetism affect the induced ionospheric magnetic fields at\nnon magnetized planets.",
+          "arxiv_id": "2311.18217v1"
+        },
+        {
+          "title": "Impact of Changing Stellar and Planetary Magnetic Fields on (Exo)planetary Environments and Atmospheric Mass Loss",
+          "year": "2023-03",
+          "abstract": "The magnetic activity of a star -- which modulates the stellar wind outflow\n-- shapes the immediate environments of orbiting planets and induces\natmospheric loss thereby impacting their habitability. We perform a detailed\nparameter space study using three dimensional magnetohydrodynamic simulations\nto understand the effect of changing stellar wind magnetic field and planetary\nmagnetic field strengths on planetary magnetospheric topology and atmospheric\nlosses. It is observed that the relative strengths of stellar and planetary\nmagnetic fields play a significant role in determining the steady state\nmagnetospheric configuration and atmospheric erosion. When the stellar field is\nstrengthened or the planetary field is weakened, stellar magnetic field\naccumulation occurs at the day-side of the planet which forces the magnetopause\nto shift closer to its surface. The magnetotail opens up leading to the\nformation of Alfv\\'{e}n wings in the night-side wake region. We demonstrate how\nreconnection processes and wind conditions lead to the bifurcation of the\nmagnetotail current sheet. With increasing stellar wind magnetic field\nstrength, the day-side reconnection point approaches the planet thereby\nenhancing mass loss. We establish an analytic equation which successfully\ncaptures the modeled mass-loss rate variations of planets with changing\nmagnetic field strengths. Our results are relevant for understanding how the\ninterplay of stellar and planetary magnetism influence (exo)planetary\nenvironments and their habitability in star-planet systems with differing\nrelative magnetic field strengths, or in a single star-planet system over the\ncourse of their evolution with age.",
+          "arxiv_id": "2303.04770v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Optimization, guidance, and control of low-thrust transfers from the Lunar Gateway to low lunar orbit",
+          "year": "2024-05",
+          "abstract": "The Gateway will represent a primary space system useful for the Artemis\nprogram, Earth-Moon transportation, and deep space exploration. It is expected\nto serve as a staging location on the way to the lunar surface. This study\nfocuses on low-thrust transfer dynamics, from the Near-Rectilinear Halo Orbit\ntraveled by Gateway to a specified Low-altitude Lunar Orbit (LLO). This\nresearch addresses: (i) determination of the minimum-time low-thrust trajectory\nand (ii) design, implementation, and testing of a guidance and control\narchitecture, for a space vehicle that travels from Gateway to LLO. Orbit\ndynamics is described in terms of modified equinoctial elements, in the context\nof a high-fidelity ephemeris model. The minimum-time trajectory from Gateway to\na specified lunar orbit is detected through an indirect heuristic approach,\nwhich uses the analytical conditions arising in optimal control theory in\nconjunction with a heuristic technique. However, future missions will pursue a\ngrowing level of autonomy, and this circumstance implies the mandatory design\nof an efficient feedback guidance scheme, capable of compensating for\nnonnominal flight conditions. This research proposes nonlinear orbit control as\na viable option for autonomous explicit guidance of low-thrust transfers from\nGateway to LLO. This approach allows defining a feedback law that enjoys\nquasi-global stability properties without requiring any offline reference\ntrajectory. The overall spacecraft dynamics is modeled including attitude\ncontrol and actuation. The latter is demanded to an array of reaction wheels,\narranged in a pyramidal configuration. Guidance, attitude control, and\nactuation are implemented in an iterative scheme. Monte Carlo simulations\ndemonstrate that the guidance and control architecture is effective with random\nstarting points from Gateway and the temporary unavailability of the propulsion\nsystem.",
+          "arxiv_id": "2405.20449v1"
+        },
+        {
+          "title": "Multi-Fidelity Modelling of Low-Energy Trajectories for Space Mission Design",
+          "year": "2020-06",
+          "abstract": "The proposal of increasingly complex and innovative space endeavours poses\ngrowing demands for mission designers. In order to meet the established\nrequirements and constraints while maintaining a low fuel cost, the use of\nlow-energy trajectories is particularly interesting. These allow spacecraft to\nchange orbits and move with little to no fuel, but they are computed using\nmotion models of a higher fidelity than the commonly used two-body problem\n(2BP). For this purpose, perturbation methods that explore the third-body\neffect are especially attractive, since they can accurately convey the system\ndynamics of a three-body configuration with a lower computational cost, by\nemploying mapping techniques or exploring analytical approximations.\n  The focus of this work is to broaden the knowledge of low-energy trajectories\nby developing new mathematical tools to assist in mission design applications.\nIn particular, novel motion models based on the third-body effect are\nconceived. One application of this study focuses on the trajectory design for\nmissions to near-Earth asteroids. Two different projects are explored: one is\nbased on the preliminary design of separate rendezvous and capture missions to\nthe invariant manifolds of libration point $L_2$. This is achieved by studying\ntwo recently discovered asteroids and determining dates, fuel cost and final\ncontrol history for each trajectory. The other covers a larger study on\nasteroid capture missions, where several bodies are regarded as potential\ntargets. The candidates are considered using a multi-fidelity design framework\nthat filters through the trajectory options using models of motion of\nincreasing accuracy, so that a final refined, low-thrust solution is obtained.\nThe trajectory design hinges on harnessing Earth's gravity by exploiting\nencounters outside its sphere of influence, the named Earth-resonant\nencounters.",
+          "arxiv_id": "2006.03872v1"
+        },
+        {
+          "title": "System Modelling of Very Low Earth Orbit Satellites for Earth Observation",
+          "year": "2021-08",
+          "abstract": "The operation of satellites in very low Earth orbit (VLEO) has been linked to\na variety of benefits to both the spacecraft platform and mission design.\nCritically, for Earth observation (EO) missions a reduction in altitude can\nenable smaller and less powerful payloads to achieve the same performance as\nlarger instruments or sensors at higher altitude, with significant benefits to\nthe spacecraft design. As a result, renewed interest in the exploitation of\nthese orbits has spurred the development of new technologies that have the\npotential to enable sustainable operations in this lower altitude range. In\nthis paper, system models are developed for (i) novel materials that improve\naerodynamic performance enabling reduced drag or increased lift production and\nresistance to atomic oxygen erosion and (ii) atmosphere-breathing electric\npropulsion (ABEP) for sustained drag compensation or mitigation in VLEO.\nAttitude and orbit control methods that can take advantage of the aerodynamic\nforces and torques in VLEO are also discussed. These system models are\nintegrated into a framework for concept-level satellite design and this\napproach is used to explore the system-level trade-offs for future EO\nspacecraft enabled by these new technologies. A case-study presented for an\noptical very-high resolution spacecraft demonstrates the significant potential\nof reducing orbital altitude using these technologies and indicates possible\nsavings of up to 75% in system mass and over 50% in development and\nmanufacturing costs in comparison to current state-of-the-art missions. For a\nsynthetic aperture radar (SAR) satellite, the reduction in mass and cost with\naltitude were shown to be smaller, though it was noted that currently available\ncost models do not capture recent commercial advancements in this segment...",
+          "arxiv_id": "2108.01945v2"
+        }
+      ],
+      "4": [
+        {
+          "title": "Multipoint interplanetary coronal mass ejections observed with Solar Orbiter, BepiColombo, Parker Solar Probe, Wind and STEREO-A",
+          "year": "2021-09",
+          "abstract": "We report the result of the first search for multipoint in situ and imaging\nobservations of interplanetary coronal mass ejections (ICMEs) starting with the\nfirst Solar Orbiter (SolO) data in 2020 April - 2021 April. A data exploration\nanalysis is performed including visualizations of the magnetic field and plasma\nobservations made by the five spacecraft SolO, BepiColombo, Parker Solar Probe\n(PSP), Wind and STEREO-A, in connection with coronagraph and heliospheric\nimaging observations from STEREO-A/SECCHI and SOHO/LASCO. We identify ICME\nevents that could be unambiguously followed with the STEREO-A heliospheric\nimagers during their interplanetary propagation to their impact at the\naforementioned spacecraft, and look for events where the same ICME is seen in\nsitu by widely separated spacecraft. We highlight two events: (1) a small\nstreamer blowout CME on 2020 June 23 observed with a triple lineup by PSP,\nBepiColombo and Wind, guided by imaging with STEREO-A, and (2) the first fast\nCME of solar cycle 25 ($ \\approx 1600$ km s$^{-1}$) on 2020 November 29\nobserved in situ by PSP and STEREO-A. These results are useful for modeling the\nmagnetic structure of ICMEs and the interplanetary evolution and global shape\nof their flux ropes and shocks, and for studying the propagation of solar\nenergetic particles. The combined data from these missions are already turning\nout to be a treasure trove for space weather research and are expected to\nbecome even more valuable with an increasing number of ICME events expected\nduring the rise and maximum of solar cycle 25.",
+          "arxiv_id": "2109.07200v4"
+        },
+        {
+          "title": "The 17 April 2021 widespread solar energetic particle event",
+          "year": "2023-03",
+          "abstract": "Context. A solar eruption on 17 April 2021 produced a widespread Solar\nEnergetic Particle (SEP) event that was observed by five longitudinally\nwell-separated observers in the inner heliosphere at heliocentric distances of\n0.42 to 1 au: BepiColombo, Parker Solar Probe, Solar Orbiter, STEREO A, and\nnear-Earth spacecraft. The event produced relativistic electrons and protons.\nIt was associated with a long-lasting solar hard X-ray flare and a medium fast\nCoronal Mass Ejection (CME) with a speed of 880 km/s driving a shock, an EUV\nwave as well as long-lasting radio burst activity showing four distinct type\nIII burst. Methods. A multi-spacecraft analysis of remote-sensing and in-situ\nobservations is applied to attribute the SEP observations at the different\nlocations to the various potential source regions at the Sun. An ENLIL\nsimulation is used to characterize the interplanetary state and its role for\nthe energetic particle transport. The magnetic connection between each\nspacecraft and the Sun is determined. Based on a reconstruction of the coronal\nshock front we determine the times when the shock establishes magnetic\nconnections with the different observers. Radio observations are used to\ncharacterize the directivity of the four main injection episodes, which are\nthen employed in a 2D SEP transport simulation. Results. Timing analysis of the\ninferred SEP solar injection suggests different source processes being\nimportant for the electron and the proton event. Comparison among the\ncharacteristics and timing of the potential particle sources, such as the\nCME-driven shock or the flare, suggests a stronger shock contribution for the\nproton event and a more likely flare-related source of the electron event.\nConclusions. We find that in this event an important ingredient for the wide\nSEP spread was the wide longitudinal range of about 110 degrees covered by\ndistinct SEP injections.",
+          "arxiv_id": "2303.10969v1"
+        },
+        {
+          "title": "Simulation of the Solar Energetic Particle Event on 2020 May 29 Observed by Parker Solar Probe",
+          "year": "2022-09",
+          "abstract": "This paper presents a stochastic three-dimensional (3D) focused transport\nsimulation of solar energetic particles (SEPs) produced by a data-driven\ncoronal mass ejection (CME) shock propagating through a data-driven model of\ncoronal and heliospheric magnetic fields. The injection of SEPs at the CME\nshock is treated using diffusive shock acceleration of post-shock superthermal\nsolar wind ions. A time backward stochastic simulation is employed to solve the\ntransport equation to obtain the SEP time-intensity profile at any location,\nenergy, and pitch angle. The model is applied to a SEP event on 2020 May 29,\nobserved by STEREO-A close to 1 au and by Parker Solar Probe (PSP) when it was\nabout 0.33 au away from the Sun. The SEP event was associated with a very slow\nCME with a plane-of-sky speed of 337 km/s at a height below 6 $\\rm R_S$ as\nreported in the SOHO/LASCO CME catalog. We compute the time profiles of\nparticle flux at PSP and STEREO-A locations, and estimate both the spectral\nindex of the proton energy spectrum for energies between 2 and 16 MeV and the\nequivalent path length of the magnetic field lines experienced by the first\narriving SEPs. We found that the simulation results are well correlated with\nobservations. The SEP event could be explained by the acceleration of particles\nby a weak CME shock in the low solar corona that is not magnetically connected\nto the observers.",
+          "arxiv_id": "2209.02566v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Using gradient boosting regression to improve ambient solar wind model predictions",
+          "year": "2020-06",
+          "abstract": "Studying the ambient solar wind, a continuous pressure-driven plasma flow\nemanating from our Sun, is an important component of space weather research.\nThe ambient solar wind flows in interplanetary space determine how solar storms\nevolve through the heliosphere before reaching Earth, and especially during\nsolar minimum are themselves a driver of activity in the Earth's magnetic\nfield. Accurately forecasting the ambient solar wind flow is therefore\nimperative to space weather awareness. Here we present a machine learning\napproach in which solutions from magnetic models of the solar corona are used\nto output the solar wind conditions near the Earth. The results are compared to\nobservations and existing models in a comprehensive validation analysis, and\nthe new model outperforms existing models in almost all measures. In addition,\nthis approach offers a new perspective to discuss the role of different input\ndata to ambient solar wind modeling, and what this tells us about the\nunderlying physical processes. The final model discussed here represents an\nextremely fast, well-validated and open-source approach to the forecasting of\nambient solar wind at Earth.",
+          "arxiv_id": "2006.12835v3"
+        },
+        {
+          "title": "ARCANE -- Early Detection of Interplanetary Coronal Mass Ejections",
+          "year": "2025-05",
+          "abstract": "Interplanetary coronal mass ejections (ICMEs) are major drivers of space\nweather disturbances, posing risks to both technological infrastructure and\nhuman activities. Automatic detection of ICMEs in solar wind in situ data is\nessential for early warning systems. While several methods have been proposed\nto identify these structures in time series data, robust real-time detection\nremains a significant challenge. In this work, we present ARCANE - the first\nframework explicitly designed for early ICME detection in streaming solar wind\ndata under realistic operational constraints, enabling event identification\nwithout requiring observation of the full structure. Our approach evaluates the\nstrengths and limitations of detection models by comparing a machine\nlearning-based method to a threshold-based baseline. The ResUNet++ model,\npreviously validated on science data, significantly outperforms the baseline,\nparticularly in detecting high-impact events, while retaining solid performance\non lower-impact cases. Notably, we find that using real-time solar wind (RTSW)\ndata instead of high-resolution science data leads to only minimal performance\ndegradation. Despite the challenges of operational settings, our detection\npipeline achieves an F1-Score of 0.37, with an average detection delay of 24.5%\nof the event's duration while processing only a minimal portion of the event\ndata. As more data becomes available, the performance increases significantly.\nThese results mark a substantial step forward in automated space weather\nmonitoring and lay the groundwork for enhanced real-time forecasting\ncapabilities.",
+          "arxiv_id": "2505.09365v2"
+        },
+        {
+          "title": "Classifying different types of solar wind plasma with uncertainty estimations using machine learning",
+          "year": "2024-09",
+          "abstract": "Decades of in-situ solar wind measurements have clearly established the\nvariation of solar wind physical parameters. These variable parameters have\nbeen used to classify the solar wind magnetized plasma into different types\nleading to several classification schemes being developed. These classification\nschemes, while useful for understanding the solar wind originating processes at\nthe Sun and early detection of space weather events, have left open questions\nregarding which physical parameters are most useful for classification and how\nrecent advances in our understanding of solar wind transients impact\nclassification. In this work, we use neural networks trained with different\nsolar wind magnetic and plasma characteristics to automatically classify the\nsolar wind in coronal hole, streamer belt, sector reversal and solar transients\nsuch as coronal mass ejections comprised of both magnetic obstacles and\nsheaths. Furthermore, our work demonstrates how probabilistic neural networks\ncan enhance the classification by including a measure of prediction\nuncertainty. Our work also provides a ranking of the parameters that lead to an\nimproved classification scheme with ~96% accuracy. Our new scheme paves the way\nfor incorporating uncertainty estimates into space weather forecasting with the\npotential to be implemented on real-time solar wind data.",
+          "arxiv_id": "2409.09230v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "When the anomalistic, draconitic and sidereal orbital periods do not coincide: the impact of post-Keplerian perturbing accelerations",
+          "year": "2023-10",
+          "abstract": "In a purely Keplerian picture, the anomalistic, draconitic and sidereal\norbital periods of a test particle orbiting a massive body coincide with each\nother. Such a degeneracy is removed when a post-Keplerian perturbing\nacceleration enters the equations of motion yielding generally different\ncorrections to the Keplerian period for the three aforementioned characteristic\norbital timescales. They are analytically worked out in the case of the\naccelerations induced by the general relativistic post-Newtonian\ngravitoelectromagnetic fields and, to the Newtonian level, by the oblateness of\nthe central body as well. The resulting expressions hold for completely general\norbital configurations and spatial orientations of the spin axis of the\nprimary. Astronomical systems characterized by extremely accurate measurements\nof the orbital periods like, e.g., transiting exoplanets and binary pulsars,\nmay offer potentially viable scenarios for measuring such post--Keplerian\nfeatures of motion, at least in principle. As an example, the sidereal period\nof the brown dwarf WD1032 + 011 b is currently known with an uncertainty as\nsmall as $\\simeq 10^{-5}\\,\\mathrm{s}$, while its predicted post-Newtonian\ngravitoelectric correction amounts to $0.07\\,\\mathrm{s}$; however, the accuracy\nwith which the Keplerian period can be calculated is just 572 s. For the double\npulsar PSR J0737-3039, the largest relativistic correction to the anomalistic\nperiod amounts to a few tenths of a second, given a measurement error of such a\ncharacteristic orbital timescale as small as $\\simeq 10^{-6}\\,\\mathrm{s}$. On\nthe other hand, the Keplerian term can be currently calculated just to a\n$\\simeq 9$ s accuracy. In principle, measuring at least two of the three\ncharacteristic orbital periods for the same system independently would allow to\ncancel out their common Keplerian component provided that their difference is\ntaken.",
+          "arxiv_id": "2310.14311v2"
+        },
+        {
+          "title": "Is it possible to measure the Lense-Thirring orbital shifts of the short-period S-star S4716 orbiting Sgr A$^\\ast$?",
+          "year": "2023-06",
+          "abstract": "The maximal values of the general relativistic Lense-Thirring (LT) orbital\nshifts $\\Delta I^\\mathrm{LT},\\,\\Delta\\Omega^\\mathrm{LT}$ and\n$\\Delta\\omega^\\mathrm{LT}$ of the inclination $I$, the longitude of the\nascending node $\\Omega$ and the perinigricon $\\omega$ of the recently\ndiscovered star S4716, which has the shortest orbital period\n$\\left(P_\\mathrm{b}=4.02\\,\\mathrm{yr}\\right)$ of all the S-stars that orbit the\nsupermassive black hole (SMBH) in Sgr A$^\\ast$, are of the order of $\\simeq\n5-16$ arcseconds per revolution\n$\\left(^{\\prime\\prime}\\,\\mathrm{rev}^{-1}\\right)$. Given the current error\n$\\sigma_\\omega = 0.02^\\circ$ in determining $\\omega$, which is the most\naccurate orbital parameter of S4716 among all those affected by the SMBH's\ngravitomagnetic field through its angular momentum ${\\boldsymbol{J}}_\\bullet$,\nabout 48 yr would be needed to reduce $\\sigma_\\omega$ to $\\simeq 10\\%$ of the\ncumulative LT perinigricon shift over the same time span. Measuring $\\Delta\nI^\\mathrm{LT}$ and $\\Delta\\Omega^\\mathrm{LT}$ to the same level of accuracy\nwould take even much longer. Instead, after just 16 yr, a per cent measurement\nof the larger gravitoelectric (GE) Schwarzschild-like perinigricon shift\n$\\Delta\\omega^\\mathrm{GE}$, which depends only on the SMBH's mass $M_\\bullet$,\nwould be possible. On the other hand, the uncertainties in the physical and\norbital parameters entering $\\Delta\\omega^\\mathrm{GE}$ would cause a huge\nsystematic bias of $\\Delta\\omega^\\mathrm{LT}$ itself. The SMBH's quadrupole\nmass moment $Q_2^\\bullet$ induces orbital shifts as little as $\\simeq\n0.01-0.05\\,^{\\prime\\prime}\\,\\mathrm{rev}^{-1}$.",
+          "arxiv_id": "2306.17432v1"
+        },
+        {
+          "title": "On the Euler-type gravitomagnetic orbital effects in the field of a precessing body",
+          "year": "2024-09",
+          "abstract": "To the first post-Newtonian order, the gravitational action of mass-energy\ncurrents is encoded by the off-diagonal gravitomagnetic components of the\nspacetime metric tensor. If they are time-dependent, a further acceleration\nenters the equations of motion of a moving test particle. Let the source of the\ngravitational field be an isolated, massive body rigidly rotating whose spin\nangular momentum experiences a slow precessional motion. The impact of the\naforementioned acceleration on the orbital motion of a test particle is\nanalytically worked out in full generality. The resulting averaged rates of\nchange are valid for any orbital configuration of the satellite; furthermore,\nthey hold for an arbitrary orientation of the precessional velocity vector of\nthe spin of the central object. In general, all the orbital elements, with the\nexception of the mean anomaly at epoch, undergo nonvanishing long-term\nvariations which, in the case of the Juno spacecraft currently orbiting Jupiter\nand the double pulsar PSR J0737-3039 A/B turn out to be quite small. Such\neffects might become much more relevant in a star-supermassive black hole\nscenario; as an example, the relative change of the semimajor axis of a\nputative test particle orbiting a Kerr black hole as massive as the one at the\nGalactic Centre at, say, 100 Schwarzschild radii may amount up to about $7\\%$\nper year if the hole's spin precessional frequency is $10\\%$ of the particle's\norbital one.",
+          "arxiv_id": "2409.11895v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Dependence of great geomagnetic storm intensity ($Δ$SYM-H$\\le$-200 nT) on associated solar wind parameters",
+          "year": "2020-09",
+          "abstract": "We use $\\Delta$SYM-H to capture the variation in the SYM-H index during the\nmain phase of a geomagnetic storm. We define great geomagnetic storms as those\nwith $\\Delta$SYM-H $\\le$ -200 nT. After analyzing the data that were not\nobscured by solar winds, we determined that 11 such storms occurred during\nsolar cycle 23. We calculated time integrals for the southward interplanetary\nmagnetic field component I(B$_s$), the solar wind electric field I(E$_y$), and\na combination of E$_y$ and the solar wind dynamic pressure I(Q) during the main\nphase of a great geomagnetic storm. The strength of the correlation coefficient\n(CC) between $\\Delta$SYM-H and each of the three integrals I(B$_s$) (CC =\n0.74), I(E$_y$) (CC = 0.85), and I(Q) (CC = 0.94) suggests that Q, which\nencompasses both the solar wind electric field and the solar wind dynamic\npressure, is the main driving factor that determines the intensity of a great\ngeomagnetic storm. The results also suggest that the impact of B$_s$ on the\ngreat geomagnetic storm intensity is much more significant than that of the\nsolar wind speed and the dynamic pressure during the main phase of associated\ngreat geomagnetic storm. How to estimate the intensity of an extreme\ngeomagnetic storm based on solar wind parameters is also discussed.",
+          "arxiv_id": "2009.05971v2"
+        },
+        {
+          "title": "Interplanetary Causes and Impacts of the 2024 May Superstorm on the Geosphere: An Overview",
+          "year": "2024-08",
+          "abstract": "The recent superstorm of 2024 May 10-11 is the second largest geomagnetic\nstorm in the space age and the only one that has simultaneous interplanetary\ndata (there were no interplanetary data for the 1989 March storm). The May\nsuperstorm was characterized by a sudden impulse (SI+) amplitude of +88 nT,\nfollowed by a three-step storm main phase development which had a total\nduration of ~9 hr. The cause of the first storm main phase with a peak SYM-H\nintensity of -183 nT was a fast forward interplanetary shock (magnetosonic Mach\nnumber Mms ~7.2) and an interplanetary sheath with southward interplanetary\nmagnetic field component Bs of ~40 nT. The cause of the second storm main phase\nwith a SYM-H intensity of -354 nT was a deepening of the sheath Bs to ~43 nT. A\nmagnetosonic wave (Mms ~0.6) compressed the sheath to a high magnetic field\nstrength of ~71 nT. Intensified Bs of ~48 nT was the cause of the third and\nmost intense storm main phase with a SYM-H intensity of -518 nT. Three magnetic\ncloud events with Bs fields of ~25-40 nT occurred in the storm recovery phase,\nlengthening the recovery to ~2.8 days. At geosynchronous orbit, ~76 keV to ~1.5\nMeV electrons exhibited ~1-3 orders of magnitude flux decreases following the\nshock/sheath impingement onto the magnetosphere. The cosmic ray decreases at\nDome C, Antarctica (effective vertical cutoff rigidity <0.01 GV) and Oulu,\nFinland (rigidity ~0.8 GV) were ~17% and ~11%, respectively relative to quite\ntime values. Strong ionospheric current flows resulted in extreme\ngeomagnetically induced currents of ~30-40 A in the sub-auroral region. The\nstorm period is characterized by strong polar region field-aligned currents,\nwith ~10 times intensification during the main phase, and equatorward expansion\ndown to ~50 deg geomagnetic (altitude-adjusted) latitude.",
+          "arxiv_id": "2408.14799v1"
+        },
+        {
+          "title": "The Extreme Space Weather Event in February/March 1941",
+          "year": "2020-10",
+          "abstract": "Given the infrequency of extreme geomagnetic storms, it is significant to\nnote the concentration of three extreme geomagnetic storms in 1941, whose\nintensities ranked fourth, twelfth, and fifth within the aa index between\n1868-2010. Among them, the geomagnetic storm on 1 March 1941 was so intense\nthat three of the four Dst station magnetograms went off scale. Herein, we\nreconstruct its time series and measure the storm intensity with an alternative\nDst estimate (Dst*). The source solar eruption at 09:29 - 09:38 GMT on 28\nFebruary was located at RGO AR 13814 and its significant intensity is confirmed\nby large magnetic crochets of 35 nT measured at Abinger. This solar eruption\nmost likely released a fast interplanetary coronal mass ejection with estimated\nspeed 2260 km/s. After its impact at 03:57 - 03:59 GMT on 1 March, an extreme\nmagnetic storm was recorded worldwide. Comparative analyses on the contemporary\nmagnetograms show the storm peak intensity of minimum Dst* < -464 nT at 16 GMT,\ncomparable to the most and the second most extreme magnetic storms within the\nstandard Dst index since 1957. This storm triggered significant low-latitude\naurorae in the East Asian sector and their equatorward boundary has been\nreconstructed as 38.5{\\deg} in invariant latitude. This result agrees with\nBritish magnetograms which indicate auroral oval moving above Abinger at\n53.0{\\deg} in magnetic latitude. The storm amplitude was even more enhanced in\nequatorial stations and consequently casts caveats on their usage for\nmeasurements of the storm intensity in Dst estimates.",
+          "arxiv_id": "2010.00452v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "Long-term evolution of solar activity and prediction of the following solar cycles",
+          "year": "2024-02",
+          "abstract": "Solar activities have a great impact on modern high-tech systems, such as\nhuman aerospace, satellite communication and navigation, deep space\nexploration, and related scientific research. Therefore, studying the long -\nterm evolution trend of solar activity and accurately predicting the future\nsolar cycles is highly anticipated. Based on wavelet transform and empirical\nfunction fitting of the longest recorded data of the annual average relative\nsunspot number (ASN) series of 323 years to date, this work decisively verified\nthe existence of the solar century cycles and confirmed that its length is\nabout 104.0 years, and the magnitude has a slightly increasing trend on the\ntime scale of several hundreds of years. Based on this long-term evolutionary\ntrend, we predicted solar cycle 25 and 26 by using phase similar prediction\nmethods. As for the solar cycle 25, its maximum ASN will be about $146.7\\pm\n33.40$, obviously stronger than solar cycle 24. The peak year will occur\napproximately in 2024, and the period is about $11\\pm 1$ years. As for the\nsolar cycle 26, it will start around 2030, reach the maximum between 2035 and\n2036, with maximum ASN of about $133.0\\pm 3.200$, and the period is about 10\nyears.",
+          "arxiv_id": "2402.13173v1"
+        },
+        {
+          "title": "Exploring the reliability of polar field rise rate as a precursor for an early prediction of solar cycle",
+          "year": "2023-08",
+          "abstract": "The prediction of the strength of an upcoming solar cycle has been a\nlong-standing challenge in the field of solar physics. The inherent stochastic\nnature of the underlying solar dynamo makes the strength of the solar cycle\nvary in a wide range. Till now, the polar precursor methods and the dynamo\nsimulations, that use the strength of the polar field at the cycle minimum to\npredict the strength of the following cycle has gained reasonable consensus by\nproviding convergence in the predictions for solar cycles 24 and 25. Recently,\nit has been shown that just by using the observed correlation of the polar\nfield rise rate with the peak of the polar field at the cycle minimum and the\namplitude of the following cycle, a reliable prediction can be made much\nearlier than the cycle minimum. In this work, we perform surface flux transport\n(SFT) simulations to explore the robustness of this correlation against the\nstochastic fluctuations of BMR tilt properties including anti-Joy and anti-Hale\ntype anomalous BMRs, and against the variation of meridional flow speed. We\nfind that the observed correlation is a robust feature of the solar cycles and\nthus it can be utilized for a reliable prediction of solar cycle much earlier\nthan the cycle minimum, the usual landmark of the solar cycle prediction.",
+          "arxiv_id": "2308.01155v2"
+        },
+        {
+          "title": "Supercriticality of the dynamo limits the memory of the polar field to one cycle",
+          "year": "2021-03",
+          "abstract": "The polar magnetic field precursor is considered to be the most robust and\nphysics-based method for the prediction of the next solar cycle strength.\nHowever, to make a reliable prediction of a cycle, is the polar field at the\nsolar minimum of the previous cycle enough or we need the polar field of many\nprevious cycles? To answer this question, we performed several simulations\nusing Babcock-Leighton type flux transport dynamo models with the\nstochastically forced source for the poloidal field ($\\alpha$ term). We show\nthat when the dynamo is operating near the critical dynamo transition or only\nweakly supercritical, the polar field of the cycle n determines the amplitude\nof the next several cycles (at least three). However, when the dynamo is\nsubstantially supercritical, this correlation of the polar field is reduced to\none cycle. This change in the memory of the polar field from multi- to\none-cycle with the increase of the super-criticality of the dynamo is\nindependent of the importance of various turbulent transport processes in the\nmodel. We further show that when the dynamo operates near the critical, it\nproduces frequent extended episodes of weaker activity, resembling the solar\ngrand minima. The occurrence of grand minima is accompanied by the multi-cycle\ncorrelation of polar field. The frequency of grand minima decreases with the\nincrease of supercriticality of the dynamo.",
+          "arxiv_id": "2103.11754v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:42:41Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

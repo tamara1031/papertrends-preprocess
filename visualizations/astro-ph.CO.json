@@ -1,0 +1,2108 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_dark_matter_model_energy",
+        "keywords": [
+          [
+            "dark",
+            0.018165710703003907
+          ],
+          [
+            "matter",
+            0.014426835620710596
+          ],
+          [
+            "model",
+            0.014161666760301382
+          ],
+          [
+            "energy",
+            0.01275175419901613
+          ],
+          [
+            "gravitational",
+            0.012724390385925072
+          ],
+          [
+            "dark matter",
+            0.011849305570423675
+          ],
+          [
+            "cosmological",
+            0.011085838117854829
+          ],
+          [
+            "scalar",
+            0.01065745873402903
+          ],
+          [
+            "field",
+            0.010369698488687651
+          ],
+          [
+            "models",
+            0.009879132134591023
+          ]
+        ],
+        "count": 11241
+      },
+      "1": {
+        "name": "1_power_galaxy_cosmological_simulations",
+        "keywords": [
+          [
+            "power",
+            0.01776868817065192
+          ],
+          [
+            "galaxy",
+            0.017316327890905127
+          ],
+          [
+            "cosmological",
+            0.014979159572870812
+          ],
+          [
+            "simulations",
+            0.01482704735002028
+          ],
+          [
+            "power spectrum",
+            0.0146830844184562
+          ],
+          [
+            "spectrum",
+            0.013882682026513807
+          ],
+          [
+            "model",
+            0.011589889524523243
+          ],
+          [
+            "parameters",
+            0.011312889416342165
+          ],
+          [
+            "space",
+            0.010750901564802864
+          ],
+          [
+            "bispectrum",
+            0.01061408197988237
+          ]
+        ],
+        "count": 1104
+      },
+      "2": {
+        "name": "2_CMB_polarization_power_Planck",
+        "keywords": [
+          [
+            "CMB",
+            0.046072588566982875
+          ],
+          [
+            "polarization",
+            0.026497358223174252
+          ],
+          [
+            "power",
+            0.016581389313152232
+          ],
+          [
+            "Planck",
+            0.01625462015250405
+          ],
+          [
+            "maps",
+            0.016182344311295623
+          ],
+          [
+            "data",
+            0.01495832906193833
+          ],
+          [
+            "sky",
+            0.014545567668703034
+          ],
+          [
+            "cosmic",
+            0.013965935218786462
+          ],
+          [
+            "microwave",
+            0.013122360149799664
+          ],
+          [
+            "mode",
+            0.012961885581386669
+          ]
+        ],
+        "count": 832
+      },
+      "3": {
+        "name": "3_cm_signal_cm signal_power",
+        "keywords": [
+          [
+            "cm",
+            0.05376550083994189
+          ],
+          [
+            "signal",
+            0.03406940054361808
+          ],
+          [
+            "cm signal",
+            0.024130381048786096
+          ],
+          [
+            "power",
+            0.02006711785558918
+          ],
+          [
+            "spectrum",
+            0.01703904667590573
+          ],
+          [
+            "power spectrum",
+            0.0169374817638743
+          ],
+          [
+            "EoR",
+            0.015320718412640821
+          ],
+          [
+            "reionization",
+            0.014569072930540623
+          ],
+          [
+            "foreground",
+            0.014155052181791793
+          ],
+          [
+            "21cm",
+            0.014074281434409426
+          ]
+        ],
+        "count": 605
+      },
+      "4": {
+        "name": "4_Ia_SN_SNe_Hubble",
+        "keywords": [
+          [
+            "Ia",
+            0.05225587070574914
+          ],
+          [
+            "SN",
+            0.03387737830064013
+          ],
+          [
+            "SNe",
+            0.03327041958584326
+          ],
+          [
+            "Hubble",
+            0.02096554206486679
+          ],
+          [
+            "distance",
+            0.018377456439741653
+          ],
+          [
+            "Type",
+            0.017550204679802152
+          ],
+          [
+            "host",
+            0.016922591206454146
+          ],
+          [
+            "time",
+            0.015769434638048897
+          ],
+          [
+            "H_0",
+            0.014506962078834115
+          ],
+          [
+            "mag",
+            0.014484489877861393
+          ]
+        ],
+        "count": 441
+      },
+      "5": {
+        "name": "5_mass_halo_dark matter_matter",
+        "keywords": [
+          [
+            "mass",
+            0.0268891461122249
+          ],
+          [
+            "halo",
+            0.02657548688775664
+          ],
+          [
+            "dark matter",
+            0.02540079640960708
+          ],
+          [
+            "matter",
+            0.02485796126431146
+          ],
+          [
+            "dark",
+            0.024111833057721396
+          ],
+          [
+            "galaxies",
+            0.020476844982493487
+          ],
+          [
+            "simulations",
+            0.017500132964691332
+          ],
+          [
+            "Milky",
+            0.016610100079140124
+          ],
+          [
+            "Way",
+            0.01655639149569327
+          ],
+          [
+            "SIDM",
+            0.016108318760875505
+          ]
+        ],
+        "count": 432
+      },
+      "6": {
+        "name": "6_shear_galaxy_cosmic shear_weak",
+        "keywords": [
+          [
+            "shear",
+            0.05269882388877455
+          ],
+          [
+            "galaxy",
+            0.024869544659167287
+          ],
+          [
+            "cosmic shear",
+            0.022549747887152072
+          ],
+          [
+            "weak",
+            0.01920229983043219
+          ],
+          [
+            "redshift",
+            0.017913747828162702
+          ],
+          [
+            "cosmic",
+            0.015459661430569463
+          ],
+          [
+            "bias",
+            0.015050254887124661
+          ],
+          [
+            "analysis",
+            0.013617132470495834
+          ],
+          [
+            "data",
+            0.01332159034297127
+          ],
+          [
+            "cosmological",
+            0.012889142199914666
+          ]
+        ],
+        "count": 336
+      },
+      "7": {
+        "name": "7_photometric_redshift_redshifts_Survey",
+        "keywords": [
+          [
+            "photometric",
+            0.02527650089252112
+          ],
+          [
+            "redshift",
+            0.02152025408387067
+          ],
+          [
+            "redshifts",
+            0.01837669640039304
+          ],
+          [
+            "Survey",
+            0.018135603252001718
+          ],
+          [
+            "survey",
+            0.018129707022245572
+          ],
+          [
+            "Euclid",
+            0.01784092233627515
+          ],
+          [
+            "data",
+            0.017448954729291765
+          ],
+          [
+            "galaxies",
+            0.017384579045692967
+          ],
+          [
+            "photo",
+            0.016734931745743125
+          ],
+          [
+            "Roman",
+            0.014208594403273437
+          ]
+        ],
+        "count": 294
+      },
+      "8": {
+        "name": "8_reionization_alpha_IGM_ionizing",
+        "keywords": [
+          [
+            "reionization",
+            0.04948396891191244
+          ],
+          [
+            "alpha",
+            0.030583469580545
+          ],
+          [
+            "IGM",
+            0.02639339783910714
+          ],
+          [
+            "ionizing",
+            0.020782679559026414
+          ],
+          [
+            "Lyman",
+            0.020103144263810643
+          ],
+          [
+            "neutral",
+            0.01804242579835551
+          ],
+          [
+            "galaxies",
+            0.015513588886981435
+          ],
+          [
+            "simulations",
+            0.01402899003616503
+          ],
+          [
+            "Reionization",
+            0.013716272748273278
+          ],
+          [
+            "intergalactic",
+            0.013505606633301106
+          ]
+        ],
+        "count": 278
+      },
+      "9": {
+        "name": "9_galaxies_star_emission_AGN",
+        "keywords": [
+          [
+            "galaxies",
+            0.029598497056852316
+          ],
+          [
+            "star",
+            0.022062708481706935
+          ],
+          [
+            "emission",
+            0.0216840661685507
+          ],
+          [
+            "AGN",
+            0.02048087401252926
+          ],
+          [
+            "gas",
+            0.019917262235343052
+          ],
+          [
+            "dust",
+            0.016815333631478593
+          ],
+          [
+            "UV",
+            0.014673703384861448
+          ],
+          [
+            "galaxy",
+            0.014387573265691017
+          ],
+          [
+            "line",
+            0.014167505759547552
+          ],
+          [
+            "star formation",
+            0.013704154081346995
+          ]
+        ],
+        "count": 270
+      },
+      "10": {
+        "name": "10_radio_cluster_emission_Abell",
+        "keywords": [
+          [
+            "radio",
+            0.08268263631286266
+          ],
+          [
+            "cluster",
+            0.04304599944351169
+          ],
+          [
+            "emission",
+            0.028743748030540948
+          ],
+          [
+            "Abell",
+            0.02681457813252924
+          ],
+          [
+            "clusters",
+            0.025538043733196764
+          ],
+          [
+            "ray",
+            0.023867685926582803
+          ],
+          [
+            "galaxy",
+            0.021553769045471648
+          ],
+          [
+            "The",
+            0.019855214142547276
+          ],
+          [
+            "MHz",
+            0.01902293383191434
+          ],
+          [
+            "observations",
+            0.01763445968111819
+          ]
+        ],
+        "count": 249
+      },
+      "11": {
+        "name": "11_FDM_matter_dark matter_dark",
+        "keywords": [
+          [
+            "FDM",
+            0.03742751757805975
+          ],
+          [
+            "matter",
+            0.03609617719982489
+          ],
+          [
+            "dark matter",
+            0.035683210037961724
+          ],
+          [
+            "dark",
+            0.03410956591205243
+          ],
+          [
+            "self",
+            0.024902221367562333
+          ],
+          [
+            "soliton",
+            0.023993089007504236
+          ],
+          [
+            "core",
+            0.023285604120559307
+          ],
+          [
+            "halo",
+            0.022549638377479614
+          ],
+          [
+            "mass",
+            0.020345452240039242
+          ],
+          [
+            "fuzzy",
+            0.015392800784575947
+          ]
+        ],
+        "count": 196
+      },
+      "12": {
+        "name": "12_formation_star_mass_JWST",
+        "keywords": [
+          [
+            "formation",
+            0.030766877860943793
+          ],
+          [
+            "star",
+            0.027052318059161425
+          ],
+          [
+            "mass",
+            0.02692458135803619
+          ],
+          [
+            "JWST",
+            0.021892675429312294
+          ],
+          [
+            "black",
+            0.021339188206449207
+          ],
+          [
+            "star formation",
+            0.020042472703070146
+          ],
+          [
+            "high",
+            0.019319688849448135
+          ],
+          [
+            "stellar",
+            0.018675102082613786
+          ],
+          [
+            "stars",
+            0.01860613015026832
+          ],
+          [
+            "galaxies",
+            0.01691130127600552
+          ]
+        ],
+        "count": 192
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.3144778581046538,
+        -0.632979367172687,
+        -0.6828463019784681,
+        -0.6755219422037069,
+        -0.3316925891772582,
+        -0.36722938026769436,
+        -0.3138816897282575,
+        -0.7158801214708596,
+        -0.6813274629340031,
+        -0.7046721950433462,
+        -0.312059355982894,
+        -0.5994495889627971
+      ],
+      [
+        -0.3144778581046538,
+        1.0,
+        -0.4924338767009549,
+        -0.4833284410659763,
+        -0.6999879498861193,
+        -0.5932164417168656,
+        -0.24594168661924876,
+        -0.24202978825084603,
+        -0.6957141476486703,
+        -0.6532221889921421,
+        -0.6773729970494125,
+        -0.6205205956382221,
+        -0.6177088784256946
+      ],
+      [
+        -0.632979367172687,
+        -0.4924338767009549,
+        1.0,
+        -0.5847957400042263,
+        -0.6584498183336809,
+        -0.690299130711809,
+        -0.6371340643735763,
+        -0.6640579625159385,
+        -0.7073030383458385,
+        -0.7311556063744047,
+        -0.7205654224555029,
+        -0.6877376972556009,
+        -0.7061092034883707
+      ],
+      [
+        -0.6828463019784681,
+        -0.4833284410659763,
+        -0.5847957400042263,
+        1.0,
+        -0.7541255164295476,
+        -0.6888792025053463,
+        -0.6841884514696224,
+        -0.6829797921571459,
+        -0.6498841915554749,
+        -0.7018833956976547,
+        -0.6893418982269173,
+        -0.691128624871036,
+        -0.6930348722030486
+      ],
+      [
+        -0.6755219422037069,
+        -0.6999879498861193,
+        -0.6584498183336809,
+        -0.7541255164295476,
+        1.0,
+        -0.7181148819638514,
+        -0.7133456561541056,
+        -0.6843448419631148,
+        -0.7502723654646983,
+        -0.7359191722696717,
+        -0.7421353801869344,
+        -0.7291551144462963,
+        -0.728949550654501
+      ],
+      [
+        -0.3316925891772582,
+        -0.5932164417168656,
+        -0.690299130711809,
+        -0.6888792025053463,
+        -0.7181148819638514,
+        1.0,
+        -0.6066685331568091,
+        -0.6126022137017832,
+        -0.7095486019219899,
+        -0.4391734502686607,
+        -0.664009334218989,
+        0.21145369664516558,
+        -0.4347197997875031
+      ],
+      [
+        -0.36722938026769436,
+        -0.24594168661924876,
+        -0.6371340643735763,
+        -0.6841884514696224,
+        -0.7133456561541056,
+        -0.6066685331568091,
+        1.0,
+        -0.2187944291000871,
+        -0.7279928367928797,
+        -0.657377235434814,
+        -0.670528555050893,
+        -0.6480535035003983,
+        -0.6481357168068779
+      ],
+      [
+        -0.3138816897282575,
+        -0.24202978825084603,
+        -0.6640579625159385,
+        -0.6829797921571459,
+        -0.6843448419631148,
+        -0.6126022137017832,
+        -0.2187944291000871,
+        1.0,
+        -0.7022026590652486,
+        -0.6158127453767085,
+        -0.6591643727651546,
+        -0.6581134444002457,
+        -0.6156010865864259
+      ],
+      [
+        -0.7158801214708596,
+        -0.6957141476486703,
+        -0.7073030383458385,
+        -0.6498841915554749,
+        -0.7502723654646983,
+        -0.7095486019219899,
+        -0.7279928367928797,
+        -0.7022026590652486,
+        1.0,
+        -0.6162872564091059,
+        -0.7344086405485739,
+        -0.7261226490924512,
+        -0.6942090659955598
+      ],
+      [
+        -0.6813274629340031,
+        -0.6532221889921421,
+        -0.7311556063744047,
+        -0.7018833956976547,
+        -0.7359191722696717,
+        -0.4391734502686607,
+        -0.657377235434814,
+        -0.6158127453767085,
+        -0.6162872564091059,
+        1.0,
+        -0.5977466617969526,
+        -0.6751541703397244,
+        -0.3750561268504139
+      ],
+      [
+        -0.7046721950433462,
+        -0.6773729970494125,
+        -0.7205654224555029,
+        -0.6893418982269173,
+        -0.7421353801869344,
+        -0.664009334218989,
+        -0.670528555050893,
+        -0.6591643727651546,
+        -0.7344086405485739,
+        -0.5977466617969526,
+        1.0,
+        -0.6982855113789357,
+        -0.6687744755170782
+      ],
+      [
+        -0.312059355982894,
+        -0.6205205956382221,
+        -0.6877376972556009,
+        -0.691128624871036,
+        -0.7291551144462963,
+        0.21145369664516558,
+        -0.6480535035003983,
+        -0.6581134444002457,
+        -0.7261226490924512,
+        -0.6751541703397244,
+        -0.6982855113789357,
+        1.0,
+        -0.5866737804240145
+      ],
+      [
+        -0.5994495889627971,
+        -0.6177088784256946,
+        -0.7061092034883707,
+        -0.6930348722030486,
+        -0.728949550654501,
+        -0.4347197997875031,
+        -0.6481357168068779,
+        -0.6156010865864259,
+        -0.6942090659955598,
+        -0.3750561268504139,
+        -0.6687744755170782,
+        -0.5866737804240145,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        54,
+        15,
+        27,
+        8,
+        16,
+        15,
+        5,
+        4,
+        13,
+        7,
+        10,
+        33,
+        31
+      ],
+      "2020-02": [
+        62,
+        17,
+        21,
+        12,
+        16,
+        13,
+        10,
+        6,
+        10,
+        10,
+        20,
+        34,
+        28
+      ],
+      "2020-03": [
+        71,
+        11,
+        25,
+        5,
+        8,
+        15,
+        9,
+        4,
+        9,
+        5,
+        17,
+        43,
+        23
+      ],
+      "2020-04": [
+        70,
+        26,
+        27,
+        12,
+        16,
+        12,
+        19,
+        7,
+        13,
+        7,
+        15,
+        49,
+        26
+      ],
+      "2020-05": [
+        101,
+        28,
+        25,
+        18,
+        16,
+        13,
+        11,
+        6,
+        17,
+        8,
+        10,
+        44,
+        22
+      ],
+      "2020-06": [
+        83,
+        18,
+        42,
+        11,
+        9,
+        26,
+        15,
+        3,
+        10,
+        7,
+        15,
+        62,
+        55
+      ],
+      "2020-07": [
+        107,
+        32,
+        35,
+        11,
+        15,
+        22,
+        19,
+        12,
+        10,
+        15,
+        15,
+        74,
+        48
+      ],
+      "2020-08": [
+        53,
+        20,
+        21,
+        8,
+        15,
+        20,
+        8,
+        8,
+        12,
+        6,
+        18,
+        52,
+        18
+      ],
+      "2020-09": [
+        65,
+        22,
+        31,
+        12,
+        15,
+        15,
+        11,
+        4,
+        12,
+        7,
+        15,
+        38,
+        30
+      ],
+      "2020-10": [
+        79,
+        30,
+        21,
+        9,
+        18,
+        22,
+        23,
+        8,
+        5,
+        5,
+        13,
+        61,
+        30
+      ],
+      "2020-11": [
+        90,
+        25,
+        46,
+        17,
+        15,
+        15,
+        15,
+        5,
+        14,
+        12,
+        21,
+        61,
+        37
+      ],
+      "2020-12": [
+        70,
+        19,
+        38,
+        11,
+        15,
+        19,
+        24,
+        7,
+        11,
+        6,
+        18,
+        62,
+        39
+      ],
+      "2021-01": [
+        66,
+        11,
+        32,
+        12,
+        14,
+        16,
+        10,
+        7,
+        6,
+        8,
+        20,
+        41,
+        25
+      ],
+      "2021-02": [
+        60,
+        19,
+        39,
+        10,
+        10,
+        11,
+        7,
+        6,
+        6,
+        6,
+        21,
+        42,
+        29
+      ],
+      "2021-03": [
+        67,
+        11,
+        30,
+        15,
+        11,
+        18,
+        13,
+        8,
+        16,
+        3,
+        22,
+        49,
+        38
+      ],
+      "2021-04": [
+        71,
+        15,
+        32,
+        9,
+        17,
+        20,
+        16,
+        10,
+        3,
+        3,
+        20,
+        44,
+        24
+      ],
+      "2021-05": [
+        85,
+        14,
+        32,
+        11,
+        15,
+        13,
+        15,
+        4,
+        15,
+        3,
+        17,
+        44,
+        41
+      ],
+      "2021-06": [
+        71,
+        29,
+        33,
+        11,
+        17,
+        16,
+        13,
+        6,
+        6,
+        7,
+        23,
+        58,
+        31
+      ],
+      "2021-07": [
+        86,
+        22,
+        30,
+        21,
+        24,
+        16,
+        13,
+        6,
+        7,
+        8,
+        19,
+        44,
+        31
+      ],
+      "2021-08": [
+        85,
+        18,
+        20,
+        20,
+        10,
+        12,
+        10,
+        8,
+        10,
+        2,
+        22,
+        46,
+        26
+      ],
+      "2021-09": [
+        69,
+        26,
+        29,
+        5,
+        20,
+        24,
+        16,
+        8,
+        15,
+        14,
+        19,
+        69,
+        43
+      ],
+      "2021-10": [
+        79,
+        27,
+        23,
+        13,
+        20,
+        20,
+        19,
+        7,
+        13,
+        14,
+        31,
+        53,
+        47
+      ],
+      "2021-11": [
+        83,
+        28,
+        47,
+        8,
+        16,
+        20,
+        17,
+        3,
+        11,
+        7,
+        38,
+        46,
+        37
+      ],
+      "2021-12": [
+        84,
+        13,
+        39,
+        15,
+        17,
+        24,
+        11,
+        6,
+        14,
+        10,
+        19,
+        62,
+        42
+      ],
+      "2022-01": [
+        77,
+        19,
+        19,
+        13,
+        11,
+        18,
+        12,
+        6,
+        9,
+        6,
+        19,
+        45,
+        47
+      ],
+      "2022-02": [
+        59,
+        16,
+        30,
+        8,
+        17,
+        16,
+        5,
+        12,
+        10,
+        6,
+        15,
+        42,
+        19
+      ],
+      "2022-03": [
+        110,
+        24,
+        35,
+        14,
+        18,
+        20,
+        16,
+        12,
+        12,
+        14,
+        21,
+        74,
+        27
+      ],
+      "2022-04": [
+        67,
+        23,
+        29,
+        12,
+        9,
+        17,
+        14,
+        6,
+        11,
+        14,
+        14,
+        52,
+        35
+      ],
+      "2022-05": [
+        78,
+        23,
+        42,
+        17,
+        13,
+        22,
+        8,
+        7,
+        9,
+        10,
+        20,
+        53,
+        50
+      ],
+      "2022-06": [
+        58,
+        21,
+        30,
+        10,
+        14,
+        26,
+        17,
+        11,
+        8,
+        11,
+        20,
+        52,
+        31
+      ],
+      "2022-07": [
+        89,
+        24,
+        30,
+        11,
+        16,
+        21,
+        11,
+        7,
+        18,
+        8,
+        33,
+        65,
+        35
+      ],
+      "2022-08": [
+        66,
+        17,
+        32,
+        12,
+        19,
+        15,
+        13,
+        5,
+        9,
+        8,
+        17,
+        46,
+        33
+      ],
+      "2022-09": [
+        74,
+        25,
+        34,
+        19,
+        19,
+        15,
+        13,
+        5,
+        12,
+        7,
+        20,
+        56,
+        30
+      ],
+      "2022-10": [
+        63,
+        26,
+        38,
+        15,
+        15,
+        21,
+        28,
+        10,
+        10,
+        8,
+        17,
+        72,
+        48
+      ],
+      "2022-11": [
+        82,
+        27,
+        38,
+        12,
+        20,
+        25,
+        17,
+        11,
+        10,
+        7,
+        15,
+        66,
+        51
+      ],
+      "2022-12": [
+        93,
+        20,
+        42,
+        22,
+        18,
+        14,
+        10,
+        6,
+        7,
+        8,
+        10,
+        54,
+        37
+      ],
+      "2023-01": [
+        62,
+        18,
+        36,
+        11,
+        24,
+        14,
+        13,
+        12,
+        12,
+        10,
+        18,
+        54,
+        36
+      ],
+      "2023-02": [
+        66,
+        23,
+        20,
+        14,
+        14,
+        15,
+        12,
+        6,
+        6,
+        12,
+        12,
+        42,
+        24
+      ],
+      "2023-03": [
+        67,
+        17,
+        38,
+        8,
+        18,
+        17,
+        6,
+        9,
+        8,
+        5,
+        22,
+        55,
+        43
+      ],
+      "2023-04": [
+        70,
+        21,
+        18,
+        8,
+        15,
+        17,
+        16,
+        6,
+        12,
+        13,
+        14,
+        60,
+        39
+      ],
+      "2023-05": [
+        81,
+        29,
+        43,
+        17,
+        16,
+        24,
+        14,
+        13,
+        18,
+        5,
+        19,
+        56,
+        49
+      ],
+      "2023-06": [
+        95,
+        26,
+        30,
+        11,
+        23,
+        21,
+        14,
+        10,
+        14,
+        10,
+        19,
+        59,
+        51
+      ],
+      "2023-07": [
+        98,
+        31,
+        25,
+        25,
+        20,
+        17,
+        18,
+        7,
+        9,
+        8,
+        16,
+        65,
+        51
+      ],
+      "2023-08": [
+        70,
+        17,
+        18,
+        12,
+        8,
+        16,
+        9,
+        2,
+        13,
+        5,
+        14,
+        57,
+        35
+      ],
+      "2023-09": [
+        99,
+        23,
+        30,
+        16,
+        33,
+        28,
+        18,
+        9,
+        16,
+        14,
+        16,
+        53,
+        42
+      ],
+      "2023-10": [
+        76,
+        30,
+        34,
+        17,
+        14,
+        17,
+        22,
+        10,
+        18,
+        16,
+        31,
+        60,
+        38
+      ],
+      "2023-11": [
+        84,
+        31,
+        25,
+        20,
+        25,
+        26,
+        9,
+        9,
+        14,
+        9,
+        15,
+        70,
+        49
+      ],
+      "2023-12": [
+        96,
+        26,
+        35,
+        15,
+        16,
+        10,
+        13,
+        11,
+        13,
+        5,
+        21,
+        63,
+        47
+      ],
+      "2024-01": [
+        76,
+        12,
+        27,
+        15,
+        21,
+        15,
+        11,
+        9,
+        7,
+        6,
+        27,
+        44,
+        31
+      ],
+      "2024-02": [
+        60,
+        21,
+        24,
+        7,
+        18,
+        13,
+        17,
+        8,
+        6,
+        7,
+        27,
+        64,
+        53
+      ],
+      "2024-03": [
+        71,
+        26,
+        37,
+        10,
+        15,
+        26,
+        14,
+        5,
+        7,
+        8,
+        29,
+        60,
+        46
+      ],
+      "2024-04": [
+        84,
+        31,
+        40,
+        10,
+        20,
+        18,
+        17,
+        7,
+        18,
+        10,
+        18,
+        59,
+        41
+      ],
+      "2024-05": [
+        96,
+        27,
+        65,
+        14,
+        27,
+        21,
+        16,
+        9,
+        20,
+        14,
+        20,
+        66,
+        51
+      ],
+      "2024-06": [
+        113,
+        28,
+        37,
+        16,
+        27,
+        22,
+        19,
+        10,
+        13,
+        9,
+        15,
+        60,
+        47
+      ],
+      "2024-07": [
+        93,
+        31,
+        34,
+        21,
+        29,
+        23,
+        17,
+        9,
+        11,
+        14,
+        19,
+        75,
+        52
+      ],
+      "2024-08": [
+        82,
+        17,
+        32,
+        17,
+        30,
+        21,
+        9,
+        5,
+        4,
+        7,
+        27,
+        45,
+        33
+      ],
+      "2024-09": [
+        89,
+        24,
+        49,
+        12,
+        12,
+        18,
+        21,
+        10,
+        17,
+        10,
+        28,
+        61,
+        44
+      ],
+      "2024-10": [
+        96,
+        29,
+        37,
+        18,
+        18,
+        24,
+        30,
+        10,
+        18,
+        9,
+        22,
+        61,
+        49
+      ],
+      "2024-11": [
+        82,
+        31,
+        48,
+        7,
+        21,
+        14,
+        12,
+        12,
+        8,
+        7,
+        23,
+        52,
+        43
+      ],
+      "2024-12": [
+        103,
+        24,
+        35,
+        15,
+        21,
+        20,
+        16,
+        10,
+        14,
+        6,
+        19,
+        70,
+        42
+      ],
+      "2025-01": [
+        92,
+        25,
+        30,
+        8,
+        22,
+        12,
+        19,
+        15,
+        9,
+        4,
+        11,
+        39,
+        42
+      ],
+      "2025-02": [
+        90,
+        26,
+        45,
+        15,
+        20,
+        23,
+        15,
+        8,
+        6,
+        7,
+        14,
+        59,
+        44
+      ],
+      "2025-03": [
+        120,
+        23,
+        52,
+        21,
+        22,
+        24,
+        13,
+        14,
+        16,
+        9,
+        22,
+        50,
+        52
+      ],
+      "2025-04": [
+        125,
+        30,
+        38,
+        16,
+        19,
+        31,
+        16,
+        7,
+        14,
+        6,
+        24,
+        69,
+        45
+      ],
+      "2025-05": [
+        98,
+        30,
+        46,
+        11,
+        21,
+        20,
+        12,
+        9,
+        13,
+        6,
+        26,
+        54,
+        52
+      ],
+      "2025-06": [
+        94,
+        32,
+        36,
+        21,
+        33,
+        22,
+        19,
+        3,
+        20,
+        17,
+        25,
+        59,
+        45
+      ],
+      "2025-07": [
+        113,
+        33,
+        45,
+        18,
+        23,
+        37,
+        25,
+        9,
+        16,
+        5,
+        16,
+        85,
+        62
+      ],
+      "2025-08": [
+        77,
+        28,
+        24,
+        22,
+        22,
+        21,
+        11,
+        9,
+        12,
+        5,
+        18,
+        49,
+        42
+      ],
+      "2025-09": [
+        58,
+        14,
+        17,
+        16,
+        22,
+        11,
+        18,
+        4,
+        10,
+        7,
+        10,
+        40,
+        35
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Early mass varying neutrino dark energy: Nugget formation and Hubble anomaly",
+          "year": "2020-05",
+          "abstract": "We present a novel scenario, in which light ($\\sim$ few \\rm{eV}) dark\nfermions (sterile neutrinos) interact with a scalar field like in mass varying\nneutrino dark energy theories. As the $\\rm{eV}$ sterile states naturally become\nnon-relativistic before the Matter Radiation Equality (MRE), we show that the\nneutrino-scalar fluid develops strong perturbative instability followed by the\nformation of neutrino-nuggets and the early dark energy behaviour disappears\naround MRE. The stability of the nugget is achieved when the Fermi pressure\nbalances the attractive scalar force and we numerically find the mass and\nradius of heavy cold nuggets by solving for the static configuration for the\nscalar field. We find that for the case when DM nugget density is sub-dominant\nand most of the early DE energy goes into scalar field dynamics, it can in\nprinciple relax the Hubble anomaly. Especially when a kinetic energy dominated\nphase appears after the phase transition, the DE density dilutes faster than\nradiation and satisfy the requirements for solving $H_0$ anomaly. In our\nscenario, unlike in originally proposed early dark energy theory, the dark\nenergy density is controlled by ($\\rm{eV}$) neutrino mass and it does not\nrequire a fine tuned EDE scale. We perform a MCMC analysis and confront our\nmodel with Planck + SHOES and BAO data and find an evidence for non-zero\nneutrino-scalar EDE density during MRE. Our analysis shows that this model is\nin agreement of nearly 1.3$\\sigma$ with SHOES measurement which is $H_0 = 74.03\n\\pm 1.42$ km/s/Mpc.",
+          "arxiv_id": "2005.11889v4"
+        },
+        {
+          "title": "Constraints on interacting dark energy revisited: implications for the Hubble tension",
+          "year": "2023-08",
+          "abstract": "We revisit a class of coupled dark energy models where dark energy interacts\nwith dark matter via phenomenological energy exchange terms. We include the\nperturbation of the Hubble rate in the interaction term, which was absent in\nprevious works. We also consider more recent data sets such as cosmic microwave\nbackground (CMB) anisotropies from \\text{Planck} 2018, type I-a supernovae\n(SNIa) measurements from Pantheon+ and data from baryon acoustic oscillations\n(BAO), and redshift space distortions (RSD). One of the models presents a\nstrong incompatibility when different cosmological datasets are used. We\nanalyze the influence of the SH0ES Cepheid host distances on the results and,\nalthough for one model the discrepancy of $H_0$ is reduced to $3.2\\sigma$ when\ncompared to the value obtained by the \\textit{Planck} collaboration and\n$3.6\\sigma$ when compared to the SH0ES team, joint analysis is incompatible.\nIncluding BAO with RSD shows incompatibility with SH0ES for all models\nconsidered here. We perform a model comparison and although there is a\npreference for interacting dark energy over $\\Lambda$CDM for all the models for\njoint analysis CMB+BAO+RSD+SNIa, most of the 2D contours do not overlap. We\nconclude that the models of interactions in the dark sector considered in this\npaper are not flexible enough to fit all the cosmological data including values\nof $H_0$ from SH0ES in a statistically acceptable way. Therefore, the addition\nof one extra degree of freedom (i.e. the coupling between dark matter and dark\nmatter) does not help enough to alleviate the already existing tension in the\nvanilla $\\Lambda$CDM, suggesting that the models would need to be modified to\ninclude further flexibility of predictions to help elucidate this issue.",
+          "arxiv_id": "2308.05807v3"
+        },
+        {
+          "title": "Bound Dark Energy: a particle's origin of dark energy",
+          "year": "2025-03",
+          "abstract": "Dark energy, the enigmatic force driving the accelerated cosmic expansion of\nthe universe, is conventionally described as a cosmological constant in the\nstandard $\\Lambda$CDM model. However, measurements from the Dark Energy\nSpectroscopic Instrument (DESI) reports a $> 2.5\\sigma$ preference for\ndynamical dark energy, with baryon acoustic oscillation (BAO) data favoring a\ntime varying equation of state $w(z)$ over the cosmological constant ($w=-1$).\nWe present the Bound Dark Energy (BDE) model, where dark energy originates from\nthe lightest meson field $\\phi$ in a dark SU(3) gauge sector, emerging\ndynamically via non perturbative interactions. Governed by an inverse-power-law\npotential $V(\\phi)=\\Lambda_{c}^{4 + 2/3}\\phi^{-2/3}$, BDE has no free\nparameters, one less than $\\Lambda$CDM and three less than $w_{0}w_{a}$CDM\nmodels. Combining the DESI BAO measurements, cosmic microwave background data,\nand Dark Energy Survey SN Ia distance measurements from the fifth year, BDE\nachieves a $42\\%$ and $37\\%$ reduction in the reduced $\\chi^{2}_{BAO}$ compared\nto $w_{0}w_{a}$CDM and $\\Lambda$CDM, respectively, while having an equivalent\nfit for type Ia supernovae and the cosmic microwave background data. The model\npredicts a dark energy equation of state transitioning from radiation like\n$w=1/3$ at early times ($a < a_{c}$) to $ w_{0}=-0.9301 \\pm 0.0004$ at present\ntime. The ($w_{0},w_{a}$) contour is 10,000 times smaller in BDE than in\n$w_{0}w_{a}$CDM model, while having an equivalent cosmological fit. Key\nparameters the condensation energy scale $\\Lambda_{c}=43.806 \\pm 0.19$ eV and\nepoch $a_{c}=2.4972 \\pm 0.011 \\times 10^{-6}$ align with high-energy physics\npredictions. These results, consistent with current observational bounds,\nestablish BDE as a predictive framework that unifies particle physics and\ncosmology, offering a first-principles resolution to dark energy dynamical\nnature.",
+          "arxiv_id": "2503.19098v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "The constraining power of the Marked Power Spectrum: an analytical study",
+          "year": "2024-11",
+          "abstract": "The marked power spectrum - a two-point correlation function of a transformed\ndensity field - has emerged as a promising tool for extracting cosmological\ninformation from the large-scale structure of the Universe. In this work, we\npresent the first comprehensive analytical study of the marked power spectrum's\nsensitivity to primordial non-Gaussianity (PNG) of the non-local type. We\nextend previous effective field theory frameworks to incorporate PNG,\ndeveloping a complete theoretical model that we validate against the Quijote\nsimulation suite. Through a systematic Fisher analysis, we compare the\nconstraining power of the marked power spectrum against traditional approaches\ncombining the power spectrum and bispectrum (P+B). We explore different choices\nof mark parameters to evaluate their impact on parameter constraints,\nparticularly focusing on equilateral and orthogonal PNG as well as neutrino\nmasses. Our analysis shows that while marking up underdense regions yields\noptimal constraints in the low shot-noise regime, the marked power spectrum's\nperformance for discrete tracers with BOSS-like number densities does not\nsurpass that of P+B analysis at mildly non-linear scales ($k \\lesssim 0.25\n\\,h/\\text{Mpc}$). However, the marked approach offers several practical\nadvantages, including simpler estimation procedures and potentially more\nmanageable systematic effects. Our theoretical framework reveals how the marked\npower spectrum incorporates higher-order correlation information through terms\nresembling tree-level bispectra and power spectrum convolutions. This work\nestablishes a robust foundation for applying marked statistics to future\nlarge-volume surveys.",
+          "arxiv_id": "2411.14377v1"
+        },
+        {
+          "title": "Euclid preparation. TBD. Galaxy power spectrum modelling in real space",
+          "year": "2023-12",
+          "abstract": "We investigate the accuracy of the perturbative galaxy bias expansion in view\nof the forthcoming analysis of the Euclid spectroscopic galaxy samples. We\ncompare the performance of an Eulerian galaxy bias expansion, using\nstate-of-art prescriptions from the effective field theory of large-scale\nstructure (EFTofLSS), against a hybrid approach based on Lagrangian\nperturbation theory and high-resolution simulations. These models are\nbenchmarked against comoving snapshots of the Flagship I N-body simulation at\n$z=(0.9,1.2,1.5,1.8)$, which have been populated with H$\\alpha$ galaxies\nleading to catalogues of millions of objects within a volume of about\n$58\\,h^{-3}\\,{\\rm Gpc}^3$. Our analysis suggests that both models can be used\nto provide a robust inference of the parameters $(h, \\omega_{\\rm c})$ in the\nredshift range under consideration, with comparable constraining power. We\nadditionally determine the range of validity of the EFTofLSS model in terms of\nscale cuts and model degrees of freedom. From these tests, it emerges that the\nstandard third-order Eulerian bias expansion can accurately describe the full\nshape of the real-space galaxy power spectrum up to the maximum wavenumber\n$k_{\\rm max}=0.45\\,h\\,{\\rm Mpc}^{-1}$, even with a measurement precision well\nbelow the percent level. In particular, this is true for a configuration with\nsix free nuisance parameters, including local and non-local bias parameters, a\nmatter counterterm, and a correction to the shot-noise contribution. Fixing\neither tidal bias parameters to physically-motivated relations still leads to\nunbiased cosmological constraints. We finally repeat our analysis assuming a\nvolume that matches the expected footprint of Euclid, but without considering\nobservational effects, as purity and completeness, showing that we can get\nconsistent cosmological constraints over this range of scales and redshifts.",
+          "arxiv_id": "2312.00679v1"
+        },
+        {
+          "title": "Accurate emulator for the redshift-space power spectrum of dark matter halos and its application to galaxy power spectrum",
+          "year": "2020-05",
+          "abstract": "An accurate theoretical template of the redshift-space galaxy power spectrum,\nif applicable out to nonlinear scales, enables us to extract more stringent and\nrobust constraints on cosmological parameters from the measured galaxy\nclustering. In this work, we develop a simulation-based template, so-called\nemulator, for the redshift-space power spectrum of dark matter halos. Using the\nredshift-space halo power spectra measured from the Dark Quest $N$-body\nsimulation suite that covers 101 flat-geometry $w$CDM cosmologies around the\nPlanck $\\Lambda$CDM model, we feed these data into a feed-forward neural\nnetwork to build the fast and accurate emulation of the power spectrum from the\nlinear to nonlinear scales up to $k \\simeq 0.6 \\,h \\,{\\rm Mpc}^{-1}$. Our\nemulator achieves about 1% and 5% fractional accuracies in predicting the\nmonopole and quadrupole moments of the power spectrum, respectively, for halos\nof $\\sim 10^{13}h^{-1}M_\\odot$ that correspond to host halos of the SDSS LOWZ-\nand CMASS-like galaxies, where the achieved accuracies are sufficient compared\nto the statistical errors of SDSS volume. The validation and performance of the\nemulator are given by the comparison of the emulator predictions with the power\nspectra directly measured from the simulations for validation sets that are not\nused in the training. We demonstrate that the emulator outputs can be used to\nmake model predictions for the redshift-space power spectrum of galaxies by\nemploying user-fed models for the halo-galaxy connection, such as the halo\noccupation distribution. The emulator allows us to easily incorporate the\nFinger-of-God effect due to the virial motions of galaxies and the\nAlcock-Paczy\\'{n}ski distortions. Our code can compute the redshift-space\ngalaxy power spectrum in a CPU subseconds and is ready to perform the\nemulator-based cosmological analysis for the exiting and upcoming galaxy\nredshift surveys.",
+          "arxiv_id": "2005.06122v2"
+        }
+      ],
+      "2": [
+        {
+          "title": "Recovering the CMB Signal with Machine Learning",
+          "year": "2022-04",
+          "abstract": "The cosmic microwave background (CMB), carrying the inhomogeneous information\nof the very early universe, is of great significance for understanding the\norigin and evolution of our universe. However, observational CMB maps contain\nserious foreground contaminations from several sources, such as galactic\nsynchrotron and thermal dust emissions. Here, we build a deep convolutional\nneural network (CNN) to recover the tiny CMB signal from various huge\nforeground contaminations. Focusing on the CMB temperature fluctuations, we\nfind that the CNN model can successfully recover the CMB temperature maps with\nhigh accuracy, and that the deviation of the recovered power spectrum $C_\\ell$\nis smaller than the cosmic variance at $\\ell>10$. We then apply this method to\nthe current Planck observation, and find that the recovered CMB is quite\nconsistent with that disclosed by the Planck collaboration, which indicates\nthat the CNN method can provide a promising approach to the component\nseparation of CMB observations. Furthermore, we test the CNN method with\nsimulated CMB polarization maps based on the CMB-S4 experiment. The result\nshows that both the EE and BB power spectra can be recovered with high\naccuracy. Therefore, this method will be helpful for the detection of\nprimordial gravitational waves in current and future CMB experiments. The CNN\nis designed to analyze two-dimensional images, thus this method is not only\nable to process full-sky maps, but also partial-sky maps. Therefore, it can\nalso be used for other similar experiments, such as radio surveys like the\nSquare Kilometer Array.",
+          "arxiv_id": "2204.01820v2"
+        },
+        {
+          "title": "Deep Needlet: A CNN based full sky component separation method in Needlet space",
+          "year": "2025-01",
+          "abstract": "One of the key steps in Cosmic Microwave Background (CMB) data analysis is\ncomponent separation to recover the CMB signal from multi-frequency\nobservations contaminated by foreground emissions. Needlet Internal Linear\nCombination (NILC) is one of the successful methods that applies the minimum\nvariance estimation technique to a set of needlet-filtered frequency maps to\nrecover CMB. In this work, we develop a deep convolutional neural network (CNN)\nmodel to recover CMB temperature map from needlet-filtered frequency maps over\nthe full sky. The network operates on a multi-resolution representation of\nspherical data, capturing localised features in both pixel and harmonic space,\nand is designed to preserve the rotational invariance of the CMB signal.\n  The network model is trained on realistic simulations at Planck frequencies,\nwhich include CMB temperature maps generated using cosmological parameters\nsampled within a 2$\\sigma$ standard deviation around the Planck best-fit\nvalues. We demonstrate the network performance for simulations that exhibit\ndifferent foreground complexities. The recovered CMB temperature map closely\nfollows the true signal with some residual leakage near the Galactic plane. The\nTT power spectrum is accurately reconstructed up to multipoles of approximately\n$\\ell\\sim 1100$. A minor residual systematics remain at smaller scales.\nCompared to the NILC method, the network shows reduced residual foreground\ncontamination in the recovered CMB map.\n  Once validated on the simulations, the network is applied to Planck PR3\nintensity data. The resulting CMB map is consistent with the CMB maps from the\nPlanck legacy products, including those produced using the NILC and SMICA\npipelines. This work demonstrates a powerful component separation method to\nclean spherical signal data from multi-resolution wavelet-filtered maps.",
+          "arxiv_id": "2501.07469v2"
+        },
+        {
+          "title": "Dust polarization spectral dependence from Planck HFI data. Turning point on CMB polarization foregrounds modelling",
+          "year": "2022-06",
+          "abstract": "The search for the primordial B-modes of the cosmic microwave background\n(CMB) relies on the separation from the brighter foreground dust signal. In\nthis context, the characterisation of the spectral energy distribution (SED) of\nthermal dust in polarization has become a critical subject of study. We present\na power-spectra analysis of Planck data, which improves on previous studies by\nusing the newly released SRoll2 maps that correct residual data systematics,\nand by extending the analysis to regions near the Galactic plane. Our analysis\nfocuses on the lowest multipoles between l=4 and 32, and three sky areas with\nsky fractions of fsky = 80%, 90%, and 97%. The mean dust SED for polarization\nand the 353 GHz Q and U maps are used to compute residual maps at 100, 143 and\n217 GHz, highlighting spatial variations of the dust polarization SED.\nResiduals are detected at the three frequencies for the three sky areas. We\nshow that models based on total intensity data are underestimating by a\nsignificant factor the complexity of dust polarized CMB foreground. Our\nanalysis emphasizes the need to include variations of polarization angles of\nthe dust polarized CMB foreground. The frequency dependence of the EE and BB\npower spectra of the residual maps yields further insight. We find that the\nmoments expansion to the first order of the modified black-body (MBB) spectrum\nprovides a good fit to the EE power-spectra. This result suggests that the\nresiduals could follow mainly from variations of dust MBB spectral parameters.\nHowever, this conclusion is challenged by cross-spectra showing that the\nresiduals maps at the three frequencies are not fully correlated, and the fact\nthat the BB power-spectra do not match the first order moment expansion of a\nMBB SED. This work sets new requirements for simulations of the dust polarized\nforeground and component separation methods (abridged)",
+          "arxiv_id": "2206.07671v3"
+        }
+      ],
+      "3": [
+        {
+          "title": "Exploring the cosmic 21-cm signal from the Epoch of Reionisation using the Wavelet Scattering Transform",
+          "year": "2022-04",
+          "abstract": "Detecting the cosmic 21-cm signal during the Epoch of Reionisation and Cosmic\nDawn will reveal insights into the properties of the first galaxies and advance\ncosmological parameter estimation. Until recently, the primary focus for\nastrophysical parameter inference from the 21-cm signal centred on the power\nspectrum (PS). However, the cosmic 21-cm signal is highly non-Gaussian\nrendering the PS sub-optimal for characterising the cosmic signal. In this\nwork, we introduce a new technique to analyse the non-Gaussian information in\nimages of the 21-cm signal called the Wavelet Scattering Transform (WST). This\napproach closely mirrors that of convolutional neural networks with the added\nadvantage of not requiring tuning or training of a neural network. Instead, it\ncompresses the 2D spatial information into a set of coefficients making it\neasier to interpret while also providing a robust statistical description of\nthe non-Gaussian information contained in the cosmic 21-cm signal. First, we\nexplore the application of the WST to mock 21-cm images to gain valuable\nphysical insights by comparing to the known behaviour from the 21-cm PS. Then\nwe quantitatively explore the WST applied to the 21-cm signal by extracting\nastrophysical parameter constraints using Fisher Matrices from a realistic 1000\nhr mock observation with the Square Kilometre Array. We find that: (i) the WST\napplied only to 2D images can outperform the 3D spherically averaged 21-cm PS,\n(ii) the excision of foreground contaminated modes can degrade the constraining\npower by a factor of ~1.5-2 with the WST and (iii) higher cadences between the\n21-cm images can further improve the constraining power.",
+          "arxiv_id": "2204.02544v1"
+        },
+        {
+          "title": "Classification of radio backgrounds at cosmic dawn and 21-cm signal confirmation using neural networks",
+          "year": "2024-10",
+          "abstract": "Several ongoing and upcoming radio telescopes aim to detect either the global\n21-cm signal or the 21-cm power spectrum. The extragalactic radio background,\nas detected by ARCADE-2 and LWA-1, suggests a strong radio background from\ncosmic dawn, which can significantly alter the cosmological 21-cm signal,\nenhancing both the global signal amplitude and the 21-cm power spectrum. In\nthis paper, we employ an artificial neural network (ANN) to check if there is a\nradio excess over the Cosmic Microwave Background (CMB) in mock data, and if\npresent, we classify its type into one of two categories, a background from\nhigh-redshift radio galaxies or a uniform exotic background from the early\nUniverse. Based on clean data (without observational noise), the ANN can\npredict the background radiation type with $96\\%$ accuracy for the power\nspectrum and $90\\%$ for the global signal. Although observational noise reduces\nthe accuracy, the results remain quite useful. We also apply ANNs to map the\nrelation between the 21-cm power spectrum and the global signal. By\nreconstructing the global signal using the 21-cm power spectrum, an ANN can\nestimate the global signal range consistent with an observed power spectrum\nfrom SKA-like experiments. Conversely, we show that an ANN can reconstruct the\n21-cm power spectrum over a wide range of redshifts and wavenumbers given the\nglobal signal over the same redshifts. Such trained networks can potentially\nserve as a valuable tool for cross-confirmation of the 21-cm signal.",
+          "arxiv_id": "2410.04792v2"
+        },
+        {
+          "title": "Mitigating incoherent excess variance in high-redshift 21-cm observations with multi-output cross Gaussian process regression",
+          "year": "2025-08",
+          "abstract": "Systematic effects that limit the achievable sensitivity of current\nlow-frequency radio telescopes to the 21-cm signal are among the foremost\nchallenges in observational 21-cm cosmology. The standard approach to\nretrieving the 21-cm signal from radio interferometric data separates it from\nbright astrophysical foregrounds by exploiting their spectrally smooth nature,\nin contrast to the finer spectral structure of the 21-cm signal. Contaminants\nexhibiting rapid frequency fluctuations, on the other hand, are difficult to\nseparate from the 21-cm signal using standard techniques, and the power from\nthese contaminants contributes to low-level systematics that can limit our\nability to detect the 21-cm signal. Many of these low-level systematics are\nincoherent across multiple nights of observation, resulting in an incoherent\nexcess variance above the thermal noise sensitivity of the instrument. In this\npaper, we develop a method called cross-GPR (cross covariance Gaussian process\nregression) that exploits the incoherence of these systematics to separate them\nfrom the 21-cm signal, which remains coherent across multiple nights of\nobservation. We first develop and demonstrate the technique on synthetic\nsignals in a general setting, and then apply it to gridded interferometric\nvisibility cubes. We perform realistic simulations of visibility cubes\ncontaining foregrounds, 21-cm signal, noise, and incoherent systematics. The\nsimulations show that the method can successfully separate and subtract\nincoherent contributions to the excess variance, and its advantages over\nstandard techniques become more evident when the spectral behavior of the\ncontaminants resembles that of the 21-cm signal. Simulations performed on a\nvariety of 21-cm signal shapes also reveal that the cross-GPR approach can\nsubtract incoherent contributions to the excess variance, without suppressing\nthe 21-cm signal.",
+          "arxiv_id": "2508.08235v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "It's Dust: Solving the Mysteries of the Intrinsic Scatter and Host-Galaxy Dependence of Standardized Type Ia Supernova Brightnesses",
+          "year": "2020-04",
+          "abstract": "The use of Type Ia Supernovae (SNe Ia) as cosmological tools has motivated\nsignificant effort to: understand what drives the intrinsic scatter of SN Ia\ndistance modulus residuals after standardization, characterize the distribution\nof SN Ia colors, and explain why properties of the host galaxies of the SNe\ncorrelate with SN Ia distance modulus residuals. We use a compiled sample of\n$\\sim1450$ spectroscopically confirmed, photometric light-curves of SN Ia and\npropose a solution to these three problems simultaneously that also explains an\nempirical 11$\\sigma$ detection of the dependence of Hubble residual scatter on\nSN Ia color. We introduce a physical model of color where intrinsic SN Ia\ncolors with a relatively weak correlation with luminosity are combined with\nextrinsic dust-like colors ($E(B-V)$) with a wide range of extinction parameter\nvalues ($R_V$). This model captures the observed trends of Hubble residual\nscatter and indicates that the dominant component of SN Ia intrinsic scatter is\nfrom variation in $R_V$. We also find that the recovered $E(B-V)$ and $R_V$\ndistributions differ based on global host-galaxy stellar mass and this explains\nthe observed correlation ($\\gamma$) between mass and Hubble residuals seen in\npast analyses as well as an observed 4.5$\\sigma$ dependence of $\\gamma$ on SN\nIa color. This finding removes any need to prescribe different intrinsic\nluminosities to different progenitor systems. Finally we measure biases in the\nequation-of-state of dark energy ($w$) up to $|\\Delta w|=0.04$ by replacing\nprevious models of SN color with our dust-based model; this bias is larger than\nany systematic uncertainty in previous SN Ia cosmological analyses.",
+          "arxiv_id": "2004.10206v2"
+        },
+        {
+          "title": "ZTF SN Ia DR2 follow-up: Exploring the origin of the Type Ia supernova host galaxy step through Si II velocities",
+          "year": "2025-09",
+          "abstract": "The relationship between Type Ia supernovae (SNe Ia) and their host galaxy\nstellar masses is well documented. In particular, Hubble residuals display a\nluminosity shift based on host mass, known as the mass step, which is often\nused as an extra correction in the standardisation of SN Ia luminosities. Here\nwe investigate Hubble residuals and the mass step in the context of Si II\n$\\lambda 6355$ velocities, using 277 near-peak SNe Ia from ZTF DR2. We divide\nthe sample into high-velocity (HV) and normal-velocity (NV) SNe Ia, separated\nat 12,000 km/s, resulting in 70 HV and 207 NV objects. We then examine links\nbetween Si II $\\lambda$6355 velocities, light-curve stretch $x_{1}$, colour\n$c$, and host properties to explore potential environmental and/or\nprogenitor-related effects. Although we only find a marginal difference between\nthe Hubble residuals of HV and NV SNe Ia, the NV mass step is $0.149 \\pm 0.024$\nmag ($6.3\\sigma$), while HV SNe Ia show $0.046 \\pm 0.041$ mag ($1.1\\sigma$),\nconsistent with zero. The NV-HV mass-step difference is $\\sim 2.2\\sigma$. The\nclearest subtype difference is seen in central regions ($d_{DLR} < 1$), where\nNV SNe Ia show a strong mass step but HV SNe Ia none, yielding a\n$3.1-3.6\\sigma$ difference. A host-colour step appears for both: NV $0.142 \\pm\n0.024$ mag ($5.9\\sigma$) and HV $0.158 \\pm 0.042$ mag ($3.8\\sigma$). Overall,\nNV and HV colour steps are consistent. HV SNe Ia show modest ($\\sim\n2.5$-$3\\sigma$) steps in outer regions ($d_{DLR} > 1$), while NV SNe show\nstronger environmental trends. Thus, NV SNe Ia appear more environmentally\nsensitive, especially in central, likely metal-rich and older regions, while HV\nSNe Ia show weaker, subset-dependent trends, and applying a universal mass-step\ncorrection could introduce biases. Refined classifications or\nenvironment-dependent factors may improve future cosmological analyses beyond\nstandard $x_{1}$ and $c$ cuts.",
+          "arxiv_id": "2509.02687v1"
+        },
+        {
+          "title": "The Hubble constant from two sibling Type Ia supernovae in the nearby galaxy NGC 4414: SN 1974G and SN 2021J",
+          "year": "2022-04",
+          "abstract": "Having two \"sibling\" Type Ia supernovae (SNe Ia) in the same galaxy offers\nadditional advantages in reducing a variety of systematic errors involved in\nestimating the Hubble constant, $H_{0}$. NGC 4414 is a nearby galaxy included\nin the Hubble Space Telescope Key Project to measure its distance using Cepheid\nvariables. It hosts two sibling SNe Ia: SN 2021J and SN 1974G. This provides\nthe opportunity to improve the precision of the previous estimate of $H_{0}$,\nwhich was based solely on SN 1974G. Here we present new optical $BVRI$\nphotometry obtained at the Observatorio de Sierra Nevada and complement it with\nSwift UVOT $UBV$ data, which cover the first 70 days of emission of SN 2021J. A\nfirst look at SN 2021J optical spectra obtained with the Gran Telescopio\nCanarias (GTC) reveals typical SN type Ia features. The main SN luminosity\nparameters for the two sibling SNe are obtained by using SNooPy, a light curve\nfitting code based on templates. Using a hierarchical bayesian approach, we\nbuild the Hubble diagram with a sample of 96 SNe Ia obtained from the Combined\nPantheon Sample in the redshift range $z = 0.02-0.075$, and calibrate the zero\npoint with the two sibling type-Ia SNe in NGC 4414. We report a value of the\nHubble constant $H_{0}$ $= 72.19 \\pm 2.32$ (stat.) $\\pm 3.42$ (syst.) km\ns$^{-1}$Mpc$^{-1}$. We expect a reduction of the systematic error after a new\nanalysis of the Cepheids period-luminosity relation using the upcoming Gaia DR4\nand additional Cepheids from the HST and JWST.",
+          "arxiv_id": "2204.10668v3"
+        }
+      ],
+      "5": [
+        {
+          "title": "On the Edge: the relation between stellar and dark matter haloes of Milky Way-mass galaxies",
+          "year": "2022-08",
+          "abstract": "We investigate the build-up of the accreted stellar and dark matter haloes of\nMilky Way-like galaxies in APOSTLE suite of cosmological hydrodynamics\nsimulations. We show that the stellar halo is made up primarily of stars\nstripped from a small number of massive dwarfs, most of which are disrupted by\nthe present day. The dark matter halo, on the other hand, is made up primarily\nof small unresolved subhaloes ($\\lesssim 10^6$ M$_{\\odot}$) and a ``smooth''\ncomponent consisting of particles which were never bound to a subhalo. Despite\nthese differences, the massive dwarfs that make up the majority of the stellar\nhalo also contribute a significant fraction of the dark matter. The stars and\ndark matter stripped from these dwarfs are related through their kinematics and\nthis leaves imprints in the phase-space structure of the haloes. We examine the\nrelation between the location of features, such as caustics, in the phase space\nof the stars and dark halo properties. We show that the ``edge'' of the stellar\nhalo is a probe of dark matter halo mass and assembly history. The edges of\nMilky Way-mass galaxies should be visible at a surface brightness of 31-36 mag\narcsec$^{-2}$.",
+          "arxiv_id": "2208.02266v2"
+        },
+        {
+          "title": "Modelling self-interacting dark matter substructures I: Calibration with N-body simulations of a Milky-Way-sized halo and its satellite",
+          "year": "2022-05",
+          "abstract": "We study evolution of single subhaloes with their masses of $\\sim10^9\nM_\\odot$ in a Milky-Way-sized host halo for self-interacting dark matter (SIDM)\nmodels. We perform dark-matter-only N-body simulations of dynamical evolution\nof individual subhaloes orbiting its host by varying self-scattering cross\nsections (including a velocity-dependent scenario), subhalo orbits, and\ninternal properties of the subhalo. We calibrate a gravothermal fluid model to\npredict time evolution in spherical mass density profiles of isolated SIDM\nhaloes with the simulations. We find that tidal effects of SIDM subhaloes can\nbe described with a framework developed for the case of collision-less cold\ndark matter (CDM), but a shorter typical time scale for the mass loss due to\ntidal stripping is required to explain our SIDM simulation results. As long as\nthe cross section is less than $\\sim10\\, \\mathrm{cm}^2/\\mathrm{g}$ and initial\nstates of subhaloes are set within a $2\\sigma$-level scatter at redshifts of\n$\\sim2$ predicted by the standard $\\Lambda$CDM cosmology, our simulations do\nnot exhibit a prominent feature of gravothermal collapse in the subhalo central\ndensity for 10 Gyr. We develop a semi-analytic model of SIDM subhaloes in a\ntime-evolving density core of the host with tidal stripping and self-scattering\nram pressure effects. Our semi-analytic approach provides a simple, efficient\nand physically-intuitive prediction of SIDM subhaloes, but further improvements\nare needed to account for baryonic effects in the host and the gravothermal\ninstability accelerated by tidal stripping effects.",
+          "arxiv_id": "2205.09920v2"
+        },
+        {
+          "title": "Matching the mass function of Milky Way satellites in competing dark matter models",
+          "year": "2022-09",
+          "abstract": "Any successful model of dark matter must explain the diversity of observed\nMilky Way (MW) satellite density profiles, from very dense ultrafaints to\nlarge, low density satellites such as Crater~II that appear to be larger their\nanticipated host dark matter haloes. We consider cold dark matter (CDM), warm\ndark matter (WDM, 3.3keV thermal relic power spectrum), and a self-interacting\ndark matter model (SIDM) that induces gravothermal collapse in low mass\nsubhaloes. Predictions for these density profiles are complicated by the\nlimitations of simulation resolution in the stripping of subhaloes by the MW\nsystem, therefore we make predictions for satellite properties in these three\nmodels using $N$-body simulations combined with a semi-analytic halo stripping\nalgorithm. We find that most CDM and WDM subhaloes of mass $>10^{8}$$M_{\\odot}$\nare large enough after stripping to fit most satellites; however, the required\namount of stripping often requires a stronger tidal field than is available on\nthe subhalo's orbit. The lower concentrations of WDM subhaloes enable this\nmodel to explain the required satellite masses with less stripping than is\nnecessary for CDM, and is thus consistent with orbits of larger pericentres.\nSIDM cores offer the best fits to massive, low density satellites at the\nexpense of predicting many $>10^{9}$$M_{\\odot}$ subhaloes to host low density\nsatellites with no observed analogue. We conclude that an SIDM model must have\na very high velocity-dependent cross-section in order to match all satellites,\nand that WDM offers a marginally better fit than CDM to the MW satellite mass\nfunction.",
+          "arxiv_id": "2209.06834v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "Dark Energy Survey Year 3 Results: Exploiting small-scale information with lensing shear ratios",
+          "year": "2021-05",
+          "abstract": "Using the first three years of data from the Dark Energy Survey, we use\nratios of small-scale galaxy-galaxy lensing measurements around the same lens\nsample to constrain source redshift uncertainties, intrinsic alignments and\nother nuisance parameters of our model. Instead of using a simple geometric\napproach for the ratios, we use the full modeling of the galaxy-galaxy lensing\nmeasurements, including the corresponding integration over the power spectrum\nand the contributions from intrinsic alignments and lens magnification. We\nperform extensive testing of the small-scale shear ratio (SR) modeling by\nstudying the impact of different effects such as the inclusion of baryonic\nphysics, non-linear biasing, halo occupation distribution descriptions and lens\nmagnification, among others, and using realistic $N$-body simulations. We\nvalidate the robustness of our constraints in the data by using two independent\nlens samples, and by deriving constraints using the corresponding large-scale\nratios for which the modeling is simpler. The DES Y3 results demonstrate how\nthe ratios provide significant improvements in constraining power for several\nnuisance parameters in our model, especially on source redshift calibration and\nintrinsic alignments (IA). For source redshifts, SR improves the constraints\nfrom the prior by up to 38\\% in some redshift bins. Such improvements, and\nespecially the constraints it provides on IA, translate to tighter cosmological\nconstraints when SR is combined with cosmic shear and other 2pt functions. In\nparticular, for the DES Y3 data, SR improves $S_8$ constraints from cosmic\nshear by up to 31\\%, and for the full combination of probes (3$\\times$2pt) by\nup to 10\\%. The shear ratios presented in this work are used as an additional\nlikelihood for cosmic shear, 2$\\times$2pt and the full 3$\\times$2pt in the\nfiducial DES Y3 cosmological analysis.",
+          "arxiv_id": "2105.13542v2"
+        },
+        {
+          "title": "Hyper Suprime-Cam Y3 results: photo-$z$ bias calibration with lensing shear ratios and cosmological constraints from cosmic shear",
+          "year": "2025-08",
+          "abstract": "We present an independent calibration of the photometric redshift (photo-$z$)\ndistributions for source galaxies in the HSC-Y3 weak lensing survey using\nsmall-scale galaxy-galaxy lensing. By measuring the tangential shear around\nspectroscopic lens galaxies from GAMA, SDSS, and DESI, divided into fifteen\nnarrow redshift bins, we compute shear ratios that are sensitive to the mean\nredshift of source galaxies. Using a blinded analysis, we derive constraints on\nthe photo-$z$ bias parameters in source bins 2, 3 and 4, achieving\nsignal-to-noise ratios of 59, 75, and 62, respectively. Our constraints for\n$\\Delta z_2$, $\\Delta z_3$ and $\\Delta z_4$ are consistent with those from\nHSC-Y3 cosmic shear modeling. We observe a mild shift in the $\\Delta\nz_3$-$\\Delta z_4$ plane due to the heterogeneous depth of the lens sample,\nwhich disappears when using only DESI-DR1 lenses. Combining shear-ratio\nmeasurements with cosmic shear data, we obtain joint constraints on\ncosmological parameters: $\\Omega_{\\rm m} = 0.286_{-0.074}^{+0.038}$ and $S_8 =\n0.760_{-0.145}^{+0.044}$, consistent with cosmic shear-only results. This work\ndemonstrates the utility of small-scale lensing as an independent probe for\ncalibrating photometric redshift bias in weak lensing cosmology.",
+          "arxiv_id": "2508.21681v2"
+        },
+        {
+          "title": "Cosmology with shear ratios: a joint study of weak lensing and spectroscopic redshift datasets",
+          "year": "2024-03",
+          "abstract": "The ratio of the average tangential shear signal of different weak lensing\nsource populations around the same lens galaxies, also known as a shear ratio,\nprovides an important test of lensing systematics and a potential source of\ncosmological information. In this paper we measure shear ratios in three\ncurrent weak lensing surveys -- KiDS, DES, and HSC -- using overlapping data\nfrom the Baryon Oscillation Spectroscopic Survey. We apply a Bayesian method to\nreduce bias in shear ratio measurement, and assess the degree to which shear\nratio information improves the determination of important astrophysical\nparameters describing the source redshift distributions and intrinsic galaxy\nalignments, as well as cosmological parameters, in comparison with cosmic shear\nand full 3x2-pt correlations (cosmic shear, galaxy-galaxy lensing, and galaxy\nclustering). We consider both Fisher matrix forecasts, as well as full\nlikelihood analyses of the data. We find that the addition of shear ratio\ninformation to cosmic shear allows the mean redshifts of the source samples and\nintrinsic alignment parameters to be determined significantly more accurately.\nAlthough the additional constraining power enabled by the shear ratio is less\nthan that obtained by introducing an accurate prior in the mean source redshift\nusing photometric redshift calibration, the shear ratio allows for a useful\ncross-check. The inclusion of shear ratio data consistently benefits the\ndetermination of cosmological parameters such as S_8, for which we obtain\nimprovements up to 34%. However these improvements are less significant when\nshear ratio is combined with the full 3x2-pt correlations. We conclude that\nshear ratio tests will remain a useful source of cosmological information and\ncross-checks for lensing systematics, whose application will be further\nenhanced by upcoming datasets such as the Dark Energy Spectroscopic Instrument.",
+          "arxiv_id": "2403.07313v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Cosmology Requirements on Supernova Photometric Redshift Systematics for Rubin LSST and Roman Space Telescope",
+          "year": "2020-11",
+          "abstract": "Some million Type Ia supernovae (SN) will be discovered and monitored during\nupcoming wide area time domain surveys such as the Vera C. Rubin Observatory\nLegacy Survey of Space and Time (LSST). For cosmological use, accurate\nredshifts are needed among other characteristics; however the vast majority of\nthe SN will not have spectroscopic redshifts, even for their host galaxies,\nonly photometric redshifts. We assess the redshift systematic control necessary\nfor robust cosmology. Based on the photometric vs true redshift relation\ngenerated by machine learning applied to a simulation of 500,000 galaxies as\nobserved with LSST quality, we quantify requirements on systematics in the mean\nrelation and in the outlier fraction and deviance so as not to bias dark energy\ncosmological inference. Certain redshift ranges are particularly sensitive,\nmotivating spectroscopic followup of SN at $z\\lesssim0.2$ and around\n$z\\approx0.5$-0.6. Including Nancy Grace Roman Space Telescope near infrared\nbands in the simulation, we reanalyze the constraints, finding improvements at\nhigh redshift but little at the low redshifts where systematics lead to strong\ncosmology bias. We identify a complete spectroscopic survey of SN host galaxies\nfor $z\\lesssim0.2$ as a highly favored element for robust SN cosmology.",
+          "arxiv_id": "2011.08206v2"
+        },
+        {
+          "title": "Machine learning analysis of Photometric data from the Dark Energy Survey",
+          "year": "2025-08",
+          "abstract": "In order to retrieve cosmological parameters from photometric surveys, we\nneed to estimate the distribution of the photometric redshift in the sky with\nexcellent accuracy. We use and apply three different machine learning methods\nto publicly available Dark Energy Survey data release 2 (DR2): a) Artificial\nNeural Network for photometric redshifts (ANNz2); b) Gaussian processes for\nphotometric redshifts (GPz); and c) Keras, a deep learning application\nprogramming interface in Python. We compare these different techniques applied\nto training data obtained from the VIPERS survey. To deal with the\nincompleteness of the VIPERS catalogue, we use a space-partitioning data\nstructure (K-d Tree) to estimate the reliability of the obtained photometric\nredshifts. We build a catalogue which is robust to the lack of training data in\ncertain regions of colour space. We use the photometric data to create maps of\noverdensity as a function of the redshift distribution for more than 500\nmillion galaxies. These maps split the sky into several onion-like redshift\nslices, which can be readily used for cosmological parameter estimation. On\neach angular slice, we create and present maps of the angular distribution of\ngalaxies in that slice as well as an estimate of the redshift distribution,\n$n(z)$, related to the galaxy distribution of that slice, which is recovered\nfrom the redshift estimation methods. We achieve a sub-sample of DES galaxies,\nwhich are well matched to the VIPERS sample with an accuracy of the photometric\nredshifts with a $\\sigma_{68}\\sim0.035$ and a catastrophic outlier rate of the\norder of 3 per cent.",
+          "arxiv_id": "2508.10191v1"
+        },
+        {
+          "title": "The PAU Survey & Euclid: Improving broad-band photometric redshifts with multi-task learning",
+          "year": "2022-09",
+          "abstract": "Current and future imaging surveys require photometric redshifts (photo-zs)\nto be estimated for millions of galaxies. Improving the photo-z quality is a\nmajor challenge but is needed to advance our understanding of cosmology. In\nthis paper we explore how the synergies between narrow-band photometric data\nand large imaging surveys can be exploited to improve broadband photometric\nredshifts. We used a multi-task learning (MTL) network to improve broadband\nphoto-z estimates by simultaneously predicting the broadband photo-z and the\nnarrow-band photometry from the broadband photometry. The narrow-band\nphotometry is only required in the training field, which also enables better\nphoto-z predictions for the galaxies without narrow-band photometry in the wide\nfield. This technique was tested with data from the Physics of the Accelerating\nUniverse Survey (PAUS) in the COSMOS field. We find that the method predicts\nphoto-zs that are 13% more precise down to magnitude i_{AB} < 23; the outlier\nrate is also 40% lower when compared to the baseline network.\n  Furthermore, MTL reduces the photo-z bias for high-redshift galaxies,\nimproving the redshift distributions for tomographic bins with z>1. Applying\nthis technique to deeper samples is crucial for future surveys such as \\Euclid\nor LSST. For simulated data, training on a sample with i_{AB} <23, the method\nreduces the photo-z scatter by 16% for all galaxies with i_{AB}<25. We also\nstudied the effects of extending the training sample with photometric galaxies\nusing PAUS high-precision photo-zs, which reduces the photo-z scatter by 20% in\nthe COSMOS field.",
+          "arxiv_id": "2209.10161v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "Dark-ages Reionization and Galaxy Formation Simulation XX. The Ly$α$ IGM transmission properties and environment of bright galaxies during the Epoch of Reionization",
+          "year": "2021-08",
+          "abstract": "The highly neutral inter-galactic medium (IGM) during the Epoch of\nReionization (EoR) is expected to suppress Ly$\\alpha$ emission with\ndamping-wing absorption, causing nearly no Ly$\\alpha$ detection from\nstar-forming galaxies at $z{\\sim}8$. However, spectroscopic observations of the\n4 brightest galaxies (${\\rm H}_{160}{\\sim}25$ mag) at these redshifts do reveal\nprominent Ly$\\alpha$ line, suggesting locally ionised IGM. In this paper, we\nexplore the Ly$\\alpha$ IGM transmission and environment of bright galaxies\nduring the EoR using the Meraxes semi-analytic model. We find brighter galaxies\nto be less affected by damping-wing absorption as they are effective at\nionizing surrounding neutral hydrogen. Specifically, the brightest sources\n(${\\rm H}_{160}{\\lesssim}25.5$ mag) lie in the largest ionized regions in our\nsimulation, and have low attenuation of their Ly$\\alpha$ from the IGM (optical\ndepth ${<}1$). Fainter galaxies (25.5 mag${<}{\\rm H}_{160}{<}27.5$ mag) have\ntransmission that depends on UV luminosity, leading to a lower incidence of\nLy$\\alpha$ detection at fainter magnitudes. This luminosity-dependent\nattenuation explains why Ly$\\alpha$ has only been observed in the brightest\ngalaxies at $z{\\sim}8$. Follow-up observations have revealed counterparts in\nthe vicinity of these confirmed $z{\\sim}8$ Ly$\\alpha$ emitters. The\nenvironments of our modelled analogues agree with these observations in the\nnumber of nearby galaxies, which is a good indicator of whether Ly$\\alpha$ can\nbe detected among fainter galaxies. At the current observational limit,\ngalaxies with ${\\ge}2$--5 neighbours within $2'{\\times}2'$ are ${\\sim}2$--3\ntimes more likely to show Ly$\\alpha$ emission. JWST will discover an order of\nmagnitude more neighbours, revealing ${\\gtrsim}50$ galaxies in the largest\nionizing bubbles and facilitating direct study of reionization morphology.",
+          "arxiv_id": "2108.03675v1"
+        },
+        {
+          "title": "The Evolution of the Lyman-Alpha Luminosity Function During Reionization",
+          "year": "2021-01",
+          "abstract": "The time frame in which hydrogen reionization occurred is highly uncertain,\nbut can be constrained by observations of Lyman-alpha (Ly$\\alpha$) emission\nfrom distant sources. Neutral hydrogen in the intergalactic medium (IGM)\nattenuates Ly$\\alpha$~photons emitted by galaxies. As reionization progressed\nthe IGM opacity decreased, increasing Ly$\\alpha$~visibility. The galaxy\nLy$\\alpha$~luminosity function (LF) is thus a useful tool to constrain the\ntimeline of reionization. In this work, we model the Ly$\\alpha$~LF as a\nfunction of redshift, $z=5-10$, and average IGM neutral hydrogen fraction,\n$\\overline{x}_\\textsc{hi}$. We combine the Ly$\\alpha$~luminosity probability\ndistribution obtained from inhomogeneous reionization simulations with a model\nfor the UV LF to model the Ly$\\alpha$~LF. As the neutral fraction increases,\nthe average number density of Ly$\\alpha$~emitting galaxies decreases, and are\nless luminous, though for $\\overline{x}_\\textsc{hi} \\lesssim 0.4$ there is only\na small decrease of the Ly$\\alpha$~LF. We use our model to infer the IGM\nneutral fraction at $z=6.6, 7.0, 7.3$ from observed Ly$\\alpha$~LFs. We conclude\nthat there is a significant increase in the neutral fraction with increasing\nredshift: $\\overline{x}_\\textsc{hi}(z=6.6)=0.08^{+ 0.08}_{- 0.05}, \\,\n\\overline{x}_\\textsc{hi}(z=7.0)=0.28 \\pm 0.05$ and\n$\\overline{x}_\\textsc{hi}(z=7.3)=0.83^{+ 0.06}_{- 0.07}$. We predict trends in\nthe Ly$\\alpha$~luminosity density and Schechter parameters as a function of\nredshift and the neutral fraction. We find that the Ly$\\alpha$~luminosity\ndensity decreases as the universe becomes more neutral. Furthermore, as the\nneutral fraction increases, the faint-end slope of the Ly$\\alpha$~LF steepens,\nand the characteristic Ly$\\alpha$~luminosity shifts to lower values, concluding\nthat the evolving shape of the Ly$\\alpha$~LF -- not just its integral -- is an\nimportant tool to study reionization.",
+          "arxiv_id": "2101.01205v3"
+        },
+        {
+          "title": "Radiative Transfer Simulations of Ly$α$ Intensity Mapping During Cosmic Reionization Including Sources from Galaxies and the Intergalactic Medium",
+          "year": "2025-02",
+          "abstract": "We present new simulations of Lyman-$\\alpha$ (Ly$\\alpha$) intensity maps that\ninclude Ly$\\alpha$ radiative transfer in the intergalactic medium (IGM) and all\nsignificant sources of Ly$\\alpha$ photons. The sources considered include\nLy$\\alpha$ directly from galaxies, cooling at the edges of ionized bubbles,\nrecombinations within these bubbles, and reprocessing of galaxy continuum\nemission in the IGM. We also vary astrophysical parameters including the\naverage neutral fraction of the IGM, the dust absorption of Ly$\\alpha$ in\ngalaxies, and the ionizing escape fraction. Previous work has suggested that\nLy$\\alpha$ intensity mapping can be used to constrain the neutral fraction of\nthe IGM when accounting for radiative transfer in the IGM. When radiative\ntransfer is ignored, direct Ly$\\alpha$ emission from galaxies has the highest\namplitude of power on all scales. When we include radiative transfer in our\nsimulations, we find continuum emission reprocessed as Ly$\\alpha$ is comparable\nto the Ly$\\alpha$ emission directly from galaxies on large scales. For high\nneutral fraction in the IGM, emission from recombinations is comparable to\ngalaxies on large scales. We find that the slope of the power spectrum is\nsensitive to the neutral fraction of the IGM when radiative transfer is\nincluded, suggesting that this may be useful for placing constraints on cosmic\nreionization. In addition, we find the power of galaxies is decreased across\nall scales due to dust absorption. We also find the escape fraction must be\nlarge for recombinations and bubble edges to contribute significantly to the\npower. We find the cross power is observable between SPHEREx Ly$\\alpha$\nintensity maps and a hypothetical galaxy survey is observable with a total\nsignal-to-noise of 4 from $k = 0.035$ Mpc$^{-1}$ to $k = 1$ Mpc$^{-1}$.",
+          "arxiv_id": "2502.18654v3"
+        }
+      ],
+      "9": [
+        {
+          "title": "The gas and stellar content of a metal-poor galaxy at $z=8.496$ as revealed by JWST and ALMA",
+          "year": "2022-12",
+          "abstract": "We present a joint analysis of the galaxy S04590 at $z=8.496$ based on\nNIRSpec, NIRCam, and NIRISS observations obtained through as part of Early\nRelease Observations programme of the James Webb Space Telescope (JWST) and the\nfar-infrared [CII]-$158\\mu$m emission line detected by dedicated Atacama Large\nMillimeter/submillimeter Array (ALMA) observations. We determine the physical\nproperties of S04590 from modelling of the spectral energy distribution (SED)\nand through the redshifted optical nebular emission lines detected with\nJWST/NIRSpec. The best-fit SED model reveals a low-mass ($M_\\star =\n10^{7.2}-10^{8}\\,M_{\\odot}$) galaxy with a low oxygen abundance of $12+\\log{\\rm\n(O/H)} = 7.16^{+0.10}_{-0.12}$ derived from the strong nebular and auroral\nemission lines. Assuming that [CII] effectively traces the interstellar medium\n(ISM), we estimate the total gas mass of the galaxy to be $M_{\\rm gas} =\n(8.0\\pm 4.0)\\times 10^{8}\\,M_\\odot$ based on the luminosity and spatial extent\nof [CII]. This yields an exceptionally high gas fraction, $f_{\\rm gas} = M_{\\rm\ngas}/(M_{\\rm gas} + M_\\star) \\gtrsim 90\\%$, though still consistent within the\nrange expected for its low metallicity. We further derive the metal mass of the\ngalaxy based on the gas mass and gas-phase metallicity, which we find to be\nconsistent with the expected metal production from Type II supernovae. Finally,\nwe make the first constraints on the dust-to-gas (DTG) and dust-to-metals (DTM)\nratios of galaxies in the epoch of reionization at $z\\gtrsim 6$, showing\noverall low mass ratios of logDGT $<-3.8$ and logDTM $<-0.5$, though consistent\nwith local scaling relations and in particular the local metal-poor galaxy I\nZwicky 18. Our analysis highlights the synergy between ALMA and JWST in\ncharacterizing the gas, metal, and stellar content of the first generation of\ngalaxies.",
+          "arxiv_id": "2212.06877v3"
+        },
+        {
+          "title": "An ALMA Spectroscopic Survey of the Brightest Submillimeter Galaxies in the SCUBA-2-COSMOS Field (AS2COSPEC): Physical Properties of z=2-5 Ultra- and Hyperluminous Infrared Galaxies",
+          "year": "2023-11",
+          "abstract": "We report physical properties of the brightest ($S_{870\\,\\mu \\rm\nm}=12.4$-$19.2\\,$mJy) and not strongly lensed 18 870$\\,\\mu$m selected dusty\nstar-forming galaxies (DSFGs), also known as submillimeter galaxies (SMGs), in\nthe COSMOS field. This sample is part of an ALMA band$\\,$3 spectroscopic survey\n(AS2COSPEC), and spectroscopic redshifts are measured in 17 of them at\n$z=2$-$5$. We perform spectral energy distribution analyses and deduce a median\ntotal infrared luminosity of $L_{\\rm IR}=(1.3\\pm0.1)\\times10^{13}\\,L_{\\odot}$,\ninfrared-based star-formation rate of ${\\rm SFR}_{\\rm\nIR}=1390\\pm150~M_{\\odot}\\,\\rm yr^{-1}$, stellar mass of\n$M_\\ast=(1.4\\pm0.6)\\times10^{11}\\,M_\\odot$, dust mass of $M_{\\rm\ndust}=(3.7\\pm0.5)\\times10^9\\,M_\\odot$, and molecular gas mass of $M_{\\rm gas}=\n(\\alpha_{\\rm CO}/0.8)(1.2\\pm0.1)\\times10^{11}\\,M_\\odot$, suggesting that they\nare one of the most massive, ISM-enriched, and actively star-forming systems at\n$z=2$-$5$. In addition, compared to less massive and less active galaxies at\nsimilar epochs, SMGs have comparable gas fractions; however, they have much\nshorter depletion time, possibly caused by more active dynamical interactions.\nWe determine a median dust emissivity index of $\\beta=2.1\\pm0.1$ for our\nsample, and by combining our results with those from other DSFG samples, we\nfind no correlation of $\\beta$ with redshift or infrared luminosity, indicating\nsimilar dust grain compositions across cosmic time for infrared luminous\ngalaxies. We also find that AS2COSPEC SMGs have one of the highest\ndust-to-stellar mass ratios, with a median of $0.02\\pm0.01$, significantly\nhigher than model predictions, possibly due to too strong of a AGN feedback\nimplemented in the model. Finally, our complete and uniform survey enables us\nto put constraints on the most massive end of the dust and molecular gas mass\nfunctions.",
+          "arxiv_id": "2311.17417v3"
+        },
+        {
+          "title": "Uncovering the physical origin of the prominent Lyman-$α$ emission and absorption in GS9422 at $z = 5.943$",
+          "year": "2024-04",
+          "abstract": "We present a comprehensive spectro-photometric analysis of the galaxy GS9422\nfrom the JADES GTO survey located at $z=5.943$, anomalously showing a\nsimultaneous strong Ly$\\alpha$ emission feature and damped Ly$\\alpha$\nabsorption (DLA), based on JWST NIRSpec and NIRCam observations. The best-fit\nmodelling of the spectral energy distribution (SED) reveals a young, low-mass\n(${\\rm log}(M_\\star/M_{\\odot}) = 7.8 \\pm 0.01$) galaxy, with a mass-weighted\nmean age of the stellar population of $(10.9^{+0.07}_{-0.12})\\,$Myr. The\nidentified strong nebular emission lines suggest a highly ionized ($O_{32} =\n59$), low-metallicity ($12+\\log({\\rm O/H}) = 7.78\\pm 0.10$) star-forming galaxy\nwith a star-formation rate SFR = ($8.2 \\pm 2.8$) $\\rm M_{\\odot}\\;yr^{-1}$ over\na compact surface area $A_e = 1.85$ kpc$^{2}$, typical for galaxies at this\nepoch. We carefully model the rest-frame UV NIRSpec Prism spectrum around the\nLy$\\alpha$ edge, finding that the Ly$\\alpha$ emission-line redshift is\nconsistent with the longer-wavelength recombination lines and an escape\nfraction of $f_{\\rm esc,Ly\\alpha} = 30\\%$ but that the broad DLA feature is not\nable to converge on the same redshift. Instead, our modelling suggests $z_{\\rm\nabs}= 5.40 \\pm 0.10$, the exact redshift of a newly identified proto-cluster in\nnearby projection to the target galaxy. We argue that most of the HI gas\nproducing the strong Ly$\\alpha$ damping wing indeed has to be unassociated with\nthe galaxy itself, and thus may indicate that we are probing the cold, dense\ncircumcluster medium of this massive galaxy overdensity. These results provide\nan alternative solution to the recent claims of continuum nebular emission or\nan obscured active galactic nucleus dominating the rest-frame UV parts of the\nspectrum and provide further indications that strong DLAs might preferentially\nbe associated with galaxy overdensities. [Abridged]",
+          "arxiv_id": "2404.06543v1"
+        }
+      ],
+      "10": [
+        {
+          "title": "Particle re-acceleration and diffuse radio sources in the galaxy cluster Abell 1550",
+          "year": "2022-05",
+          "abstract": "We study diffuse radio emission in the galaxy cluster A1550, with the aim of\nconstraining particle re-acceleration in the intra-cluster medium. We exploit\nobservations at four different frequencies: 54, 144, 400 and 1400 MHz. To\ncomplement our analysis, we make use of archival Chandra X-ray data. At all\nfrequencies we detect an ultra-steep spectrum radio halo ($S_\\nu \\propto\n\\nu^{-1.6}$) with an extent of 1.2 Mpc at 54 MHz. Its morphology follows the\ndistribution of the thermal intra-cluster medium inferred from the Chandra\nobservation. West of the centrally located head-tail radio galaxy, we detect a\nradio relic with projected extent of 500 kpc. From the relic, a 600 kpc long\nbridge departs and connect it to the halo. Between the relic and the radio\ngalaxy, we observe what is most likely a radio phoenix, given its curved\nspectrum. The phoenix is connected to the tail of the radio galaxy through two\narms, which show a nearly constant spectral index for 300 kpc. The halo could\nbe produced by turbulence induced by a major merger, with its axis lying in the\nNE-SW direction. This is supported by the position of the relic, whose origin\ncould be attributed to a shock propagating along the merger axis. It is\npossible that the same shock has also produced the phoenix through adiabatic\ncompression, while the bridge could be generated by electrons which were\npre-accelerated by the shock, and then re-accelerated by turbulence. Finally,\nwe detect hints of gentle re-energisation in the two arms which depart from the\ntail of the radio galaxy.",
+          "arxiv_id": "2205.12281v1"
+        },
+        {
+          "title": "MeerKAT discovery of GHz radio emission extending from Abell 3017 toward Abell 3016",
+          "year": "2024-11",
+          "abstract": "Context: The clusters Abell 3017 and Abell 3016 are located within a\nlarge-scale filament. A prominent X-ray bridge has been detected connecting the\ntwo clusters and a potential galaxy group between them. Aims: The aim of this\nwork is to investigate the existence of a radio bridge in the filament between\nAbell 3017 and Abell 3016, to explore other diffuse radio structures within\nthis system, and to investigate the origins of these diffuse radio emission.\nMethods: We analyzed MeerKAT L-band data to study the morphology and spectra of\nthe diffuse radio structures in Abell 3016-Abell 3017. X-ray imaging and\nspectral analysis were carried out with archival Chandra and XMM-Newton data.\nAdditionally, correlations between radio ($I_R$) and X-ray surface brightness\n($I_X$) were generated to explore the connections between thermal and\nnon-thermal components in the diffuse radio emission. Results: We detected a\nfaint radio bridge with an average surface brightness of $\\sim 0.1~\\mu\\rm\nJy~arcsec^{-2}$ at 1280 MHz using MeerKAT. It connects Abell 3017 with a\npotential galaxy group and extends towards Abell 3016, aligning with the X-ray\nbridge. A high X-ray temperature of $7.09 \\pm 0.54$ keV detected in the bridge\nregion suggests an interaction between Abell 3017 and the group. In Abell 3017,\nwe identified two distinct components of diffuse radio emission: a radio\nmini-halo and an outer radio halo with a northern extension (N-extension\nhereafter). The radio surface brightness profile of Abell 3017 shows a steep\ninner component consistent with other mini-halos, and a faint outer component\nlikely linked to an infalling subcluster. The $I_{\\rm R}-I_{\\rm X}$ diagram\nindicates superlinear and sublinear correlations for the mini-halo and\nN-extension, respectively.",
+          "arxiv_id": "2412.00204v2"
+        },
+        {
+          "title": "Optical/X-ray/radio view of Abell 1213: A galaxy cluster with anomalous diffuse radio emission",
+          "year": "2023-03",
+          "abstract": "Context. Abell 1213, a low-richness galaxy system, is known to host an\nanomalous radio halo detected in data of the VLA. It is an outlier with regard\nto the relation between the radio halo power and the X-ray luminosity of the\nparent clusters. Aims. Our aim is to analyze the cluster in the optical, X-ray,\nand radio bands to characterize the environment of its diffuse radio emission\nand to shed new light on its nature. Methods. We used optical data from the\nSDSS to study the internal dynamics of the cluster. We also analyzed archival\nXMM-Newton X-ray data to unveil the properties of its hot intracluster medium.\nFinally, we used recent data from LOFAR at 144 MHz, together with VLA data at\n1.4 GHz, to study the spectral behavior of the diffuse radio source. Results.\nBoth our optical and X-ray analysis reveal that this low-mass cluster exhibits\ndisturbed dynamics. In fact, it is composed of several galaxy groups in the\nperipheral regions and, in particular, in the core, where we find evidence of\nsubstructures oriented in the NE-SW direction, with hints of a merger nearly\nalong the line of sight. The analysis of the X-ray emission adds further\nevidence that the cluster is in an unrelaxed dynamical state. At radio\nwavelengths, the LOFAR data show that the diffuse emission is ~510 kpc in size.\nMoreover, there are hints of low-surface-brightness emission permeating the\ncluster center. Conclusions. The environment of the diffuse radio emission is\nnot what we would expect for a classical halo. The spectral index map of the\nradio source is compatible with a relic interpretation, possibly due to a\nmerger in the N-S or NE-SW directions, in agreement with the substructures\ndetected through the optical analysis. The fragmented, diffuse radio emissions\nat the cluster center could be attributed to the surface brightness peaks of a\nfaint central radio halo.",
+          "arxiv_id": "2303.02528v2"
+        }
+      ],
+      "11": [
+        {
+          "title": "Analytical approach to core-halo structure of fuzzy dark matter",
+          "year": "2022-08",
+          "abstract": "Ultralight bosonic dark matter called fuzzy dark matter (FDM) has attracted\nmuch attention as an alternative to the cold dark matter. An intriguing feature\nof the FDM model is the presence of a soliton core, a stable dense core formed\nat the center of halos. In this paper, we analytically study the dependence of\nthe soliton core properties on the halo characteristics by solving\napproximately the Schr\\\"odinger-Poisson equation. Focusing on the ground-state\neigenfunction, we derive a key expression for the soliton core radius, from\nwhich we obtain the core-halo mass relations similar to those found in the\nearly numerical work, but involving the factor dependent crucially on the halo\nconcentration and cosmological parameters. Based on the new relations, we find\nthat for a given cosmology, (i) there exist a theoretical bound on the radius\nand mass of soliton core for each halo mass (ii) incorporating the\nconcentration-halo mass (C-M) relation into the predictions, the core-halo\nrelations generally exhibit a non power-law behavior, and with the C-M relation\nsuppressed at the low-mass scales, relevant to the FDM model, predictions tend\nto match the simulations well (iii) the scatter in the C-M relation produces a\nsizable dispersion in the core-halo relations, and can explain the results\nobtained from cosmological simulations. Finally, the validity of our analytical\ntreatment are critically examined. A perturbative estimation suggests that the\nprediction of the core-halo relations is valid over a wide range of parameter\nspace, and the impact of the approximation invoked in the analytical\ncalculations is small, although it is not entirely negligible.",
+          "arxiv_id": "2208.06562v3"
+        },
+        {
+          "title": "Soliton self-gravity and core-halo relation in fuzzy dark matter halos",
+          "year": "2024-11",
+          "abstract": "Fuzzy dark matter (FDM) is an attractive dark matter candidate composed of\nultralight particles. In this paper, toward a clear understanding of the\ncore-halo relation in the FDM halos, we consider a simple model of the\nsoliton-halo system, in which the self-gravitating soliton core is formed in\nthe presence of Navarro-Frenk-White (NFW) halo potential as an external field.\nSolving numerically the Schr\\\"odinger-Poisson equation, the self-gravitating\nsoliton is obtained as a ground-state solution, which is characterized by the\ntwo key parameters, i.e., size of soliton core and its strength of self-gravity\nrelative to those of the NFW halo. Using our soliton-halo model, we investigate\nthe properties of soliton cores found in cosmological simulation, and the key\nparameters characterizing these solitons are reconstructed in a self-consistent\nmanner. Results suggest that (1) the soliton core properties depend critically\non both the self-gravity of the soliton and the external potential of the host\nhalo, and (2) the scatter observed in the core-halo relation cannot be\nexplained solely by the one in the halo's concentration-mass relation, as\npreviously suggested, but also significantly influenced by intrinsic features\nof the soliton core, potentially arising from local dynamics at the halo\ncenter. We also demonstrate that the FDM mass can be reconstructed from the\nsimulation data characterizing the halo density profile, providing a basis for\napplying the model to observational studies.",
+          "arxiv_id": "2411.14614v1"
+        },
+        {
+          "title": "Solitons in the dark: non-linear structure formation with fuzzy dark matter",
+          "year": "2020-07",
+          "abstract": "We present the results of a full cosmological simulation with the new code\nSCALAR, where dark matter is in form of fuzzy dark matter, described by a light\nscalar field with a mass of $m_{\\rm B} = 2.5 \\times 10^{-22}$ eV and evolving\naccording to the Schr\\\"{o}dinger-Poisson system of equations. In comoving\nunits, the simulation volume is $2.5 ~ h^{-1} {\\rm Mpc}$ on a side, with a\nresolution of $20~h^{-1}{\\rm pc}$ at the finest refinement level. We analyse\nthe formation and the evolution of central solitonic cores, which are found to\nleave their imprints on dark matter density profiles, resulting in shallower\ncentral densities, and on rotation curves, producing an additional circular\nvelocity peak at small radii from the center. We find that the suppression of\nstructures due to the quantum nature of the scalar field results in an\nshallower halo mass function in the low-mass end compared to the case of a\n$\\Lambda$CDM simulation, in which dark matter is expected to cluster at all\nmass scales even if evolved with the same initial conditions used for fuzzy\ndark matter. Furthermore, we verify the scaling relations characterising the\nsolution to the Schr\\\"{o}dinger-Poisson system, for both isolated and merging\nhalos, and we find that they are preserved by merging processes. We\ncharacterise each fuzzy dark matter halo in terms of the dimensionless quantity\n$\\Xi \\propto \\left | E_{\\rm halo} \\right |/M_{\\rm halo}^3$ and we show that the\ncore mass is tightly linked to the halo mass by the core-halo mass relation\n$M_{\\rm core}/M_{\\rm halo} \\propto \\Xi^{1/3}$. We also show that the core\nsurface density of the simulated fuzzy dark matter halos does not follow the\nscaling with the core radius as observed for dwarf galaxies, representing a big\nchallenge for the fuzzy dark matter model as the sole explanation of core\nformation.",
+          "arxiv_id": "2007.04119v1"
+        }
+      ],
+      "12": [
+        {
+          "title": "Beyond the first galaxies primordial black holes shine",
+          "year": "2025-03",
+          "abstract": "The presence of nine candidate galaxies at $z=17$ and $z=25$ discovered by\nthe James Webb Space Telescope in relatively small sky areas, if confirmed, is\nvirtually impossible to reconcile with the predictions of the current galaxy\nformation model. We show here that the implied UV luminosity density can be\nproduced by a population of primordial black holes (PBHs) of mass $M_{\\rm PBH}\n= 10^{4-5} \\, M_{\\odot}$ residing in low-mass halos ($M_h \\approx 10^{7} \\,\nM_{\\odot}$), and accreting at a moderate fraction of the Eddington luminosity,\n$\\lambda_E \\simeq 0.36$. These sources precede the first significant episodes\nof cosmic star formation. At later times, as star formation is ignited, PBH\nemission becomes comparable to, or subdominant with respect to, the galactic\nemission. This PBH+galaxy scenario reconciles the evolution of the UV\nluminosity function (LF) from $z=25$ to $z=11$. If ultra-early sources are\npowered purely by accretion, this strongly disfavours seed production\nmechanisms requiring the presence of stars (massive stars, Pop III stars, or\nclusters), or their UV radiation (direct collapse BHs), leaving PBHs as the\nonly alternative solution available so far. Alternative explanations, such as\nisolated, large clusters ($\\approx 10^7 \\,M_{\\odot}$) of massive ($m_\\star\n=10^3 M_{\\odot}$) Pop III stars are marginally viable, but require extreme and\nunlikely conditions that can be probed via UV and far-infrared (FIR) emission\nlines or gravitational waves.",
+          "arxiv_id": "2503.18850v2"
+        },
+        {
+          "title": "Exploring a primordial solution for early black holes detected with the JWST",
+          "year": "2024-07",
+          "abstract": "The James Webb Space Telescope (JWST) has unearthed black holes as massive as\n$10^{6.2-8.1}M_\\odot$ at redshifts of $z \\sim 8.5-10.6$ with many systems\nshowing unexpectedly high black hole to stellar mass ratios >=30%, posing a\ncrucial challenge for theoretical models. Using analytic calculations, we\nexplore the combination of {\\it astrophysical} seeding mechanisms and Eddington\naccretion rates that can explain the observed objects. We then appeal to {\\it\ncosmological} primordial black hole (PBH) seeds and show how these present an\nalternative path for \"seeding\" early structures and their baryonic contents.\nAssuming seeding (via astrophysical means) at a redshift of $z_{\\rm seed}=25$\nand continuous accretion, all of the black holes studied here can either be\nexplained through super-Eddington accretion (at an Eddington fraction of\n$f_{\\rm Edd}<= 2.1 $) onto low-mass ($100M_\\odot$) seeds or Eddington-limited\naccretion onto high-mass ($10^5 M_\\odot$) seeds. The upper limit, where we\nassume a primordial origin for all of these black holes, yields a continuous\nprimordial black hole mass function (between $10^{-5.25}$ and $10^{3.75}\nM_\\odot$) and a fractional PBH value $<= 10^{-12}$, in good agreement with\nobservational constraints. Starting at the redshift of matter-radiation\nequality ($z \\sim 3400$), we show how PBH-driven structure formation can\nreproduce the observed stellar and black hole masses for two of the highest\nredshift black holes (UHZ1 and GHZ9 at $z \\sim 10.3$) with the same parameters\ngoverning star formation, black hole accretion and their feedbacks. Exploring a\nwide swathe of model parameter space for GHZ9, we find black hole-to-stellar\nmass ratios ranging between $0.1-1.86$ i.e. in some cases (of high supernova\nfeedback), the black hole grows to be more massive than the stellar mass of its\nhost, presenting an attractive alternative to seeding these puzzling early\nsystems.",
+          "arxiv_id": "2407.07162v3"
+        },
+        {
+          "title": "Primordial black holes as supermassive black holes seeds",
+          "year": "2024-11",
+          "abstract": "The presence of supermassive black holes (SMBHs, $M_{\\bullet}\\sim\n10^{6-10}~M_{\\odot}$) in the first cosmic Gyr ($z\\gtrsim 6$) challenges current\nmodels of BH formation and evolution. We propose a novel mechanism for the\nformation of early SMBH seeds based on primordial black holes (PBHs). We assume\na non-Gaussian primordial power spectrum as expected in inflationary models;\nthese scenarios predict that PBHs are initially clustered and preferentially\nformed in the high-$\\sigma$ fluctuations of the large-scale density field, out\nof which dark matter (DM) halos are originated. Our model accounts for (i) PBH\naccretion and feedback, (ii) DM halo growth, and (iii) gas dynamical friction.\nPBHs lose angular momentum due to gas dynamical friction, sink into a dense\ncore, where BH binaries form and undergo a runaway merger, eventually leading\nto the formation of a single, massive seed. This mechanism starts at $z\\sim\n20-40$ in rare halos ($M_h\\sim 10^7\\ M_\\odot$ corresponding to $\\sim 5-7\\sigma$\nfluctuations), and provides massive ($\\sim 10^{4-5}~ M_{\\odot}$) seeds by\n$z\\sim 10-30$. We derive a physically-motivated seeding prescription that\nprovides the mass of the seed, $ M_{\\rm seed}(z)=3.1\\times 10^{5}\\ {\nM_{\\odot}}[(1+z)/10]^{-1.2}$, and seeded halo, $ M_{h}(z)=2\\times 10^{9}\\\n{M_{\\odot}}[(1+z)/10]^{-2}e^{-0.05z}$ as a function of redshift. This seeding\nmechanism requires that only a small fraction of DM is constituted by PBHs,\nnamely $f_{\\rm PBH}\\sim 3 \\times 10^{-6}$. We find that $z\\sim 6-7$ quasars can\nbe explained with $6\\times 10^4 M_{\\rm \\odot}$ seeds planted at $z\\sim 32$, and\ngrowing at sub-Eddington rates, $\\langle\\lambda_{\\rm E}\\rangle\\sim 0.55$. The\nsame scenario reproduces the BH mass of GNz11 at $z=10.6$, while UHZ1\n($z=10.1$) and GHZ9 ($z=10$) data favour instead slightly later ($z\\sim\n20-25$), more massive ($10^5~M_{\\rm \\odot}$) seeds. [Abridged]",
+          "arxiv_id": "2411.03448v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:07:47Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

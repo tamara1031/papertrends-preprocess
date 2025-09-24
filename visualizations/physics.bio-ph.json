@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_model_cell_dynamics_cells",
+        "keywords": [
+          [
+            "model",
+            0.038629523084859826
+          ],
+          [
+            "cell",
+            0.03067368345992649
+          ],
+          [
+            "dynamics",
+            0.029008407098741088
+          ],
+          [
+            "cells",
+            0.023643201362531972
+          ],
+          [
+            "time",
+            0.023109991922965815
+          ],
+          [
+            "active",
+            0.022534823073132305
+          ],
+          [
+            "systems",
+            0.02247632486499908
+          ],
+          [
+            "results",
+            0.019507239729131515
+          ],
+          [
+            "study",
+            0.01876654758319017
+          ],
+          [
+            "biological",
+            0.01831356950474318
+          ]
+        ],
+        "count": 6206
+      },
+      "1": {
+        "name": "1_model_epidemic_COVID_infection",
+        "keywords": [
+          [
+            "model",
+            0.05629303394271003
+          ],
+          [
+            "epidemic",
+            0.04733165120671797
+          ],
+          [
+            "COVID",
+            0.04008769172397765
+          ],
+          [
+            "infection",
+            0.033378713215441065
+          ],
+          [
+            "number",
+            0.029259555590395746
+          ],
+          [
+            "infected",
+            0.028801218139692764
+          ],
+          [
+            "pandemic",
+            0.028620111801956647
+          ],
+          [
+            "disease",
+            0.028131422198483285
+          ],
+          [
+            "data",
+            0.028006916815147997
+          ],
+          [
+            "spread",
+            0.024730428180312212
+          ]
+        ],
+        "count": 138
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        0.07507672312356314
+      ],
+      [
+        0.07507672312356314,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        68,
+        6
+      ],
+      "2020-02": [
+        69,
+        7
+      ],
+      "2020-03": [
+        75,
+        18
+      ],
+      "2020-04": [
+        76,
+        18
+      ],
+      "2020-05": [
+        84,
+        16
+      ],
+      "2020-06": [
+        78,
+        6
+      ],
+      "2020-07": [
+        89,
+        18
+      ],
+      "2020-08": [
+        58,
+        17
+      ],
+      "2020-09": [
+        82,
+        10
+      ],
+      "2020-10": [
+        89,
+        19
+      ],
+      "2020-11": [
+        59,
+        14
+      ],
+      "2020-12": [
+        89,
+        12
+      ],
+      "2021-01": [
+        70,
+        11
+      ],
+      "2021-02": [
+        82,
+        20
+      ],
+      "2021-03": [
+        101,
+        17
+      ],
+      "2021-04": [
+        89,
+        6
+      ],
+      "2021-05": [
+        65,
+        12
+      ],
+      "2021-06": [
+        83,
+        9
+      ],
+      "2021-07": [
+        79,
+        6
+      ],
+      "2021-08": [
+        70,
+        12
+      ],
+      "2021-09": [
+        70,
+        10
+      ],
+      "2021-10": [
+        81,
+        16
+      ],
+      "2021-11": [
+        90,
+        8
+      ],
+      "2021-12": [
+        99,
+        16
+      ],
+      "2022-01": [
+        78,
+        12
+      ],
+      "2022-02": [
+        86,
+        8
+      ],
+      "2022-03": [
+        85,
+        8
+      ],
+      "2022-04": [
+        79,
+        13
+      ],
+      "2022-05": [
+        74,
+        6
+      ],
+      "2022-06": [
+        77,
+        10
+      ],
+      "2022-07": [
+        72,
+        5
+      ],
+      "2022-08": [
+        74,
+        13
+      ],
+      "2022-09": [
+        62,
+        9
+      ],
+      "2022-10": [
+        73,
+        4
+      ],
+      "2022-11": [
+        74,
+        10
+      ],
+      "2022-12": [
+        63,
+        3
+      ],
+      "2023-01": [
+        79,
+        7
+      ],
+      "2023-02": [
+        65,
+        9
+      ],
+      "2023-03": [
+        102,
+        10
+      ],
+      "2023-04": [
+        77,
+        10
+      ],
+      "2023-05": [
+        74,
+        7
+      ],
+      "2023-06": [
+        94,
+        8
+      ],
+      "2023-07": [
+        75,
+        11
+      ],
+      "2023-08": [
+        67,
+        10
+      ],
+      "2023-09": [
+        76,
+        9
+      ],
+      "2023-10": [
+        94,
+        10
+      ],
+      "2023-11": [
+        93,
+        12
+      ],
+      "2023-12": [
+        85,
+        14
+      ],
+      "2024-01": [
+        100,
+        12
+      ],
+      "2024-02": [
+        71,
+        14
+      ],
+      "2024-03": [
+        113,
+        9
+      ],
+      "2024-04": [
+        75,
+        9
+      ],
+      "2024-05": [
+        98,
+        6
+      ],
+      "2024-06": [
+        65,
+        9
+      ],
+      "2024-07": [
+        100,
+        10
+      ],
+      "2024-08": [
+        78,
+        11
+      ],
+      "2024-09": [
+        107,
+        7
+      ],
+      "2024-10": [
+        109,
+        8
+      ],
+      "2024-11": [
+        82,
+        7
+      ],
+      "2024-12": [
+        87,
+        8
+      ],
+      "2025-01": [
+        96,
+        8
+      ],
+      "2025-02": [
+        68,
+        8
+      ],
+      "2025-03": [
+        107,
+        11
+      ],
+      "2025-04": [
+        102,
+        12
+      ],
+      "2025-05": [
+        89,
+        13
+      ],
+      "2025-06": [
+        78,
+        6
+      ],
+      "2025-07": [
+        99,
+        11
+      ],
+      "2025-08": [
+        86,
+        4
+      ],
+      "2025-09": [
+        53,
+        3
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Learning the dynamics of cell-cell interactions in confined cell migration",
+          "year": "2020-08",
+          "abstract": "The migratory dynamics of cells in physiological processes, ranging from\nwound healing to cancer metastasis, rely on contact-mediated cell-cell\ninteractions. These interactions play a key role in shaping the stochastic\ntrajectories of migrating cells. While data-driven physical formalisms for the\nstochastic migration dynamics of single cells have been developed, such a\nframework for the behavioral dynamics of interacting cells still remains\nelusive. Here, we monitor stochastic cell trajectories in a minimal\nexperimental cell collider: a dumbbell-shaped micropattern on which pairs of\ncells perform repeated cellular collisions. We observe different characteristic\nbehaviors, including cells reversing, following and sliding past each other\nupon collision. Capitalizing on this large experimental data set of coupled\ncell trajectories, we infer an interacting stochastic equation of motion that\naccurately predicts the observed interaction behaviors. Our approach reveals\nthat interacting non-cancerous MCF10A cells can be described by repulsion and\nfriction interactions. In contrast, cancerous MDA-MB-231 cells exhibit\nattraction and anti-friction interactions, promoting the predominant relative\nsliding behavior observed for these cells. Based on these experimentally\ninferred interactions, we show how this framework may generalize to provide a\nunifying theoretical description of the diverse cellular interaction behaviors\nof distinct cell types.",
+          "arxiv_id": "2008.03978v2"
+        },
+        {
+          "title": "Chirality-driven edge flow and non-Hermitian topology in active nematic cells",
+          "year": "2020-08",
+          "abstract": "Many of the biological phenomena involve collective dynamics driven by\nself-propelled motion and nonequilibrium force (i.e., activity) that result in\nfeatures unexpected from equilibrium physics. On the other hand, biological\nexperiments utilizing molecular motors, bacteria, and mammalian cells have\nserved as ideal setups to probe the effect of activity in materials and compare\nwith theory. As has been established, however, biomolecules are chiral in\nnature, which can lead to the chiral patterning of cells and even to the\nleft-right symmetry breaking in our body. The general mechanism of how the\ndynamics of bio-matters can couple with its own inherent chirality to produce\nmacroscopic patterns is yet to be elucidated. Here we report that cultured\nneural progenitor cells (NPCs), which undergo self-propelled motion with\nnematic cell-to-cell interactions, exhibit large scale chiral patterns when\nflowing out from containers made by gel. Moreover, a robust chiral cell flow is\nproduced along the boundary when the NPCs are cultured on substrates with\nedges. Perturbation by actomyosin inhibitors allowed control over the\nchirality, resulting in the switching of the direction of the chiral patterning\nand boundary flow. As predicted by a hydrodynamic theory analogous to the\nnon-Hermitian Schrodinger equation, we find an edge-localized unidirectional\nmode in the Fourier spectrum of the cell density, which corresponds to the\ntopological Kelvin wave. These results establish a novel mechanism of flow that\nemerges from a pool of bipolar cells, and demonstrate how topological concepts\nfrom condensed matter physics can naturally arise in chiral active systems and\nmulti-cellular phenomena.",
+          "arxiv_id": "2008.10852v2"
+        },
+        {
+          "title": "Multi-phase-field Models of Biological Tissues",
+          "year": "2025-03",
+          "abstract": "The development of complex multicellular organisms from a single parent cell\nis a highly orchestrated process that cells conduct collectively without\ncentral guidance, creating intricate dynamic patterns essential for development\nand regeneration. Despite significant advances in imaging spatiotemporal\ndynamics of cell collectives and mechanical characterization techniques, the\nrole of physical forces in biological functions remains poorly understood.\nPhysics-based models are crucial in complementing experiments, providing\nhigh-resolution spatiotemporal fields in three dimensions. This review focuses\non dense, soft multicellular systems, such as tissues, where mechanical\ndeformation of one cell necessitates the re-organization of neighboring cells.\nThe multi-phase-field model offers a rich physics-based framework to advance\nour understanding of biological systems and provides a robust playground for\nnon-equilibrium physics of active matter. We discuss the foundational aspects\nof the multi-phase-field model and their applications in understanding physics\nof active matter. We also explore the integration of biological physics with\nexperimental data, covering cell migration, heterogeneous cell populations, and\nconfined systems. Finally, we highlight current trends, the importance of\nmulti-phase-field models in biological and physics research, and future\nchallenges.",
+          "arxiv_id": "2503.05053v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Calibrated Intervention and Containment of the COVID-19 Pandemic",
+          "year": "2020-03",
+          "abstract": "Within a short period of time, COVID-19 grew into a world-wide pandemic.\nTransmission by pre-symptomatic and asymptomatic viral carriers rendered\nintervention and containment of the disease extremely challenging. Based on\nreported infection case studies, we construct an epidemiological model that\nfocuses on transmission around the symptom onset. The model is calibrated\nagainst incubation period and pairwise transmission statistics during the\ninitial outbreaks of the pandemic outside Wuhan with minimal non-pharmaceutical\ninterventions. Mathematical treatment of the model yields explicit expressions\nfor the size of latent and pre-symptomatic subpopulations during the\nexponential growth phase, with the local epidemic growth rate as input. We then\nexplore reduction of the basic reproduction number R_0 through specific disease\ncontrol measures such as contact tracing, testing, social distancing, wearing\nmasks and sheltering in place. When these measures are implemented in\ncombination, their effects on R_0 multiply. We also compare our model behaviour\nto the first wave of the COVID-19 spreading in various affected regions and\nhighlight generic and less generic features of the pandemic development.",
+          "arxiv_id": "2003.07353v6"
+        },
+        {
+          "title": "Simulating the spread of COVID-19 with cellular automata: A new approach",
+          "year": "2023-07",
+          "abstract": "Between the years 2020 to 2022, the world was hit by the pandemic of COVID-19\ngiving rise to an extremely grave situation. The global economy was badly hurt\ndue to the consequences of various intervention strategies (like social\ndistancing, lockdown) which were applied by different countries to control this\npandemic. There are multiple speculations that humanity will again face such\npandemics in the future. Thus it is very important to learn and gain knowledge\nabout the spread of such infectious diseases and the various factors which are\nresponsible for it. In this study, we have extended our previous work\n(Chowdhury et.al., 2022) on the probabilistic cellular automata (CA) model to\nreproduce the spread of COVID-19 in several countries by modifying its earlier\nused neighbourhood criteria. This modification gives us the liberty to adopt\nthe effect of different restrictions like lockdown and social distancing in our\nmodel. We have done some theoretical analysis for initial infection and\nsimulations to gain insights into our model. We have also studied the data from\neight countries for COVID-19 in a window of 876 days and compared it with our\nmodel. We have developed a proper framework to fit our model on the data for\nconfirmed cases of COVID-19 and have also re-checked the goodness of the fit\nwith the data of the deceased cases for this pandemic. This model fits well\nwith different peaks of COVID-19 data for all the eight countries and can be\npossibly generalized for a global prediction.",
+          "arxiv_id": "2307.14576v1"
+        },
+        {
+          "title": "Universality and herd immunity threshold : Revisiting the SIR model for COVID-19",
+          "year": "2021-06",
+          "abstract": "COVID-19 pandemic has been raging all around the world for almost a year now,\nas of November 1, 2020. In this paper, we try to analyze the variation of the\nCOVID-19 pandemic in different countries in the light of some modifications to\nthe susceptible-infected-recovered (SIR) model. The SIR model was modified by\ntaking time-dependent rate parameters. From this modified SIR model, the basic\nreproduction number, effective reproduction number, herd immunity, and herd\nimmunity threshold are redefined. The re-outbreak of the COVID-19 is a real\nthreat to various countries. We have used the above-mentioned quantities to\nfind the reasons behind the re-outbreak of this disease. Also, the\neffectiveness of herd immunity to prevent an epidemic has been analyzed with\nrespect to this model. We have also tried to show that there are certain\nuniversal aspects in the spread and containment of the disease in various\ncountries for a short period of time. Finally, we have also analyzed the\ncurrent pandemic situation in India and have attempted to discuss the\npossibilities in order to predict its future behaviour using our model.",
+          "arxiv_id": "2106.04859v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:39:24Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

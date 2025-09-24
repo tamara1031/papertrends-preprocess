@@ -1,0 +1,1786 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_laser_plasma_electron_high",
+        "keywords": [
+          [
+            "laser",
+            0.03464597267722953
+          ],
+          [
+            "plasma",
+            0.030063756034386636
+          ],
+          [
+            "electron",
+            0.019743467942131197
+          ],
+          [
+            "high",
+            0.01737161635899278
+          ],
+          [
+            "energy",
+            0.017229708593430045
+          ],
+          [
+            "beam",
+            0.015287893428263633
+          ],
+          [
+            "pulse",
+            0.013898615093962443
+          ],
+          [
+            "field",
+            0.013676577952497057
+          ],
+          [
+            "density",
+            0.01183182156670627
+          ],
+          [
+            "simulations",
+            0.009845091745666735
+          ]
+        ],
+        "count": 2274
+      },
+      "1": {
+        "name": "1_magnetic_solar_reconnection_field",
+        "keywords": [
+          [
+            "magnetic",
+            0.02956199841523192
+          ],
+          [
+            "solar",
+            0.023560426160321567
+          ],
+          [
+            "reconnection",
+            0.02072600543486689
+          ],
+          [
+            "field",
+            0.01848918639304571
+          ],
+          [
+            "wind",
+            0.017720569414088047
+          ],
+          [
+            "energy",
+            0.01712797661186627
+          ],
+          [
+            "turbulence",
+            0.01636235148477535
+          ],
+          [
+            "solar wind",
+            0.015316670400883562
+          ],
+          [
+            "magnetic field",
+            0.01418447005484635
+          ],
+          [
+            "scale",
+            0.013407476964572911
+          ]
+        ],
+        "count": 1588
+      },
+      "2": {
+        "name": "2_mode_transport_divertor_plasma",
+        "keywords": [
+          [
+            "mode",
+            0.026555119425093466
+          ],
+          [
+            "transport",
+            0.020316958098183985
+          ],
+          [
+            "divertor",
+            0.01772925225954638
+          ],
+          [
+            "plasma",
+            0.01709834740807695
+          ],
+          [
+            "edge",
+            0.01675968935746874
+          ],
+          [
+            "tokamak",
+            0.016464225724443792
+          ],
+          [
+            "simulations",
+            0.015948173059923874
+          ],
+          [
+            "turbulence",
+            0.01588234102188941
+          ],
+          [
+            "modes",
+            0.01321656270440543
+          ],
+          [
+            "gyrokinetic",
+            0.012795520693962415
+          ]
+        ],
+        "count": 479
+      },
+      "3": {
+        "name": "3_dense_density_warm_electron",
+        "keywords": [
+          [
+            "dense",
+            0.02754157640099948
+          ],
+          [
+            "density",
+            0.022757573515280755
+          ],
+          [
+            "warm",
+            0.022507566474546183
+          ],
+          [
+            "electron",
+            0.020438362040290016
+          ],
+          [
+            "matter",
+            0.017679579396874003
+          ],
+          [
+            "dense matter",
+            0.015536506993256644
+          ],
+          [
+            "electronic",
+            0.014430545828003018
+          ],
+          [
+            "warm dense matter",
+            0.014156892107219484
+          ],
+          [
+            "state",
+            0.013708183678178523
+          ],
+          [
+            "results",
+            0.01369015464212108
+          ]
+        ],
+        "count": 299
+      },
+      "4": {
+        "name": "4_stellarator_stellarators_optimization_coils",
+        "keywords": [
+          [
+            "stellarator",
+            0.050469308071027244
+          ],
+          [
+            "stellarators",
+            0.03425265167138784
+          ],
+          [
+            "optimization",
+            0.03130273557105218
+          ],
+          [
+            "coils",
+            0.029896666874209082
+          ],
+          [
+            "coil",
+            0.025508800023511514
+          ],
+          [
+            "magnetic",
+            0.02543717961965655
+          ],
+          [
+            "field",
+            0.01982577419427339
+          ],
+          [
+            "design",
+            0.01920177987336444
+          ],
+          [
+            "configurations",
+            0.01745281739473724
+          ],
+          [
+            "confinement",
+            0.01706323388372749
+          ]
+        ],
+        "count": 249
+      },
+      "5": {
+        "name": "5_data_learning_model_neural",
+        "keywords": [
+          [
+            "data",
+            0.035868126693083875
+          ],
+          [
+            "learning",
+            0.02785543516578876
+          ],
+          [
+            "model",
+            0.02678507955342135
+          ],
+          [
+            "neural",
+            0.026448608596761524
+          ],
+          [
+            "plasma",
+            0.022437931638057493
+          ],
+          [
+            "models",
+            0.02063740555931399
+          ],
+          [
+            "network",
+            0.019206346664960506
+          ],
+          [
+            "training",
+            0.01598213160090357
+          ],
+          [
+            "machine",
+            0.01515799548897662
+          ],
+          [
+            "tokamak",
+            0.015125235491377302
+          ]
+        ],
+        "count": 248
+      },
+      "6": {
+        "name": "6_particle_PIC_method_algorithm",
+        "keywords": [
+          [
+            "particle",
+            0.025835451676701395
+          ],
+          [
+            "PIC",
+            0.025754689824351168
+          ],
+          [
+            "method",
+            0.023534680786908894
+          ],
+          [
+            "algorithm",
+            0.01961644585858095
+          ],
+          [
+            "time",
+            0.018414545710217653
+          ],
+          [
+            "methods",
+            0.017320430726267336
+          ],
+          [
+            "numerical",
+            0.01721210708311773
+          ],
+          [
+            "Vlasov",
+            0.016963968300365787
+          ],
+          [
+            "cell",
+            0.014996334290101875
+          ],
+          [
+            "scheme",
+            0.0144590726013539
+          ]
+        ],
+        "count": 199
+      },
+      "7": {
+        "name": "7_waves_acoustic_ion_dust",
+        "keywords": [
+          [
+            "waves",
+            0.03984820514655856
+          ],
+          [
+            "acoustic",
+            0.03590717883104209
+          ],
+          [
+            "ion",
+            0.035425810363666516
+          ],
+          [
+            "dust",
+            0.029612731038317706
+          ],
+          [
+            "solitary",
+            0.028097768391997572
+          ],
+          [
+            "plasma",
+            0.026880152129464995
+          ],
+          [
+            "wave",
+            0.02573755238025886
+          ],
+          [
+            "nonlinear",
+            0.022651298093257517
+          ],
+          [
+            "electron",
+            0.021097531991498004
+          ],
+          [
+            "electrons",
+            0.019099091926678302
+          ]
+        ],
+        "count": 147
+      },
+      "8": {
+        "name": "8_runaway_RE_runaway electron_current",
+        "keywords": [
+          [
+            "runaway",
+            0.08934397298022419
+          ],
+          [
+            "RE",
+            0.0405159865627183
+          ],
+          [
+            "runaway electron",
+            0.04047375720004828
+          ],
+          [
+            "current",
+            0.030678101347026948
+          ],
+          [
+            "disruption",
+            0.029448545051334304
+          ],
+          [
+            "electron",
+            0.027609238470522303
+          ],
+          [
+            "runaway electrons",
+            0.027143620002377706
+          ],
+          [
+            "quench",
+            0.02443753005340466
+          ],
+          [
+            "ITER",
+            0.02306447994707505
+          ],
+          [
+            "electrons",
+            0.02041296576279127
+          ]
+        ],
+        "count": 110
+      },
+      "9": {
+        "name": "9_equation_equations_gyrokinetic_Hamiltonian",
+        "keywords": [
+          [
+            "equation",
+            0.02374048665841482
+          ],
+          [
+            "equations",
+            0.023426944249929926
+          ],
+          [
+            "gyrokinetic",
+            0.016664680504838155
+          ],
+          [
+            "Hamiltonian",
+            0.01628163821558585
+          ],
+          [
+            "conservation",
+            0.015730270066167607
+          ],
+          [
+            "field",
+            0.015236348130220565
+          ],
+          [
+            "equilibrium",
+            0.014864651559608174
+          ],
+          [
+            "solutions",
+            0.013797138128024026
+          ],
+          [
+            "energy",
+            0.013623253231689366
+          ],
+          [
+            "MHD",
+            0.01346123569767669
+          ]
+        ],
+        "count": 109
+      },
+      "10": {
+        "name": "10_dust_dusty_dusty plasma_plasma",
+        "keywords": [
+          [
+            "dust",
+            0.07505659334673936
+          ],
+          [
+            "dusty",
+            0.0508770233013601
+          ],
+          [
+            "dusty plasma",
+            0.0412743684034266
+          ],
+          [
+            "plasma",
+            0.03662496836836155
+          ],
+          [
+            "particles",
+            0.035065806226928564
+          ],
+          [
+            "dust particles",
+            0.01920628580616998
+          ],
+          [
+            "complex",
+            0.016960503603355936
+          ],
+          [
+            "potential",
+            0.016596391104474157
+          ],
+          [
+            "dimensional",
+            0.016434366373902044
+          ],
+          [
+            "dynamics",
+            0.01600054975009908
+          ]
+        ],
+        "count": 107
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6611755293427453,
+        -0.6645411489707811,
+        -0.7092956183081596,
+        -0.711634650214282,
+        -0.5823367488025466,
+        -0.5961678126648589,
+        -0.555737014936246,
+        -0.6455410243052883,
+        -0.7258549155139038,
+        -0.49424695252049294
+      ],
+      [
+        -0.6611755293427453,
+        1.0,
+        -0.6946362474512395,
+        -0.7306142296501278,
+        -0.36992377682892424,
+        -0.6565827304981907,
+        -0.655546778304507,
+        -0.6399207034261867,
+        -0.7099613735271333,
+        -0.7095547335022802,
+        -0.6710921993197856
+      ],
+      [
+        -0.6645411489707811,
+        -0.6946362474512395,
+        1.0,
+        -0.7399361481168554,
+        -0.7168700523069758,
+        -0.7078669593327858,
+        -0.7249100337147276,
+        -0.7144983068391886,
+        -0.7297563959429901,
+        -0.7152640864763609,
+        -0.6417429619270635
+      ],
+      [
+        -0.7092956183081596,
+        -0.7306142296501278,
+        -0.7399361481168554,
+        1.0,
+        -0.7478421946737006,
+        -0.7111595841766183,
+        -0.7248111144213663,
+        -0.7310755194378307,
+        -0.7426434721065739,
+        -0.7298347083622103,
+        -0.7357606079838278
+      ],
+      [
+        -0.711634650214282,
+        -0.36992377682892424,
+        -0.7168700523069758,
+        -0.7478421946737006,
+        1.0,
+        -0.7022893331204014,
+        -0.7215405211960506,
+        -0.711875098294489,
+        -0.7359288723507384,
+        -0.7276042949734047,
+        -0.7089469079806269
+      ],
+      [
+        -0.5823367488025466,
+        -0.6565827304981907,
+        -0.7078669593327858,
+        -0.7111595841766183,
+        -0.7022893331204014,
+        1.0,
+        -0.7017309191269011,
+        -0.5866360997813669,
+        -0.7174218541838191,
+        -0.7325305884412106,
+        -0.5489539624954799
+      ],
+      [
+        -0.5961678126648589,
+        -0.655546778304507,
+        -0.7249100337147276,
+        -0.7248111144213663,
+        -0.7215405211960506,
+        -0.7017309191269011,
+        1.0,
+        -0.6945534904544197,
+        -0.740086856043332,
+        -0.7234301670123278,
+        -0.6916967861680414
+      ],
+      [
+        -0.555737014936246,
+        -0.6399207034261867,
+        -0.7144983068391886,
+        -0.7310755194378307,
+        -0.711875098294489,
+        -0.5866360997813669,
+        -0.6945534904544197,
+        1.0,
+        -0.7144522751683462,
+        -0.7027699792326385,
+        -0.44951127402700264
+      ],
+      [
+        -0.6455410243052883,
+        -0.7099613735271333,
+        -0.7297563959429901,
+        -0.7426434721065739,
+        -0.7359288723507384,
+        -0.7174218541838191,
+        -0.740086856043332,
+        -0.7144522751683462,
+        1.0,
+        -0.7493561014777179,
+        -0.7299706287973335
+      ],
+      [
+        -0.7258549155139038,
+        -0.7095547335022802,
+        -0.7152640864763609,
+        -0.7298347083622103,
+        -0.7276042949734047,
+        -0.7325305884412106,
+        -0.7234301670123278,
+        -0.7027699792326385,
+        -0.7493561014777179,
+        1.0,
+        -0.7390042096623216
+      ],
+      [
+        -0.49424695252049294,
+        -0.6710921993197856,
+        -0.6417429619270635,
+        -0.7357606079838278,
+        -0.7089469079806269,
+        -0.5489539624954799,
+        -0.6916967861680414,
+        -0.44951127402700264,
+        -0.7299706287973335,
+        -0.7390042096623216,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        29,
+        33,
+        0,
+        4,
+        0,
+        7,
+        2,
+        6,
+        1,
+        2,
+        5
+      ],
+      "2020-02": [
+        45,
+        15,
+        5,
+        5,
+        3,
+        5,
+        9,
+        3,
+        2,
+        1,
+        2
+      ],
+      "2020-03": [
+        48,
+        26,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        3,
+        1,
+        3
+      ],
+      "2020-04": [
+        36,
+        25,
+        5,
+        4,
+        2,
+        4,
+        10,
+        6,
+        4,
+        2,
+        5
+      ],
+      "2020-05": [
+        40,
+        29,
+        6,
+        2,
+        5,
+        9,
+        2,
+        4,
+        2,
+        2,
+        2
+      ],
+      "2020-06": [
+        46,
+        29,
+        4,
+        2,
+        2,
+        5,
+        5,
+        6,
+        3,
+        1,
+        5
+      ],
+      "2020-07": [
+        60,
+        34,
+        3,
+        5,
+        1,
+        10,
+        6,
+        5,
+        2,
+        2,
+        5
+      ],
+      "2020-08": [
+        31,
+        26,
+        3,
+        6,
+        2,
+        1,
+        9,
+        7,
+        3,
+        1,
+        6
+      ],
+      "2020-09": [
+        47,
+        26,
+        3,
+        4,
+        4,
+        7,
+        2,
+        8,
+        3,
+        1,
+        3
+      ],
+      "2020-10": [
+        49,
+        24,
+        2,
+        2,
+        3,
+        10,
+        5,
+        7,
+        2,
+        0,
+        6
+      ],
+      "2020-11": [
+        41,
+        27,
+        5,
+        1,
+        6,
+        6,
+        6,
+        6,
+        6,
+        3,
+        11
+      ],
+      "2020-12": [
+        45,
+        20,
+        2,
+        3,
+        6,
+        5,
+        14,
+        13,
+        1,
+        2,
+        6
+      ],
+      "2021-01": [
+        30,
+        23,
+        2,
+        9,
+        1,
+        8,
+        5,
+        7,
+        4,
+        2,
+        4
+      ],
+      "2021-02": [
+        41,
+        26,
+        0,
+        1,
+        4,
+        6,
+        12,
+        5,
+        1,
+        1,
+        4
+      ],
+      "2021-03": [
+        65,
+        28,
+        5,
+        8,
+        1,
+        6,
+        7,
+        9,
+        4,
+        2,
+        8
+      ],
+      "2021-04": [
+        57,
+        35,
+        2,
+        5,
+        3,
+        4,
+        4,
+        14,
+        4,
+        2,
+        3
+      ],
+      "2021-05": [
+        34,
+        21,
+        1,
+        7,
+        7,
+        6,
+        6,
+        5,
+        5,
+        5,
+        2
+      ],
+      "2021-06": [
+        48,
+        33,
+        2,
+        5,
+        8,
+        8,
+        11,
+        8,
+        4,
+        0,
+        3
+      ],
+      "2021-07": [
+        33,
+        33,
+        3,
+        3,
+        3,
+        6,
+        8,
+        9,
+        3,
+        4,
+        5
+      ],
+      "2021-08": [
+        41,
+        33,
+        3,
+        4,
+        4,
+        5,
+        3,
+        8,
+        0,
+        1,
+        4
+      ],
+      "2021-09": [
+        42,
+        33,
+        5,
+        4,
+        3,
+        13,
+        7,
+        5,
+        0,
+        0,
+        4
+      ],
+      "2021-10": [
+        40,
+        34,
+        1,
+        7,
+        3,
+        8,
+        9,
+        3,
+        2,
+        0,
+        3
+      ],
+      "2021-11": [
+        44,
+        22,
+        2,
+        2,
+        6,
+        4,
+        12,
+        11,
+        0,
+        2,
+        1
+      ],
+      "2021-12": [
+        25,
+        36,
+        4,
+        3,
+        3,
+        6,
+        9,
+        10,
+        2,
+        1,
+        5
+      ],
+      "2022-01": [
+        47,
+        27,
+        3,
+        4,
+        4,
+        5,
+        5,
+        8,
+        3,
+        0,
+        1
+      ],
+      "2022-02": [
+        43,
+        19,
+        1,
+        6,
+        3,
+        4,
+        7,
+        8,
+        2,
+        2,
+        2
+      ],
+      "2022-03": [
+        39,
+        28,
+        4,
+        4,
+        5,
+        8,
+        8,
+        11,
+        3,
+        4,
+        7
+      ],
+      "2022-04": [
+        33,
+        29,
+        3,
+        3,
+        3,
+        11,
+        5,
+        6,
+        3,
+        1,
+        3
+      ],
+      "2022-05": [
+        26,
+        35,
+        3,
+        6,
+        3,
+        9,
+        3,
+        9,
+        1,
+        2,
+        3
+      ],
+      "2022-06": [
+        27,
+        23,
+        5,
+        4,
+        3,
+        11,
+        4,
+        6,
+        4,
+        2,
+        6
+      ],
+      "2022-07": [
+        38,
+        24,
+        0,
+        1,
+        2,
+        8,
+        2,
+        6,
+        2,
+        1,
+        2
+      ],
+      "2022-08": [
+        36,
+        30,
+        4,
+        0,
+        5,
+        4,
+        8,
+        3,
+        4,
+        1,
+        5
+      ],
+      "2022-09": [
+        41,
+        34,
+        1,
+        3,
+        3,
+        9,
+        7,
+        5,
+        1,
+        0,
+        5
+      ],
+      "2022-10": [
+        35,
+        26,
+        1,
+        0,
+        7,
+        7,
+        8,
+        7,
+        2,
+        0,
+        5
+      ],
+      "2022-11": [
+        49,
+        35,
+        3,
+        5,
+        4,
+        14,
+        9,
+        7,
+        1,
+        2,
+        5
+      ],
+      "2022-12": [
+        51,
+        20,
+        1,
+        4,
+        5,
+        4,
+        4,
+        4,
+        2,
+        0,
+        3
+      ],
+      "2023-01": [
+        34,
+        29,
+        4,
+        3,
+        6,
+        3,
+        8,
+        10,
+        5,
+        3,
+        2
+      ],
+      "2023-02": [
+        43,
+        27,
+        4,
+        6,
+        6,
+        8,
+        6,
+        5,
+        2,
+        0,
+        5
+      ],
+      "2023-03": [
+        58,
+        22,
+        2,
+        4,
+        2,
+        7,
+        6,
+        6,
+        6,
+        4,
+        6
+      ],
+      "2023-04": [
+        45,
+        17,
+        8,
+        5,
+        4,
+        8,
+        10,
+        3,
+        2,
+        3,
+        5
+      ],
+      "2023-05": [
+        55,
+        24,
+        3,
+        6,
+        5,
+        10,
+        8,
+        3,
+        1,
+        3,
+        5
+      ],
+      "2023-06": [
+        54,
+        35,
+        8,
+        5,
+        4,
+        8,
+        8,
+        6,
+        3,
+        3,
+        2
+      ],
+      "2023-07": [
+        33,
+        35,
+        1,
+        4,
+        1,
+        9,
+        6,
+        6,
+        4,
+        1,
+        3
+      ],
+      "2023-08": [
+        36,
+        31,
+        1,
+        5,
+        2,
+        8,
+        11,
+        4,
+        2,
+        3,
+        4
+      ],
+      "2023-09": [
+        41,
+        28,
+        2,
+        3,
+        3,
+        8,
+        12,
+        8,
+        3,
+        1,
+        3
+      ],
+      "2023-10": [
+        54,
+        24,
+        4,
+        2,
+        8,
+        13,
+        5,
+        7,
+        4,
+        4,
+        8
+      ],
+      "2023-11": [
+        41,
+        30,
+        6,
+        3,
+        4,
+        11,
+        4,
+        9,
+        0,
+        2,
+        4
+      ],
+      "2023-12": [
+        45,
+        29,
+        4,
+        1,
+        3,
+        8,
+        9,
+        2,
+        3,
+        2,
+        0
+      ],
+      "2024-01": [
+        50,
+        30,
+        3,
+        8,
+        5,
+        5,
+        6,
+        7,
+        6,
+        2,
+        4
+      ],
+      "2024-02": [
+        41,
+        28,
+        4,
+        4,
+        7,
+        14,
+        6,
+        8,
+        3,
+        3,
+        4
+      ],
+      "2024-03": [
+        41,
+        22,
+        3,
+        9,
+        5,
+        14,
+        5,
+        4,
+        1,
+        0,
+        2
+      ],
+      "2024-04": [
+        56,
+        24,
+        2,
+        4,
+        5,
+        10,
+        2,
+        6,
+        4,
+        1,
+        5
+      ],
+      "2024-05": [
+        41,
+        39,
+        4,
+        7,
+        4,
+        16,
+        10,
+        6,
+        2,
+        2,
+        5
+      ],
+      "2024-06": [
+        48,
+        29,
+        4,
+        4,
+        6,
+        9,
+        12,
+        6,
+        2,
+        0,
+        3
+      ],
+      "2024-07": [
+        47,
+        31,
+        7,
+        8,
+        10,
+        6,
+        7,
+        7,
+        3,
+        2,
+        3
+      ],
+      "2024-08": [
+        51,
+        34,
+        3,
+        5,
+        4,
+        8,
+        6,
+        3,
+        1,
+        4,
+        3
+      ],
+      "2024-09": [
+        46,
+        36,
+        5,
+        7,
+        8,
+        12,
+        8,
+        5,
+        3,
+        3,
+        6
+      ],
+      "2024-10": [
+        66,
+        32,
+        2,
+        6,
+        8,
+        9,
+        11,
+        7,
+        5,
+        6,
+        2
+      ],
+      "2024-11": [
+        57,
+        21,
+        6,
+        6,
+        5,
+        9,
+        11,
+        6,
+        0,
+        2,
+        6
+      ],
+      "2024-12": [
+        60,
+        33,
+        2,
+        4,
+        6,
+        11,
+        7,
+        5,
+        8,
+        4,
+        3
+      ],
+      "2025-01": [
+        46,
+        29,
+        6,
+        2,
+        7,
+        10,
+        11,
+        4,
+        2,
+        4,
+        4
+      ],
+      "2025-02": [
+        53,
+        29,
+        1,
+        3,
+        6,
+        17,
+        10,
+        6,
+        3,
+        0,
+        0
+      ],
+      "2025-03": [
+        56,
+        22,
+        3,
+        4,
+        4,
+        11,
+        11,
+        4,
+        3,
+        0,
+        0
+      ],
+      "2025-04": [
+        48,
+        32,
+        3,
+        8,
+        2,
+        11,
+        6,
+        11,
+        2,
+        3,
+        5
+      ],
+      "2025-05": [
+        59,
+        32,
+        3,
+        7,
+        9,
+        9,
+        7,
+        5,
+        4,
+        1,
+        1
+      ],
+      "2025-06": [
+        65,
+        32,
+        5,
+        5,
+        9,
+        15,
+        12,
+        7,
+        4,
+        2,
+        2
+      ],
+      "2025-07": [
+        53,
+        38,
+        3,
+        4,
+        11,
+        18,
+        6,
+        13,
+        0,
+        1,
+        6
+      ],
+      "2025-08": [
+        56,
+        21,
+        6,
+        5,
+        5,
+        9,
+        10,
+        3,
+        2,
+        1,
+        2
+      ],
+      "2025-09": [
+        31,
+        20,
+        1,
+        6,
+        0,
+        15,
+        5,
+        3,
+        2,
+        2,
+        3
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Mechanisms to control laser-plasma coupling in laser wakefield electron acceleration",
+          "year": "2022-08",
+          "abstract": "Experimental results, supported by precise modelling, demonstrate\noptimisation of a plasma-based injector with intermediate laser pulse energy\n($<1$ J), corresponding to a normalised vector potential $a_0 = 2.15$, using\nionisation injection in a tailored plasma density profile. An increase in\nelectron bunch quality and energy is achieved experimentally with the extension\nof the density downramp at the plasma exit. Optimisation of the focal position\nof the laser pulse in the tailored plasma density profile is shown to\nefficiently reduce electron bunch angular deviation, leading to a better\nalignment of the electron bunch with the laser axis. Single peak electron\nspectra are produced in a previously unexplored regime by combining an early\nfocal position and adaptive optic control of the laser wavefront through\noptimising the symmetry of the pre-focal laser energy distribution.\nExperimental results have been validated through particle-in-cell simulations\nusing realistic laser energy, phase distribution, and temporal envelope,\nallowing for accurate predictions of difficult to model parameters, such as\ntotal charge and spatial properties of the electron bunches, opening the way\nfor more accurate modelling for the design of plasma-based accelerators.",
+          "arxiv_id": "2208.08126v2"
+        },
+        {
+          "title": "Bright betatron radiation from direct-laser-accelerated electrons at moderate relativistic laser intensity",
+          "year": "2021-04",
+          "abstract": "Direct laser acceleration (DLA) of electrons in a plasma of near critical\nelectron density (NCD) and associated synchrotron-like radiation are discussed\nfor moderate relativistic laser intensity (the normalized laser amplitude $a_0$\n$\\leq$ 4.3) and ps-long pulse. This regime is typical for kJ PW-class laser\nfacilities designed for high energy density research. Currently, in experiments\nat the PHELX laser it was demonstrated that interaction of 10$^{19}$ W/cm$^{2}$\nsub-ps laser pulse with sub-mm long NCD plasma results in generation of\nhigh-current well-directed super-ponderomotive electrons with effective\ntemperature that is 10$\\times$ higher than the ponderomotive potential [O.\nRosmej et al., PPCF 62, 115024 (2020)]. Three-dimensional Particle-In-Cell\nsimulations provided a good agreement with the measured electron energy\ndistribution and were used in the current work to study synchrotron radiation\nof the DLA accelerated electrons. The resulting x-ray spectrum with a critical\nenergy of 5 keV reveals an ultra-high photon number of 7$\\times$10$^{11}$ in\nthe 1-30 keV photon energy range at the focused laser energy of 20 J. Numerical\nsimulations of a betatron x-ray phasecontrast imaging based on the DLA process\nfor the parameters of a PHELIX laser is presented. The results are of interest\nfor applications in high energy density (HED) experiments, which require a\npicosecond x-ray pulse and a high photon flux.",
+          "arxiv_id": "2104.11623v1"
+        },
+        {
+          "title": "High current well-directed beams of super-ponderomotive electrons for laser driven nuclear physics applications",
+          "year": "2020-05",
+          "abstract": "We report on new findings in a laser driven enhanced electron beam generation\nin the multi MeV energy range at moderate relativistic laser intensities and\ntheir applications. In our experiment, an intense sub-picosecond laser pulse\npropagates through a plasma of a near critical electron density (NCD) and\ndirect laser acceleration (DLA) of electrons takes place. The breakthrough\ntoward high current relativistic electron beams became possible due to\napplication of low density polymer foams of sub-mm thickness. In foams, the\nNCD-plasma was produced by a mechanism of super-sonic ionization. Compared to\nNCD-plasmas generated by laser irradiation of conventional foils, the DLA\nacceleration path in foams was strongly enhanced. Measurements resulted into\n11{\\div}13 MeV of the effective electron temperature and up to 100 MeV maximum\nof the electron energy measured in the laser pulse propagation direction. The\ngrowth of the electron energy was accompanied by a strong increase of the\nnumber of super-ponderomotive electrons and a well-defined directionality of\nthe electron beam that propagates in a divergence cone with a half angle of\n12{\\deg}. For the energy range above 7.5 MeV that is relevant for gamma-driven\nnuclear reactions, we estimate a charge carried by these well-directed electron\nbeams as high as 50 nC and a corresponding efficiency of the laser energy\nconversion into electrons of 6%. The electron spectra generated by the\nDLA-mechanism in NCD-plasma at 1019 Wcm-2 laser intensity were compared with\nthose measured in shots onto conventional metallic foils at ultra-relativistic\nlaser intensities of 1021 Wcm-2 . In the last case, the twice lower effective\nelectron temperature and the twice lower maximum of the electron energy were\nregistered. The substantial difference in the electron spectra for these two\ncases presented itself in the isotope production yield.",
+          "arxiv_id": "2005.14560v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Modeling the formation and evolution of solar wind microstreams: from coronal plumes to propagating Alfvénic velocity spikes",
+          "year": "2023-07",
+          "abstract": "We investigate the origin of mesoscale structures in the solar wind called\nmicrostreams defined as enhancements in solar wind speed and temperature that\nlast several hours. They were first clearly detected in Helios and Ulysses\nsolar wind data and are now omnipresent in the \"young\" solar wind measured by\nParker Solar Probe and Solar Orbiter. These recent data reveal that\nmicrostreams transport a profusion of Alfv\\'enic perturbations in the form of\nvelocity spikes and magnetic switchbacks. In this study we use a very\nhigh-resolution 2.5 MHD model of the corona and the solar wind to simulate the\nemergence of magnetic bipoles interacting with the pre-existing ambient corona\nand the creation of jets that become microstreams propagating in the solar\nwind. Our high-resolution simulations reach sufficiently high Lundquist numbers\nto capture the tearing mode instability that develops in the reconnection\nregion and produces plasmo\\\"ids released with the jet into the solar wind. Our\ndomain runs from the lower corona to 20 Rs, this allows us to track the\nformation process of plasmo\\\"ids and their evolution into Alfv\\'enic velocity\nspikes. We obtain perturbed solar wind flows lasting several hours with\nvelocity spikes occurring at characteristic periodicities of about 19 minutes.\nWe retrieve several properties of microstreams measured in the pristine solar\nwind by Parker Solar Probe, namely an increase in wind velocity of about 100\nkm/s during the streams passage together with superposed velocity spikes of\nalso about 100 km/s released into the solar wind.",
+          "arxiv_id": "2307.02210v3"
+        },
+        {
+          "title": "On the role of solar wind expansion as a source of whistler waves: scattering of suprathermal electrons and heat flux regulation in the inner heliosphere",
+          "year": "2021-06",
+          "abstract": "The role of solar wind expansion in generating whistler waves is investigated\nusing the EB-iPic3D code, which models solar wind expansion self-consistently\nwithin a fully kinetic semi-implicit approach. The simulation is initialized\nwith an electron velocity distribution function modeled after Parker Solar\nProbe observations during its first perihelion at 0.166 au, consisting of a\ndense core and an anti-sunward strahl. This distribution function is initially\nstable with respect to kinetic instabilities. Expansion drives the solar wind\ninto successive regimes where whistler heat flux instabilities are triggered.\nThese instabilities produce sunward whistler waves initially characterized by\npredominantly oblique propagation with respect to the interplanetary magnetic\nfield. The excited waves interact with the electrons via resonant scattering\nprocesses. As a consequence, the strahl pitch angle distribution broadens and\nits drift velocity reduces. Strahl electrons are scattered in the direction\nperpendicular to the magnetic field, and an electron halo is formed. At a later\nstage, resonant electron firehose instability is triggered and further affects\nthe electron temperature anisotropy as the solar wind expands. Wave-particle\ninteraction processes are accompanied by a substantial reduction of the solar\nwind heat flux. The simulated whistler waves are in qualitative agreement with\nobservations in terms of wave frequencies, amplitudes and propagation angles.\nOur work proposes an explanation for the observations of oblique and parallel\nwhistler waves in the solar wind. We conclude that solar wind expansion has to\nbe factored in when trying to explain kinetic processes at different\nheliocentric distances.",
+          "arxiv_id": "2106.15975v2"
+        },
+        {
+          "title": "Anisotropic electron heating in turbulence-driven magnetic reconnection in the near-Sun solar wind",
+          "year": "2022-05",
+          "abstract": "We perform a high-resolution two-dimensional fully-kinetic numerical\nsimulation of a turbulent plasma system with observation-driven conditions, in\norder to investigate the interplay between turbulence, magnetic reconnection,\nand particle heating from ion to sub-electron scales in the near-Sun solar\nwind. We find that the power spectra of the turbulent plasma and\nelectromagnetic fluctuations show multiple power-law intervals down to scales\nsmaller than the electron gyroradius. Magnetic reconnection is observed to\noccur in correspondence of current sheets with a thickness of the order of the\nelectron inertial length, which form and shrink due to interacting ion-scale\nvortexes. In some cases, both ion and electron outflows are observed (the\nclassic reconnection scenario), while in others -- typically for the shortest\ncurrent sheets -- only electron jets are presents (\"electron-only\nreconnection\"). At the onset of reconnection, the electron temperature starts\nto increase and a strong parallel temperature anisotropy develops. This\nsuggests that in strong turbulence electron-scale coherent structures may play\na significant role for electron heating, as impulsive and localized phenomena\nsuch as magnetic reconnection may transfer energy from the electromagnetic\nfields to particles more efficiently than damping mechanisms related to\ninteractions with wave-like fluctuations.",
+          "arxiv_id": "2205.08670v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Impact of triangularity on edge transport and divertor detachment: a SOLPS-ITER study of TCV L-mode plasmas",
+          "year": "2025-06",
+          "abstract": "Negative triangularity (NT) magnetic configurations have recently gained\nattention as a promising route to achieve H-mode-like confinement without\nedge-localized modes (ELMs) and without a power threshold for access. While\nboth core and edge confinement properties of NT have been extensively\ndocumented, consistently lower divertor target cooling and increased difficulty\nin achieving a detached regime have been observed. This work presents a\ncomparative SOLPS-ITER modeling study of two Ohmic L-mode discharges in the TCV\ntokamak with identical divertor geometry and opposite upper triangularity. We\ninvestigate whether magnetic geometry alone can account for the experimentally\nobserved differences in plasma detachment behavior. Simulations with identical\ntransport coefficients reveal no significant differences between NT and\npositive triangularity (PT) cases, even when including drifts. A parametric\nscan of radial anomalous transport coefficients shows that reproducing the\nexperimental profiles requires lower particle diffusivity in NT, consistent\nwith reduced turbulent transport and previous findings. Furthermore, the\nevolution of simulated neutral pressures and recycling fluxes along a density\nscan reproduces experimental observations of larger neutral divertor pressure\nin PT, highlighting a distinct neutral dynamics in the two cases. These results\nsupport the interpretation that altered cross-field transport, rather than\nmagnetic geometry alone, underlies the observed differences in divertor\nbehavior between NT and PT scenarios.",
+          "arxiv_id": "2506.03966v1"
+        },
+        {
+          "title": "MHD simulations of formation, sustainment and loss of Quiescent H-mode in the all-tungsten ASDEX Upgrade",
+          "year": "2023-01",
+          "abstract": "Periodic edge localized modes (ELMs) are the non-linear consequences of\npressure-gradient-driven ballooning modes and current-driven peeling modes\nbecoming unstable in the pedestal region of high confinement fusion plasmas. In\nfuture tokamaks like ITER, large ELMs are foreseen to severely affect the\nlifetime of wall components as they transiently deposit large amounts of heat\nonto a narrow region at the divertor targets. Several strategies exist for\navoidance, suppression, or mitigation of these instabilities, such as the\nnaturally ELM-free quiescent H-mode (QH-mode). In the present article, an ASDEX\nUpgrade equilibrium that features a QH-mode is investigated through non-linear\nextended MHD simulations covering the dynamics over tens of milliseconds. The\nequilibrium is close to the ideal peeling limit and non-linearly develops\nsaturated modes at the edge of the plasma. A dominant toroidal mode number of\n$n=1$ is found, for which the characteristic features of the edge harmonic\noscillation are recovered. The saturated modes contribute to heat and particle\ntransport preventing pedestal build-up to the ELM triggering threshold. The\nnon-linear dynamics of the mode, in particular its interaction with the\nevolution of the edge safety factor is studied, which suggest a possible new\nsaturation mechanism for the QH-mode. The simulations show good qualitative and\nquantitative agreement to experiments in AUG. In particular, the processes\nleading to the termination of QH-mode above a density threshold is studied,\nwhich results in the transition into an ELM regime. In the vicinity of this\nthreshold, limit cycle oscillations are observed.",
+          "arxiv_id": "2301.07607v2"
+        },
+        {
+          "title": "Tokamak edge-SOL turbulence in H-mode conditions simulated with a global, electromagnetic, transcollisional drift-fluid model",
+          "year": "2024-03",
+          "abstract": "The design of commercially feasible magnetic confinement fusion reactors\nstrongly relies on the reduced turbulent transport in the plasma edge during\noperation in the high confinement mode (H-mode). We present first global\nturbulence simulations of the ASDEX Upgrade tokamak edge and scrape-off layer\n(SOL) in ITER baseline H-mode conditions. Reasonable agreement with the\nexperiment is obtained for outboard mid-plane measurements of plasma density,\nelectron and ion temperature, as well as the radial electric field. The radial\nheat transport is underpredicted by roughly 1/3. These results were obtained\nwith the GRILLIX code implementing a transcollisional, electromagnetic, global\ndrift-fluid plasma model, coupled to diffusive neutrals. The transcollisional\nextensions include neoclassical corrections for the ion viscosity, as well as\neither a Landau-fluid or free-streaming limited model for the parallel heat\nconduction. Electromagnetic fluctuations are found to play a critical role in\nH-mode conditions. We investigate the structure of the significant $E \\times B$\nflow shear, finding both neoclassical components as well as zonal flows. But\nunlike in L-mode, geodesic acoustic modes are not observed. The turbulence mode\nstructure is mostly that of drift-Alfv\\'en waves. However, in the upper part of\nthe pedestal, it is very weak and overshadowed by neoclassical transport. At\nthe pedestal foot, on the other hand, we find instead the (electromagnetic)\nkinetic ballooning mode (KBM), most clearly just inside the separatrix. Our\nresults pave the way towards predictive simulations of fusion reactors.",
+          "arxiv_id": "2403.10113v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Nonlinear electronic density response of the ferromagnetic uniform electron gas at warm dense matter conditions",
+          "year": "2021-06",
+          "abstract": "In a recent Letter [T.~Dornheim \\emph{et al.}, Phys.~Rev.~Lett.~\\textbf{125},\n085001 (2020)], we have presented the first \\emph{ab initio} results for the\nnonlinear density response of electrons in the warm dense matter regime. In the\npresent work, we extend these efforts by carrying out extensive new path\nintegral Monte Carlo (PIMC) simulations of a \\emph{ferromagnetic} electron gas\nthat is subject to an external harmonic perturbation. This allows us to\nunambiguously quantify the impact of spin-effects on the nonlinear density\nresponse of the warm dense electron gas. In addition to their utility for the\ndescription of warm dense matter in an external magnetic field, our results\nfurther advance our current understanding of the uniform electron gas as a\nfundamental model system, which is important in its own right.",
+          "arxiv_id": "2106.03444v1"
+        },
+        {
+          "title": "Ab initio density functional theory approach to warm dense hydrogen: from density response to electronic correlations",
+          "year": "2025-07",
+          "abstract": "Understanding the properties of warm dense hydrogen is of key importance for\nthe modeling of compact astrophysical objects and to understand and further\noptimize inertial confinement fusion (ICF) applications. The work horse of warm\ndense matter theory is given by thermal density functional theory (DFT), which,\nhowever, suffers from two limitations: (i) its accuracy can depend on the\nutilized exchange--correlation (XC) functional, which has to be approximated\nand (ii) it is generally limited to single-electron properties such as the\ndensity distribution. Here, we present a new ansatz combining time-dependent\nDFT results for the dynamic structure factor $S_{ee}(\\mathbf{q},\\omega)$ with\nstatic DFT results for the density response. This allows us to estimate the\nelectron--electron static structure factor $S_{ee}(\\mathbf{q})$ of warm dense\nhydrogen with high accuracy over a broad range of densities and temperatures.\nIn addition to its value for the study of warm dense matter, our work opens up\nnew avenues for the future study of electronic correlations exclusively within\nthe framework of DFT for a host of applications.",
+          "arxiv_id": "2507.00688v1"
+        },
+        {
+          "title": "Ab initio path integral Monte Carlo simulations of hydrogen snapshots at warm dense matter conditions",
+          "year": "2022-07",
+          "abstract": "We combine ab initio path integral Monte Carlo (PIMC) simulations with fixed\nion configurations from density functional theory molecular dynamics (DFT-MD)\nsimulations to solve the electronic problem for hydrogen under warm dense\nmatter conditions [M.B\\\"ohme et. al. Phys.Rev.Lett.(in print)]. The problem of\npath collapse due to the Coulomb attraction is avoided by utilizing the pair\napproximation, which is compared against the simpler Kelbg pair-potential. We\nfind very favourable convergence behaviour towards the former. Since we do not\nimpose any nodal restrictions, our PIMC simulations are afflicted with the\nnotorious fermion sign problem, which we analyse in detail. While\ncomputationally demanding, our results constitute an exact benchmark for other\nmethods and approximations such as DFT. Our set-up gives us the unique\ncapability to study important properties of warm dense hydrogen such as the\nelectronic static density response and exchange--correlation (XC) kernel\nwithout any model assumptions, which will be very valuable for a variety of\napplications such as the interpretation of experiments and the development of\nnew XC functionals.",
+          "arxiv_id": "2207.14716v2"
+        }
+      ],
+      "4": [
+        {
+          "title": "Existence of an optimized stellarator with simple coils",
+          "year": "2022-01",
+          "abstract": "An optimized compact stellarator with four simple coils is obtained from\ndirect optimization via coil shape. The new stellarator consists of two\ninterlocking coils and two vertical field coils similar to those of the\nColumbia Non-neutral Torus (CNT)[Pedersen et al. Phys. Rev. Lett. 88, 205002\n(2002)]. The optimized configuration has global magnetic well and a low helical\nripple level comparable to that of Wendelstein 7-X (W7-X)[Wolf et al. Nucl.\nFusion 57, 102020 (2017)]. The two interlocking coils have a smooth\nthree-dimensional shape much simpler than those of advanced stellarators such\nas W7-X. This result opens up possibilities of future stellarator reactors with\nsimplified coils.",
+          "arxiv_id": "2201.12547v2"
+        },
+        {
+          "title": "Single-stage gradient-based stellarator coil design: Optimization for near-axis quasi-symmetry",
+          "year": "2020-10",
+          "abstract": "We present a new coil design paradigm for magnetic confinement in\nstellarators. Our approach directly optimizes coil shapes and coil currents to\nproduce a vacuum quasi-symmetric magnetic field with a target rotational\ntransform on the magnetic axis. This approach differs from the traditional\ntwo-stage approach in which first a magnetic configuration with desirable\nphysics properties is found, and then coils to approximately realize this\nmagnetic configuration are designed. The proposed single-stage approach allows\nus to find a compromise between confinement and engineering requirements, i.e.,\nfind easy-to-build coils with good confinement properties. Using forward and\nadjoint sensitivities, we derive derivatives of the physical quantities in the\nobjective, which is constrained by a nonlinear periodic differential equation.\nIn two numerical examples, we compare different gradient-based descent\nalgorithms and find that incorporating approximate second-order derivative\ninformation through a quasi-Newton method is crucial for convergence. We also\nexplore the optimization landscape in the neighborhood of a minimizer and find\nmany directions in which the objective is mostly flat, indicating ample freedom\nto find simple and thus easy-to-build coils.",
+          "arxiv_id": "2010.02033v2"
+        },
+        {
+          "title": "Direct stellarator coil optimization for nested magnetic surfaces with precise quasi-symmetry",
+          "year": "2022-10",
+          "abstract": "We present a robust optimization algorithm for the design of electromagnetic\ncoils that generate vacuum magnetic fields with nested flux surfaces and\nprecise quasi-symmetry. The method is based on a bilevel optimization problem,\nwhere the outer coil optimization is constrained by a set of inner\nleast-squares optimization problems whose solutions describe magnetic surfaces.\nThe outer optimization objective targets coils that generate a field with\nnested magnetic surfaces and good quasi-symmetry. The inner optimization\nproblems identify magnetic surfaces when they exist, and approximate surfaces\nin the presence of magnetic islands or chaos. We show that this formulation can\nbe used to heal islands and chaos, thus producing coils that result in magnetic\nfields with precise quasi-symmetry. We show that the method can be initialized\nwith coils from the traditional two stage coil design process, as well as coils\nfrom a near axis expansion optimization. We present a numerical example where\nisland chains are healed and quasi-symmetry is optimized up to surfaces with\naspect ratio 6. Another numerical example illustrates that the aspect ratio of\nnested flux surfaces with optimized quasi-symmetry can be decreased from 6 to\napproximately 4. The last example shows that our approach is robust and a\ncold-start using coils from a near-axis expansion optimization.",
+          "arxiv_id": "2210.03248v3"
+        }
+      ],
+      "5": [
+        {
+          "title": "Fast Dynamic 1D Simulation of Divertor Plasmas with Neural PDE Surrogates",
+          "year": "2023-05",
+          "abstract": "Managing divertor plasmas is crucial for operating reactor scale tokamak\ndevices due to heat and particle flux constraints on the divertor target.\nSimulation is an important tool to understand and control these plasmas,\nhowever, for real-time applications or exhaustive parameter scans only simple\napproximations are currently fast enough. We address this lack of fast\nsimulators using neural PDE surrogates, data-driven neural network-based\nsurrogate models trained using solutions generated with a classical numerical\nmethod. The surrogate approximates a time-stepping operator that evolves the\nfull spatial solution of a reference physics-based model over time. We use\nDIV1D, a 1D dynamic model of the divertor plasma, as reference model to\ngenerate data. DIV1D's domain covers a 1D heat flux tube from the X-point\n(upstream) to the target. We simulate a realistic TCV divertor plasma with\ndynamics induced by upstream density ramps and provide an exploratory outlook\ntowards fast transients. State-of-the-art neural PDE surrogates are evaluated\nin a common framework and extended for properties of the DIV1D data. We\nevaluate (1) the speed-accuracy trade-off; (2) recreating non-linear behavior;\n(3) data efficiency; and (4) parameter inter- and extrapolation. Once trained,\nneural PDE surrogates can faithfully approximate DIV1D's divertor plasma\ndynamics at sub real-time computation speeds: In the proposed configuration,\n2ms of plasma dynamics can be computed in $\\approx$0.63ms of wall-clock time,\nseveral orders of magnitude faster than DIV1D.",
+          "arxiv_id": "2305.18944v3"
+        },
+        {
+          "title": "Reconstruction of Poloidal Magnetic Fluxes on EAST based on Neural Networks with Measured Signals",
+          "year": "2024-03",
+          "abstract": "The accurate construction of tokamak equilibria, which is critical for the\neffective control and optimization of plasma configurations, depends on the\nprecise distribution of magnetic fields and magnetic fluxes. Equilibrium\nfitting codes, such as EFIT relying on traditional equilibrium algorithms,\nrequire solving the GS equation by iterations based on the least square method\nconstrained with measured magnetic signals. The iterative methods face numerous\nchallenges and complexities in the pursuit of equilibrium optimization.\nFurthermore, these methodologies heavily depend on the expertise and practical\nexperience, demanding substantial resource allocation in personnel and time.\nThis paper reconstructs magnetic equilibria for the EAST tokamak based on\nartificial neural networks through a supervised learning method. We use a fully\nconnected neural network to replace the GS equation and reconstruct the\npoloidal magnetic flux distribution by training the model based on EAST\ndatasets. The training set, validation set, and testing set are partitioned\nrandomly from the dataset of poloidal magnetic flux distributions of the EAST\nexperiments in 2016 and 2017 years. The feasibility of the neural network model\nis verified by comparing it to the offline EFIT results. It is found that the\nneural network algorithm based on the supervised machine learning method can\naccurately predict the location of different closed magnetic flux surfaces at a\nhigh efficiency. The similarities of the predicted X-point position and last\nclosed magnetic surface are both 98%. The Pearson coherence of the predicted q\nprofiles is 92%. Compared with the target value, the model results show the\npotential of the neural network model for practical use in plasma modeling and\nreal-time control of tokamak operations.",
+          "arxiv_id": "2403.10114v1"
+        },
+        {
+          "title": "Fully Convolutional Spatio-Temporal Models for Representation Learning in Plasma Science",
+          "year": "2020-07",
+          "abstract": "We have trained a fully convolutional spatio-temporal model for fast and\naccurate representation learning in the challenging exemplar application area\nof fusion energy plasma science. The onset of major disruptions is a critically\nimportant fusion energy science (FES) issue that must be resolved for advanced\ntokamak. While a variety of statistical methods have been used to address the\nproblem of tokamak disruption prediction and control, recent approaches based\non deep learning have proven particularly compelling. In the present paper, we\nintroduce further improvements to the fusion recurrent neural network (FRNN)\nsoftware suite. Up to now, FRNN was based on the long short-term memory (LSTM)\nvariant of recurrent neural networks to leverage the temporal information in\nthe data. Here, we implement and apply the temporal convolutional neural\nnetwork (TCN) architecture to the time-dependent input signals, thus rendering\nthe FRNN architecture fully convolutional. This allows highly optimized\nconvolution operations to carry the majority of the computational load of\ntraining, thus enabling a reduction in training time, and the effective use of\nhigh performance computing (HPC) resources for hyperparameter tuning. At the\nsame time, the TCN based architecture achieves equal or better predictive\nperformance when compared with the LSTM architecture for a large,\nrepresentative fusion database. Across data-rich scientific disciplines, these\nresults have implications for the resource-effective training of general\nspatio-temporal feature extractors based on deep learning. Moreover, this\nchallenging exemplar case study illustrates the advantages of a predictive\nplatform with flexible architecture selection options capable of being readily\ntuned and adapted for responding to prediction needs that increasingly arise in\nlarge modern observational dataset.",
+          "arxiv_id": "2007.10468v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "JefiPIC: A 3-D Full Electromagnetic Particle-in-Cell Simulator Based on Jefimenko's Equations on GPU",
+          "year": "2022-09",
+          "abstract": "This paper presents a novel 3-D full electromagnetic particle-in-cell (PIC)\ncode called JefiPIC, which uses Jefimenko's equations as the electromagnetic\n(EM) field solver through a full-space integration method. Leveraging the power\nof state-of-the-art graphic processing units (GPUs), we have made the\nchallenging integral task of PIC simulations achievable. Our proposed code\noffers several advantages by utilizing the integral method. Firstly, it offers\na natural solution for modeling non-neutral plasmas without the need for\npre-processing such as solving Poisson's equation. Secondly, it eliminates the\nrequirement for designing elaborate boundary layers to absorb fields and\nparticles. Thirdly, it maintains the stability of the plasma simulation\nregardless of the time step chosen. Lastly, it does not require strict\ncharge-conservation particle-to-grid apportionment techniques or electric field\ndivergence amendment algorithms, which are commonly used in finite-difference\ntime-domain (FDTD)-based PIC simulations. To validate the accuracy and\nadvantages of our code, we compared the evolutions of particles and fields in\ndifferent plasma systems simulated by three other codes. Our results\ndemonstrate that the combination of Jefimenko's equations and the PIC method\ncan produce accurate particle distributions and EM fields in open-boundary\nplasma systems. Additionally, our code is able to accomplish these computations\nwithin an acceptable execution time. This study highlights the effectiveness\nand efficiency of JefiPIC, showing its potential for advancing plasma\nsimulations.",
+          "arxiv_id": "2209.07944v5"
+        },
+        {
+          "title": "A Particle-in-cell Method for Plasmas with a Generalized Momentum Formulation, Part I: Model Formulation",
+          "year": "2022-08",
+          "abstract": "This paper formulates a new particle-in-cell method for the Vlasov-Maxwell\nsystem. Under the Lorenz gauge condition, Maxwell's equations for the\nelectromagnetic fields can be written as a collection of scalar and vector wave\nequations. The use of potentials for the fields motivates the adoption of a\nHamiltonian formulation for particles that employs the generalized momentum.\nThe resulting updates for particles require only knowledge of the fields and\ntheir spatial derivatives. An analytical method for constructing these spatial\nderivatives is presented that exploits the underlying integral solution used in\nthe field solver for the wave equations. Moreover, these derivatives are shown\nto converge at the same rate as the fields in the both time and space. The\nfield solver we consider in this work is first-order accurate in time and\nfifth-order accurate in space and belongs to a larger class of methods which\nare unconditionally stable, can address geometry, and leverage fast summation\nmethods for efficiency. We demonstrate the method on several well-established\nbenchmark problems, and the efficacy of the proposed formulation is\ndemonstrated through a comparison with standard methods presented in the\nliterature. The new method shows mesh-independent numerical heating properties\neven in cases where the plasma Debye length is close to the grid spacing. The\nuse of high-order spatial approximations in the new method means that fewer\ngrid points are required in order to achieve a fixed accuracy. Our results also\nsuggest that the new method can be used with fewer simulation particles per\ncell compared to standard explicit methods, which permits further computational\nsavings.",
+          "arxiv_id": "2208.11291v3"
+        },
+        {
+          "title": "A quasi-static particle-in-cell algorithm based on an azimuthal Fourier decomposition for highly efficient simulations of plasma-based acceleration: QPAD",
+          "year": "2020-02",
+          "abstract": "The 3D quasi-static particle-in-cell (PIC) algorithm is a very efficient\nmethod for modeling short-pulse laser or relativistic charged particle\nbeam-plasma interactions. In this algorithm, the plasma response to a\nnon-evolving laser or particle beam is calculated using Maxwell's equations\nbased on the quasi-static approximate equations that exclude radiation. The\nplasma fields are then used to advance the laser or beam forward using a large\ntime step. The algorithm is many orders of magnitude faster than a 3D fully\nexplicit relativistic electromagnetic PIC algorithm. It has been shown to be\ncapable to accurately model the evolution of lasers and particle beams in a\nvariety of scenarios. At the same time, an algorithm in which the fields,\ncurrents and Maxwell equations are decomposed into azimuthal harmonics has been\nshown to reduce the complexity of a 3D explicit PIC algorithm to that of a 2D\nalgorithm when the expansion is truncated while maintaining accuracy for\nproblems with near azimuthal symmetry. This hybrid algorithm uses a PIC\ndescription in r-z and a gridless description in $\\phi$. We describe a novel\nmethod that combines the quasi-static and hybrid PIC methods. This algorithm\nexpands the fields, charge and current density into azimuthal harmonics. A set\nof the quasi-static field equations are derived for each harmonic. The complex\namplitudes of the fields are then solved using the finite difference method.\nThe beam and plasma particles are advanced in Cartesian coordinates using the\ntotal fields. Details on how this algorithm was implemented using a similar\nworkflow to an existing quasi-static code, QuickPIC, are presented. The new\ncode is called QPAD for QuickPIC with Azimuthal Decomposition. Benchmarks and\ncomparisons between a fully 3D explicit PIC code, a full 3D quasi-static code,\nand the new quasi-static PIC code with azimuthal decomposition are also\npresented.",
+          "arxiv_id": "2002.08494v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "1D planar, cylindrical and spherical subsonic solitary waves in space electron-ion-positive dust plasma systems",
+          "year": "2020-09",
+          "abstract": "The space electron-ion-positive dust plasma system containing isothermal\ninertialess electron species, cold inertial ion species, and stationary\npositive (positivively charged) dust species is considered. The basic features\nof one dimensional (1D) planar and nonplanar subsonic solitary waves are\ninvestigated by the pseudo-potential and reductive perturbation methods,\nrespectively. It is observed that the presence of the positive dust species\nreduces the phase speed of the ion-acoustic waves, and consequently supports\nthe subsonic solitary waves with the positive wave potential in such a space\ndusty plasma system. It is observed that the cylindrical and spherical subsonic\nsolitary waves significantly evolve with time, and that the time evolution of\nthe spherical solitary waves is faster than that of the cylindrical ones. The\napplications of the work in many space dusty plasma systems, particularly in\nEarth's mesosphere, cometary tails, Jupiter's magnetosphere, etc. are\naddressed.",
+          "arxiv_id": "2009.09131v1"
+        },
+        {
+          "title": "Roles of positively charged dust, ion fluid temperature, and nonthermal electrons in the formation of modified-ion-acoustic solitary and shock waves",
+          "year": "2021-04",
+          "abstract": "The dusty plasma system (containing nonthermally distributed inertialess\nelectron species, warm inertial ion species, and positively charged stationary\ndust species) is considered. The basic features of subsonic and supersonic\nmodified-ion-acoustic solitary and shock waves formed in such a dusty plasma\nsystem have been investigated by the reductive perturbation method. It has been\nshown that positively charged dust species play a new role in favor of the\nformation of subsonic solitary and shock waves. On the other hand, the ion\nfluid temperature (represented by the parameter $\\sigma$) and the electron\nnonthermal parameter (represented by $\\alpha$) play new significant roles\nagainst the formation of subsonic solitary and shock waves and give rise to the\nformation of the supersonic solitary and shock waves after their ($\\sigma$'s\nand $\\alpha$'s) certain values. It is also shown that after a certain value of\nthe nonthermal parameter $\\alpha$, the subsonic as well as supersonic solitary\nand shock waves are formed with negative potential. The important applications\nof the results of this theoretical investigation in space and laboratory dusty\nplasma systems are pinpointed.",
+          "arxiv_id": "2104.05936v1"
+        },
+        {
+          "title": "Large amplitude dust-acoustic solitary waves and double layers in nonthermal warm complex plasmas",
+          "year": "2023-07",
+          "abstract": "Using a Sagdeev pseudopotential approach where the nonlinear structures are\nstationary in a comoving frame, the arbitrary or large amplitude dust-acoustic\nsolitary waves and double layers have been studied in dusty plasmas containing\nwarm positively charged dust and nonthermal distributed electrons and ions.\nDepending on the values of the critical Mach number, which varies with the\nplasma parameter, both supersonic and subsonic dust-acoustic solitary waves are\nfound. It is found that our plasma system under consideration supports both\npositive and negative supersonic solitary waves, and only positive subsonic\nsolitary waves and negative double layers. The parametric regimes for the\nexistence of subsonic and supersonic dust-acoustic waves and how the polarity\nof solitary waves changes with plasma parameters are shown. It is observed that\nthe solitary waves and double layers solution exist at the values of Mach\nnumber around its critical Mach number. The basic properties (amplitude, width,\nspeed, etc.) of the solitary pulses and double layers are significantly\nmodified by the plasma parameters (viz. ion to positive dust number density\nratio, ion to electron temperature ratio, nonthermal parameter, positive dust\ntemperature to ion temperature ratio, etc.). The applications of our present\nwork in space environments (viz. cometary tails, Earth's mesosphere, Jupiter's\nmagnetosphere, etc.) and laboratory devices, where nonthermal ions and\nelectrons species along with positively charged dust species have been\nobserved, are briefly discussed.",
+          "arxiv_id": "2307.16635v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "Runaway Electron Dynamics in ITER Disruptions with Shattered Pellet Injections",
+          "year": "2024-01",
+          "abstract": "This study systematically explores the parameter space of disruption\nmitigation through shattered pellet injection in ITER with a focus on runaway\nelectron dynamics, using the disruption modelling tool DREAM. The physics\nfidelity is considerably increased compared to previous studies, by e.g., using\nrealistic magnetic geometry, resistive wall configuration, thermal quench onset\ncriteria, as well as including additional effects, such as ion transport and\nenhanced runaway electron transport during the thermal quench. The work aims to\nprovide a fairly comprehensive coverage of experimentally feasible scenarios,\nconsidering plasmas representative of both non-activated and high-performance\nDT operation, different thermal quench onset criteria and transport levels, a\nwide range of hydrogen and neon quantities injected in one or two stages, and\npellets with various characteristic shard sizes. Using a staggered injection\nscheme, with a pure hydrogen injection preceding a mixed hydrogen-neon\ninjection, we find injection parameters leading to acceptable runaway electron\ncurrents in all investigated discharges without activated runaway sources.\nDividing the injection into two stages is found to significantly enhance the\nassimilation and minimize runaway electron generation due to the hot-tail\nmechanism. However, while a staggered injection outperforms a single stage\ninjection also in cases with radioactive runaway electron sources, no cases\nwith acceptable runaway electron currents are found for a DT-plasma with a 15\nMA plasma current.",
+          "arxiv_id": "2401.14167v1"
+        },
+        {
+          "title": "Drift surface solver for runaway electron current dominant equilibria during the Current Quench",
+          "year": "2023-03",
+          "abstract": "Runaway electron current generated during the Current Quench phase of tokamak\ndisruptions could result in severe damage to future high performance devices.\nTo control and mitigate such runaway electron current, it is important to\naccurately describe the runaway electron current dominated equilibrium, based\non which further stability analysis could be carried out. In this paper, we\nderive a Grad-Shafranov-like equation solving for the axisymmetric drift\nsurfaces of the runaway electrons for the simple case that all runaway electron\nshare the same parallel momentum. This new equilibrium equation is then\nnumerically solved with simple rectangular wall with ITER-like and MAST-like\ngeometry parameters. The deviation between the drift surfaces and the flux\nsurfaces is readily obtained, and runaway electrons is found to be well\nconfined even in regions with open field lines. The change of the runaway\nelectron parallel momentum is found to result in a horizontal current center\ndisplacement without any changes in the total current or the external field.\nThe runaway current density profile is found to affect the susceptibility of\nsuch displacement, with flatter profiles result in more displacement by the\nsame momentum change. With up-down asymmetry in the external poloidal field,\nsuch displacement is accompanied by a vertical displacement of runaway electron\ncurrent. It is found that this effect is more pronounced in smaller, compact\ndevice and weaker poloidal field cases. The above results demonstrate the\ndynamics of current center displacement caused by the momentum space change in\nthe runaway electrons, and pave way for future, more sophisticated runaway\ncurrent equilibrium theory with more realistic consideration on the runaway\nelectron momentum distribution. This new equilibrium theory also provides\nfoundation for future stability analysis of the runaway electron current.",
+          "arxiv_id": "2303.01153v1"
+        },
+        {
+          "title": "Electron runaway in ASDEX Upgrade experiments of varying core temperature",
+          "year": "2021-01",
+          "abstract": "The formation of a substantial post-disruption runaway electron current in\nASDEX Upgrade material injection experiments is determined by avalanche\nmultiplication of a small seed population of runaway electrons. For the\ninvestigation of these scenarios, the runaway electron description of the\ncoupled 1.5D transport solvers ASTRA-STRAHL is amended by a fluid-model\ndescribing electron runaway caused by the hot-tail mechanism. Applied in\nsimulations of combined background plasma evolution, material injection, and\nrunaway electron generation in ASDEX Upgrade discharge #33108, both the Dreicer\nand hot-tail mechanism for electron runaway produce only $\\sim$ 3$~$kA of\nrunaway current. In colder plasmas with core electron temperatures\n$T_\\mathrm{e,c}$ below 9$~$keV, the post-disruption runaway current is\npredicted to be insensitive to the initial temperature, in agreement with\nexperimental observations. Yet in hotter plasmas with $T_\\mathrm{e,c} >\n10~\\mathrm{keV}$, hot-tail runaway can be increased by up to an order of\nmagnitude, contributing considerably to the total post-disruption runaway\ncurrent. In ASDEX Upgrade high temperature runaway experiments, however, no\nrunaway current is observed at the end of the disruption, despite favourable\nconditions for both primary and secondary runaway.",
+          "arxiv_id": "2101.04471v3"
+        }
+      ],
+      "9": [
+        {
+          "title": "Theory of spatially non-symmetric kinetic equilibria for collisionless plasmas",
+          "year": "2023-06",
+          "abstract": "The problem posed by the possible existence/non-existence of spatially\nnon-symmetric kinetic equilibria has remained unsolved in plasma theory. For\ncollisionless magnetized plasmas this involves the construction of stationary\nsolutions of the Vlasov-Maxwell equations. In this paper the issue is addressed\nfor non-relativistic plasmas both in astrophysical and laboratory contexts. The\ntreatment is based on a Lagrangian variational description of single-particle\ndynamics. Starting point is a non-perturbative formulation of gyrokinetic\ntheory, which allows one to construct \"a posteriori\" with prescribed order of\naccuracy an asymptotic representation for the magnetic moment. In terms of the\nrelevant particle adiabatic invariants generalized bi-Maxwellian equilibria are\nproved to exist. These are shown to recover, under suitable assumptions, a\nChapman-Enskog form which permits an analytical treatment of the corresponding\nfluid moments. In particular, the constrained posed by the Poisson and the\nAmpere equations are analyzed, both for quasi-neutral and non-neutral plasmas.\nThe conditions of existence of the corresponding non-symmetric kinetic\nequilibria are investigated. As a notable feature, both astrophysical and\nlaboratory plasmas are shown to exhibit, under suitable conditions, a kinetic\ndynamo, whereby the equilibrium magnetic field can be self-generated by the\nequilibrium plasma currents.",
+          "arxiv_id": "2307.00090v1"
+        },
+        {
+          "title": "Analytic Hall Magnetohydrodynamics toroidal equilibria via the energy-Casimir variational principle",
+          "year": "2023-07",
+          "abstract": "Equilibrium equations for magnetically confined, axisymmetric plasmas are\nderived by means of the energy-Casimir variational principle in the context of\nHall magnetohydrodynamics (MHD). This approach stems from the noncanonical\nHamiltonian structure of Hall MHD, the simplest, quasineutral two-fluid model\nthat incorporates contributions due to ion Hall drifts. The axisymmetric\nCasimir invariants are used, along with the Hamiltonian functional to apply the\nenergy-Casimir variational principle for axisymmetric two-fluid plasmas with\nincompressible ion flows. This results in a system of equations of the\nGrad-Shafranov-Bernoulli (GSB) type with four free functions. Two families of\nanalytic solutions to the GSB system are then calculated, based on specific\nchoices for the free functions. These solutions are subsequently applied to\nTokamak-relevant configurations using proper boundary shaping methods. The Hall\nMHD model predicts a departure of the ion velocity surfaces from the magnetic\nsurfaces which are frozen in the electron fluid. This separation of the\ncharacteristic surfaces is corroborated by the analytic solutions calculated in\nthis study. The equilibria constructed by these solutions exhibit favorable\ncharacteristics for plasma confinement, for example they possess closed and\nnested magnetic and flow surfaces with pressure profiles peaked at the plasma\ncore. The relevance of these solutions to laboratory and astrophysical plasmas\nis finally discussed, with particular focus on systems that involve length\nscales on the order of the ion skin depth.",
+          "arxiv_id": "2307.16091v1"
+        },
+        {
+          "title": "Spatial dynamics formulation of magnetohydrostatics",
+          "year": "2023-10",
+          "abstract": "We present a formalism for importing techniques from dynamical systems theory\nin the study of three-dimensional magnetohydrodynamic (MHD) equilibria. By\ntreating toroidal angle as time, we reformulate the equilibrium equations as\nhydrodynamic equations on the unit disc. They satisfy a variational principle\nand comprise a Lie-Poisson Hamiltonian system. We use the variational principle\nto find conservation laws for circulation, vorticity when pressure vanishes,\nand energy in axisymmetric domains. Combining the Lie-Poisson structure with a\nconstruction due to Scovel-Weinstein, we develop a theory of smoothed particle\nmagnetohydrostatics (SPMHS). SPMHS identifies a large class of exact\nparticle-swarm solutions of regularized spatial dynamics equations. The\nregularization occurs at finer scales than the smallest scales within the\nphysical purview of ideal MHD. Crucially, the SPMHS equations of motion\ncomprise a finite-dimensional Hamiltonian system, which side steps perennial\nroadblocks to a satisfactory theory of three-dimensional equilibria. In\nlarge-aspect-ratio domains, we show the spatial dynamics equations comprise a\nfast-slow system, where fast dynamics corresponds to the elliptic part of the\nequilibrium equations and slow dynamics corresponds to the hyperbolic part.\nBecause the fast dynamics is formally normally hyperbolic, Fenichel theory\nsuggests the presence of an exact slow manifold for the spatial dynamics\nequations that contains all physical solutions. We formally carry out reduction\nto the slow manifold, obtaining a spatial dynamics formulation for equilibrium\nStrauss reduced MHD at leading order and a hierarchy of corrections at any\ndesired order in perturbation theory. In large aspect-ratio domains, finding\nperiodic solutions of the slow manifold reduced equations represents a second\nnovel pathway to finding three-dimensional equilibria.",
+          "arxiv_id": "2310.16220v1"
+        }
+      ],
+      "10": [
+        {
+          "title": "Anisotropic anomalous diffusion in microgravity dusty plasma. Part One: Nonextensive Statistical Analysis",
+          "year": "2024-11",
+          "abstract": "Anisotropic anomalous dust diffusion in microgravity dusty plasma is\ninvestigated using experimental data from the Plasmakristall-4 (PK-4) facility\non board the International Space Station. The PK-4 experiment uses video\ncameras to track individual dust particles, which allows the collection of\nlarge amounts of statistical information on the dust particle positions and\nvelocities. These statistics are used to quantify anomalous dust diffusion\ncaused by anisotropies in the plasma-mediated dust-dust interactions in PK-4.\nAnisotropies are caused by an externally applied polarity-switched electric\nfield, which modifies the ion wakefields surrounding the dust grains. Video\ndata for nine sets of pressure-current conditions are used to recover Mean\nSquared Displacement (MSD) plots after subtracting particle drift. Position and\nvelocity histograms are fitted to Tsallis nonextensive probability distribution\nfunctions (PDFs). Both MSDs and PDFs indicate a crossover from suprathermal to\nL\\'evy diffusion in the axial direction at higher pressure conditions. In\naddition, increasing the pressure enhances dust thermal equilibrium, while\nincreasing the current drives the system away from equilibrium.",
+          "arxiv_id": "2411.15705v3"
+        },
+        {
+          "title": "Dynamical states in two-dimensional charged dust particle clusters in plasma medium",
+          "year": "2020-05",
+          "abstract": "The formation of novel dynamical states for a collection of dust particles in\ntwo dimensions has been shown with the help of Molecular Dynamics (MD)\nsimulation. The charged dust particles interact with each other with Yukawa\npair potential mimicking the screening due to plasma. Additionally, an external\nradial confining force has also been applied to the dust particles to keep them\nradially confined. When the particle number is low ( say a few), they get\narranged on the radial location corresponding to multiple rings/shells. For\nspecific numbers, such an arrangement of particles is stationary. However, for\nseveral cases, the cluster of dust particles relaxes to a state for which the\ndust particles on rings display inter-shell rotation. For a larger number of\ndust particles ( a few hundred for instance ) a novel equilibrium state with\ncoherent rigid body displaying angular oscillation of the entire cluster is\nobserved. A detailed characterization of the formation of these states in terms\nof particle number, coupling parameter, etc., has been provided.",
+          "arxiv_id": "2005.07980v2"
+        },
+        {
+          "title": "Magnetized dusty plasma: On issues of its complexity and magnetization of charged dust particles",
+          "year": "2023-05",
+          "abstract": "It is possible to excite various linear and non-linear low-frequency modes in\ndusty plasma which is an admixture of electrons, ions, gas atoms, and\nnegatively charged solid particles. The experimental as well as theoretical\nstudy of these low-frequency dynamical modes in dusty plasma is very complex\nbecause of the involvement of dynamics of electrons, ions, and neutrals. If the\nexternal magnetic field is introduced to dusty plasma then the dynamics of it\nwill be more complex. The complexity of magnetized dusty plasma where plasma\nspecies are magnetized is discussed by keeping the experimental observations in\nmagnetized dusty plasma devices in mind. The requirement of theoretical\nmodeling, as well as computation experiments in understanding the dynamics of\ndusty plasma in the presence of a strong magnetic field, is highlighted in the\ncontext of experimental findings. The major challenges to magnetizing charged\nmassive particles in experiments and some expected solutions are discussed in\nthis report.",
+          "arxiv_id": "2305.16898v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:42:17Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

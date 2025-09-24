@@ -1,0 +1,432 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_paper_model_time",
+        "keywords": [
+          [
+            "data",
+            0.046907192361002124
+          ],
+          [
+            "paper",
+            0.03276343132575979
+          ],
+          [
+            "model",
+            0.029887062168605965
+          ],
+          [
+            "time",
+            0.029377443036902373
+          ],
+          [
+            "models",
+            0.02747336690984369
+          ],
+          [
+            "process",
+            0.02606088166645997
+          ],
+          [
+            "research",
+            0.02519326029054183
+          ],
+          [
+            "systems",
+            0.022948786474949905
+          ],
+          [
+            "design",
+            0.02220682192982722
+          ],
+          [
+            "different",
+            0.02179985175818939
+          ]
+        ],
+        "count": 339
+      },
+      "1": {
+        "name": "1_delay_circuit_circuits_design",
+        "keywords": [
+          [
+            "delay",
+            0.045416020721850234
+          ],
+          [
+            "circuit",
+            0.040029647036460426
+          ],
+          [
+            "circuits",
+            0.03669384311675539
+          ],
+          [
+            "design",
+            0.03665661164292356
+          ],
+          [
+            "model",
+            0.03626186100187392
+          ],
+          [
+            "method",
+            0.033447130478661456
+          ],
+          [
+            "digital",
+            0.03126642779119964
+          ],
+          [
+            "simulation",
+            0.02859221284515335
+          ],
+          [
+            "analog",
+            0.02707050622831325
+          ],
+          [
+            "results",
+            0.025204871813705808
+          ]
+        ],
+        "count": 33
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.1429670623546727
+      ],
+      [
+        -0.1429670623546727,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        5,
+        0
+      ],
+      "2020-02": [
+        8,
+        0
+      ],
+      "2020-03": [
+        7,
+        2
+      ],
+      "2020-04": [
+        14,
+        0
+      ],
+      "2020-05": [
+        8,
+        0
+      ],
+      "2020-06": [
+        11,
+        3
+      ],
+      "2020-07": [
+        13,
+        1
+      ],
+      "2020-08": [
+        9,
+        2
+      ],
+      "2020-09": [
+        3,
+        0
+      ],
+      "2020-10": [
+        7,
+        0
+      ],
+      "2020-11": [
+        2,
+        0
+      ],
+      "2020-12": [
+        8,
+        2
+      ],
+      "2021-01": [
+        3,
+        0
+      ],
+      "2021-02": [
+        4,
+        0
+      ],
+      "2021-03": [
+        3,
+        0
+      ],
+      "2021-04": [
+        6,
+        2
+      ],
+      "2021-05": [
+        7,
+        2
+      ],
+      "2021-06": [
+        10,
+        1
+      ],
+      "2021-07": [
+        7,
+        0
+      ],
+      "2021-08": [
+        11,
+        1
+      ],
+      "2021-09": [
+        3,
+        0
+      ],
+      "2021-10": [
+        6,
+        1
+      ],
+      "2021-11": [
+        4,
+        1
+      ],
+      "2021-12": [
+        2,
+        0
+      ],
+      "2022-01": [
+        3,
+        0
+      ],
+      "2022-02": [
+        6,
+        0
+      ],
+      "2022-03": [
+        5,
+        1
+      ],
+      "2022-04": [
+        5,
+        1
+      ],
+      "2022-05": [
+        7,
+        1
+      ],
+      "2022-06": [
+        2,
+        1
+      ],
+      "2022-08": [
+        6,
+        0
+      ],
+      "2022-09": [
+        6,
+        0
+      ],
+      "2022-10": [
+        6,
+        1
+      ],
+      "2022-11": [
+        4,
+        1
+      ],
+      "2022-12": [
+        3,
+        0
+      ],
+      "2023-01": [
+        9,
+        1
+      ],
+      "2023-02": [
+        4,
+        0
+      ],
+      "2023-03": [
+        4,
+        1
+      ],
+      "2023-04": [
+        2,
+        0
+      ],
+      "2023-05": [
+        3,
+        2
+      ],
+      "2023-06": [
+        5,
+        1
+      ],
+      "2023-07": [
+        8,
+        1
+      ],
+      "2023-08": [
+        3,
+        0
+      ],
+      "2023-09": [
+        4,
+        0
+      ],
+      "2023-10": [
+        7,
+        0
+      ],
+      "2023-11": [
+        1,
+        2
+      ],
+      "2023-12": [
+        2,
+        0
+      ],
+      "2024-01": [
+        5,
+        0
+      ],
+      "2024-02": [
+        10,
+        1
+      ],
+      "2024-03": [
+        3,
+        0
+      ],
+      "2024-04": [
+        3,
+        0
+      ],
+      "2024-05": [
+        2,
+        2
+      ],
+      "2024-06": [
+        1,
+        1
+      ],
+      "2024-07": [
+        2,
+        0
+      ],
+      "2024-08": [
+        5,
+        0
+      ],
+      "2024-09": [
+        2,
+        1
+      ],
+      "2024-10": [
+        6,
+        1
+      ],
+      "2024-11": [
+        2,
+        0
+      ],
+      "2024-12": [
+        5,
+        1
+      ],
+      "2025-01": [
+        1,
+        0
+      ],
+      "2025-02": [
+        5,
+        1
+      ],
+      "2025-03": [
+        1,
+        1
+      ],
+      "2025-04": [
+        7,
+        2
+      ],
+      "2025-05": [
+        4,
+        0
+      ],
+      "2025-06": [
+        5,
+        0
+      ],
+      "2025-07": [
+        3,
+        2
+      ],
+      "2025-08": [
+        4,
+        0
+      ],
+      "2025-09": [
+        2,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "NDE 4.0 From Design Thinking to Strategy",
+          "year": "2020-03",
+          "abstract": "Cyber technologies are offering new horizons for quality control in\nmanufacturing and safety assurance in-service of physical assets. The line\nbetween non-destructive evaluation (NDE) and Industry 4.0 is getting blurred\nsince both are sensory data-driven domains. This multidisciplinary approach has\nled to the emergence of a new capability: NDE 4.0. The NDT community is coming\ntogether once again to define the purpose, chart the process, and address the\nadoption of emerging technologies. In this paper, the authors have taken a\ndesign thinking approach to spotlight proper objectives for research on this\nsubject. It begins with qualitative research on twenty different perceptions of\nstakeholders and misconceptions around the current state of NDE. The\ninterpretation is used to define ten value propositions or use cases under \"NDE\nfor Industry 4.0\" and \"Industry 4.0 for NDE\" leading up to the clarity of\npurpose for NDE 4.0, enhanced safety and economic value for stakeholders. To\npursue this worthy cause, the paper delves into some of the top adoption\nchallenges, and proposes a journey of managed innovation, conscious skills\ndevelopment, and a new form of leadership required to succeed in the\ncyber-physical world.",
+          "arxiv_id": "2003.07773v2"
+        },
+        {
+          "title": "A Brief Discussion on the Philosophical Principles and Development Directions of Data Circulation",
+          "year": "2024-07",
+          "abstract": "The data circulation is a complex scenario involving a large number of\nparticipants and different types of requirements, which not only has to comply\nwith the laws and regulations, but also faces multiple challenges in technical\nand business areas. In order to systematically and comprehensively address\nthese issues, it is essential to have a comprehensive and profound\nunderstanding of 'data circulation'.\n  The traditional analysis method tends to proceed based on the traditional\ncirculation model of commodities, that is, tangible objects, which has some\ndefects and shortcomings, and tends to be a formalized approach, which is faced\nnumerous challenges in practice. This paper analyzes the circulation of data\nwith a philosophical approach, obtains the new explication of data and\nexecuting entity, and provides a new definition of the concepts of data\nutilization and data key stakeholders (objects). At the same time, it puts\nforward the idea of ``data alienation'', and constructs a new interpretive\nframework of ``data circulation''.\n  Based on the framework of this interpretation, it is clearly proposed that\n``data alienation'' is the core of ``data circulation'', benefit distribution\nis the driving force, and legal compliance is the foundation, and further\ndiscussed the three modes of ``data circulation''. It further discusses the\nthree modes of ``data circulation''. It is pointed out that ``data\ncirculation'' is different from traditional ``commodity circulation''. To\nachieve ``data circulation'',a comprehensive information infrastructure needs\nto be established. from a theoretical point of view, it lays a solid foundation\nfor the development of ``data circulation''.",
+          "arxiv_id": "2407.16719v1"
+        },
+        {
+          "title": "Integration of IoT- AI powered local weather forecasting: A Game-Changer for Agriculture",
+          "year": "2024-12",
+          "abstract": "The dynamic environment context necessitates harnessing digital technologies,\nincluding artificial intelligence and the Internet of Things, to supply\nhigh-resolution, real-time meteorological data to support agricultural\ndecision-making and improve overall farm productivity and sustainability. This\nstudy investigates the potential application of various AI-powered, IoT-based,\nlow-cost platforms for local weather forecasting to enable smart farming.\nDespite the increasing demand for this topic, a few promising studies have\nexplored this area. This paper developed a conceptual research framework based\non a systematic review of relevant literature and employed a case study method\nto validate the framework. The framework comprised five key components: the\nData Acquisition Layer, Data Storage Layer, Data Processing Layer, Application\nLayer, and Decision-Making Layer. This paper contributes to the literature by\nexploring the integration of AI-ML and IoT techniques for weather prediction\ntasks to support agriculture, and the incorporation of IoT technologies that\nprovide real-time, high-resolution meteorological data, representing a step\nforward. Furthermore, this paper discusses key research gaps, such as the\nsignificant obstacles impeding the adoption of AI in agriculture and local\nweather forecasting, including the lack of straightforward solutions and the\nlack of digital skills among farmers, particularly those in rural areas.\nFurther empirical research is needed to enhance the existing frameworks and\naddress these challenges.",
+          "arxiv_id": "2501.14754v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "A Digital Delay Model Supporting Large Adversarial Delay Variations",
+          "year": "2023-01",
+          "abstract": "Dynamic digital timing analysis is a promising alternative to analog\nsimulations for verifying particularly timing-critical parts of a circuit. A\nnecessary prerequisite is a digital delay model, which allows to accurately\npredict the input-to-output delay of a given transition in the input signal(s)\nof a gate. Since all existing digital delay models for dynamic digital timing\nanalysis are deterministic, however, they cannot cover delay fluctuations\ncaused by PVT variations, aging and analog signal noise. The only exception\nknown to us is the $\\eta$-IDM introduced by F\\\"ugger et al. at DATE'18, which\nallows to add (very) small adversarially chosen delay variations to the\ndeterministic involution delay model, without endangering its faithfulness. In\nthis paper, we show that it is possible to extend the range of allowed delay\nvariations so significantly that realistic PVT variations and aging are covered\nby the resulting extended $\\eta$-IDM.",
+          "arxiv_id": "2301.09588v2"
+        },
+        {
+          "title": "A Faithful Binary Circuit Model with Adversarial Noise",
+          "year": "2020-06",
+          "abstract": "Accurate delay models are important for static and dynamic timing analysis of\ndigital circuits, and mandatory for formal verification. However, F\\\"ugger et\nal. [IEEE TC 2016] proved that pure and inertial delays, which are employed for\ndynamic timing analysis in state-of-the-art tools like ModelSim, NC-Sim and\nVCS, do not yield faithful digital circuit models. Involution delays, which are\nbased on delay functions that are mathematical involutions depending on the\nprevious-output-to-input time offset, were introduced by F\\\"ugger et al.\n[DATE'15] as a faithful alternative (that can easily be used with existing\ntools). Although involution delays were shown to predict real signal traces\nreasonably accurately, any model with a deterministic delay function is\nnaturally limited in its modeling power. In this paper, we thus extend the\ninvolution model, by adding non-deterministic delay variations (random or even\nadversarial), and prove analytically that faithfulness is not impaired by this\ngeneralization. Albeit the amount of non-determinism must be considerably\nrestricted to ensure this property, the result is surprising: the involution\nmodel differs from non-faithful models mainly in handling fast glitch trains,\nwhere small delay shifts have large effects. This originally suggested that\nadding even small variations should break the faithfulness of the model, which\nturned out not to be the case. Moreover, the results of our simulations also\nconfirm that this generalized involution model has larger modeling power and,\nhence, applicability.",
+          "arxiv_id": "2006.08485v2"
+        },
+        {
+          "title": "An Accurate Hybrid Delay Model for Multi-Input Gates",
+          "year": "2022-11",
+          "abstract": "In order to facilitate the analysis of timing relations between individual\ntransitions in a signal trace, dynamic digital timing analysis offers a less\naccurate but much faster alternative to analog simulations of digital circuits.\nThis primarily requires gate delay models that also account for the fact that\nthe input-to-output delay of a particular input transition also depends on the\ntemporal distance to the previous output transitions. In the case of\nmulti-input gates, the delay also experiences variations caused by multi-input\nswitching (MIS) effects, i.e., transitions at different inputs that occur in\nclose temporal proximity. In this paper, we advocate the development of hybrid\ndelay models for CMOS gates obtained by replacing transistors with time-variant\nresistors. We exemplify our approach by applying it to a NOR gate (and, hence,\nto the dual NAND gate) and a Muller C gate. We analytically solve the resulting\nfirst-order differential equations with non-constant-coefficients, and derive\nanalytic expressions for the resulting MIS gate delays. The resulting formulas\nnot only pave the way to a sound model parametrization procedure, but are also\ninstrumental for implementing fast and efficient digital timing simulation. By\ncomparison with analog simulation data, we show that our models faithfully\nrepresent all relevant MIS effects. Using an implementation in the Involution\nTool, we demonstrate that our model surpasses the alternative digital delay\nmodels for NOR gates known to us in terms of accuracy, with comparably short\nrunning times.",
+          "arxiv_id": "2211.10628v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:19:52Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

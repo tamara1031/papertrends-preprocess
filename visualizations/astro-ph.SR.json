@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_stars_mass_star_stellar",
+        "keywords": [
+          [
+            "stars",
+            0.039952137168886966
+          ],
+          [
+            "mass",
+            0.029238729177252433
+          ],
+          [
+            "star",
+            0.026338939600002644
+          ],
+          [
+            "stellar",
+            0.02473975503140985
+          ],
+          [
+            "binary",
+            0.015403107929605734
+          ],
+          [
+            "data",
+            0.014734706622484127
+          ],
+          [
+            "observations",
+            0.014381955257306766
+          ],
+          [
+            "high",
+            0.014245933700500715
+          ],
+          [
+            "evolution",
+            0.014020810853901139
+          ],
+          [
+            "models",
+            0.013885679577245047
+          ]
+        ],
+        "count": 19024
+      },
+      "1": {
+        "name": "1_solar_magnetic_field_Solar",
+        "keywords": [
+          [
+            "solar",
+            0.05043868099513524
+          ],
+          [
+            "magnetic",
+            0.040604874155547206
+          ],
+          [
+            "field",
+            0.027553037713745423
+          ],
+          [
+            "Solar",
+            0.022654156349314756
+          ],
+          [
+            "coronal",
+            0.0224088360270146
+          ],
+          [
+            "magnetic field",
+            0.018813100381725893
+          ],
+          [
+            "flux",
+            0.018789756531096227
+          ],
+          [
+            "observations",
+            0.01729320510288216
+          ],
+          [
+            "flare",
+            0.015770927941499917
+          ],
+          [
+            "plasma",
+            0.01569493968172615
+          ]
+        ],
+        "count": 5749
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.3871223084640649
+      ],
+      [
+        -0.3871223084640649,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        276,
+        84
+      ],
+      "2020-02": [
+        286,
+        81
+      ],
+      "2020-03": [
+        267,
+        85
+      ],
+      "2020-04": [
+        268,
+        80
+      ],
+      "2020-05": [
+        269,
+        107
+      ],
+      "2020-06": [
+        354,
+        103
+      ],
+      "2020-07": [
+        300,
+        107
+      ],
+      "2020-08": [
+        253,
+        99
+      ],
+      "2020-09": [
+        288,
+        122
+      ],
+      "2020-10": [
+        293,
+        116
+      ],
+      "2020-11": [
+        291,
+        85
+      ],
+      "2020-12": [
+        259,
+        88
+      ],
+      "2021-01": [
+        222,
+        117
+      ],
+      "2021-02": [
+        212,
+        98
+      ],
+      "2021-03": [
+        276,
+        108
+      ],
+      "2021-04": [
+        224,
+        92
+      ],
+      "2021-05": [
+        232,
+        86
+      ],
+      "2021-06": [
+        223,
+        94
+      ],
+      "2021-07": [
+        260,
+        97
+      ],
+      "2021-08": [
+        226,
+        82
+      ],
+      "2021-09": [
+        284,
+        110
+      ],
+      "2021-10": [
+        248,
+        92
+      ],
+      "2021-11": [
+        294,
+        70
+      ],
+      "2021-12": [
+        219,
+        88
+      ],
+      "2022-01": [
+        220,
+        95
+      ],
+      "2022-02": [
+        226,
+        78
+      ],
+      "2022-03": [
+        294,
+        99
+      ],
+      "2022-04": [
+        218,
+        86
+      ],
+      "2022-05": [
+        259,
+        105
+      ],
+      "2022-06": [
+        319,
+        82
+      ],
+      "2022-07": [
+        235,
+        92
+      ],
+      "2022-08": [
+        225,
+        83
+      ],
+      "2022-09": [
+        294,
+        101
+      ],
+      "2022-10": [
+        282,
+        98
+      ],
+      "2022-11": [
+        261,
+        130
+      ],
+      "2022-12": [
+        201,
+        98
+      ],
+      "2023-01": [
+        290,
+        105
+      ],
+      "2023-02": [
+        238,
+        80
+      ],
+      "2023-03": [
+        295,
+        103
+      ],
+      "2023-04": [
+        225,
+        74
+      ],
+      "2023-05": [
+        256,
+        92
+      ],
+      "2023-06": [
+        303,
+        99
+      ],
+      "2023-07": [
+        263,
+        87
+      ],
+      "2023-08": [
+        244,
+        90
+      ],
+      "2023-09": [
+        273,
+        100
+      ],
+      "2023-10": [
+        320,
+        82
+      ],
+      "2023-11": [
+        255,
+        80
+      ],
+      "2023-12": [
+        210,
+        77
+      ],
+      "2024-01": [
+        294,
+        121
+      ],
+      "2024-02": [
+        220,
+        107
+      ],
+      "2024-03": [
+        256,
+        97
+      ],
+      "2024-04": [
+        279,
+        82
+      ],
+      "2024-05": [
+        301,
+        107
+      ],
+      "2024-06": [
+        238,
+        76
+      ],
+      "2024-07": [
+        278,
+        92
+      ],
+      "2024-08": [
+        248,
+        84
+      ],
+      "2024-09": [
+        275,
+        111
+      ],
+      "2024-10": [
+        326,
+        116
+      ],
+      "2024-11": [
+        292,
+        81
+      ],
+      "2024-12": [
+        267,
+        80
+      ],
+      "2025-01": [
+        270,
+        95
+      ],
+      "2025-02": [
+        249,
+        86
+      ],
+      "2025-03": [
+        309,
+        95
+      ],
+      "2025-04": [
+        283,
+        103
+      ],
+      "2025-05": [
+        280,
+        130
+      ],
+      "2025-06": [
+        275,
+        98
+      ],
+      "2025-07": [
+        319,
+        107
+      ],
+      "2025-08": [
+        266,
+        95
+      ],
+      "2025-09": [
+        182,
+        66
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "The EBLM project -- XIII. The absolute dynamical masses of the circumbinary planet host TOI-1338/BEBOP-1",
+          "year": "2024-02",
+          "abstract": "High-contrast eclipsing binaries with low mass M-dwarf secondaries are\nprecise benchmark stars to build empirical mass-radius relationships for fully\nconvective low-mass ($\\rm M_{*} < 0.35\\,M_{\\rm sun}$) dwarf stars. The\ncontributed light of the M-dwarf in such binaries is usually much less than\none~per~cent at optical wavelengths. This enables the detection of circumbinary\nplanets from precise radial velocity measurements. High-resolution\ncross-correlation techniques are typically used to detect exoplanet\natmospheres. One key aspect of these techniques is the post-processing, which\nincludes the removal of telluric and spectral lines of the host star. We\nintroduce the application of such techniques to optical high-resolution spectra\nof the circumbinary planet-host TOI-1338/BEBOP-1, turning it effectively into a\ndouble-lined eclipsing binary. By using simulations, we further explore the\nimpact of post-processing techniques for high-contrast systems. We detect the\nM-dwarf secondary with a significance of 11-$\\sigma$ and measure absolute\ndynamical masses for both components. Compared to previous model-dependent mass\nmeasurements, we obtain a four times better precision. We further find that the\npost-processing results in negligible systematic impact on the radial velocity\nprecision for TOI-1338/BEBOP-1 with more than $96.6\\,$per~cent (1-$\\sigma$) of\nthe M-dwarf's signal being conserved. We show that these methods can be used to\nrobustly measure dynamical masses of high-contrast single-lined binaries\nproviding important benchmark stars for stellar evolution particularly near the\nbottom of the main sequence. We also demonstrate how to retrieve the phase\ncurve of an exoplanet with high-resolution spectroscopy using our data.",
+          "arxiv_id": "2402.06449v1"
+        },
+        {
+          "title": "Spectroscopic variability of massive pre-main-sequence stars in M17",
+          "year": "2023-10",
+          "abstract": "It is a challenge to study the formation process of massive stars: their\nformation time is short, they are few, often deeply embedded, and at relatively\nlarge distances. Our strategy is to study the outcome of the star formation\nprocess and to look for signatures remnant of the formation. We have access to\na unique sample of (massive) pre-main-sequence (PMS) stars in the giant HII\nregion M17, showing a photosphere and circumstellar disk. The aim is to\ndetermine the variability properties of the hot gaseous disks to understand the\nphysical origin of the emission lines and identify dominant physical processes\nin these disks. We have obtained multiple-epoch (4-5 epochs) VLT/X-shooter\nspectra of six young stars in M17 covering about a decade. Using stacked\nspectra we update the spectral classification and identify circumstellar\nfeatures. With the temporal variance method (TVS) we determine the extent and\namplitude of the spectral line variations. The double-peaked emission lines in\nthe PMS stars with gaseous disks are used to determine peak-to-peak velocities,\nV/R-ratios and the radial velocity of the systems. We identify many disk\nfeatures, under which a new detection of CO bandhead and CI emission. In three\nof the stars we detect spectral variability, mainly in lines originating in the\ncircumstellar disk, in a velocity range up to 320 km/s. In two PMS stars the\nratio between the blue and red peaks shows a correlation with the peak-to-peak\nvelocity, possibly explained by a spiral-arm structure in the disk. The PMS\nstars with variability are at similar positions in the HRD but show significant\ndifferences in disk lines and variability. The extent and timescale of the\nvariability differs for each star and per line (sets). We find indications for\nan accretion flow, slow disk winds and/or disk structures in the hot gaseous\ninner disk as the cause of the variability in these PMS stars.",
+          "arxiv_id": "2310.04287v1"
+        },
+        {
+          "title": "Protoplanetary disks around young stellar and substellar objects in the $σ$ Orionis cluster",
+          "year": "2023-05",
+          "abstract": "Understanding the evolution and dissipation of protoplanetary disks are\ncrucial in star and planet formation studies. We report the protoplanetary disk\npopulation in the nearby young $\\sigma$ Orionis cluster (d$\\sim$408 pc;\nage$\\sim$1.8 Myr) and analyse the disk properties such as dependence on stellar\nmass and disk evolution. We utilise the comprehensive census of 170\nspectroscopic members of the region refined using astrometry from Gaia DR3 for\na wide mass range of $\\sim$19-0.004 M$_\\odot$. Using the near infrared (2MASS)\nand mid infrared (WISE) photometry we classify the sources based on the\nspectral index into class I, class II, flat spectrum and class III young\nstellar objects. The frequency of sources hosting a disk with stellar mass $<$2\nM$_\\odot$ in this region is 41$\\pm$7% which is consistent with the disk\nfraction estimated in previous studies. We see that there is no significant\ndependence of disk fraction on stellar mass among T Tauri stars ($<$2\nM$_\\odot$), but we propose rapid disk depletion around higher mass stars ($>$2\nM$_\\odot$). Furthermore we find the lowest mass of a disk bearing object to be\n$\\sim$ 20 M$_\\mathrm{Jup}$ and the pronounced disk fraction among the brown\ndwarf population hints at the formation scenario that brown dwarfs form similar\nto low-mass stars.",
+          "arxiv_id": "2305.18147v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Ion-Scale Solitary Structures in the Solar Wind Observed by Solar Orbiter and Parker Solar Probe",
+          "year": "2024-12",
+          "abstract": "We investigate a class of ion-scale magnetic solitary structures in the solar\nwind, characterized by distinct magnetic field enhancements and bipolar\nrotations over spatial scales of several proton inertial lengths. Previously\ntentatively identified as Alfv\\'enic solitons, these structures are revisited\nusing high-resolution data from the Solar Orbiter and Parker Solar Probe\nmissions. Using a machine learning-based method, we identified nearly a\nthousand such structures, providing new insights into their evolution and\nphysical properties. Statistical analysis shows that these structures are more\nabundant closer to the Sun, with occurrence rates peaking around 30-40 solar\nradii and declining at greater distances, suggesting that they decay.\nHigh-cadence measurements reveal that these structures are predominantly found\nin low-beta environments, with consistent fluctuations in density, velocity,\nand magnetic field. Magnetic field enhancements are often accompanied by plasma\ndensity drops, which, under near pressure balance, limit field increases. This\nleads to small fractional field enhancements near the Sun (approximately 0.01\nat 20 solar radii), making detection challenging. Magnetic field variance\nanalysis indicates that these structures are primarily oblique to the local\nmagnetic field. Alfv\\'enic velocity-magnetic field correlations suggest that\nmost of these structures propagate sunward in the plasma frame, distinguishing\nthem from typical solar wind fluctuations. We compare these findings with\nprevious studies, discussing possible generation mechanisms and their\nimplications for the turbulent cascade in the near-Sun Alfv\\'enic solar wind.\nFurther high-resolution observations and simulations are needed to fully\nunderstand their origins and impacts.",
+          "arxiv_id": "2412.16824v1"
+        },
+        {
+          "title": "Exploring the Solar Wind from its Source on the Corona into the Inner Heliosphere during the First Solar Orbiter - Parker Solar Probe Quadrature",
+          "year": "2021-10",
+          "abstract": "This Letter addresses the first Solar Orbiter (SO) -- Parker Solar Probe\n(PSP) quadrature, occurring on January 18, 2021, to investigate the evolution\nof solar wind from the extended corona to the inner heliosphere. Assuming\nballistic propagation, the same plasma volume observed remotely in corona at\naltitudes between 3.5 and 6.3 solar radii above the solar limb with the Metis\ncoronagraph on SO can be tracked to PSP, orbiting at 0.1 au, thus allowing the\nlocal properties of the solar wind to be linked to the coronal source region\nfrom where it originated. Thanks to the close approach of PSP to the Sun and\nthe simultaneous Metis observation of the solar corona, the flow-aligned\nmagnetic field and the bulk kinetic energy flux density can be empirically\ninferred along the coronal current sheet with an unprecedented accuracy,\nallowing in particular estimation of the Alfv\\'en radius at 8.7 solar radii\nduring the time of this event. This is thus the very first study of the same\nsolar wind plasma as it expands from the sub-Alfv\\'enic solar corona to just\nabove the Alfv\\'en surface.",
+          "arxiv_id": "2110.11031v1"
+        },
+        {
+          "title": "A parametric study of solar wind properties and composition using fluid and kinetic solar wind models",
+          "year": "2025-04",
+          "abstract": "The physical processes in the solar corona that shape the solar wind remain\nan active research topic. Modeling efforts have shown that energy and plasma\nexchanges near the transition region plays a crucial role in modulating solar\nwind properties. Although these regions cannot be measured in situ, plasma\nparameters can be inferred from coronal spectroscopy and ionization states of\nheavy ions, which remain unchanged as they escape the corona. We introduce a\nnew solar wind model extending from the chromosphere to the inner heliosphere,\ncapturing thermodynamic coupling across atmospheric layers. By including\nneutral and charged particle interactions, we model the transport and\nionisation processes of the gas through the transition region, the corona and\ninto the solar wind. Instead of explicitly modeling coronal heating, we link\nits spatial distribution to large-scale magnetic field properties. Our results\nconfirm that energy deposition strongly affects wind properties through key\nmechanisms involving chromospheric evaporation, thermal expansion, and magnetic\nflux expansion. For sources near active regions, the model predicts significant\nsolar wind acceleration, with plasma outflows comparable to those inferred from\ncoronal spectroscopy. For winds from large coronal holes, the model reproduces\nthe observed anticorrelation between charge state and wind speed. However, the\npredicted charge state ratios are overall lower than observed. Inclusion of a\npopulation of energetic electrons enhances both heavy ion charge states and\nsolar wind acceleration, improving agreement with observations.",
+          "arxiv_id": "2504.05177v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:11:42Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

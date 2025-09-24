@@ -1,0 +1,1472 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_protein_DNA_proteins_RNA",
+        "keywords": [
+          [
+            "protein",
+            0.022707925960219272
+          ],
+          [
+            "DNA",
+            0.01899856976854943
+          ],
+          [
+            "proteins",
+            0.01713323492049288
+          ],
+          [
+            "RNA",
+            0.01389024055294519
+          ],
+          [
+            "dynamics",
+            0.013747318347936615
+          ],
+          [
+            "structure",
+            0.013638346211582369
+          ],
+          [
+            "model",
+            0.01347706212747617
+          ],
+          [
+            "energy",
+            0.012200363314507159
+          ],
+          [
+            "folding",
+            0.011542736766751724
+          ],
+          [
+            "time",
+            0.01123619027095353
+          ]
+        ],
+        "count": 802
+      },
+      "1": {
+        "name": "1_molecules_drug_molecular_generative",
+        "keywords": [
+          [
+            "molecules",
+            0.03437586501033747
+          ],
+          [
+            "drug",
+            0.02774507899370297
+          ],
+          [
+            "molecular",
+            0.027528371576339333
+          ],
+          [
+            "generative",
+            0.027058874988248587
+          ],
+          [
+            "generation",
+            0.025282671195152928
+          ],
+          [
+            "design",
+            0.02337540866136429
+          ],
+          [
+            "models",
+            0.02115038116845628
+          ],
+          [
+            "model",
+            0.020501976701327303
+          ],
+          [
+            "molecule",
+            0.019206560037444625
+          ],
+          [
+            "3D",
+            0.01835652235450511
+          ]
+        ],
+        "count": 294
+      },
+      "2": {
+        "name": "2_molecular_drug_prediction_learning",
+        "keywords": [
+          [
+            "molecular",
+            0.0386395538680175
+          ],
+          [
+            "drug",
+            0.03358909543284213
+          ],
+          [
+            "prediction",
+            0.02443307230481168
+          ],
+          [
+            "learning",
+            0.024000773508067886
+          ],
+          [
+            "tasks",
+            0.021387658360395637
+          ],
+          [
+            "graph",
+            0.019712656328279843
+          ],
+          [
+            "models",
+            0.01810883130985389
+          ],
+          [
+            "performance",
+            0.01707705459589638
+          ],
+          [
+            "model",
+            0.01658592344371859
+          ],
+          [
+            "representations",
+            0.015674001200945916
+          ]
+        ],
+        "count": 240
+      },
+      "3": {
+        "name": "3_protein_design_models_sequence",
+        "keywords": [
+          [
+            "protein",
+            0.04514126526569716
+          ],
+          [
+            "design",
+            0.032584246786221016
+          ],
+          [
+            "models",
+            0.024712646371901695
+          ],
+          [
+            "sequence",
+            0.022565188614767844
+          ],
+          [
+            "sequences",
+            0.02080862054732457
+          ],
+          [
+            "generative",
+            0.02061265274148928
+          ],
+          [
+            "structure",
+            0.018751188206262225
+          ],
+          [
+            "proteins",
+            0.018379632991748447
+          ],
+          [
+            "protein design",
+            0.018271645180595424
+          ],
+          [
+            "model",
+            0.01724530390807517
+          ]
+        ],
+        "count": 152
+      },
+      "4": {
+        "name": "4_protein_Protein_language_models",
+        "keywords": [
+          [
+            "protein",
+            0.0609858641984817
+          ],
+          [
+            "Protein",
+            0.028564633177416462
+          ],
+          [
+            "language",
+            0.025681545815078553
+          ],
+          [
+            "models",
+            0.023430892995698248
+          ],
+          [
+            "learning",
+            0.021549071830560946
+          ],
+          [
+            "prediction",
+            0.020701252681835265
+          ],
+          [
+            "sequence",
+            0.017734200011473713
+          ],
+          [
+            "model",
+            0.017530761407986237
+          ],
+          [
+            "structure",
+            0.016991553394552713
+          ],
+          [
+            "language models",
+            0.016711571409548306
+          ]
+        ],
+        "count": 135
+      },
+      "5": {
+        "name": "5_docking_ligand_binding_protein",
+        "keywords": [
+          [
+            "docking",
+            0.04722615248089682
+          ],
+          [
+            "ligand",
+            0.0437918499689127
+          ],
+          [
+            "binding",
+            0.03586288482357734
+          ],
+          [
+            "protein",
+            0.025718152375220037
+          ],
+          [
+            "protein ligand",
+            0.024351179211506844
+          ],
+          [
+            "learning",
+            0.022887946480674146
+          ],
+          [
+            "methods",
+            0.02089127496604936
+          ],
+          [
+            "drug",
+            0.02066878690236406
+          ],
+          [
+            "prediction",
+            0.02043216204313853
+          ],
+          [
+            "affinity",
+            0.01840639784926061
+          ]
+        ],
+        "count": 101
+      },
+      "6": {
+        "name": "6_SARS_COVID_CoV_drugs",
+        "keywords": [
+          [
+            "SARS",
+            0.039548040344074255
+          ],
+          [
+            "COVID",
+            0.036859042875666215
+          ],
+          [
+            "CoV",
+            0.034168762367833116
+          ],
+          [
+            "drugs",
+            0.03267931807069786
+          ],
+          [
+            "compounds",
+            0.028860150105135852
+          ],
+          [
+            "inhibitors",
+            0.027557909249251313
+          ],
+          [
+            "docking",
+            0.02646958837985575
+          ],
+          [
+            "drug",
+            0.024489552359825664
+          ],
+          [
+            "protease",
+            0.02366077015937578
+          ],
+          [
+            "study",
+            0.022023401917691122
+          ]
+        ],
+        "count": 84
+      },
+      "7": {
+        "name": "7_antibody_antibodies_antigen_design",
+        "keywords": [
+          [
+            "antibody",
+            0.0714175600367722
+          ],
+          [
+            "antibodies",
+            0.03309648022343744
+          ],
+          [
+            "antigen",
+            0.027225360117388894
+          ],
+          [
+            "design",
+            0.026856768095498883
+          ],
+          [
+            "Antibody",
+            0.02380546152325011
+          ],
+          [
+            "binding",
+            0.023427000027419827
+          ],
+          [
+            "sequence",
+            0.022489291120283018
+          ],
+          [
+            "sequences",
+            0.021373567077162137
+          ],
+          [
+            "models",
+            0.019831220487439783
+          ],
+          [
+            "model",
+            0.01937327834037482
+          ]
+        ],
+        "count": 83
+      },
+      "8": {
+        "name": "8_CoV_SARS_ACE2_spike",
+        "keywords": [
+          [
+            "CoV",
+            0.09388828855901289
+          ],
+          [
+            "SARS",
+            0.09149366271300646
+          ],
+          [
+            "ACE2",
+            0.041608900497562676
+          ],
+          [
+            "spike",
+            0.03350597106892413
+          ],
+          [
+            "binding",
+            0.031708786358705214
+          ],
+          [
+            "virus",
+            0.029864728549125065
+          ],
+          [
+            "RBD",
+            0.02971001647599194
+          ],
+          [
+            "viral",
+            0.028040765745467405
+          ],
+          [
+            "protein",
+            0.02432435822591666
+          ],
+          [
+            "spike protein",
+            0.024051955540457057
+          ]
+        ],
+        "count": 72
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.664147538058911,
+        -0.688392794469922,
+        -0.5906595488136586,
+        -0.5984574458669485,
+        -0.6598355334303354,
+        -0.7191494949852246,
+        -0.7374554327391025,
+        -0.7473920066684936
+      ],
+      [
+        -0.664147538058911,
+        1.0,
+        -0.3515678706866594,
+        -0.4717174122678852,
+        -0.6379413770292676,
+        -0.4897550654099322,
+        -0.6824018600475392,
+        -0.657953212998446,
+        -0.7318706541013716
+      ],
+      [
+        -0.688392794469922,
+        -0.3515678706866594,
+        1.0,
+        -0.6548610944777924,
+        -0.6376092078583034,
+        -0.5286439303964837,
+        -0.6985025291876805,
+        -0.7342879455557225,
+        -0.747220133973026
+      ],
+      [
+        -0.5906595488136586,
+        -0.4717174122678852,
+        -0.6548610944777924,
+        1.0,
+        -0.0099813020224097,
+        -0.5723299636106927,
+        -0.7249591551544663,
+        -0.5892694358413022,
+        -0.7366881631055131
+      ],
+      [
+        -0.5984574458669485,
+        -0.6379413770292676,
+        -0.6376092078583034,
+        -0.0099813020224097,
+        1.0,
+        -0.5417415677862185,
+        -0.7223248052952772,
+        -0.6776246921753448,
+        -0.7368429098686897
+      ],
+      [
+        -0.6598355334303354,
+        -0.4897550654099322,
+        -0.5286439303964837,
+        -0.5723299636106927,
+        -0.5417415677862185,
+        1.0,
+        -0.6230688111260576,
+        -0.6917851643795154,
+        -0.6853446370526539
+      ],
+      [
+        -0.7191494949852246,
+        -0.6824018600475392,
+        -0.6985025291876805,
+        -0.7249591551544663,
+        -0.7223248052952772,
+        -0.6230688111260576,
+        1.0,
+        -0.6936578213968863,
+        0.1655043186139576
+      ],
+      [
+        -0.7374554327391025,
+        -0.657953212998446,
+        -0.7342879455557225,
+        -0.5892694358413022,
+        -0.6776246921753448,
+        -0.6917851643795154,
+        -0.6936578213968863,
+        1.0,
+        -0.6852011001069571
+      ],
+      [
+        -0.7473920066684936,
+        -0.7318706541013716,
+        -0.747220133973026,
+        -0.7366881631055131,
+        -0.7368429098686897,
+        -0.6853446370526539,
+        0.1655043186139576,
+        -0.6852011001069571,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        9,
+        0,
+        0,
+        1,
+        4,
+        4,
+        0,
+        0,
+        0
+      ],
+      "2020-02": [
+        9,
+        1,
+        2,
+        1,
+        4,
+        3,
+        1,
+        1,
+        3
+      ],
+      "2020-03": [
+        7,
+        4,
+        0,
+        0,
+        4,
+        1,
+        2,
+        2,
+        7
+      ],
+      "2020-04": [
+        7,
+        1,
+        0,
+        4,
+        6,
+        1,
+        9,
+        0,
+        11
+      ],
+      "2020-05": [
+        18,
+        2,
+        0,
+        1,
+        5,
+        4,
+        2,
+        1,
+        14
+      ],
+      "2020-06": [
+        11,
+        3,
+        3,
+        0,
+        2,
+        3,
+        1,
+        1,
+        6
+      ],
+      "2020-07": [
+        10,
+        2,
+        2,
+        1,
+        5,
+        2,
+        1,
+        0,
+        9
+      ],
+      "2020-08": [
+        11,
+        4,
+        1,
+        0,
+        2,
+        4,
+        0,
+        1,
+        6
+      ],
+      "2020-09": [
+        12,
+        3,
+        1,
+        3,
+        1,
+        1,
+        2,
+        0,
+        3
+      ],
+      "2020-10": [
+        11,
+        5,
+        5,
+        4,
+        6,
+        3,
+        0,
+        0,
+        2
+      ],
+      "2020-11": [
+        12,
+        0,
+        2,
+        2,
+        4,
+        1,
+        4,
+        0,
+        2
+      ],
+      "2020-12": [
+        6,
+        4,
+        2,
+        4,
+        6,
+        1,
+        2,
+        0,
+        2
+      ],
+      "2021-01": [
+        13,
+        1,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        4
+      ],
+      "2021-02": [
+        6,
+        3,
+        4,
+        2,
+        3,
+        1,
+        1,
+        1,
+        4
+      ],
+      "2021-03": [
+        5,
+        3,
+        1,
+        3,
+        3,
+        2,
+        0,
+        0,
+        4
+      ],
+      "2021-04": [
+        11,
+        3,
+        2,
+        2,
+        4,
+        1,
+        2,
+        1,
+        1
+      ],
+      "2021-05": [
+        6,
+        2,
+        2,
+        0,
+        7,
+        1,
+        1,
+        1,
+        2
+      ],
+      "2021-06": [
+        7,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        0,
+        3
+      ],
+      "2021-07": [
+        8,
+        1,
+        3,
+        0,
+        5,
+        3,
+        1,
+        1,
+        0
+      ],
+      "2021-08": [
+        10,
+        1,
+        1,
+        2,
+        5,
+        0,
+        1,
+        0,
+        2
+      ],
+      "2021-09": [
+        8,
+        0,
+        0,
+        5,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "2021-10": [
+        8,
+        2,
+        1,
+        2,
+        4,
+        3,
+        1,
+        2,
+        2
+      ],
+      "2021-11": [
+        11,
+        4,
+        4,
+        2,
+        4,
+        5,
+        1,
+        2,
+        0
+      ],
+      "2021-12": [
+        10,
+        0,
+        2,
+        2,
+        3,
+        0,
+        1,
+        2,
+        1
+      ],
+      "2022-01": [
+        9,
+        4,
+        3,
+        5,
+        6,
+        4,
+        0,
+        2,
+        3
+      ],
+      "2022-02": [
+        7,
+        0,
+        4,
+        2,
+        3,
+        4,
+        1,
+        0,
+        3
+      ],
+      "2022-03": [
+        4,
+        8,
+        5,
+        0,
+        4,
+        6,
+        0,
+        0,
+        1
+      ],
+      "2022-04": [
+        6,
+        2,
+        2,
+        7,
+        5,
+        2,
+        0,
+        0,
+        4
+      ],
+      "2022-05": [
+        8,
+        4,
+        6,
+        4,
+        8,
+        5,
+        0,
+        1,
+        1
+      ],
+      "2022-06": [
+        9,
+        4,
+        4,
+        2,
+        1,
+        4,
+        0,
+        1,
+        1
+      ],
+      "2022-07": [
+        9,
+        3,
+        5,
+        1,
+        3,
+        1,
+        1,
+        1,
+        0
+      ],
+      "2022-08": [
+        8,
+        3,
+        5,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "2022-09": [
+        12,
+        6,
+        6,
+        2,
+        3,
+        5,
+        0,
+        0,
+        3
+      ],
+      "2022-10": [
+        12,
+        4,
+        11,
+        4,
+        2,
+        6,
+        0,
+        2,
+        3
+      ],
+      "2022-11": [
+        7,
+        2,
+        6,
+        2,
+        7,
+        1,
+        4,
+        0,
+        1
+      ],
+      "2022-12": [
+        8,
+        6,
+        4,
+        1,
+        4,
+        6,
+        0,
+        0,
+        2
+      ],
+      "2023-01": [
+        10,
+        0,
+        3,
+        2,
+        6,
+        4,
+        1,
+        1,
+        2
+      ],
+      "2023-02": [
+        10,
+        5,
+        1,
+        0,
+        7,
+        6,
+        0,
+        1,
+        0
+      ],
+      "2023-03": [
+        16,
+        4,
+        6,
+        3,
+        3,
+        2,
+        0,
+        0,
+        1
+      ],
+      "2023-04": [
+        7,
+        6,
+        4,
+        6,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2023-05": [
+        6,
+        11,
+        4,
+        7,
+        6,
+        4,
+        1,
+        4,
+        1
+      ],
+      "2023-06": [
+        4,
+        10,
+        8,
+        9,
+        7,
+        3,
+        1,
+        2,
+        1
+      ],
+      "2023-07": [
+        14,
+        1,
+        7,
+        3,
+        13,
+        6,
+        0,
+        2,
+        1
+      ],
+      "2023-08": [
+        15,
+        9,
+        6,
+        5,
+        7,
+        6,
+        0,
+        2,
+        0
+      ],
+      "2023-09": [
+        8,
+        4,
+        3,
+        1,
+        7,
+        6,
+        5,
+        1,
+        0
+      ],
+      "2023-10": [
+        10,
+        5,
+        5,
+        10,
+        9,
+        6,
+        0,
+        3,
+        0
+      ],
+      "2023-11": [
+        23,
+        5,
+        7,
+        6,
+        7,
+        6,
+        1,
+        1,
+        1
+      ],
+      "2023-12": [
+        10,
+        8,
+        11,
+        7,
+        5,
+        1,
+        0,
+        3,
+        0
+      ],
+      "2024-01": [
+        15,
+        8,
+        10,
+        2,
+        7,
+        7,
+        2,
+        1,
+        1
+      ],
+      "2024-02": [
+        9,
+        11,
+        6,
+        7,
+        20,
+        6,
+        0,
+        0,
+        1
+      ],
+      "2024-03": [
+        17,
+        13,
+        7,
+        5,
+        20,
+        6,
+        0,
+        2,
+        0
+      ],
+      "2024-04": [
+        12,
+        6,
+        6,
+        4,
+        10,
+        4,
+        0,
+        2,
+        0
+      ],
+      "2024-05": [
+        5,
+        13,
+        4,
+        8,
+        9,
+        5,
+        0,
+        5,
+        1
+      ],
+      "2024-06": [
+        3,
+        10,
+        4,
+        4,
+        17,
+        5,
+        0,
+        2,
+        1
+      ],
+      "2024-07": [
+        16,
+        13,
+        9,
+        4,
+        12,
+        5,
+        0,
+        1,
+        0
+      ],
+      "2024-08": [
+        5,
+        10,
+        4,
+        3,
+        9,
+        7,
+        0,
+        1,
+        1
+      ],
+      "2024-09": [
+        10,
+        6,
+        6,
+        6,
+        6,
+        7,
+        1,
+        3,
+        1
+      ],
+      "2024-10": [
+        17,
+        13,
+        8,
+        13,
+        16,
+        9,
+        1,
+        0,
+        1
+      ],
+      "2024-11": [
+        15,
+        9,
+        7,
+        6,
+        13,
+        5,
+        0,
+        2,
+        2
+      ],
+      "2024-12": [
+        13,
+        4,
+        8,
+        7,
+        15,
+        7,
+        1,
+        2,
+        1
+      ],
+      "2025-01": [
+        10,
+        2,
+        4,
+        2,
+        4,
+        4,
+        2,
+        1,
+        0
+      ],
+      "2025-02": [
+        11,
+        8,
+        9,
+        7,
+        9,
+        4,
+        1,
+        2,
+        2
+      ],
+      "2025-03": [
+        15,
+        9,
+        3,
+        5,
+        11,
+        11,
+        0,
+        2,
+        0
+      ],
+      "2025-04": [
+        10,
+        6,
+        4,
+        6,
+        8,
+        4,
+        1,
+        0,
+        0
+      ],
+      "2025-05": [
+        9,
+        8,
+        6,
+        15,
+        15,
+        9,
+        1,
+        3,
+        0
+      ],
+      "2025-06": [
+        22,
+        7,
+        5,
+        5,
+        16,
+        7,
+        0,
+        1,
+        2
+      ],
+      "2025-07": [
+        19,
+        7,
+        3,
+        11,
+        15,
+        7,
+        1,
+        3,
+        1
+      ],
+      "2025-08": [
+        10,
+        5,
+        4,
+        5,
+        5,
+        9,
+        1,
+        3,
+        0
+      ],
+      "2025-09": [
+        10,
+        1,
+        2,
+        3,
+        3,
+        4,
+        0,
+        2,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "MAS2HP: A Multi Agent System to Predict Protein Structure in 2D HP model",
+          "year": "2022-05",
+          "abstract": "Protein Structure Prediction (PSP) is an unsolved problem in the field of\ncomputational biology. The problem of protein structure prediction is about\npredicting the native conformation of a protein, while its sequence of amino\nacids is known. Regarding processing limitations of current computer systems,\nall-atom simulations for proteins are typically unpractical; several reduced\nmodels of proteins have been proposed. Additionally, due to intrinsic hardness\nof calculations even in reduced models, many computational methods mainly based\non artificial intelligence have been proposed to solve the problem. Agent-based\nmodeling is a relatively new method for modeling systems composed of\ninteracting items. In this paper we proposed a new approach for protein\nstructure prediction by using agent-based modeling (ABM) in two dimensional\nhydrophobic-hydrophilic model. We broke the whole process of protein structure\nprediction into two steps: the first step, which was introduced in our previous\npaper, is about biasing the linear sequence to gain a primary energy, and the\nnext step, which will be explained in this paper, is about using ABM with a\npredefined set of rules, to find the best conformation in the least possible\namount of time and steps. This method was implemented in NETLOGO. We have\ntested this algorithm on several benchmark sequences ranging from 20 to 50-mers\nin two dimensional Hydrophobic-Hydrophilic lattice models. Comparing to the\nresult of the other algorithms, our method is capable of finding the best known\nconformations in a significantly shorter time. A major problem in PSP\nsimulation is that as the sequence length increases the time consumed to\npredict a valid structure will exponentially increase. In contrast, by using\nMAS2HP the effect of increase in sequence length on spent time has changed from\nexponentially to linear.",
+          "arxiv_id": "2205.08451v4"
+        },
+        {
+          "title": "Statistical method for A-RNA and B-DNA",
+          "year": "2025-05",
+          "abstract": "Nucleic acids have been regarded as stiff polymers with long-range\nflexibility and generally modeled using elastic rod models of polymer physics.\nNotwithstanding, investigations carried out over the past few years on single\nfragments of order $\\sim 100$ base pairs have revealed remarkable flexibility\nproperties at short scales and called for theoretical approaches that emphasize\nthe role of the bending fluctuations at single sites along the molecule stack.\nHere, we review a three dimensional mesoscopic Hamiltonian model which assumes\na discrete representation of the double stranded (ds) molecules at the level of\nthe nucleotides. The model captures the fundamental local interactions between\nadjacent sugar-phosphate groups and the pairwise interactions between\ncomplementary base pair mates. A statistical method based on the path integral\nformalism sets the ensemble of the base pair breathing fluctuations which are\nincluded in the partition function and permits to derive the thermodynamics and\nthe elastic response of single molecules to external forces. We apply the model\nto the computation of the twist-stretch relations for fragments of ds-DNA and\nds-RNA, showing that the obtained opposite pattern (DNA overtwists whereas RNA\nuntwists versus force) follows from the different structural features of the\ntwo helices. Moreover, we focus on the DNA stretching due to the confinement in\nnano-pores and, finally, on the computation of the cyclization probability of\nopen ends molecules of $\\sim 100$ base pairs under physiological conditions.\nThe mesoscopic model shows a distinct advantage over the elastic rod model in\nestimating the molecule bendability at short length scale.",
+          "arxiv_id": "2505.05053v1"
+        },
+        {
+          "title": "Introduction to Protein Structure",
+          "year": "2023-07",
+          "abstract": "While many good textbooks are available on Protein Structure, Molecular\nSimulations, Thermodynamics and Bioinformatics methods in general, there is no\ngood introductory level book for the field of Structural Bioinformatics. This\nbook aims to give an introduction into Structural Bioinformatics, which is\nwhere the previous topics meet to explore three dimensional protein structures\nthrough computational analysis. We provide an overview of existing\ncomputational techniques, to validate, simulate, predict and analyse protein\nstructures. More importantly, it will aim to provide practical knowledge about\nhow and when to use such techniques. We will consider proteins from three major\nvantage points: Protein structure quantification, Protein structure prediction,\nand Protein simulation & dynamics.\n  Within the living cell, protein molecules perform specific functions,\ntypically by interacting with other proteins, DNA, RNA or small molecules. They\ntake on a specific three dimensional structure, encoded by its amino acid\nsequence, which allows them to function within the cell. Hence, the\nunderstanding of a protein's function is tightly coupled to its sequence and\nits three dimensional structure. Before going into protein structure analysis\nand prediction, and protein folding and dynamics, here, we give a short and\nconcise introduction into the basics of protein structures.",
+          "arxiv_id": "2307.02169v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Learning Joint 2D & 3D Diffusion Models for Complete Molecule Generation",
+          "year": "2023-05",
+          "abstract": "Designing new molecules is essential for drug discovery and material science.\nRecently, deep generative models that aim to model molecule distribution have\nmade promising progress in narrowing down the chemical research space and\ngenerating high-fidelity molecules. However, current generative models only\nfocus on modeling either 2D bonding graphs or 3D geometries, which are two\ncomplementary descriptors for molecules. The lack of ability to jointly model\nboth limits the improvement of generation quality and further downstream\napplications. In this paper, we propose a new joint 2D and 3D diffusion model\n(JODO) that generates complete molecules with atom types, formal charges, bond\ninformation, and 3D coordinates. To capture the correlation between molecular\ngraphs and geometries in the diffusion process, we develop a Diffusion Graph\nTransformer to parameterize the data prediction model that recovers the\noriginal data from noisy data. The Diffusion Graph Transformer interacts node\nand edge representations based on our relational attention mechanism, while\nsimultaneously propagating and updating scalar features and geometric vectors.\nOur model can also be extended for inverse molecular design targeting single or\nmultiple quantum properties. In our comprehensive evaluation pipeline for\nunconditional joint generation, the results of the experiment show that JODO\nremarkably outperforms the baselines on the QM9 and GEOM-Drugs datasets.\nFurthermore, our model excels in few-step fast sampling, as well as in inverse\nmolecule design and molecular graph generation. Our code is provided in\nhttps://github.com/GRAPH-0/JODO.",
+          "arxiv_id": "2305.12347v2"
+        },
+        {
+          "title": "Structure-Based Drug Design via 3D Molecular Generative Pre-training and Sampling",
+          "year": "2024-02",
+          "abstract": "Structure-based drug design aims at generating high affinity ligands with\nprior knowledge of 3D target structures. Existing methods either use\nconditional generative model to learn the distribution of 3D ligands given\ntarget binding sites, or iteratively modify molecules to optimize a\nstructure-based activity estimator. The former is highly constrained by data\nquantity and quality, which leaves optimization-based approaches more promising\nin practical scenario. However, existing optimization-based approaches choose\nto edit molecules in 2D space, and use molecular docking to estimate the\nactivity using docking predicted 3D target-ligand complexes. The misalignment\nbetween the action space and the objective hinders the performance of these\nmodels, especially for those employ deep learning for acceleration. In this\nwork, we propose MolEdit3D to combine 3D molecular generation with optimization\nframeworks. We develop a novel 3D graph editing model to generate molecules\nusing fragments, and pre-train this model on abundant 3D ligands for learning\ntarget-independent properties. Then we employ a target-guided self-learning\nstrategy to improve target-related properties using self-sampled molecules.\nMolEdit3D achieves state-of-the-art performance on majority of the evaluation\nmetrics, and demonstrate strong capability of capturing both target-dependent\nand -independent properties.",
+          "arxiv_id": "2402.14315v2"
+        },
+        {
+          "title": "Equivariant Shape-Conditioned Generation of 3D Molecules for Ligand-Based Drug Design",
+          "year": "2022-10",
+          "abstract": "Shape-based virtual screening is widely employed in ligand-based drug design\nto search chemical libraries for molecules with similar 3D shapes yet novel 2D\nchemical structures compared to known ligands. 3D deep generative models have\nthe potential to automate this exploration of shape-conditioned 3D chemical\nspace; however, no existing models can reliably generate valid drug-like\nmolecules in conformations that adopt a specific shape such as a known binding\npose. We introduce a new multimodal 3D generative model that enables\nshape-conditioned 3D molecular design by equivariantly encoding molecular shape\nand variationally encoding chemical identity. We ensure local geometric and\nchemical validity of generated molecules by using autoregressive fragment-based\ngeneration with heuristic bonding geometries, allowing the model to prioritize\nthe scoring of rotatable bonds to best align the growing conformational\nstructure to the target shape. We evaluate our 3D generative model in tasks\nrelevant to drug design including shape-conditioned generation of chemically\ndiverse molecular structures and shape-constrained molecular property\noptimization, demonstrating its utility over virtual screening of enumerated\nlibraries.",
+          "arxiv_id": "2210.04893v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "3D Graph Contrastive Learning for Molecular Property Prediction",
+          "year": "2022-05",
+          "abstract": "Self-supervised learning (SSL) is a method that learns the data\nrepresentation by utilizing supervision inherent in the data. This learning\nmethod is in the spotlight in the drug field, lacking annotated data due to\ntime-consuming and expensive experiments. SSL using enormous unlabeled data has\nshown excellent performance for molecular property prediction, but a few issues\nexist. (1) Existing SSL models are large-scale; there is a limitation to\nimplementing SSL where the computing resource is insufficient. (2) In most\ncases, they do not utilize 3D structural information for molecular\nrepresentation learning. The activity of a drug is closely related to the\nstructure of the drug molecule. Nevertheless, most current models do not use 3D\ninformation or use it partially. (3) Previous models that apply contrastive\nlearning to molecules use the augmentation of permuting atoms and bonds.\nTherefore, molecules having different characteristics can be in the same\npositive samples. We propose a novel contrastive learning framework,\nsmall-scale 3D Graph Contrastive Learning (3DGCL) for molecular property\nprediction, to solve the above problems. 3DGCL learns the molecular\nrepresentation by reflecting the molecule's structure through the pre-training\nprocess that does not change the semantics of the drug. Using only 1,128\nsamples for pre-train data and 1 million model parameters, we achieved the\nstate-of-the-art or comparable performance in four regression benchmark\ndatasets. Extensive experiments demonstrate that 3D structural information\nbased on chemical knowledge is essential to molecular representation learning\nfor property prediction.",
+          "arxiv_id": "2208.06360v2"
+        },
+        {
+          "title": "Multi-Modal Representation Learning for Molecular Property Prediction: Sequence, Graph, Geometry",
+          "year": "2024-01",
+          "abstract": "Molecular property prediction refers to the task of labeling molecules with\nsome biochemical properties, playing a pivotal role in the drug discovery and\ndesign process. Recently, with the advancement of machine learning, deep\nlearning-based molecular property prediction has emerged as a solution to the\nresource-intensive nature of traditional methods, garnering significant\nattention. Among them, molecular representation learning is the key factor for\nmolecular property prediction performance. And there are lots of\nsequence-based, graph-based, and geometry-based methods that have been\nproposed. However, the majority of existing studies focus solely on one\nmodality for learning molecular representations, failing to comprehensively\ncapture molecular characteristics and information. In this paper, a novel\nmulti-modal representation learning model, which integrates the sequence,\ngraph, and geometry characteristics, is proposed for molecular property\nprediction, called SGGRL. Specifically, we design a fusion layer to fusion the\nrepresentation of different modalities. Furthermore, to ensure consistency\nacross modalities, SGGRL is trained to maximize the similarity of\nrepresentations for the same molecule while minimizing similarity for different\nmolecules. To verify the effectiveness of SGGRL, seven molecular datasets, and\nseveral baselines are used for evaluation and comparison. The experimental\nresults demonstrate that SGGRL consistently outperforms the baselines in most\ncases. This further underscores the capability of SGGRL to comprehensively\ncapture molecular information. Overall, the proposed SGGRL model showcases its\npotential to revolutionize molecular property prediction by leveraging\nmulti-modal representation learning to extract diverse and comprehensive\nmolecular insights. Our code is released at\nhttps://github.com/Vencent-Won/SGGRL.",
+          "arxiv_id": "2401.03369v2"
+        },
+        {
+          "title": "KPGT: Knowledge-Guided Pre-training of Graph Transformer for Molecular Property Prediction",
+          "year": "2022-06",
+          "abstract": "Designing accurate deep learning models for molecular property prediction\nplays an increasingly essential role in drug and material discovery. Recently,\ndue to the scarcity of labeled molecules, self-supervised learning methods for\nlearning generalizable and transferable representations of molecular graphs\nhave attracted lots of attention. In this paper, we argue that there exist two\nmajor issues hindering current self-supervised learning methods from obtaining\ndesired performance on molecular property prediction, that is, the ill-defined\npre-training tasks and the limited model capacity. To this end, we introduce\nKnowledge-guided Pre-training of Graph Transformer (KPGT), a novel\nself-supervised learning framework for molecular graph representation learning,\nto alleviate the aforementioned issues and improve the performance on the\ndownstream molecular property prediction tasks. More specifically, we first\nintroduce a high-capacity model, named Line Graph Transformer (LiGhT), which\nemphasizes the importance of chemical bonds and is mainly designed to model the\nstructural information of molecular graphs. Then, a knowledge-guided\npre-training strategy is proposed to exploit the additional knowledge of\nmolecules to guide the model to capture the abundant structural and semantic\ninformation from large-scale unlabeled molecular graphs. Extensive\ncomputational tests demonstrated that KPGT can offer superior performance over\ncurrent state-of-the-art methods on several molecular property prediction\ntasks.",
+          "arxiv_id": "2206.03364v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "The Dance of Atoms-De Novo Protein Design with Diffusion Model",
+          "year": "2025-04",
+          "abstract": "The de novo design of proteins refers to creating proteins with specific\nstructures and functions that do not naturally exist. In recent years, the\naccumulation of high-quality protein structure and sequence data and\ntechnological advancements have paved the way for the successful application of\ngenerative artificial intelligence (AI) models in protein design. These models\nhave surpassed traditional approaches that rely on fragments and\nbioinformatics. They have significantly enhanced the success rate of de novo\nprotein design, and reduced experimental costs, leading to breakthroughs in the\nfield. Among various generative AI models, diffusion models have yielded the\nmost promising results in protein design. In the past two to three years, more\nthan ten protein design models based on diffusion models have emerged. Among\nthem, the representative model, RFDiffusion, has demonstrated success rates in\n25 protein design tasks that far exceed those of traditional methods, and other\nAI-based approaches like RFjoint and hallucination. This review will\nsystematically examine the application of diffusion models in generating\nprotein backbones and sequences. We will explore the strengths and limitations\nof different models, summarize successful cases of protein design using\ndiffusion models, and discuss future development directions.",
+          "arxiv_id": "2504.16479v1"
+        },
+        {
+          "title": "Generating Novel, Designable, and Diverse Protein Structures by Equivariantly Diffusing Oriented Residue Clouds",
+          "year": "2023-01",
+          "abstract": "Proteins power a vast array of functional processes in living cells. The\ncapability to create new proteins with designed structures and functions would\nthus enable the engineering of cellular behavior and development of\nprotein-based therapeutics and materials. Structure-based protein design aims\nto find structures that are designable (can be realized by a protein sequence),\nnovel (have dissimilar geometry from natural proteins), and diverse (span a\nwide range of geometries). While advances in protein structure prediction have\nmade it possible to predict structures of novel protein sequences, the\ncombinatorially large space of sequences and structures limits the practicality\nof search-based methods. Generative models provide a compelling alternative, by\nimplicitly learning the low-dimensional structure of complex data\ndistributions. Here, we leverage recent advances in denoising diffusion\nprobabilistic models and equivariant neural networks to develop Genie, a\ngenerative model of protein structures that performs discrete-time diffusion\nusing a cloud of oriented reference frames in 3D space. Through in silico\nevaluations, we demonstrate that Genie generates protein backbones that are\nmore designable, novel, and diverse than existing models. This indicates that\nGenie is capturing key aspects of the distribution of protein structure space\nand facilitates protein design with high success rates. Code for generating new\nproteins and training new versions of Genie is available at\nhttps://github.com/aqlaboratory/genie.",
+          "arxiv_id": "2301.12485v3"
+        },
+        {
+          "title": "ProtFlow: Fast Protein Sequence Design via Flow Matching on Compressed Protein Language Model Embeddings",
+          "year": "2025-04",
+          "abstract": "The design of protein sequences with desired functionalities is a fundamental\ntask in protein engineering. Deep generative methods, such as autoregressive\nmodels and diffusion models, have greatly accelerated the discovery of novel\nprotein sequences. However, these methods mainly focus on local or shallow\nresidual semantics and suffer from low inference efficiency, large modeling\nspace and high training cost. To address these challenges, we introduce\nProtFlow, a fast flow matching-based protein sequence design framework that\noperates on embeddings derived from semantically meaningful latent space of\nprotein language models. By compressing and smoothing the latent space,\nProtFlow enhances performance while training on limited computational\nresources. Leveraging reflow techniques, ProtFlow enables high-quality\nsingle-step sequence generation. Additionally, we develop a joint design\npipeline for the design scene of multichain proteins. We evaluate ProtFlow\nacross diverse protein design tasks, including general peptides and long-chain\nproteins, antimicrobial peptides, and antibodies. Experimental results\ndemonstrate that ProtFlow outperforms task-specific methods in these\napplications, underscoring its potential and broad applicability in\ncomputational protein sequence design and analysis.",
+          "arxiv_id": "2504.10983v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "OntoProtein: Protein Pretraining With Gene Ontology Embedding",
+          "year": "2022-01",
+          "abstract": "Self-supervised protein language models have proved their effectiveness in\nlearning the proteins representations. With the increasing computational power,\ncurrent protein language models pre-trained with millions of diverse sequences\ncan advance the parameter scale from million-level to billion-level and achieve\nremarkable improvement. However, those prevailing approaches rarely consider\nincorporating knowledge graphs (KGs), which can provide rich structured\nknowledge facts for better protein representations. We argue that informative\nbiology knowledge in KGs can enhance protein representation with external\nknowledge. In this work, we propose OntoProtein, the first general framework\nthat makes use of structure in GO (Gene Ontology) into protein pre-training\nmodels. We construct a novel large-scale knowledge graph that consists of GO\nand its related proteins, and gene annotation texts or protein sequences\ndescribe all nodes in the graph. We propose novel contrastive learning with\nknowledge-aware negative sampling to jointly optimize the knowledge graph and\nprotein embedding during pre-training. Experimental results show that\nOntoProtein can surpass state-of-the-art methods with pre-trained protein\nlanguage models in TAPE benchmark and yield better performance compared with\nbaselines in protein-protein interaction and protein function prediction. Code\nand datasets are available in https://github.com/zjunlp/OntoProtein.",
+          "arxiv_id": "2201.11147v6"
+        },
+        {
+          "title": "Structure-Informed Protein Language Model",
+          "year": "2024-02",
+          "abstract": "Protein language models are a powerful tool for learning protein\nrepresentations through pre-training on vast protein sequence datasets.\nHowever, traditional protein language models lack explicit structural\nsupervision, despite its relevance to protein function. To address this issue,\nwe introduce the integration of remote homology detection to distill structural\ninformation into protein language models without requiring explicit protein\nstructures as input. We evaluate the impact of this structure-informed training\non downstream protein function prediction tasks. Experimental results reveal\nconsistent improvements in function annotation accuracy for EC number and GO\nterm prediction. Performance on mutant datasets, however, varies based on the\nrelationship between targeted properties and protein structures. This\nunderscores the importance of considering this relationship when applying\nstructure-aware training to protein function prediction tasks. Code and model\nweights are available at https://github.com/DeepGraphLearning/esm-s.",
+          "arxiv_id": "2402.05856v1"
+        },
+        {
+          "title": "Endowing Protein Language Models with Structural Knowledge",
+          "year": "2024-01",
+          "abstract": "Understanding the relationships between protein sequence, structure and\nfunction is a long-standing biological challenge with manifold implications\nfrom drug design to our understanding of evolution. Recently, protein language\nmodels have emerged as the preferred method for this challenge, thanks to their\nability to harness large sequence databases. Yet, their reliance on expansive\nsequence data and parameter sets limits their flexibility and practicality in\nreal-world scenarios. Concurrently, the recent surge in computationally\npredicted protein structures unlocks new opportunities in protein\nrepresentation learning. While promising, the computational burden carried by\nsuch complex data still hinders widely-adopted practical applications. To\naddress these limitations, we introduce a novel framework that enhances protein\nlanguage models by integrating protein structural data. Drawing from recent\nadvances in graph transformers, our approach refines the self-attention\nmechanisms of pretrained language transformers by integrating structural\ninformation with structure extractor modules. This refined model, termed\nProtein Structure Transformer (PST), is further pretrained on a small protein\nstructure database, using the same masked language modeling objective as\ntraditional protein language models. Empirical evaluations of PST demonstrate\nits superior parameter efficiency relative to protein language models, despite\nbeing pretrained on a dataset comprising only 542K structures. Notably, PST\nconsistently outperforms the state-of-the-art foundation model for protein\nsequences, ESM-2, setting a new benchmark in protein function prediction. Our\nfindings underscore the potential of integrating structural information into\nprotein language models, paving the way for more effective and efficient\nprotein modeling Code and pretrained models are available at\nhttps://github.com/BorgwardtLab/PST.",
+          "arxiv_id": "2401.14819v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Pre-Training on Large-Scale Generated Docking Conformations with HelixDock to Unlock the Potential of Protein-ligand Structure Prediction Models",
+          "year": "2023-10",
+          "abstract": "Protein-ligand structure prediction is an essential task in drug discovery,\npredicting the binding interactions between small molecules (ligands) and\ntarget proteins (receptors). Recent advances have incorporated deep learning\ntechniques to improve the accuracy of protein-ligand structure prediction.\nNevertheless, the experimental validation of docking conformations remains\ncostly, it raises concerns regarding the generalizability of these deep\nlearning-based methods due to the limited training data. In this work, we show\nthat by pre-training on a large-scale docking conformation generated by\ntraditional physics-based docking tools and then fine-tuning with a limited set\nof experimentally validated receptor-ligand complexes, we can obtain a\nprotein-ligand structure prediction model with outstanding performance.\nSpecifically, this process involved the generation of 100 million docking\nconformations for protein-ligand pairings, an endeavor consuming roughly 1\nmillion CPU core days. The proposed model, HelixDock, aims to acquire the\nphysical knowledge encapsulated by the physics-based docking tools during the\npre-training phase. HelixDock has been rigorously benchmarked against both\nphysics-based and deep learning-based baselines, demonstrating its exceptional\nprecision and robust transferability in predicting binding confirmation. In\naddition, our investigation reveals the scaling laws governing pre-trained\nprotein-ligand structure prediction models, indicating a consistent enhancement\nin performance with increases in model parameters and the volume of\npre-training data. Moreover, we applied HelixDock to several drug\ndiscovery-related tasks to validate its practical utility. HelixDock\ndemonstrates outstanding capabilities on both cross-docking and structure-based\nvirtual screening benchmarks.",
+          "arxiv_id": "2310.13913v4"
+        },
+        {
+          "title": "DeepRLI: A Multi-objective Framework for Universal Protein--Ligand Interaction Prediction",
+          "year": "2024-01",
+          "abstract": "Protein (receptor)--ligand interaction prediction is a critical component in\ncomputer-aided drug design, significantly influencing molecular docking and\nvirtual screening processes. Despite the development of numerous scoring\nfunctions in recent years, particularly those employing machine learning,\naccurately and efficiently predicting binding affinities for protein--ligand\ncomplexes remains a formidable challenge. Most contemporary methods are\ntailored for specific tasks, such as binding affinity prediction, binding pose\nprediction, or virtual screening, often failing to encompass all aspects. In\nthis study, we put forward DeepRLI, a novel protein--ligand interaction\nprediction architecture. It encodes each protein--ligand complex into a fully\nconnected graph, retaining the integrity of the topological and spatial\nstructure, and leverages the improved graph transformer layers with cosine\nenvelope as the central module of the neural network, thus exhibiting superior\nscoring power. In order to equip the model to generalize to conformations\nbeyond the confines of crystal structures and to adapt to molecular docking and\nvirtual screening tasks, we propose a multi-objective strategy, that is, the\nmodel outputs three scores for scoring and ranking, docking, and screening, and\nthe training process optimizes these three objectives simultaneously. For the\nlatter two objectives, we augment the dataset through a docking procedure,\nincorporate suitable physics-informed blocks and employ an effective\ncontrastive learning approach. Eventually, our model manifests a balanced\nperformance across scoring, ranking, docking, and screening, thereby\ndemonstrating its ability to handle a range of tasks. Overall, this research\ncontributes a multi-objective framework for universal protein--ligand\ninteraction prediction, augmenting the landscape of structure-based drug\ndesign.",
+          "arxiv_id": "2401.10806v1"
+        },
+        {
+          "title": "DiffBindFR: An SE(3) Equivariant Network for Flexible Protein-Ligand Docking",
+          "year": "2023-11",
+          "abstract": "Molecular docking, a key technique in structure-based drug design, plays\npivotal roles in protein-ligand interaction modeling, hit identification and\noptimization, in which accurate prediction of protein-ligand binding mode is\nessential. Conventional docking approaches perform well in redocking tasks with\nknown protein binding pocket conformation in the complex state. However, in\nreal-world docking scenario without knowing the protein binding conformation\nfor a new ligand, accurately modeling the binding complex structure remains\nchallenging as flexible docking is computationally expensive and inaccurate.\nTypical deep learning-based docking methods do not explicitly consider protein\nside chain conformations and fail to ensure the physical plausibility and\ndetailed atomic interactions. In this study, we present DiffBindFR, a full-atom\ndiffusion-based flexible docking model that operates over the product space of\nligand overall movements and flexibility and pocket side chain torsion changes.\nWe show that DiffBindFR has higher accuracy in producing native-like binding\nstructures with physically plausible and detailed interactions than available\ndocking methods. Furthermore, in the Apo and AlphaFold2 modeled structures,\nDiffBindFR demonstrates superior advantages in accurate ligand binding pose and\nprotein binding conformation prediction, making it suitable for Apo and\nAlphaFold2 structure-based drug design. DiffBindFR provides a powerful flexible\ndocking tool for modeling accurate protein-ligand binding structures.",
+          "arxiv_id": "2311.15201v3"
+        }
+      ],
+      "6": [
+        {
+          "title": "Predicting inhibitors for SARS-CoV-2 RNA-dependent RNA polymerase using machine learning and virtual screening",
+          "year": "2020-06",
+          "abstract": "Global coronavirus disease pandemic (COVID-19) caused by newly identified\nSARS- CoV-2 coronavirus continues to claim the lives of thousands of people\nworldwide. The unavailability of specific medications to treat COVID-19 has led\nto drug repositioning efforts using various approaches, including computational\nanalyses. Such analyses mostly rely on molecular docking and require the 3D\nstructure of the target protein to be available. In this study, we utilized a\nset of machine learning algorithms and trained them on a dataset of\nRNA-dependent RNA polymerase (RdRp) inhibitors to run inference analyses on\nantiviral and anti-inflammatory drugs solely based on the ligand information.\nWe also performed virtual screening analysis of the drug candidates predicted\nby machine learning models and docked them against the active site of SARS-\nCoV-2 RdRp, a key component of the virus replication machinery. Based on the\nligand information of RdRp inhibitors, the machine learning models were able to\nidentify candidates such as remdesivir and baloxavir marboxil, molecules with\ndocumented activity against RdRp of the novel coronavirus. Among the other\nidentified drug candidates were beclabuvir, a non-nucleoside inhibitor of the\nhepatitis C virus (HCV) RdRp enzyme, and HCV protease inhibitors paritaprevir\nand faldaprevir. Further analysis of these candidates using molecular docking\nagainst the SARS-CoV-2 RdRp revealed low binding energies against the enzyme\nactive site. Our approach also identified anti-inflammatory drugs lupeol,\nlifitegrast, antrafenine, betulinic acid, and ursolic acid to have potential\nactivity against SARS-CoV-2 RdRp. We propose that the results of this study are\nconsidered for further validation as potential therapeutic options against\nCOVID-19.",
+          "arxiv_id": "2006.06523v1"
+        },
+        {
+          "title": "In silico identification of clinically approved medicines against the main protease of SARS-CoV-2, causative agent of covid-19",
+          "year": "2020-04",
+          "abstract": "The COVID-19 pandemic triggered by SARS-CoV-2 is a worldwide health disaster.\nMain protease is an attractive drug target among coronaviruses, due to its\nvital role in processing the polyproteins that are translated from the viral\nRNA. There is presently no exact drug or treatment for this diseases caused by\nSARS-CoV-2. In the present study, we report the potential inhibitory activity\nof some FDA approved drugs against SARS-CoV-2 main protease by molecular\ndocking study to investigate their binding affinity in protease active site.\nDocking studies revealed that drug Oseltamivir (anti-H1N1 drug), Rifampin\n(anti-TB drug), Maraviroc, Etravirine, Indinavir, Rilpivirine (anti-HIV drugs)\nand Atovaquone, Quinidine, Halofantrine, Amodiaquine, Tetracylcine,\nAzithromycin, hydroxycholoroquine (anti-malarial drugs) among others binds in\nthe active site of the protease with similar or higher affinity. However, the\nin-silico abilities of the drug molecules tested in this study, further needs\nto be validated by carrying out in vitro and in vivo studies. Moreover, this\nstudy spreads the potential use of current drugs to be considered and used to\ncomprise the fast expanding SARS-CoV-2 infection.",
+          "arxiv_id": "2004.12055v1"
+        },
+        {
+          "title": "Computational evidence on repurposing the anti-influenza drugs baloxavir acid and baloxavir marboxil against COVID-19",
+          "year": "2020-09",
+          "abstract": "The main reasons for the ongoing COVID-19 (coronavirus disease 2019) pandemic\nare the unavailability of recommended efficacious drugs or vaccines along with\nthe human to human transmission nature of SARS-CoV-2 virus. So, there is urgent\nneed to search appropriate therapeutic approach by repurposing approved drugs.\nIn this communication, molecular docking analyses of two influenza antiviral\ndrugs baloxavir acid (BXA) and baloxavir marboxil (BXM) were performed with the\nthree therapeutic target proteins of severe acute respiratory syndrome\ncoronavirus 2 (SARS-CoV-2), i.e., main protease (Mpro), papain-like protease\n(PLpro) and RNA-dependent RNA polymerase (RdRp). The molecular docking results\nof both the drugs BXA and BXM were analysed and compared. The investigational\ndrug BXA binds at the active site of Mpro and RdRp, whereas the approved drug\nBXM binds only at the active site of RdRp. Also, comparison of dock score\nrevealed that BXA is binding more effectively at the active site of RdRp than\nBXM. The computational molecular docking revealed that the drug BXA may be more\neffective against COVID-19 as compared to BXM.",
+          "arxiv_id": "2009.01094v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "S$^2$ALM: Sequence-Structure Pre-trained Large Language Model for Comprehensive Antibody Representation Learning",
+          "year": "2024-11",
+          "abstract": "Antibodies safeguard our health through their precise and potent binding to\nspecific antigens, demonstrating promising therapeutic efficacy in the\ntreatment of numerous diseases, including COVID-19. Recent advancements in\nbiomedical language models have shown the great potential to interpret complex\nbiological structures and functions. However, existing antibody specific models\nhave a notable limitation that they lack explicit consideration for antibody\nstructural information, despite the fact that both 1D sequence and 3D structure\ncarry unique and complementary insights into antibody behavior and\nfunctionality. This paper proposes Sequence-Structure multi-level pre-trained\nAntibody Language Model (S$^2$ALM), combining holistic sequential and\nstructural information in one unified, generic antibody foundation model. We\nconstruct a hierarchical pre-training paradigm incorporated with two customized\nmulti-level training objectives to facilitate the modeling of comprehensive\nantibody representations. S$^2$ALM's representation space uncovers inherent\nfunctional binding mechanisms, biological evolution properties and structural\ninteraction patterns. Pre-trained over 75 million sequences and 11.7 million\nstructures, S$^2$ALM can be adopted for diverse downstream tasks: accurately\npredicting antigen-antibody binding affinities, precisely distinguishing B cell\nmaturation stages, identifying antibody crucial binding positions, and\nspecifically designing novel coronavirus-binding antibodies. Remarkably,\nS$^2$ALM outperforms well-established and renowned baselines and sets new\nstate-of-the-art performance across extensive antibody specific understanding\nand generation tasks. S$^2$ALM's ability to model comprehensive and generalized\nrepresentations further positions its potential to advance real-world\ntherapeutic antibody development, potentially addressing unmet academic,\nindustrial, and clinical needs.",
+          "arxiv_id": "2411.15215v1"
+        },
+        {
+          "title": "Benchmark for Antibody Binding Affinity Maturation and Design",
+          "year": "2025-05",
+          "abstract": "We introduce AbBiBench (Antibody Binding Benchmarking), a benchmarking\nframework for antibody binding affinity maturation and design. Unlike existing\nantibody evaluation strategies that rely on antibody alone and its similarity\nto natural ones (e.g., amino acid identity rate, structural RMSD), AbBiBench\nconsiders an antibody-antigen (Ab-Ag) complex as a functional unit and\nevaluates the potential of an antibody design binding to given antigen by\nmeasuring protein model's likelihood on the Ab-Ag complex. We first curate,\nstandardize, and share 9 datasets containing 9 antigens (involving influenza,\nanti-lysozyme, HER2, VEGF, integrin, and SARS-CoV-2) and 155,853 heavy chain\nmutated antibodies. Using these datasets, we systematically compare 14 protein\nmodels including masked language models, autoregressive language models,\ninverse folding models, diffusion-based generative models, and geometric graph\nmodels. The correlation between model likelihood and experimental affinity\nvalues is used to evaluate model performance. Additionally, in a case study to\nincrease binding affinity of antibody F045-092 to antigen influenza H1N1, we\nevaluate the generative power of the top-performing models by sampling a set of\nnew antibodies binding to the antigen and ranking them based on structural\nintegrity and biophysical properties of the Ab-Ag complex. As a result,\nstructure-conditioned inverse folding models outperform others in both affinity\ncorrelation and generation tasks. Overall, AbBiBench provides a unified,\nbiologically grounded evaluation framework to facilitate the development of\nmore effective, function-aware antibody design models.",
+          "arxiv_id": "2506.04235v1"
+        },
+        {
+          "title": "Incorporating Pre-training Paradigm for Antibody Sequence-Structure Co-design",
+          "year": "2022-10",
+          "abstract": "Antibodies are versatile proteins that can bind to pathogens and provide\neffective protection for human body. Recently, deep learning-based\ncomputational antibody design has attracted popular attention since it\nautomatically mines the antibody patterns from data that could be complementary\nto human experiences. However, the computational methods heavily rely on\nhigh-quality antibody structure data, which is quite limited. Besides, the\ncomplementarity-determining region (CDR), which is the key component of an\nantibody that determines the specificity and binding affinity, is highly\nvariable and hard to predict. Therefore, the data limitation issue further\nraises the difficulty of CDR generation for antibodies. Fortunately, there\nexists a large amount of sequence data of antibodies that can help model the\nCDR and alleviate the reliance on structure data. By witnessing the success of\npre-training models for protein modeling, in this paper, we develop the\nantibody pre-training language model and incorporate it into the\n(antigen-specific) antibody design model in a systemic way. Specifically, we\nfirst pre-train an antibody language model based on the sequence data, then\npropose a one-shot way for sequence and structure generation of CDR to avoid\nthe heavy cost and error propagation from an autoregressive manner, and finally\nleverage the pre-trained antibody model for the antigen-specific antibody\ngeneration model with some carefully designed modules. Through various\nexperiments, we show that our method achieves superior performances over\nprevious baselines on different tasks, such as sequence and structure\ngeneration and antigen-binding CDR-H3 design.",
+          "arxiv_id": "2211.08406v2"
+        }
+      ],
+      "8": [
+        {
+          "title": "SARS-CoV-2 orthologs of pathogenesis-involved small viral RNAs of SARS-CoV",
+          "year": "2020-07",
+          "abstract": "Background: The COVID-19 pandemic clock is ticking and the survival of many\nof mankind's modern institutions and or survival of many individuals is at\nstake. There is a need for treatments to significantly reduce the morbidity and\nmortality of COVID-19. Hence, we delved deep into the SARS-CoV-2 genome, which\nis the virus that has caused COVID-19. SARS-CoV-2 is from the same family as\nSARS-CoV in which three small viral RNAs (svRNA) were recently identified;\nthose svRNAs play a significant role in the virus pathogenesis in mice.\n  Contribution: In this paper, we report potential orthologs of those three\nsvRNAs in the SARS-CoV-2 genome. Instead of off-the-shelf search and alignment\nalgorithms, which failed to discover the orthologs, we used a special alignment\nscoring that does not penalize C/T and A/G mismatches as much as the other\nmutations. RNA bases C and U both can bind to G; similarly, A and G both can\nbind to U, hence, our scoring. We also validate this hypothesis using a novel,\nindependent computational experiment. To validate our results, we confirmed the\ndiscovered orthologs are fully conserved in all the tested publicly available\ngenomes of various strains of SARS-CoV-2; the loci at which the SARS-CoV-2\northologs occur are close to the loci at which SARS-CoV svRNAs occur. We also\nreport potential targets for these svRNAs. We hypothesize that the discovered\northologs play a role in pathogenesis of SARS-CoV-2, and therefore,\nantagomir-mediated inhibition of these SARS-CoV-2 svRNAs inhibits COVID-19.",
+          "arxiv_id": "2007.05859v2"
+        },
+        {
+          "title": "Accurate Evaluation on the Interactions of SARS-CoV-2 with Its Receptor ACE2 and Antibodies CR3022/CB6",
+          "year": "2021-01",
+          "abstract": "The spread of the coronavirus disease 2019 (COVID-19) caused by severe acute\nrespiratory syndrome coronavirus-2 (SARS-CoV-2) has become a global health\ncrisis. The binding affinity of SARS-CoV-2 (in particular the receptor binding\ndomain, RBD) to its receptor angiotensin converting enzyme 2 (ACE2) and the\nantibodies is of great importance in understanding the infectivity of COVID-19\nand evaluating the candidate therapeutic for COVID-19. In this work, we propose\na new method based on molecular mechanics/Poisson-Boltzmann surface area\n(MM/PBSA) to accurately calculate the free energy of SARS-CoV-2 RBD binding to\nACE2 and antibodies. The calculated binding free energy of SARS-CoV-2 RBD to\nACE2 is -13.3 kcal/mol, and that of SARS-CoV RBD to ACE2 is -11.4 kcal/mol,\nwhich agrees well with experimental result (-11.3 kcal/mol and -10.1 kcal/mol,\nrespectively). Moreover, we take two recently reported antibodies as the\nexample, and calculate the free energy of antibodies binding to SARS-CoV-2 RBD,\nwhich is also consistent with the experimental findings. Further, within the\nframework of the modified MM/PBSA, we determine the key residues and the main\ndriving forces for the SARS-CoV-2 RBD/CB6 interaction by the computational\nalanine scanning method. The present study offers a computationally efficient\nand numerically reliable method to evaluate the free energy of SARS-CoV-2\nbinding to other proteins, which may stimulate the development of the\ntherapeutics against the COVID-19 disease in real applications.",
+          "arxiv_id": "2102.03305v1"
+        },
+        {
+          "title": "A hydrophobic-interaction-based mechanism trigger docking between the SARS CoV 2 spike and angiotensin-converting enzyme 2",
+          "year": "2020-08",
+          "abstract": "A recent experimental study found that the binding affinity between the\ncellular receptor human angiotensin converting enzyme 2 (ACE2) and\nreceptor-binding domain (RBD) in spike (S) protein of novel severe acute\nrespiratory syndrome coronavirus 2 (SARS-CoV-2) is more than 10-fold higher\nthan that of the original severe acute respiratory syndrome coronavirus\n(SARS-CoV). However, main-chain structures of the SARS-CoV-2 RBD are almost the\nsame with that of the SARS-CoV RBD. Understanding physical mechanism\nresponsible for the outstanding affinity between the SARS-CoV-2 S and ACE2 is\nthe \"urgent challenge\" for developing blockers, vaccines and therapeutic\nantibodies against the coronavirus disease 2019 (COVID-19) pandemic.\nConsidering the mechanisms of hydrophobic interaction, hydration shell, surface\ntension, and the shielding effect of water molecules, this study reveals a\nhydrophobic-interaction-based mechanism by means of which SARS-CoV-2 S and ACE2\nbind together in an aqueous environment. The hydrophobic interaction between\nthe SARS-CoV-2 S and ACE2 protein is found to be significantly greater than\nthat between SARS-CoV S and ACE2. At the docking site, the hydrophobic portions\nof the hydrophilic side chains of SARS-CoV-2 S are found to be involved in the\nhydrophobic interaction between SARS-CoV-2 S and ACE2. We propose a method to\ndesign live attenuated viruses by mutating several key amino acid residues of\nthe spike protein to decrease the hydrophobic surface areas at the docking\nsite. Mutation of a small amount of residues can greatly reduce the hydrophobic\nbinding of the coronavirus to the receptor, which may be significant reduce\ninfectivity and transmissibility of the virus.",
+          "arxiv_id": "2008.11883v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:42:47Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

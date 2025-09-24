@@ -1,0 +1,1016 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_category_categories_algebras_algebra",
+        "keywords": [
+          [
+            "category",
+            0.042231360762200465
+          ],
+          [
+            "categories",
+            0.037641132248164295
+          ],
+          [
+            "algebras",
+            0.03532334336978642
+          ],
+          [
+            "algebra",
+            0.030793346074424896
+          ],
+          [
+            "theory",
+            0.024519016813027768
+          ],
+          [
+            "cohomology",
+            0.023131224999167345
+          ],
+          [
+            "homology",
+            0.020051248217119025
+          ],
+          [
+            "modules",
+            0.019682505705272198
+          ],
+          [
+            "Hochschild",
+            0.019101642582392383
+          ],
+          [
+            "Lie",
+            0.01879154810349725
+          ]
+        ],
+        "count": 461
+      },
+      "1": {
+        "name": "1_motivic_theory_cohomology_motives",
+        "keywords": [
+          [
+            "motivic",
+            0.06704336214856084
+          ],
+          [
+            "theory",
+            0.032095361317078366
+          ],
+          [
+            "cohomology",
+            0.031621489449603496
+          ],
+          [
+            "motives",
+            0.02935762674466866
+          ],
+          [
+            "homotopy",
+            0.02405159154740737
+          ],
+          [
+            "smooth",
+            0.022283951334399626
+          ],
+          [
+            "schemes",
+            0.021592625154909853
+          ],
+          [
+            "field",
+            0.01914516410425412
+          ],
+          [
+            "Witt",
+            0.01862951666883331
+          ],
+          [
+            "algebraic",
+            0.018495638835060543
+          ]
+        ],
+        "count": 200
+      },
+      "2": {
+        "name": "2_index_coarse_operators_Dirac",
+        "keywords": [
+          [
+            "index",
+            0.07010075901450637
+          ],
+          [
+            "coarse",
+            0.04813776993672542
+          ],
+          [
+            "operators",
+            0.04120479376966878
+          ],
+          [
+            "Dirac",
+            0.033307200628803345
+          ],
+          [
+            "curvature",
+            0.031180624522353532
+          ],
+          [
+            "scalar",
+            0.0289988948863733
+          ],
+          [
+            "manifolds",
+            0.02581555010849663
+          ],
+          [
+            "operator",
+            0.025506659135929755
+          ],
+          [
+            "boundary",
+            0.025033080359742315
+          ],
+          [
+            "theory",
+            0.024339723398442648
+          ]
+        ],
+        "count": 170
+      },
+      "3": {
+        "name": "3_group_groups_theory_ring",
+        "keywords": [
+          [
+            "group",
+            0.03002518480032481
+          ],
+          [
+            "groups",
+            0.029602201162851286
+          ],
+          [
+            "theory",
+            0.024399843041586874
+          ],
+          [
+            "ring",
+            0.018966231962923717
+          ],
+          [
+            "rings",
+            0.018351857801527895
+          ],
+          [
+            "field",
+            0.018175224848383263
+          ],
+          [
+            "THH",
+            0.017830638373146492
+          ],
+          [
+            "cohomology",
+            0.017471649246312553
+          ],
+          [
+            "spectrum",
+            0.015983391914419984
+          ],
+          [
+            "real",
+            0.015764640605509066
+          ]
+        ],
+        "count": 102
+      },
+      "4": {
+        "name": "4_homology_groups_theory_group",
+        "keywords": [
+          [
+            "homology",
+            0.06047848598784909
+          ],
+          [
+            "groups",
+            0.036038536365820314
+          ],
+          [
+            "theory",
+            0.02714641449265124
+          ],
+          [
+            "group",
+            0.025802462340296088
+          ],
+          [
+            "complex",
+            0.02461564299142866
+          ],
+          [
+            "Lie",
+            0.020223697572884478
+          ],
+          [
+            "cohomology",
+            0.01850530698866098
+          ],
+          [
+            "algebra",
+            0.016870401656639025
+          ],
+          [
+            "action",
+            0.016620672636515392
+          ],
+          [
+            "graph",
+            0.016348093684585174
+          ]
+        ],
+        "count": 56
+      },
+      "5": {
+        "name": "5_equivariant_theory_Equivariant_algebraic",
+        "keywords": [
+          [
+            "equivariant",
+            0.12403439547712311
+          ],
+          [
+            "theory",
+            0.055382808872803224
+          ],
+          [
+            "Equivariant",
+            0.035362526532039355
+          ],
+          [
+            "algebraic",
+            0.03001315648575446
+          ],
+          [
+            "groups",
+            0.026680514007305277
+          ],
+          [
+            "topological",
+            0.02589085771398306
+          ],
+          [
+            "cohomology",
+            0.024058690279804652
+          ],
+          [
+            "ring",
+            0.02129082904311724
+          ],
+          [
+            "varieties",
+            0.017232268743533778
+          ],
+          [
+            "equivariant cohomology",
+            0.017163961625838976
+          ]
+        ],
+        "count": 49
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.2952763391303599,
+        -0.5512686821734074,
+        -0.40693295700191523,
+        -0.3707438455537954,
+        -0.5636282190091495
+      ],
+      [
+        -0.2952763391303599,
+        1.0,
+        -0.6033944780843892,
+        -0.3338551429422915,
+        -0.4001088824207628,
+        -0.3424867398694081
+      ],
+      [
+        -0.5512686821734074,
+        -0.6033944780843892,
+        1.0,
+        -0.6044057617823025,
+        -0.5905024211992564,
+        -0.5927696743371154
+      ],
+      [
+        -0.40693295700191523,
+        -0.3338551429422915,
+        -0.6044057617823025,
+        1.0,
+        -0.296950783422926,
+        -0.5395163309915706
+      ],
+      [
+        -0.3707438455537954,
+        -0.4001088824207628,
+        -0.5905024211992564,
+        -0.296950783422926,
+        1.0,
+        -0.518163210408575
+      ],
+      [
+        -0.5636282190091495,
+        -0.3424867398694081,
+        -0.5927696743371154,
+        -0.5395163309915706,
+        -0.518163210408575,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        10,
+        2,
+        7,
+        1,
+        1,
+        7
+      ],
+      "2020-02": [
+        10,
+        5,
+        2,
+        4,
+        2,
+        2
+      ],
+      "2020-03": [
+        4,
+        4,
+        7,
+        4,
+        5,
+        3
+      ],
+      "2020-04": [
+        8,
+        5,
+        1,
+        4,
+        3,
+        3
+      ],
+      "2020-05": [
+        10,
+        2,
+        4,
+        1,
+        4,
+        1
+      ],
+      "2020-06": [
+        10,
+        6,
+        4,
+        3,
+        2,
+        3
+      ],
+      "2020-07": [
+        7,
+        8,
+        4,
+        7,
+        5,
+        3
+      ],
+      "2020-08": [
+        11,
+        2,
+        4,
+        2,
+        1,
+        4
+      ],
+      "2020-09": [
+        11,
+        8,
+        4,
+        4,
+        3,
+        6
+      ],
+      "2020-10": [
+        15,
+        8,
+        3,
+        1,
+        1,
+        1
+      ],
+      "2020-11": [
+        2,
+        4,
+        1,
+        6,
+        3,
+        6
+      ],
+      "2020-12": [
+        10,
+        5,
+        3,
+        2,
+        2,
+        4
+      ],
+      "2021-01": [
+        7,
+        6,
+        2,
+        2,
+        3,
+        3
+      ],
+      "2021-02": [
+        7,
+        4,
+        2,
+        3,
+        2,
+        3
+      ],
+      "2021-03": [
+        7,
+        8,
+        4,
+        2,
+        0,
+        0
+      ],
+      "2021-04": [
+        7,
+        4,
+        0,
+        1,
+        2,
+        0
+      ],
+      "2021-05": [
+        13,
+        2,
+        1,
+        3,
+        2,
+        2
+      ],
+      "2021-06": [
+        7,
+        7,
+        2,
+        5,
+        1,
+        3
+      ],
+      "2021-07": [
+        10,
+        2,
+        0,
+        0,
+        3,
+        3
+      ],
+      "2021-08": [
+        6,
+        5,
+        8,
+        3,
+        0,
+        0
+      ],
+      "2021-09": [
+        12,
+        6,
+        2,
+        2,
+        3,
+        1
+      ],
+      "2021-10": [
+        8,
+        3,
+        2,
+        3,
+        3,
+        6
+      ],
+      "2021-11": [
+        8,
+        7,
+        4,
+        3,
+        7,
+        3
+      ],
+      "2021-12": [
+        11,
+        7,
+        3,
+        3,
+        5,
+        3
+      ],
+      "2022-01": [
+        3,
+        3,
+        8,
+        3,
+        1,
+        2
+      ],
+      "2022-02": [
+        12,
+        6,
+        1,
+        1,
+        1,
+        8
+      ],
+      "2022-03": [
+        7,
+        6,
+        3,
+        2,
+        5,
+        4
+      ],
+      "2022-04": [
+        15,
+        5,
+        1,
+        7,
+        3,
+        2
+      ],
+      "2022-05": [
+        10,
+        1,
+        0,
+        5,
+        3,
+        2
+      ],
+      "2022-06": [
+        10,
+        4,
+        2,
+        3,
+        5,
+        1
+      ],
+      "2022-07": [
+        11,
+        4,
+        3,
+        2,
+        4,
+        4
+      ],
+      "2022-08": [
+        7,
+        2,
+        4,
+        0,
+        2,
+        2
+      ],
+      "2022-09": [
+        13,
+        2,
+        3,
+        1,
+        4,
+        6
+      ],
+      "2022-10": [
+        8,
+        6,
+        2,
+        5,
+        3,
+        5
+      ],
+      "2022-11": [
+        17,
+        5,
+        4,
+        4,
+        3,
+        6
+      ],
+      "2022-12": [
+        8,
+        1,
+        1,
+        2,
+        2,
+        5
+      ],
+      "2023-01": [
+        5,
+        2,
+        2,
+        1,
+        2,
+        4
+      ],
+      "2023-02": [
+        12,
+        3,
+        0,
+        2,
+        1,
+        1
+      ],
+      "2023-03": [
+        17,
+        5,
+        5,
+        2,
+        1,
+        6
+      ],
+      "2023-04": [
+        13,
+        3,
+        4,
+        2,
+        3,
+        6
+      ],
+      "2023-05": [
+        12,
+        9,
+        1,
+        3,
+        1,
+        6
+      ],
+      "2023-06": [
+        12,
+        5,
+        1,
+        3,
+        4,
+        4
+      ],
+      "2023-07": [
+        13,
+        8,
+        2,
+        3,
+        2,
+        2
+      ],
+      "2023-08": [
+        12,
+        1,
+        3,
+        5,
+        1,
+        2
+      ],
+      "2023-09": [
+        11,
+        6,
+        2,
+        3,
+        1,
+        2
+      ],
+      "2023-10": [
+        10,
+        3,
+        1,
+        2,
+        4,
+        5
+      ],
+      "2023-11": [
+        11,
+        7,
+        3,
+        5,
+        2,
+        5
+      ],
+      "2023-12": [
+        9,
+        2,
+        1,
+        1,
+        2,
+        5
+      ],
+      "2024-01": [
+        7,
+        7,
+        1,
+        8,
+        4,
+        3
+      ],
+      "2024-02": [
+        7,
+        6,
+        4,
+        0,
+        4,
+        4
+      ],
+      "2024-03": [
+        7,
+        8,
+        0,
+        1,
+        3,
+        3
+      ],
+      "2024-04": [
+        10,
+        6,
+        0,
+        1,
+        2,
+        6
+      ],
+      "2024-05": [
+        17,
+        3,
+        0,
+        3,
+        4,
+        6
+      ],
+      "2024-06": [
+        13,
+        4,
+        1,
+        3,
+        2,
+        3
+      ],
+      "2024-07": [
+        15,
+        3,
+        4,
+        4,
+        7,
+        5
+      ],
+      "2024-08": [
+        8,
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "2024-09": [
+        14,
+        4,
+        1,
+        6,
+        3,
+        7
+      ],
+      "2024-10": [
+        13,
+        2,
+        4,
+        10,
+        4,
+        7
+      ],
+      "2024-11": [
+        13,
+        5,
+        3,
+        5,
+        1,
+        2
+      ],
+      "2024-12": [
+        10,
+        6,
+        2,
+        4,
+        2,
+        7
+      ],
+      "2025-01": [
+        9,
+        7,
+        2,
+        2,
+        2,
+        7
+      ],
+      "2025-02": [
+        8,
+        4,
+        4,
+        1,
+        2,
+        2
+      ],
+      "2025-03": [
+        10,
+        7,
+        2,
+        3,
+        3,
+        5
+      ],
+      "2025-04": [
+        9,
+        6,
+        2,
+        4,
+        2,
+        2
+      ],
+      "2025-05": [
+        10,
+        4,
+        5,
+        5,
+        6,
+        7
+      ],
+      "2025-06": [
+        15,
+        5,
+        4,
+        4,
+        2,
+        6
+      ],
+      "2025-07": [
+        11,
+        7,
+        5,
+        3,
+        3,
+        6
+      ],
+      "2025-08": [
+        9,
+        7,
+        4,
+        1,
+        1,
+        7
+      ],
+      "2025-09": [
+        4,
+        2,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Hochschild cohomology for functors on linear symmetric monoidal categories",
+          "year": "2023-11",
+          "abstract": "Let $R$ be a commutative ring with unit. We develop a Hochschild cohomology\ntheory in the category $\\mathcal{F}$ of linear functors defined from an\nessentially small symmetric monoidal category enriched in $R$-Mod, to $R$-Mod.\nThe category $\\mathcal{F}$ is known to be symmetric monoidal too, so one can\nconsider monoids in $\\mathcal{F}$ and modules over these monoids, which allows\nfor the possibility of a Hochschild cohomology theory. The emphasis of the\narticle is in considering natural hom constructions appearing in this context.\nThese homs, together with the abelian structure of $\\mathcal{F}$ lead to nice\ndefinitions and provide effective tools to prove the main properties and\nresults of the classical Hochschild cohomology theory.",
+          "arxiv_id": "2311.12269v2"
+        },
+        {
+          "title": "Enriched Koszul duality for dg categories",
+          "year": "2022-11",
+          "abstract": "It is well-known that the category of small dg categories dgCat, though it is\nmonoidal, does not form a monoidal model category. In this paper we construct a\nmonoidal model structure on the category of pointed curved coalgebras ptdCoa*\nand show that the Quillen equivalence relating it to dgCat is monoidal. We also\nshow that dgCat is a ptdCoa*-enriched model category. As a consequence, the\nhomotopy category of dgCat is closed monoidal and is equivalent as a closed\nmonoidal category to the homotopy category of ptdCoa*. In particular, this\ngives a conceptual construction of a derived internal hom in dgCat. As an\napplication we obtain a new description of simplicial mapping spaces in dgCat\nand a calculation of their homotopy groups in terms of Hochschild cohomology\ngroups, reproducing and slightly generalizing well-known results of To\\\"en.\nComparing our approach to To\\\"en's, we also obtain a description of the core of\nLurie's dg nerve in terms of the ordinary nerve of a discrete category.",
+          "arxiv_id": "2211.08118v4"
+        },
+        {
+          "title": "Galois theory and homology in quasi-abelian functor categories",
+          "year": "2024-03",
+          "abstract": "Given a finite category T, we consider the functor category [T,A], where A\ncan in particular be any quasi-abelian category. Examples of quasi-abelian\ncategories are given by any abelian category but also by non-exact additive\ncategories as the categories of torsion(-free) abelian groups, topological\nabelian groups, locally compact abelian groups, Banach spaces and Fr\\'echet\nspaces. In this situation, the categories of various internal categorical\nstructures in A, such as the categories of internal n-fold groupoids, are\nequivalent to functor categories [T,A] for a suitable category T. For a replete\nfull subcategory S of T, we define F to be the full subcategory of [T,A] whose\nobjects are given by the functors G with G(X)=0 for all objects X not in S. We\nprove that F is a torsion-free Birkhoff subcategory of [T,A]. This allows us to\nstudy (higher) central extensions from categorical Galois theory in [T,A] with\nrespect to F and generalized Hopf formulae for homology.",
+          "arxiv_id": "2403.12750v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Motivic homotopy theory with ramification filtrations",
+          "year": "2025-04",
+          "abstract": "The aim of this paper is to connect two important and apparently unrelated\ntheories: motivic homotopy theory and ramification theory. We construct motivic\nhomotopy categories over a qcqs base scheme $S$, in which cohomology theories\nwith ramification filtrations are representable. Every such cohomology theory\nenjoys basic properties such as the Nisnevich descent, the cube-invariance, the\nblow-up invariance, the smooth blow-up excision, the Gysin sequence, the\nprojective bundle formula and the Thom isomorphism. In case $S$ is the spectrum\nof a perfect field, the cohomology of every reciprocity sheaf is upgraded to a\ncohomology theory with a ramification filtration represented in our categories.\nWe also address relations of our theory with other non-$\\mathbb{A}^1$-invariant\nmotivic homotopy theories such as the logarithmic motivic homotopy theory of\nBinda, Park, and {\\O}stv{\\ae}r and the theory of motivic spectra of\nAnnala-Iwasa.",
+          "arxiv_id": "2504.02223v1"
+        },
+        {
+          "title": "Atiyah duality for motivic spectra",
+          "year": "2024-03",
+          "abstract": "We prove that Atiyah duality holds in the $\\infty$-category of non-$\\mathbb\nA^1$-invariant motivic spectra over arbitrary derived schemes: every smooth\nprojective scheme is dualizable with dual given by the Thom spectrum of its\nnegative tangent bundle. The Gysin maps recently constructed by L. Tang are a\nkey ingredient in the proof. We then present several applications. First, we\nstudy $\\mathbb A^1$-colocalization, which transforms any module over the\n$\\mathbb A^1$-invariant sphere into an $\\mathbb A^1$-invariant motivic spectrum\nwithout changing its values on smooth projective schemes. This can be applied\nto all known $p$-adic cohomology theories and gives a new elementary approach\nto \"logarithmic\" or \"tame\" cohomology theories; it recovers for instance the\nlogarithmic crystalline cohomology of strict normal crossings compactifications\nover perfect fields and shows that the latter is independent of the choice of\ncompactification. Second, we prove a motivic Landweber exact functor theorem,\nassociating a motivic spectrum to any graded formal group law classified by a\nflat map to the moduli stack of formal groups. Using this theorem, we compute\nthe ring of $\\mathbb P^1$-stable cohomology operations on the algebraic\nK-theory of qcqs derived schemes, and we prove that rational motivic cohomology\nis an idempotent motivic spectrum.",
+          "arxiv_id": "2403.01561v1"
+        },
+        {
+          "title": "$\\mathbb{A}^1$-invariant motivic cohomology of schemes",
+          "year": "2025-08",
+          "abstract": "Voevodsky outlined a conjectural programme that his slice filtration in\nmotivic homotopy theory should give rise to a good theory of\n$\\mathbb{A}^1$-invariant motivic cohomology. This paper achieves his vision in\nthe generality of arbitrary quasicompact, quasiseparated schemes, by\nintroducing a theory of $\\mathbb{A}^1$-invariant motivic cohomology which is\nrelated to Weibel's homotopy $K$-theory via an Atiyah--Hirzebruch spectral\nsequence, and which we compare to \\'etale and syntomic cohomology in the style\nof the original conjectures of Beilinson and Lichtenbaum. In addition, it is\nrepresented by an absolute motivic spectrum and therefore satisfies cdh\ndescent, and modules over it offer a candidate for the derived category of\n$\\mathbb{A}^1$-invariant motives. We establish some of Voevodsky's open\nconjectures on slices, in particular relating the zeroth slice of the motivic\nsphere to homotopy $K$-theory. In the final section we prove analogous results\nfor the Hermitian $K$-theory of qcqs schemes on which $2$ is invertible.\n  As an auxiliary tool we introduce cdh-motivic cohomology, defined as the cdh\nsheafification of the left Kan extension of the motivic cohomology of smooth\n$\\mathbb{Z}$-schemes. We offer a new approach to control the latter,\nindependent of previous work on $\\mathbb{A}^1$-invariant motivic cohomology of\nsmooth schemes over mixed characteristic Dedekind domains: our approach is\nbased on recent developments in $p$-adic cohomology, in particular syntomic and\nprismatic cohomology. The cdh-motivic cohomology is also a necessary ingredient\nin the last two authors' and Bouis' construction of\nnon-$\\mathbb{A}^1$-invariant motivic cohomology of qcqs schemes.",
+          "arxiv_id": "2508.09915v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "An equivariant Atiyah-Patodi-Singer index theorem for proper actions II: the $K$-theoretic index",
+          "year": "2020-06",
+          "abstract": "Consider a proper, isometric action by a unimodular locally compact group $G$\non a Riemannian manifold $M$ with boundary, such that $M/G$ is compact. Then an\nequivariant Dirac-type operator $D$ on $M$ under a suitable boundary condition\nhas an equivariant index $\\operatorname{index}_G(D)$ in the $K$-theory of the\nreduced group $C^*$-algebra $C^*_rG$ of $G$. This is a common generalisation of\nthe Baum-Connes analytic assembly map and the (equivariant)\nAtiyah-Patodi-Singer index. In part I of this series, a numerical index\n$\\operatorname{index}_g(D)$ was defined for an element $g \\in G$, in terms of a\nparametrix of $D$ and a trace associated to $g$. An Atiyah-Patodi-Singer type\nindex formula was obtained for this index. In this paper, we show that, under\ncertain conditions, $\\tau_g(\\operatorname{index}_G(D)) =\n\\operatorname{index}_g(D)$, for a trace $\\tau_g$ defined by the orbital\nintegral over the conjugacy class of $g$. This implies that the index theorem\nfrom part I yields information about the $K$-theoretic index\n$\\operatorname{index}_G(D)$. It also shows that $\\operatorname{index}_g(D)$ is\na homotopy-invariant quantity.",
+          "arxiv_id": "2006.08086v1"
+        },
+        {
+          "title": "Quantitative K-theory, positive scalar curvature, and band width",
+          "year": "2020-10",
+          "abstract": "We develop two connections between the quantitative framework of operator\n$K$-theory for geometric $C^*$-algebras and the problem of positive scalar\ncurvature. First, we introduce a quantitative notion of higher index and use it\nto give a refinement of the well-known obstruction of Rosenberg to positive\nscalar curvature on closed spin manifolds coming from the higher index of the\nDirac operator. We show that on a manifold with uniformly positive scalar\ncurvature, the propagation at which the index of the Dirac operator vanishes is\nrelated inversely to the curvature lower bound. Second, we give an approach,\nusing related techniques, to Gromov's band width conjecture, which has been the\nsubject of recent work by Zeidler and Cecchini from a different point of view.",
+          "arxiv_id": "2010.01749v4"
+        },
+        {
+          "title": "$l^1$-higher index, $l^1$-higher rho invariant and cyclic cohomology",
+          "year": "2022-06",
+          "abstract": "In this paper, we study $l^1$-higher index theory and its pairing with cyclic\ncohomology for both closed manifolds and compact manifolds with boundary. We\nfirst give a sufficient geometric condition for the vanishing of the\n$l^1$-higher indices of Dirac-type operators on closed manifolds. This leads us\nto define an $l^1$-version of higher rho invariants. We prove a product formula\nfor these $l^1$-higher rho invariants. A main novelty of our product formula is\nthat it works in the general Banach algebra setting, in particular, the\n$l^1$-setting.\n  On compact spin manifolds with boundary, we also give a sufficient geometric\ncondition for Dirac operators to have well-defined $l^1$-higher indices. More\nprecisely, we show that, on a compact spin manifold $M$ with boundary equipped\nwith a Riemannian metric which has product structure near the boundary, if the\nscalar curvature on the boundary is sufficiently large, then the $l^1$-higher\nindex of its Dirac operator $D_M$ is well-defined and lies in the $K$-theory of\nthe $l^1$-algebra of the fundamental group. As an immediate corollary, we see\nthat if the Bost conjecture holds for the fundamental group of $M$, then the\n$C^\\ast$-algebraic higher index of $D_M$ lies in the image of the Baum-Connes\nassembly map.\n  By pairing the above $K$-theoretic $l^1$-index results with cyclic cocycles,\nwe prove an $l^1$-version of the higher Atiyah-Patodi-Singer index theorem for\nmanifolds with boundary. A key ingredient of its proof is the product formula\nfor $l^1$-higher rho invariants mentioned above.",
+          "arxiv_id": "2206.09913v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Algebraic $K$-theory of $\\text{THH}(\\mathbb{F}_p)$",
+          "year": "2020-09",
+          "abstract": "In this work we study the $E_{\\infty}$-ring $\\text{THH}(\\mathbb{F}_p)$ as a\ngraded spectrum. Following an identification at the level of $E_2$-algebras\nwith $\\mathbb{F}_p[\\Omega S^3]$, the group ring of the $E_1$-group $\\Omega S^3$\nover $\\mathbb{F}_p$, we show that the grading on $\\text{THH}(\\mathbb{F}_p)$\narises from decomposition on the cyclic bar construction of the pointed monoid\n$\\Omega S^3$. This allows us to use trace methods to compute the algebraic\n$K$-theory of $\\text{THH}(\\mathbb{F}_p)$. We also show that as an $E_2$\n$H\\mathbb{F}_p$-ring, $\\text{THH}(\\mathbb{F}_p)$ is uniquely determined by its\nhomotopy groups. These results hold in fact for $\\text{THH}(k)$, where $k$ is\nany perfect field of characteristic $p$. Along the way we expand on some of the\nmethods used by Hesselholt-Madsen and later by Speirs to develop certain tools\nto study the THH of graded ring spectra and the algebraic $K$-theory of formal\nDGAs.",
+          "arxiv_id": "2009.05827v2"
+        },
+        {
+          "title": "On the geometric fixed points of the real topological cyclic homology of $\\mathbb{Z}/4$",
+          "year": "2024-11",
+          "abstract": "We study the homotopy groups of the geometric fixed points of the real\ntopological cyclic homology of $\\mathbb{Z}/4$. We relate these groups to the\nvalues of the non-abelian derived functors of the functor $M \\mapsto (M\n\\otimes_{\\mathbb{Z}/4} M)^{C_2}$ at the $\\mathbb{Z}/4$-module $\\mathbb{Z}/2$,\nwhich we precisely calculate with computer assistance up to degree $6$, and\ncalculate in general up to slight remaining ambiguity. Using these results we\ncompute $\\pi_i(\\mathrm{TCR}(\\mathbb{Z}/4)^{\\phi \\mathbb{Z}/2})$ exactly for $i\n\\le 1$, up to an extension problem for $2 \\le i \\le 5$, and describe the\nasymptotic growth of this group for large $i$. A consequence of these\ncomputations is that there exists some $0 \\le i \\le 5$ such that the canonical\nmap comparing the genuine symmetric and symmetric $L$-theory spectra of\n$\\mathbb{Z}/4$ is not an isomorphism on degree $i$ homotopy, and moreover this\ncomparison map is never an isomorphism on homotopy in sufficiently large\ndegrees.",
+          "arxiv_id": "2411.11993v1"
+        },
+        {
+          "title": "THH(Z) and the image of J",
+          "year": "2025-05",
+          "abstract": "Let $p$ be an odd prime number and $\\mathrm{j}_p$ the $p$-complete connective\nimage of J spectrum. We establish an equivalence of cyclotomic\n$\\mathbb{E}_\\infty$-rings $\\mathrm{THH}(\\mathbb{Z})^{\\wedge}_p \\simeq\n\\mathrm{sh}(\\mathrm{j}_p^{\\mathrm{triv}})$ and an equivalence of\n$\\mathbb{E}_\\infty$-rings $\\mathrm{TP}(\\mathbb{Z})^{\\wedge}_p \\simeq\n\\mathrm{j}_p^{\\mathrm{t}\\mathrm{S}^1}$. We also record a few applications of\nthis: a new perspective, with some new information, on the description of\n$\\mathrm{TC}(\\mathbb{Z})^{\\wedge}_p$ as a spectrum; height $1$ analogues of the\nfiber squares of Antieau-Mathew-Morrow-Nikolaus, resulting in new calculations\nin $\\mathrm{K}(1)$-localized algebraic K-theory; and a proof of a slight\nrefinement of the noncommutative crystalline-de Rham comparison result of\nPetrov-Vologodsky.",
+          "arxiv_id": "2505.02218v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Topological $ΔG$ homology of rings with twisted $G$-action",
+          "year": "2024-09",
+          "abstract": "We provide a unifying framework for studying variants of topological\nHochschild homology such as Real topological Hochschild homology. Associated to\na crossed simplicial group $\\Delta G$, a category that generalizes Connes'\ncyclic category, we introduce an invariant of rings with twisted $G$-action,\nwhich we call topological $\\Delta G$-homology. Here a ring with twisted\n$G$-action is a common generalization of a ring with involution and a ring with\n$G$-action.\n  Our construction provides homotopical analogues of quaternionic homology,\nsymmetric homology, braid homology, and hyperoctahedral homology defined by\nFiedorowicz--Loday. In the quaternionic case our construction, called\nquaternionic topological Hochschild homology, is equipped with a left\nPin(2)-action and we compute it for loop spaces with a twisted $C_4$-action. As\nan important step along the way, we introduce a new family of crossed\nsimplicial groups called the twisted symmetric crossed simplicial groups and we\nprove that they corresponds to operads for algebras with twisted $G$-action.",
+          "arxiv_id": "2409.18187v4"
+        },
+        {
+          "title": "Topological K-theory for discrete groups and Index theory",
+          "year": "2020-12",
+          "abstract": "We give a complete solution, for discrete countable groups, to the problem of\ndefining and computing a geometric pairing between the left hand side of the\nBaum-Connes assembly map, given in terms of geometric cycles associated to\nproper actions on manifolds, and cyclic periodic cohomology of the group\nalgebra. Indeed, for any such group $\\Gamma$ (without any further assumptions\non it) we construct an explicit morphism from the Left-Hand side of the\nBaum-Connes assembly map to the periodic cyclic homology of the group algebra.\nThis morphism, called here the Chern-Baum-Connes assembly map, allows to give a\nproper and explicit formulation for a Chern-Connes pairing with the periodic\ncyclic cohomology of the group algebra.\n  Several theorems are needed to formulate the Chern-Baum-Connes assembly map.\nIn particular we establish a delocalised Riemann-Roch theorem, the wrong way\nfunctoriality for periodic delocalised cohomology for $\\Gamma$-proper actions,\nthe construction of a Chern morphism between the Left-Hand side of Baum-Connes\nand a delocalised cohomology group associated to $\\Gamma$ which is an\nisomorphism once tensoring with $\\mathbb{C}$, and the construction of an\nexplicit cohomological assembly map between the delocalised cohomology group\nassociated to $\\Gamma$ and the homology group $H_*(\\Gamma,F\\Gamma)$.\n  We then give an index theoretical formula for the above mentioned pairing\n(for any $\\Gamma$) in terms of pairings of invariant forms, associated to\ngeometric cycles and given in terms of delocalized Chern and Todd classes, and\ncurrents naturally associated to group cocycles using Burghelea's computation.\nAs part of our results we prove that left-Hand side group used in this paper is\nisomorphic to the usual analytic model for the left-hand side of the assembly\nmap.",
+          "arxiv_id": "2012.12359v4"
+        },
+        {
+          "title": "(Co)homology of Γ-groups and Γ-homological algebra",
+          "year": "2020-06",
+          "abstract": "This is a further investigation of our approach to group actions in\nhomological algebra in the settings of homology of {\\Gamma}-simplicial groups,\nparticularly of {\\Gamma}-equivariant homology and cohomology of\n{\\Gamma}-groups. This approach could be called {\\Gamma}-homological algebra.\nThe abstract kernel of non-abelian extensions of groups, its relation with the\nobstruction to the existence of non-abelian extensions and with the second\ngroup cohomology are extended to the case of non-abelian {\\Gamma}-extensions of\n{\\Gamma}-groups. We compute the rational {\\Gamma}-equivariant (co)homology\ngroups of finite cyclic {\\Gamma}-groups. The isomorphism of the group of n-fold\n{\\Gamma}-equivariant extensions of a {\\Gamma}-group G by a G o {\\Gamma}-module\nA with the (n+1)th {\\Gamma}-equivariant group cohomology of G with coefficients\nin A is proven.We define the {\\Gamma}-equivariant Hochschild homology as the\nhomology of the {\\Gamma}- Hochschild complex involving the cyclic homology when\nthe basic ring contains rational numbers and generalizing the\n{\\Gamma}equivariant(co)homology of {\\Gamma}-groups when the action of the group\n{\\Gamma} on the Hochschild complex is induced by its action on the basic ring.\nImportant properties of the {\\Gamma}-equivariant Hochschild homology related to\nKahler differentials, Morita equivalence and derived functors are established.\nGroup (co)homology and {\\Gamma}-equivariant group (co)homology of crossed\n{\\Gamma}-modules are introduced and investigated by using relevant derived\nfunctors Finally, applications to algebraic K-theory, Galois theory of\ncommutative rings and cohomological dimension of groups are given.",
+          "arxiv_id": "2006.02083v3"
+        }
+      ],
+      "5": [
+        {
+          "title": "Trace methods for equivariant algebraic K-theory",
+          "year": "2025-05",
+          "abstract": "In the past decades, one of the most fruitful approaches to the study of\nalgebraic $K$-theory has been trace methods, which construct and study trace\nmaps from algebraic $K$-theory to topological Hochschild homology and related\ninvariants. In recent years, theories of equivariant algebraic $K$-theory have\nemerged, but thus far few tools are available for the study and computation of\nthese theories. In this paper, we lay the foundations for a trace methods\napproach to equivariant algebraic $K$-theory. For $G$ a finite group, we\nconstruct a Dennis trace map from equivariant algebraic $K$-theory to a\n$G$-equivariant version of topological Hochschild homology; for $G$ the trivial\ngroup this recovers the ordinary Dennis trace map. We show that upon taking\nfixed points, this recovers the trace map of\nAdamyk--Gerhardt--Hess--Klang--Kong, and gives a trace map from the fixed\npoints of coarse equivariant $A$-theory to the free loop space. We also\nestablish important properties of equivariant topological Hochschild homology,\nsuch as Morita invariance, and explain why it can be considered as a\nmultiplicative norm.",
+          "arxiv_id": "2505.11327v1"
+        },
+        {
+          "title": "Equivariant Witt Complexes and Twisted Topological Hochschild Homology",
+          "year": "2024-09",
+          "abstract": "The topological Hochschild homology of a ring (or ring spectrum) $R$ is an\n$S^1$-spectrum, and the fixed points of THH($R$) for subgroups $C_n\\subset S^1$\nhave been widely studied due to their use in algebraic K-theory computations.\nHesselholt and Madsen proved that the fixed points of topological Hochschild\nhomology are closely related to Witt vectors. Further, they defined the notion\nof a Witt complex, and showed that it captures the algebraic structure of the\nhomotopy groups of the fixed points of THH. Recent work of Angeltveit,\nBlumberg, Gerhardt, Hill, Lawson and Mandell defines a theory of twisted\ntopological Hochschild homology for equivariant rings (or ring spectra) that\nbuilds upon Hill, Hopkins and Ravenel's work on equivariant norms. In this\npaper, we study the algebraic structure of the equivariant homotopy groups of\ntwisted THH. In particular, we define an equivariant Witt complex and prove\nthat the equivariant homotopy of twisted THH has this structure. Our definition\nof equivariant Witt complexes contributes to a growing body of research in the\nsubject of equivariant algebra.",
+          "arxiv_id": "2409.05965v2"
+        },
+        {
+          "title": "A stroll in equivariant $K$-theory",
+          "year": "2023-06",
+          "abstract": "Equivariant $K$-theory is a generalized equivariant cohomology theory which\nis a hybrid of the $K$-theory of a topological space and the representation\ntheory of the group acting on it. In this article, we review the basics of\nequivariant $K$-theory and focus on the localization theorem and formula due to\nAtiyah and Segal, which have become important tools in equivariant topology\nnowadays. We then discuss the application of equivariant $K$-theory to\nequivariant formality, and briefly mention some recent developments.",
+          "arxiv_id": "2306.06951v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:33:17Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

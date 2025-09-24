@@ -1,0 +1,1472 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_risk_measures_risk measures_measure",
+        "keywords": [
+          [
+            "risk",
+            0.05287727995951863
+          ],
+          [
+            "measures",
+            0.04875410716317989
+          ],
+          [
+            "risk measures",
+            0.043661347743630056
+          ],
+          [
+            "measure",
+            0.021306221268412327
+          ],
+          [
+            "convex",
+            0.019493891911424685
+          ],
+          [
+            "Risk",
+            0.01897031952569854
+          ],
+          [
+            "case",
+            0.017197360753024728
+          ],
+          [
+            "distortion",
+            0.015978929062351235
+          ],
+          [
+            "uncertainty",
+            0.015599477998271195
+          ],
+          [
+            "risk measure",
+            0.015111530834711442
+          ]
+        ],
+        "count": 176
+      },
+      "1": {
+        "name": "1_volatility_risk_model_market",
+        "keywords": [
+          [
+            "volatility",
+            0.027333924339342817
+          ],
+          [
+            "risk",
+            0.02569412871873242
+          ],
+          [
+            "model",
+            0.02523282291843303
+          ],
+          [
+            "market",
+            0.02496243485233123
+          ],
+          [
+            "VaR",
+            0.02267814081307446
+          ],
+          [
+            "models",
+            0.020905573968721333
+          ],
+          [
+            "financial",
+            0.019075303823315404
+          ],
+          [
+            "GARCH",
+            0.018986999125174972
+          ],
+          [
+            "forecasting",
+            0.018874437117829934
+          ],
+          [
+            "time",
+            0.01741243483623583
+          ]
+        ],
+        "count": 144
+      },
+      "2": {
+        "name": "2_optimal_insurance_risk_reinsurance",
+        "keywords": [
+          [
+            "optimal",
+            0.03424055948073849
+          ],
+          [
+            "insurance",
+            0.033810633486975473
+          ],
+          [
+            "risk",
+            0.02703800427855732
+          ],
+          [
+            "reinsurance",
+            0.02355845165516496
+          ],
+          [
+            "mortality",
+            0.02087163477462867
+          ],
+          [
+            "model",
+            0.020660163065097284
+          ],
+          [
+            "problem",
+            0.019588532309137985
+          ],
+          [
+            "expected",
+            0.018230594538524433
+          ],
+          [
+            "claim",
+            0.016523377529914365
+          ],
+          [
+            "strategy",
+            0.016023455705426706
+          ]
+        ],
+        "count": 140
+      },
+      "3": {
+        "name": "3_credit_data_learning_models",
+        "keywords": [
+          [
+            "credit",
+            0.04057127878723311
+          ],
+          [
+            "data",
+            0.03303085946811736
+          ],
+          [
+            "learning",
+            0.030543311622682395
+          ],
+          [
+            "models",
+            0.027768031248853745
+          ],
+          [
+            "financial",
+            0.026263949966551858
+          ],
+          [
+            "model",
+            0.02497022913760624
+          ],
+          [
+            "prediction",
+            0.020488243051545674
+          ],
+          [
+            "machine learning",
+            0.0201778610909008
+          ],
+          [
+            "machine",
+            0.020111613544477314
+          ],
+          [
+            "Credit",
+            0.019733273910989193
+          ]
+        ],
+        "count": 111
+      },
+      "4": {
+        "name": "4_hedging_options_model_risk",
+        "keywords": [
+          [
+            "hedging",
+            0.05248926125995646
+          ],
+          [
+            "options",
+            0.026922184782407196
+          ],
+          [
+            "model",
+            0.023365170799875216
+          ],
+          [
+            "risk",
+            0.021545687858608043
+          ],
+          [
+            "option",
+            0.021486695162817867
+          ],
+          [
+            "Deep",
+            0.02088387973621629
+          ],
+          [
+            "approach",
+            0.02031443946516726
+          ],
+          [
+            "market",
+            0.01937494267160787
+          ],
+          [
+            "neural",
+            0.01897703854185756
+          ],
+          [
+            "learning",
+            0.018351787678451904
+          ]
+        ],
+        "count": 83
+      },
+      "5": {
+        "name": "5_network_financial_systemic_systemic risk",
+        "keywords": [
+          [
+            "network",
+            0.04949755472905019
+          ],
+          [
+            "financial",
+            0.041962438997669535
+          ],
+          [
+            "systemic",
+            0.03995215932652419
+          ],
+          [
+            "systemic risk",
+            0.03383678363538592
+          ],
+          [
+            "banks",
+            0.03303507091826339
+          ],
+          [
+            "networks",
+            0.03281560118112325
+          ],
+          [
+            "risk",
+            0.027690295758613055
+          ],
+          [
+            "contagion",
+            0.020143975732665916
+          ],
+          [
+            "default",
+            0.017344353016710404
+          ],
+          [
+            "bank",
+            0.01683346256481809
+          ]
+        ],
+        "count": 64
+      },
+      "6": {
+        "name": "6_DeFi_protocols_decentralized_liquidity",
+        "keywords": [
+          [
+            "DeFi",
+            0.056558480974448204
+          ],
+          [
+            "protocols",
+            0.041082854822118264
+          ],
+          [
+            "decentralized",
+            0.03704387402290395
+          ],
+          [
+            "liquidity",
+            0.032812342674797955
+          ],
+          [
+            "protocol",
+            0.03197158401439007
+          ],
+          [
+            "lending",
+            0.030772021349691488
+          ],
+          [
+            "risks",
+            0.024972337749628426
+          ],
+          [
+            "fees",
+            0.0227813133623651
+          ],
+          [
+            "market",
+            0.01953949773035056
+          ],
+          [
+            "mechanisms",
+            0.018992439325988014
+          ]
+        ],
+        "count": 44
+      },
+      "7": {
+        "name": "7_default_model_credit_time",
+        "keywords": [
+          [
+            "default",
+            0.046479288923444995
+          ],
+          [
+            "model",
+            0.03532171967652828
+          ],
+          [
+            "credit",
+            0.03480369337745857
+          ],
+          [
+            "time",
+            0.032436547188438414
+          ],
+          [
+            "PD",
+            0.025966825623523263
+          ],
+          [
+            "risk",
+            0.02363790126643026
+          ],
+          [
+            "recovery",
+            0.021004484437054164
+          ],
+          [
+            "data",
+            0.020949579569333587
+          ],
+          [
+            "loan",
+            0.020126119149451827
+          ],
+          [
+            "portfolio",
+            0.02009753494251882
+          ]
+        ],
+        "count": 40
+      },
+      "8": {
+        "name": "8_cyber_risk_cyber risk_insurance",
+        "keywords": [
+          [
+            "cyber",
+            0.10109318140679985
+          ],
+          [
+            "risk",
+            0.05709442694597258
+          ],
+          [
+            "cyber risk",
+            0.05094747883762081
+          ],
+          [
+            "insurance",
+            0.04056716660224883
+          ],
+          [
+            "data",
+            0.03008800836086184
+          ],
+          [
+            "losses",
+            0.024029393784219293
+          ],
+          [
+            "cost",
+            0.02345060711771269
+          ],
+          [
+            "loss",
+            0.02327287142741936
+          ],
+          [
+            "frequency",
+            0.01948084495343666
+          ],
+          [
+            "events",
+            0.019180810811187932
+          ]
+        ],
+        "count": 38
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.4231861102968632,
+        -0.5213997931601162,
+        -0.6782812259918674,
+        -0.685802245108787,
+        -0.40632417651630215,
+        -0.7445899323231402,
+        -0.6673227499555641,
+        -0.5315232129870564
+      ],
+      [
+        -0.4231861102968632,
+        1.0,
+        -0.5677982842252014,
+        -0.4585283125469899,
+        -0.6564508379817211,
+        -0.5338185557700761,
+        -0.7368432593984015,
+        -0.43067289842131307,
+        -0.5505218675447553
+      ],
+      [
+        -0.5213997931601162,
+        -0.5677982842252014,
+        1.0,
+        -0.656489214294283,
+        -0.6940542316074175,
+        -0.5476796150745806,
+        -0.7485397924990451,
+        -0.6354176348744747,
+        -0.4548908298457208
+      ],
+      [
+        -0.6782812259918674,
+        -0.4585283125469899,
+        -0.656489214294283,
+        1.0,
+        -0.6884805199199221,
+        -0.5797362586564656,
+        -0.7337179512286172,
+        -0.2337152118170399,
+        -0.6626836928201907
+      ],
+      [
+        -0.685802245108787,
+        -0.6564508379817211,
+        -0.6940542316074175,
+        -0.6884805199199221,
+        1.0,
+        -0.6997655314218276,
+        -0.744081219619114,
+        -0.7014681827172273,
+        -0.7010248561472969
+      ],
+      [
+        -0.40632417651630215,
+        -0.5338185557700761,
+        -0.5476796150745806,
+        -0.5797362586564656,
+        -0.6997655314218276,
+        1.0,
+        -0.7302731687612845,
+        -0.6059546062227548,
+        -0.587238095823261
+      ],
+      [
+        -0.7445899323231402,
+        -0.7368432593984015,
+        -0.7485397924990451,
+        -0.7337179512286172,
+        -0.744081219619114,
+        -0.7302731687612845,
+        1.0,
+        -0.735457502512886,
+        -0.7358978342901894
+      ],
+      [
+        -0.6673227499555641,
+        -0.43067289842131307,
+        -0.6354176348744747,
+        -0.2337152118170399,
+        -0.7014681827172273,
+        -0.6059546062227548,
+        -0.735457502512886,
+        1.0,
+        -0.6889579804949697
+      ],
+      [
+        -0.5315232129870564,
+        -0.5505218675447553,
+        -0.4548908298457208,
+        -0.6626836928201907,
+        -0.7010248561472969,
+        -0.587238095823261,
+        -0.7358978342901894,
+        -0.6889579804949697,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "2020-02": [
+        7,
+        2,
+        0,
+        2,
+        1,
+        4,
+        0,
+        1,
+        0
+      ],
+      "2020-03": [
+        8,
+        0,
+        2,
+        3,
+        1,
+        3,
+        0,
+        1,
+        1
+      ],
+      "2020-04": [
+        6,
+        1,
+        2,
+        2,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "2020-05": [
+        9,
+        1,
+        0,
+        3,
+        2,
+        4,
+        0,
+        3,
+        0
+      ],
+      "2020-06": [
+        6,
+        1,
+        1,
+        1,
+        0,
+        6,
+        0,
+        2,
+        1
+      ],
+      "2020-07": [
+        10,
+        0,
+        2,
+        2,
+        1,
+        3,
+        0,
+        1,
+        1
+      ],
+      "2020-08": [
+        4,
+        3,
+        4,
+        3,
+        1,
+        3,
+        1,
+        2,
+        1
+      ],
+      "2020-09": [
+        5,
+        3,
+        4,
+        3,
+        0,
+        2,
+        0,
+        5,
+        2
+      ],
+      "2020-10": [
+        4,
+        3,
+        2,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "2020-11": [
+        9,
+        1,
+        2,
+        3,
+        0,
+        4,
+        1,
+        0,
+        0
+      ],
+      "2020-12": [
+        6,
+        1,
+        3,
+        4,
+        1,
+        7,
+        0,
+        0,
+        0
+      ],
+      "2021-01": [
+        7,
+        2,
+        5,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "2021-02": [
+        3,
+        0,
+        4,
+        0,
+        1,
+        2,
+        0,
+        0,
+        2
+      ],
+      "2021-03": [
+        5,
+        0,
+        4,
+        3,
+        2,
+        4,
+        0,
+        1,
+        1
+      ],
+      "2021-04": [
+        7,
+        3,
+        0,
+        1,
+        1,
+        5,
+        0,
+        0,
+        0
+      ],
+      "2021-05": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "2021-06": [
+        5,
+        5,
+        0,
+        3,
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "2021-07": [
+        10,
+        3,
+        4,
+        2,
+        3,
+        3,
+        1,
+        0,
+        0
+      ],
+      "2021-08": [
+        4,
+        1,
+        3,
+        1,
+        1,
+        4,
+        0,
+        1,
+        0
+      ],
+      "2021-09": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "2021-10": [
+        8,
+        3,
+        0,
+        3,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "2021-11": [
+        4,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0,
+        3,
+        1
+      ],
+      "2021-12": [
+        8,
+        0,
+        4,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "2022-01": [
+        6,
+        2,
+        2,
+        1,
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "2022-02": [
+        5,
+        5,
+        1,
+        2,
+        0,
+        8,
+        0,
+        1,
+        2
+      ],
+      "2022-03": [
+        10,
+        1,
+        4,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0
+      ],
+      "2022-04": [
+        5,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2022-05": [
+        5,
+        2,
+        2,
+        5,
+        2,
+        2,
+        1,
+        4,
+        1
+      ],
+      "2022-06": [
+        7,
+        1,
+        2,
+        5,
+        1,
+        3,
+        1,
+        0,
+        0
+      ],
+      "2022-07": [
+        4,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "2022-08": [
+        7,
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "2022-09": [
+        6,
+        0,
+        0,
+        3,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "2022-10": [
+        5,
+        0,
+        1,
+        3,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "2022-11": [
+        6,
+        0,
+        0,
+        2,
+        0,
+        4,
+        0,
+        3,
+        1
+      ],
+      "2022-12": [
+        6,
+        1,
+        1,
+        3,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "2023-01": [
+        4,
+        3,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "2023-02": [
+        6,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0
+      ],
+      "2023-03": [
+        6,
+        1,
+        0,
+        3,
+        3,
+        2,
+        1,
+        3,
+        0
+      ],
+      "2023-04": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        4,
+        1,
+        2,
+        0
+      ],
+      "2023-05": [
+        5,
+        1,
+        1,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0
+      ],
+      "2023-06": [
+        2,
+        3,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "2023-07": [
+        7,
+        3,
+        0,
+        1,
+        1,
+        1,
+        0,
+        3,
+        0
+      ],
+      "2023-08": [
+        2,
+        2,
+        1,
+        4,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "2023-09": [
+        2,
+        4,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "2023-10": [
+        5,
+        2,
+        3,
+        2,
+        2,
+        3,
+        1,
+        2,
+        1
+      ],
+      "2023-11": [
+        6,
+        1,
+        0,
+        4,
+        0,
+        5,
+        1,
+        2,
+        0
+      ],
+      "2023-12": [
+        4,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "2024-01": [
+        7,
+        3,
+        2,
+        3,
+        0,
+        3,
+        1,
+        2,
+        1
+      ],
+      "2024-02": [
+        6,
+        4,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        0
+      ],
+      "2024-03": [
+        5,
+        1,
+        0,
+        4,
+        1,
+        7,
+        0,
+        1,
+        0
+      ],
+      "2024-04": [
+        5,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        2,
+        0
+      ],
+      "2024-05": [
+        15,
+        2,
+        0,
+        3,
+        4,
+        1,
+        0,
+        2,
+        2
+      ],
+      "2024-06": [
+        6,
+        2,
+        1,
+        5,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "2024-07": [
+        7,
+        4,
+        3,
+        3,
+        4,
+        4,
+        1,
+        0,
+        0
+      ],
+      "2024-08": [
+        8,
+        1,
+        4,
+        2,
+        1,
+        4,
+        1,
+        2,
+        4
+      ],
+      "2024-09": [
+        7,
+        1,
+        2,
+        1,
+        2,
+        6,
+        2,
+        1,
+        2
+      ],
+      "2024-10": [
+        3,
+        1,
+        2,
+        8,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "2024-11": [
+        9,
+        3,
+        1,
+        4,
+        1,
+        5,
+        1,
+        2,
+        1
+      ],
+      "2024-12": [
+        7,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "2025-01": [
+        7,
+        0,
+        2,
+        4,
+        0,
+        3,
+        1,
+        1,
+        0
+      ],
+      "2025-02": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "2025-03": [
+        11,
+        3,
+        1,
+        3,
+        2,
+        3,
+        3,
+        1,
+        0
+      ],
+      "2025-04": [
+        5,
+        2,
+        4,
+        2,
+        1,
+        5,
+        0,
+        2,
+        2
+      ],
+      "2025-05": [
+        3,
+        4,
+        2,
+        4,
+        0,
+        1,
+        2,
+        2,
+        1
+      ],
+      "2025-06": [
+        7,
+        1,
+        0,
+        5,
+        2,
+        3,
+        2,
+        1,
+        1
+      ],
+      "2025-07": [
+        6,
+        2,
+        2,
+        5,
+        1,
+        3,
+        0,
+        3,
+        2
+      ],
+      "2025-08": [
+        8,
+        1,
+        2,
+        7,
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "2025-09": [
+        4,
+        0,
+        0,
+        7,
+        2,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Monetary Risk Measures",
+          "year": "2020-12",
+          "abstract": "In this paper, we study general monetary risk measures (without any convexity\nor weak convexity). A monetary (respectively, positively homogeneous) risk\nmeasure can be characterized as the lower envelope of a family of convex\n(respectively, coherent) risk measures. The proof does not depend on but easily\nleads to the classical representation theorems for convex and coherent risk\nmeasures. When the law-invariance and the SSD (second-order stochastic\ndominance)-consistency are involved, it is not the convexity (respectively,\ncoherence) but the comonotonic convexity (respectively, comonotonic coherence)\nof risk measures that can be used for such kind of lower envelope\ncharacterizations in a unified form. The representation of a law-invariant risk\nmeasure in terms of VaR is provided.",
+          "arxiv_id": "2012.06751v1"
+        },
+        {
+          "title": "Star-shaped Risk Measures",
+          "year": "2021-03",
+          "abstract": "In this paper monetary risk measures that are positively superhomogeneous,\ncalled star-shaped risk measures, are characterized and their properties\nstudied. The measures in this class, which arise when the controversial\nsubadditivity property of coherent risk measures is dispensed with and positive\nhomogeneity is weakened, include all practically used risk measures, in\nparticular, both convex risk measures and Value-at-Risk. From a financial\nviewpoint, our relaxation of convexity is necessary to quantify the capital\nrequirements for risk exposure in the presence of liquidity risk, competitive\ndelegation, or robust aggregation mechanisms. From a decision theoretical\nperspective, star-shaped risk measures emerge from variational preferences when\nrisk mitigation strategies can be adopted by a rational decision maker.",
+          "arxiv_id": "2103.15790v3"
+        },
+        {
+          "title": "Quasi-Logconvex Measures of Risk",
+          "year": "2022-07",
+          "abstract": "This paper introduces and fully characterizes the novel class of\nquasi-logconvex measures of risk, to stand on equal footing with the rich class\nof quasi-convex measures of risk. Quasi-logconvex risk measures naturally\ngeneralize logconvex return risk measures, just like quasi-convex risk measures\ngeneralize convex monetary risk measures. We establish their dual\nrepresentation and analyze their taxonomy in a few (sub)classification results.\nFurthermore, we characterize quasi-logconvex risk measures in terms of\nproperties of families of acceptance sets and provide their law-invariant\nrepresentation. Examples and applications to portfolio choice and capital\nallocation are also discussed.",
+          "arxiv_id": "2208.07694v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Semi-parametric financial risk forecasting incorporating multiple realized measures",
+          "year": "2024-02",
+          "abstract": "A semi-parametric joint Value-at-Risk (VaR) and Expected Shortfall (ES)\nforecasting framework employing multiple realized measures is developed. The\nproposed framework extends the realized exponential GARCH model to be\nsemi-parametrically estimated, via a joint loss function, whilst extending\nexisting quantile time series models to incorporate multiple realized measures.\nA quasi-likelihood is built, employing the asymmetric Laplace distribution that\nis directly linked to a joint loss function, which enables Bayesian inference\nfor the proposed model. An adaptive Markov Chain Monte Carlo method is used for\nthe model estimation. The empirical section evaluates the performance of the\nproposed framework with six stock markets from January 2000 to June 2022,\ncovering the period of COVID-19. Three realized measures, including 5- minute\nrealized variance, bi-power variation, and realized kernel, are incorporated\nand evaluated in the proposed framework. One-step-ahead VaR and ES forecasting\nresults of the proposed model are compared to a range of parametric and\nsemi-parametric models, lending support to the effectiveness of the proposed\nframework.",
+          "arxiv_id": "2402.09985v3"
+        },
+        {
+          "title": "Modelling uncertainty in financial tail risk: a forecast combination and weighted quantile approach",
+          "year": "2021-04",
+          "abstract": "A novel forecast combination and weighted quantile based tail-risk\nforecasting framework is proposed, aiming to reduce the impact of modelling\nuncertainty in tail-risk forecasting. The proposed approach is based on a\ntwo-step estimation procedure. The first step involves the combination of\nValue-at-Risk (VaR) forecasts at a grid of quantile levels. A range of\nparametric and semi-parametric models is selected as the model universe in the\nforecast combination procedure. The quantile forecast combination weights are\nestimated by optimizing the quantile loss. In the second step, the Expected\nShortfall (ES) is computed as a weighted average of combined quantiles. The\nquantiles weighting structure for ES forecasting is determined by minimizing a\nstrictly consistent joint VaR and ES loss function of the Fissler-Ziegel class.\nThe proposed framework is applied to six stock market indices and its\nforecasting performance is compared to each individual model in the universe, a\nsimple average approach and a weighted quantile approach. The forecasting\nresults support the proposed framework.",
+          "arxiv_id": "2104.04918v2"
+        },
+        {
+          "title": "Nonparametric Expected Shortfall Forecasting Incorporating Weighted Quantiles",
+          "year": "2020-05",
+          "abstract": "A new semi-parametric Expected Shortfall (ES) estimation and forecasting\nframework is proposed. The proposed approach is based on a two-step estimation\nprocedure. The first step involves the estimation of Value-at-Risk (VaR) at\ndifferent quantile levels through a set of quantile time series regressions.\nThen, the ES is computed as a weighted average of the estimated quantiles. The\nquantiles weighting structure is parsimoniously parameterized by means of a\nBeta weight function whose coefficients are optimized by minimizing a joint VaR\nand ES loss function of the Fissler-Ziegel class. The properties of the\nproposed approach are first evaluated with an extensive simulation study using\ntwo data generating processes. Two forecasting studies with different\nout-of-sample sizes are then conducted, one of which focuses on the 2008 Global\nFinancial Crisis (GFC) period. The proposed models are applied to 7 stock\nmarket indices and their forecasting performances are compared to those of a\nrange of parametric, non-parametric and semi-parametric models, including\nGARCH, Conditional AutoRegressive Expectile (CARE), joint VaR and ES quantile\nregression models and simple average of quantiles. The results of the\nforecasting experiments provide clear evidence in support of proposed models.",
+          "arxiv_id": "2005.04868v3"
+        }
+      ],
+      "2": [
+        {
+          "title": "Optimal Ratcheting of Dividends with Irreversible Reinsurance",
+          "year": "2024-08",
+          "abstract": "This paper considers an insurance company that faces two key constraints: a\nratcheting dividend constraint and an irreversible reinsurance constraint. The\ncompany allocates part of its reserve to pay dividends to its shareholders\nwhile strategically purchasing reinsurance for its claims. The ratcheting\ndividend constraint ensures that dividend cuts are prohibited at any time. The\nirreversible reinsurance constraint ensures that reinsurance contracts cannot\nbe prematurely terminated or sold to external entities. The dividend rate level\nand the reinsurance level are modelled as nondecreasing processes, thereby\nsatisfying the constraints. The incurred claims are modelled via a Brownian\nrisk model. The main objective is to maximize the cumulative expected\ndiscounted dividend payouts until the time of ruin. The reinsurance and\ndividend levels belong to either a finite set or a closed interval. The optimal\nvalue functions for the finite set case and the closed interval case are proved\nto be the unique viscosity solutions of the corresponding\nHamilton-Jacobi-Bellman equations, and the convergence between these optimal\nvalue functions is established. For the finite set case, a threshold strategy\nis proved to be optimal, while for the closed interval case, an\n$\\epsilon$-optimal strategy is constructed. Finally, numerical examples are\npresented to illustrate the optimality conditions and optimal strategies.",
+          "arxiv_id": "2408.16989v1"
+        },
+        {
+          "title": "Optimal reinsurance problem under fixed cost and exponential preferences",
+          "year": "2021-01",
+          "abstract": "We investigate an optimal reinsurance problem for an insurance company facing\na constant fixed cost when the reinsurance contract is signed. The insurer\nneeds to optimally choose both the starting time of the reinsurance contract\nand the retention level in order to maximize the expected utility of terminal\nwealth. This leads to a mixed optimal control/optimal stopping time problem,\nwhich is solved by a two-step procedure: first considering the pure reinsurance\nstochastic control problem and next discussing a time-inhomogeneous optimal\nstopping problem with discontinuous reward. Using the classical\nCram\\'er-Lundberg approximation risk model, we prove that the optimal strategy\nis deterministic and depends on the model parameters. In particular, we show\nthat there exists a maximum fixed cost that the insurer is willing to pay for\nthe contract activation. Finally, we provide some economical interpretations\nand numerical simulations.",
+          "arxiv_id": "2101.04975v1"
+        },
+        {
+          "title": "Optimal reinsurance design under solvency constraints",
+          "year": "2022-03",
+          "abstract": "We consider the optimal risk transfer from an insurance company to a\nreinsurer. The problem formulation considered in this paper is closely\nconnected to the optimal portfolio problem in finance, with some crucial\ndistinctions. In particular, the insurance company's surplus is here (as is\nroutinely the case) approximated by a Brownian motion, as opposed to the\ngeometric Brownian motion used to model assets in finance. Furthermore, risk\nexposure is dialled \"down\" via reinsurance, rather than \"up\" via risky\ninvestments. This leads to interesting qualitative differences in the optimal\ndesigns.\n  In this paper, using the martingale method, we derive the optimal design as a\nfunction of proportional, non-cheap reinsurance design that maximises the\nquadratic utility of the terminal value of the insurance surplus. We also\nconsider several realistic constraints on the terminal value: a strict lower\nboundary, the probability (Value at Risk) constraint, and the expected\nshortfall (conditional Value at Risk) constraints under the $\\mathbb{P}$ and\n$\\mathbb{Q}$ measures, respectively. In all cases, the optimal reinsurance\ndesigns boil down to a combination of proportional protection and option-like\nprotection (stop-loss) of the residual proportion with various deductibles.\nProportions and deductibles are set such that the initial capital is fully\nallocated. Comparison of the optimal designs with the optimal portfolios in\nfinance is particularly interesting. Results are illustrated.",
+          "arxiv_id": "2203.16108v5"
+        }
+      ],
+      "3": [
+        {
+          "title": "A machine learning workflow to address credit default prediction",
+          "year": "2024-03",
+          "abstract": "Due to the recent increase in interest in Financial Technology (FinTech),\napplications like credit default prediction (CDP) are gaining significant\nindustrial and academic attention. In this regard, CDP plays a crucial role in\nassessing the creditworthiness of individuals and businesses, enabling lenders\nto make informed decisions regarding loan approvals and risk management. In\nthis paper, we propose a workflow-based approach to improve CDP, which refers\nto the task of assessing the probability that a borrower will default on his or\nher credit obligations. The workflow consists of multiple steps, each designed\nto leverage the strengths of different techniques featured in machine learning\npipelines and, thus best solve the CDP task. We employ a comprehensive and\nsystematic approach starting with data preprocessing using Weight of Evidence\nencoding, a technique that ensures in a single-shot data scaling by removing\noutliers, handling missing values, and making data uniform for models working\nwith different data types. Next, we train several families of learning models,\nintroducing ensemble techniques to build more robust models and hyperparameter\noptimization via multi-objective genetic algorithms to consider both predictive\naccuracy and financial aspects. Our research aims at contributing to the\nFinTech industry in providing a tool to move toward more accurate and reliable\ncredit risk assessment, benefiting both lenders and borrowers.",
+          "arxiv_id": "2403.03785v1"
+        },
+        {
+          "title": "Sequential Deep Learning for Credit Risk Monitoring with Tabular Financial Data",
+          "year": "2020-12",
+          "abstract": "Machine learning plays an essential role in preventing financial losses in\nthe banking industry. Perhaps the most pertinent prediction task that can\nresult in billions of dollars in losses each year is the assessment of credit\nrisk (i.e., the risk of default on debt). Today, much of the gains from machine\nlearning to predict credit risk are driven by gradient boosted decision tree\nmodels. However, these gains begin to plateau without the addition of expensive\nnew data sources or highly engineered features. In this paper, we present our\nattempts to create a novel approach to assessing credit risk using deep\nlearning that does not rely on new model inputs. We propose a new credit card\ntransaction sampling technique to use with deep recurrent and causal\nconvolution-based neural networks that exploits long historical sequences of\nfinancial data without costly resource requirements. We show that our\nsequential deep learning approach using a temporal convolutional network\noutperformed the benchmark non-sequential tree-based model, achieving\nsignificant financial savings and earlier detection of credit risk. We also\ndemonstrate the potential for our approach to be used in a production\nenvironment, where our sampling technique allows for sequences to be stored\nefficiently in memory and used for fast online learning and inference.",
+          "arxiv_id": "2012.15330v1"
+        },
+        {
+          "title": "Leveraging Convolutional Neural Network-Transformer Synergy for Predictive Modeling in Risk-Based Applications",
+          "year": "2024-12",
+          "abstract": "With the development of the financial industry, credit default prediction, as\nan important task in financial risk management, has received increasing\nattention. Traditional credit default prediction methods mostly rely on machine\nlearning models, such as decision trees and random forests, but these methods\nhave certain limitations in processing complex data and capturing potential\nrisk patterns. To this end, this paper proposes a deep learning model based on\nthe combination of convolutional neural networks (CNN) and Transformer for\ncredit user default prediction. The model combines the advantages of CNN in\nlocal feature extraction with the ability of Transformer in global dependency\nmodeling, effectively improving the accuracy and robustness of credit default\nprediction. Through experiments on public credit default datasets, the results\nshow that the CNN+Transformer model outperforms traditional machine learning\nmodels, such as random forests and XGBoost, in multiple evaluation indicators\nsuch as accuracy, AUC, and KS value, demonstrating its powerful ability in\ncomplex financial data modeling. Further experimental analysis shows that\nappropriate optimizer selection and learning rate adjustment play a vital role\nin improving model performance. In addition, the ablation experiment of the\nmodel verifies the advantages of the combination of CNN and Transformer and\nproves the complementarity of the two in credit default prediction. This study\nprovides a new idea for credit default prediction and provides strong support\nfor risk assessment and intelligent decision-making in the financial field.\nFuture research can further improve the prediction effect and generalization\nability by introducing more unstructured data and improving the model\narchitecture.",
+          "arxiv_id": "2412.18222v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Deep Hedging of Long-Term Financial Derivatives",
+          "year": "2020-07",
+          "abstract": "This study presents a deep reinforcement learning approach for global hedging\nof long-term financial derivatives. A similar setup as in Coleman et al. (2007)\nis considered with the risk management of lookback options embedded in\nguarantees of variable annuities with ratchet features. The deep hedging\nalgorithm of Buehler et al. (2019a) is applied to optimize neural networks\nrepresenting global hedging policies with both quadratic and non-quadratic\npenalties. To the best of the author's knowledge, this is the first paper that\npresents an extensive benchmarking of global policies for long-term contingent\nclaims with the use of various hedging instruments (e.g. underlying and\nstandard options) and with the presence of jump risk for equity. Monte Carlo\nexperiments demonstrate the vast superiority of non-quadratic global hedging as\nit results simultaneously in downside risk metrics two to three times smaller\nthan best benchmarks and in significant hedging gains. Analyses show that the\nneural networks are able to effectively adapt their hedging decisions to\ndifferent penalties and stylized facts of risky asset dynamics only by\nexperiencing simulations of the financial market exhibiting these features.\nNumerical results also indicate that non-quadratic global policies are\nsignificantly more geared towards being long equity risk which entails earning\nthe equity risk premium.",
+          "arxiv_id": "2007.15128v1"
+        },
+        {
+          "title": "A Risk Sensitive Contract-unified Reinforcement Learning Approach for Option Hedging",
+          "year": "2024-11",
+          "abstract": "We propose a new risk sensitive reinforcement learning approach for the\ndynamic hedging of options. The approach focuses on the minimization of the\ntail risk of the final P&L of the seller of an option. Different from most\nexisting reinforcement learning approaches that require a parametric model of\nthe underlying asset, our approach can learn the optimal hedging strategy\ndirectly from the historical market data without specifying a parametric model;\nin addition, the learned optimal hedging strategy is contract-unified, i.e., it\napplies to different options contracts with different initial underlying\nprices, strike prices, and maturities. Our approach extends existing\nreinforcement learning methods by learning the tail risk measures of the final\nhedging P&L and the optimal hedging strategy at the same time. We carry out\ncomprehensive empirical study to show that, in the out-of-sample tests, the\nproposed reinforcement learning hedging strategy can obtain statistically\nsignificantly lower tail risk and higher mean of the final P&L than delta\nhedging methods.",
+          "arxiv_id": "2411.09659v1"
+        },
+        {
+          "title": "Deep Equal Risk Pricing of Financial Derivatives with Multiple Hedging Instruments",
+          "year": "2021-02",
+          "abstract": "This paper studies the equal risk pricing (ERP) framework for the valuation\nof European financial derivatives. This option pricing approach is consistent\nwith global trading strategies by setting the premium as the value such that\nthe residual hedging risk of the long and short positions in the option are\nequal under optimal hedging. The ERP setup of Marzban et al. (2020) is\nconsidered where residual hedging risk is quantified with convex risk measures.\nThe main objective of this paper is to assess through extensive numerical\nexperiments the impact of including options as hedging instruments within the\nERP framework. The reinforcement learning procedure developed in Carbonneau and\nGodin (2020), which relies on the deep hedging algorithm of Buehler et al.\n(2019b), is applied to numerically solve the global hedging problems by\nrepresenting trading policies with neural networks. Among other findings,\nnumerical results indicate that in the presence of jump risk, hedging long-term\nputs with shorter-term options entails a significant decrease of both equal\nrisk prices and market incompleteness as compared to trading only the stock.\nMonte Carlo experiments demonstrate the potential of ERP as a fair valuation\napproach providing prices consistent with observable market prices. Analyses\nexhibit the ability of ERP to span a large interval of prices through the\nchoice of convex risk measures which is close to encompass the variance-optimal\npremium.",
+          "arxiv_id": "2102.12694v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Systemic Risk in Financial Networks: A Survey",
+          "year": "2020-12",
+          "abstract": "We provide an overview of the relationship between financial networks and\nsystemic risk. We present a taxonomy of different types of systemic risk,\ndifferentiating between direct externalities between financial organizations\n(e.g., defaults, correlated portfolios and firesales), and perceptions and\nfeedback effects (e.g., bank runs, credit freezes). We also discuss optimal\nregulation and bailouts, measurements of systemic risk and financial\ncentrality, choices by banks' regarding their portfolios and partnerships, and\nthe changing nature of financial networks.",
+          "arxiv_id": "2012.12702v1"
+        },
+        {
+          "title": "Global Balance and Systemic Risk in Financial Correlation Networks",
+          "year": "2024-07",
+          "abstract": "The global balance index is used in the network literature to quantify how\nbalanced a signed network is. In this paper we show that the global balance\nindex of financial correlation networks can be used as a systemic risk measure.\nWe define the global balance index of a network starting from a diffusive\nprocess that describes how the information spreads across nodes in a network,\nproviding an alternative derivation to the usual combinatorial one. The steady\nstate of this process is the solution of a linear system governed by the\nexponential of the replication matrix of the process. We provide a bridge\nbetween the numerical stability of this linear system, measured by the\ncondition number in an opportune norm, and the structural predictability of the\nunderlying signed network. The link between the condition number and related\nsystemic risk measures, such as the market rank indicators, allows the global\nbalance index to be interpreted as a new systemic risk measure. A comprehensive\nempirical application to real financial data finally confirms that the global\nbalance index of financial correlation networks represents a valuable and\neffective systemic risk indicator.",
+          "arxiv_id": "2407.14272v2"
+        },
+        {
+          "title": "Systemic risk in interbank networks: disentangling balance sheets and network effects",
+          "year": "2021-09",
+          "abstract": "We study the difference between the level of systemic risk that is\nempirically measured on an interbank network and the risk that can be deduced\nfrom the balance sheets composition of the participating banks. Using\ngeneralised DebtRank dynamics, we measure observed systemic risk on e-MID\nnetwork data (augmented by BankFocus information) and compare it with the\nexpected systemic risk of a null model network, obtained through an appropriate\nmaximum-entropy approach constraining relevant balance sheet variables. We show\nthat the aggregate levels of observed and expected systemic risks are usually\ncompatible but differ significantly during turbulent times (in our case, after\nthe default of Lehman Brothers and the VLTRO implementation by the ECB). At the\nindividual level instead, banks are typically more or less risky than what\ntheir balance sheet prescribes due to their position in the network. Our\nresults confirm on one hand that balance sheet information used within a proper\nmaximum-entropy network model provides good aggregate estimates of systemic\nrisk, and on the other hand the importance of knowing the empirical details of\nthe network for conducting precise stress tests on individual banks, especially\nafter systemic events.",
+          "arxiv_id": "2109.14360v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "Automated Risk Management Mechanisms in DeFi Lending Protocols: A Crosschain Comparative Analysis of Aave and Compound",
+          "year": "2025-06",
+          "abstract": "Blockchain-based decentralised lending is a rapidly growing and evolving\nalternative to traditional lending, but it poses new risks. To mitigate these\nrisks, lending protocols have integrated automated risk management tools into\ntheir smart contracts. However, the effectiveness of the latest risk management\nfeatures introduced in the most recent versions of these lending protocols is\nunderstudied. To close this gap, we use a panel regression fixed effects model\nto empirically analyse the cross-version (v2 and v3) and cross-chain (L1 and\nL2) performance of the liquidation mechanisms of the two most popular lending\nprotocols, Aave and Compound, during the period Jan 2021 to Dec 2024. Our\nanalysis reveals that liquidation events in v3 of both protocols lead to an\nincrease in total value locked and total revenue, with stronger impact on the\nL2 blockchain compared to L1. In contrast, liquidations in v2 have an\ninsignificant impact, which indicates that the most recent v3 protocols have\nbetter risk management than the earlier v2 protocols. We also show that L1\nblockchains are the preferred choice among large investors for their robust\nliquidity and ecosystem depth, while L2 blockchains are more popular among\nretail investors for their lower fees and faster execution.",
+          "arxiv_id": "2506.12855v1"
+        },
+        {
+          "title": "Auto.gov: Learning-based Governance for Decentralized Finance (DeFi)",
+          "year": "2023-02",
+          "abstract": "Decentralized finance (DeFi) is an integral component of the blockchain\necosystem, enabling a range of financial activities through\nsmart-contract-based protocols. Traditional DeFi governance typically involves\nmanual parameter adjustments by protocol teams or token holder votes, and is\nthus prone to human bias and financial risks, undermining the system's\nintegrity and security. While existing efforts aim to establish more adaptive\nparameter adjustment schemes, there remains a need for a governance model that\nis both more efficient and resilient to significant market manipulations. In\nthis paper, we introduce \"Auto$.$gov\", a learning-based governance framework\nthat employs a deep Qnetwork (DQN) reinforcement learning (RL) strategy to\nperform semi-automated, data-driven parameter adjustments. We create a DeFi\nenvironment with an encoded action-state space akin to the Aave lending\nprotocol for simulation and testing purposes, where Auto$.$gov has demonstrated\nthe capability to retain funds that would have otherwise been lost to price\noracle attacks. In tests with real-world data, Auto$.$gov outperforms the\nbenchmark approaches by at least 14% and the static baseline model by tenfold,\nin terms of the preset performance metric--protocol profitability. Overall, the\ncomprehensive evaluations confirm that Auto$.$gov is more efficient and\neffective than traditional governance methods, thereby enhancing the security,\nprofitability, and ultimately, the sustainability of DeFi protocols.",
+          "arxiv_id": "2302.09551v4"
+        },
+        {
+          "title": "Mapping Microscopic and Systemic Risks in TradFi and DeFi: a literature review",
+          "year": "2025-08",
+          "abstract": "This work explores the formation and propagation of systemic risks across\ntraditional finance (TradFi) and decentralized finance (DeFi), offering a\ncomparative framework that bridges these two increasingly interconnected\necosystems. We propose a conceptual model for systemic risk formation in\nTradFi, grounded in well-established mechanisms such as leverage cycles,\nliquidity crises, and interconnected institutional exposures. Extending this\nanalysis to DeFi, we identify unique structural and technological\ncharacteristics - such as composability, smart contract vulnerabilities, and\nalgorithm-driven mechanisms - that shape the emergence and transmission of\nrisks within decentralized systems. Through a conceptual mapping, we highlight\nrisks with similar foundations (e.g., trading vulnerabilities, liquidity\nshocks), while emphasizing how these risks manifest and propagate differently\ndue to the contrasting architectures of TradFi and DeFi. Furthermore, we\nintroduce the concept of crosstagion, a bidirectional process where instability\nin DeFi can spill over into TradFi, and vice versa. We illustrate how\ndisruptions such as liquidity crises, regulatory actions, or political\ndevelopments can cascade across these systems, leveraging their growing\ninterdependence. By analyzing this mutual dynamics, we highlight the importance\nof understanding systemic risks not only within TradFi and DeFi individually,\nbut also at their intersection. Our findings contribute to the evolving\ndiscourse on risk management in a hybrid financial ecosystem, offering insights\nfor policymakers, regulators, and financial stakeholders navigating this\ncomplex landscape.",
+          "arxiv_id": "2508.12007v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Approaches for modelling the term-structure of default risk under IFRS 9: A tutorial using discrete-time survival analysis",
+          "year": "2025-07",
+          "abstract": "Under the International Financial Reporting Standards (IFRS) 9, credit losses\nought to be recognised timeously and accurately. This requirement belies a\ncertain degree of dynamicity when estimating the constituent parts of a credit\nloss event, most notably the probability of default (PD). It is notoriously\ndifficult to produce such PD-estimates at every point of loan life that are\nadequately dynamic and accurate, especially when considering the ever-changing\nmacroeconomic background. In rendering these lifetime PD-estimates, the choice\nof modelling technique plays an important role, which is why we first review a\nfew classes of techniques, including the merits and limitations of each. Our\nmain contribution however is the development of an in-depth and data-driven\ntutorial using a particular class of techniques called discrete-time survival\nanalysis. This tutorial is accompanied by a diverse set of reusable diagnostic\nmeasures for evaluating various aspects of a survival model and the underlying\ndata. A comprehensive R-based codebase is further contributed. We believe that\nour work can help cultivate common modelling practices under IFRS 9, and should\nbe valuable to practitioners, model validators, and regulators alike.",
+          "arxiv_id": "2507.15441v1"
+        },
+        {
+          "title": "Defining and comparing SICR-events for classifying impaired loans under IFRS 9",
+          "year": "2023-03",
+          "abstract": "The IFRS 9 accounting standard requires the prediction of credit\ndeterioration in financial instruments, i.e., significant increases in credit\nrisk (SICR). However, the definition of such a SICR-event is inherently\nambiguous, given its current reliance on evaluating the change in the estimated\nprobability of default (PD) against some arbitrary threshold. We examine the\nshortcomings of this PD-comparison approach and propose an alternative\nframework for generating SICR-definitions based on three parameters:\ndelinquency, stickiness, and the outcome period. Having varied these framework\nparameters, we obtain 27 unique SICR-definitions and fit logistic regression\nmodels accordingly using rich South African mortgage and macroeconomic data.\nFor each definition and corresponding model, the resulting SICR-rates are\nanalysed at the portfolio-level on their stability over time and their\nresponsiveness to economic downturns. At the account-level, we compare both the\naccuracy and dynamicity of the SICR-predictions, and discover several\ninteresting trends and trade-offs. These results can help any bank with\nappropriately setting the three framework parameters in defining SICR-events\nfor prediction purposes. We demonstrate this process by comparing the\nbest-performing SICR-model to the PD-comparison approach, and show the latter's\ninferiority as an early-warning system. Our work can therefore guide the\nformulation, modelling, and testing of any SICR-definition, thereby promoting\nthe timeous recognition of credit losses; the main imperative of IFRS 9.",
+          "arxiv_id": "2303.03080v4"
+        },
+        {
+          "title": "Towards modelling lifetime default risk: Exploring different subtypes of recurrent event Cox-regression models",
+          "year": "2025-05",
+          "abstract": "In the pursuit of modelling a loan's probability of default (PD) over its\nlifetime, repeat default events are often ignored when using Cox Proportional\nHazard (PH) models. Excluding such events may produce biased and inaccurate\nPD-estimates, which can compromise financial buffers against future losses.\nAccordingly, we investigate a few subtypes of Cox-models that can incorporate\nrecurrent default events. Using South African mortgage data, we explore both\nthe Andersen-Gill (AG) and the Prentice-Williams-Peterson (PWP) spell-time\nmodels. These models are compared against a baseline that deliberately ignores\nrecurrent events, called the time to first default (TFD) model. Models are\nevaluated using Harrell's c-statistic, adjusted Cox-Sell residuals, and a novel\nextension of time-dependent receiver operating characteristic (ROC) analysis.\nFrom these Cox-models, we demonstrate how to derive a portfolio-level\nterm-structure of default risk, which is a series of marginal PD-estimates at\neach point of the average loan's lifetime. While the TFD- and PWP-models do not\ndiffer significantly across all diagnostics, the AG-model underperformed\nexpectations. Depending on the prevalence of recurrent defaults, one may\ntherefore safely ignore them when estimating lifetime default risk.\nAccordingly, our work enhances the current practice of using Cox-modelling in\nproducing timeous and accurate PD-estimates under IFRS 9.",
+          "arxiv_id": "2505.01044v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "Cyber Risk Frequency, Severity and Insurance Viability",
+          "year": "2021-11",
+          "abstract": "In this study an exploration of insurance risk transfer is undertaken for the\ncyber insurance industry in the United States of America, based on the leading\nindustry dataset of cyber events provided by Advisen. We seek to address two\ncore unresolved questions. First, what factors are the most significant\ncovariates that may explain the frequency and severity of cyber loss events and\nare they heterogeneous over cyber risk categories? Second, is cyber risk\ninsurable in regards to the required premiums, risk pool sizes and how would\nthis decision vary with the insured companies industry sector and size? We\naddress these questions through a combination of regression models based on the\nclass of Generalised Additive Models for Location Shape and Scale (GAMLSS) and\na class of ordinal regressions. These models will then form the basis for our\nanalysis of frequency and severity of cyber risk loss processes. We investigate\nthe viability of insurance for cyber risk using a utility modelling framework\nwith premium calculated by classical certainty equivalence analysis utilising\nthe developed regression models. Our results provide several new key insights\ninto the nature of insurability of cyber risk and rigorously address the two\ninsurance questions posed in a real data driven case study analysis.",
+          "arxiv_id": "2111.03366v2"
+        },
+        {
+          "title": "Cyber Risk Taxonomies: Statistical Analysis of Cybersecurity Risk Classifications",
+          "year": "2024-10",
+          "abstract": "Cyber risk classifications are widely used in the modeling of cyber event\ndistributions, yet their effectiveness in out of sample forecasting performance\nremains underexplored. In this paper, we analyse the most commonly used\nclassifications and argue in favour of switching the attention from\ngoodness-of-fit and in-sample predictive performance, to focusing on the out-of\nsample forecasting performance. We use a rolling window analysis, to compare\ncyber risk distribution forecasts via threshold weighted scoring functions. Our\nresults indicate that business motivated cyber risk classifications appear to\nbe too restrictive and not flexible enough to capture the heterogeneity of\ncyber risk events. We investigate how dynamic and impact-based cyber risk\nclassifiers seem to be better suited in forecasting future cyber risk losses\nthan the other considered classifications. These findings suggest that cyber\nrisk types provide limited forecasting ability concerning cyber event severity\ndistribution, and cyber insurance ratemakers should utilize cyber risk types\nonly when modeling the cyber event frequency distribution. Our study offers\nvaluable insights for decision-makers and policymakers alike, contributing to\nthe advancement of scientific knowledge in the field of cyber risk management.",
+          "arxiv_id": "2410.05297v1"
+        },
+        {
+          "title": "Cyber Risk Assessment for Capital Management",
+          "year": "2022-05",
+          "abstract": "This paper introduces a two-pillar cyber risk management framework to address\nthe pervasive challenges in managing cyber risk. The first pillar, cyber risk\nassessment, combines insurance frequency-severity models with cybersecurity\ncascade models to capture the unique nature of cyber risk. The second pillar,\ncyber capital management, facilitates informed allocation of capital for a\nbalanced cyber risk management strategy, including cybersecurity investments,\ninsurance coverage, and reserves. A case study, based on historical cyber\nincident data and realistic assumptions, demonstrates the necessity of\ncomprehensive cost-benefit analysis for budget-constrained companies with\ncompeting objectives in cyber risk management. In addition, sensitivity\nanalysis highlights the dependence of the optimal strategy on factors such as\nthe price of cybersecurity controls and their effectiveness. The framework's\nimplementation across a diverse range of companies yields general insights on\ncyber risk management.",
+          "arxiv_id": "2205.08435v4"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:43:57Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

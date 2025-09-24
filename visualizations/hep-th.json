@@ -1,0 +1,1946 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_theory_theories_string_gauge",
+        "keywords": [
+          [
+            "theory",
+            0.024098309630236337
+          ],
+          [
+            "theories",
+            0.01739903426472363
+          ],
+          [
+            "string",
+            0.014596873213956947
+          ],
+          [
+            "gauge",
+            0.014556500216448815
+          ],
+          [
+            "non",
+            0.013083519449522149
+          ],
+          [
+            "dimensional",
+            0.012943929095408143
+          ],
+          [
+            "algebra",
+            0.011946023799138313
+          ],
+          [
+            "supergravity",
+            0.011867896573743602
+          ],
+          [
+            "supersymmetric",
+            0.011780740347139555
+          ],
+          [
+            "space",
+            0.010431842153100666
+          ]
+        ],
+        "count": 7103
+      },
+      "1": {
+        "name": "1_black_hole_black hole_gravity",
+        "keywords": [
+          [
+            "black",
+            0.04128650275548902
+          ],
+          [
+            "hole",
+            0.03008555595587749
+          ],
+          [
+            "black hole",
+            0.029455431087879416
+          ],
+          [
+            "gravity",
+            0.021128526502972655
+          ],
+          [
+            "holes",
+            0.020351880734890422
+          ],
+          [
+            "black holes",
+            0.01991878072616305
+          ],
+          [
+            "scalar",
+            0.01654473340293203
+          ],
+          [
+            "field",
+            0.014540042966923641
+          ],
+          [
+            "gravitational",
+            0.014426348378714624
+          ],
+          [
+            "solutions",
+            0.01332483530456971
+          ]
+        ],
+        "count": 6454
+      },
+      "2": {
+        "name": "2_inflation_dark_model_matter",
+        "keywords": [
+          [
+            "inflation",
+            0.02746917441164667
+          ],
+          [
+            "dark",
+            0.025622118874775675
+          ],
+          [
+            "model",
+            0.018709883740176816
+          ],
+          [
+            "matter",
+            0.018228398546288313
+          ],
+          [
+            "dark matter",
+            0.017086879148409347
+          ],
+          [
+            "primordial",
+            0.015736920108698323
+          ],
+          [
+            "scalar",
+            0.015273414438470202
+          ],
+          [
+            "scale",
+            0.014784914160180651
+          ],
+          [
+            "models",
+            0.014411395417526026
+          ],
+          [
+            "field",
+            0.014013043330632545
+          ]
+        ],
+        "count": 3334
+      },
+      "3": {
+        "name": "3_holographic_entanglement_AdS_entropy",
+        "keywords": [
+          [
+            "holographic",
+            0.033822641597664044
+          ],
+          [
+            "entanglement",
+            0.021224534196097107
+          ],
+          [
+            "AdS",
+            0.02058211682964337
+          ],
+          [
+            "entropy",
+            0.0196165513300041
+          ],
+          [
+            "bulk",
+            0.019489169624268995
+          ],
+          [
+            "boundary",
+            0.019024303316092787
+          ],
+          [
+            "gravity",
+            0.016071579863658855
+          ],
+          [
+            "CFT",
+            0.0156884285723553
+          ],
+          [
+            "black",
+            0.015386207472970344
+          ],
+          [
+            "theory",
+            0.0141400011273744
+          ]
+        ],
+        "count": 3074
+      },
+      "4": {
+        "name": "4_loop_QCD_theory_renormalization",
+        "keywords": [
+          [
+            "loop",
+            0.01898400535442052
+          ],
+          [
+            "QCD",
+            0.01692260390531485
+          ],
+          [
+            "theory",
+            0.014878398854190589
+          ],
+          [
+            "renormalization",
+            0.014863676121614305
+          ],
+          [
+            "point",
+            0.014697486535482876
+          ],
+          [
+            "conformal",
+            0.01436683015607445
+          ],
+          [
+            "functions",
+            0.01412734268673453
+          ],
+          [
+            "order",
+            0.013655501674076878
+          ],
+          [
+            "theories",
+            0.012799910263171248
+          ],
+          [
+            "gauge",
+            0.01258968270048993
+          ]
+        ],
+        "count": 1587
+      },
+      "5": {
+        "name": "5_topological_symmetry_lattice_phases",
+        "keywords": [
+          [
+            "topological",
+            0.03980110976540565
+          ],
+          [
+            "symmetry",
+            0.034335319937823204
+          ],
+          [
+            "lattice",
+            0.027968789535111734
+          ],
+          [
+            "phases",
+            0.026793715714037332
+          ],
+          [
+            "quantum",
+            0.022956127524161745
+          ],
+          [
+            "phase",
+            0.019661211553092132
+          ],
+          [
+            "symmetries",
+            0.01833835331547506
+          ],
+          [
+            "theory",
+            0.016084435115433005
+          ],
+          [
+            "model",
+            0.01569571822029624
+          ],
+          [
+            "spin",
+            0.015238796731099171
+          ]
+        ],
+        "count": 935
+      },
+      "6": {
+        "name": "6_quantum_systems_time_complexity",
+        "keywords": [
+          [
+            "quantum",
+            0.04074566381388551
+          ],
+          [
+            "systems",
+            0.030133174443339454
+          ],
+          [
+            "time",
+            0.02767197706193036
+          ],
+          [
+            "complexity",
+            0.025470660463698717
+          ],
+          [
+            "chaotic",
+            0.021415365566968984
+          ],
+          [
+            "dynamics",
+            0.02123376480537555
+          ],
+          [
+            "entanglement",
+            0.020507930818246232
+          ],
+          [
+            "body",
+            0.019978286071081056
+          ],
+          [
+            "chaos",
+            0.019217251679407247
+          ],
+          [
+            "Krylov",
+            0.019067569417346768
+          ]
+        ],
+        "count": 890
+      },
+      "7": {
+        "name": "7_QCD_quark_hydrodynamic_hydrodynamics",
+        "keywords": [
+          [
+            "QCD",
+            0.028533882498446256
+          ],
+          [
+            "quark",
+            0.022286834982699597
+          ],
+          [
+            "hydrodynamic",
+            0.01753658094288655
+          ],
+          [
+            "hydrodynamics",
+            0.017181464048388252
+          ],
+          [
+            "gluon",
+            0.01712943440921926
+          ],
+          [
+            "relativistic",
+            0.01695467122379494
+          ],
+          [
+            "temperature",
+            0.016606163631656682
+          ],
+          [
+            "chiral",
+            0.015737187652626446
+          ],
+          [
+            "collisions",
+            0.013821085448160096
+          ],
+          [
+            "magnetic",
+            0.013788594695920453
+          ]
+        ],
+        "count": 860
+      },
+      "8": {
+        "name": "8_kink_solutions_model_field",
+        "keywords": [
+          [
+            "kink",
+            0.041302651316774415
+          ],
+          [
+            "solutions",
+            0.029217854301754196
+          ],
+          [
+            "model",
+            0.02845529149016499
+          ],
+          [
+            "field",
+            0.027469644952198117
+          ],
+          [
+            "kinks",
+            0.02198646002611285
+          ],
+          [
+            "soliton",
+            0.021450334906839487
+          ],
+          [
+            "antikink",
+            0.01889035215857695
+          ],
+          [
+            "solitons",
+            0.018766364704272738
+          ],
+          [
+            "potential",
+            0.017375205933797613
+          ],
+          [
+            "energy",
+            0.017238824189141425
+          ]
+        ],
+        "count": 477
+      },
+      "9": {
+        "name": "9_Casimir_energy_field_Casimir effect",
+        "keywords": [
+          [
+            "Casimir",
+            0.07883338734811123
+          ],
+          [
+            "energy",
+            0.03459698132469816
+          ],
+          [
+            "field",
+            0.03373751691096957
+          ],
+          [
+            "Casimir effect",
+            0.031220316830269785
+          ],
+          [
+            "effect",
+            0.029568344723899676
+          ],
+          [
+            "vacuum",
+            0.026777779794083804
+          ],
+          [
+            "boundary",
+            0.020250117204917616
+          ],
+          [
+            "boundary conditions",
+            0.017164023358534748
+          ],
+          [
+            "conditions",
+            0.017052615795718398
+          ],
+          [
+            "magnetic",
+            0.016456570202875245
+          ]
+        ],
+        "count": 376
+      },
+      "10": {
+        "name": "10_Unruh_quantum_detector_detectors",
+        "keywords": [
+          [
+            "Unruh",
+            0.04884357504818011
+          ],
+          [
+            "quantum",
+            0.04715521747977665
+          ],
+          [
+            "detector",
+            0.04193796914837821
+          ],
+          [
+            "detectors",
+            0.0326222048965649
+          ],
+          [
+            "field",
+            0.028928044432251027
+          ],
+          [
+            "entanglement",
+            0.026201127461681337
+          ],
+          [
+            "acceleration",
+            0.02132765470361554
+          ],
+          [
+            "time",
+            0.02131502612460022
+          ],
+          [
+            "Unruh effect",
+            0.020835013404226176
+          ],
+          [
+            "state",
+            0.020042545235539708
+          ]
+        ],
+        "count": 337
+      },
+      "11": {
+        "name": "11_integrals_Feynman_loop_method",
+        "keywords": [
+          [
+            "integrals",
+            0.10015350197404782
+          ],
+          [
+            "Feynman",
+            0.09184852309255133
+          ],
+          [
+            "loop",
+            0.040080156669498455
+          ],
+          [
+            "method",
+            0.02950716833616359
+          ],
+          [
+            "integral",
+            0.024276083324947868
+          ],
+          [
+            "functions",
+            0.02377129225642554
+          ],
+          [
+            "package",
+            0.02112601289189417
+          ],
+          [
+            "reduction",
+            0.02092970040917239
+          ],
+          [
+            "differential",
+            0.020679706878206194
+          ],
+          [
+            "hypergeometric",
+            0.01827217819998417
+          ]
+        ],
+        "count": 246
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.6453656215047558,
+        -0.468179552923597,
+        -0.3661501590225405,
+        -0.20226207897390144,
+        -0.6054366128999354,
+        -0.46078860772032143,
+        -0.6737402925442759,
+        -0.502124692801807,
+        -0.6549597957850637,
+        -0.5898304315617007,
+        -0.7052301496126735
+      ],
+      [
+        -0.6453656215047558,
+        1.0,
+        -0.6279170650556869,
+        -0.46884885753925165,
+        -0.644250379947152,
+        -0.710041897801738,
+        -0.6493593354598476,
+        -0.7232184771309944,
+        -0.6085687358237798,
+        -0.6392579770318547,
+        -0.676128650410035,
+        -0.7459590387180627
+      ],
+      [
+        -0.468179552923597,
+        -0.6279170650556869,
+        1.0,
+        -0.4653324280277358,
+        -0.34639600780874213,
+        -0.681930482051109,
+        -0.46506638411653295,
+        -0.6935720709324413,
+        -0.6032163743550601,
+        -0.6473872094601014,
+        -0.6640710646074626,
+        -0.7370127367589376
+      ],
+      [
+        -0.3661501590225405,
+        -0.46884885753925165,
+        -0.4653324280277358,
+        1.0,
+        -0.25035350553170366,
+        -0.6435707197968493,
+        -0.40531562522893816,
+        -0.6616554037978728,
+        -0.5560030915636929,
+        -0.6435713679733582,
+        -0.5986790034671035,
+        -0.7269415509717891
+      ],
+      [
+        -0.20226207897390144,
+        -0.644250379947152,
+        -0.34639600780874213,
+        -0.25035350553170366,
+        1.0,
+        -0.6371566400393475,
+        -0.3588397921838843,
+        -0.6103897851386899,
+        -0.5152154335110269,
+        -0.6602843646919971,
+        -0.6325965968253541,
+        -0.5560947592324562
+      ],
+      [
+        -0.6054366128999354,
+        -0.710041897801738,
+        -0.681930482051109,
+        -0.6435707197968493,
+        -0.6371566400393475,
+        1.0,
+        -0.6032178046278942,
+        -0.6778872505185292,
+        -0.6507541225357587,
+        -0.6991568973881382,
+        -0.6113340687260762,
+        -0.7439299127320442
+      ],
+      [
+        -0.46078860772032143,
+        -0.6493593354598476,
+        -0.46506638411653295,
+        -0.40531562522893816,
+        -0.3588397921838843,
+        -0.6032178046278942,
+        1.0,
+        -0.6791604143899135,
+        -0.620688192607868,
+        -0.6598633668835598,
+        -0.4926989622177732,
+        -0.7211562353968841
+      ],
+      [
+        -0.6737402925442759,
+        -0.7232184771309944,
+        -0.6935720709324413,
+        -0.6616554037978728,
+        -0.6103897851386899,
+        -0.6778872505185292,
+        -0.6791604143899135,
+        1.0,
+        -0.6839061327977751,
+        -0.6542325543191807,
+        -0.6984566597531445,
+        -0.7374021145462977
+      ],
+      [
+        -0.502124692801807,
+        -0.6085687358237798,
+        -0.6032163743550601,
+        -0.5560030915636929,
+        -0.5152154335110269,
+        -0.6507541225357587,
+        -0.620688192607868,
+        -0.6839061327977751,
+        1.0,
+        -0.5240829384218678,
+        -0.5472227860635586,
+        -0.7274858975886767
+      ],
+      [
+        -0.6549597957850637,
+        -0.6392579770318547,
+        -0.6473872094601014,
+        -0.6435713679733582,
+        -0.6602843646919971,
+        -0.6991568973881382,
+        -0.6598633668835598,
+        -0.6542325543191807,
+        -0.5240829384218678,
+        1.0,
+        -0.5946649874477928,
+        -0.7421873571702715
+      ],
+      [
+        -0.5898304315617007,
+        -0.676128650410035,
+        -0.6640710646074626,
+        -0.5986790034671035,
+        -0.6325965968253541,
+        -0.6113340687260762,
+        -0.4926989622177732,
+        -0.6984566597531445,
+        -0.5472227860635586,
+        -0.5946649874477928,
+        1.0,
+        -0.7115245724437943
+      ],
+      [
+        -0.7052301496126735,
+        -0.7459590387180627,
+        -0.7370127367589376,
+        -0.7269415509717891,
+        -0.5560947592324562,
+        -0.7439299127320442,
+        -0.7211562353968841,
+        -0.7374021145462977,
+        -0.7274858975886767,
+        -0.7421873571702715,
+        -0.7115245724437943,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        161,
+        59,
+        26,
+        36,
+        7,
+        27,
+        22,
+        8,
+        32,
+        15,
+        21,
+        23
+      ],
+      "2020-02": [
+        152,
+        67,
+        30,
+        37,
+        6,
+        33,
+        25,
+        15,
+        32,
+        17,
+        30,
+        20
+      ],
+      "2020-03": [
+        201,
+        71,
+        37,
+        31,
+        8,
+        39,
+        25,
+        10,
+        43,
+        27,
+        25,
+        30
+      ],
+      "2020-04": [
+        215,
+        112,
+        33,
+        43,
+        11,
+        32,
+        29,
+        21,
+        53,
+        27,
+        28,
+        29
+      ],
+      "2020-05": [
+        234,
+        94,
+        40,
+        53,
+        11,
+        35,
+        33,
+        14,
+        48,
+        36,
+        27,
+        34
+      ],
+      "2020-06": [
+        237,
+        102,
+        26,
+        64,
+        6,
+        29,
+        34,
+        16,
+        56,
+        26,
+        26,
+        21
+      ],
+      "2020-07": [
+        224,
+        93,
+        43,
+        40,
+        11,
+        30,
+        29,
+        14,
+        62,
+        30,
+        37,
+        31
+      ],
+      "2020-08": [
+        191,
+        77,
+        34,
+        46,
+        6,
+        41,
+        32,
+        14,
+        35,
+        22,
+        35,
+        31
+      ],
+      "2020-09": [
+        235,
+        95,
+        39,
+        43,
+        14,
+        28,
+        33,
+        16,
+        41,
+        32,
+        31,
+        22
+      ],
+      "2020-10": [
+        224,
+        101,
+        28,
+        45,
+        10,
+        33,
+        33,
+        15,
+        52,
+        39,
+        23,
+        27
+      ],
+      "2020-11": [
+        212,
+        92,
+        40,
+        59,
+        8,
+        31,
+        34,
+        12,
+        45,
+        27,
+        27,
+        25
+      ],
+      "2020-12": [
+        281,
+        123,
+        33,
+        57,
+        8,
+        44,
+        43,
+        14,
+        53,
+        30,
+        31,
+        32
+      ],
+      "2021-01": [
+        188,
+        59,
+        21,
+        34,
+        6,
+        26,
+        23,
+        9,
+        40,
+        36,
+        22,
+        17
+      ],
+      "2021-02": [
+        151,
+        77,
+        19,
+        35,
+        8,
+        23,
+        29,
+        13,
+        48,
+        32,
+        24,
+        24
+      ],
+      "2021-03": [
+        216,
+        99,
+        24,
+        46,
+        15,
+        36,
+        39,
+        23,
+        44,
+        32,
+        24,
+        23
+      ],
+      "2021-04": [
+        208,
+        76,
+        35,
+        30,
+        10,
+        37,
+        29,
+        11,
+        37,
+        27,
+        20,
+        23
+      ],
+      "2021-05": [
+        204,
+        118,
+        32,
+        42,
+        5,
+        28,
+        28,
+        13,
+        52,
+        31,
+        24,
+        26
+      ],
+      "2021-06": [
+        204,
+        87,
+        30,
+        53,
+        6,
+        41,
+        38,
+        10,
+        34,
+        28,
+        25,
+        21
+      ],
+      "2021-07": [
+        215,
+        74,
+        33,
+        40,
+        10,
+        40,
+        33,
+        13,
+        39,
+        23,
+        35,
+        21
+      ],
+      "2021-08": [
+        196,
+        86,
+        39,
+        48,
+        11,
+        25,
+        31,
+        12,
+        28,
+        21,
+        26,
+        13
+      ],
+      "2021-09": [
+        195,
+        90,
+        25,
+        39,
+        8,
+        36,
+        30,
+        12,
+        43,
+        25,
+        29,
+        25
+      ],
+      "2021-10": [
+        237,
+        78,
+        32,
+        32,
+        9,
+        37,
+        47,
+        21,
+        37,
+        31,
+        34,
+        40
+      ],
+      "2021-11": [
+        219,
+        99,
+        40,
+        60,
+        12,
+        40,
+        28,
+        21,
+        63,
+        23,
+        35,
+        30
+      ],
+      "2021-12": [
+        294,
+        127,
+        47,
+        61,
+        11,
+        48,
+        46,
+        22,
+        55,
+        37,
+        38,
+        39
+      ],
+      "2022-01": [
+        187,
+        60,
+        27,
+        34,
+        7,
+        33,
+        28,
+        17,
+        33,
+        22,
+        29,
+        32
+      ],
+      "2022-02": [
+        176,
+        71,
+        32,
+        41,
+        5,
+        20,
+        37,
+        9,
+        39,
+        30,
+        33,
+        18
+      ],
+      "2022-03": [
+        216,
+        107,
+        41,
+        47,
+        8,
+        38,
+        33,
+        13,
+        35,
+        31,
+        35,
+        28
+      ],
+      "2022-04": [
+        170,
+        84,
+        34,
+        30,
+        9,
+        40,
+        27,
+        13,
+        34,
+        20,
+        31,
+        29
+      ],
+      "2022-05": [
+        190,
+        128,
+        29,
+        41,
+        8,
+        33,
+        47,
+        10,
+        40,
+        21,
+        28,
+        28
+      ],
+      "2022-06": [
+        183,
+        103,
+        31,
+        55,
+        11,
+        26,
+        33,
+        4,
+        29,
+        30,
+        30,
+        28
+      ],
+      "2022-07": [
+        212,
+        96,
+        35,
+        41,
+        13,
+        26,
+        28,
+        13,
+        43,
+        36,
+        35,
+        32
+      ],
+      "2022-08": [
+        204,
+        91,
+        33,
+        29,
+        7,
+        27,
+        40,
+        13,
+        36,
+        27,
+        32,
+        24
+      ],
+      "2022-09": [
+        196,
+        82,
+        34,
+        51,
+        9,
+        28,
+        27,
+        16,
+        38,
+        24,
+        32,
+        31
+      ],
+      "2022-10": [
+        184,
+        92,
+        44,
+        50,
+        12,
+        32,
+        36,
+        10,
+        48,
+        34,
+        36,
+        33
+      ],
+      "2022-11": [
+        222,
+        100,
+        41,
+        60,
+        7,
+        31,
+        29,
+        15,
+        58,
+        26,
+        38,
+        33
+      ],
+      "2022-12": [
+        306,
+        108,
+        53,
+        52,
+        12,
+        49,
+        36,
+        19,
+        54,
+        51,
+        39,
+        36
+      ],
+      "2023-01": [
+        175,
+        78,
+        29,
+        24,
+        5,
+        34,
+        16,
+        8,
+        28,
+        32,
+        38,
+        23
+      ],
+      "2023-02": [
+        157,
+        66,
+        26,
+        42,
+        7,
+        25,
+        35,
+        5,
+        31,
+        28,
+        32,
+        18
+      ],
+      "2023-03": [
+        205,
+        94,
+        39,
+        31,
+        7,
+        30,
+        33,
+        8,
+        50,
+        31,
+        35,
+        28
+      ],
+      "2023-04": [
+        192,
+        94,
+        31,
+        41,
+        10,
+        44,
+        28,
+        14,
+        38,
+        30,
+        28,
+        30
+      ],
+      "2023-05": [
+        199,
+        112,
+        34,
+        42,
+        10,
+        33,
+        35,
+        13,
+        45,
+        30,
+        41,
+        27
+      ],
+      "2023-06": [
+        203,
+        92,
+        33,
+        49,
+        9,
+        44,
+        37,
+        11,
+        27,
+        24,
+        28,
+        32
+      ],
+      "2023-07": [
+        212,
+        129,
+        49,
+        40,
+        17,
+        37,
+        38,
+        18,
+        41,
+        25,
+        44,
+        20
+      ],
+      "2023-08": [
+        165,
+        78,
+        31,
+        42,
+        4,
+        30,
+        34,
+        17,
+        33,
+        33,
+        27,
+        28
+      ],
+      "2023-09": [
+        201,
+        99,
+        37,
+        43,
+        14,
+        41,
+        26,
+        15,
+        34,
+        35,
+        31,
+        35
+      ],
+      "2023-10": [
+        209,
+        112,
+        30,
+        50,
+        9,
+        43,
+        32,
+        16,
+        39,
+        36,
+        41,
+        24
+      ],
+      "2023-11": [
+        221,
+        83,
+        47,
+        45,
+        12,
+        42,
+        41,
+        16,
+        49,
+        32,
+        41,
+        38
+      ],
+      "2023-12": [
+        306,
+        121,
+        26,
+        66,
+        11,
+        42,
+        50,
+        23,
+        50,
+        42,
+        45,
+        44
+      ],
+      "2024-01": [
+        151,
+        82,
+        26,
+        39,
+        7,
+        40,
+        32,
+        16,
+        25,
+        26,
+        34,
+        19
+      ],
+      "2024-02": [
+        179,
+        86,
+        28,
+        29,
+        6,
+        36,
+        40,
+        12,
+        40,
+        38,
+        33,
+        34
+      ],
+      "2024-03": [
+        196,
+        90,
+        35,
+        43,
+        8,
+        37,
+        37,
+        17,
+        47,
+        35,
+        25,
+        38
+      ],
+      "2024-04": [
+        201,
+        114,
+        44,
+        34,
+        6,
+        52,
+        31,
+        17,
+        33,
+        33,
+        28,
+        23
+      ],
+      "2024-05": [
+        234,
+        98,
+        60,
+        34,
+        12,
+        60,
+        45,
+        18,
+        34,
+        40,
+        42,
+        29
+      ],
+      "2024-06": [
+        222,
+        87,
+        54,
+        48,
+        7,
+        37,
+        36,
+        20,
+        39,
+        37,
+        37,
+        37
+      ],
+      "2024-07": [
+        237,
+        109,
+        42,
+        46,
+        13,
+        32,
+        56,
+        22,
+        55,
+        30,
+        22,
+        33
+      ],
+      "2024-08": [
+        184,
+        88,
+        39,
+        43,
+        10,
+        41,
+        33,
+        17,
+        31,
+        33,
+        25,
+        38
+      ],
+      "2024-09": [
+        194,
+        87,
+        33,
+        41,
+        6,
+        37,
+        41,
+        14,
+        36,
+        36,
+        32,
+        30
+      ],
+      "2024-10": [
+        203,
+        121,
+        28,
+        55,
+        11,
+        48,
+        41,
+        18,
+        45,
+        32,
+        31,
+        40
+      ],
+      "2024-11": [
+        225,
+        115,
+        28,
+        51,
+        5,
+        60,
+        42,
+        13,
+        44,
+        36,
+        46,
+        33
+      ],
+      "2024-12": [
+        283,
+        129,
+        36,
+        55,
+        14,
+        63,
+        53,
+        30,
+        46,
+        38,
+        39,
+        43
+      ],
+      "2025-01": [
+        181,
+        83,
+        32,
+        39,
+        11,
+        36,
+        35,
+        11,
+        39,
+        29,
+        24,
+        24
+      ],
+      "2025-02": [
+        168,
+        111,
+        44,
+        45,
+        5,
+        39,
+        30,
+        15,
+        34,
+        21,
+        38,
+        29
+      ],
+      "2025-03": [
+        230,
+        96,
+        40,
+        40,
+        9,
+        38,
+        39,
+        27,
+        37,
+        31,
+        32,
+        36
+      ],
+      "2025-04": [
+        203,
+        111,
+        56,
+        44,
+        16,
+        38,
+        37,
+        20,
+        28,
+        20,
+        43,
+        30
+      ],
+      "2025-05": [
+        223,
+        116,
+        51,
+        46,
+        14,
+        41,
+        30,
+        24,
+        38,
+        40,
+        38,
+        28
+      ],
+      "2025-06": [
+        191,
+        89,
+        46,
+        44,
+        9,
+        40,
+        43,
+        27,
+        33,
+        21,
+        33,
+        25
+      ],
+      "2025-07": [
+        248,
+        117,
+        62,
+        39,
+        13,
+        43,
+        42,
+        28,
+        35,
+        30,
+        31,
+        24
+      ],
+      "2025-08": [
+        182,
+        106,
+        25,
+        48,
+        7,
+        45,
+        26,
+        21,
+        25,
+        29,
+        38,
+        33
+      ],
+      "2025-09": [
+        120,
+        62,
+        29,
+        28,
+        2,
+        31,
+        19,
+        14,
+        24,
+        17,
+        22,
+        20
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Holographic $\\frac{1}{2}$-BPS surface defects in ABJM",
+          "year": "2024-04",
+          "abstract": "We study the class of $\\text{AdS}_3\\times \\mathbb{CP}^3$ solutions to massive\nType IIA supergravity with $\\mathfrak{osp}(6|2)$ superconformal algebra\nrecently constructed in arXiv:2304.12207 [hep-th]. These solutions are\nfoliations over an interval preserving $\\mathcal{N}=(0,6)$ supersymmetry in two\ndimensions, that in the massless limit can be mapped to the $\\text{AdS}_4\\times\n\\mathbb{CP}^3$ solution of ABJM/ABJ. We show that in the massive case extra\nNS5-D8 branes, that we interpret as $\\frac{1}{2}$-BPS surface defect branes\nwithin the ABJ theory, backreact in the geometry and turn one of the 3d field\ntheory directions onto an energy scale, generating a flow towards a 2d CFT. We\nconstruct explicit quiver field theories that we propose flow in the IR to the\n$(0,6)$ SCFTs dual to the solutions. Finally, we show that the $\\text{AdS}_3$\nsolutions realise geometrically, in terms of large gauge transformations, an\nextension to the massive case of Seiberg duality in ABJ theories proposed in\nthe literature.",
+          "arxiv_id": "2404.17469v2"
+        },
+        {
+          "title": "Generalised U-dual solutions in supergravity",
+          "year": "2022-03",
+          "abstract": "We discuss the notion of generalised U-duality as a solution generating\ntechnique in supergravity. We demonstrate a method to take solutions of type\nIIA supergravity on a 3-sphere, with NSNS flux, to new solutions of\n11-dimensional supergravity, using exceptional geometry techniques. These new\nsolutions are characterised by an underlying 3-algebra structure, and\ngeneralise features of solutions obtained by non-abelian T-duality, which\ninvolve an underlying ordinary Lie algebra. We focus on an example where we\nstart with the pp-F1-NS5 solution in type IIA supergravity. We discuss the\nproperties of our resulting new solution, including the possibility of viewing\nit globally as a U-fold, and its M2 and M5 brane charges. In the extremal case,\nthe new solution admits an AdS${}_3$ limit, which falls into a recently\nconstructed class of M-theory AdS$_{3}$ backgrounds -- this provides a global\ncompletion of our solution with a well-defined holographic dual, similar to the\nglobal completions of non-abelian T-dual solutions. Our full solution is a\n6-vector deformation of this AdS${}_3$ limit. We also explicitly solve the\nKilling spinor equation in the AdS${}_3$ limit, finding a $\\frac{1}{2}$-BPS\nsolution.",
+          "arxiv_id": "2203.01838v2"
+        },
+        {
+          "title": "3d $N=2$ theories from M-theory on CY4 and IIB brane box",
+          "year": "2023-12",
+          "abstract": "We study 3D $N=2$ supersymmetric field theories geometrically engineered from\nM-theory on non-compact Calabi-Yau fourfolds (CY4). We establish a detailed\ndictionary between the geometry and topology of non-compact CY4 and the physics\nof 3D $N=2$ theories in three different regimes. The first one is the Coulomb\nbranch description when the CY4 is smooth. The second one is non-abelian gauge\ntheory when the CY4 has a degenerate $\\mathbb{P}^1$-fibration structure. The\nthird one is the strongly coupled SCFT from a CY4 singularity. We find\ninteresting flavor symmetry enhancements in the singular limit of CY4, as well\nas an interesting and previously unexplored phenomenon in 3D, termed ``flavor\nsymmetry duality''. Many examples are analyzed with an emphasis on toric CY4s\nand $\\mathbb{C}^4$ orbifolds with crepant resolutions. We develop a new brane\nbox method to study the physics of Coulomb branch of 3D $N=2$ theory that\nadmits a toric construction. Via IIB/M-theory duality we find that the brane\nbox diagram living in $\\mathbb{R}^3$ can be physically realized as a\nconfiguration of intersecting 4-branes which are extended objects in 8D maximal\nsupersymmetric theory, which is shown to be consistent via various chains of\ndualities. The rank, effective gauge coupling and certain hints to flavor\nsymmetry enhancement of the 3D $N=2$ theory are read off from the brane box and\ncross-checked against the results obtained from geometric engineering. The\nexotic branes in 8D maximal supersymmetric theory and the 4-string junctions\nthereof are shown to play a crucial role in the construction of the brane box.",
+          "arxiv_id": "2312.17082v3"
+        }
+      ],
+      "1": [
+        {
+          "title": "Spontaneously vectorized Einstein-Gauss-Bonnet black holes",
+          "year": "2021-03",
+          "abstract": "We construct spontaneously vectorized black holes where a real vector field\nis coupled to the Gauss-Bonnet invariant. We employ three coupling functions\nfor the vector field, and determine the respective domains of existence of the\nvectorized black holes. These domains of existence are bounded by the\nmarginally stable Schwarzschild black holes and the critical vectorized black\nholes. We also address the effects of a mass term. For a given black hole mass\nthe horizon radius is smaller for the vectorized black holes than for the\nSchwarzschild black holes. Since the vector field vanishes at the horizon,\nthere is no contribution from the Gauss-Bonnet term to the entropy of the\nvectorized black holes.",
+          "arxiv_id": "2103.01651v1"
+        },
+        {
+          "title": "Area spectrum and black hole thermodynamics",
+          "year": "2025-04",
+          "abstract": "The role of horizon area quantization on black hole thermodynamics is\ninvestigated in this article. The coefficient appearing in the quantization of\narea is fixed by an appeal to the saturated form of the Landauer's principle.\nThen by considering transition between discrete states of the event horizon\narea which in turn is equivalent to transitions between discrete mass states of\nthe black hole, the change in the mass can be obtained. The change in mass is\nthen equated to the product of the Hawking temperature and change in entropy of\nthe black hole between two consecutive discrete states applying the first law\nof black hole thermodynamics. This gives the corrected Hawking temperature. In\nparticular, we apply this technique to the Schwarzschild black hole, the\nquantum corrected Schwarzschild black hole, the Reissner-Nordstr\\\"{o}m black\nhole which is a charged black hole, and the rotating Kerr black hole geometry,\nand obtain the corrected Hawking temperature in each of these cases. We then\ntake a step forward by inserting this corrected Hawking temperature in the\nfirst law of black hole thermodynamics once again to calculate the entropy of\nthe black hole in terms of the horizon area of the black hole. This leads to\nlogarithmic and inverse corrections to the entropy of the black hole.",
+          "arxiv_id": "2504.12014v2"
+        },
+        {
+          "title": "Hawking-Rényi black hole thermodynamics, Kiselev solution, and cosmic censorship",
+          "year": "2025-04",
+          "abstract": "Explicit example, where the Hawking temperature of a black hole horizon is\ncompatible with the black hole's R\\'enyi entropy thermodynamic description, is\nconstructed. It is shown that for every static, spherically symmetric, vacuum\nblack hole space-time, a corresponding black hole solution can be derived,\nwhere the Hawking temperature is identical with the R\\'enyi temperature, i.e.\nthe one obtained from the R\\'enyi entropy of the black hole via the 1st law of\nthermodynamics. In order to have this Hawking-R\\'enyi type thermodynamic\nproperty, the black holes must be surrounded by an anisotropic fluid in the\nform of a Kiselev metric, where the properties of the fluid are uniquely\ndetermined by the mass of the black hole, $M$, and the R\\'enyi parameter,\n{\\lambda}. In the simplest Schwarzschild scenario, the system is found to be\nthermodynamically unstable, and the 3rd law of thermodynamics seems to play the\nrole of a cosmic censor via placing an upper bound on the black hole's mass, by\nwhich preventing the black hole from loosing its horizon(s).",
+          "arxiv_id": "2504.16705v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Low-scale Mirror Standard Model Dark Matter and its Detection via Gravitational Waves and the Guitar Nebula",
+          "year": "2024-09",
+          "abstract": "What if the dark matter Sector is truly dark, self-interacting and\nunreachable by terrestrial experiments? How could we find hints of such dark\nsector if it is experimentally unreachable by any terrestrial experiment? We\nstudy a low-scale mirror Standard Model which can act as a model for dark\nmatter, which interacts only gravitationally with the Standard Model particles.\nThe mirror Standard Model sector particles are stable particles can comprise a\nmeasurable part of the dark matter of the Universe. These mirror Standard Model\nparticles acquire mass through a low-temperature dark first order phase\ntransition. We examine in detail this dark phase transition and we indicate how\nstochastic gravitational waves can be generated through this transition. For\nthe model we use, the produced energy spectrum of the gravitational waves can\nbe detected by the Square Kilometer Array. Moreover, we propose a possible way\nto detect effects of the particle nature of dark matter, using observational\ndata coming from the guitar nebula, which can work if dark matter is\ncollisional, so interacting dark matter. Without specifying a model for\ninteracting dark matter, thus choosing an agnostic approach for interacting\ndark matter, we assume that the guitar nebula bow shock is generated by the\ninteraction of the high speed neutron star that passes through the interstellar\nmedium, which is assumed to be comprised by interacting dark matter and\nhydrogen. Our main proposal is that the opening angle of the bow shock can be\ndirectly related to the speed of sound of the dark matter particles, and a\nlarge angle of the bow shock could be a strong indicator that the interstellar\nmedium is comprised by collisional dark matter and hydrogen gas. This is\nmotivated by the Bosma effect.",
+          "arxiv_id": "2409.16095v2"
+        },
+        {
+          "title": "Improved model of primordial black hole formation after Starobinsky inflation",
+          "year": "2023-06",
+          "abstract": "A new (improved) model of inflation and primordial black hole (PBH) formation\nis proposed by combining Starobinsky model of inflation,\nAppleby-Battye-Starobinsky (ABS) model of dark energy and a quantum correction\nin the modified $F(R)$ gravity. The energy scale parameter in the ABS model is\ntaken to be close to the inflationary scale, in order to describe double\ninflation instead of dark energy. The quantum correction is given by the term\nquartic in the spacetime scalar curvature $R$ with a negative coefficient\n$(-\\delta)$ in the $F(R)$ function. It is demonstrated that very good agreement\n(within $1\\sigma$) with current measurements of the cosmic microwave background\n(CMB) radiation can be achieved by choosing the proper value of $\\delta$, thus\nsolving the problem of low values of the tilt of CMB scalar perturbations in\nthe earlier proposed model in arXiv:2205.00603. A large (by the factor of\n$10^7$ against CMB) enhancement in the power spectrum of scalar perturbations\nis achieved by fine-tuning the parameters of the model. It is found by\nnumerical analysis that it can lead to formation of asteroid-size PBH with the\nmasses up to $10^{20}$ g, which may form dark matter in the current universe.",
+          "arxiv_id": "2306.06597v2"
+        },
+        {
+          "title": "Primordial Black Holes and Scalar-induced Gravitational Waves in Radiative Hybrid Inflation",
+          "year": "2024-02",
+          "abstract": "We study the possibility that primordial black holes (PBHs) can be formed\nfrom large curvature perturbations generated during the waterfall phase\ntransition due to the effects of one-loop radiative corrections of Yukawa\ncouplings between the inflaton and a dark fermion in a non-supersymmetric\nhybrid inflationary model. We obtain a spectral index $n_s$, and a\ntensor-to-scalar ratio $r$, consistent with the current Planck data. We\nidentify parameter space where PBHs can be the entire dark matter (DM)\ncandidate of the universe or a fraction of it. Our predictions are consistent\nwith any existing constraints of PBH from microlensing, BBN, CMB, etc.\nMoreover, the scenario is also testable via induced gravitational waves (GWs)\nfrom first-order scalar perturbations detectable in future observatories such\nas LISA and ET. For instance, with inflaton mass $m \\sim 2\\times 10^{12}$ GeV,\n$m_N \\sim 5.4\\times 10^{15}$ GeV, we obtain PBHs of around $10^{-13}\\, M_\\odot$\nmass that can explain the entire abundance of DM and predict GWs with amplitude\n$\\Omega_{\\rm GW}h^2$ $\\sim 10^{-9}$ with peak frequency $f$ $\\sim$ $0.1$ Hz in\nLISA. By explicitly estimating fine-tuning we show that the model has very mild\ntuning. We discuss successful reheating at the end of the inflationary phase\nvia the conversion of the waterfall field into standard model (SM) particles.\nWe also briefly speculate a scenario where the dark fermion can be a possible\nheavy right-handed neutrino (RHN) which is responsible for generating the SM\nneutrino masses via the seesaw mechanism. The RHN can be produced due to\nwaterfall field decay and its subsequent decay may also explain the observed\nbaryon asymmetry in the universe via leptogenesis. We find the reheat\ntemperature $T_R\\lesssim5\\times10^9$~GeV that explains the matter-anti-matter\nasymmetry of the universe.",
+          "arxiv_id": "2402.06613v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "Entanglement dynamics in 2d HCFTs on the curved background: the case of q-Möbius Hamiltonian",
+          "year": "2024-08",
+          "abstract": "We will explore the dynamical property of non-equilibrium phenomena induced\nby two-dimensional holographic conformal field theory (2d holographic CFT)\nHamiltonian on the curved spacetime by studying the time dependence of the\nentanglement entropy and mutual information. Here, holographic CFT is the CFT\nhaving the gravity dual. We will start from the boundary and thermofield double\nstates, evolve the systems in Euclidean time with the Hamiltonian on the curved\nbackground, and then evolve them in real-time with the same Hamiltonian. We\nfound that the early- and late-time entanglement structure depends on the\ncurved background, while the entanglement growth does not, and is linear.\nFurthermore, in the gravity dual for the thermofield double state, this\nentanglement growth is due to the linear growth of the wormhole, while in the\none for the boundary state, it is due to the in-falling of the end of the world\nbrane to the black hole. We discussed the low temperature system can be\nregarded as the dynamical system induced by the multi-joining quenches. We also\ndiscussed the effective description of the high temperature system, called line\ntension picture.",
+          "arxiv_id": "2408.06594v2"
+        },
+        {
+          "title": "Holography of Linear Dilaton Spacetimes from the Bottom Up",
+          "year": "2023-09",
+          "abstract": "The linear dilaton background is the keystone of a string-derived holographic\ncorrespondence beyond AdS$_{d+1}$/CFT$_d$. This motivates an exploration of the\n$(d+1)$-dimensional linear dilaton spacetime (LD$_{d+1}$) and its holographic\nproperties from the low-energy viewpoint. We first notice that the LD$_{d+1}$\nspace has simple conformal symmetries, that we use to shape an effective field\ntheory (EFT) on the LD background. We then place a brane in the background to\nstudy holography at the level of quantum fields and gravity. We find that the\nholographic correlators from the EFT feature a pattern of singularities at\ncertain kinematic thresholds. We argue that such singularities can be used to\nbootstrap the putative $d$-dimensional dual theory using techniques analogous\nto those of the Cosmological Bootstrap program. Turning on finite temperature,\nwe study the holographic fluid emerging on the brane in the presence of a bulk\nblack hole. We find that the holographic fluid is pressureless for any $d$ due\nto a cancellation between Weyl curvature and dilaton stress tensor, and verify\nconsistency with the time evolution of the theory. From the fluid\nthermodynamics, we find a universal temperature and Hagedorn behavior for any\n$d$. This matches the properties of a CFT$_2$ with large $T\\overline T$\ndeformation, and of little string theory for $d=6$. Both the fluid equation of\nstate and the spectrum of quantum fluctuations suggest that the $d$-dimensional\ndual theory arising from LD$_{d+1}$ is generically gapped.",
+          "arxiv_id": "2309.02489v2"
+        },
+        {
+          "title": "Entanglement Islands from Holographic Thermalization of Rotating Charged Black Hole",
+          "year": "2021-08",
+          "abstract": "We study the time evolution of the entanglement entropy of Hawking radiation\nin the $(n+1)-$dimensional Kerr-Newman black hole evaporation by the\nholographic approach that considering the $(n+1)-$dimensional AdS eternal black\nbrane coupled to the auxiliary CFT reservoir is in the Hartle-Hawking state.\nThe CFT reservoir itself has a holographic dual, the $(n+2)-$dimensional bulk\ngeometry, and the original $(n+1)-$dimensional AdS-black brane is embedded into\nsuch bulk manifold, which is precisely Randall-Sundrum model.\n  According to the island rule [1], the entanglement entropy in semi-classical\ngravity can be divided into two parts, one is due to the quantum effects, which\ncan be obtained by Ryu-Takayanagi conjecture. Another is the gravitational\npart, which is equal to the area of the quantum extremal surface divided by\nfour times the Newton's constant. We show that the entanglement growth in our\nholographic system is linear in late times. After Page time, the system reaches\nsaturation since the entanglement islands appear. In this paper, we will\nemphasize how black hole rotation affects entanglement entropy in general\ndimensional spacetime.",
+          "arxiv_id": "2108.12557v3"
+        }
+      ],
+      "4": [
+        {
+          "title": "From Operator Product Expansion to Anomalous Dimensions",
+          "year": "2024-10",
+          "abstract": "We propose a new method for computing the renormalization functions, which is\nbased on the ideas of operator product expansion and large momentum expansion.\nIn this method, the renormalization $Z$-factors are determined by the\nultraviolet finiteness of Wilson coefficients in the dimensional regularization\nscheme. The ultraviolet divergence is extracted solely from two-point integrals\nat the large momentum limit. We develop this method in scalar field theories\nand establish a general framework for computing anomalous dimensions of fields,\nmass, couplings and composite operators. In particular, it is applied to the\n6-dimensional cubic scalar theory and the 4-dimensional quartic scalar theory.\nWe demonstrate this method by computing the anomalous dimension of the $\\phi^Q$\noperator in cubic theory up to four loops for arbitrary $Q$, which is in\nagreement with the known result in the large $N$ limit. The idea of computing\nanomalous dimensions from the operator production expansion is general and can\nbe extended beyond scalar theories. This is demonstrated through examples of\nthe Gross-Neveu-Yukawa model with generic operators.",
+          "arxiv_id": "2410.03283v5"
+        },
+        {
+          "title": "Basis transformation properties of anomalous dimensions for hard exclusive processes",
+          "year": "2023-09",
+          "abstract": "When considering the renormalization of composite operators for the\ndescription of hard exclusive scattering processes, two types of operator basis\ncalled the derivative basis and the Gegenbauer basis are often used in the\nliterature. In this work we set up the explicit similarity transformations\nbetween these two bases, both for quark and gluon operators. This way, one can\nuse the properties of both bases to their advantage in the computation of the\noperator anomalous dimensions, which describe the scale dependence of\nnon-perturbative non-forward parton distributions. We provide several\napplications of our framework. As an application of the gluon transformation\nformula, we compute the one-loop non-forward purely gluonic anomalous dimension\nmatrix. For the rest of the applications we focus on the transformation formula\nof the quark operator. We derive the Gegenbauer anomalous dimensions, in the\nlimit of a large number of quark flavors $n_f$, to all orders in the strong\ncoupling $\\alpha_s$, extending the computation previously performed in the\nderivative basis. Next a numeric calculation of the two-loop anomalous\ndimensions in the derivative basis beyond the leading-color limit is presented.\nFinally, we discuss a novel way of validating existing computations of the\nconformal anomaly based on the leading-color anomalous dimensions in the\nderivative basis.",
+          "arxiv_id": "2309.16236v3"
+        },
+        {
+          "title": "Two-Loop Corrections to the Large-Order Behavior of Correlation Functions in the One-Dimensional N-Vector Model",
+          "year": "2020-04",
+          "abstract": "For a long time, the predictive limits of perturbative quantum field theory\nhave been limited by our inability to carry out loop calculations to\narbitrarily high order, which become increasingly complex as the order of\nperturbation theory is increased. This problem is exacerbated by the fact that\nperturbation series derived from loop diagram (Feynman diagram) calculations\nrepresent asymptotic (divergent) series which limits the predictive power of\nperturbative quantum field theory. Here, we discuss an ansatz which could\novercome these limits, based on the observations that (i) for many\nphenomenologically relevant field theories, one can derive dispersion relations\nwhich relate the large-order growth (the asymptotic limit of \"infinite loop\norder\") with the imaginary part of arbitrary correlation functions, for\nnegative coupling (\"unstable vacuum\"), and (ii) one can analyze the imaginary\npart for negative coupling in terms of classical field configurations\n(instantons). Unfortunately, the perturbation theory around instantons, which\ncould lead to much more accurate predictions for the large-order behavior of\nFeynman diagrams, poses a number of technical as well as computational\ndifficulties. Here, we study, to further the above mentioned ansatz,\ncorrelation functions in a one-dimensional (1D) field theory with a quartic\nself-interaction and an O(N) internal symmetry group, otherwise known as the 1D\nN-vector model. Our focus is on corrections to the large-order growth of\nperturbative coefficients, i.e., the limit of a large number of loops in the\nFeynman diagram expansion. We evaluate, in momentum space, the two-loop\ncorrections for the two-point correlation function, and its derivative with\nrespect to the momentum, as well as the two-point correlation function with a\nwigglet insertion. Also, we study the four-point function.",
+          "arxiv_id": "2005.01485v2"
+        }
+      ],
+      "5": [
+        {
+          "title": "Characterization and Classification of Fermionic Symmetry Enriched Topological Phases",
+          "year": "2021-09",
+          "abstract": "We examine the interplay of symmetry and topological order in $2+1$\ndimensional fermionic topological phases of matter. We define fermionic\ntopological symmetries acting on the emergent topological effective theory\ndescribed using braided tensor category theory. Connecting this to the ${\\cal\nG}^{\\rm f}$ fermionic symmetry of the microscopic physical system, we\ncharacterize and classify symmetry fractionalization in fermionic topological\nphases. We find that the physical fermion provides constraints that result in a\ntiered structure of obstructions and classification of fractionalization with\nrespect to the physical fermions, the quasiparticles, and the vortices. The\nfractionalization of the (bosonic) symmetry $G= {\\cal G}^{\\rm\nf}/\\mathbb{Z}_2^{\\rm f}$ on the physical fermions is essentially the central\nextension of $G$ by the $\\mathbb{Z}_2^{\\rm f}$ fermion parity conservation that\nyields the fermionic symmetry ${\\cal G}^{\\rm f}$. We develop an algebraic\ntheory of ${\\cal G}^{\\rm f}$ symmetry defects for fermionic topological phases\nusing $G$-crossed braided tensor category theory. This formalism allows us to\nfully characterize and classify $2+1$ dimensional fermionic symmetry enriched\ntopological phases with on-site unitary fermionic symmetry group ${\\cal G}^{\\rm\nf}$. We first apply this formalism to extract the minimal data specifying a\ngeneral fermionic symmetry protected topological phase, and demonstrate that\nsuch phases with fixed ${\\cal G}^{\\rm f}$ form a group under fermionic\nstacking. Then we analyze general fermionic symmetry enriched topological\nphases and find their classification is given torsorially by the classification\nof the symmetry fractionalization of quasiparticles combined with the\nclassification of fermionic symmetry protected topological phases. We\nillustrate our results by detailing a number of examples, including all the\ninvertible fermionic topological phases.",
+          "arxiv_id": "2109.10911v4"
+        },
+        {
+          "title": "Non-invertible and higher-form symmetries in 2+1d lattice gauge theories",
+          "year": "2024-05",
+          "abstract": "We explore exact generalized symmetries in the standard 2+1d lattice\n$\\mathbb{Z}_2$ gauge theory coupled to the Ising model, and compare them with\ntheir continuum field theory counterparts. One model has a (non-anomalous)\nnon-invertible symmetry, and we identify two distinct non-invertible symmetry\nprotected topological phases. The non-invertible algebra involves a lattice\ncondensation operator, which creates a toric code ground state from a product\nstate. Another model has a mixed anomaly between a 1-form symmetry and an\nordinary symmetry. This anomaly enforces a nontrivial transition in the phase\ndiagram, consistent with the \"Higgs=SPT\" proposal. Finally, we discuss how the\nsymmetries and anomalies in these two models are related by gauging, which is a\n2+1d version of the Kennedy-Tasaki transformation.",
+          "arxiv_id": "2405.13105v1"
+        },
+        {
+          "title": "Fermionic quantum criticality through the lens of topological holography",
+          "year": "2024-05",
+          "abstract": "We utilize the topological holographic framework to characterize and gain\ninsights into the nature of quantum critical points and gapless phases in\nfermionic quantum systems. Topological holography is a general framework that\ndescribes the generalized global symmetry and the symmetry charges of a local\nquantum system in terms of a slab of a topological order, termed as the\nsymmetry topological field theory (SymTFT), in one higher dimension. In this\nwork, we consider a generalization of the topological holographic picture for\n$(1+1)d$ fermionic quantum phases of matter. We discuss how spin structures are\nencoded in the SymTFT and establish the connection between the formal\nfermionization formula in quantum field theory and the choice of fermionic\ngapped boundary conditions of the SymTFT. We demonstrate the identification and\nthe characterization of the fermionic gapped phases and phase transitions\nthrough detailed analysis of various examples, including the fermionic systems\nwith $\\mathbb{Z}_{2}^{F}$, $\\mathbb{Z}_{2} \\times \\mathbb{Z}_{2}^{F}$,\n$\\mathbb{Z}_{4}^{F}$, and the fermionic version of the non-invertible\n$\\text{Rep}(S_{3})$ symmetry. Our work uncovers many exotic fermionic quantum\ncritical points and gapless phases, including two kinds of fermionic symmetry\nenriched quantum critical points, a fermionic gapless symmetry protected\ntopological (SPT) phase, and a fermionic gapless spontaneous symmetry breaking\n(SSB) phase that breaks the fermionic non-invertible symmetry.",
+          "arxiv_id": "2405.09611v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "Operator growth in open quantum systems: lessons from the dissipative SYK",
+          "year": "2022-12",
+          "abstract": "We study the operator growth in open quantum systems with dephasing\ndissipation terms, extending the Krylov complexity formalism of Phys. Rev. X 9,\n041017. Our results are based on the study of the dissipative $q$-body\nSachdev-Ye-Kitaev (SYK$_q$) model, governed by the Markovian dynamics. We\nintroduce a notion of ''operator size concentration'' which allows a\ndiagrammatic and combinatorial proof of the asymptotic linear behavior of the\ntwo sets of Lanczos coefficients ($a_n$ and $b_n$) in the large $q$ limit. Our\nresults corroborate with the semi-analytics in finite $q$ in the large $N$\nlimit, and the numerical Arnoldi iteration in finite $q$ and finite $N$ limit.\nAs a result, Krylov complexity exhibits exponential growth following a\nsaturation at a time that grows logarithmically with the inverse dissipation\nstrength. The growth of complexity is suppressed compared to the closed system\nresults, yet it upper bounds the growth of the normalized out-of-time-ordered\ncorrelator (OTOC). We provide a plausible explanation of the results from the\ndual gravitational side.",
+          "arxiv_id": "2212.06180v3"
+        },
+        {
+          "title": "Universality and its limits in non-Hermitian many-body quantum chaos using the Sachdev-Ye-Kitaev model",
+          "year": "2022-11",
+          "abstract": "Spectral rigidity in Hermitian quantum chaotic systems signals the presence\nof dynamical universal features at timescales that can be much shorter than the\nHeisenberg time. We study the analog of this timescale in many-body\nnon-Hermitian quantum chaos by a detailed analysis of long-range spectral\ncorrelators. For that purpose, we investigate the number variance and the\nspectral form factor of a non-Hermitian $q$-body Sachdev-Ye-Kitaev (nHSYK)\nmodel, which describes $N$ fermions in zero spatial dimensions. After an\nanalytical and numerical analysis of these spectral observables for\nnon-Hermitian random matrices, and a careful unfolding, we find good agreement\nwith the nHSYK model for $q > 2$ starting at a timescale that decreases sharply\nwith $q$. The source of deviation from universality, identified analytically,\nis ensemble fluctuations not related to the quantum dynamics. For fixed $q$ and\nlarge enough $N$, these fluctuations become dominant up until after the\nHeisenberg time, so that the spectral form factor is no longer useful for the\nstudy of quantum chaos. In all cases, our results point to a weakened or\nvanishing spectral rigidity that effectively delays the observation of full\nquantum ergodicity. We also show that the number variance displays\nnonstationary spectral correlations for both the nHSYK model and random\nmatrices. This nonstationarity, also not related to the quantum dynamics,\npoints to intrinsic limitations of these observables to describe the quantum\nchaotic motion. On the other hand, we introduce the local spectral form factor,\nwhich is shown to be stationary and not affected by collective fluctuations,\nand propose it as an effective diagnostic of non-Hermitian quantum chaos. For\n$q = 2$, we find saturation to Poisson statistics at a timescale of $\\log D$,\ncompared to a scale of $\\sqrt D$ for $ q>2$, with $D $ the total number of\nstates.",
+          "arxiv_id": "2211.01650v2"
+        },
+        {
+          "title": "Krylov complexity as an order parameter for quantum chaotic-integrable transitions",
+          "year": "2024-07",
+          "abstract": "Krylov complexity has recently emerged as a new paradigm to characterize\nquantum chaos in many-body systems. However, which features of Krylov\ncomplexity are prerogative of quantum chaotic systems and how they relate to\nmore standard probes, such as spectral statistics or out-of-time-order\ncorrelators (OTOCs), remain open questions. Recent insights have revealed that\nin quantum chaotic systems Krylov state complexity exhibits a distinct peak\nduring time evolution before settling into a well-understood late-time plateau.\nIn this work, we propose that this Krylov complexity peak (KCP) is a hallmark\nof quantum chaotic systems and suggest that its height could serve as an `order\nparameter' for quantum chaos. We demonstrate that the KCP effectively\nidentifies chaotic-integrable transitions in two representative quantum\nmechanical models at both infinite and finite temperature: the mass-deformed\nSachdev-Ye-Kitaev model and the sparse Sachdev-Ye-Kitaev model. Our findings\nalign with established results from spectral statistics and OTOCs, while\nintroducing an operator-independent diagnostic for quantum chaos, offering more\n`universal' insights and a deeper understanding of the general properties of\nquantum chaotic systems.",
+          "arxiv_id": "2407.17054v4"
+        }
+      ],
+      "7": [
+        {
+          "title": "Charmed Meson Structure across Crossover from SU(4) Polyakov Quark Meson Model with Isospin Asymmetry",
+          "year": "2025-05",
+          "abstract": "The Polyakov Quark Meson (PQM) model is extended to SU(4) flavor symmetry by\nincorporating the charm quark and introducing a finite isospin asymmetry. This\nmodel incorporates the light, strange, and charm chiral condensates, along with\nthe Polyakov-loop variables, to describe the confinement--deconfinement phase\ntransition in a thermal and dense QCD medium. The inclusion of the charm quark\ncondensate enhances the capability of the SU(4) PQM model to explore the\nspatial and thermal resolution of the chiral phase structure, particularly in\nthe crossover and high-temperature regimes. We construct the QCD phase diagram\n($T/T_\\chi-\\mu_I/m_\\pi$) plane, indicating a decrease in the pseudo-critical\ntemperature as the isospin chemical potential increases and explore\nthermodynamic quantities related to the QCD equation of state at very high\ntemperatures. Fluctuations of quark flavors, conserved charges and baryon-charm\ncorrelations are studied across a wide temperature range. The SU(4) PQM model\nexhibits good qualitative agreement with lattice QCD calculations.\nAdditionally, we calculate the meson mass spectrum at zero and finite\ntemperature, showing that the charm sector remains thermally stable over a wide\ntemperature range. Overall, this study highlights the capability of the SU(4)\nPQM model to describe key features of QCD matter at high temperatures and its\nrelevance to heavy-ion collisions and astrophysical studies.",
+          "arxiv_id": "2505.09086v2"
+        },
+        {
+          "title": "Second order relativistic viscous hydrodynamics within an effective description of hot QCD medium",
+          "year": "2020-10",
+          "abstract": "The second-order hydrodynamic equations for evolution of shear and bulk\nviscous pressure have been derived within the framework of covariant kinetic\ntheory based on the effective fugacity quasiparticle model. The\ntemperature-dependent fugacity parameter in the equilibrium distribution\nfunction leads to a mean field term in the Boltzmann equation which affects the\ninteractions in the hot QCD matter. The viscous corrections to distribution\nfunction, up to second-order in gradient expansion, have been obtained by\nemploying a Chapman-Enskog like iterative solution of the effective Boltzmann\nequation within the relaxation time approximation. The effect of mean field\ncontributions to transport coefficients as well as entropy current has been\nstudied up to second-order in gradients. In contrast to the previous\ncalculations, we find non-vanishing entropy flux at second order. The effective\ndescription of relativistic second-order viscous hydrodynamics, for a system of\ninteracting quarks and gluons, has been quantitatively analyzed in the case of\nthe $1+1-$dimensional boost invariant longitudinal expansion. We study the\nproper time evolution of temperature, pressure anisotropy, and viscous\ncorrections to entropy density for this simplified expansion. The second order\nevolution of quark-gluon plasma is seen to be affected significantly with the\ninclusion of mean field contributions and the realistic equation of state.",
+          "arxiv_id": "2010.01537v1"
+        },
+        {
+          "title": "Nonequilibrium Dynamics of the Chiral Quark Condensate under a Strong Magnetic Field",
+          "year": "2021-03",
+          "abstract": "Strong magnetic fields impact quantum-chromodynamics (QCD) properties in\nseveral situations; examples include the early universe, magnetars, and\nheavy-ion collisions. These examples share a common trait: time evolution. A\nprominent QCD property impacted by a strong magnetic field is the quark\ncondensate, an approximate order parameter of the QCD transition between a\nhigh-temperature quark-gluon phase and a low-temperature hadronic phase. We use\nthe linear sigma model with quarks to address the quark condensate time\nevolution under a strong magnetic field. We use the closed time path formalism\nof nonequilibrium quantum field theory to integrate out the quarks and obtain a\nmean-field Langevin equation for the condensate. The Langevin equation features\ndissipation and noise kernels controlled by a damping coefficient. We compute\nthe damping coefficient for magnetic field and temperature values achieved in\nperipheral relativistic heavy-ion collisions and solve the Langevin equation\nfor a temperature quench scenario. The magnetic field changes the dissipation\nand noise pattern by increasing the damping coefficient compared to the\nzero-field case. An increased damping coefficient increases fluctuations and\ntime scales controlling condensate's short-time evolution, a feature that can\nimpact hadron formation at the QCD transition. The formalism developed here can\nbe extended to include other order parameters, hydrodynamic modes, and system's\nexpansion to address magnetic field effects in complex settings as heavy-ion\ncollisions, the early universe, and magnetars.",
+          "arxiv_id": "2103.15665v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "Scattering of kinks in scalar-field models with higher-order self-interactions",
+          "year": "2024-02",
+          "abstract": "Higher-order scalar field models in two dimensions, including the $\\phi^8$\nmodel, have been researched. It has been shown that for some special cases of\nthe minima positions of the potential, the explicit kink solutions can be\nfound. However, in physical applications, it is very important to know all the\nexplicit solutions of a model for any minima position. In the present study,\nwith the help of some deformation functions, we have shown that higher-order\nscalar field theories can be obtained with explicit kinks. In particular, we\nintroduced two deformation functions that, when applied to the well known\n$\\phi^4$ and $\\phi^6$ models, produce modified $\\phi^8$ and $\\phi^{10}$ models,\nrespectively, with all their explicit kink-like solutions which depend on a\nsingle parameter. Since this parameter controls the position of the minima of\nthe potential, we have found interesting new solutions in many distinct cases.\nWe have also studied the kink mass, the behavior of the excitation spectra and\nseveral kink-antikink collisions for these two new modified models. The\ncollision outcome is determined by the initial configuration, specifically the\nsequence in which the kink-antikink and antikink-kink pairings emerge. Another\ninteresting finding is the suppression of resonance windows, which may be\nexplained by the presence of a set of internal modes in the model.",
+          "arxiv_id": "2402.00270v2"
+        },
+        {
+          "title": "Interactions between topological defects in (1+1) dimensions",
+          "year": "2022-04",
+          "abstract": "In this thesis, we study interactions between topological defects in\ntwo-dimensional spacetimes. These defects are called kinks. They are solutions\nof scalar field theories with localized energy which propagate without losing\nits shape. In order to understand the resonance phenomenon exhibited by those\nmodels, we built a toy model where the kink's vibrational mode turns into a\nquasinormal mode. This causes the suppression of resonance windows and,\nconsequently, its fractal structure is lost. Considering a higher order\npolynomial as the scalar field potential, we find kinks with long-range tails,\nwhich decay as a power law. We developed a numerical method to correctly\ninitialize this systems and applied it to a scalar field model containing kinks\nwith long-range tails in both sides. After the collision, the kink-antikink\npair is annihilated for velocities below an ultra-relativistic critical\nvelocity without bion formation. We also investigated a collision between\nwobbling kinks of the double sine-Gordon model. When the kinks are already\nwobbling before colliding, there appears resonance windows with separation\nafter a single bounce. On the second half of the thesis, we focused on\nfermion-kink interactions. We studied what happens when a fermion binds to a\nwobbling kink. The result is that the fermion escapes from the kink as\nradiation and at a constant rate. This occurs if the energy gap between the\ninitial state and the continuum threshold is not too large. Lastly, we\ninvestigated the interaction of a fermion with a background scalar field with\nan impurity that preserves half of the Bogomol'nyi-Prasad-Sommerfield (BPS)\nproperty. We found an adiabatic evolution near the BPS regime, which means that\nthe system is at a static BPS solution at every moment.",
+          "arxiv_id": "2204.05834v1"
+        },
+        {
+          "title": "Kink dynamics in a high-order field model",
+          "year": "2023-10",
+          "abstract": "We study various properties of topological solitons (kinks) of a\nfield-theoretic model with a polynomial potential of the twelfth degree. This\nmodel is remarkable in that it has several topological sectors, in which kinks\nhave different masses. We obtain asymptotic estimates for the kink-antikink and\nantikink-kink interaction forces. We also study numerically kink-antikink and\nantikink-kink collisions and observe a number of interesting phenomena:\nannihilation of a kink-antikink pair in one topological sector and the\nproduction in its place of a pair in another sector; resonance phenomena --\nescape windows, despite the absence of vibrational modes in the kink excitation\nspectra.",
+          "arxiv_id": "2310.12957v2"
+        }
+      ],
+      "9": [
+        {
+          "title": "Fermionic Casimir Energy in Horava-Lifshitz Scenario",
+          "year": "2024-07",
+          "abstract": "In this work, we investigate the violation of Lorentz symmetry through the\nCasimir effect. The Casimir effect is one of the most intriguing aspects of\nmodern physics, representing a macroscopic quantum-origin force between two\nneutral conducting surfaces, and it stands as a triumph of Quantum Field\nTheory. Here, we examine the Casimir effects associated with a massive\nfermionic quantum field confined in the region between two large and parallel\nplates within the Horava-Lifshitz framework of Lorentz symmetry violation. To\ncalculate the Casimir energy and consequently the Casimir pressure, we impose a\nMIT bag boundary condition on two plates, compatible with the higher-order\nderivative term in the modified Dirac equation. Our results indicate a strong\ninfluence of Lorentz violation on the Casimir effect. We observe that the\nCasimir energy is affected, both in intensity and sign, potentially exhibiting\nrepulsive or attractive force between the plates, depending on the critical\nexponent associated with the Horava-Lifshitz formalism.",
+          "arxiv_id": "2407.11749v2"
+        },
+        {
+          "title": "A short review of the Casimir effect with emphasis on dynamical boundary conditions",
+          "year": "2021-12",
+          "abstract": "We give a short review on the static and dynamical Casimir effects, recalling\ntheir historical prediction, as well as their more recent experimental\nverification. We emphasise on the central role played by so-called {\\it\ndynamical boundary conditions} (for which the boundary condition depends on a\nsecond time derivative of the field) in the experimental verification of the\ndynamical Casimir effect by Wilson et al. We then go on to review our previous\nwork on the static Casimir effect with dynamical boundary conditions, providing\nan overview on how to compute the so-called local Casimir energy, the total\nCasimir energy and the Casimir force. We give as a future perspective the\ndirection in which this work should be generalised to put the theoretical\npredictions of the dynamical Casimir effect experiments on a rigorous footing.",
+          "arxiv_id": "2112.06824v2"
+        },
+        {
+          "title": "Casimir effect of a Lorentz-violating scalar in magnetic field",
+          "year": "2020-05",
+          "abstract": "In this paper I study the Casimir effect caused by a charged and massive\nscalar field that breaks Lorentz invariance in a CPT-even, aether-like manner.\nI investigate the case of a scalar field that satisfies Dirichlet or mixed\n(Dirichlet-Neumann) boundary conditions on a pair of very large plane parallel\nplates. The case of Neumann boundary conditions is straightforward and will not\nbe examined in detail. I use the $\\zeta$-function regularization technique to\nstudy the effect of a constant magnetic field, orthogonal to the plates, on the\nCasimir energy and pressure. I investigate the cases of a timelike Lorentz\nasymmetry, a spacelike Lorentz asymmetry in the direction perpendicular to the\nplates, and a spacelike asymmetry in the plane of the plates and, in all those\ncases, derive simple analytic expressions for the zeta function, Casimir energy\nand pressure in the limits of small plate distance, strong magnetic field and\nlarge scalar field mass. I discover that the Casimir energy and pressure, and\ntheir magnetic corrections, all strongly depend on the direction of the unit\nvector that implements the breaking of the Lorentz symmetry.",
+          "arxiv_id": "2005.07830v2"
+        }
+      ],
+      "10": [
+        {
+          "title": "General features of the thermalization of particle detectors and the Unruh effect",
+          "year": "2021-06",
+          "abstract": "We study the thermalization of smeared particle detectors that couple locally\nto $any$ operator in a quantum field theory in curved spacetimes. We show that\nif the field state satisfies the KMS condition with inverse temperature $\\beta$\nwith respect to the detector's local notion of time evolution, reasonable\nassumptions ensure that the probe thermalizes to the temperature $1/\\beta$ in\nthe limit of long interaction times. Our method also imposes bounds on the size\nof the system with respect to its proper acceleration and spacetime curvature\nin order to accurately probe the KMS temperature of the field. We then apply\nthis formalism to a uniformly accelerated detector probing the Minkowski vacuum\nof any CPT symmetric quantum field theory, and show that the detector\nthermalizes to the Unruh temperature, independently of the operator it couples\nto. This exemplifies yet again the robustness of the Unruh effect, even when\narbitrary smeared detectors are used to probe general operators in a quantum\nfield theory.",
+          "arxiv_id": "2106.14903v2"
+        },
+        {
+          "title": "Entanglement dynamics for Unruh-DeWitt detectors interacting with massive scalar fields: The Unruh and anti-Unruh effects",
+          "year": "2021-05",
+          "abstract": "We study, in the framework of open quantum systems, the entanglement dynamics\nfor a quantum system composed of two uniformly accelerated Unruh-Dewitt\ndetectors interacting with a bath of massive scalar fields in the Minkowski\nvacuum. We find that the entanglement evolution for the quantum system coupled\nwith massive fields is always slower compared with that of the one coupled with\nmassless fields, and this time-delay effect brought by the field being massive\ncan however be counteracted by a large enough acceleration, in contrast to the\ncase of a static quantum system in a thermal bath, where this time delay is not\naffected by the temperature. Remarkably, the maximal concurrence of the quantum\nsystem generated during evolution may increase with acceleration for any\ninter-detector separation while that for static ones in a thermal bath\ndecreases monotonically with temperature, and this can be considered as an\nanti-Unruh effect in terms of the entanglement generated.",
+          "arxiv_id": "2105.14735v2"
+        },
+        {
+          "title": "Time-dependent accelerated Unruh-DeWitt detector without event horizon",
+          "year": "2025-01",
+          "abstract": "We investigate unitarily inequivalent representations of the algebra of\noperators in quantum field theory in the cases where there is a Fock\nrepresentation of the commutation relations. We examine more closely the\noperational definition of a measurement device, discussing the Unruh-DeWitt and\nGlauber models of quantum detectors. The transition probability per unit of\nproper time of both detectors in different non-inertial frames of reference in\nMinkowski spacetime is evaluated. We first study detectors traveling in a\nstationary worldline with a constant proper acceleration, i.e., a hyperbolic\nmotion, interacting with the field prepared in the Poincar\\'e invariant Fock\nvacuum state. Next, we study the Unruh-DeWitt detector at rest in a\nnon-uniformly accelerated frame, with a time dependent acceleration interacting\nwith the field in the Poincar\\'e invariant Fock vacuum state. We evaluate the\npositive frequency Wightman function for the non-uniformly accelerated frame in\na finite time interval and find that it is similar to the two-point correlation\nfunction of a system in equilibrium with a thermal bath. Calculating the\ntransition rate, the non-uniformly accelerated Unruh-DeWitt detector can be\nexcited even if the scalar field is prepared in the vacuum state.",
+          "arxiv_id": "2501.09264v2"
+        }
+      ],
+      "11": [
+        {
+          "title": "Recent progress in intersection theory for Feynman integrals decomposition",
+          "year": "2022-09",
+          "abstract": "High precision calculations in perturbative QFT often require evaluation of\nbig collection of Feynman integrals. Complexity of this task can be greatly\nreduced via the usage of linear identities among Feynman integrals. Based on\nmathematical theory of intersection numbers, recently a new method for\nderivation of such identities and decomposition of Feynman integrals was\nintroduced and applied to many non-trivial examples. In this note we discuss\nthe latest developments in algorithms for the evaluation of intersection\nnumbers, and their application to the reduction of Feynman integrals.",
+          "arxiv_id": "2209.01464v1"
+        },
+        {
+          "title": "Multiple Mellin-Barnes integrals and triangulations of point configurations",
+          "year": "2023-09",
+          "abstract": "We present a novel technique for the analytic evaluation of multifold\nMellin-Barnes (MB) integrals, which commonly appear in physics, as for instance\nin the calculations of multi-loop multi-scale Feynman integrals. Our approach\nis based on triangulating a set of points which can be assigned to a given MB\nintegral, and yields the final analytic results in terms of linear combinations\nof multiple series, each triangulation allowing the derivation of one of these\ncombinations. When this technique is applied to the computation of Feynman\nintegrals, the involved series are of the (multivariable) hypergeometric type.\nWe implement our method in the Mathematica package MBConicHulls.wl, an already\nexisting software dedicated to the analytic evaluation of multiple MB\nintegrals, based on a recently developed computational approach using\nintersections of conic hulls. The triangulation method is remarkably faster\nthan the conic hulls approach and can thus be used for the calculation of\nhigher-fold MB integrals as we show here by computing triangulations for highly\ncomplicated objects such as the off-shell massless scalar one-loop 15-point\nFeynman integral whose MB representation has 104 folds. As other applications\nwe show how this technique can provide new results for the off-shell massless\nconformal hexagon and double box Feynman integrals, as well as for the hard\ndiagram of the two loop hexagon Wilson loop.",
+          "arxiv_id": "2309.00409v1"
+        },
+        {
+          "title": "Evaluating Feynman Integrals Using D-modules and Tropical Geometry",
+          "year": "2023-12",
+          "abstract": "Feynman integrals play a central role in the modern scattering amplitudes\nresearch program. Advancing our methods for evaluating Feynman integrals will,\ntherefore, strengthen our ability to compare theoretical predictions with data\nfrom particle accelerators such as the Large Hadron Collider. Motivated by\nthis, the present manuscript purports to study mathematical concepts related to\nFeynman integrals. In particular, we present both numerical and analytical\nalgorithms for the evaluation of Feynman integrals.\n  The content is divided into three parts. Part I focuses on the method of DEQs\nfor evaluating Feynman integrals. An otherwise daunting integral expression is\nthereby traded for the comparatively simpler task of solving a system of DEQs.\nWe use this technique to evaluate a family of two-loop Feynman integrals of\nrelevance for dark matter detection. Part II situates the study of DEQs for\nFeynman integrals within the framework of D-modules, a natural language for\nstudying PDEs algebraically. Special emphasis is put on a particular D-module\ncalled the GKZ system, a set of higher-order PDEs that annihilate a generalized\nversion of a Feynman integral. In the course of matching the generalized\nintegral to a Feynman integral proper, we discover an algorithm for evaluating\nthe latter in terms of logarithmic series. Part III develops a numerical\nintegration algorithm. It combines Monte Carlo sampling with tropical geometry,\na particular offspring of algebraic geometry that studies \"piecewise-linear\"\npolynomials. Feynman's i*epsilon-prescription is incorporated into the\nalgorithm via contour deformation. We present an open-source program named\nFeyntrop that implements this algorithm, and use it to numerically evaluate\nFeynman integrals between 1-5 loops and 0-5 legs in physical regions of phase\nspace.",
+          "arxiv_id": "2401.00891v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:29:37Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

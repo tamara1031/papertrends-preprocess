@@ -1,0 +1,1946 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_neural_model_learning",
+        "keywords": [
+          [
+            "data",
+            0.018556841050098947
+          ],
+          [
+            "neural",
+            0.01783498990522692
+          ],
+          [
+            "model",
+            0.017164574755024673
+          ],
+          [
+            "learning",
+            0.013806300006833515
+          ],
+          [
+            "models",
+            0.01376132943156966
+          ],
+          [
+            "physics",
+            0.012221078268231548
+          ],
+          [
+            "network",
+            0.011514948687770594
+          ],
+          [
+            "training",
+            0.011298809664640745
+          ],
+          [
+            "networks",
+            0.010962701346474707
+          ],
+          [
+            "method",
+            0.010296288111040542
+          ]
+        ],
+        "count": 865
+      },
+      "1": {
+        "name": "1_model_energy_data_study",
+        "keywords": [
+          [
+            "model",
+            0.01563737206674825
+          ],
+          [
+            "energy",
+            0.015385441519047232
+          ],
+          [
+            "data",
+            0.014060694584768087
+          ],
+          [
+            "study",
+            0.010732003809780382
+          ],
+          [
+            "power",
+            0.010560882010145085
+          ],
+          [
+            "traffic",
+            0.010418890787287458
+          ],
+          [
+            "approach",
+            0.010334661814327474
+          ],
+          [
+            "time",
+            0.010297514240342935
+          ],
+          [
+            "models",
+            0.010102809719735562
+          ],
+          [
+            "real",
+            0.01008859359334123
+          ]
+        ],
+        "count": 524
+      },
+      "2": {
+        "name": "2_method_order_numerical_time",
+        "keywords": [
+          [
+            "method",
+            0.021390814471089453
+          ],
+          [
+            "order",
+            0.0162029016209167
+          ],
+          [
+            "numerical",
+            0.014744198010533192
+          ],
+          [
+            "time",
+            0.014181940783147112
+          ],
+          [
+            "mesh",
+            0.013086570884982787
+          ],
+          [
+            "fluid",
+            0.012515036150479934
+          ],
+          [
+            "finite",
+            0.01242944118259089
+          ],
+          [
+            "element",
+            0.011829853141637942
+          ],
+          [
+            "high",
+            0.011523302438902297
+          ],
+          [
+            "problems",
+            0.011499205484800391
+          ]
+        ],
+        "count": 461
+      },
+      "3": {
+        "name": "3_protein_molecular_data_models",
+        "keywords": [
+          [
+            "protein",
+            0.022447319624222868
+          ],
+          [
+            "molecular",
+            0.02055742165096358
+          ],
+          [
+            "data",
+            0.015767199951484595
+          ],
+          [
+            "models",
+            0.015410126272311248
+          ],
+          [
+            "drug",
+            0.015111470535848383
+          ],
+          [
+            "model",
+            0.01502192010443991
+          ],
+          [
+            "learning",
+            0.014807782281605996
+          ],
+          [
+            "prediction",
+            0.014063482304749983
+          ],
+          [
+            "methods",
+            0.012530960697946946
+          ],
+          [
+            "molecules",
+            0.01175695803444921
+          ]
+        ],
+        "count": 407
+      },
+      "4": {
+        "name": "4_market_stock_financial_trading",
+        "keywords": [
+          [
+            "market",
+            0.03448679597770959
+          ],
+          [
+            "stock",
+            0.03358074335117439
+          ],
+          [
+            "financial",
+            0.025034570052776994
+          ],
+          [
+            "trading",
+            0.023314221203122355
+          ],
+          [
+            "data",
+            0.021127274171886465
+          ],
+          [
+            "price",
+            0.017296467365372003
+          ],
+          [
+            "model",
+            0.01639296129366912
+          ],
+          [
+            "series",
+            0.01588123410401186
+          ],
+          [
+            "time",
+            0.01585021551253182
+          ],
+          [
+            "learning",
+            0.015253920647025519
+          ]
+        ],
+        "count": 339
+      },
+      "5": {
+        "name": "5_optimization_design_topology_topology optimization",
+        "keywords": [
+          [
+            "optimization",
+            0.043764689681314466
+          ],
+          [
+            "design",
+            0.03810211747715881
+          ],
+          [
+            "topology",
+            0.034754450130461786
+          ],
+          [
+            "topology optimization",
+            0.0319346722035241
+          ],
+          [
+            "structures",
+            0.01885352919877872
+          ],
+          [
+            "method",
+            0.018840649774384998
+          ],
+          [
+            "material",
+            0.01772522749336777
+          ],
+          [
+            "designs",
+            0.0141273376465594
+          ],
+          [
+            "Topology",
+            0.012860222386837714
+          ],
+          [
+            "approach",
+            0.012681080983857618
+          ]
+        ],
+        "count": 276
+      },
+      "6": {
+        "name": "6_fracture_crack_field_phase field",
+        "keywords": [
+          [
+            "fracture",
+            0.04072683808757937
+          ],
+          [
+            "crack",
+            0.03283257056393941
+          ],
+          [
+            "field",
+            0.02976517665564625
+          ],
+          [
+            "phase field",
+            0.028104984278887222
+          ],
+          [
+            "phase",
+            0.026759175146719483
+          ],
+          [
+            "model",
+            0.02268973677445507
+          ],
+          [
+            "damage",
+            0.01844031205302394
+          ],
+          [
+            "material",
+            0.016501113792517317
+          ],
+          [
+            "hydrogen",
+            0.015391953054213309
+          ],
+          [
+            "numerical",
+            0.014851129891039705
+          ]
+        ],
+        "count": 256
+      },
+      "7": {
+        "name": "7_model_patient_brain_clinical",
+        "keywords": [
+          [
+            "model",
+            0.02497972528979244
+          ],
+          [
+            "patient",
+            0.018823948884090884
+          ],
+          [
+            "brain",
+            0.016523303146407254
+          ],
+          [
+            "clinical",
+            0.016371449335773523
+          ],
+          [
+            "models",
+            0.015689481214866543
+          ],
+          [
+            "data",
+            0.013972909333014679
+          ],
+          [
+            "specific",
+            0.013712542392400105
+          ],
+          [
+            "tumor",
+            0.01301353562685817
+          ],
+          [
+            "blood",
+            0.010953353045948652
+          ],
+          [
+            "flow",
+            0.010939649177966955
+          ]
+        ],
+        "count": 253
+      },
+      "8": {
+        "name": "8_blockchain_liquidity_market_transaction",
+        "keywords": [
+          [
+            "blockchain",
+            0.03619208114153766
+          ],
+          [
+            "liquidity",
+            0.022861537590174598
+          ],
+          [
+            "market",
+            0.02112616687091651
+          ],
+          [
+            "transaction",
+            0.02033710789379515
+          ],
+          [
+            "DeFi",
+            0.017460324948575176
+          ],
+          [
+            "Ethereum",
+            0.016832834354159106
+          ],
+          [
+            "security",
+            0.015404129412302082
+          ],
+          [
+            "decentralized",
+            0.015015769986785416
+          ],
+          [
+            "transactions",
+            0.014764321114188147
+          ],
+          [
+            "paper",
+            0.014450479977629174
+          ]
+        ],
+        "count": 206
+      },
+      "9": {
+        "name": "9_financial_LLMs_models_language",
+        "keywords": [
+          [
+            "financial",
+            0.04591826154888744
+          ],
+          [
+            "LLMs",
+            0.03629042475342917
+          ],
+          [
+            "models",
+            0.024841167455072536
+          ],
+          [
+            "language",
+            0.02281341666066895
+          ],
+          [
+            "Financial",
+            0.01992857057346021
+          ],
+          [
+            "tasks",
+            0.01971616456724036
+          ],
+          [
+            "data",
+            0.016618539842510664
+          ],
+          [
+            "Language",
+            0.01652713308727497
+          ],
+          [
+            "domain",
+            0.01538967968585929
+          ],
+          [
+            "fine",
+            0.015123061018417847
+          ]
+        ],
+        "count": 152
+      },
+      "10": {
+        "name": "10_method_FDTD_proposed_time",
+        "keywords": [
+          [
+            "method",
+            0.03024004570132026
+          ],
+          [
+            "FDTD",
+            0.02118161705722783
+          ],
+          [
+            "proposed",
+            0.02070925910217195
+          ],
+          [
+            "time",
+            0.02006973877271061
+          ],
+          [
+            "electromagnetic",
+            0.01865085410741963
+          ],
+          [
+            "numerical",
+            0.017920644390140933
+          ],
+          [
+            "matrix",
+            0.017198546166741158
+          ],
+          [
+            "equation",
+            0.016729427114853118
+          ],
+          [
+            "formulation",
+            0.01604846658190018
+          ],
+          [
+            "frequency",
+            0.01586377258118354
+          ]
+        ],
+        "count": 127
+      },
+      "11": {
+        "name": "11_quantum_Quantum_classical_algorithms",
+        "keywords": [
+          [
+            "quantum",
+            0.12445326716975717
+          ],
+          [
+            "Quantum",
+            0.04277029669833994
+          ],
+          [
+            "classical",
+            0.024848249186004975
+          ],
+          [
+            "algorithms",
+            0.024594572776841347
+          ],
+          [
+            "computing",
+            0.022733961314065274
+          ],
+          [
+            "quantum computing",
+            0.02091247024886967
+          ],
+          [
+            "optimization",
+            0.018367545904188685
+          ],
+          [
+            "problem",
+            0.017075535708219312
+          ],
+          [
+            "computers",
+            0.016878927886408022
+          ],
+          [
+            "problems",
+            0.016364648586340062
+          ]
+        ],
+        "count": 83
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.3826188436665349,
+        -0.6420546563650724,
+        -0.7248328472604757,
+        -0.506146363727623,
+        -0.6633134157966134,
+        -0.5296920053289347,
+        -0.4450067073033408,
+        -0.748897549661206,
+        -0.6908629794125309,
+        -0.643361043693951,
+        -0.757384213705963
+      ],
+      [
+        -0.3826188436665349,
+        1.0,
+        -0.5829667531995526,
+        -0.7222378126284825,
+        -0.6889328536141682,
+        -0.6732196767260814,
+        -0.3813227358861545,
+        -0.15169454682937453,
+        -0.6658289940467467,
+        -0.6971617891944215,
+        -0.6050055365094718,
+        -0.7572933589977933
+      ],
+      [
+        -0.6420546563650724,
+        -0.5829667531995526,
+        1.0,
+        -0.7464633789151984,
+        -0.7265038183195237,
+        -0.6623399795512173,
+        -0.6544839375801693,
+        -0.705563007423366,
+        -0.7509995501792337,
+        -0.7370991185687914,
+        -0.07639883106949986,
+        -0.7547791572737674
+      ],
+      [
+        -0.7248328472604757,
+        -0.7222378126284825,
+        -0.7464633789151984,
+        1.0,
+        -0.7427168290185535,
+        -0.7386308200313986,
+        -0.7427081496278309,
+        -0.7283480378299874,
+        -0.7633567827187064,
+        -0.6893757632784374,
+        -0.7442802491077207,
+        -0.748911620279028
+      ],
+      [
+        -0.506146363727623,
+        -0.6889328536141682,
+        -0.7265038183195237,
+        -0.7427168290185535,
+        1.0,
+        -0.7348298866460508,
+        -0.7213964399568775,
+        -0.6979570695752654,
+        -0.6584049013756883,
+        -0.5993507311205517,
+        -0.7210121442400611,
+        -0.7565528115831406
+      ],
+      [
+        -0.6633134157966134,
+        -0.6732196767260814,
+        -0.6623399795512173,
+        -0.7386308200313986,
+        -0.7348298866460508,
+        1.0,
+        -0.6933635088224974,
+        -0.7298005459648744,
+        -0.7500367536040589,
+        -0.7346554436144208,
+        -0.6490665082181332,
+        -0.7454855878157024
+      ],
+      [
+        -0.5296920053289347,
+        -0.3813227358861545,
+        -0.6544839375801693,
+        -0.7427081496278309,
+        -0.7213964399568775,
+        -0.6933635088224974,
+        1.0,
+        -0.461820060187911,
+        -0.7567462691780558,
+        -0.7109533250147911,
+        -0.6564086799238636,
+        -0.7579327866467589
+      ],
+      [
+        -0.4450067073033408,
+        -0.15169454682937453,
+        -0.705563007423366,
+        -0.7283480378299874,
+        -0.6979570695752654,
+        -0.7298005459648744,
+        -0.461820060187911,
+        1.0,
+        -0.755903381717298,
+        -0.6984201792824623,
+        -0.7076065304003376,
+        -0.7593483672056007
+      ],
+      [
+        -0.748897549661206,
+        -0.6658289940467467,
+        -0.7509995501792337,
+        -0.7633567827187064,
+        -0.6584049013756883,
+        -0.7500367536040589,
+        -0.7567462691780558,
+        -0.755903381717298,
+        1.0,
+        -0.737475426474598,
+        -0.7505060238591543,
+        -0.7557139582073248
+      ],
+      [
+        -0.6908629794125309,
+        -0.6971617891944215,
+        -0.7370991185687914,
+        -0.6893757632784374,
+        -0.5993507311205517,
+        -0.7346554436144208,
+        -0.7109533250147911,
+        -0.6984201792824623,
+        -0.737475426474598,
+        1.0,
+        -0.7341574060115075,
+        -0.7586583066110275
+      ],
+      [
+        -0.643361043693951,
+        -0.6050055365094718,
+        -0.07639883106949986,
+        -0.7442802491077207,
+        -0.7210121442400611,
+        -0.6490665082181332,
+        -0.6564086799238636,
+        -0.7076065304003376,
+        -0.7505060238591543,
+        -0.7341574060115075,
+        1.0,
+        -0.7575231451855894
+      ],
+      [
+        -0.757384213705963,
+        -0.7572933589977933,
+        -0.7547791572737674,
+        -0.748911620279028,
+        -0.7565528115831406,
+        -0.7454855878157024,
+        -0.7579327866467589,
+        -0.7593483672056007,
+        -0.7557139582073248,
+        -0.7586583066110275,
+        -0.7575231451855894,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        18,
+        0,
+        6,
+        0,
+        0,
+        4,
+        3,
+        4,
+        0,
+        0,
+        9,
+        0
+      ],
+      "2020-02": [
+        14,
+        1,
+        3,
+        2,
+        3,
+        11,
+        2,
+        2,
+        0,
+        1,
+        3,
+        1
+      ],
+      "2020-03": [
+        18,
+        0,
+        1,
+        0,
+        1,
+        10,
+        8,
+        3,
+        1,
+        2,
+        6,
+        1
+      ],
+      "2020-04": [
+        21,
+        0,
+        3,
+        1,
+        3,
+        10,
+        3,
+        2,
+        0,
+        1,
+        4,
+        1
+      ],
+      "2020-05": [
+        20,
+        1,
+        4,
+        1,
+        5,
+        11,
+        8,
+        2,
+        0,
+        3,
+        6,
+        0
+      ],
+      "2020-06": [
+        19,
+        2,
+        7,
+        1,
+        1,
+        14,
+        5,
+        6,
+        0,
+        4,
+        7,
+        1
+      ],
+      "2020-07": [
+        24,
+        0,
+        4,
+        3,
+        2,
+        8,
+        13,
+        3,
+        1,
+        0,
+        5,
+        0
+      ],
+      "2020-08": [
+        14,
+        0,
+        2,
+        1,
+        4,
+        8,
+        7,
+        2,
+        0,
+        0,
+        9,
+        0
+      ],
+      "2020-09": [
+        23,
+        0,
+        3,
+        0,
+        2,
+        6,
+        3,
+        8,
+        0,
+        2,
+        10,
+        1
+      ],
+      "2020-10": [
+        23,
+        1,
+        4,
+        2,
+        2,
+        14,
+        7,
+        3,
+        0,
+        2,
+        5,
+        4
+      ],
+      "2020-11": [
+        27,
+        1,
+        3,
+        0,
+        3,
+        1,
+        6,
+        5,
+        0,
+        4,
+        8,
+        2
+      ],
+      "2020-12": [
+        28,
+        1,
+        4,
+        0,
+        2,
+        9,
+        7,
+        7,
+        1,
+        2,
+        7,
+        0
+      ],
+      "2021-01": [
+        26,
+        0,
+        2,
+        0,
+        3,
+        5,
+        6,
+        7,
+        0,
+        2,
+        7,
+        0
+      ],
+      "2021-02": [
+        19,
+        0,
+        3,
+        1,
+        2,
+        4,
+        3,
+        5,
+        0,
+        1,
+        9,
+        0
+      ],
+      "2021-03": [
+        20,
+        0,
+        4,
+        2,
+        4,
+        14,
+        8,
+        1,
+        1,
+        4,
+        10,
+        0
+      ],
+      "2021-04": [
+        27,
+        0,
+        3,
+        0,
+        1,
+        12,
+        7,
+        6,
+        1,
+        1,
+        6,
+        4
+      ],
+      "2021-05": [
+        24,
+        0,
+        5,
+        1,
+        3,
+        11,
+        5,
+        3,
+        0,
+        3,
+        7,
+        0
+      ],
+      "2021-06": [
+        34,
+        0,
+        7,
+        4,
+        4,
+        7,
+        5,
+        3,
+        0,
+        3,
+        5,
+        1
+      ],
+      "2021-07": [
+        29,
+        1,
+        6,
+        0,
+        3,
+        14,
+        7,
+        2,
+        0,
+        5,
+        8,
+        0
+      ],
+      "2021-08": [
+        18,
+        1,
+        4,
+        1,
+        2,
+        13,
+        6,
+        1,
+        0,
+        1,
+        4,
+        0
+      ],
+      "2021-09": [
+        17,
+        1,
+        3,
+        0,
+        5,
+        4,
+        5,
+        3,
+        0,
+        1,
+        7,
+        0
+      ],
+      "2021-10": [
+        21,
+        0,
+        2,
+        0,
+        2,
+        3,
+        7,
+        7,
+        0,
+        0,
+        4,
+        3
+      ],
+      "2021-11": [
+        36,
+        1,
+        2,
+        1,
+        2,
+        14,
+        6,
+        7,
+        0,
+        2,
+        6,
+        0
+      ],
+      "2021-12": [
+        20,
+        1,
+        1,
+        2,
+        2,
+        11,
+        3,
+        1,
+        0,
+        2,
+        7,
+        1
+      ],
+      "2022-01": [
+        24,
+        1,
+        4,
+        1,
+        2,
+        15,
+        9,
+        3,
+        0,
+        0,
+        5,
+        0
+      ],
+      "2022-02": [
+        26,
+        0,
+        1,
+        1,
+        4,
+        10,
+        1,
+        2,
+        0,
+        4,
+        4,
+        1
+      ],
+      "2022-03": [
+        26,
+        0,
+        5,
+        0,
+        3,
+        15,
+        5,
+        6,
+        1,
+        1,
+        4,
+        0
+      ],
+      "2022-04": [
+        24,
+        1,
+        2,
+        2,
+        5,
+        8,
+        3,
+        2,
+        3,
+        2,
+        6,
+        1
+      ],
+      "2022-05": [
+        28,
+        0,
+        4,
+        0,
+        4,
+        18,
+        4,
+        4,
+        0,
+        4,
+        2,
+        1
+      ],
+      "2022-06": [
+        26,
+        3,
+        1,
+        1,
+        3,
+        8,
+        3,
+        10,
+        0,
+        2,
+        12,
+        0
+      ],
+      "2022-07": [
+        16,
+        1,
+        0,
+        1,
+        2,
+        11,
+        4,
+        3,
+        0,
+        3,
+        8,
+        0
+      ],
+      "2022-08": [
+        15,
+        1,
+        0,
+        0,
+        3,
+        11,
+        5,
+        6,
+        2,
+        2,
+        1,
+        2
+      ],
+      "2022-09": [
+        31,
+        0,
+        2,
+        2,
+        4,
+        11,
+        7,
+        10,
+        1,
+        3,
+        2,
+        1
+      ],
+      "2022-10": [
+        22,
+        0,
+        2,
+        0,
+        4,
+        8,
+        1,
+        6,
+        1,
+        2,
+        6,
+        2
+      ],
+      "2022-11": [
+        22,
+        0,
+        4,
+        2,
+        1,
+        6,
+        1,
+        7,
+        0,
+        1,
+        6,
+        0
+      ],
+      "2022-12": [
+        22,
+        0,
+        1,
+        2,
+        4,
+        6,
+        3,
+        6,
+        1,
+        2,
+        3,
+        1
+      ],
+      "2023-01": [
+        16,
+        0,
+        3,
+        5,
+        2,
+        7,
+        2,
+        5,
+        0,
+        1,
+        2,
+        3
+      ],
+      "2023-02": [
+        18,
+        1,
+        1,
+        1,
+        3,
+        14,
+        10,
+        3,
+        3,
+        0,
+        1,
+        1
+      ],
+      "2023-03": [
+        33,
+        2,
+        2,
+        1,
+        3,
+        13,
+        1,
+        8,
+        0,
+        1,
+        6,
+        1
+      ],
+      "2023-04": [
+        21,
+        1,
+        3,
+        4,
+        3,
+        7,
+        5,
+        3,
+        0,
+        1,
+        1,
+        0
+      ],
+      "2023-05": [
+        36,
+        1,
+        3,
+        1,
+        5,
+        12,
+        6,
+        9,
+        2,
+        2,
+        5,
+        0
+      ],
+      "2023-06": [
+        33,
+        0,
+        1,
+        5,
+        9,
+        12,
+        8,
+        2,
+        3,
+        9,
+        6,
+        4
+      ],
+      "2023-07": [
+        49,
+        1,
+        2,
+        0,
+        4,
+        11,
+        12,
+        7,
+        3,
+        6,
+        9,
+        3
+      ],
+      "2023-08": [
+        37,
+        1,
+        2,
+        1,
+        7,
+        12,
+        2,
+        6,
+        5,
+        6,
+        5,
+        1
+      ],
+      "2023-09": [
+        35,
+        3,
+        0,
+        1,
+        4,
+        12,
+        4,
+        6,
+        4,
+        8,
+        9,
+        4
+      ],
+      "2023-10": [
+        46,
+        0,
+        5,
+        5,
+        9,
+        14,
+        5,
+        4,
+        4,
+        9,
+        8,
+        3
+      ],
+      "2023-11": [
+        49,
+        4,
+        5,
+        2,
+        8,
+        17,
+        4,
+        6,
+        5,
+        9,
+        13,
+        3
+      ],
+      "2023-12": [
+        36,
+        0,
+        4,
+        3,
+        9,
+        14,
+        8,
+        5,
+        5,
+        7,
+        4,
+        1
+      ],
+      "2024-01": [
+        52,
+        0,
+        4,
+        4,
+        4,
+        12,
+        7,
+        2,
+        3,
+        10,
+        5,
+        1
+      ],
+      "2024-02": [
+        49,
+        0,
+        4,
+        6,
+        5,
+        8,
+        9,
+        5,
+        6,
+        13,
+        5,
+        3
+      ],
+      "2024-03": [
+        58,
+        1,
+        4,
+        4,
+        8,
+        14,
+        13,
+        11,
+        3,
+        12,
+        13,
+        1
+      ],
+      "2024-04": [
+        35,
+        0,
+        2,
+        1,
+        8,
+        12,
+        4,
+        7,
+        4,
+        13,
+        4,
+        6
+      ],
+      "2024-05": [
+        59,
+        2,
+        3,
+        3,
+        9,
+        8,
+        4,
+        11,
+        1,
+        17,
+        10,
+        5
+      ],
+      "2024-06": [
+        55,
+        2,
+        1,
+        4,
+        10,
+        12,
+        11,
+        4,
+        3,
+        13,
+        3,
+        0
+      ],
+      "2024-07": [
+        50,
+        1,
+        2,
+        1,
+        9,
+        8,
+        4,
+        7,
+        5,
+        13,
+        8,
+        2
+      ],
+      "2024-08": [
+        55,
+        0,
+        5,
+        2,
+        9,
+        13,
+        6,
+        7,
+        3,
+        14,
+        7,
+        1
+      ],
+      "2024-09": [
+        46,
+        1,
+        3,
+        3,
+        7,
+        15,
+        8,
+        11,
+        1,
+        12,
+        11,
+        1
+      ],
+      "2024-10": [
+        69,
+        1,
+        2,
+        4,
+        15,
+        13,
+        6,
+        10,
+        9,
+        28,
+        7,
+        1
+      ],
+      "2024-11": [
+        54,
+        0,
+        2,
+        4,
+        15,
+        13,
+        4,
+        7,
+        1,
+        27,
+        4,
+        3
+      ],
+      "2024-12": [
+        56,
+        1,
+        3,
+        4,
+        9,
+        25,
+        5,
+        6,
+        3,
+        21,
+        9,
+        4
+      ],
+      "2025-01": [
+        57,
+        1,
+        1,
+        4,
+        7,
+        16,
+        4,
+        4,
+        8,
+        16,
+        6,
+        2
+      ],
+      "2025-02": [
+        52,
+        2,
+        1,
+        3,
+        10,
+        11,
+        4,
+        7,
+        2,
+        19,
+        10,
+        7
+      ],
+      "2025-03": [
+        52,
+        0,
+        9,
+        4,
+        8,
+        18,
+        7,
+        8,
+        3,
+        16,
+        10,
+        6
+      ],
+      "2025-04": [
+        50,
+        2,
+        3,
+        2,
+        12,
+        10,
+        8,
+        2,
+        6,
+        20,
+        6,
+        5
+      ],
+      "2025-05": [
+        54,
+        2,
+        4,
+        5,
+        11,
+        19,
+        6,
+        12,
+        3,
+        32,
+        6,
+        3
+      ],
+      "2025-06": [
+        57,
+        0,
+        6,
+        4,
+        11,
+        20,
+        5,
+        5,
+        5,
+        21,
+        7,
+        5
+      ],
+      "2025-07": [
+        63,
+        1,
+        2,
+        3,
+        5,
+        20,
+        3,
+        3,
+        3,
+        31,
+        10,
+        5
+      ],
+      "2025-08": [
+        66,
+        0,
+        3,
+        1,
+        4,
+        11,
+        5,
+        9,
+        1,
+        25,
+        7,
+        2
+      ],
+      "2025-09": [
+        38,
+        0,
+        3,
+        1,
+        3,
+        12,
+        4,
+        5,
+        0,
+        12,
+        3,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Integration of physics-informed operator learning and finite element method for parametric learning of partial differential equations",
+          "year": "2024-01",
+          "abstract": "We present a method that employs physics-informed deep learning techniques\nfor parametrically solving partial differential equations. The focus is on the\nsteady-state heat equations within heterogeneous solids exhibiting significant\nphase contrast. Similar equations manifest in diverse applications like\nchemical diffusion, electrostatics, and Darcy flow. The neural network aims to\nestablish the link between the complex thermal conductivity profiles and\ntemperature distributions, as well as heat flux components within the\nmicrostructure, under fixed boundary conditions. A distinctive aspect is our\nindependence from classical solvers like finite element methods for data. A\nnoteworthy contribution lies in our novel approach to defining the loss\nfunction, based on the discretized weak form of the governing equation. This\nnot only reduces the required order of derivatives but also eliminates the need\nfor automatic differentiation in the construction of loss terms, accepting\npotential numerical errors from the chosen discretization method. As a result,\nthe loss function in this work is an algebraic equation that significantly\nenhances training efficiency. We benchmark our methodology against the standard\nfinite element method, demonstrating accurate yet faster predictions using the\ntrained neural network for temperature and flux profiles. We also show higher\naccuracy by using the proposed method compared to purely data-driven approaches\nfor unforeseen scenarios.",
+          "arxiv_id": "2401.02363v1"
+        },
+        {
+          "title": "Mixed formulation of physics-informed neural networks for thermo-mechanically coupled systems and heterogeneous domains",
+          "year": "2023-02",
+          "abstract": "Physics-informed neural networks (PINNs) are a new tool for solving boundary\nvalue problems by defining loss functions of neural networks based on governing\nequations, boundary conditions, and initial conditions. Recent investigations\nhave shown that when designing loss functions for many engineering problems,\nusing first-order derivatives and combining equations from both strong and weak\nforms can lead to much better accuracy, especially when there are heterogeneity\nand variable jumps in the domain. This new approach is called the mixed\nformulation for PINNs, which takes ideas from the mixed finite element method.\nIn this method, the PDE is reformulated as a system of equations where the\nprimary unknowns are the fluxes or gradients of the solution, and the secondary\nunknowns are the solution itself. In this work, we propose applying the mixed\nformulation to solve multi-physical problems, specifically a stationary\nthermo-mechanically coupled system of equations. Additionally, we discuss both\nsequential and fully coupled unsupervised training and compare their accuracy\nand computational cost. To improve the accuracy of the network, we incorporate\nhard boundary constraints to ensure valid predictions. We then investigate how\ndifferent optimizers and architectures affect accuracy and efficiency. Finally,\nwe introduce a simple approach for parametric learning that is similar to\ntransfer learning. This approach combines data and physics to address the\nlimitations of PINNs regarding computational cost and improves the network's\nability to predict the response of the system for unseen cases. The outcomes of\nthis work will be useful for many other engineering applications where deep\nlearning is employed on multiple coupled systems of equations for fast and\nreliable computations.",
+          "arxiv_id": "2302.04954v2"
+        },
+        {
+          "title": "Multi-Output Physics-Informed Neural Networks for Forward and Inverse PDE Problems with Uncertainties",
+          "year": "2022-02",
+          "abstract": "Physics-informed neural networks (PINNs) have recently been used to solve\nvarious computational problems which are governed by partial differential\nequations (PDEs). In this paper, we propose a multi-output physics-informed\nneural network (MO-PINN) which can provide solutions with uncertainty\ndistributions for both forward and inverse PDE problems with noisy data. In\nthis framework, the uncertainty arising from the noisy data is first translated\ninto multiple measurements regarding the prior noise distribution using the\nbootstrap method, and then the outputs of neural networks are designed to\nsatisfy the measurements as well as the underlying physical laws.The posterior\nestimation of target parameters can be obtained at the end of training, which\ncan be further used for uncertainty quantification and decision making. In this\npaper, MO-PINNs are demonstrated with a series of numerical experiments\nincluding both linear and nonlinear, forward and inverse problems. The results\nshow that MO-PINN is able to provide accurate predictions with noisy data.In\naddition, we also demonstrate that the prediction and posterior distributions\nfrom MO-PINNs are consistent with the solutions from traditional a finite\nelement method (FEM) solver and Monte Carlo methods given the same data and\nprior knowledge. Finally, we show that additional statistical knowledge can be\nincorporated into the training to improve the prediction if available.",
+          "arxiv_id": "2202.01710v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Urban Bike Lane Planning with Bike Trajectories: Models, Algorithms, and a Real-World Case Study",
+          "year": "2020-08",
+          "abstract": "We study an urban bike lane planning problem based on the fine-grained bike\ntrajectory data, which is made available by smart city infrastructure such as\nbike-sharing systems. The key decision is where to build bike lanes in the\nexisting road network. As bike-sharing systems become widespread in the\nmetropolitan areas over the world, bike lanes are being planned and constructed\nby many municipal governments to promote cycling and protect cyclists.\nTraditional bike lane planning approaches often rely on surveys and heuristics.\nWe develop a general and novel optimization framework to guide the bike lane\nplanning from bike trajectories. We formalize the bike lane planning problem in\nview of the cyclists' utility functions and derive an integer optimization\nmodel to maximize the utility. To capture cyclists' route choices, we develop a\nbilevel program based on the Multinomial Logit model. We derive structural\nproperties about the base model and prove that the Lagrangian dual of the bike\nlane planning model is polynomial-time solvable. Furthermore, we reformulate\nthe route choice based planning model as a mixed integer linear program using a\nlinear approximation scheme. We develop tractable formulations and efficient\nalgorithms to solve the large-scale optimization problem. Via a real-world case\nstudy with a city government, we demonstrate the efficiency of the proposed\nalgorithms and quantify the trade-off between the coverage of bike trips and\ncontinuity of bike lanes. We show how the network topology evolves according to\nthe utility functions and highlight the importance of understanding cyclists'\nroute choices. The proposed framework drives the data-driven urban planning\nscheme in smart city operations management.",
+          "arxiv_id": "2008.09645v1"
+        },
+        {
+          "title": "Energy-Efficient Green AI Architectures for Circular Economies Through Multi-Layered Sustainable Resource Optimization Framework",
+          "year": "2025-03",
+          "abstract": "In this research paper, we propose a new type of energy-efficient Green AI\narchitecture to support circular economies and address the contemporary\nchallenge of sustainable resource consumption in modern systems. We introduce a\nmulti-layered framework and meta-architecture that integrates state-of-the-art\nmachine learning algorithms, energy-conscious computational models, and\noptimization techniques to facilitate decision-making for resource reuse, waste\nreduction, and sustainable production.We tested the framework on real-world\ndatasets from lithium-ion battery recycling and urban waste management systems,\ndemonstrating its practical applicability. Notably, the key findings of this\nstudy indicate a 25 percent reduction in energy consumption during workflows\ncompared to traditional methods and an 18 percent improvement in resource\nrecovery efficiency. Quantitative optimization was based on mathematical models\nsuch as mixed-integer linear programming and lifecycle assessments. Moreover,\nAI algorithms improved classification accuracy on urban waste by 20 percent,\nwhile optimized logistics reduced transportation emissions by 30 percent. We\npresent graphical analyses and visualizations of the developed framework,\nillustrating its impact on energy efficiency and sustainability as reflected in\nthe simulation results. This paper combines the principles of Green AI with\npractical insights into how such architectural models contribute to circular\neconomies, presenting a fully scalable and scientifically rooted solution\naligned with applicable UN Sustainability Goals worldwide. These results open\navenues for incorporating newly developed AI technologies into sustainable\nmanagement strategies, potentially safeguarding local natural capital while\nadvancing technological progress.",
+          "arxiv_id": "2506.12262v1"
+        },
+        {
+          "title": "Multi-Objective Optimization Algorithms for Energy Management Systems in Microgrids: A Control Strategy Based on a PHIL System",
+          "year": "2025-05",
+          "abstract": "In this research a real time power hardware in loop configuration has been\nimplemented for an microgrid with the combination of distribution energy\nresources such as photovoltaic, grid tied inverter, battery, utility grid, and\na diesel generator. This paper introduces an unique adaptive multi-objective\noptimization approach that employs weighted optimization techniques for\nreal-time microgrid systems. The aim is to effectively balance various factors\nincluding fuel consumption, load mismatch, power quality, battery degradation,\nand the utilization of renewable energy sources. A real time experimental data\nfrom power hardware in loop system has been used for dynamically updating\nsystem states. The adaptive preference-based selection method are adjusted\nbased on state of battery charging thresholds. The technique has been\nintegrated with six technical objectives and complex constraints. This approach\nhelps to practical microgrid decision making and optimization of dynamic energy\nsystems. The energy management process were also able to maximize photovoltaic\nproduction where minimizing power mismatch, stabilizing battery state of charge\nunder different condition. The research results were also compared with the\nbaseline system without optimization techniques, and a reliable outcome was\nfound.",
+          "arxiv_id": "2505.18210v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "Higher-Oder Splitting Schemes for Fluids with Variable Viscosity",
+          "year": "2025-06",
+          "abstract": "This article investigates matrix-free higher-order discontinuous Galerkin\n(DG) discretizations of the Navier-Stokes equations for incompressible flows\nwith variable viscosity. The viscosity field may be prescribed analytically or\ngoverned by a rheological law, as often found in biomedical or industrial\napplications. The DG discretization of the adapted second-order viscous terms\nis carried out via the symmetric interior penalty Galerkin method, obviating\nauxiliary variables. Based on this spatial discretization, we compare several\nlinearized variants of saddle point block systems and projection-based\nsplitting time integration schemes in terms of their computational performance.\nCompared to the velocity-pressure block-system for the former, the splitting\nscheme allows solving a sequence of simple problems such as mass,\nconvection-diffusion and Poisson equations. We investigate under which\nconditions the improved temporal stability of fully implicit schemes and\nresulting expensive nonlinear solves outperform the splitting schemes and\nlinearized variants that are stable under hyperbolic time step restrictions.\n  The key aspects of this work are i) a higher-order DG discretization for\nincompressible flows with variable viscosity, ii) accelerated nonlinear solver\nvariants and suitable linearizations adopting a matrix-free $hp$-multigrid\nsolver, and iii) a detailed comparison of the monolithic and projection-based\nsolvers in terms of their (non-)linear solver performance.\n  The presented schemes are evaluated in a series of numerical examples\nverifying their spatial and temporal accuracy, and the preconditioner\nperformance under increasing viscosity contrasts, while their efficiency is\nshowcased in the backward-facing step benchmark.",
+          "arxiv_id": "2506.14424v2"
+        },
+        {
+          "title": "Spline-Based Space-Time Finite Element Approach for Fluid-Structure Interaction Problems With a Focus on Fully Enclosed Domains",
+          "year": "2022-03",
+          "abstract": "Non-Uniform Rational B-Spline (NURBS) surfaces are commonly used within\nComputer-Aided Design (CAD) tools to represent geometric objects. When using\nisogeometric analysis (IGA), it is possible to use such NURBS geometries for\nnumerical analysis directly. Analyzing fluid flows, however, requires complex\nthree-dimensional geometries to represent flow domains. Defining a\nparametrization of such volumetric domains using NURBS can be challenging and\nis still an ongoing topic in the IGA community. With the recently developed\nNURBS-enhanced finite element method (NEFEM), the favorable geometric\ncharacteristics of NURBS are used within a standard finite element method. This\nis achieved by enhancing the elements touching the boundary by using the NURBS\ngeometry itself. In the current work, a new variation of NEFEM is introduced,\nwhich is suitable for three-dimensional space-time finite element formulations.\nThe proposed method makes use of a new mapping which results in a non-Cartesian\nformulation suitable for fluid-structure interaction (FSI). This is\ndemonstrated by combining the method with an IGA formulation in a\nstrongly-coupled partitioned framework for solving FSI problems. The framework\nyields a fully spline-based representation of the fluid-structure interface\nthrough a single NURBS. The coupling conditions at the fluid-structure\ninterface are enforced through a Robin-Neumann type coupling scheme. This\nscheme is particularly useful when considering incompressible fluids in fully\nDirichlet-bounded and curved problems, as it satisfies the incompressibility\nconstraint on the fluid for each step within the coupling procedure. The\naccuracy and performance of the introduced spline-based space-time finite\nelement approach and its use within the proposed coupled FSI framework are\ndemonstrated using a series of two- and three-dimensional benchmark problems.",
+          "arxiv_id": "2203.16152v1"
+        },
+        {
+          "title": "A new family of semi-implicit Finite Volume / Virtual Element methods for incompressible flows on unstructured meshes",
+          "year": "2023-04",
+          "abstract": "We introduce a new family of high order accurate semi-implicit schemes for\nthe solution of non-linear hyperbolic partial differential equations on\nunstructured polygonal meshes. The time discretization is based on a splitting\nbetween explicit and implicit terms that may arise either from the multi-scale\nnature of the governing equations, which involve both slow and fast scales, or\nin the context of projection methods, where the numerical solution is projected\nonto the physically meaningful solution manifold. We propose to use a high\norder finite volume (FV) scheme for the explicit terms, ensuring conservation\nproperty and robustness across shock waves, while the virtual element method\n(VEM) is employed to deal with the discretization of the implicit terms, which\ntypically requires an elliptic problem to be solved. The numerical solution is\nthen transferred via suitable L2 projection operators from the FV to the VEM\nsolution space and vice-versa. High order time accuracy is achieved using the\nsemi-implicit IMEX Runge-Kutta schemes, and the novel schemes are proven to be\nasymptotic preserving and well-balanced. As representative models, we choose\nthe shallow water equations (SWE), thus handling multiple time scales\ncharacterized by a different Froude number, and the incompressible\nNavier-Stokes equations (INS), which are solved at the aid of a projection\nmethod to satisfy the solenoidal constraint of the velocity field. Furthermore,\nan implicit discretization for the viscous terms is devised for the INS model,\nwhich is based on the VEM technique. Consequently, the CFL-type stability\ncondition on the maximum admissible time step is based only on the fluid\nvelocity and not on the celerity nor on the viscous eigenvalues. A large suite\nof test cases demonstrates the accuracy and the capabilities of the new family\nof schemes to solve relevant benchmarks in the field of incompressible fluids.",
+          "arxiv_id": "2304.07570v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Pre-Training on Large-Scale Generated Docking Conformations with HelixDock to Unlock the Potential of Protein-ligand Structure Prediction Models",
+          "year": "2023-10",
+          "abstract": "Protein-ligand structure prediction is an essential task in drug discovery,\npredicting the binding interactions between small molecules (ligands) and\ntarget proteins (receptors). Recent advances have incorporated deep learning\ntechniques to improve the accuracy of protein-ligand structure prediction.\nNevertheless, the experimental validation of docking conformations remains\ncostly, it raises concerns regarding the generalizability of these deep\nlearning-based methods due to the limited training data. In this work, we show\nthat by pre-training on a large-scale docking conformation generated by\ntraditional physics-based docking tools and then fine-tuning with a limited set\nof experimentally validated receptor-ligand complexes, we can obtain a\nprotein-ligand structure prediction model with outstanding performance.\nSpecifically, this process involved the generation of 100 million docking\nconformations for protein-ligand pairings, an endeavor consuming roughly 1\nmillion CPU core days. The proposed model, HelixDock, aims to acquire the\nphysical knowledge encapsulated by the physics-based docking tools during the\npre-training phase. HelixDock has been rigorously benchmarked against both\nphysics-based and deep learning-based baselines, demonstrating its exceptional\nprecision and robust transferability in predicting binding confirmation. In\naddition, our investigation reveals the scaling laws governing pre-trained\nprotein-ligand structure prediction models, indicating a consistent enhancement\nin performance with increases in model parameters and the volume of\npre-training data. Moreover, we applied HelixDock to several drug\ndiscovery-related tasks to validate its practical utility. HelixDock\ndemonstrates outstanding capabilities on both cross-docking and structure-based\nvirtual screening benchmarks.",
+          "arxiv_id": "2310.13913v4"
+        },
+        {
+          "title": "ProteinGPT: Multimodal LLM for Protein Property Prediction and Structure Understanding",
+          "year": "2024-08",
+          "abstract": "Understanding biological processes, drug development, and biotechnological\nadvancements requires a detailed analysis of protein structures and functions,\na task that is inherently complex and time-consuming in traditional protein\nresearch. To streamline this process, we introduce ProteinGPT, a\nstate-of-the-art multimodal large language model for proteins that enables\nusers to upload protein sequences and/or structures for comprehensive analysis\nand responsive inquiries. ProteinGPT integrates protein sequence and structure\nencoders with linear projection layers to ensure precise representation\nadaptation and leverages a large language model (LLM) to generate accurate,\ncontextually relevant responses. To train ProteinGPT, we constructed a\nlarge-scale dataset of 132,092 proteins, each annotated with 20-30 property\ntags and 5-10 QA pairs per protein, and optimized the instruction-tuning\nprocess using GPT-4o. Experiments demonstrate that ProteinGPT effectively\ngenerates informative responses to protein-related questions, achieving high\nperformance on both semantic and lexical metrics and significantly\noutperforming baseline models and general-purpose LLMs in understanding and\nresponding to protein-related queries. Our code and data are available at\nhttps://github.com/ProteinGPT/ProteinGPT.",
+          "arxiv_id": "2408.11363v2"
+        },
+        {
+          "title": "MolecularGPT: Open Large Language Model (LLM) for Few-Shot Molecular Property Prediction",
+          "year": "2024-06",
+          "abstract": "Molecular property prediction (MPP) is a fundamental and crucial task in drug\ndiscovery. However, prior methods are limited by the requirement for a large\nnumber of labeled molecules and their restricted ability to generalize for\nunseen and new tasks, both of which are essential for real-world applications.\nTo address these challenges, we present MolecularGPT for few-shot MPP. From a\nperspective on instruction tuning, we fine-tune large language models (LLMs)\nbased on curated molecular instructions spanning over 1000 property prediction\ntasks. This enables building a versatile and specialized LLM that can be\nadapted to novel MPP tasks without any fine-tuning through zero- and few-shot\nin-context learning (ICL). MolecularGPT exhibits competitive in-context\nreasoning capabilities across 10 downstream evaluation datasets, setting new\nbenchmarks for few-shot molecular prediction tasks. More importantly, with just\ntwo-shot examples, MolecularGPT can outperform standard supervised graph neural\nnetwork methods on 4 out of 7 datasets. It also excels state-of-the-art LLM\nbaselines by up to 15.7% increase on classification accuracy and decrease of\n17.9 on regression metrics (e.g., RMSE) under zero-shot. This study\ndemonstrates the potential of LLMs as effective few-shot molecular property\npredictors. The code is available at https://github.com/NYUSHCS/MolecularGPT.",
+          "arxiv_id": "2406.12950v2"
+        }
+      ],
+      "4": [
+        {
+          "title": "Hidformer: Transformer-Style Neural Network in Stock Price Forecasting",
+          "year": "2024-12",
+          "abstract": "This paper investigates the application of Transformer-based neural networks\nto stock price forecasting, with a special focus on the intersection of machine\nlearning techniques and financial market analysis. The evolution of Transformer\nmodels, from their inception to their adaptation for time series analysis in\nfinancial contexts, is reviewed and discussed. Central to our study is the\nexploration of the Hidformer model, which is currently recognized for its\npromising performance in time series prediction. The primary aim of this paper\nis to determine whether Hidformer will also prove itself in the task of stock\nprice prediction. This slightly modified model serves as the framework for our\nexperiments, integrating the principles of technical analysis with advanced\nmachine learning concepts to enhance stock price prediction accuracy. We\nconduct an evaluation of the Hidformer model's performance, using a set of\ncriteria to determine its efficacy. Our findings offer additional insights into\nthe practical application of Transformer architectures in financial time series\nforecasting, highlighting their potential to improve algorithmic trading\nstrategies, including human decision making.",
+          "arxiv_id": "2412.19932v1"
+        },
+        {
+          "title": "Background-aware Multi-source Fusion Financial Trend Forecasting Mechanism",
+          "year": "2024-07",
+          "abstract": "Stock prices, as an economic indicator, reflect changes in economic\ndevelopment and market conditions. Traditional stock price prediction models\noften only consider time-series data and are limited by the mechanisms of the\nmodels themselves. Some deep learning models have high computational costs,\ndepend on a large amount of high-quality data, and have poor interpretations,\nmaking it difficult to intuitively understand the driving factors behind the\npredictions. Some studies have used deep learning models to extract text\nfeatures and combine them with price data to make joint predictions, but there\nare issues with dealing with information noise, accurate extraction of text\nsentiment, and how to efficiently fuse text and numerical data. To address\nthese issues in this paper, we propose a background-aware multi-source fusion\nfinancial trend forecasting mechanism. The system leverages a large language\nmodel to extract key information from policy and stock review texts, utilizing\nthe MacBERT model to generate feature vectors. These vectors are then\nintegrated with stock price data to form comprehensive feature representations.\nThese integrated features are input into a neural network comprising various\ndeep learning architectures. By integrating multiple data sources, the system\noffers a holistic view of market dynamics. It harnesses the comprehensive\nanalytical and interpretative capabilities of large language models, retaining\ndeep semantic and sentiment information from policy texts to provide richer\ninput features for stock trend prediction. Additionally, we compare the\naccuracy of six models (LSTM, BiLSTM, MogrifierLSTM, GRU, ST-LSTM, SwinLSTM).\nThe results demonstrate that our system achieves generally better accuracy in\npredicting stock movements, attributed to the incorporation of large language\nmodel processing, policy information, and other influential features.",
+          "arxiv_id": "2407.00904v1"
+        },
+        {
+          "title": "StockTime: A Time Series Specialized Large Language Model Architecture for Stock Price Prediction",
+          "year": "2024-08",
+          "abstract": "The stock price prediction task holds a significant role in the financial\ndomain and has been studied for a long time. Recently, large language models\n(LLMs) have brought new ways to improve these predictions. While recent\nfinancial large language models (FinLLMs) have shown considerable progress in\nfinancial NLP tasks compared to smaller pre-trained language models (PLMs),\nchallenges persist in stock price forecasting. Firstly, effectively integrating\nthe modalities of time series data and natural language to fully leverage these\ncapabilities remains complex. Secondly, FinLLMs focus more on analysis and\ninterpretability, which can overlook the essential features of time series\ndata. Moreover, due to the abundance of false and redundant information in\nfinancial markets, models often produce less accurate predictions when faced\nwith such input data. In this paper, we introduce StockTime, a novel LLM-based\narchitecture designed specifically for stock price data. Unlike recent FinLLMs,\nStockTime is specifically designed for stock price time series data. It\nleverages the natural ability of LLMs to predict the next token by treating\nstock prices as consecutive tokens, extracting textual information such as\nstock correlations, statistical trends and timestamps directly from these stock\nprices. StockTime then integrates both textual and time series data into the\nembedding space. By fusing this multimodal data, StockTime effectively predicts\nstock prices across arbitrary look-back periods. Our experiments demonstrate\nthat StockTime outperforms recent LLMs, as it gives more accurate predictions\nwhile reducing memory usage and runtime costs.",
+          "arxiv_id": "2409.08281v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "Design of thermal meta-structures made of functionally graded materials using isogeometric density-based topology optimization",
+          "year": "2024-12",
+          "abstract": "The thermal conductivity of Functionally Graded Materials (FGMs) can be\nefficiently designed through topology optimization to obtain thermal\nmeta-structures that actively steer the heat flow. Compared to conventional\nanalytical design methods, topology optimization allows handling arbitrary\ngeometries, boundary conditions and design requirements; and producing\nalternate designs for non-unique problems. Additionally, as far as the design\nof meta-structures is concerned, topology optimization does not need\nintuition-based coordinate transformation or the form invariance of governing\nequations, as in the case of transformation thermotics. We explore isogeometric\ndensity-based topology optimization in the continuous setting, which perfectly\naligns with FGMs. In this formulation, the density field, geometry and solution\nof the governing equations are parameterized using non-uniform rational basis\nspline entities. Accordingly, the heat conduction problem is solved using\nIsogeometric Analysis. We design various 2D & 3D thermal meta-structures under\ndifferent design scenarios to showcase the effectiveness and versatility of our\napproach. We also design thermal meta-structures based on architected cellular\nmaterials, a special class of FGMs, using their empirical material laws\ncalculated via numerical homogenization.",
+          "arxiv_id": "2412.02318v1"
+        },
+        {
+          "title": "Topology optimization of pressure-loaded multi-material structures",
+          "year": "2023-05",
+          "abstract": "Permitting multiple materials within a topology optimization setting\nincreases the search space of the technique, which facilitates obtaining\nhigh-performing and efficient optimized designs. Structures with multiple\nmaterials involving fluidic pressure loads find various applications. However,\ndealing with the design-dependent nature of the pressure loads is challenging\nin topology optimization that gets even more pronounced with a multi-material\nframework. This paper provides a density-based topology optimization method to\ndesign fluidic pressure loadbearing multi-material structures. The design\ndomain is parameterized using hexagonal elements as they ensure nonsingular\nconnectivity. Pressure modeling is performed using the Darcy law with a\nconceptualized drainage term. The flow coefficient of each element is\ndetermined using a smooth Heaviside function considering its solid and void\nstates. The consistent nodal loads are determined using the standard finite\nelement methods. Multiple materials is modeled using the extended SIMP scheme.\nCompliance minimization with volume constraints is performed to achieve\noptimized loadbearing structures. Few examples are presented to demonstrate the\nefficacy and versatility of the proposed approach. The optimized results\ncontain the prescribed amount of different materials.",
+          "arxiv_id": "2305.08771v1"
+        },
+        {
+          "title": "Topology optimization using the unsmooth variational topology optimization (UNVARTOP) method. An educational implementation in Matlab",
+          "year": "2021-07",
+          "abstract": "This paper presents an efficient and comprehensive MATLAB code to solve\ntwo-dimensional structural topology optimization problems, including minimum\nmean compliance, compliant mechanism synthesis and multi-load compliance\nproblems. The Unsmooth Variational Topology Optimization (UNVARTOP) method,\ndeveloped by the authors in a previous work, is used in the topology\noptimization code, based on the finite element method (FEM), to compute the\nsensitivity and update the topology. The paper also includes instructions to\nimprove the bisection algorithm, modify the computation of the Lagrangian\nmultiplier by using an Augmented Lagrangian to impose the constraint, implement\nheat conduction problems and extend the code to three-dimensional topology\noptimization problems. The code, intended for students and newcomers in\ntopology optimization, is included as an appendix (Appendix A) and it can be\ndownloaded from https://github.com/DanielYago together with supplementary\nmaterial.",
+          "arxiv_id": "2107.07763v1"
+        }
+      ],
+      "6": [
+        {
+          "title": "Applications of phase field fracture in modelling hydrogen assisted failures",
+          "year": "2020-11",
+          "abstract": "The phase field fracture method has emerged as a promising computational tool\nfor modelling a variety of problems including, since recently, hydrogen\nembrittlement and stress corrosion cracking. In this work, we demonstrate the\npotential of phase field-based multi-physics models in transforming the\nengineering assessment and design of structural components in\nhydrogen-containing environments. First, we present a theoretical and numerical\nframework coupling deformation, diffusion and fracture, which accounts for\ninertia effects.Several constitutive choices are considered for the crack\ndensity function, including choices with and without an elastic phase in the\ndamage response. The material toughness is defined as a function of the\nhydrogen content using an atomistically-informed hydrogen degradation law. The\nmodel is numerically implemented in 2D and 3D using the finite element method.\nThe resulting computational framework is used to address a number of case\nstudies of particular engineering interest. These are intended to showcase the\nmodel capabilities in: (i) capturing complex fracture phenomena, such as\ndynamic crack branching or void-crack interactions, (ii) simulating\nstandardised tests for critical components, such as bolts, and (iii) enabling\nsimulation-based paradigms such as Virtual Testing or Digital Twins by coupling\nmodel predictions with inspection data of large-scale engineering components.\nThe evolution of defects under in-service conditions can be predicted, up to\nthe ultimate failure. By reproducing the precise geometry of the defects, as\nopposed to re-characterising them as sharp cracks, phase field modelling\nenables more realistic and effective structural integrity assessments.",
+          "arxiv_id": "2011.07328v1"
+        },
+        {
+          "title": "How to introduce an initial crack in phase field simulations to accurately predict the linear elastic fracture propagation threshold?",
+          "year": "2025-02",
+          "abstract": "Variational phase field fracture models are now widely used to simulate crack\npropagation in structures. A critical aspect of these simulations is the\ncorrect determination of the propagation threshold of pre-existing cracks, as\nit highly relies on how the initial cracks are implemented. While prior studies\nbriefly discuss initial crack implementation techniques, we present here a\nsystematic investigation. Various techniques to introduce initial cracks in\nphase field fracture simulations are tested, from the crack explicit meshing to\nthe replacement by a fully damaged phase field, including different variants\nfor the boundary conditions. Our focus here is on phase field models aiming to\napproximate, in the $\\Gamma$-convergence limit, Griffith quasi-static\npropagation in the framework of Linear Elastic Fracture Mechanics. Therefore, a\nsharp crack model from classic linear elastic fracture mechanics based on\nGriffith criterion is the reference in this work. To assess the different\ntechniques to introduce initial cracks, we rely on path-following methods to\ncompute the sharp crack and the phase field smeared crack solutions. The\nunderlying idea is that path-following ensures staying at equilibrium at each\ninstant so that any difference between phase field and sharp crack models can\nbe attributed to numerical artifacts. Thus, by comparing the results from both\nmodels, we can provide practical recommendations for reliably incorporating\ninitial cracks in phase field fracture simulations. The comparison shows that\nan improper initial crack implementation often requires the smeared crack to\ntransition to a one-element-wide phase band to adequately represent a\ndisplacement jump along a crack. This transition increases the energy required\nto propagate the crack, leading to a significant overshoot in the\nforce-displacement response. The take-home message is that to predict the\npropagation threshold accurately and avoid artificial toughening; the crack\nmust be initialized either setting the phase field to its damage state over a\none-element-wide band or meshing the crack explicitly as a one-element-wide\nslit and imposing the fully cracked state on the crack surface.",
+          "arxiv_id": "2502.03900v1"
+        },
+        {
+          "title": "An assessment of phase field fracture: crack initiation and growth",
+          "year": "2021-03",
+          "abstract": "The phase field paradigm, in combination with a suitable variational\nstructure, has opened a path for using Griffith's energy balance to predict the\nfracture of solids. These so-called phase field fracture methods have gained\nsignificant popularity over the past decade, and are now part of commercial\nfinite element packages and engineering fitness-for-service assessments. Crack\npaths can be predicted, in arbitrary geometries and dimensions, based on a\nglobal energy minimisation - without the need for \\textit{ad hoc} criteria. In\nthis work, we review the fundamentals of phase field fracture methods and\nexamine their capabilities in delivering predictions in agreement with the\nclassical fracture mechanics theory pioneered by Griffith. The two most widely\nused phase field fracture models are implemented in the context of the finite\nelement method, and several paradigmatic boundary value problems are addressed\nto gain insight into their predictive abilities across all cracking stages;\nboth the initiation of growth and stable crack propagation are investigated. In\naddition, we examine the effectiveness of phase field models with an internal\nmaterial length scale in capturing size effects and the transition flaw size\nconcept. Our results show that phase field fracture methods satisfactorily\napproximate classical fracture mechanics predictions and can also reconcile\nstress and toughness criteria for fracture. The accuracy of the approximation\nis however dependent on modelling and constitutive choices; we provide a\nrationale for these differences and identify suitable approaches for delivering\nphase field fracture predictions that are in good agreement with\nwell-established fracture mechanics paradigms.",
+          "arxiv_id": "2103.05443v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Bayesian Inference of Tissue Heterogeneity for Individualized Prediction of Glioma Growth",
+          "year": "2022-09",
+          "abstract": "Reliably predicting the future spread of brain tumors using imaging data and\non a subject-specific basis requires quantifying uncertainties in data,\nbiophysical models of tumor growth, and spatial heterogeneity of tumor and host\ntissue. This work introduces a Bayesian framework to calibrate the spatial\ndistribution of the parameters within a tumor growth model to quantitative\nmagnetic resonance imaging (MRI) data and demonstrates its implementation in a\npre-clinical model of glioma. The framework leverages an atlas-based brain\nsegmentation of grey and white matter to establish subject-specific priors and\ntunable spatial dependencies of the model parameters in each region. Using this\nframework, the tumor-specific parameters are calibrated from quantitative MRI\nmeasurements early in the course of tumor development in four rats and used to\npredict the spatial development of the tumor at later times. The results\nsuggest that the tumor model, calibrated by animal-specific imaging data at one\ntime point, can accurately predict tumor shapes with a Dice coefficient > 0.89.\nHowever, the reliability of the predicted volume and shape of tumors strongly\nrelies on the number of earlier imaging time points used for calibrating the\nmodel. This study demonstrates, for the first time, the ability to determine\nthe uncertainty in the inferred tissue heterogeneity and the model predicted\ntumor shape.",
+          "arxiv_id": "2209.12089v1"
+        },
+        {
+          "title": "Geometry-aware neural solver for fast Bayesian calibration of brain tumor models",
+          "year": "2020-09",
+          "abstract": "Modeling of brain tumor dynamics has the potential to advance therapeutic\nplanning. Current modeling approaches resort to numerical solvers that simulate\nthe tumor progression according to a given differential equation. Using\nhighly-efficient numerical solvers, a single forward simulation takes up to a\nfew minutes of compute. At the same time, clinical applications of tumor\nmodeling often imply solving an inverse problem, requiring up to tens of\nthousands forward model evaluations when used for a Bayesian model\npersonalization via sampling. This results in a total inference time\nprohibitively expensive for clinical translation. While recent data-driven\napproaches become capable of emulating physics simulation, they tend to fail in\ngeneralizing over the variability of the boundary conditions imposed by the\npatient-specific anatomy. In this paper, we propose a learnable surrogate for\nsimulating tumor growth which maps the biophysical model parameters directly to\nsimulation outputs, i.e. the local tumor cell densities, whilst respecting\npatient geometry. We test the neural solver on Bayesian tumor model\npersonalization for a cohort of glioma patients. Bayesian inference using the\nproposed surrogate yields estimates analogous to those obtained by solving the\nforward model with a regular numerical solver. The near-real-time computation\ncost renders the proposed method suitable for clinical settings. The code is\navailable at https://github.com/IvanEz/tumor-surrogate.",
+          "arxiv_id": "2009.04240v4"
+        },
+        {
+          "title": "Personalizing the meshed SPL/NAC Brain Atlas for patient-specific scientific computing using SynthMorph",
+          "year": "2025-03",
+          "abstract": "Developing personalized computational models of the human brain remains a\nchallenge for patient-specific clinical applications and neuroscience research.\nEfficient and accurate biophysical simulations rely on high-quality\npersonalized computational meshes derived from patient's segmented anatomical\nMRI scans. However, both automatic and manual segmentation are particularly\nchallenging for tissues with limited visibility or low contrast. In this work,\nwe present a new method to create personalized computational meshes of the\nbrain, streamlining the development of computational brain models for clinical\napplications and neuroscience research. Our method uses SynthMorph, a\nstate-of-the-art anatomy-aware, learning-based medical image registration\napproach, to morph a comprehensive hexahedral mesh of the open-source SPL/NAC\nBrain Atlas to patient-specific MRI scans. Each patient-specific mesh includes\nover 300 labeled anatomical structures, more than any existing manual or\nautomatic methods. Our registration-based method takes approximately 20\nminutes, significantly faster than current state-of-the-art mesh generation\npipelines, which can take up to two hours. We evaluated several\nstate-of-the-art medical image registration methods, including SynthMorph, to\ndetermine the most optimal registration method to morph our meshed anatomical\nbrain atlas to patient MRI scans. Our results demonstrate that SynthMorph\nachieved high DICE similarity coefficients and low Hausdorff Distance metrics\nbetween anatomical structures, while maintaining high mesh element quality.\nThese findings demonstrate that our registration-based method efficiently and\naccurately produces high-quality, comprehensive personalized brain meshes,\nrepresenting an important step toward clinical translation.",
+          "arxiv_id": "2503.00931v1"
+        }
+      ],
+      "8": [
+        {
+          "title": "Exploration of Hyperledger Besu in Designing Private Blockchain-based Financial Distribution Systems",
+          "year": "2023-11",
+          "abstract": "Blockchain, a decentralized technology that provides unrivaled security,\ntransparency, and process validation, is redefining the operational landscape\nacross numerous industries. This article focuses on the development of an\ninnovative consortium blockchain based financial distribution application. This\npaper illuminates the transformative role of blockchain technology in a variety\nof sectors by drawing on a plethora of academic literature and current industry\npractices. It demonstrates the diverse applications of blockchain, ranging from\nremittances to lending and investments in finance to data administration in\nhealthcare and supply chain tracking. The paper reveals the design and\npotential of a consortium blockchain based application for financial\ndistribution. Utilizing the capabilities of Hyperledger Besu, the application\nis tailored to improve security, scalability, and interoperability, thereby\ncontributing to a more integrated financial ecosystem. The investigation sheds\nlight on the combination of consortium blockchain controlled access and\nHyprledger Besu comprehensive functionality, proposing a secure, transparent,\nand efficient financial transaction environment. The investigation serves as a\nresource for academics, industry professionals, and policymakers alike,\nhighlighting the vast potential of blockchain technology, enabled by platforms\nsuch as Hyperledger Besu, in accelerating the evolution of traditional systems\ntoward a more decentralized, secure, and efficient future.",
+          "arxiv_id": "2311.08483v1"
+        },
+        {
+          "title": "Aid Nexus : A Blockchain Based Financial Distribution System",
+          "year": "2023-11",
+          "abstract": "Blockchain technology has emerged as a disruptive force with transformative\npotential across numerous industries, promising efficient and automated\nsolutions that can revolutionize traditional systems. By leveraging\ndecentralized ledger systems, blockchain offers enhanced security,\ntransparency, and transaction verification without the need for intermediaries.\nThe finance sector is exploring blockchain-based solutions for payments,\nremittances, lending, and investments, while healthcare adopts the technology\nfor medical record keeping, supply chain tracking, and data management.\nSimilarly, supply chain management benefits from blockchain's ability to\nenhance transparency, traceability, and accountability from raw materials to\nfinished products. Other sectors, including real estate, energy, and\ngovernment, are also investigating blockchain-based solutions to improve\nefficiency, security, and transparency. Furthermore, smart contracts within the\nblockchain enable process automation, reducing manual intervention in\ndistribution workflows. AidNeux, a consortium-based blockchain DApp, reimagines\nthe distribution of financial assistance by addressing inefficiencies and\nopaqueness. Using smart contracts ensures the security and directness of money\ntransfers. Its robust digital identity verification and real-time auditability\nreduce fraud risks and strengthen accountability, thereby presenting a\nscalable, transparent solution to problems inherent to conventional financial\naid systems.",
+          "arxiv_id": "2311.08372v1"
+        },
+        {
+          "title": "Implementation and Security Analysis of Cryptocurrencies Based on Ethereum",
+          "year": "2025-04",
+          "abstract": "Blockchain technology has set off a wave of decentralization in the world\nsince its birth. The trust system constructed by blockchain technology based on\ncryptography algorithm and computing power provides a practical and powerful\nsolution to solve the trust problem in human society. In order to make more\nconvenient use of the characteristics of blockchain and build applications on\nit, smart contracts appear. By defining some trigger automatic execution\ncontracts, the application space of blockchain is expanded and the foundation\nfor the rapid development of blockchain is laid. This is blockchain 2.0.\nHowever, the programmability of smart contracts also introduces\nvulnerabilities. In order to cope with the insufficient security guarantee of\nhigh-value application networks running on blockchain 2.0 and smart contracts,\nthis article will be represented by Ethereum to introduce the technical details\nof understanding blockchain 2.0 and the operation principle of contract virtual\nmachines, and explain how cryptocurrencies based on blockchain 2.0 are\nconstructed and operated. The common security problems and solutions are also\ndiscussed. Based on relevant research and on-chain practice, this paper\nprovides a complete and comprehensive perspective to understanding\ncryptocurrency technology based on blockchain 2.0 and provides a reference for\nbuilding more secure cryptocurrency contracts.",
+          "arxiv_id": "2504.21367v2"
+        }
+      ],
+      "9": [
+        {
+          "title": "CFGPT: Chinese Financial Assistant with Large Language Model",
+          "year": "2023-09",
+          "abstract": "Large language models (LLMs) have demonstrated great potential in natural\nlanguage processing tasks within the financial domain. In this work, we present\na Chinese Financial Generative Pre-trained Transformer framework, named CFGPT,\nwhich includes a dataset~(CFData) for pre-training and supervised fine-tuning,\na financial LLM~(CFLLM) to adeptly manage financial texts, and a deployment\nframework~(CFAPP) designed to navigate real-world financial applications. The\nCFData comprising both a pre-training dataset and a supervised fine-tuning\ndataset, where the pre-training dataset collates Chinese financial data and\nanalytics, alongside a smaller subset of general-purpose text with 584M\ndocuments and 141B tokens in total, and the supervised fine-tuning dataset is\ntailored for six distinct financial tasks, embodying various facets of\nfinancial analysis and decision-making with 1.5M instruction pairs and 1.5B\ntokens in total. The CFLLM, which is based on InternLM-7B to balance the model\ncapability and size, is trained on CFData in two stage, continued pre-training\nand supervised fine-tuning. The CFAPP is centered on large language models\n(LLMs) and augmented with additional modules to ensure multifaceted\nfunctionality in real-world application. Our codes are released at\nhttps://github.com/TongjiFinLab/CFGPT.",
+          "arxiv_id": "2309.10654v2"
+        },
+        {
+          "title": "Golden Touchstone: A Comprehensive Bilingual Benchmark for Evaluating Financial Large Language Models",
+          "year": "2024-11",
+          "abstract": "As large language models become increasingly prevalent in the financial\nsector, there is a pressing need for a standardized method to comprehensively\nassess their performance. However, existing finance benchmarks often suffer\nfrom limited language and task coverage, as well as challenges such as\nlow-quality datasets and inadequate adaptability for LLM evaluation. To address\nthese limitations, we propose \"Golden Touchstone\", the first comprehensive\nbilingual benchmark for financial LLMs, which incorporates representative\ndatasets from both Chinese and English across eight core financial NLP tasks.\nDeveloped from extensive open source data collection and industry-specific\ndemands, this benchmark includes a variety of financial tasks aimed at\nthoroughly assessing models' language understanding and generation\ncapabilities. Through comparative analysis of major models on the benchmark,\nsuch as GPT-4o Llama3, FinGPT and FinMA, we reveal their strengths and\nlimitations in processing complex financial information. Additionally, we\nopen-sourced Touchstone-GPT, a financial LLM trained through continual\npre-training and financial instruction tuning, which demonstrates strong\nperformance on the bilingual benchmark but still has limitations in specific\ntasks.This research not only provides the financial large language models with\na practical evaluation tool but also guides the development and optimization of\nfuture research. The source code for Golden Touchstone and model weight of\nTouchstone-GPT have been made publicly available at\n\\url{https://github.com/IDEA-FinAI/Golden-Touchstone}, contributing to the\nongoing evolution of FinLLMs and fostering further research in this critical\narea.",
+          "arxiv_id": "2411.06272v1"
+        },
+        {
+          "title": "FinBERT2: A Specialized Bidirectional Encoder for Bridging the Gap in Finance-Specific Deployment of Large Language Models",
+          "year": "2025-05",
+          "abstract": "In natural language processing (NLP), the focus has shifted from encoder-only\ntiny language models like BERT to decoder-only large language models(LLMs) such\nas GPT-3. However, LLMs' practical application in the financial sector has\nrevealed three limitations: (1) LLMs often perform worse than fine-tuned BERT\non discriminative tasks despite costing much higher computational resources,\nsuch as market sentiment analysis in financial reports; (2) Application on\ngenerative tasks heavily relies on retrieval augmented generation (RAG) methods\nto provide current and specialized information, with general retrievers showing\nsuboptimal performance on domain-specific retrieval tasks; (3) There are\nadditional inadequacies in other feature-based scenarios, such as topic\nmodeling. We introduce FinBERT2, a specialized bidirectional encoder pretrained\non a high-quality, financial-specific corpus of 32b tokens. This represents the\nlargest known Chinese financial pretraining corpus for models of this parameter\nsize. As a better backbone, FinBERT2 can bridge the gap in the\nfinancial-specific deployment of LLMs through the following achievements: (1)\nDiscriminative fine-tuned models (Fin-Labelers) outperform other (Fin)BERT\nvariants by 0.4%-3.3% and leading LLMs by 9.7%-12.3% on average across five\nfinancial classification tasks. (2) Contrastive fine-tuned models\n(Fin-Retrievers) outperform both open-source (e.g., +6.8\\% avg improvement over\nBGE-base-zh) and proprietary (e.g., +4.2\\% avg improvement over OpenAI's\ntext-embedding-3-large) embedders across five financial retrieval tasks; (3)\nBuilding on FinBERT2 variants, we construct the Fin-TopicModel, which enables\nsuperior clustering and topic representation for financial titles. Our work\nrevisits financial BERT models through comparative analysis with contemporary\nLLMs and offers practical insights for effectively utilizing FinBERT in the\nLLMs era.",
+          "arxiv_id": "2506.06335v2"
+        }
+      ],
+      "10": [
+        {
+          "title": "A Time Domain Volume Integral Equation Solver to Analyze Electromagnetic Scattering from Nonlinear Dielectric Objects",
+          "year": "2022-07",
+          "abstract": "A time domain electric field volume integral equation (TD-EFVIE) solver is\nproposed for analyzing electromagnetic scattering from dielectric objects with\nKerr nonlinearity. The nonlinear constitutive relation that relates electric\nflux and electric field induced in the scatterer is used as an auxiliary\nequation that complements TD-EFVIE. The ordinary differential equation system\nthat arises from TD-EFVIE's Schaubert-Wilton-Glisson (SWG)-based discretization\nis integrated in time using a predictor-corrector method for the unknown\nexpansion coefficients of the electric field. Matrix systems that arise from\nthe SWG-based discretization of the nonlinear constitutive relation and its\ninverse obtained using the Pade approximant are used to carry out explicit\nupdates of the electric field and the electric flux expansion coefficients at\nthe predictor and the corrector stages of the time integration method. The\nresulting explicit marching-on-in-time (MOT) scheme does not call for any\nNewton-like nonlinear solver and only requires solution of sparse and\nwell-conditioned Gram matrix systems at every step. Numerical results show that\nthe proposed explicit MOT-based TD-EFVIE solver is more accurate than the\nfinite-difference time-domain method that is traditionally used for analyzing\ntransient electromagnetic scattering from nonlinear objects.",
+          "arxiv_id": "2208.02342v2"
+        },
+        {
+          "title": "A Hybrid SIE-PDE Formulation Without Boundary Condition Requirement for Transverse Magnetic Electromagnetic Analysis",
+          "year": "2021-05",
+          "abstract": "A hybrid surface integral equation partial differential equation (SIE-PDE)\nformulation without the boundary condition requirement is proposed to solve the\ntransverse magnetic (TM) electromagnetic problems. In the proposed formulation,\nthe computational domain is decomposed into two overlapping domains: the SIE\nand PDE domains. In the SIE domain, complex structures with piecewise\nhomogeneous media, e.g., highly conductive media, are included. An equivalent\nmodel for those structures is constructed by replacing them with the background\nmedium and introducing a surface equivalent electric current density on an\nenclosed boundary to represent their electromagnetic effects. The remaining\ncomputational domain and homogeneous background medium replaced domain consist\nof the PDE domain, in which inhomogeneous or non-isotropic media are included.\nThrough combining the surface equivalent electric current density and the\ninhomogeneous Helmholtz equation, a hybrid SIE-PDE formulation is derived. It\nrequires no boundary conditions, and is mathematically equivalent to the\noriginal physical model. Through careful construction of basis functions to\nexpand electric fields and the equivalent current density, the discretized\nformulation is made compatible with the SIE and PDE domain interface. The\naccuracy and efficiency are validated through two numerical examples. Results\nshow that the proposed SIE-PDE formulation can obtain accurate results, and\nsignificant performance improvements in terms of CPU time and memory\nconsumption compared with the FEM are achieved.",
+          "arxiv_id": "2105.14461v2"
+        },
+        {
+          "title": "A Stable FDTD Subgridding Scheme with SBP-SAT for Transient Electromagnetic Analysis",
+          "year": "2021-10",
+          "abstract": "We proposed a provably stable FDTD subgridding method for accurate and\nefficient transient electromagnetic analysis. In the proposed method, several\nfield components are properly added to the boundaries of Yee's grid to make\nsure that the discrete operators meet the summation-by-parts (SBP) property.\nThen, by incorporating the simultaneous approximation terms (SATs) into the\nfinite-difference time-domain (FDTD) method, the proposed FDTD subgridding\nmethod mimics the energy estimate of the continuous Maxwell's equations at the\nsemi-discrete level to guarantee its stability. Further, to couple multiple\nmesh blocks with different mesh sizes, the interpolation matrices are also\nderived. The proposed FDTD subgridding method is accurate, efficient, easy to\nimplement and be integrated into the existing FDTD codes with only simple\nmodifications. At last, three numerical examples with fine structures are\ncarried out to validate the effectiveness of the proposed method.",
+          "arxiv_id": "2110.09054v1"
+        }
+      ],
+      "11": [
+        {
+          "title": "The QUATRO Application Suite: Quantum Computing for Models of Human Cognition",
+          "year": "2023-09",
+          "abstract": "Research progress in quantum computing has, thus far, focused on a narrow set\nof application domains. Expanding the suite of quantum application domains is\nvital for the discovery of new software toolchains and architectural\nabstractions. In this work, we unlock a new class of applications ripe for\nquantum computing research -- computational cognitive modeling. Cognitive\nmodels are critical to understanding and replicating human intelligence. Our\nwork connects computational cognitive models to quantum computer architectures\nfor the first time. We release QUATRO, a collection of quantum computing\napplications from cognitive models. The development and execution of QUATRO\nshed light on gaps in the quantum computing stack that need to be closed to\nease programming and drive performance. Among several contributions, we propose\nand study ideas pertaining to quantum cloud scheduling (using data from gate-\nand annealing-based quantum computers), parallelization, and more. In the long\nrun, we expect our research to lay the groundwork for more versatile quantum\ncomputer systems in the future.",
+          "arxiv_id": "2309.00597v2"
+        },
+        {
+          "title": "Quantum Computing for Multi Period Asset Allocation",
+          "year": "2024-10",
+          "abstract": "Portfolio construction has been a long-standing topic of research in finance.\nThe computational complexity and the time taken both increase rapidly with the\nnumber of investments in the portfolio. It becomes difficult, even impossible\nfor classic computers to solve. Quantum computing is a new way of computing\nwhich takes advantage of quantum superposition and entanglement. It changes how\nsuch problems are approached and is not constrained by some of the classic\ncomputational complexity. Studies have shown that quantum computing can offer\nsignificant advantages over classical computing in many fields. The application\nof quantum computing has been constrained by the unavailability of actual\nquantum computers. In the past decade, there has been the rapid development of\nthe large-scale quantum computer. However, software development for quantum\ncomputing is slow in many fields. In our study, we apply quantum computing to a\nmulti-asset portfolio simulation. The simulation is based on historic data,\ncovariance, and expected returns, all calculated using quantum computing.\nAlthough technically a solvable problem for classical computing, we believe the\nsoftware development is important to the future application of quantum\ncomputing in finance. We conducted this study through simulation of a quantum\ncomputer and the use of Rensselaer Polytechnic Institute's IBM quantum\ncomputer.",
+          "arxiv_id": "2410.11997v1"
+        },
+        {
+          "title": "Variational quantum and neural quantum states algorithms for the linear complementarity problem",
+          "year": "2025-04",
+          "abstract": "Variational quantum algorithms (VQAs) are promising hybrid quantum-classical\nmethods designed to leverage the computational advantages of quantum computing\nwhile mitigating the limitations of current noisy intermediate-scale quantum\n(NISQ) hardware. Although VQAs have been demonstrated as proofs of concept,\ntheir practical utility in solving real-world problems -- and whether\nquantum-inspired classical algorithms can match their performance -- remains an\nopen question. We present a novel application of the variational quantum linear\nsolver (VQLS) and its classical neural quantum states-based counterpart, the\nvariational neural linear solver (VNLS), as key components within a minimum map\nNewton solver for a complementarity-based rigid body contact model. We\ndemonstrate using the VNLS that our solver accurately simulates the dynamics of\nrigid spherical bodies during collision events. These results suggest that\nquantum and quantum-inspired linear algebra algorithms can serve as viable\nalternatives to standard linear algebra solvers for modeling certain physical\nsystems.",
+          "arxiv_id": "2504.08141v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:21:11Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

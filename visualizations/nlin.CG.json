@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_cellular_automata_cellular automata_model",
+        "keywords": [
+          [
+            "cellular",
+            0.06142276447005712
+          ],
+          [
+            "automata",
+            0.05550434134420466
+          ],
+          [
+            "cellular automata",
+            0.04720067168038301
+          ],
+          [
+            "model",
+            0.04383063819726226
+          ],
+          [
+            "systems",
+            0.0419644121098545
+          ],
+          [
+            "dynamics",
+            0.04018267701830959
+          ],
+          [
+            "CA",
+            0.03709536617002767
+          ],
+          [
+            "time",
+            0.035900537582057315
+          ],
+          [
+            "rules",
+            0.03171281291967294
+          ],
+          [
+            "Cellular",
+            0.028190256423478447
+          ]
+        ],
+        "count": 360
+      },
+      "1": {
+        "name": "1_model_flow_data_disease",
+        "keywords": [
+          [
+            "model",
+            0.08724022166216645
+          ],
+          [
+            "flow",
+            0.058961286292833696
+          ],
+          [
+            "data",
+            0.03448603287535714
+          ],
+          [
+            "disease",
+            0.03337737572069676
+          ],
+          [
+            "different",
+            0.03238586781274774
+          ],
+          [
+            "time",
+            0.03143107183000032
+          ],
+          [
+            "models",
+            0.030559393910567185
+          ],
+          [
+            "cellular",
+            0.02731473724157997
+          ],
+          [
+            "parameters",
+            0.026631312738640396
+          ],
+          [
+            "spread",
+            0.026261774543129588
+          ]
+        ],
+        "count": 44
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        0.14325672610488338
+      ],
+      [
+        0.14325672610488338,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        4,
+        3
+      ],
+      "2020-02": [
+        10,
+        1
+      ],
+      "2020-03": [
+        7,
+        0
+      ],
+      "2020-04": [
+        5,
+        5
+      ],
+      "2020-05": [
+        6,
+        2
+      ],
+      "2020-06": [
+        5,
+        1
+      ],
+      "2020-07": [
+        4,
+        5
+      ],
+      "2020-08": [
+        6,
+        2
+      ],
+      "2020-09": [
+        6,
+        0
+      ],
+      "2020-10": [
+        2,
+        3
+      ],
+      "2020-11": [
+        3,
+        1
+      ],
+      "2020-12": [
+        3,
+        0
+      ],
+      "2021-01": [
+        2,
+        2
+      ],
+      "2021-02": [
+        2,
+        3
+      ],
+      "2021-03": [
+        4,
+        1
+      ],
+      "2021-04": [
+        4,
+        2
+      ],
+      "2021-05": [
+        4,
+        1
+      ],
+      "2021-06": [
+        5,
+        0
+      ],
+      "2021-07": [
+        9,
+        1
+      ],
+      "2021-08": [
+        5,
+        0
+      ],
+      "2021-09": [
+        2,
+        1
+      ],
+      "2021-10": [
+        5,
+        1
+      ],
+      "2021-11": [
+        4,
+        0
+      ],
+      "2021-12": [
+        7,
+        3
+      ],
+      "2022-01": [
+        3,
+        0
+      ],
+      "2022-02": [
+        2,
+        2
+      ],
+      "2022-03": [
+        7,
+        1
+      ],
+      "2022-04": [
+        3,
+        1
+      ],
+      "2022-05": [
+        3,
+        1
+      ],
+      "2022-06": [
+        4,
+        1
+      ],
+      "2022-07": [
+        2,
+        1
+      ],
+      "2022-08": [
+        5,
+        1
+      ],
+      "2022-09": [
+        3,
+        0
+      ],
+      "2022-10": [
+        7,
+        0
+      ],
+      "2022-11": [
+        6,
+        0
+      ],
+      "2022-12": [
+        4,
+        0
+      ],
+      "2023-01": [
+        5,
+        2
+      ],
+      "2023-02": [
+        2,
+        1
+      ],
+      "2023-03": [
+        0,
+        2
+      ],
+      "2023-04": [
+        3,
+        2
+      ],
+      "2023-05": [
+        5,
+        2
+      ],
+      "2023-06": [
+        5,
+        1
+      ],
+      "2023-07": [
+        6,
+        2
+      ],
+      "2023-08": [
+        0,
+        3
+      ],
+      "2023-09": [
+        2,
+        1
+      ],
+      "2023-10": [
+        9,
+        3
+      ],
+      "2023-11": [
+        1,
+        1
+      ],
+      "2023-12": [
+        7,
+        3
+      ],
+      "2024-01": [
+        8,
+        1
+      ],
+      "2024-02": [
+        5,
+        0
+      ],
+      "2024-03": [
+        3,
+        0
+      ],
+      "2024-04": [
+        2,
+        1
+      ],
+      "2024-05": [
+        5,
+        1
+      ],
+      "2024-06": [
+        6,
+        3
+      ],
+      "2024-07": [
+        12,
+        0
+      ],
+      "2024-08": [
+        3,
+        0
+      ],
+      "2024-09": [
+        4,
+        1
+      ],
+      "2024-10": [
+        5,
+        1
+      ],
+      "2024-11": [
+        6,
+        1
+      ],
+      "2024-12": [
+        1,
+        2
+      ],
+      "2025-01": [
+        4,
+        1
+      ],
+      "2025-02": [
+        6,
+        0
+      ],
+      "2025-03": [
+        8,
+        0
+      ],
+      "2025-04": [
+        3,
+        1
+      ],
+      "2025-05": [
+        6,
+        0
+      ],
+      "2025-06": [
+        6,
+        2
+      ],
+      "2025-07": [
+        6,
+        1
+      ],
+      "2025-08": [
+        9,
+        1
+      ],
+      "2025-09": [
+        2,
+        0
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Fungal Automata",
+          "year": "2020-03",
+          "abstract": "We study a cellular automaton (CA) model of information dynamics on a single\nhypha of a fungal mycelium. Such a filament is divided in compartments (here\nalso called cells) by septa. These septa are invaginations of the cell wall and\ntheir pores allow for flow of cytoplasm between compartments and hyphae. The\nseptal pores of the fungal phylum of the Ascomycota can be closed by organelles\ncalled Woronin bodies. Septal closure is increased when the septa become older\nand when exposed to stress conditions. Thus, Woronin bodies act as\ninformational flow valves. The one dimensional fungal automata is a binary\nstate ternary neighbourhood CA, where every compartment follows one of the\nelementary cellular automata (ECA) rules if its pores are open and either\nremains in state `0' (first species of fungal automata) or its previous state\n(second species of fungal automata) if its pores are closed. The Woronin bodies\nclosing the pores are also governed by ECA rules. We analyse a structure of the\ncomposition space of cell-state transition and pore-state transitions rules,\ncomplexity of fungal automata with just few Woronin bodies, and exemplify\nseveral important local events in the automaton dynamics.",
+          "arxiv_id": "2003.08168v1"
+        },
+        {
+          "title": "On complex dynamics from reversible cellular automata",
+          "year": "2020-09",
+          "abstract": "Complexity has been a recurrent research topic in cellular automata because\nthey represent systems where complex behaviors emerge from simple local\ninteractions. A significant amount of previous research has been conducted\nproposing instances of complex cellular automata; however, most of the proposed\nmethods are based on a careful search or a meticulous construction of evolution\nrules.\n  This paper presents the emergence of complex behaviors based on reversible\ncellular automata. In particular, this paper shows that reversible cellular\nautomata represent an adequate framework to obtain complex behaviors adding\nonly new random states.\n  Experimental results show that complexity can be obtained from reversible\ncellular automata appending a proportion of about two times more states at\nrandom than the original number of states in the reversible automaton. Thus, it\nis possible to obtain complex cellular automata with dozens of states.\nComplexity appears to be commonly obtained from reversible cellular automata,\nand using other operations such as permutations of states or row and column\npermutations in the evolution rule. The relevance of this paper is to present\nthat reversibility can be a useful structure to implement complex behaviors in\ncellular automata.",
+          "arxiv_id": "2009.09122v1"
+        },
+        {
+          "title": "Cellular Automata: Temporal Stochasticity and Computability",
+          "year": "2022-10",
+          "abstract": "In this dissertation, we study temporally stochasticity in cellular automata\nand the behavior of such cellular automata. The work also explores the\ncomputational ability of such cellular automaton that illustrates the\ncomputability of solving the affinity classification problem. In addition to\nthat, a cellular automaton, defined over Cayley tree, is shown as the classical\nsearching problem solver. The proposed temporally stochastic cellular automata\ndeals with two elementary cellular automata rules, say $f$ and $g$. The $f$ is\nthe default rule, however, $g$ is temporally applied to the overall system with\nsome probability $\\tau$ which acts as a noise in the system. After exploring\nthe dynamics of temporally stochastic cellular automata (TSCAs), we study the\ndynamical behavior of these temporally stochastic cellular automata (TSCAs) to\nidentify the TSCAs that converge to a fixed point from any seed. We apply each\nof the convergent TSCAs to some standard datasets and observe the effectiveness\nof each TSCA as a pattern classifier. It is observed that the proposed\nTSCA-based classifier shows competitive performance in comparison with existing\nclassifier algorithms. We use temporally stochastic cellular automata to solve\na new problem in the field of cellular automata, named as, affinity\nclassification problem which is a generalization of the density classification\nproblem . We show that this model can be used in several applications, like\nmodeling self-healing systems. Finally, we introduce a new model of computing\nunit developed around cellular automata to reduce the workload of the Central\nProcessing Unit (CPU) of a machine to compute. Each cell of the computing unit\nacts as a tiny processing element with attached memory. Such a CA is\nimplemented on the Cayley Tree to realize efficient solutions for diverse\ncomputational problems.",
+          "arxiv_id": "2210.13971v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Simulating the spread of COVID-19 with cellular automata: A new approach",
+          "year": "2023-07",
+          "abstract": "Between the years 2020 to 2022, the world was hit by the pandemic of COVID-19\ngiving rise to an extremely grave situation. The global economy was badly hurt\ndue to the consequences of various intervention strategies (like social\ndistancing, lockdown) which were applied by different countries to control this\npandemic. There are multiple speculations that humanity will again face such\npandemics in the future. Thus it is very important to learn and gain knowledge\nabout the spread of such infectious diseases and the various factors which are\nresponsible for it. In this study, we have extended our previous work\n(Chowdhury et.al., 2022) on the probabilistic cellular automata (CA) model to\nreproduce the spread of COVID-19 in several countries by modifying its earlier\nused neighbourhood criteria. This modification gives us the liberty to adopt\nthe effect of different restrictions like lockdown and social distancing in our\nmodel. We have done some theoretical analysis for initial infection and\nsimulations to gain insights into our model. We have also studied the data from\neight countries for COVID-19 in a window of 876 days and compared it with our\nmodel. We have developed a proper framework to fit our model on the data for\nconfirmed cases of COVID-19 and have also re-checked the goodness of the fit\nwith the data of the deceased cases for this pandemic. This model fits well\nwith different peaks of COVID-19 data for all the eight countries and can be\npossibly generalized for a global prediction.",
+          "arxiv_id": "2307.14576v1"
+        },
+        {
+          "title": "Computational model on COVID-19 Pandemic using Probabilistic Cellular Automata",
+          "year": "2020-06",
+          "abstract": "Coronavirus disease (COVID-19) which is caused by SARS-COV2 has become a\npandemic. This disease is highly infectious and potentially fatal, causing a\nglobal public health concern. To contain the spread of COVID-19, governments\nare adopting nationwide interventions, like lockdown, containment and\nquarantine, restrictions on travel, cancelling social events and extensive\ntesting. To understand the effects of these measures on the control of the\nepidemic in a data-driven manner, we propose a probabilistic cellular automata\n(PCA) based modified SEIQR model. The transitions associated with the model is\ndriven by data available on chronology, symptoms, pathogenesis and\ntransmissivity of the virus. By arguing that the lattice-based model captures\nthe features of the dynamics along with the existing fluctuations, we perform\nrigorous computational analyses of the model to take into account of the\nspatial dynamics of social distancing measures imposed on the people.\nConsidering the probabilistic behavioural aspects associated with mitigation\nstrategies, we study the model considering factors like population density and\ntesting efficiency. Using the model, we focus on the variability of epidemic\ndynamics data for different countries and point out the reasons behind these\ncontrasting observations. To the best of our knowledge, this is the first\nattempt to model COVID-19 spread using PCA that gives us both spatial and\ntemporal variations of the infection spread with the insight about the\ncontributions of different infection parameters.",
+          "arxiv_id": "2006.11270v1"
+        },
+        {
+          "title": "Traffic Modeling and Forecast based on Stochastic Cell-Automata and Distributed Fiber-Optic Sensing -- A Numerical Experiment",
+          "year": "2024-05",
+          "abstract": "This paper demonstrates accurate traffic modeling and forecast using\nstochastic cell-automata (CA) and distributed fiber-optic sensing (DFOS).\nTraffic congestion is a dominant issue in highways. To reduce congestion,\nreal-time traffic control by short-term forecast is necessary. For achieving\nthis, data assimilation using a stochastic CA model and DFOS is promising. Data\nassimilation with a CA enables us to model real-time traffic flow with simple\nprocesses even when rare or sudden events occur, which is challenging for usual\nmachine learning-based methods. DFOS overcomes issues of conventional point\nsensors that have dead zones of observation. By estimating optimal model\nparameters that reproduce observed traffic flow in the simulation, future\ntraffic flow is forecasted from the simulation. We propose an optimal model\nparameter estimation method using mean velocity as an extracted feature and the\nparticle filter. In addition, an estimation methodology for the microscopic\ntraffic situation is developed to set the initial condition of simulation for\nforecast in accordance with observation. The proposed methods are verified by\nsimulation-based traffic flow. The simulation adopts the stochastic\nNishinari-Fukui-Schadschneider model. The optimal model parameters are\nsuccessfully derived from posterior probability distributions (PPDs) estimated\nfrom DFOS data. In contrast, those estimated from point sensors fail. The PPDs\nof model parameters also indicate that each parameter has different\nsensitivities to traffic flow. A traffic forecast up to 60 minutes later is\ncarried out. Using optimal model parameters estimated from DFOS, the forecast\nerror of mean velocity is approximately $\\pm$10 km/h (percentage error is 18%).\nThe error attains half of it when conventional point sensors are used. We\nconclude that DFOS is a powerful technique for traffic modeling and short-term\nforecast.",
+          "arxiv_id": "2405.19436v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:37:39Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

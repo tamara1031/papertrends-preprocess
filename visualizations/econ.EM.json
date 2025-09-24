@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_model_data_models_treatment",
+        "keywords": [
+          [
+            "model",
+            0.027876534016465924
+          ],
+          [
+            "data",
+            0.02666525134679648
+          ],
+          [
+            "models",
+            0.023781421875066204
+          ],
+          [
+            "treatment",
+            0.02241359106395023
+          ],
+          [
+            "time",
+            0.018828804930347696
+          ],
+          [
+            "effects",
+            0.01850320876104265
+          ],
+          [
+            "paper",
+            0.017933257919960754
+          ],
+          [
+            "estimation",
+            0.01724485455751527
+          ],
+          [
+            "estimator",
+            0.016162149718166485
+          ],
+          [
+            "method",
+            0.015575264369723
+          ]
+        ],
+        "count": 3203
+      },
+      "1": {
+        "name": "1_network_effects_peer_model",
+        "keywords": [
+          [
+            "network",
+            0.07880939523781345
+          ],
+          [
+            "effects",
+            0.03532708739118641
+          ],
+          [
+            "peer",
+            0.03530794668813197
+          ],
+          [
+            "model",
+            0.031651913787327436
+          ],
+          [
+            "estimator",
+            0.030422488738684087
+          ],
+          [
+            "networks",
+            0.02858646452317388
+          ],
+          [
+            "data",
+            0.028132303768057365
+          ],
+          [
+            "formation",
+            0.025239963302809053
+          ],
+          [
+            "peer effects",
+            0.022674455800566415
+          ],
+          [
+            "network formation",
+            0.020444311936864298
+          ]
+        ],
+        "count": 65
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.13875881328755135
+      ],
+      [
+        -0.13875881328755135,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        20,
+        4
+      ],
+      "2020-02": [
+        41,
+        5
+      ],
+      "2020-03": [
+        29,
+        0
+      ],
+      "2020-04": [
+        49,
+        4
+      ],
+      "2020-05": [
+        42,
+        8
+      ],
+      "2020-06": [
+        66,
+        6
+      ],
+      "2020-07": [
+        39,
+        6
+      ],
+      "2020-08": [
+        37,
+        3
+      ],
+      "2020-09": [
+        41,
+        6
+      ],
+      "2020-10": [
+        45,
+        11
+      ],
+      "2020-11": [
+        44,
+        2
+      ],
+      "2020-12": [
+        44,
+        7
+      ],
+      "2021-01": [
+        29,
+        9
+      ],
+      "2021-02": [
+        58,
+        7
+      ],
+      "2021-03": [
+        51,
+        8
+      ],
+      "2021-04": [
+        31,
+        6
+      ],
+      "2021-05": [
+        28,
+        12
+      ],
+      "2021-06": [
+        27,
+        6
+      ],
+      "2021-07": [
+        30,
+        8
+      ],
+      "2021-08": [
+        37,
+        3
+      ],
+      "2021-09": [
+        41,
+        9
+      ],
+      "2021-10": [
+        51,
+        5
+      ],
+      "2021-11": [
+        44,
+        6
+      ],
+      "2021-12": [
+        43,
+        7
+      ],
+      "2022-01": [
+        47,
+        6
+      ],
+      "2022-02": [
+        43,
+        4
+      ],
+      "2022-03": [
+        33,
+        6
+      ],
+      "2022-04": [
+        45,
+        6
+      ],
+      "2022-05": [
+        51,
+        11
+      ],
+      "2022-06": [
+        31,
+        10
+      ],
+      "2022-07": [
+        34,
+        4
+      ],
+      "2022-08": [
+        35,
+        7
+      ],
+      "2022-09": [
+        43,
+        5
+      ],
+      "2022-10": [
+        44,
+        8
+      ],
+      "2022-11": [
+        40,
+        9
+      ],
+      "2022-12": [
+        39,
+        9
+      ],
+      "2023-01": [
+        50,
+        6
+      ],
+      "2023-02": [
+        45,
+        4
+      ],
+      "2023-03": [
+        34,
+        7
+      ],
+      "2023-04": [
+        28,
+        7
+      ],
+      "2023-05": [
+        37,
+        8
+      ],
+      "2023-06": [
+        41,
+        8
+      ],
+      "2023-07": [
+        51,
+        10
+      ],
+      "2023-08": [
+        47,
+        6
+      ],
+      "2023-09": [
+        36,
+        13
+      ],
+      "2023-10": [
+        55,
+        8
+      ],
+      "2023-11": [
+        45,
+        7
+      ],
+      "2023-12": [
+        50,
+        5
+      ],
+      "2024-01": [
+        43,
+        8
+      ],
+      "2024-02": [
+        56,
+        9
+      ],
+      "2024-03": [
+        53,
+        11
+      ],
+      "2024-04": [
+        52,
+        5
+      ],
+      "2024-05": [
+        66,
+        11
+      ],
+      "2024-06": [
+        54,
+        5
+      ],
+      "2024-07": [
+        52,
+        4
+      ],
+      "2024-08": [
+        52,
+        10
+      ],
+      "2024-09": [
+        43,
+        9
+      ],
+      "2024-10": [
+        57,
+        16
+      ],
+      "2024-11": [
+        62,
+        10
+      ],
+      "2024-12": [
+        59,
+        6
+      ],
+      "2025-01": [
+        53,
+        12
+      ],
+      "2025-02": [
+        48,
+        12
+      ],
+      "2025-03": [
+        61,
+        7
+      ],
+      "2025-04": [
+        37,
+        10
+      ],
+      "2025-05": [
+        62,
+        12
+      ],
+      "2025-06": [
+        71,
+        13
+      ],
+      "2025-07": [
+        61,
+        16
+      ],
+      "2025-08": [
+        44,
+        5
+      ],
+      "2025-09": [
+        35,
+        5
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Safe Policy Learning under Regression Discontinuity Designs with Multiple Cutoffs",
+          "year": "2022-08",
+          "abstract": "The regression discontinuity (RD) design is widely used for program\nevaluation with observational data. The primary focus of the existing\nliterature has been the estimation of the local average treatment effect at the\nexisting treatment cutoff. In contrast, we consider policy learning under the\nRD design. Because the treatment assignment mechanism is deterministic,\nlearning better treatment cutoffs requires extrapolation. We develop a robust\noptimization approach to finding optimal treatment cutoffs that improve upon\nthe existing ones. We first decompose the expected utility into\npoint-identifiable and unidentifiable components. We then propose an efficient\ndoubly-robust estimator for the identifiable parts. To account for the\nunidentifiable components, we leverage the existence of multiple cutoffs that\nare common under the RD design. Specifically, we assume that the heterogeneity\nin the conditional expectations of potential outcomes across different groups\nvary smoothly along the running variable. Under this assumption, we minimize\nthe worst case utility loss relative to the status quo policy. The resulting\nnew treatment cutoffs have a safety guarantee that they will not yield a worse\noverall outcome than the existing cutoffs. Finally, we establish the asymptotic\nregret bounds for the learned policy using semi-parametric efficiency theory.\nWe apply the proposed methodology to empirical and simulated data sets.",
+          "arxiv_id": "2208.13323v4"
+        },
+        {
+          "title": "The Identification Power of Combining Experimental and Observational Data for Distributional Treatment Effect Parameters",
+          "year": "2025-08",
+          "abstract": "This paper investigates the identification power gained by combining\nexperimental data, in which treatment is randomized, with observational data,\nin which treatment is self-selected, for distributional treatment effect (DTE)\nparameters. While experimental data identify average treatment effects, many\nDTE parameters, such as the distribution of individual treatment effects, are\nonly partially identified. We examine whether, and how, combining the two data\nsources tightens the identified set for these parameters. For broad classes of\nDTE parameters, we derive sharp bounds under the combined data and clarify the\nmechanism through which the data combination tightens the identified set\nrelative to using experimental data alone. Our analysis highlights that\nself-selection in the observational data is a key source of identification\npower. We also characterize necessary and sufficient conditions under which the\ncombined data shrink the identified set, showing that such shrinkage generally\noccurs unless selection-on-observables holds in the observational data. We also\npropose a linear programming approach to compute the sharp bounds, which can\naccommodate additional structural restrictions such as mutual stochastic\nmonotonicity of potential outcomes and the generalized Roy model. An empirical\napplication using data on negative campaign advertisements in a U.S.\npresidential election illustrates the practical relevance of the approach.",
+          "arxiv_id": "2508.12206v1"
+        },
+        {
+          "title": "Double Debiased Machine Learning Nonparametric Inference with Continuous Treatments",
+          "year": "2020-04",
+          "abstract": "We propose a doubly robust inference method for causal effects of continuous\ntreatment variables, under unconfoundedness and with nonparametric or\nhigh-dimensional nuisance functions. Our double debiased machine learning (DML)\nestimators for the average dose-response function (or the average structural\nfunction) and the partial effects are asymptotically normal with non-parametric\nconvergence rates. The first-step estimators for the nuisance conditional\nexpectation function and the conditional density can be nonparametric or ML\nmethods. Utilizing a kernel-based doubly robust moment function and\ncross-fitting, we give high-level conditions under which the nuisance function\nestimators do not affect the first-order large sample distribution of the DML\nestimators. We provide sufficient low-level conditions for kernel, series, and\ndeep neural networks. We justify the use of kernel to localize the continuous\ntreatment at a given value by the Gateaux derivative. We implement various ML\nmethods in Monte Carlo simulations and an empirical application on a job\ntraining program evaluation",
+          "arxiv_id": "2004.03036v8"
+        }
+      ],
+      "1": [
+        {
+          "title": "An optimal test for strategic interaction in social and economic network formation between heterogeneous agents",
+          "year": "2020-09",
+          "abstract": "Consider a setting where $N$ players, partitioned into $K$ observable types,\nform a directed network. Agents' preferences over the form of the network\nconsist of an arbitrary network benefit function (e.g., agents may have\npreferences over their network centrality) and a private component which is\nadditively separable in own links. This latter component allows for unobserved\nheterogeneity in the costs of sending and receiving links across agents\n(respectively out- and in- degree heterogeneity) as well as\nhomophily/heterophily across the $K$ types of agents. In contrast, the network\nbenefit function allows agents' preferences over links to vary with the\npresence or absence of links elsewhere in the network (and hence with the link\nformation behavior of their peers). In the null model which excludes the\nnetwork benefit function, links form independently across dyads in the manner\ndescribed by \\cite{Charbonneau_EJ17}. Under the alternative there is\ninterdependence across linking decisions (i.e., strategic interaction). We show\nhow to test the null with power optimized in specific directions. These\nalternative directions include many common models of strategic network\nformation (e.g., \"connections\" models, \"structural hole\" models etc.). Our\nrandom utility specification induces an exponential family structure under the\nnull which we exploit to construct a similar test which exactly controls size\n(despite the the null being a composite one with many nuisance parameters). We\nfurther show how to construct locally best tests for specific alternatives\nwithout making any assumptions about equilibrium selection. To make our tests\nfeasible we introduce a new MCMC algorithm for simulating the null\ndistributions of our test statistics.",
+          "arxiv_id": "2009.00212v2"
+        },
+        {
+          "title": "On the Estimation of Peer Effects for Sampled Networks",
+          "year": "2022-08",
+          "abstract": "This paper deals with the estimation of exogeneous peer effects for partially\nobserved networks under the new inferential paradigm of design identification,\nwhich characterizes the missing data challenge arising with sampled networks\nwith the central idea that two full data versions which are topologically\ncompatible with the observed data may give rise to two different probability\ndistributions. We show that peer effects cannot be identified by design when\nnetwork links between sampled and unsampled units are not observed. Under\nrealistic modeling conditions, and under the assumption that sampled units\nreport on the size of their network of contacts, the asymptotic bias arising\nfrom estimating peer effects with incomplete network data is characterized, and\na bias-corrected estimator is proposed. The finite sample performance of our\nmethodology is investigated via simulations.",
+          "arxiv_id": "2208.09102v1"
+        },
+        {
+          "title": "Estimating Peer Effects Using Partial Network Data",
+          "year": "2025-09",
+          "abstract": "We study the estimation of peer effects through social networks when\nresearchers do not observe the entire network structure. Special cases include\nsampled networks, censored networks, and misclassified links. We assume that\nresearchers can obtain a consistent estimator of the distribution of the\nnetwork. We show that this assumption is sufficient for estimating peer effects\nusing a linear-in-means model. We provide an empirical application to the study\nof peer effects on students' academic achievement using the widely used Add\nHealth database, and show that network data errors have a large downward bias\non estimated peer effects.",
+          "arxiv_id": "2509.08145v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:23:14Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

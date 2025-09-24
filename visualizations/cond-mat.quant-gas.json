@@ -1,0 +1,2272 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_topological_non_Hermitian_edge",
+        "keywords": [
+          [
+            "topological",
+            0.04267565473938137
+          ],
+          [
+            "non",
+            0.02761926895621489
+          ],
+          [
+            "Hermitian",
+            0.02518600219127437
+          ],
+          [
+            "edge",
+            0.018428714247380157
+          ],
+          [
+            "states",
+            0.016591690614734
+          ],
+          [
+            "systems",
+            0.014940756887925306
+          ],
+          [
+            "boundary",
+            0.014736720257580885
+          ],
+          [
+            "band",
+            0.014573109476430307
+          ],
+          [
+            "Chern",
+            0.013711066451190891
+          ],
+          [
+            "Hall",
+            0.013331133950209819
+          ]
+        ],
+        "count": 649
+      },
+      "1": {
+        "name": "1_quantum_systems_body_dynamics",
+        "keywords": [
+          [
+            "quantum",
+            0.02559671030360715
+          ],
+          [
+            "systems",
+            0.021048022168804675
+          ],
+          [
+            "body",
+            0.01978439078833089
+          ],
+          [
+            "dynamics",
+            0.01758410849332675
+          ],
+          [
+            "time",
+            0.014122165421640886
+          ],
+          [
+            "model",
+            0.013187247637186008
+          ],
+          [
+            "non",
+            0.012654703830410133
+          ],
+          [
+            "entanglement",
+            0.012464405140977554
+          ],
+          [
+            "states",
+            0.01049388131012452
+          ],
+          [
+            "state",
+            0.010358597846879071
+          ]
+        ],
+        "count": 607
+      },
+      "2": {
+        "name": "2_atoms_molecules_optical_cooling",
+        "keywords": [
+          [
+            "atoms",
+            0.030068116897863515
+          ],
+          [
+            "molecules",
+            0.028392570633927264
+          ],
+          [
+            "optical",
+            0.026907543499837216
+          ],
+          [
+            "cooling",
+            0.019079128097274512
+          ],
+          [
+            "atom",
+            0.018819676040074836
+          ],
+          [
+            "quantum",
+            0.018325578743049714
+          ],
+          [
+            "ultracold",
+            0.0163553957936283
+          ],
+          [
+            "laser",
+            0.015447385176805564
+          ],
+          [
+            "state",
+            0.015072556990258
+          ],
+          [
+            "trap",
+            0.013431946081404696
+          ]
+        ],
+        "count": 436
+      },
+      "3": {
+        "name": "3_solitons_Einstein_spin_Bose",
+        "keywords": [
+          [
+            "solitons",
+            0.03326385343251631
+          ],
+          [
+            "Einstein",
+            0.027918707020206143
+          ],
+          [
+            "spin",
+            0.02632604027383772
+          ],
+          [
+            "Bose",
+            0.02547629986817084
+          ],
+          [
+            "soliton",
+            0.022889425967916693
+          ],
+          [
+            "condensates",
+            0.02095885234259576
+          ],
+          [
+            "orbit",
+            0.018237871704116473
+          ],
+          [
+            "spin orbit",
+            0.017969798654501594
+          ],
+          [
+            "condensate",
+            0.016930914942613
+          ],
+          [
+            "coupling",
+            0.014725315289636375
+          ]
+        ],
+        "count": 367
+      },
+      "4": {
+        "name": "4_body_energy_scattering_gas",
+        "keywords": [
+          [
+            "body",
+            0.025174953963594867
+          ],
+          [
+            "energy",
+            0.01823595301870002
+          ],
+          [
+            "scattering",
+            0.01722176274685411
+          ],
+          [
+            "gas",
+            0.01512792409171224
+          ],
+          [
+            "density",
+            0.014039766297815476
+          ],
+          [
+            "range",
+            0.013815426153995511
+          ],
+          [
+            "systems",
+            0.012339138332100251
+          ],
+          [
+            "interaction",
+            0.012310962982969626
+          ],
+          [
+            "fermions",
+            0.012114235014347049
+          ],
+          [
+            "function",
+            0.011692993191348372
+          ]
+        ],
+        "count": 319
+      },
+      "5": {
+        "name": "5_droplets_droplet_dipolar_supersolid",
+        "keywords": [
+          [
+            "droplets",
+            0.0447177543604015
+          ],
+          [
+            "droplet",
+            0.04305291891366781
+          ],
+          [
+            "dipolar",
+            0.030816450230279333
+          ],
+          [
+            "supersolid",
+            0.023155811138035658
+          ],
+          [
+            "quantum droplets",
+            0.02195437073036575
+          ],
+          [
+            "quantum",
+            0.02045210780765325
+          ],
+          [
+            "Bose",
+            0.01943123137245399
+          ],
+          [
+            "self",
+            0.015183111630332896
+          ],
+          [
+            "dimensional",
+            0.013687531074040698
+          ],
+          [
+            "density",
+            0.012922369288439508
+          ]
+        ],
+        "count": 305
+      },
+      "6": {
+        "name": "6_exciton_polariton_polaritons_excitons",
+        "keywords": [
+          [
+            "exciton",
+            0.03899514642589765
+          ],
+          [
+            "polariton",
+            0.03888775143883102
+          ],
+          [
+            "polaritons",
+            0.024061810474014473
+          ],
+          [
+            "excitons",
+            0.023897542905507545
+          ],
+          [
+            "condensate",
+            0.01521843166063664
+          ],
+          [
+            "light",
+            0.014356850687472373
+          ],
+          [
+            "quantum",
+            0.013990044216517434
+          ],
+          [
+            "condensation",
+            0.013987607621107366
+          ],
+          [
+            "condensates",
+            0.013764596378629928
+          ],
+          [
+            "Bose",
+            0.012176265919926078
+          ]
+        ],
+        "count": 297
+      },
+      "7": {
+        "name": "7_time_cavity_driven_quantum",
+        "keywords": [
+          [
+            "time",
+            0.029373230600668758
+          ],
+          [
+            "cavity",
+            0.018965375415262765
+          ],
+          [
+            "driven",
+            0.018244843085154255
+          ],
+          [
+            "quantum",
+            0.017042045743850272
+          ],
+          [
+            "Floquet",
+            0.015895419971943693
+          ],
+          [
+            "phase",
+            0.015193163204058103
+          ],
+          [
+            "systems",
+            0.014575419817329375
+          ],
+          [
+            "crystal",
+            0.013588724254199611
+          ],
+          [
+            "driving",
+            0.013350292419903651
+          ],
+          [
+            "crystals",
+            0.013347570328069564
+          ]
+        ],
+        "count": 278
+      },
+      "8": {
+        "name": "8_quantum_learning_states_neural",
+        "keywords": [
+          [
+            "quantum",
+            0.04092626962167318
+          ],
+          [
+            "learning",
+            0.023089396615986173
+          ],
+          [
+            "states",
+            0.01795149016237371
+          ],
+          [
+            "neural",
+            0.017323445543457962
+          ],
+          [
+            "state",
+            0.016599872698464784
+          ],
+          [
+            "data",
+            0.015864997810447735
+          ],
+          [
+            "entanglement",
+            0.015598455141729693
+          ],
+          [
+            "systems",
+            0.015409320875318
+          ],
+          [
+            "measurement",
+            0.015317824432078034
+          ],
+          [
+            "measurements",
+            0.014613266520393499
+          ]
+        ],
+        "count": 225
+      },
+      "9": {
+        "name": "9_impurity_polaron_polarons_Fermi",
+        "keywords": [
+          [
+            "impurity",
+            0.05448121444450762
+          ],
+          [
+            "polaron",
+            0.050065253363499554
+          ],
+          [
+            "polarons",
+            0.026142225724554723
+          ],
+          [
+            "Fermi",
+            0.026020618812132273
+          ],
+          [
+            "impurities",
+            0.024849993524116185
+          ],
+          [
+            "Bose",
+            0.020220745105964975
+          ],
+          [
+            "bath",
+            0.018066466393882305
+          ],
+          [
+            "interactions",
+            0.015986876285148416
+          ],
+          [
+            "body",
+            0.01502688481829635
+          ],
+          [
+            "gas",
+            0.014865380091955937
+          ]
+        ],
+        "count": 184
+      },
+      "10": {
+        "name": "10_vortex_superfluid_vortices_turbulence",
+        "keywords": [
+          [
+            "vortex",
+            0.07096056490741258
+          ],
+          [
+            "superfluid",
+            0.04370766333901743
+          ],
+          [
+            "vortices",
+            0.03666663278460321
+          ],
+          [
+            "turbulence",
+            0.02831337174750121
+          ],
+          [
+            "fluid",
+            0.023453909836703955
+          ],
+          [
+            "velocity",
+            0.01819072089750358
+          ],
+          [
+            "superfluids",
+            0.017493442515256856
+          ],
+          [
+            "fluids",
+            0.015856235038582415
+          ],
+          [
+            "quantum",
+            0.014367220866470668
+          ],
+          [
+            "obstacle",
+            0.014246699661910283
+          ]
+        ],
+        "count": 124
+      },
+      "11": {
+        "name": "11_black_black hole_spacetime_analogue",
+        "keywords": [
+          [
+            "black",
+            0.04289746289729129
+          ],
+          [
+            "black hole",
+            0.030107389193158977
+          ],
+          [
+            "spacetime",
+            0.027392374922646904
+          ],
+          [
+            "analogue",
+            0.02724676724923193
+          ],
+          [
+            "hole",
+            0.02617802009422237
+          ],
+          [
+            "quantum",
+            0.023167726058027967
+          ],
+          [
+            "Hawking",
+            0.021694997716708707
+          ],
+          [
+            "gravity",
+            0.021380798999147126
+          ],
+          [
+            "Einstein",
+            0.020901469905979228
+          ],
+          [
+            "horizon",
+            0.01941295238442288
+          ]
+        ],
+        "count": 118
+      },
+      "12": {
+        "name": "12_Hubbard_spin_hole_model",
+        "keywords": [
+          [
+            "Hubbard",
+            0.02472996968798339
+          ],
+          [
+            "spin",
+            0.0228355823629969
+          ],
+          [
+            "hole",
+            0.022368365018938848
+          ],
+          [
+            "model",
+            0.02156710260960395
+          ],
+          [
+            "magnetic",
+            0.020027890057475354
+          ],
+          [
+            "doping",
+            0.019687061661725815
+          ],
+          [
+            "charge",
+            0.015988603311519623
+          ],
+          [
+            "pairing",
+            0.01477169073457455
+          ],
+          [
+            "triangular",
+            0.01394620303718453
+          ],
+          [
+            "superconductivity",
+            0.01381367371389771
+          ]
+        ],
+        "count": 118
+      },
+      "13": {
+        "name": "13_Fermi_BCS_pairing_superfluid",
+        "keywords": [
+          [
+            "Fermi",
+            0.0410466710577394
+          ],
+          [
+            "BCS",
+            0.033868453794894636
+          ],
+          [
+            "pairing",
+            0.03247124223179473
+          ],
+          [
+            "superfluid",
+            0.03060252370955817
+          ],
+          [
+            "crossover",
+            0.018481844885512258
+          ],
+          [
+            "pair",
+            0.01758479434387249
+          ],
+          [
+            "phase",
+            0.01742368611248216
+          ],
+          [
+            "BEC",
+            0.017239054991223596
+          ],
+          [
+            "gas",
+            0.014925185129146376
+          ],
+          [
+            "state",
+            0.0148130337203738
+          ]
+        ],
+        "count": 114
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.655088036428262,
+        -0.7099234944705363,
+        -0.706919071928486,
+        -0.6799131738038395,
+        -0.7502262046306104,
+        -0.7315414558044326,
+        -0.7085203827207647,
+        -0.7168133905285476,
+        -0.741677138991818,
+        -0.7418876785856742,
+        -0.7397462126682856,
+        -0.7061427778582847,
+        -0.7333022538343512
+      ],
+      [
+        -0.655088036428262,
+        1.0,
+        -0.644356132999089,
+        -0.6501309939085387,
+        0.024340293344549967,
+        -0.6760707286934764,
+        -0.6880775007613043,
+        -0.6130603119800404,
+        -0.2401743366184668,
+        -0.6878147567613904,
+        -0.6996020335127537,
+        -0.6762678572841146,
+        -0.6089581304214647,
+        -0.6688853214489576
+      ],
+      [
+        -0.7099234944705363,
+        -0.644356132999089,
+        1.0,
+        -0.694852617440622,
+        -0.6433513567299971,
+        -0.7043098017161826,
+        -0.711697919212863,
+        -0.6820490751988862,
+        -0.6844421702006477,
+        -0.724724486839405,
+        -0.741768086993271,
+        -0.7148977145670606,
+        -0.7006664177944733,
+        -0.7146109174688329
+      ],
+      [
+        -0.706919071928486,
+        -0.6501309939085387,
+        -0.694852617440622,
+        1.0,
+        -0.644217233828603,
+        -0.40257430047219456,
+        -0.3807025007339501,
+        -0.6985533091397909,
+        -0.7076559988493303,
+        -0.7122798518301894,
+        -0.5837340315979384,
+        0.08912347053947857,
+        -0.6581380935744853,
+        -0.6952834743809584
+      ],
+      [
+        -0.6799131738038395,
+        0.024340293344549967,
+        -0.6433513567299971,
+        -0.644217233828603,
+        1.0,
+        -0.651743843831567,
+        -0.6809429287741612,
+        -0.6527461982516757,
+        -0.6117031156790862,
+        -0.6545090846589908,
+        -0.6949471524964268,
+        -0.6802189486135533,
+        -0.6346349830910379,
+        -0.6356908063862151
+      ],
+      [
+        -0.7502262046306104,
+        -0.6760707286934764,
+        -0.7043098017161826,
+        -0.40257430047219456,
+        -0.651743843831567,
+        1.0,
+        -0.5432189860901437,
+        -0.7090456152524324,
+        -0.7275850105995232,
+        -0.7149649396852553,
+        -0.6562733229265931,
+        -0.40829101132601986,
+        -0.7405184664279293,
+        -0.7249985484965635
+      ],
+      [
+        -0.7315414558044326,
+        -0.6880775007613043,
+        -0.711697919212863,
+        -0.3807025007339501,
+        -0.6809429287741612,
+        -0.5432189860901437,
+        1.0,
+        -0.7071701386774193,
+        -0.7234714005576117,
+        -0.6962822784028271,
+        -0.6642829922379496,
+        -0.4321114608827419,
+        -0.7394051256931141,
+        -0.728753533244098
+      ],
+      [
+        -0.7085203827207647,
+        -0.6130603119800404,
+        -0.6820490751988862,
+        -0.6985533091397909,
+        -0.6527461982516757,
+        -0.7090456152524324,
+        -0.7071701386774193,
+        1.0,
+        -0.6856224943972463,
+        -0.7221783849607711,
+        -0.7304183462894072,
+        -0.7153005124549139,
+        -0.7196291420294421,
+        -0.7190382044896981
+      ],
+      [
+        -0.7168133905285476,
+        -0.2401743366184668,
+        -0.6844421702006477,
+        -0.7076559988493303,
+        -0.6117031156790862,
+        -0.7275850105995232,
+        -0.7234714005576117,
+        -0.6856224943972463,
+        1.0,
+        -0.7332212967760829,
+        -0.7336583146292288,
+        -0.7114703567017922,
+        -0.6864049672476182,
+        -0.7312600844566828
+      ],
+      [
+        -0.741677138991818,
+        -0.6878147567613904,
+        -0.724724486839405,
+        -0.7122798518301894,
+        -0.6545090846589908,
+        -0.7149649396852553,
+        -0.6962822784028271,
+        -0.7221783849607711,
+        -0.7332212967760829,
+        1.0,
+        -0.738372901528876,
+        -0.7143150294576046,
+        -0.725064171897518,
+        -0.5836923028116004
+      ],
+      [
+        -0.7418876785856742,
+        -0.6996020335127537,
+        -0.741768086993271,
+        -0.5837340315979384,
+        -0.6949471524964268,
+        -0.6562733229265931,
+        -0.6642829922379496,
+        -0.7304183462894072,
+        -0.7336583146292288,
+        -0.738372901528876,
+        1.0,
+        -0.6106271127919953,
+        -0.7215996527545517,
+        -0.5918814633273857
+      ],
+      [
+        -0.7397462126682856,
+        -0.6762678572841146,
+        -0.7148977145670606,
+        0.08912347053947857,
+        -0.6802189486135533,
+        -0.40829101132601986,
+        -0.4321114608827419,
+        -0.7153005124549139,
+        -0.7114703567017922,
+        -0.7143150294576046,
+        -0.6106271127919953,
+        1.0,
+        -0.7143566851357309,
+        -0.7226471585435643
+      ],
+      [
+        -0.7061427778582847,
+        -0.6089581304214647,
+        -0.7006664177944733,
+        -0.6581380935744853,
+        -0.6346349830910379,
+        -0.7405184664279293,
+        -0.7394051256931141,
+        -0.7196291420294421,
+        -0.6864049672476182,
+        -0.725064171897518,
+        -0.7215996527545517,
+        -0.7143566851357309,
+        1.0,
+        -0.666695176046598
+      ],
+      [
+        -0.7333022538343512,
+        -0.6688853214489576,
+        -0.7146109174688329,
+        -0.6952834743809584,
+        -0.6356908063862151,
+        -0.7249985484965635,
+        -0.728753533244098,
+        -0.7190382044896981,
+        -0.7312600844566828,
+        -0.5836923028116004,
+        -0.5918814633273857,
+        -0.7226471585435643,
+        -0.666695176046598,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        17,
+        19,
+        11,
+        20,
+        10,
+        3,
+        6,
+        2,
+        1,
+        6,
+        4,
+        1,
+        10,
+        7
+      ],
+      "2020-02": [
+        18,
+        13,
+        13,
+        21,
+        8,
+        4,
+        2,
+        3,
+        1,
+        5,
+        6,
+        1,
+        13,
+        3
+      ],
+      "2020-03": [
+        15,
+        24,
+        13,
+        22,
+        10,
+        5,
+        3,
+        8,
+        4,
+        3,
+        7,
+        0,
+        6,
+        10
+      ],
+      "2020-04": [
+        20,
+        13,
+        12,
+        21,
+        15,
+        3,
+        10,
+        5,
+        1,
+        7,
+        6,
+        1,
+        6,
+        3
+      ],
+      "2020-05": [
+        24,
+        20,
+        10,
+        20,
+        8,
+        6,
+        4,
+        8,
+        4,
+        3,
+        8,
+        1,
+        8,
+        9
+      ],
+      "2020-06": [
+        23,
+        19,
+        8,
+        27,
+        10,
+        3,
+        3,
+        4,
+        5,
+        1,
+        11,
+        3,
+        8,
+        4
+      ],
+      "2020-07": [
+        25,
+        22,
+        9,
+        33,
+        11,
+        10,
+        4,
+        4,
+        1,
+        5,
+        6,
+        4,
+        8,
+        7
+      ],
+      "2020-08": [
+        28,
+        13,
+        8,
+        18,
+        7,
+        2,
+        5,
+        5,
+        1,
+        2,
+        6,
+        1,
+        5,
+        6
+      ],
+      "2020-09": [
+        27,
+        18,
+        10,
+        22,
+        6,
+        4,
+        4,
+        1,
+        3,
+        7,
+        5,
+        1,
+        3,
+        5
+      ],
+      "2020-10": [
+        18,
+        7,
+        5,
+        24,
+        9,
+        4,
+        3,
+        3,
+        5,
+        3,
+        12,
+        2,
+        8,
+        7
+      ],
+      "2020-11": [
+        29,
+        24,
+        14,
+        25,
+        9,
+        4,
+        6,
+        2,
+        5,
+        8,
+        4,
+        1,
+        7,
+        7
+      ],
+      "2020-12": [
+        22,
+        25,
+        16,
+        22,
+        7,
+        6,
+        3,
+        5,
+        7,
+        7,
+        8,
+        1,
+        6,
+        8
+      ],
+      "2021-01": [
+        24,
+        14,
+        12,
+        20,
+        5,
+        4,
+        2,
+        1,
+        8,
+        8,
+        4,
+        1,
+        6,
+        1
+      ],
+      "2021-02": [
+        15,
+        13,
+        7,
+        17,
+        8,
+        6,
+        4,
+        5,
+        4,
+        7,
+        5,
+        2,
+        3,
+        8
+      ],
+      "2021-03": [
+        19,
+        19,
+        15,
+        21,
+        10,
+        3,
+        3,
+        5,
+        5,
+        7,
+        8,
+        2,
+        6,
+        9
+      ],
+      "2021-04": [
+        18,
+        25,
+        9,
+        27,
+        4,
+        4,
+        4,
+        1,
+        7,
+        3,
+        3,
+        1,
+        2,
+        6
+      ],
+      "2021-05": [
+        16,
+        17,
+        14,
+        23,
+        10,
+        4,
+        3,
+        3,
+        3,
+        8,
+        9,
+        0,
+        5,
+        11
+      ],
+      "2021-06": [
+        30,
+        25,
+        10,
+        23,
+        10,
+        5,
+        6,
+        4,
+        3,
+        1,
+        2,
+        0,
+        9,
+        8
+      ],
+      "2021-07": [
+        23,
+        20,
+        5,
+        18,
+        9,
+        4,
+        3,
+        8,
+        6,
+        5,
+        5,
+        3,
+        7,
+        6
+      ],
+      "2021-08": [
+        27,
+        18,
+        8,
+        19,
+        9,
+        4,
+        5,
+        8,
+        4,
+        4,
+        3,
+        0,
+        7,
+        4
+      ],
+      "2021-09": [
+        22,
+        12,
+        9,
+        24,
+        9,
+        3,
+        3,
+        6,
+        6,
+        5,
+        4,
+        1,
+        10,
+        4
+      ],
+      "2021-10": [
+        17,
+        16,
+        7,
+        29,
+        10,
+        3,
+        5,
+        6,
+        5,
+        3,
+        5,
+        0,
+        5,
+        9
+      ],
+      "2021-11": [
+        21,
+        17,
+        8,
+        17,
+        7,
+        5,
+        2,
+        2,
+        0,
+        8,
+        9,
+        0,
+        5,
+        10
+      ],
+      "2021-12": [
+        25,
+        21,
+        11,
+        25,
+        5,
+        6,
+        7,
+        5,
+        2,
+        5,
+        4,
+        1,
+        6,
+        10
+      ],
+      "2022-01": [
+        27,
+        11,
+        11,
+        20,
+        11,
+        1,
+        1,
+        0,
+        1,
+        5,
+        6,
+        1,
+        4,
+        8
+      ],
+      "2022-02": [
+        16,
+        19,
+        9,
+        14,
+        12,
+        8,
+        5,
+        5,
+        3,
+        4,
+        11,
+        3,
+        4,
+        8
+      ],
+      "2022-03": [
+        30,
+        24,
+        6,
+        20,
+        9,
+        2,
+        3,
+        1,
+        2,
+        4,
+        4,
+        1,
+        7,
+        8
+      ],
+      "2022-04": [
+        20,
+        25,
+        11,
+        24,
+        4,
+        2,
+        1,
+        1,
+        0,
+        7,
+        6,
+        4,
+        8,
+        5
+      ],
+      "2022-05": [
+        20,
+        17,
+        5,
+        20,
+        10,
+        1,
+        2,
+        9,
+        6,
+        5,
+        4,
+        0,
+        7,
+        11
+      ],
+      "2022-06": [
+        19,
+        17,
+        4,
+        26,
+        9,
+        5,
+        1,
+        4,
+        2,
+        6,
+        4,
+        1,
+        4,
+        10
+      ],
+      "2022-07": [
+        25,
+        14,
+        10,
+        11,
+        11,
+        4,
+        2,
+        6,
+        7,
+        4,
+        9,
+        2,
+        7,
+        4
+      ],
+      "2022-08": [
+        23,
+        7,
+        16,
+        19,
+        8,
+        2,
+        5,
+        6,
+        1,
+        1,
+        7,
+        2,
+        10,
+        6
+      ],
+      "2022-09": [
+        29,
+        11,
+        12,
+        20,
+        6,
+        8,
+        7,
+        0,
+        6,
+        4,
+        4,
+        1,
+        8,
+        5
+      ],
+      "2022-10": [
+        18,
+        21,
+        12,
+        21,
+        9,
+        5,
+        1,
+        5,
+        5,
+        3,
+        7,
+        0,
+        8,
+        9
+      ],
+      "2022-11": [
+        29,
+        11,
+        7,
+        25,
+        9,
+        4,
+        3,
+        1,
+        3,
+        9,
+        8,
+        2,
+        4,
+        11
+      ],
+      "2022-12": [
+        31,
+        10,
+        7,
+        23,
+        7,
+        6,
+        6,
+        4,
+        2,
+        9,
+        11,
+        1,
+        6,
+        7
+      ],
+      "2023-01": [
+        26,
+        11,
+        7,
+        17,
+        5,
+        3,
+        2,
+        6,
+        2,
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      "2023-02": [
+        18,
+        9,
+        8,
+        13,
+        9,
+        7,
+        5,
+        4,
+        3,
+        1,
+        2,
+        2,
+        8,
+        5
+      ],
+      "2023-03": [
+        20,
+        29,
+        17,
+        18,
+        4,
+        7,
+        2,
+        3,
+        5,
+        4,
+        2,
+        2,
+        4,
+        6
+      ],
+      "2023-04": [
+        22,
+        15,
+        10,
+        23,
+        4,
+        5,
+        2,
+        2,
+        5,
+        4,
+        9,
+        1,
+        2,
+        3
+      ],
+      "2023-05": [
+        24,
+        23,
+        7,
+        23,
+        5,
+        7,
+        3,
+        7,
+        8,
+        10,
+        7,
+        2,
+        10,
+        9
+      ],
+      "2023-06": [
+        24,
+        16,
+        14,
+        18,
+        5,
+        7,
+        7,
+        3,
+        6,
+        7,
+        8,
+        4,
+        6,
+        7
+      ],
+      "2023-07": [
+        21,
+        27,
+        8,
+        17,
+        6,
+        2,
+        5,
+        7,
+        5,
+        4,
+        5,
+        0,
+        3,
+        5
+      ],
+      "2023-08": [
+        22,
+        22,
+        4,
+        10,
+        6,
+        4,
+        8,
+        5,
+        3,
+        5,
+        5,
+        0,
+        13,
+        7
+      ],
+      "2023-09": [
+        26,
+        23,
+        7,
+        18,
+        4,
+        6,
+        3,
+        4,
+        5,
+        1,
+        7,
+        1,
+        9,
+        7
+      ],
+      "2023-10": [
+        31,
+        18,
+        7,
+        27,
+        4,
+        3,
+        5,
+        3,
+        2,
+        7,
+        7,
+        0,
+        9,
+        9
+      ],
+      "2023-11": [
+        24,
+        20,
+        8,
+        20,
+        11,
+        4,
+        6,
+        4,
+        3,
+        7,
+        8,
+        2,
+        10,
+        12
+      ],
+      "2023-12": [
+        21,
+        17,
+        7,
+        22,
+        6,
+        7,
+        2,
+        2,
+        3,
+        3,
+        6,
+        2,
+        12,
+        11
+      ],
+      "2024-01": [
+        29,
+        16,
+        8,
+        20,
+        3,
+        6,
+        3,
+        4,
+        3,
+        7,
+        6,
+        1,
+        5,
+        8
+      ],
+      "2024-02": [
+        16,
+        16,
+        10,
+        13,
+        13,
+        7,
+        2,
+        5,
+        7,
+        3,
+        8,
+        5,
+        6,
+        5
+      ],
+      "2024-03": [
+        27,
+        32,
+        4,
+        15,
+        5,
+        6,
+        2,
+        5,
+        2,
+        6,
+        6,
+        0,
+        8,
+        9
+      ],
+      "2024-04": [
+        34,
+        26,
+        6,
+        17,
+        7,
+        4,
+        4,
+        4,
+        5,
+        4,
+        10,
+        1,
+        7,
+        2
+      ],
+      "2024-05": [
+        23,
+        16,
+        9,
+        11,
+        9,
+        10,
+        0,
+        8,
+        7,
+        2,
+        6,
+        0,
+        4,
+        6
+      ],
+      "2024-06": [
+        23,
+        23,
+        13,
+        20,
+        4,
+        2,
+        5,
+        6,
+        4,
+        5,
+        10,
+        2,
+        6,
+        4
+      ],
+      "2024-07": [
+        27,
+        26,
+        6,
+        20,
+        10,
+        11,
+        5,
+        2,
+        7,
+        3,
+        9,
+        2,
+        9,
+        10
+      ],
+      "2024-08": [
+        18,
+        18,
+        5,
+        18,
+        5,
+        2,
+        1,
+        3,
+        2,
+        6,
+        4,
+        1,
+        7,
+        8
+      ],
+      "2024-09": [
+        26,
+        24,
+        8,
+        16,
+        7,
+        7,
+        3,
+        2,
+        7,
+        4,
+        8,
+        2,
+        7,
+        9
+      ],
+      "2024-10": [
+        29,
+        27,
+        9,
+        18,
+        7,
+        6,
+        2,
+        9,
+        2,
+        4,
+        15,
+        4,
+        6,
+        7
+      ],
+      "2024-11": [
+        24,
+        18,
+        7,
+        25,
+        6,
+        4,
+        3,
+        6,
+        9,
+        8,
+        12,
+        2,
+        6,
+        3
+      ],
+      "2024-12": [
+        28,
+        28,
+        8,
+        18,
+        7,
+        2,
+        4,
+        1,
+        5,
+        7,
+        8,
+        6,
+        5,
+        4
+      ],
+      "2025-01": [
+        17,
+        14,
+        13,
+        24,
+        3,
+        5,
+        4,
+        4,
+        3,
+        6,
+        6,
+        2,
+        7,
+        0
+      ],
+      "2025-02": [
+        18,
+        18,
+        5,
+        17,
+        2,
+        4,
+        1,
+        4,
+        5,
+        4,
+        5,
+        2,
+        12,
+        7
+      ],
+      "2025-03": [
+        21,
+        22,
+        7,
+        15,
+        8,
+        4,
+        3,
+        5,
+        2,
+        5,
+        14,
+        2,
+        11,
+        9
+      ],
+      "2025-04": [
+        28,
+        18,
+        2,
+        23,
+        2,
+        8,
+        1,
+        4,
+        2,
+        8,
+        9,
+        5,
+        6,
+        7
+      ],
+      "2025-05": [
+        23,
+        24,
+        12,
+        17,
+        5,
+        3,
+        5,
+        6,
+        1,
+        2,
+        4,
+        0,
+        4,
+        3
+      ],
+      "2025-06": [
+        33,
+        24,
+        15,
+        28,
+        7,
+        11,
+        2,
+        2,
+        9,
+        2,
+        7,
+        1,
+        10,
+        2
+      ],
+      "2025-07": [
+        21,
+        18,
+        13,
+        25,
+        6,
+        13,
+        7,
+        7,
+        6,
+        8,
+        7,
+        1,
+        8,
+        4
+      ],
+      "2025-08": [
+        30,
+        25,
+        9,
+        20,
+        4,
+        4,
+        3,
+        4,
+        2,
+        5,
+        8,
+        2,
+        5,
+        6
+      ],
+      "2025-09": [
+        14,
+        12,
+        6,
+        10,
+        6,
+        0,
+        0,
+        0,
+        3,
+        2,
+        5,
+        2,
+        7,
+        5
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Quantum anomaly, non-Hermitian skin effects, and entanglement entropy in open systems",
+          "year": "2020-11",
+          "abstract": "We investigate the roles of non-Hermitian topology in spectral properties and\nentanglement structures of open systems. In terms of spectral theory, we give a\nunified understanding of two interpretations of non-Hermitian topology: quantum\nanomaly and non-Hermitian skin effects, in which the bulk spectra extremely\ndepend on the boundary conditions. In this context, the fact that the intrinsic\nhigher-dimensional skin effects under the full open boundary condition need the\npresence of the topological defects is understood in terms of the anomalous\nfermion production such as the Rubakov-Callan effect in the presence of the\nmagnetic monopole. In terms of the entanglement structure, we investigate\nsteady states of fermionic open systems whose Liouvillian (rapidity) spectra\nhost non-Hermitian topology. We analyze dissipation-driven Majorana steady\nstates in zero-dimensional open systems and relate them to the Majorana edge\nmodes of topological superconductors by using the entanglement entropy. We also\nanalyze a steady state of a one-dimensional open Fermi system with a\nnon-Hermitian topological spectrum and relate it to the chiral edge states of\nthe Chern insulator on the basis of the trace index defined from the\nentanglement spectrum. These correspondences indicate that the entanglement\ngenerates circular nonreciprocal currents under the periodic boundary condition\nand the skin-effect voltage with fermion accumulation under the open boundary\ncondition. Finally, we discuss several related topics such as pseudospectral\nbehaviors of Liouvillian dynamics and skin effects in interacting systems.",
+          "arxiv_id": "2011.08175v3"
+        },
+        {
+          "title": "Universal theory for geometry-dependent non-Hermitian bands",
+          "year": "2025-06",
+          "abstract": "The non-Hermitian skin effect (NHSE), characterized by the boundary-localized\neigenstates under open boundary conditions, has revealed the breakdown of Bloch\nband theory in non-Hermitian lattices. While one-dimensional non-Hermitian\nbands are well-described by the non-Bloch band theory, its extension to higher\ndimensions is challenged by the geometry-dependent skin effect (GDSE), where\nthe energy spectra and the boundary localization of the eigenstates depend on\nthe system's geometry. This work addresses this challenge by introducing a\nuniversal theoretical framework based on the strip generalized Brillouin zone\n(SGBZ). Our framework provides a systematic description of the GDSE, explains\nits origin through the competition between incompatible SGBZs, and provides for\nthe first time a clear criterion for its emergence. We also unify our SGBZ\nframework with the Amoeba formulation by showing that the Amoeba spectrum is\nthe superset of all possible SGBZ spectra, thereby clarifying its domain of\nvalidity. This work establishes a foundation for studying higher-dimensional\nnon-Hermitian systems, paving the way for the future investigation of novel\nhigher-dimensional non-Hermitian physics, such as hybrid skin-topological\neffects and non-Hermitian Chern bands.",
+          "arxiv_id": "2506.22743v2"
+        },
+        {
+          "title": "Non-Hermitian topological phenomena: A review",
+          "year": "2022-05",
+          "abstract": "The past decades have witnessed an explosion of interest in topological\nmaterials, and a lot of mathematical concepts have been introduced in condensed\nmatter physics. Among them, the bulk-boundary correspondence is the central\ntopic in topological physics, which has inspired researchers to focus on\nboundary physics. Recently, the concepts of topological phases have been\nextended to non-Hermitian Hamiltonians, whose eigenvalues can be complex.\nBesides the topology, non-Hermiticity can also cause a boundary phenomenon\ncalled the non-Hermitian skin effect, which is an extreme sensitivity of the\nspectrum to the boundary condition. In this article, we review developments in\nnon-Hermitian topological physics by focusing mainly on the boundary problem.\nAs well as the competition between non-Hermitian and topological boundary\nphenomena, we discuss the topological nature inherent in non-Hermiticity\nitself.",
+          "arxiv_id": "2205.10379v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Quantum scarring enhances non-Markovianity of subsystem dynamics",
+          "year": "2025-07",
+          "abstract": "Given that any subsystem of a closed out-of-equilibrium quantum system is an\nopen quantum system, its dynamics (reduced from the full system's unitary\nevolution) can be either Markovian (memory-less) or non-Markovian, with the\nlatter necessarily impeding the process of relaxation and thermalization.\nSeemingly independently, such non-ergodic dynamics occurs when an initial state\nhas spectral weight on the so-called quantum many-body scar states, which are\nnon-thermalizing eigenstates embedded deep in the spectrum of otherwise thermal\neigenstates. In this article, we present numerical evidence that the presence\nof quantum scars is a microscopic ingredient that enables and enhances\nnon-Markovianity of the dynamics of subsystems, particular to systems which\nexhibit scars-induced entanglement oscillations. We exemplify this with the PXP\nmodel and its deformations which either enhance or erase the signatures of\nscarred dynamics when quenched from a simple product state that is known to\nhave significant overlaps with the scarred subspace in the spectrum. By probing\ninformation backflows with the dynamical behaviour of the distances between\ntemporally-separated transient states of small subsystems, systematic\nsignatures of subsystem non-Markovianity in these models are presented, and it\nis seen that scarring-enhancing (erasing) deformations also exhibit enhanced\n(diminished) subsystem non-Markovianity. The retention of memory and revivals\nbetween transient subsystem states is a finer form of memory effect than\ncaptured by the revivals of full system's fidelity with the initial states.\nThis sheds new light on the dynamical memories associated with quantum\nscarring, and opens interesting new questions at the interface of quantum\nscarring and an open quantum systems approach to investigating\nfar-from-equilibrium and non-thermalizing isolated quantum many-body systems.",
+          "arxiv_id": "2507.23757v2"
+        },
+        {
+          "title": "Unconventional Transport in a System with a Tower of Quantum Many-Body Scars",
+          "year": "2025-02",
+          "abstract": "We report the observation of unconventional transport phenomena in a spin-1\nmodel that supports a tower of quantum many-body scars, and we discuss their\nproperties uncovering their peculiar nature. In quantum many-body systems, the\nlate-time dynamics of local observables are typically governed by conserved\noperators with local densities, such as energy and magnetization. In the model\nunder investigation, however, there is an additional dynamical symmetry\nrestricted to the subspace of the Hilbert space spanned by the quantum\nmany-body scars. That significantly slows the decay of autocorrelation\nfunctions of certain coherent states and is responsible for an unconventional\nform of transport. We show that excited states with energy close to that of the\nquantum many-body scars play a crucial role in sustaining the transport;\ncounterintuitively, quantum many-body scars are completely irrelevant for the\naforementioned mechanism. Finally, we propose a generalized eigenstate\nthermalization hypothesis to describe specific properties of states with energy\nclose to the scars.",
+          "arxiv_id": "2502.10387v1"
+        },
+        {
+          "title": "Many-Body Localization in the Age of Classical Computing",
+          "year": "2024-03",
+          "abstract": "Statistical mechanics provides a framework for describing the physics of\nlarge, complex many-body systems using only a few macroscopic parameters to\ndetermine the state of the system. For isolated quantum many-body systems, such\na description is achieved via the eigenstate thermalization hypothesis (ETH),\nwhich links thermalization, ergodicity and quantum chaotic behavior. However,\ntendency towards thermalization is not observed at finite system sizes and\nevolution times in a robust many-body localization (MBL) regime found\nnumerically and experimentally in the dynamics of interacting many-body systems\nat strong disorder. Although the phenomenology of the MBL regime is\nwell-established, the central question remains unanswered: under what\nconditions does the MBL regime give rise to an MBL phase in which the\nthermalization does not occur even in the asymptotic limit of infinite system\nsize and evolution time?\n  This review focuses on recent numerical investigations aiming to clarify the\nstatus of the MBL phase, and it establishes the critical open questions about\nthe dynamics of disordered many-body systems. Persistent finite size drifts\ntowards ergodicity consistently emerge in spectral properties of disordered\nmany-body systems, excluding naive single-parameter scaling hypothesis and\npreventing comprehension of the status of the MBL phase. The drifts are related\nto tendencies towards thermalization and non-vanishing transport observed in\nthe dynamics of many-body systems, even at strong disorder. These phenomena\nimpede understanding of microscopic processes at the ETH-MBL crossover.\nNevertheless, the abrupt slowdown of dynamics with increasing disorder strength\nsuggests the proximity of the MBL phase. This review concludes that the\nquestions about thermalization and its failure in disordered many-body systems\nremain a captivating area open for further explorations.",
+          "arxiv_id": "2403.07111v3"
+        }
+      ],
+      "2": [
+        {
+          "title": "A large magneto-optical trap of cadmium atoms loaded from a cryogenic buffer gas beam",
+          "year": "2025-06",
+          "abstract": "We demonstrate rapid loading of a magneto-optical trap (MOT) of cadmium atoms\nfrom a pulsed cryogenic helium buffer gas beam, overcoming strong\nphotoionization losses. Using the $ ^1S_0 \\rightarrow{} ^1P_1 $ transition at\n229 nm, we capture up to $ 1.1(2) \\times 10^7$ $^{112}$Cd atoms in 10 ms,\nachieving a peak density of $2.5 \\times 10^{11}$cm$^{-3}$ and a phase-space\ndensity of $ 2 \\times 10^{-9} $. The large scattering force in the deep\nultraviolet enables Zeeman slowing within 5 cm of the trap, yielding a capture\nvelocity exceeding 200 m/s. We measure the MOT trap frequency and damping\nconstant, and determine the absolute photoionization cross section of the\n$^1P_1 $ state. Photoionization losses are mitigated via dynamic detuning of\nthe trapping light's frequency, allowing efficient accumulation of multiple\natomic pulses. Our results demonstrate the benefits of deep-UV (DUV)\ntransitions and cryogenic beams for loading high-density MOTs, especially for\nspecies with significant loss channels in their main cooling cycle. The cadmium\nMOT provides a robust testbed that benchmarks our DUV laser cooling system and\nestablishes the foundation for trapping and cooling polar AlF molecules, which\nshare many optical and structural properties with Cd.",
+          "arxiv_id": "2506.01180v1"
+        },
+        {
+          "title": "High-fidelity detection of large-scale atom arrays in an optical lattice",
+          "year": "2023-09",
+          "abstract": "Recent advances in quantum simulation based on neutral atoms have largely\nbenefited from high-resolution, single-atom sensitive imaging techniques. A\nvariety of approaches have been developed to achieve such local detection of\natoms in optical lattices or optical tweezers. For alkaline-earth and\nalkaline-earth-like atoms, the presence of narrow optical transitions opens up\nthe possibility of performing novel types of Sisyphus cooling, where the\ncooling mechanism originates from the capability to spatially resolve the\ndifferential optical level shifts in the trap potential. Up to now, it has been\nan open question whether high-fidelity imaging could be achieved in a\n\"repulsive Sisyphus\" configuration, where the trap depth of the ground state\nexceeds that of the excited state involved in cooling. Here, we demonstrate\nhigh-fidelity ($99.971(1)\\%$) and high-survival ($99.80(5)\\%$) imaging of\nstrontium atoms using repulsive Sisyphus cooling. We use an optical lattice as\na pinning potential for atoms in a large-scale tweezer array with up to $399$\ntweezers and show repeated, high-fidelity lattice-tweezer-lattice transfers. We\nfurthermore demonstrate loading the lattice with approximately 10000 atoms\ndirectly from the MOT and scalable imaging over $>10000$ lattice sites with a\ncombined survival probability and classification fidelity better than $99.2\\%$.\nOur lattice thus serves as a locally addressable and sortable reservoir for\ncontinuous refilling of optical tweezer arrays in the future.",
+          "arxiv_id": "2309.04717v6"
+        },
+        {
+          "title": "A magneto-optical trap of silver and potassium atoms",
+          "year": "2025-07",
+          "abstract": "We demonstrate a dual magneto-optical trap of $^{109}$Ag and $^{39}$K. For\nsilver, a decreasing-field Zeeman slower loads a MOT of $1.5{\\times}10^8$ atoms\nat a temperature of 0.74(5) mK, with laser cooling occurring primarily on the\n$D_2$ line of $4d^{10}5s\\; {}^2S_{1/2}\\rightarrow 5p\\; {}^2P_{3/2}$ at 328 nm.\nWe create a novel Ag \"dark spot MOT,\" where shelving the atoms in a dark state\nenhances the captured atom number by a factor of two and the lifetime by a\nfactor of four. For potassium, we obtain $2{\\times}10^8$ trapped atoms, and\nfurther cooling on the $D_1$ transition via grey molasses results in a cloud of\n$1.2{\\times} 10^8$ atoms at 7(1) $\\mu$K. We observe evidence of photoionization\nloss of the K MOT in the presence of Ag laser-cooling light, with implications\nfor optimal dual species loading strategies. Our results on Ag point to simple\nand general laser cooling strategies for other coinage metals (Au, Cu).\nFurthermore, this work lays the foundation for the production of alkali-coinage\nmetal degenerate quantum mixtures and highly polar molecules.",
+          "arxiv_id": "2507.11434v1"
+        }
+      ],
+      "3": [
+        {
+          "title": "Patterning by dynamically unstable spin-orbit-coupled Bose-Einstein condensates",
+          "year": "2023-02",
+          "abstract": "In a two-dimensional atomic Bose-Einstein condensate, we demonstrate Rashba\nspin-orbit coupling can always introduce dynamical instability into specific\nzero-quasimomentum states in all parameter regimes. During the evolution of the\nzero-quasimomentum states, such spin-orbit-coupling-induced instability can\nfragment the states and lead to a dynamically patterning process.\n  The features of formed patterns are identified from the symmetries of the\nBogoliubov-de Gennes Hamiltonian. We show that spin-orbit-coupled Bose-Einstein\ncondensates provide an interesting platform for the investigation of pattern\nformations.",
+          "arxiv_id": "2302.05101v2"
+        },
+        {
+          "title": "Faraday patterns in spin-orbit coupled Bose-Einstein condensates",
+          "year": "2022-06",
+          "abstract": "We study the Faraday patterns generated by spin-orbit-coupling induced\nparametric resonance in a spinor Bose-Einstein condensate with repulsive\ninteraction. The collective elementary excitations of the Bose-Einstein\ncondensate, including density waves and spin waves, are coupled as the result\nof the Raman-induced spin-orbit coupling and a quench of the relative phase of\ntwo Raman lasers without the modulation of any of the system's parameters. We\nobserved several higher parametric resonance tongues at integer multiples of\nthe driving frequency and investigated the interplay between Faraday\ninstabilities and modulation instabilities when we quench the\nspin-orbit-coupled Bose-Einstein condensate from zero-momentum phase to\nplane-wave phase. If the detuning is equal to zero, the wave number of\ncombination resonance barely changes as the strength of spin-orbit coupling\nincreases. If the detuning is not equal to zero after a quench, a single\ncombination resonance tongue will split into two parts.",
+          "arxiv_id": "2206.10222v1"
+        },
+        {
+          "title": "Creating moving gap solitons in spin-orbit-coupled Bose-Einstein condensates",
+          "year": "2021-09",
+          "abstract": "A simple and efficient method to create gap solitons is proposed in a\nspin-orbit-coupled spin-1 Bose-Einstein condensate. We find that a free\nexpansion along the spin-orbit coupling dimension can generate two moving gap\nsolitons, which are identified from a generalized massive Thirring model. The\ndynamics of gap solitons can be controlled by adjusting spin-orbit coupling\nparameters.",
+          "arxiv_id": "2109.02871v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "The three-body scattering hypervolume of identical fermions in one dimension",
+          "year": "2023-02",
+          "abstract": "We study the zero-energy collision of three identical spin-polarized fermions\nwith short-range interactions in one dimension. We derive the asymptotic\nexpansions of the three-body wave function when the three fermions are far\napart or one pair and the third fermion are far apart, and the three-body\nscattering hypervolume $D_F$ appears in the coefficients of such expansions. If\nthe two-body interaction is attractive and supports two-body bound states,\n$D_F$ acquires a negative imaginary part related to the amplitudes of the\noutgoing waves describing the departure of the resultant bound pair and the\nremaining free fermion. For weak interaction potentials, we derive an\napproximate formula of the hypervolume by using the Born expansion. For the\nsquare-barrier and the square-well potentials and the Gaussian potential, we\nsolve the three-body Schr\\\"{o}dinger equation to compute $D_F$ numerically. We\nalso calculate the shifts of energy and of pressure of spin-polarized\none-dimensional Fermi gases due to a nonzero $D_F$ and the three-body\nrecombination rate in one dimension.",
+          "arxiv_id": "2302.13685v2"
+        },
+        {
+          "title": "Unitary $p$-wave Fermi gas in one dimension",
+          "year": "2021-06",
+          "abstract": "We elucidate universal many-body properties of a one-dimensional,\ntwo-component ultracold Fermi gas near the $p$-wave Feshbach resonance. The\nlow-energy scattering in this system can be characterized by two parameters,\nthat is, $p$-wave scattering length and effective range. At the unitarity limit\nwhere the $p$-wave scattering length diverges and the effective range is\nreduced to zero without conflicting with the causality bound, the system obeys\nuniversal thermodynamics as observed in a unitary Fermi gas with contact\n$s$-wave interaction in three dimensions. It is in contrast to a Fermi gas with\nthe $p$-wave resonance in three dimensions in which the effective range is\ninevitably finite. We present the universal equation of state in this unitary\n$p$-wave Fermi gas within the many-body $T$-matrix approach as well as the\nvirial expansion method. Moreover, we examine the single-particle spectral\nfunction in the high-density regime where the virial expansion is no longer\nvalid. On the basis of the Hartree-like self-energy shift at the divergent\nscattering length, we conjecture that the equivalence of the Bertsch parameter\nacross spatial dimensions holds even for a one-dimensional unitary $p$-wave\nFermi gas.",
+          "arxiv_id": "2106.12909v1"
+        },
+        {
+          "title": "Three-body contact for fermions. I. General relations",
+          "year": "2022-11",
+          "abstract": "We consider the resonant Fermi gas, that is, two-component fermions in three\ndimensions interacting by a short-range potential of large scattering length.\nWe introduce a quantity, the three-body contact, that determines several\nobservables. Within the zero-range model, the number of nearby fermion\ntriplets, the large-momentum tail of the center-of-mass momentum distribution\nof nearby fermion pairs, as well as the large-momentum tail of the two-particle\nmomentum distribution, are expressed in terms of the three-body contact. For a\nsmall finite interaction range, the formation rate of deeply bound dimers by\nthree-body recombination, as well as the three-body contribution to the\nfinite-range correction to the energy, are expressed in terms of the three-body\ncontact and of a three-body parameter. This three-body parameter, which\nvanishes in the zero-range limit, is defined through the asymptotic behavior of\nthe zero-energy scattering state at distances intermediate between the range\nand the two-body scattering length. In general, the three-body contact has\ndifferent contributions labeled by spin and angular momentum indices, and the\nthree-body parameter can depend on those indices. We also include the\ngeneralization to unequal masses for $\\uparrow$ and $\\downarrow$ particles.\nWith respect to the relation between three-body loss rate and number of nearby\ntriplets stated in [Petrov, Salomon and Shlyapnikov, PRL 93, 090404 (2004)],\nthe present work adds a derivation, expresses the proportionality factor in\nterms of the three-body parameter, and includes the general case where there\nare several contributions to the three-body contact and several three-body\nparameters.",
+          "arxiv_id": "2211.09765v3"
+        }
+      ],
+      "5": [
+        {
+          "title": "Control of $^{164}$Dy Bose-Einstein condensate phases and dynamics with dipolar anisotropy",
+          "year": "2022-05",
+          "abstract": "We investigate the quench dynamics of quasi-one and two dimensional dipolar\nBose-Einstein condensates (dBEC) of $^{164}$Dy atoms under the influence of a\nfast rotating magnetic field. The magnetic field thus controls both the\nmagnitude and sign of the dipolar potential. We account for quantum\nfluctuations, critical to formation of exotic quantum droplet and supersolid\nphases in the extended Gross-Pitaevskii formalism, which includes the so-called\nLee-Huang-Yang (LHY) correction. An analytical variational ansatz allows us to\nobtain the phase diagrams of the superfluid and droplet phases. The crossover\nfrom the superfluid to the supersolid phase and to single and droplet arrays is\nprobed with particle number and dipolar interaction. The dipolar strength is\ntuned by rotating the magnetic field with subsequent effects on phase\nboundaries. Following interaction quenches across the aforementioned phases, we\nmonitor the dynamical formation of supersolid clusters or droplet lattices. We\ninclude losses due to three-body recombination over the crossover regime, where\nthe three-body recombination rate coefficient scales with the fourth power of\nthe scattering length ($a_s$) or the dipole length ($a_{dd}$). For fixed values\nof the dimensionless parameter, $\\epsilon_{dd} = a_{dd}/a_s$, tuning the\ndipolar anisotropy leads to an enhancement of the droplet lifetimes.",
+          "arxiv_id": "2205.05193v2"
+        },
+        {
+          "title": "Formation and fragmentation of quantum droplets in a quasi-one dimensional dipolar Bose gas",
+          "year": "2022-02",
+          "abstract": "We theoretically investigate the droplets formation in a tightly trapped\none-dimensional dipolar gas of bosonic atoms. When the strength of the dipolar\ninteraction becomes sufficiently attractive compared to the contact one, we\nshow how a solitonic-like density profile evolves into a liquid-like droplet on\nincreasing the number of particles in the trap. The incipient gas-liquid\ntransition is also signalled by a steep increase of the breathing mode and a\nchange in sign of the chemical potential. Upon a sudden release of the trap,\nvarying the number of trapped atoms and the scattering length, the numerical\nsolution of a time-dependent generalized Gross-Pitaevskii equation shows either\nan evaporation of the cloud, the formation of a single self-bound droplet or a\nfragmentation in multiple droplets.These results can be probed with lanthanides\natoms and help in characterizing the effect of the dipolar interaction in a\nquasi-one-dimensional geometry.",
+          "arxiv_id": "2202.12071v1"
+        },
+        {
+          "title": "Quantum droplets of quasi-one-dimensional dipolar Bose-Einstein condensates",
+          "year": "2020-02",
+          "abstract": "Ultracold dipolar droplets have been realized in a series of ground-breaking\nexperiments, where the stability of the droplet state is attributed to\nbeyond-mean-field effects in the form of the celebrated Lee-Huang-Yang (LHY)\ncorrection. We scrutinize the dipolar droplet states in a one-dimensional\ncontext using a combination of analytical and numerical approaches, and\nidentify experimentally viable parameters for accessing our findings for future\nexperiments. In particular we identify regimes of stability in the restricted\ngeometry, finding multiple roton instabilities as well as regions supporting\nquasi-one-dimensional droplet states. By applying an interaction quench to the\ndroplet, a modulational instability is induced and multiple droplets are\nproduced, along with bright solitons and atomic radiation. We also assess the\ndroplets robustness to collisions, revealing population transfer and droplet\nfission.",
+          "arxiv_id": "2002.07958v2"
+        }
+      ],
+      "6": [
+        {
+          "title": "Tunable Bose-Einstein condensation and roton-like excitation spectra with dipolar exciton-polaritons in crossed fields",
+          "year": "2023-06",
+          "abstract": "We develop the many-body theory of dipolar exciton-polaritons in an optical\nmicrocavity in crossed transverse electric and in-plane magnetic fields. Even\nfor relatively weak fields, we reveal the existence of two minima in the bare\nlower-polariton dispersion, which give rise to the tuneable transition between\nthe polariton Bose-Einstein condensate and that of excitons, produced by the\ncompetition between these minima. We predict that such dipolar condensate\nexhibits a roton-maxon character of the excitation spectrum, never before\nobserved for polaritons. We show that upon the transition between the two\ncondensation regimes, the weak correlations in the polariton gas give way to\nthe intermediate interparticle correlations characteristic for excitons, and\nthat the transition is accompanied by a sharp quenching of photoluminescence as\nthe lifetime is increased by several orders of magnitude. While in the\npolariton regime, the luminescence peak corresponding to the condensate is\nshifted to a non-zero angle. The angular dependence of the two-photon decay\ntime in the Hanbury Brown and Twiss experiment is calculated and used as a tool\nto evidence the formation of the macroscopically-coherent state. Our proposal\nopens opportunities towards manipulating the superfluid properties and\nextended-range dipole-dipole correlations of exciton-polariton condensates.",
+          "arxiv_id": "2306.02202v2"
+        },
+        {
+          "title": "Polaronic polariton quasiparticles in a dark excitonic medium",
+          "year": "2023-12",
+          "abstract": "Exciton polaritons are hybrid particles of excitons (bound electron-hole\npairs) and cavity photons, which are renowned for displaying Bose Einstein\ncondensation and other coherent phenomena at elevated temperatures. However,\ntheir formation in semiconductor microcavities is often accompanied by the\nappearance of an incoherent bath of optically dark excitonic states that can\ninteract with polaritons via their matter component. Here we show that the\npresence of such a dark excitonic medium can \"dress\" polaritons with density\nfluctuations to form coherent polaron-like quasiparticles, thus fundamentally\nmodifying their character. We employ a many-body Green's function approach that\nnaturally incorporates correlations beyond the standard mean-field theories\napplied to this system. With increasing exciton density, we find a reduction in\nthe light-matter coupling that arises from the polaronic dressing cloud rather\nthan any saturation induced by the fermionic constituents of the exciton. In\nparticular, we observe the strongest effects when the spin of the polaritons is\nopposite that of the excitonic medium. In this case, the coupling to light\ngenerates an additional polaron quasiparticle - the biexciton polariton - which\nemerges due to the dark-exciton counterpart of a polariton Feshbach resonance.\nOur results can explain recent experiments on polariton interactions in\ntwo-dimensional semiconductors and potentially provide a route to tailoring the\nproperties of exciton polaritons and their correlations.",
+          "arxiv_id": "2312.00985v1"
+        },
+        {
+          "title": "Microscopic calculation of polariton scattering in semiconductor microcavities",
+          "year": "2021-09",
+          "abstract": "Recent experiments in exciton-polariton systems have provided high-precision\nmeasurements of the value of the polariton-polariton interaction constant,\nwhich is a key parameter that governs the nonlinear dynamics of polariton\ncondensates and potentially enables quantum correlated polaritons. Yet, until\nnow, this parameter has only been addressed theoretically using perturbative\ntreatments or approximations that do not include the composite nature of the\nexcitons. Here, we use a recently developed microscopic description of\npolaritons involving electrons, holes, and photons, where the interactions\nbetween charged particles are assumed to be highly screened. Within this model,\nwe perform an exact four-body calculation of the spin-polarized\npolariton-polariton and polariton-exciton interaction constants. In the limit\nof weak light-matter coupling relevant to an atomically thin semiconductor in a\nmicrocavity, we obtain excellent agreement with a recently proposed universal\nform of low-energy polariton-polariton scattering [O. Bleu et al., Phys. Rev.\nRes. 2, 043185 (2020)]. At stronger light-matter coupling, of relevance to\nmultilayer microcavities, we observe that the interaction constant increases\ntowards that predicted by the Born approximation. We show that in all regimes\nof interest the interaction constant can be accurately obtained from the\nexciton-exciton scattering phase shift at negative collision energy, and we\nargue that this has important implications for interactions in other systems\nfeaturing strong light-matter coupling.",
+          "arxiv_id": "2109.11992v2"
+        }
+      ],
+      "7": [
+        {
+          "title": "Discrete time crystals in Bose-Einstein Condensates and symmetry-breaking edge in a simple two-mode theory",
+          "year": "2021-06",
+          "abstract": "Discrete time crystals (DTCs) refer to a novel many-body steady state that\nspontaneously breaks the discrete time-translational symmetry in a\nperiodically-driven quantum system. Here, we study DTCs in a Bose-Einstein\ncondensate (BEC) bouncing resonantly on an oscillating mirror, using a two-mode\nmodel derived from a standard quantum field theory. We investigate the validity\nof this model and apply it to study the long-time behavior of our system. A\nwide variety of initial states based on two Wannier modes are considered. We\nfind that in previous studies the investigated phenomena in the evolution\ntime-window ($\\lessapprox$2000 driving periods) are actually \"short-time\"\ntransient behavior though DTC formation signaled by the sub-harmonic responses\nis still shown if the inter-boson interaction is strong enough. After a much\nlonger (about 20 times) evolution time, initial states with no \"long-range\"\ncorrelations relax to a steady state, where time-symmetry breaking can be\nunambiguously defined. Quantum revivals also eventually occur. This long-time\nbehavior can be understood via the many-body Floquet quasi-eigenenergy spectrum\nof the two-mode model. A symmetry-breaking edge for DTC formation appears in\nthe spectrum for strong enough interaction, where all quasi-eigenstates below\nthe edge are symmetry-breaking while those above the edge are symmetric. The\nlate-time steady state's time-translational symmetry depends solely on whether\nthe initial energy is above or below the symmetry-breaking edge. A phase\ndiagram showing regions of symmetry-broken and symmetric phases for differing\ninitial energies and interaction strengths is presented. We find that according\nto this two-mode model, the discrete time crystal survives for times out to at\nleast 250,000 driving periods.",
+          "arxiv_id": "2106.02219v3"
+        },
+        {
+          "title": "Continuous time crystal from a spontaneous many-body Floquet state",
+          "year": "2021-07",
+          "abstract": "Floquet driven systems represent an extremely interesting arena to study\nout-of-equilibrium phenomena. For instance, they provide realizations of\ndiscrete time crystals, where the discrete time translation symmetry of the\nperiodic Hamiltonian is spontaneously broken by a subharmonic response of the\nsystem. However, the continuous presence of an external periodic driving is\nrequired within the current Floquet paradigm. We propose here the concept of\nspontaneous many-body Floquet state. This is a state that, in the absence of\nexternal periodic driving, self-oscillates like in the presence of a periodic\nHamiltonian, this behavior being spontaneously induced by many-body\ninteractions. In addition, its quantum fluctuations are described by regular\nFloquet theory. Furthermore, it is also a time crystal, presenting long-range\ntime-periodic order. However, this crystalline behavior is very different to\nthat of conventional Floquet discrete time crystals: here, there is no external\nperiodic driving, energy is conserved, and the nature of the spontaneous\nsymmetry breaking is continuous instead of discrete. We demonstrate that\nspontaneous many-body Floquet states can emerge in a variety of canonical\nmany-body problems, ranging from interacting fermions to Bose-Hubbard models.\nWe specifically show that a spontaneous many-body Floquet state is a universal\nintrinsic state of a one-dimensional flowing atom condensate, both subsonic and\nsupersonic, resulting from a dynamical phase transition and robust against\nexternal perturbations and quantum fluctuations, proposing also realistic\nexperimental scenarios for its observation. A spontaneous many-body Floquet\nstate not only represents a realization of a continuous time crystal, but also\na novel paradigm in Floquet physics.",
+          "arxiv_id": "2107.00674v3"
+        },
+        {
+          "title": "Bifurcation of time crystals in driven and dissipative Rydberg atomic gas",
+          "year": "2024-02",
+          "abstract": "A time crystal is an exotic phase of matter where time-translational symmetry\nis broken; this phase differs from the spatial symmetry breaking induced in\ncrystals in space. Lots of experiments report the transition from a thermal\nequilibrium phase to time crystal phase. However, there is no experimental\nmethod to probe the bifurcation effect of distinct time crystals in quantum\nmany-body systems. Here, in a driven and dissipative many-body Rydberg atom\nsystem, we observe multiple continuous dissipative time crystals and emergence\nof more complex temporal symmetries beyond the single time crystal phase.\nBifurcation of time crystals in strongly interacting Rydberg atoms is observed;\nthe process manifests as a transition from a time crystal state of long\ntemporal order to one of short temporal order, or vice versa. By manipulating\nthe driving field parameters, we observe the time crystal's bistability and a\nhysteresis loop. These investigations indicate new possibilities for control\nand manipulation of the temporal symmetries of non-equilibrium systems.",
+          "arxiv_id": "2402.13644v3"
+        }
+      ],
+      "8": [
+        {
+          "title": "Self-Correcting Quantum Many-Body Control using Reinforcement Learning with Tensor Networks",
+          "year": "2022-01",
+          "abstract": "Quantum many-body control is a central milestone en route to harnessing\nquantum technologies. However, the exponential growth of the Hilbert space\ndimension with the number of qubits makes it challenging to classically\nsimulate quantum many-body systems and consequently, to devise reliable and\nrobust optimal control protocols. Here, we present a novel framework for\nefficiently controlling quantum many-body systems based on reinforcement\nlearning (RL). We tackle the quantum control problem by leveraging matrix\nproduct states (i) for representing the many-body state and, (ii) as part of\nthe trainable machine learning architecture for our RL agent. The framework is\napplied to prepare ground states of the quantum Ising chain, including states\nin the critical region. It allows us to control systems far larger than\nneural-network-only architectures permit, while retaining the advantages of\ndeep learning algorithms, such as generalizability and trainable robustness to\nnoise. In particular, we demonstrate that RL agents are capable of finding\nuniversal controls, of learning how to optimally steer previously unseen\nmany-body states, and of adapting control protocols on-the-fly when the quantum\ndynamics is subject to stochastic perturbations. Furthermore, we map the QMPS\nframework to a hybrid quantum-classical algorithm that can be performed on\nnoisy intermediate-scale quantum devices and test it under the presence of\nexperimentally relevant sources of noise.",
+          "arxiv_id": "2201.11790v2"
+        },
+        {
+          "title": "Scalable neural networks for the efficient learning of disordered quantum systems",
+          "year": "2020-05",
+          "abstract": "Supervised machine learning is emerging as a powerful computational tool to\npredict the properties of complex quantum systems at a limited computational\ncost. In this article, we quantify how accurately deep neural networks can\nlearn the properties of disordered quantum systems as a function of the system\nsize. We implement a scalable convolutional network that can address arbitrary\nsystem sizes. This network is compared with a recently introduced extensive\nconvolutional architecture [K. Mills et al., Chem. Sci. 10, 4129 (2019)] and\nwith conventional dense networks with all-to-all connectivity. The networks are\ntrained to predict the exact ground-state energies of various disordered\nsystems, namely a continuous-space single-particle Hamiltonian for cold-atoms\nin speckle disorder, and different setups of a quantum Ising chain with random\ncouplings, including one with only short-range interactions and one augmented\nwith a long-range term. In all testbeds we consider, the scalable network\nretains high accuracy as the system size increases. Furthermore, we demonstrate\nthat the network scalability enables a transfer-learning protocol, whereby a\npre-training performed on small systems drastically accelerates the learning of\nlarge-system properties, allowing reaching high accuracy with small training\nsets. In fact, with the scalable network one can even extrapolate to sizes\nlarger than those included in the training set, accurately reproducing the\nresults of state-of-the-art quantum Monte Carlo simulations.",
+          "arxiv_id": "2005.14290v1"
+        },
+        {
+          "title": "Neural networks in quantum many-body physics: a hands-on tutorial",
+          "year": "2021-01",
+          "abstract": "Over the past years, machine learning has emerged as a powerful computational\ntool to tackle complex problems over a broad range of scientific disciplines.\nIn particular, artificial neural networks have been successfully deployed to\nmitigate the exponential complexity often encountered in quantum many-body\nphysics, the study of properties of quantum systems built out of a large number\nof interacting particles. In this Article, we overview some applications of\nmachine learning in condensed matter physics and quantum information, with\nparticular emphasis on hands-on tutorials serving as a quick-start for a\nnewcomer to the field. We present supervised machine learning with\nconvolutional neural networks to learn a phase transition, unsupervised\nlearning with restricted Boltzmann machines to perform quantum tomography, and\nvariational Monte Carlo with recurrent neural-networks for approximating the\nground state of a many-body Hamiltonian. We briefly review the key ingredients\nof each algorithm and their corresponding neural-network implementation, and\nshow numerical experiments for a system of interacting Rydberg atoms in two\ndimensions.",
+          "arxiv_id": "2101.11099v1"
+        }
+      ],
+      "9": [
+        {
+          "title": "Self-stabilized Bose polarons",
+          "year": "2021-02",
+          "abstract": "The mobile impurity in a Bose-Einstein condensate (BEC) is a paradigmatic\nmany-body problem. For weak interaction between the impurity and the BEC, the\nimpurity deforms the BEC only slightly and it is well described within the\nFr\\\"ohlich model and the Bogoliubov approximation. For strong local attraction\nthis standard approach, however, fails to balance the local attraction with the\nweak repulsion between the BEC particles and predicts an instability where an\ninfinite number of bosons is attracted toward the impurity. Here we present a\nsolution of the Bose polaron problem beyond the Bogoliubov approximation which\nincludes the local repulsion between bosons and thereby stabilizes the Bose\npolaron even near and beyond the scattering resonance. We show that the Bose\npolaron energy remains bounded from below across the resonance and the size of\nthe polaron dressing cloud stays finite. Our results demonstrate how the\ndressing cloud replaces the attractive impurity potential with an effective\nmany-body potential that excludes binding. We find that at resonance, including\nthe effects of boson repulsion, the polaron energy depends universally on the\neffective range. Moreover, while the impurity contact is strongly peaked at\npositive scattering length, it remains always finite. Our solution highlights\nhow Bose polarons are self-stabilized by repulsion, providing a mechanism to\nunderstand quench dynamics and nonequilibrium time evolution at strong\ncoupling.",
+          "arxiv_id": "2102.13616v4"
+        },
+        {
+          "title": "Inducing spin-order with an impurity: phase diagram of the magnetic Bose polaron",
+          "year": "2022-04",
+          "abstract": "We investigate the formation of magnetic Bose polaron, an impurity atom\ndressed by spin-wave excitations, in a one-dimensional spinor Bose gas. In\nterms of an effective potential model the impurity is strongly confined by the\nhost excitations which can even overcome the impurity-medium repulsion leading\nto a self-localized quasi-particle state. The phase diagram of the attractive\nand self-bound repulsive magnetic polaron, repulsive non-magnetic (Fr{\\\"\no}hlich-type) polaron and impurity-medium phase-separation regimes is explored\nwith respect to the Rabi-coupling between the spin components, spin-spin\ninteractions and impurity-medium coupling. The residue of such magnetic\npolarons decreases substantially in both strong attractive and repulsive\nbranches with strong impurity-spin interactions, illustrating significant\ndressing of the impurity. The impurity can be used to probe and maneuver the\nspin polarization of the magnetic medium while suppressing ferromagnetic\nspin-spin correlations. It is shown that mean-field theory fails as the spinor\ngas approaches immiscibility since the generated spin-wave excitations are\nprominent. Our findings illustrate that impurities can be utilized to generate\ncontrollable spin-spin correlations and magnetic polaron states which can be\nrealized with current cold atom setups.",
+          "arxiv_id": "2204.10960v1"
+        },
+        {
+          "title": "Thermodynamic signatures of the polaron-molecule transition in a Fermi gas",
+          "year": "2020-11",
+          "abstract": "We consider the highly spin-imbalanced limit of a two-component Fermi gas,\nwhere there is a small density of $\\downarrow$ impurities attractively\ninteracting with a sea of $\\uparrow$ fermions. In the single-impurity limit at\nzero temperature, there exists the so-called polaron-molecule transition, where\nthe impurity sharply changes its character by binding a $\\uparrow$ fermion at\nsufficiently strong attraction. Using a recently developed variational\napproach, we calculate the thermodynamic properties of the impurity, and we\nshow that the transition becomes a smooth crossover at finite temperature due\nto the thermal occupation of excited states in the impurity spectral function.\nHowever, remnants of the single-impurity transition are apparent in the\nmomentum-resolved spectral function, which can in principle be probed with\nRaman spectroscopy. We furthermore show that the Tan contact exhibits a\ncharacteristic non-monotonic dependence on temperature that provides a\nsignature of the zero-temperature polaron-molecule transition. For a finite\nimpurity density, we argue that descriptions purely based on the behavior of\nthe Fermi polaron are invalid near the polaron-molecule transition, since\ncorrelations between impurities cannot be ignored. In particular, we show that\nthe spin-imbalanced system undergoes phase separation at low temperatures due\nto the strong attraction between $\\uparrow\\downarrow$ molecules induced by the\nFermi sea. Thus, we find that the impurity spectrum and the induced\nimpurity-impurity interactions are key to understanding the phase diagram of\nthe spin-imbalanced Fermi gas.",
+          "arxiv_id": "2011.08478v2"
+        }
+      ],
+      "10": [
+        {
+          "title": "Quantum vortices leave a macroscopic signature in the normal fluid",
+          "year": "2025-01",
+          "abstract": "Recent work has highlighted the remarkable properties of quantum turbulence\nin superfluid helium II, consisting of a disordered tangle of quantised vortex\nlines which interact with each other and reconnect when they collide. According\nto Landau's two-fluid theory, these vortex lines move in a surrounding of\nthermal excitations called the normal fluid. Until now, the normal fluid has\noften been considered a passive background which simply provides the vortex\nlines with a mechanism for dissipating their kinetic energy into heat. Using a\nmodel which fully takes into account the two-way interaction between the vortex\nlines and the normal fluid, here we show that each vortex line creates a\nmacroscopic wake in the normal fluid that can be larger than the average\ndistance between vortex lines; this is surprising, given the microscopic size\nof the superfluid vortex cores which induce these wakes. We show that in heat\ntransfer experiments, the flow of the normal fluid can therefore be described\nas the superposition of an imposed uniform flow and wakes generated by the\nvortex lines, leading to non-classical statistics of the normal fluid velocity.\nWe also argue that this first evidence of independent fluid structures in the\nthermal excitations postulated by Landau may be at the root of recent,\nunaccounted for, experimental findings.",
+          "arxiv_id": "2501.08309v1"
+        },
+        {
+          "title": "Universal description of massive point vortices and verification methods of vortex inertia in superfluids",
+          "year": "2024-09",
+          "abstract": "Vortex mass, which is the inertia of a quantum vortex, has never been\nobserved in superfluids and is a long-standing problem in low temperature\nphysics. The impact of the mass is considered negligible in typical experiments\nwith superfluid $^4$He. Recent developments of experimental techniques for\nmanipulating quantum vortices in superfluid atomic gases have enabled us to\ntest this problem more accurately. By introducing the vortex mass time and\nlength as universal scales to many-body problems of massive quantum vortices,\nthe theoretical description is formulated in the simplest manner and is\nuniversally applicable to different quantum fluids, including fermionic and\nmulticomponent superfluids. There are two branches, the cyclotron and massless\nbranches, for the circular motion of a pair of like-sign vortices. Finding a\nstable cyclotron branch for the motion of vortices is a clear evidence of\nvortex mass and superfluid $^3$He-B is the specific example of a system where\nthis phenomena could be observed. The impact of the mass on the massless branch\nis small but can be enhanced by taking the difference in the two-body dynamics\nof point vortices with different initial conditions. Our results imply that the\nvortex mass is a direct cause of the splitting instability of a doubly\nquantized vortex at absolute zero and that the vortex mass length characterizes\nthe final state after the instability. It is also demonstrated that a pair of\nmassive vortices with opposite circulations has a critical distance\ncharacterized by the vortex mass length, below which they are spontaneously\nannihilated without thermal fluctuations.",
+          "arxiv_id": "2409.12808v2"
+        },
+        {
+          "title": "Sound emission and annihilations in a programmable quantum vortex collider",
+          "year": "2021-05",
+          "abstract": "In quantum fluids, the quantisation of circulation forbids the diffusion of a\nvortex swirling flow seen in classical viscous fluids. Yet, a quantum vortex\naccelerating in a superfluid may lose its energy into acoustic radiation, in a\nsimilar way an electric charge decelerates upon emitting photons. The\ndissipation of vortex energy underlies central problems in quantum\nhydrodynamics, such as the decay of quantum turbulence, highly relevant to\nsystems as varied as neutron stars, superfluid helium and atomic condensates. A\ndeep understanding of the elementary mechanisms behind irreversible vortex\ndynamics has been a goal for decades, but it is complicated by the shortage of\nconclusive experimental signatures. Here, we address this challenge by\nrealising a programmable quantum vortex collider in a planar, homogeneous\natomic Fermi superfluid with tunable inter-particle interactions. We create\non-demand vortex configurations and monitor their evolution, taking advantage\nof the accessible time and length scales of our ultracold Fermi gas.\nEngineering collisions within and between vortex-antivortex pairs allows us to\ndecouple relaxation of the vortex energy due to sound emission and interactions\nwith normal fluid, i.e. mutual friction. We directly visualise how the\nannihilation of vortex dipoles radiates a sound pulse in the superfluid.\nFurther, our few-vortex experiments extending across different superfluid\nregimes suggest that fermionic quasiparticles localised inside the vortex core\ncontribute significantly to dissipation, opening the route to exploring new\npathways for quantum turbulence decay, vortex by vortex.",
+          "arxiv_id": "2105.15180v2"
+        }
+      ],
+      "11": [
+        {
+          "title": "On the existence of steady-state black hole analogues in finite quasi-one-dimensional Bose-Einstein condensates",
+          "year": "2021-03",
+          "abstract": "We theoretically propose a finite-size quasi-one-dimensional Bose-Einstein\ncondensate with coherent source and drain placed at its two ends, which can in\nprinciple sustain a stationary sonic black hole with a single event horizon.\nOur analysis is focused on the condensate persistence against quantum\nfluctuations. We show that similar to white hole-black hole pairs, dynamical\ninstabilities occur. Investigating in detail the instabilities' dependence on\nthe system parameters, we also identify windows of formally infinite black hole\nlifetimes. By using quantum depletion of the condensate as a diagnostic tool,\nwe validate the usage of Bogoliubov theory to describe the analogue Hawking\nprocess, and establish novel signatures of Hawking radiation in the depleted\ncloud, both inside and outside the event horizon.",
+          "arxiv_id": "2103.05015v2"
+        },
+        {
+          "title": "Quantum backreaction in an analogue black hole",
+          "year": "2025-09",
+          "abstract": "We extend the Gross-Pitaevskii equation to incorporate the effect of quantum\nfluctuations onto the flow of a weakly interacting Bose-Einstein condensate.\nApplying this framework to an analogue black hole in a quasi-one-dimensional,\ntransonic flow, we investigate how acoustic Hawking radiation back-reacts on\nthe background condensate. Our results point to the emergence of stationary\ndensity and velocity undulations in the supersonic region (analogous to the\nblack hole interior) and enable to evaluate the change in upstream and\ndownstream Mach numbers caused by Hawking radiation. These findings provide new\ninsight into the interplay between quantum fluctuations and analogue gravity in\nBose-Einstein condensates.",
+          "arxiv_id": "2509.08706v1"
+        },
+        {
+          "title": "Quantum correlations across the horizon in acoustic and gravitational Black Holes",
+          "year": "2021-07",
+          "abstract": "We investigate, within the framework of Quantum Field Theory in curved space,\nthe correlations across the horizon of a black hole in order to highlight the\nparticle-partner pair creation mechanism at the origin of Hawking radiation.\nThe analysis concerns both acoustic black holes, formed by Bose-Einstein\ncondensates, and gravitational black holes. More precisely, we have considered\na typical acoustic black hole metric with two asymptotic homogeneous regions\nand the Schwarzschild metric as describing a gravitational black hole. By\nconsidering equal time correlation functions, we find a striking disagreement\nbetween the two cases: the expected characteristic peak centered along the\ntrajectories of the Hawking particles and their partners seems to appear only\nfor the acoustic black hole and not for the gravitational Schwarzschild one.\nThe reason for that is the existence of a 'quantum atmosphere' displaced from\nthe horizon as the locus of origin of Hawking radiation together, and this is\nthe crucial aspect, with the presence of a central singularity in the\ngravitational case swallowing everything is trapped inside the horizon.\nCorrelations however are not absent in the gravitational case: to see them one\nhas simply to consider correlation functions at unequal times which indeed\ndisplay the expected peak.",
+          "arxiv_id": "2107.00702v2"
+        }
+      ],
+      "12": [
+        {
+          "title": "Frustration- and doping-induced magnetism in a Fermi-Hubbard simulator",
+          "year": "2022-12",
+          "abstract": "Geometrical frustration in strongly correlated systems can give rise to a\nplethora of novel ordered states and intriguing magnetic phases, such as\nquantum spin liquids. Promising candidate materials for such phases can be\ndescribed by the Hubbard model on an anisotropic triangular lattice, a\nparadigmatic model capturing the interplay between strong correlations and\nmagnetic frustration. However, the fate of frustrated magnetism in the presence\nof itinerant dopants remains unclear, as well as its connection to the doped\nphases of the square Hubbard model. Here we investigate the local spin order of\na Hubbard model with controllable frustration and doping, using ultracold\nfermions in anisotropic optical lattices continuously tunable from a square to\na triangular geometry. At half-filling and strong interactions $U/t \\sim 9$, we\nobserve at the single-site level how frustration reduces the range of magnetic\ncorrelations and drives a transition from a collinear N\\'eel antiferromagnet to\na short-range correlated 120$^{\\circ}$ spiral phase. Away from half-filling,\nthe triangular limit shows enhanced antiferromagnetic correlations on the\nhole-doped side and a reversal to ferromagnetic correlations at particle\ndopings above 20%, hinting at the role of kinetic magnetism in frustrated\nsystems. This work paves the way towards exploring possible chiral ordered or\nsuperconducting phases in triangular lattices and realizing t-t' square lattice\nHubbard models that may be essential to describe superconductivity in cuprate\nmaterials.",
+          "arxiv_id": "2212.13983v2"
+        },
+        {
+          "title": "High-temperature kinetic magnetism in triangular lattices",
+          "year": "2022-09",
+          "abstract": "We study kinetic magnetism for the Fermi-Hubbard models in triangular type\nlattices, including a zigzag ladder, four- and six-legged triangular cylinders\nand a full two-dimensional triangular lattice. We focus on the regime of strong\ninteractions, $U\\gg t$ and filling factors around one electron per site. For\ntemperatures well above the hopping strength, the Curie-Weiss form of the\nmagnetic susceptibility suggests effective antiferromagnetic correlations for\nsystems that are hole doped with respect to $\\nu=1$, and ferromagnetic\ncorrelations for systems with electron dopings. We show that these correlations\narise from magnetic polaron dressing of charge carrier propagating in a spin\nincoherent Mott insulator. Effective interactions corresponding to these\ncorrelations can strongly exceed the magnetic super-exchange energy. In the\ncase of hole doping, antiferromagnetic polarons originate from kinetic\nfrustration of individual holes in a triangular lattice. In the case of\nelectron doping, Nagaoka type ferromagnetic correlations are induced by\npropagating doublons. These results provide a theoretical explanation of recent\nexperimental results in moire TMDC materials. To understand many-body states\narising from antiferromagentic polarons at low temperatures, we study hole\ndoped systems in finite magnetic fields. At low dopings and intermediate\nmagnetic fields we find a magnetic polaron phase, separated from the fully\npolarized state by a metamagnetic transition. With decreasing magnetic field\nthe system shows a tendency to phase separate, with hole rich regions forming\nantiferromagnetic spinbags. We demonstrate that direct observations of magnetic\npolarons in triangular lattices can be achieved in experiments with ultracold\natoms, which allow measurements of three point hole-spin-spin correlations.",
+          "arxiv_id": "2209.05398v1"
+        },
+        {
+          "title": "Kinetic-to-magnetic frustration crossover and linear confinement in the doped triangular $t-J$ model",
+          "year": "2023-05",
+          "abstract": "Microscopically understanding competing orders in strongly correlated systems\nis a key challenge in modern quantum many-body physics. For example, the study\nof magnetic polarons and their relation to pairing in the Fermi-Hubbard model\nin different geometries remains one of the central questions, and may help to\nunderstand the mechanism underlying unconventional superconductivity in\ncuprates or transition metal dichalcogenides. With recent advances in analog\nquantum simulation of the Fermi-Hubbard model on non-bipartite lattices,\nfrustrated physics can now be explored experimentally in systems lacking\nparticle-hole symmetry. Here, we study the singly doped $t-J$ model on the\ntriangular lattice, focusing on the competition between kinetic and magnetic\nfrustration as a function of temperature. In doublon doped systems, we uncover\na crossover between Nagaoka-type ferromagnetic (FM) correlations at high\ntemperature and exchange mediated antiferromagnetic (AFM) order around the\ndoublon at low temperature. For hole doped systems, kinetic\nHaerter-Shastry-type AFM at high temperature as well as exchange interactions\nat low temperature favor $120^{\\circ}$ order, strengthening magnetic\ncorrelations compared to the undoped system. In the ground state, the presence\nof AFM correlations throughout a wide range of interactions indicates\nconfinement of both types of dopants. In this regime we firmly establish the\npresence of linear confining potentials via energy scaling arguments,\nsupporting the picture of geometric strings in the frustrated triangular $t-J$\nmodel.",
+          "arxiv_id": "2305.02342v2"
+        }
+      ],
+      "13": [
+        {
+          "title": "Nonequilibrium BCS-BEC crossover and unconventional FFLO superfluid in a strongly interacting driven-dissipative Fermi gas",
+          "year": "2024-08",
+          "abstract": "We present a theoretical review of the recent progress in nonequilibrium BCS\n(Bardeen-Cooper-Schrieffer)-BEC (Bose-Einstein condensation) crossover physics.\nAs a paradigmatic example, we consider a strongly interacting\ndriven-dissipative two-component Fermi gas where the nonequilibrium steady\nstate is tuned by adjusting the chemical potential difference between two\nreservoirs that are coupled with the system. As a powerful theoretical tool to\ndeal with this system, we employ the Schwinger-Keldysh Green's function\ntechnique. We systematically evaluate the superfluid transition, as well as the\nsingle-particle properties, in the nonequilibrium BCS-BEC crossover region, by\nadjusting the chemical potential difference between the reservoirs and the\nstrength of an s-wave pairing interaction associated with a Feshbach resonance.\nIn the weak-coupling BCS side, the chemical potential difference is shown to\nimprint a two-step structure on the particle momentum distribution, leading to\nan anomalous enhancement of pseudogap, as well as the emergence of exotic\nFulde-Ferrell-Larkin-Ovchinnikov-type superfluid instability. Since various\nnonequilibrium situations have recently been realized in ultracold Fermi gases,\nthe theoretical understanding of nonequilibrium BCS-BEC crossover physics would\nbecome increasingly important in this research field.",
+          "arxiv_id": "2408.00446v1"
+        },
+        {
+          "title": "Ground states of atomic Fermi gases in a two-dimensional optical lattice with and without population imbalance",
+          "year": "2022-05",
+          "abstract": "We study the ground state phase diagram of population balanced and imbalanced\nultracold atomic Fermi gases with a short range attractive interaction\nthroughout the crossover from BCS to Bose-Einstein condensation (BEC), in a\ntwo-dimensional optical lattice (2DOL) comprised of two lattice and one\ncontinuum dimensions. We find that the mixing of lattice and continuum\ndimensions, together with population imbalance, has an extraordinary effect on\npairing and the superfluidity of atomic Fermi gases. In the balanced case, the\nsuperfluid ground state prevails the majority of the phase space. However, for\nrelatively small lattice hopping integral $t$ and large lattice constant $d$, a\npair density wave (PDW) emerges unexpectedly at intermediate coupling strength,\nand the nature of the in-plane and overall pairing changes from particle-like\nto hole-like in the BCS and unitary regimes, associated with an abnormal\nincrease in the Fermi volume with the pairing strength. In the imbalanced case,\nthe stable polarized superfluid phase shrinks to only a small portion of the\nentire phase space spanned by $t$, $d$, imbalance $p$ and interaction strength\n$U$, mainly in the bosonic regime of low $p$, moderately strong pairing, and\nrelatively large $t$ and small $d$. Due to the Pauli exclusion between paired\nand excessive fermions within the confined momentum space, a PDW phase emerges\nand the overall pairing evolves from particle-like into hole-like, as the\npairing strength grows stronger in the BEC regime. In both cases, the ground\nstate property is largely governed by the Fermi surface topology. These\nfindings are very different from the cases of pure 3D continuum, 3D lattice or\n1DOL.",
+          "arxiv_id": "2205.04045v1"
+        },
+        {
+          "title": "Superfluid properties of an ultracold Fermi gas with an orbital Feshbach resonance in the BCS-BEC crossover region",
+          "year": "2021-03",
+          "abstract": "We theoretically investigate superfluid properties of a two-band gas of\n$^{173}$Yb Fermi atoms with an orbital Feshbach resonance (OFR). To describe\nthe BCS-BEC crossover region, we include superfluid fluctuations caused by\ninter-band and intra-band pairing interactions associated with OFR, by\nextending the strong-coupling theory developed by Nozi\\`eres and Schmitt-Rink\nto the two-band case below the superfluid phase transition temperature;\nhowever, effects of an experimentally inaccessible deep bound state are\nremoved, to model a real $^{173}$Yb Fermi gas near OFR. We show that the\ncondensate fraction in the upper closed channel gradually becomes smaller than\nthat in the lower open channel, as one moves from the strong- to the\nweak-coupling regime, because the OFR-pairing mechanism tunes the interaction\nstrengths by adjusting the energy difference between the two bands. However,\neven when the closed-channel band is much higher in energy than the\nopen-channel band in the weak-coupling regime, the magnitude of the superfluid\norder parameter in the closed channel is found to be still comparable to that\nin the open channel. As the reason for this, we point out a pair-tunneling\neffect by the OFR-induced inter-band interaction. Besides these superfluid\nquantities, we also examine collective modes, such as the Goldstone mode,\nSchmid (Higgs) mode, as well as Leggett mode, to clarify how they appear in the\nspectral weights of pair-correlation functions in each band. Since the\nrealization of a multi-band superfluid Fermi gas is a crucial issue in cold\nFermi gas physics, our results would contribute to the basic understanding of\nthis type of Fermi superfluid in the BCS-BEC crossover region.",
+          "arxiv_id": "2103.16933v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T21:14:15Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

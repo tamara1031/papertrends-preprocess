@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_control_systems_time_model",
+        "keywords": [
+          [
+            "control",
+            0.03183959140540616
+          ],
+          [
+            "systems",
+            0.021804226449939176
+          ],
+          [
+            "time",
+            0.02107190587838596
+          ],
+          [
+            "model",
+            0.020050320921229926
+          ],
+          [
+            "paper",
+            0.017512846672097095
+          ],
+          [
+            "problem",
+            0.016148719979436864
+          ],
+          [
+            "data",
+            0.016092434097157878
+          ],
+          [
+            "approach",
+            0.015458434897501289
+          ],
+          [
+            "state",
+            0.01506701091802565
+          ],
+          [
+            "performance",
+            0.014557928947124437
+          ]
+        ],
+        "count": 23345
+      },
+      "1": {
+        "name": "1_power_energy_model_grid",
+        "keywords": [
+          [
+            "power",
+            0.04236085191146794
+          ],
+          [
+            "energy",
+            0.0318337665690076
+          ],
+          [
+            "model",
+            0.022000002715425668
+          ],
+          [
+            "grid",
+            0.021887866549887686
+          ],
+          [
+            "paper",
+            0.017269230958511607
+          ],
+          [
+            "control",
+            0.017236038207569884
+          ],
+          [
+            "systems",
+            0.015882567379351238
+          ],
+          [
+            "data",
+            0.015830516975458803
+          ],
+          [
+            "voltage",
+            0.013432811050311166
+          ],
+          [
+            "method",
+            0.01332318585236122
+          ]
+        ],
+        "count": 6248
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.28275388636426646
+      ],
+      [
+        -0.28275388636426646,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        199,
+        54
+      ],
+      "2020-02": [
+        223,
+        53
+      ],
+      "2020-03": [
+        340,
+        85
+      ],
+      "2020-04": [
+        314,
+        78
+      ],
+      "2020-05": [
+        288,
+        85
+      ],
+      "2020-06": [
+        275,
+        81
+      ],
+      "2020-07": [
+        249,
+        81
+      ],
+      "2020-08": [
+        254,
+        75
+      ],
+      "2020-09": [
+        295,
+        79
+      ],
+      "2020-10": [
+        269,
+        93
+      ],
+      "2020-11": [
+        350,
+        83
+      ],
+      "2020-12": [
+        280,
+        75
+      ],
+      "2021-01": [
+        247,
+        78
+      ],
+      "2021-02": [
+        279,
+        89
+      ],
+      "2021-03": [
+        465,
+        104
+      ],
+      "2021-04": [
+        311,
+        98
+      ],
+      "2021-05": [
+        273,
+        72
+      ],
+      "2021-06": [
+        280,
+        94
+      ],
+      "2021-07": [
+        247,
+        78
+      ],
+      "2021-08": [
+        250,
+        72
+      ],
+      "2021-09": [
+        332,
+        76
+      ],
+      "2021-10": [
+        309,
+        114
+      ],
+      "2021-11": [
+        288,
+        91
+      ],
+      "2021-12": [
+        257,
+        86
+      ],
+      "2022-01": [
+        237,
+        71
+      ],
+      "2022-02": [
+        254,
+        69
+      ],
+      "2022-03": [
+        392,
+        108
+      ],
+      "2022-04": [
+        311,
+        79
+      ],
+      "2022-05": [
+        296,
+        69
+      ],
+      "2022-06": [
+        268,
+        78
+      ],
+      "2022-07": [
+        297,
+        106
+      ],
+      "2022-08": [
+        273,
+        81
+      ],
+      "2022-09": [
+        372,
+        93
+      ],
+      "2022-10": [
+        322,
+        87
+      ],
+      "2022-11": [
+        351,
+        93
+      ],
+      "2022-12": [
+        302,
+        97
+      ],
+      "2023-01": [
+        252,
+        98
+      ],
+      "2023-02": [
+        234,
+        86
+      ],
+      "2023-03": [
+        401,
+        125
+      ],
+      "2023-04": [
+        410,
+        119
+      ],
+      "2023-05": [
+        345,
+        109
+      ],
+      "2023-06": [
+        281,
+        69
+      ],
+      "2023-07": [
+        296,
+        86
+      ],
+      "2023-08": [
+        289,
+        91
+      ],
+      "2023-09": [
+        424,
+        96
+      ],
+      "2023-10": [
+        366,
+        154
+      ],
+      "2023-11": [
+        370,
+        115
+      ],
+      "2023-12": [
+        359,
+        91
+      ],
+      "2024-01": [
+        364,
+        108
+      ],
+      "2024-02": [
+        336,
+        82
+      ],
+      "2024-03": [
+        537,
+        111
+      ],
+      "2024-04": [
+        361,
+        95
+      ],
+      "2024-05": [
+        406,
+        111
+      ],
+      "2024-06": [
+        336,
+        82
+      ],
+      "2024-07": [
+        326,
+        81
+      ],
+      "2024-08": [
+        340,
+        95
+      ],
+      "2024-09": [
+        461,
+        114
+      ],
+      "2024-10": [
+        458,
+        120
+      ],
+      "2024-11": [
+        399,
+        118
+      ],
+      "2024-12": [
+        337,
+        111
+      ],
+      "2025-01": [
+        376,
+        101
+      ],
+      "2025-02": [
+        387,
+        97
+      ],
+      "2025-03": [
+        566,
+        126
+      ],
+      "2025-04": [
+        531,
+        113
+      ],
+      "2025-05": [
+        471,
+        115
+      ],
+      "2025-06": [
+        424,
+        113
+      ],
+      "2025-07": [
+        461,
+        133
+      ],
+      "2025-08": [
+        416,
+        117
+      ],
+      "2025-09": [
+        265,
+        72
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Approximation-free Control of Unknown Euler-Lagrangian Systems under Input Constraints",
+          "year": "2025-07",
+          "abstract": "In this paper, we present a novel funnel-based tracking control algorithm for\nrobotic systems with unknown dynamics and prescribed input constraints. The\nEuler-Lagrange formulation, a common modeling approach for robotic systems, has\nbeen adopted in this study to address the trade-off between performance and\nactuator safety. We establish feasibility conditions that ensure tracking\nerrors evolve within predefined funnel bounds while maintaining bounded control\nefforts, a crucial consideration for robots with limited actuation\ncapabilities. We propose two approximation-free control strategies for\nscenarios where these conditions are violated: one actively corrects the error,\nand the other stops further deviation. Finally, we demonstrate the robust\nperformance and safety of the approach through simulations and experimental\nvalidations. This work represents a significant advancement in funnel-based\ncontrol, enhancing its applicability to real-world robotics systems with input\nconstraints.",
+          "arxiv_id": "2507.01426v1"
+        },
+        {
+          "title": "Robust and Kernelized Data-Enabled Predictive Control for Nonlinear Systems",
+          "year": "2022-06",
+          "abstract": "This paper presents a robust and kernelized data-enabled predictive control\n(RoKDeePC) algorithm to perform model-free optimal control for nonlinear\nsystems using only input and output data. The algorithm combines robust\npredictive control and a non-parametric representation of nonlinear systems\nenabled by regularized kernel methods. The latter is based on implicitly\nlearning the nonlinear behavior of the system via the representer theorem.\nInstead of seeking a model and then performing control design, our method goes\ndirectly from data to control. This allows us to robustify the control inputs\nagainst the uncertainties in data by considering a min-max optimization problem\nto calculate the optimal control sequence. We show that by incorporating a\nproper uncertainty set, this min-max problem can be reformulated as a nonconvex\nbut structured minimization problem. By exploiting its structure, we present a\nprojected gradient descent algorithm to effectively solve this problem.\nFinally, we test the RoKDeePC on two nonlinear example systems - one academic\ncase study and a grid-forming converter feeding a nonlinear load - and compare\nit with some existing nonlinear data-driven predictive control methods.",
+          "arxiv_id": "2206.01866v1"
+        },
+        {
+          "title": "Model-Reference Reinforcement Learning for Collision-Free Tracking Control of Autonomous Surface Vehicles",
+          "year": "2020-08",
+          "abstract": "This paper presents a novel model-reference reinforcement learning algorithm\nfor the intelligent tracking control of uncertain autonomous surface vehicles\nwith collision avoidance. The proposed control algorithm combines a\nconventional control method with reinforcement learning to enhance control\naccuracy and intelligence. In the proposed control design, a nominal system is\nconsidered for the design of a baseline tracking controller using a\nconventional control approach. The nominal system also defines the desired\nbehaviour of uncertain autonomous surface vehicles in an obstacle-free\nenvironment. Thanks to reinforcement learning, the overall tracking controller\nis capable of compensating for model uncertainties and achieving collision\navoidance at the same time in environments with obstacles. In comparison to\ntraditional deep reinforcement learning methods, our proposed learning-based\ncontrol can provide stability guarantees and better sample efficiency. We\ndemonstrate the performance of the new algorithm using an example of autonomous\nsurface vehicles.",
+          "arxiv_id": "2008.07240v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Impacts of Variable-Impedance-Based Power Flow Control on Renewable Energy Integration",
+          "year": "2022-04",
+          "abstract": "The electric power grid has evolved significantly over the past two decades\nin response to climate change. Increased levels of renewable energy generation,\nas a prominent feature of this evolution, have led to new congestion patterns\nin the transmission network. The transmission system is originally designed for\nconventional energy sources, with predictable flow patterns. Insufficient\ntransfer capability in congested transmission systems results in commitment of\nmore expensive power plants and higher levels of renewable energy curtailment.\nOne way to mitigate congestion is adoption of power flow control through\nvariable-impedance flexible ac transmission system (FACTS) devices. In this\npaper the impacts of power flow control on generation cost, carbon emissions\nand renewable energy curtailment are studied under a wide range of scenarios,\nincluding generation mix from major US regional transmission organizations, and\ndifferent load curves, representing seasonal variations. A two-stage stochastic\nunit commitment, including FACTS adjustment, is used to evaluate the impacts of\nFACTS devices on various types and penetration levels of renewable energy. The\nresults show that FACTS installation effectively reduces generation cost,\ncarbon emissions, and renewable energy curtailment. Location of renewable\nenergy resources, peak-hour demand and the system's generation mix are among\nthe influential factors.",
+          "arxiv_id": "2204.12642v1"
+        },
+        {
+          "title": "Economic Dispatch and Power Flow Analysis for Microgrids",
+          "year": "2024-11",
+          "abstract": "This study investigates the economic dispatch and optimal power flow (OPF)\nfor microgrids, focusing on two configurations: a single-bus islanded microgrid\nand a three-bus grid-tied microgrid. The methodologies integrate renewable\nenergy sources (solar PV and wind turbines), battery energy storage systems\n(BESS), and conventional generators (CHP, diesel, and natural gas), which are\nconnected to the grid to ensure cost-efficient and reliable operation. The\neconomic dispatch analysis evaluates the allocation of generation resources\nover daily and weekly horizons, highlighting the extensive utilization of\nrenewable energy and the strategic use of BESS to balance system dynamics. The\nOPF analysis examines the distribution of active and reactive power across\nbuses while ensuring voltage stability and compliance with operational\nconstraints. Results show that the microgrid consistently satisfies load demand\nwith minimal reliance on costly external grid power. Renewable energy sources\nare maximized for cost reduction, while BESS is employed strategically to\naddress renewable intermittency. For the grid-tied microgrid, optimal power\ndispatch prioritizes cheaper sources, with Bus 1 contributing the largest share\ndue to its favorable cost profile. Voltage variations remain within acceptable\nboundaries but indicate potential stability challenges under dynamic load\nchanges, suggesting the need for secondary voltage control. These findings\ndemonstrate the effectiveness of the proposed methodologies in achieving\nsustainable, cost-effective, and stable microgrid operations.",
+          "arxiv_id": "2411.19279v1"
+        },
+        {
+          "title": "Grid-Forming Converters control based on DC voltage feedback",
+          "year": "2020-09",
+          "abstract": "The renewable energy is connected to the power grid through power electronic\nconverters, which are lack of make the inertia of synchronous generator/machine\n(SM) be lost. The increasing penetration of renewable energy in power system\nweakens the frequency and voltage stability. The Grid-Forming Converters (GFCs)\nsimulate the function of synchronous motor through control method in order to\nimprove the stability of power grid by providing inertia and stability\nregulation mechanism. This kind of converter control methods include virtual\nsynchronous machine, schedulable virtual oscillator control and so on. These\ncontrol method mainly use AC side state feedback and do not monitor the DC side\nstate. This paper analyzes the control strategy of GFC considering power grid\nstability, including Frequency Droop Control, Virtual Synchronous Machine\nControl and dispatchable Virtual Oscillator Control. The DC side voltage\ncollapse problem is found when a large load disturbance occurs. The control\nmethods of GFC considering DC side voltage feedback are proposed, which can\nensure the synchronization characteristics of grid connection and solve the\nproblem of DC side voltage collapse. The proposed method is verified by IEEE-9\nbus system, which shows the effectiveness of the proposed method.",
+          "arxiv_id": "2009.05759v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:23:08Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_data_model_distribution_models",
+        "keywords": [
+          [
+            "data",
+            0.029766340996226926
+          ],
+          [
+            "model",
+            0.024864472338850068
+          ],
+          [
+            "distribution",
+            0.021221063952887306
+          ],
+          [
+            "models",
+            0.020691141255015158
+          ],
+          [
+            "estimation",
+            0.018904617098701434
+          ],
+          [
+            "results",
+            0.01869312120355197
+          ],
+          [
+            "estimator",
+            0.017080740120980518
+          ],
+          [
+            "sample",
+            0.016638675672880642
+          ],
+          [
+            "paper",
+            0.016440469670831688
+          ],
+          [
+            "random",
+            0.01626281874588176
+          ]
+        ],
+        "count": 11203
+      },
+      "1": {
+        "name": "1_policy_regret_learning_optimal",
+        "keywords": [
+          [
+            "policy",
+            0.04579991540353183
+          ],
+          [
+            "regret",
+            0.04048297956380138
+          ],
+          [
+            "learning",
+            0.030340590098397312
+          ],
+          [
+            "optimal",
+            0.024893504202515546
+          ],
+          [
+            "algorithm",
+            0.02323163825839591
+          ],
+          [
+            "bandit",
+            0.02183427306479463
+          ],
+          [
+            "RL",
+            0.021675587303429472
+          ],
+          [
+            "reward",
+            0.021038156781239485
+          ],
+          [
+            "bandits",
+            0.019650966816962562
+          ],
+          [
+            "algorithms",
+            0.01868449624955801
+          ]
+        ],
+        "count": 259
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.30878648791890373
+      ],
+      [
+        -0.30878648791890373,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        111,
+        7
+      ],
+      "2020-02": [
+        173,
+        13
+      ],
+      "2020-03": [
+        145,
+        7
+      ],
+      "2020-04": [
+        146,
+        3
+      ],
+      "2020-05": [
+        135,
+        10
+      ],
+      "2020-06": [
+        192,
+        15
+      ],
+      "2020-07": [
+        162,
+        8
+      ],
+      "2020-08": [
+        132,
+        3
+      ],
+      "2020-09": [
+        146,
+        5
+      ],
+      "2020-10": [
+        172,
+        12
+      ],
+      "2020-11": [
+        156,
+        12
+      ],
+      "2020-12": [
+        157,
+        7
+      ],
+      "2021-01": [
+        134,
+        9
+      ],
+      "2021-02": [
+        146,
+        13
+      ],
+      "2021-03": [
+        155,
+        4
+      ],
+      "2021-04": [
+        139,
+        8
+      ],
+      "2021-05": [
+        148,
+        8
+      ],
+      "2021-06": [
+        165,
+        12
+      ],
+      "2021-07": [
+        163,
+        11
+      ],
+      "2021-08": [
+        126,
+        5
+      ],
+      "2021-09": [
+        137,
+        8
+      ],
+      "2021-10": [
+        187,
+        18
+      ],
+      "2021-11": [
+        119,
+        12
+      ],
+      "2021-12": [
+        162,
+        13
+      ],
+      "2022-01": [
+        105,
+        7
+      ],
+      "2022-02": [
+        139,
+        11
+      ],
+      "2022-03": [
+        138,
+        10
+      ],
+      "2022-04": [
+        121,
+        3
+      ],
+      "2022-05": [
+        155,
+        7
+      ],
+      "2022-06": [
+        197,
+        13
+      ],
+      "2022-07": [
+        147,
+        7
+      ],
+      "2022-08": [
+        152,
+        5
+      ],
+      "2022-09": [
+        173,
+        16
+      ],
+      "2022-10": [
+        189,
+        10
+      ],
+      "2022-11": [
+        170,
+        12
+      ],
+      "2022-12": [
+        154,
+        9
+      ],
+      "2023-01": [
+        139,
+        12
+      ],
+      "2023-02": [
+        132,
+        16
+      ],
+      "2023-03": [
+        161,
+        11
+      ],
+      "2023-04": [
+        115,
+        9
+      ],
+      "2023-05": [
+        183,
+        21
+      ],
+      "2023-06": [
+        163,
+        14
+      ],
+      "2023-07": [
+        157,
+        13
+      ],
+      "2023-08": [
+        113,
+        5
+      ],
+      "2023-09": [
+        139,
+        9
+      ],
+      "2023-10": [
+        196,
+        12
+      ],
+      "2023-11": [
+        172,
+        6
+      ],
+      "2023-12": [
+        129,
+        10
+      ],
+      "2024-01": [
+        146,
+        8
+      ],
+      "2024-02": [
+        209,
+        18
+      ],
+      "2024-03": [
+        174,
+        15
+      ],
+      "2024-04": [
+        153,
+        8
+      ],
+      "2024-05": [
+        200,
+        9
+      ],
+      "2024-06": [
+        174,
+        16
+      ],
+      "2024-07": [
+        165,
+        9
+      ],
+      "2024-08": [
+        127,
+        7
+      ],
+      "2024-09": [
+        164,
+        8
+      ],
+      "2024-10": [
+        204,
+        15
+      ],
+      "2024-11": [
+        151,
+        11
+      ],
+      "2024-12": [
+        143,
+        13
+      ],
+      "2025-01": [
+        157,
+        16
+      ],
+      "2025-02": [
+        199,
+        19
+      ],
+      "2025-03": [
+        171,
+        7
+      ],
+      "2025-04": [
+        169,
+        10
+      ],
+      "2025-05": [
+        209,
+        19
+      ],
+      "2025-06": [
+        200,
+        6
+      ],
+      "2025-07": [
+        174,
+        8
+      ],
+      "2025-08": [
+        163,
+        5
+      ],
+      "2025-09": [
+        88,
+        8
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "Highly Efficient Estimators with High Breakdown Point for Linear Models with Structured Covariance Matrices",
+          "year": "2022-08",
+          "abstract": "We provide a unified approach to a method of estimation of the regression\nparameter in balanced linear models with a structured covariance matrix that\ncombines a high breakdown point and bounded influence with high asymptotic\nefficiency at models with multivariate normal errors. Of main interest are\nlinear mixed effects models, but our approach also includes several other\nstandard multivariate models, such as multiple regression, multivariate\nregression, and multivariate location and scatter. We provide sufficient\nconditions for the existence of the estimators and corresponding functionals,\nestablish asymptotic properties such as consistency and asymptotic normality,\nand derive their robustness properties in terms of breakdown point and\ninfluence function. All the results are obtained for general identifiable\ncovariance structures and are established under mild conditions on the\ndistribution of the observations, which goes far beyond models with\nelliptically contoured densities. Some of our results are new and others are\nmore general than existing ones in the literature. In this way this manuscript\ncompletes and improves results on high breakdown estimation with high\nefficiency in a wide variety of multivariate models.",
+          "arxiv_id": "2208.00715v2"
+        },
+        {
+          "title": "Sufficient digits and density estimation: A Bayesian nonparametric approach using generalized finite Pólya trees",
+          "year": "2025-06",
+          "abstract": "This paper proposes a novel approach for statistical modelling of a\ncontinuous random variable $X$ on $[0, 1)$, based on its digit representation\n$X=.X_1X_2\\ldots$. In general, $X$ can be coupled with a random variable $N$ so\nthat if a prior of $N$ is imposed, $(X_1,\\ldots,X_N)$ becomes a sufficient\nstatistics and $.X_{N+1}X_{N+2}\\ldots$ is uniformly distributed. In line with\nthis fact, and focusing on binary digits for simplicity, we propose a family of\ngeneralized finite P{\\'o}lya trees that induces a random density for a sample,\nwhich becomes a flexible tool for density estimation. Here, the digit system\nmay be random and learned from the data. We provide a detailed Bayesian\nanalysis, including closed form expression for the posterior distribution which\nsidesteps the need of MCMC methods for posterior inference. We analyse the\nfrequentist properties as the sample size increases, and provide sufficient\nconditions for consistency of the posterior distributions of the random density\nand $N$. We consider an extension to data spanning multiple orders of\nmagnitude, and propose a prior distribution that encodes the so-called extended\nNewcomb-Benford law. Such a model shows promising results for density\nestimation of human-activity data. Our methodology is illustrated on several\nsynthetic and real datasets.",
+          "arxiv_id": "2506.09437v1"
+        },
+        {
+          "title": "Permuted and Unlinked Monotone Regression in $\\mathbb{R}^d$: an approach based on mixture modeling and optimal transport",
+          "year": "2022-01",
+          "abstract": "Suppose that we have a regression problem with response variable Y in\n$\\mathbb{R}^d$ and predictor X in $\\mathbb{R}^d$, for $d \\geq 1$. In permuted\nor unlinked regression we have access to separate unordered data on X and Y, as\nopposed to data on (X,Y)-pairs in usual regression. So far in the literature\nthe case $d=1$ has received attention, see e.g., the recent papers by Rigollet\nand Weed [Information & Inference, 8, 619--717] and Balabdaoui et al. [J. Mach.\nLearn. Res., 22(172), 1--60]. In this paper, we consider the general\nmultivariate setting with $d \\geq 1$. We show that the notion of cyclical\nmonotonicity of the regression function is sufficient for identification and\nestimation in the permuted/unlinked regression model. We study permutation\nrecovery in the permuted regression setting and develop a computationally\nefficient and easy-to-use algorithm for denoising based on the Kiefer-Wolfowitz\n[Ann. Math. Statist., 27, 887--906] nonparametric maximum likelihood estimator\nand techniques from the theory of optimal transport. We provide explicit upper\nbounds on the associated mean squared denoising error for Gaussian noise. As in\nprevious work on the case $d = 1$, the permuted/unlinked setting involves slow\n(logarithmic) rates of convergence rooting in the underlying deconvolution\nproblem. Numerical studies corroborate our theoretical analysis and show that\nthe proposed approach performs at least on par with the methods in the\naforementioned prior work in the case $d = 1$ while achieving substantial\nreductions in terms of computational complexity.",
+          "arxiv_id": "2201.03528v1"
+        }
+      ],
+      "1": [
+        {
+          "title": "Robust Batch Policy Learning in Markov Decision Processes",
+          "year": "2020-11",
+          "abstract": "We study the offline data-driven sequential decision making problem in the\nframework of Markov decision process (MDP). In order to enhance the\ngeneralizability and adaptivity of the learned policy, we propose to evaluate\neach policy by a set of the average rewards with respect to distributions\ncentered at the policy induced stationary distribution. Given a pre-collected\ndataset of multiple trajectories generated by some behavior policy, our goal is\nto learn a robust policy in a pre-specified policy class that can maximize the\nsmallest value of this set. Leveraging the theory of semi-parametric\nstatistics, we develop a statistically efficient policy learning method for\nestimating the de ned robust optimal policy. A rate-optimal regret bound up to\na logarithmic factor is established in terms of total decision points in the\ndataset.",
+          "arxiv_id": "2011.04185v4"
+        },
+        {
+          "title": "A Simple and Optimal Policy Design with Safety against Heavy-Tailed Risk for Stochastic Bandits",
+          "year": "2022-06",
+          "abstract": "We study the stochastic multi-armed bandit problem and design new policies\nthat enjoy both worst-case optimality for expected regret and light-tailed risk\nfor regret distribution. Specifically, our policy design (i) enjoys the\nworst-case optimality for the expected regret at order $O(\\sqrt{KT\\ln T})$ and\n(ii) has the worst-case tail probability of incurring a regret larger than any\n$x>0$ being upper bounded by $\\exp(-\\Omega(x/\\sqrt{KT}))$, a rate that we prove\nto be best achievable with respect to $T$ for all worst-case optimal policies.\nOur proposed policy achieves a delicate balance between doing more exploration\nat the beginning of the time horizon and doing more exploitation when\napproaching the end, compared to standard confidence-bound-based policies. We\nalso enhance the policy design to accommodate the \"any-time\" setting where $T$\nis unknown a priori, and prove equivalently desired policy performances as\ncompared to the \"fixed-time\" setting with known $T$. Numerical experiments are\nconducted to illustrate the theoretical findings. We find that from a\nmanagerial perspective, our new policy design yields better tail distributions\nand is preferable than celebrated policies especially when (i) there is a risk\nof under-estimating the volatility profile, or (ii) there is a challenge of\ntuning policy hyper-parameters. We conclude by extending our proposed policy\ndesign to the stochastic linear bandit setting that leads to both worst-case\noptimality in terms of expected regret and light-tailed risk on the regret\ndistribution.",
+          "arxiv_id": "2206.02969v6"
+        },
+        {
+          "title": "High-probability sample complexities for policy evaluation with linear function approximation",
+          "year": "2023-05",
+          "abstract": "This paper is concerned with the problem of policy evaluation with linear\nfunction approximation in discounted infinite horizon Markov decision\nprocesses. We investigate the sample complexities required to guarantee a\npredefined estimation error of the best linear coefficients for two widely-used\npolicy evaluation algorithms: the temporal difference (TD) learning algorithm\nand the two-timescale linear TD with gradient correction (TDC) algorithm. In\nboth the on-policy setting, where observations are generated from the target\npolicy, and the off-policy setting, where samples are drawn from a behavior\npolicy potentially different from the target policy, we establish the first\nsample complexity bound with high-probability convergence guarantee that\nattains the optimal dependence on the tolerance level. We also exhihit an\nexplicit dependence on problem-related quantities, and show in the on-policy\nsetting that our upper bound matches the minimax lower bound on crucial problem\nparameters, including the choice of the feature maps and the problem dimension.",
+          "arxiv_id": "2305.19001v2"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:48:08Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}

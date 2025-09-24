@@ -1,0 +1,1318 @@
+{
+  "topics": {
+    "data": {
+      "0": {
+        "name": "0_modules_local_ring_Gorenstein",
+        "keywords": [
+          [
+            "modules",
+            0.03175756286308855
+          ],
+          [
+            "local",
+            0.024649024720702396
+          ],
+          [
+            "ring",
+            0.02159892456776324
+          ],
+          [
+            "Gorenstein",
+            0.01883162870372579
+          ],
+          [
+            "rings",
+            0.018597399565268746
+          ],
+          [
+            "module",
+            0.01808478036310421
+          ],
+          [
+            "dimension",
+            0.017341301666850793
+          ],
+          [
+            "Cohen",
+            0.016226073522562747
+          ],
+          [
+            "Macaulay",
+            0.01567420815503564
+          ],
+          [
+            "projective",
+            0.014648606386132454
+          ]
+        ],
+        "count": 1111
+      },
+      "1": {
+        "name": "1_ideals_edge_ideal_graphs",
+        "keywords": [
+          [
+            "ideals",
+            0.04886098391959702
+          ],
+          [
+            "edge",
+            0.0348559613434779
+          ],
+          [
+            "ideal",
+            0.03410382848062938
+          ],
+          [
+            "graphs",
+            0.03407412798394496
+          ],
+          [
+            "graph",
+            0.02955950582328148
+          ],
+          [
+            "monomial",
+            0.023495187041412832
+          ],
+          [
+            "edge ideals",
+            0.021298252356148004
+          ],
+          [
+            "powers",
+            0.020755177701338216
+          ],
+          [
+            "linear",
+            0.016610054865132486
+          ],
+          [
+            "regularity",
+            0.015847946460035157
+          ]
+        ],
+        "count": 792
+      },
+      "2": {
+        "name": "2_polynomial_polynomials_algorithm_matrices",
+        "keywords": [
+          [
+            "polynomial",
+            0.027655687714292176
+          ],
+          [
+            "polynomials",
+            0.02056314157038261
+          ],
+          [
+            "algorithm",
+            0.020009455218539078
+          ],
+          [
+            "matrices",
+            0.01885153440716994
+          ],
+          [
+            "matrix",
+            0.01877320416543221
+          ],
+          [
+            "basis",
+            0.017755344535455
+          ],
+          [
+            "symmetric",
+            0.016397540266905625
+          ],
+          [
+            "degree",
+            0.016041668445562592
+          ],
+          [
+            "linear",
+            0.01432635599868346
+          ],
+          [
+            "bases",
+            0.014035528317539146
+          ]
+        ],
+        "count": 404
+      },
+      "3": {
+        "name": "3_ring_submodules_rings_absorbing",
+        "keywords": [
+          [
+            "ring",
+            0.05169953617165406
+          ],
+          [
+            "submodules",
+            0.04975039259357791
+          ],
+          [
+            "rings",
+            0.04835573061682327
+          ],
+          [
+            "absorbing",
+            0.04543690985221124
+          ],
+          [
+            "commutative",
+            0.041546593371977435
+          ],
+          [
+            "prime",
+            0.040530432072394436
+          ],
+          [
+            "ideals",
+            0.03978948975219565
+          ],
+          [
+            "ideal",
+            0.03819481164491921
+          ],
+          [
+            "submodule",
+            0.03796006021240527
+          ],
+          [
+            "modules",
+            0.03720378922598697
+          ]
+        ],
+        "count": 171
+      },
+      "4": {
+        "name": "4_semigroups_numerical_semigroup_numerical semigroups",
+        "keywords": [
+          [
+            "semigroups",
+            0.1239707161306703
+          ],
+          [
+            "numerical",
+            0.11659697811982889
+          ],
+          [
+            "semigroup",
+            0.10525642047188805
+          ],
+          [
+            "numerical semigroups",
+            0.070644273275147
+          ],
+          [
+            "numerical semigroup",
+            0.06551763019266768
+          ],
+          [
+            "affine",
+            0.029158309172951213
+          ],
+          [
+            "Frobenius",
+            0.027253429496968826
+          ],
+          [
+            "number",
+            0.02687718212094284
+          ],
+          [
+            "set",
+            0.025296437491034877
+          ],
+          [
+            "elements",
+            0.021753185436225033
+          ]
+        ],
+        "count": 125
+      },
+      "5": {
+        "name": "5_valuation_fields_extensions_field",
+        "keywords": [
+          [
+            "valuation",
+            0.07113508788774905
+          ],
+          [
+            "fields",
+            0.06120641658295554
+          ],
+          [
+            "extensions",
+            0.050261220988972344
+          ],
+          [
+            "field",
+            0.04779108158943859
+          ],
+          [
+            "extension",
+            0.04151499397480264
+          ],
+          [
+            "key",
+            0.037761308149086466
+          ],
+          [
+            "key polynomials",
+            0.03683927254392265
+          ],
+          [
+            "valuations",
+            0.03573170426009046
+          ],
+          [
+            "henselian",
+            0.03347396531416128
+          ],
+          [
+            "polynomials",
+            0.03179331926824957
+          ]
+        ],
+        "count": 87
+      },
+      "6": {
+        "name": "6_monoids_monoid_atomic_factorization",
+        "keywords": [
+          [
+            "monoids",
+            0.09901996865550501
+          ],
+          [
+            "monoid",
+            0.09304271707358573
+          ],
+          [
+            "atomic",
+            0.06871285520760374
+          ],
+          [
+            "factorization",
+            0.05364741646029319
+          ],
+          [
+            "Puiseux",
+            0.05357752865962154
+          ],
+          [
+            "length",
+            0.031125048044758075
+          ],
+          [
+            "element",
+            0.02843824568962562
+          ],
+          [
+            "atoms",
+            0.028340471187505895
+          ],
+          [
+            "additive",
+            0.026777637139956043
+          ],
+          [
+            "cancellative",
+            0.0262117719733289
+          ]
+        ],
+        "count": 78
+      },
+      "7": {
+        "name": "7_domain_domains_integral_Dedekind",
+        "keywords": [
+          [
+            "domain",
+            0.10311315347856809
+          ],
+          [
+            "domains",
+            0.08785030309388243
+          ],
+          [
+            "integral",
+            0.04733130490107667
+          ],
+          [
+            "Dedekind",
+            0.040706128602253866
+          ],
+          [
+            "integer",
+            0.02828366893844099
+          ],
+          [
+            "integral domain",
+            0.027521695978620246
+          ],
+          [
+            "valuation",
+            0.02751085682182654
+          ],
+          [
+            "ring",
+            0.023871301133864656
+          ],
+          [
+            "nonzero",
+            0.022011943768371497
+          ],
+          [
+            "ideals",
+            0.021995495173094275
+          ]
+        ],
+        "count": 77
+      }
+    },
+    "correlations": [
+      [
+        1.0,
+        -0.35722453153944905,
+        -0.23602796931535258,
+        -0.3043863102645521,
+        -0.7182162503620608,
+        -0.5978439267598812,
+        -0.7397169013445045,
+        -0.662289252652329
+      ],
+      [
+        -0.35722453153944905,
+        1.0,
+        -0.3057139220522803,
+        -0.3672498955818928,
+        -0.7311373750886359,
+        -0.6680342404273262,
+        -0.739393778525633,
+        -0.7081853199145574
+      ],
+      [
+        -0.23602796931535258,
+        -0.3057139220522803,
+        1.0,
+        -0.501343937126919,
+        -0.7270436437115424,
+        -0.5914839184129331,
+        -0.7401686425453551,
+        -0.6898279959884113
+      ],
+      [
+        -0.3043863102645521,
+        -0.3672498955818928,
+        -0.501343937126919,
+        1.0,
+        -0.717466990951844,
+        -0.6493958733056919,
+        -0.7206972167728851,
+        -0.6530653634824223
+      ],
+      [
+        -0.7182162503620608,
+        -0.7311373750886359,
+        -0.7270436437115424,
+        -0.717466990951844,
+        1.0,
+        -0.7477262393158435,
+        -0.706476539528026,
+        -0.7341325609668168
+      ],
+      [
+        -0.5978439267598812,
+        -0.6680342404273262,
+        -0.5914839184129331,
+        -0.6493958733056919,
+        -0.7477262393158435,
+        1.0,
+        -0.7377327946892371,
+        -0.6627248318878756
+      ],
+      [
+        -0.7397169013445045,
+        -0.739393778525633,
+        -0.7401686425453551,
+        -0.7206972167728851,
+        -0.706476539528026,
+        -0.7377327946892371,
+        1.0,
+        -0.6534838330167254
+      ],
+      [
+        -0.662289252652329,
+        -0.7081853199145574,
+        -0.6898279959884113,
+        -0.6530653634824223,
+        -0.7341325609668168,
+        -0.6627248318878756,
+        -0.6534838330167254,
+        1.0
+      ]
+    ],
+    "series": {
+      "2020-01": [
+        14,
+        6,
+        5,
+        15,
+        1,
+        3,
+        1,
+        1
+      ],
+      "2020-02": [
+        21,
+        6,
+        8,
+        18,
+        3,
+        6,
+        0,
+        7
+      ],
+      "2020-03": [
+        12,
+        16,
+        6,
+        11,
+        7,
+        4,
+        0,
+        3
+      ],
+      "2020-04": [
+        17,
+        10,
+        7,
+        10,
+        1,
+        7,
+        1,
+        1
+      ],
+      "2020-05": [
+        18,
+        14,
+        6,
+        9,
+        5,
+        5,
+        3,
+        7
+      ],
+      "2020-06": [
+        21,
+        6,
+        7,
+        15,
+        5,
+        3,
+        4,
+        4
+      ],
+      "2020-07": [
+        26,
+        11,
+        6,
+        11,
+        4,
+        6,
+        2,
+        5
+      ],
+      "2020-08": [
+        14,
+        3,
+        5,
+        11,
+        3,
+        4,
+        4,
+        4
+      ],
+      "2020-09": [
+        26,
+        12,
+        5,
+        8,
+        1,
+        5,
+        2,
+        6
+      ],
+      "2020-10": [
+        24,
+        13,
+        7,
+        5,
+        1,
+        2,
+        1,
+        3
+      ],
+      "2020-11": [
+        17,
+        13,
+        15,
+        11,
+        3,
+        5,
+        1,
+        3
+      ],
+      "2020-12": [
+        19,
+        11,
+        7,
+        10,
+        4,
+        3,
+        3,
+        1
+      ],
+      "2021-01": [
+        19,
+        13,
+        8,
+        23,
+        4,
+        9,
+        3,
+        2
+      ],
+      "2021-02": [
+        15,
+        14,
+        3,
+        18,
+        1,
+        1,
+        1,
+        5
+      ],
+      "2021-03": [
+        19,
+        11,
+        7,
+        9,
+        1,
+        3,
+        1,
+        1
+      ],
+      "2021-04": [
+        20,
+        13,
+        7,
+        11,
+        3,
+        3,
+        4,
+        2
+      ],
+      "2021-05": [
+        25,
+        11,
+        6,
+        10,
+        5,
+        4,
+        1,
+        4
+      ],
+      "2021-06": [
+        27,
+        12,
+        7,
+        14,
+        3,
+        5,
+        2,
+        3
+      ],
+      "2021-07": [
+        32,
+        11,
+        2,
+        17,
+        3,
+        7,
+        2,
+        6
+      ],
+      "2021-08": [
+        23,
+        16,
+        6,
+        12,
+        1,
+        1,
+        3,
+        3
+      ],
+      "2021-09": [
+        16,
+        10,
+        6,
+        8,
+        1,
+        6,
+        2,
+        3
+      ],
+      "2021-10": [
+        16,
+        9,
+        10,
+        8,
+        3,
+        1,
+        2,
+        2
+      ],
+      "2021-11": [
+        16,
+        11,
+        10,
+        10,
+        4,
+        10,
+        1,
+        4
+      ],
+      "2021-12": [
+        25,
+        26,
+        6,
+        8,
+        4,
+        5,
+        1,
+        3
+      ],
+      "2022-01": [
+        15,
+        11,
+        8,
+        10,
+        2,
+        2,
+        3,
+        5
+      ],
+      "2022-02": [
+        17,
+        9,
+        15,
+        12,
+        3,
+        7,
+        2,
+        2
+      ],
+      "2022-03": [
+        14,
+        12,
+        9,
+        14,
+        1,
+        8,
+        0,
+        4
+      ],
+      "2022-04": [
+        16,
+        7,
+        3,
+        13,
+        2,
+        8,
+        2,
+        3
+      ],
+      "2022-05": [
+        21,
+        10,
+        7,
+        19,
+        3,
+        5,
+        0,
+        2
+      ],
+      "2022-06": [
+        15,
+        9,
+        5,
+        12,
+        3,
+        4,
+        0,
+        5
+      ],
+      "2022-07": [
+        17,
+        9,
+        7,
+        13,
+        6,
+        9,
+        1,
+        6
+      ],
+      "2022-08": [
+        28,
+        18,
+        10,
+        16,
+        4,
+        5,
+        2,
+        5
+      ],
+      "2022-09": [
+        23,
+        13,
+        9,
+        13,
+        5,
+        7,
+        3,
+        2
+      ],
+      "2022-10": [
+        23,
+        12,
+        10,
+        18,
+        5,
+        7,
+        3,
+        1
+      ],
+      "2022-11": [
+        11,
+        8,
+        7,
+        11,
+        3,
+        3,
+        2,
+        3
+      ],
+      "2022-12": [
+        23,
+        8,
+        14,
+        13,
+        5,
+        1,
+        2,
+        6
+      ],
+      "2023-01": [
+        20,
+        6,
+        3,
+        15,
+        0,
+        3,
+        1,
+        5
+      ],
+      "2023-02": [
+        19,
+        6,
+        16,
+        10,
+        3,
+        4,
+        3,
+        3
+      ],
+      "2023-03": [
+        22,
+        15,
+        8,
+        14,
+        4,
+        8,
+        1,
+        4
+      ],
+      "2023-04": [
+        19,
+        9,
+        8,
+        13,
+        2,
+        6,
+        3,
+        5
+      ],
+      "2023-05": [
+        17,
+        15,
+        10,
+        14,
+        7,
+        4,
+        0,
+        4
+      ],
+      "2023-06": [
+        14,
+        23,
+        6,
+        16,
+        6,
+        5,
+        0,
+        6
+      ],
+      "2023-07": [
+        24,
+        11,
+        6,
+        11,
+        5,
+        3,
+        2,
+        4
+      ],
+      "2023-08": [
+        28,
+        19,
+        4,
+        16,
+        4,
+        5,
+        2,
+        7
+      ],
+      "2023-09": [
+        22,
+        20,
+        10,
+        15,
+        3,
+        7,
+        3,
+        4
+      ],
+      "2023-10": [
+        19,
+        11,
+        9,
+        8,
+        6,
+        7,
+        4,
+        3
+      ],
+      "2023-11": [
+        25,
+        13,
+        9,
+        14,
+        6,
+        4,
+        5,
+        4
+      ],
+      "2023-12": [
+        33,
+        12,
+        11,
+        12,
+        3,
+        4,
+        2,
+        4
+      ],
+      "2024-01": [
+        19,
+        12,
+        4,
+        13,
+        2,
+        8,
+        2,
+        5
+      ],
+      "2024-02": [
+        19,
+        12,
+        7,
+        8,
+        4,
+        2,
+        3,
+        2
+      ],
+      "2024-03": [
+        25,
+        18,
+        10,
+        11,
+        2,
+        7,
+        1,
+        1
+      ],
+      "2024-04": [
+        27,
+        16,
+        11,
+        16,
+        4,
+        9,
+        3,
+        1
+      ],
+      "2024-05": [
+        33,
+        13,
+        10,
+        16,
+        9,
+        3,
+        3,
+        5
+      ],
+      "2024-06": [
+        20,
+        16,
+        6,
+        13,
+        7,
+        7,
+        1,
+        5
+      ],
+      "2024-07": [
+        25,
+        9,
+        5,
+        14,
+        10,
+        7,
+        0,
+        4
+      ],
+      "2024-08": [
+        18,
+        4,
+        7,
+        15,
+        3,
+        6,
+        1,
+        1
+      ],
+      "2024-09": [
+        25,
+        15,
+        7,
+        13,
+        5,
+        2,
+        2,
+        7
+      ],
+      "2024-10": [
+        25,
+        7,
+        9,
+        10,
+        3,
+        3,
+        2,
+        5
+      ],
+      "2024-11": [
+        10,
+        11,
+        6,
+        17,
+        7,
+        2,
+        2,
+        8
+      ],
+      "2024-12": [
+        27,
+        22,
+        7,
+        5,
+        1,
+        5,
+        1,
+        6
+      ],
+      "2025-01": [
+        16,
+        14,
+        14,
+        15,
+        2,
+        3,
+        3,
+        4
+      ],
+      "2025-02": [
+        31,
+        15,
+        10,
+        12,
+        3,
+        4,
+        3,
+        7
+      ],
+      "2025-03": [
+        24,
+        14,
+        7,
+        18,
+        5,
+        11,
+        0,
+        5
+      ],
+      "2025-04": [
+        25,
+        17,
+        7,
+        13,
+        2,
+        5,
+        3,
+        6
+      ],
+      "2025-05": [
+        25,
+        14,
+        8,
+        11,
+        2,
+        5,
+        3,
+        4
+      ],
+      "2025-06": [
+        34,
+        17,
+        10,
+        21,
+        4,
+        5,
+        1,
+        4
+      ],
+      "2025-07": [
+        31,
+        22,
+        7,
+        8,
+        5,
+        7,
+        2,
+        2
+      ],
+      "2025-08": [
+        27,
+        7,
+        9,
+        19,
+        0,
+        8,
+        3,
+        2
+      ],
+      "2025-09": [
+        20,
+        7,
+        10,
+        10,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "papers": {
+      "0": [
+        {
+          "title": "On modules whose dual is of finite Gorenstein dimension: The $k$-torsion, homological criteria, and applications in modules of differentials of order $n$",
+          "year": "2023-12",
+          "abstract": "In this paper, we aim to obtain some results under the condition that the\ndual of a module has finite Gorenstein dimension. In this direction we derive\nresults involving vanishing of Ext as well as the freeness or totally\nreflexivity of modules. For instance, we provide a generalization of a\ncelebrated theorem by Evans and Griffith, obtain criteria for the totally\nreflexivity of modules over Cohen-Macaulay rings as well as of locally totally\nmodules reflexive on the punctured spectrum, and recover a result by Araya.\nMoreover, we prove that the Auslander-Reiten conjecture holds true for all\nfinitely generated modules $M$ over a Noetherian local ring $R$ such that\n$\\operatorname{G-dim}_R(\\operatorname{Hom}_R(M,R))<\\infty$ and\n$\\operatorname{pd}_R(\\operatorname{Hom}_R(M,M))<\\infty$. Additionally, we\nderive Gorenstein criteria under the condition that the dual of certain modules\nis of finite Gorenstein dimension. Furthermore, we explore some applications in\nthe theory of the modules of K\\\"ahler differentials of order $n\\geq 1$,\nspecifically concerning the $k$-torsionfreeness of these modules and the\nHerzog-Vasconcelos's conjecture.",
+          "arxiv_id": "2312.06124v4"
+        },
+        {
+          "title": "Full-Trace Modules",
+          "year": "2025-05",
+          "abstract": "Motivated by the definition of nearly Gorenstein rings, we introduce the\nnotion of full-trace modules over commutative Noetherian local rings--namely,\nfinitely generated modules whose trace equals the maximal ideal. We investigate\nthe existence of such modules and prove that, over rings that are neither\nregular nor principal ideal rings, every positive syzygy module of the residue\nfield is full-trace. Moreover, over Cohen-Macaulay rings, we study full-trace\nUlrich modules--that is, maximally generated maximal Cohen-Macaulay modules\nthat are full-trace. We establish the following characterization: a non-regular\nCohen-Macaulay local ring has minimal multiplicity if and only if it admits a\nfull-trace Ulrich module. Finally, for numerical semigroup rings with minimal\nmultiplicity, we show that each full-trace Ulrich module decomposes as the\ndirect sum of the maximal ideal and a module that is either zero or Ulrich.",
+          "arxiv_id": "2505.14961v1"
+        },
+        {
+          "title": "Auslander-Reiten's Cohen-Macaulay algebras and contracted preprojective algebras",
+          "year": "2024-09",
+          "abstract": "Auslander and Reiten called a finite dimensional algebra $A$ over a field\nCohen-Macaulay if there is an $A$-bimodule $W$ which gives an equivalence\nbetween the category of finitely generated $A$-modules of finite projective\ndimension and the category of finitely generated $A$-modules of finite\ninjective dimension. For example, Iwanaga-Gorenstein algebras and algebras with\nfinitistic dimension zero on both sides are Cohen-Macaulay, and tensor products\nof Cohen-Macaulay algebras are again Cohen-Macaulay. They seem to be all of the\nknown examples of Cohen-Macaulay algebras.\n  In this paper, we give the first non-trivial class of Cohen-Macaulay algebras\nby showing that all contracted preprojective algebras of Dynkin type are\nCohen-Macaulay. As a consequence, for each simple singularity $R$ and a maximal\nCohen-Macaulay $R$-module $M$, the stable endomorphism algebra\n$\\underline{End}_R(M)$ is Cohen-Macaulay. We also give a negative answer to a\nquestion of Auslander-Reiten asking whether the category $CM A$ of\nCohen-Macaulay $A$-modules coincides with the category of $d$-th syzygies,\nwhere $d\\ge1$ is the injective dimension of $W$. In fact, if $A$ is a\nCohen-Macaulay algebra that is additionally $d$-Gorenstein in the sense of\nAuslander, then $CM A$ always coincides with the category of $d$-th syzygies.",
+          "arxiv_id": "2409.05603v2"
+        }
+      ],
+      "1": [
+        {
+          "title": "Cohen-Macaulay edge-weighted edge ideals of very well-covered graphs",
+          "year": "2020-03",
+          "abstract": "We characterize unmixed and Cohen-Macaulay edge-weighted edge ideals of very\nwell-covered graphs. We also provide examples of oriented graphs which have\nunmixed and non-Cohen-Macaulay vertex-weighted edge ideals, while the edge\nideal of their underlying graph is Cohen-Macaulay. This disproves a conjecture\nposed by Pitones, Reyes and Toledo.",
+          "arxiv_id": "2003.12379v1"
+        },
+        {
+          "title": "Cohen-Macaulay Property of Binomial Edge Ideals with Girth of Graphs",
+          "year": "2022-12",
+          "abstract": "Conca and Varbaro (Invent. Math. 221 (2020), no. 3) showed the equality of\ndepth of a graded ideal and its initial ideal in a polynomial ring when the\ninitial ideal is square-free. In this paper, we give some beautiful\napplications of this fact in the study of Cohen-Macaulay binomial edge ideals.\nWe prove that for the characterization of Cohen-Macaulay binomial edge ideals,\nit is enough to consider only \"biconnected graphs with some whisker attached\"\nand this done by investigating the initial ideals. We give several necessary\nconditions for a binomial edge ideal to be Cohen-Macaulay in terms of smaller\ngraphs. Also, under a hypothesis, we give a sufficient condition for\nCohen-Macaulayness of binomial edge ideals in terms of blocks of graphs.\nMoreover, we show that a graph with Cohen-Macaulay binomial edge ideal has\ngirth less than $5$ or equal to infinity.",
+          "arxiv_id": "2212.05708v2"
+        },
+        {
+          "title": "On the $\\mathrm{v}$-number of binomial edge ideals of some classes of graphs",
+          "year": "2024-05",
+          "abstract": "Let $G$ be a finite simple graph, and $J_G$ denote the binomial edge ideal of\n$G$. In this article, we first compute the $\\mathrm{v}$-number of binomial edge\nideals corresponding to Cohen-Macaulay closed graphs. As a consequence, we\nobtain the $\\mathrm{v}$-number for paths. For cycle and binary tree graphs, we\nobtain a sharp upper bound for $\\mathrm{v}(J_G)$ using the number of vertices\nof the graph. We characterize all connected graphs $G$ with $\\mathrm{v}(J_G) =\n2$. We show that for a given pair $(k,m), k\\leq m$, there exists a graph $G$\nwith an associated monomial edge ideal $I$ having $\\mathrm{v}$-number equal to\n$k$ and regularity $m$. If $2k \\leq m$, then there exists a binomial edge ideal\nwith $\\mathrm{v}$-number $k$ and regularity $m$. Finally, we compute\n$\\mathrm{v}$-number of powers of binomial edge ideals with linear resolution,\nthus proving a conjecture on the $\\mathrm{v}$-number of powers of a graded\nideal having linear powers, for the class of binomial edge ideals.",
+          "arxiv_id": "2405.15354v1"
+        }
+      ],
+      "2": [
+        {
+          "title": "New efficient algorithms for computing Gröbner bases of saturation ideals (F4SAT) and colon ideals (Sparse-FGLM-colon)",
+          "year": "2022-02",
+          "abstract": "This paper is concerned with linear algebra based methods for solving exactly\npolynomial systems through so-called Gr\\\"obner bases, which allow one to\ncompute modulo the polynomial ideal generated by the input equations. This is a\ntopical issue in non-linear algebra and more broadly in computational\nmathematics because of its numerous applications in engineering and computing\nsciences. Such applications often require geometric computing features such as\nrepresenting the closure of the set difference of two solution sets to given\npolynomial systems. Algebraically, this boils down to computing Gr\\\"obner bases\nof colon and/or saturation polynomial ideals. In this paper, we describe and\nanalyze new Gr\\\"obner bases algorithms for this task and present\nimplementations which are more efficient by several orders of magnitude than\nthe state-of-the-art software.",
+          "arxiv_id": "2202.13387v2"
+        },
+        {
+          "title": "A Signature-Based Gröbner Basis Algorithm with Tail-Reduced Reductors (M5GB)",
+          "year": "2022-08",
+          "abstract": "Gr\\\"obner bases are an important tool in computational algebra and,\nespecially in cryptography, often serve as a boilerplate for solving systems of\npolynomial equations. Research regarding (efficient) algorithms for computing\nGr\\\"obner bases spans a large body of dedicated work that stretches over the\nlast six decades. The pioneering work of Bruno Buchberger in 1965 can be\nconsidered as the blueprint for all subsequent Gr\\\"obner basis algorithms to\ndate. Among the most efficient algorithms in this line of work are\nsignature-based Gr\\\"obner basis algorithms, with the first of its kind\npublished in the late 1990s by Jean-Charles Faug\\`ere under the name F5. In\naddition to signature-based approaches, Rusydi Makarim and Marc Stevens\ninvestigated a different direction to efficiently compute Gr\\\"obner bases,\nwhich they published in 2017 with their algorithm M4GB. The ideas behind M4GB\nand signature-based approaches are conceptually orthogonal to each other\nbecause each approach addresses a different source of inefficiency in\nBuchberger's initial algorithm by different means.\n  We amalgamate those orthogonal ideas and devise a new Gr\\\"obner basis\nalgorithm, called M5GB, that combines the concepts of both worlds. In that\ncapacity, M5GB merges strong signature-criteria to eliminate redundant S-pairs\nwith concepts for fast polynomial reductions borrowed from M4GB. We provide\nproofs of termination and correctness and a proof-of-concept implementation in\nC++ by means of the Mathic library. The comparison with a state-of-the-art\nsignature-based Gr\\\"obner basis algorithm (implemented via the same library)\nvalidates our expectations of an overall faster runtime for quadratic\noverdefined polynomial systems that have been used in comparisons before in the\nliterature and are also part of cryptanalytic challenges.",
+          "arxiv_id": "2208.00844v1"
+        },
+        {
+          "title": "Solving Degree Bounds For Iterated Polynomial Systems",
+          "year": "2023-10",
+          "abstract": "For Arithmetization-Oriented ciphers and hash functions Gr\\\"obner basis\nattacks are generally considered as the most competitive attack vector.\nUnfortunately, the complexity of Gr\\\"obner basis algorithms is only understood\nfor special cases, and it is needless to say that these cases do not apply to\nmost cryptographic polynomial systems. Therefore, cryptographers have to resort\nto experiments, extrapolations and hypotheses to assess the security of their\ndesigns. One established measure to quantify the complexity of linear\nalgebra-based Gr\\\"obner basis algorithms is the so-called solving degree.\nCaminata \\& Gorla revealed that under a certain genericity condition on a\npolynomial system the solving degree is always upper bounded by the\nCastelnuovo-Mumford regularity and henceforth by the Macaulay bound, which only\ntakes the degrees and number of variables of the input polynomials into\naccount. In this paper we extend their framework to iterated polynomial\nsystems, the standard polynomial model for symmetric ciphers and hash\nfunctions. In particular, we prove solving degree bounds for various attacks on\nMiMC, Feistel-MiMC, Feistel-MiMC-Hash, Hades and GMiMC. Our bounds fall in line\nwith the hypothesized complexity of Gr\\\"obner basis attacks on these designs,\nand to the best of our knowledge this is the first time that a mathematical\nproof for these complexities is provided.\n  Moreover, by studying polynomials with degree falls we can prove lower bounds\non the Castelnuovo-Mumford regularity for attacks on MiMC, Feistel-MiMC and\nFeistel-MiMC-Hash provided that only a few solutions of the corresponding\niterated polynomial system originate from the base field. Hence,\nregularity-based solving degree estimations can never surpass a certain\nthreshold, a desirable property for cryptographic polynomial systems.",
+          "arxiv_id": "2310.03637v2"
+        }
+      ],
+      "3": [
+        {
+          "title": "On Generalizations of Graded $2$-absorbing and Graded $2$-absorbing primary submodules",
+          "year": "2021-02",
+          "abstract": "Let $R$ be a graded commutative ring with non-zero unity $1$ and $M$ be a\ngraded unitary $R$-module. In this article, we introduce the concepts of graded\n$\\phi$-$2$-absorbing and graded $\\phi$-$2$-absorbing primary submodules as\ngeneralizations of the concepts of graded $2$-absorbing and graded\n$2$-absorbing primary submodules. Let $GS(M)$ be the set of all graded\n$R$-submodules of $M$ and $\\phi: GS(M)\\rightarrow GS(M)\\bigcup\\{\\emptyset\\}$ be\na function. A proper graded $R$-submodule $K$ of $M$ is said to be a graded\n$\\phi$-$2$-absorbing $R$-submodule of $M$ if whenever $x, y$ are homogeneous\nelements of $R$ and $m$ is a homogeneous element of $M$ with $xym\\in\nK-\\phi(K)$, then $xm\\in K$ or $ym\\in K$ or $xy\\in (K :_{R} M)$, and $K$ is said\nto be a graded $\\phi$-$2$-absorbing primary $R$-submodule of $M$ if whenever\n$x, y$ are homogeneous elements of $R$ and $m$ is a homogeneous element of $M$\nwith $xym\\in K-\\phi(K)$, then $xm$ or $ym$ is in the graded radical of $K$ or\n$xy\\in (K:_{R}M)$. We investigate several properties of these new types of\ngraded submodules.",
+          "arxiv_id": "2102.09108v1"
+        },
+        {
+          "title": "On graded $A$-2-absorbing submodules of graded modules over graded commutative rings",
+          "year": "2020-08",
+          "abstract": "Let $G$ be a group with identity $e$. Let $R$ be a $G$-graded commutative\nring, $M$ a graded $R$-module and $A\\subseteq h(R)$ a multiplicatively closed\nsubset of $R$. In this paper, we introduce the concept of graded\n$A$-2-absorbing submodules of $M$ as a generalization of graded 2-absorbing\nsubmodules and graded $A$-prime submodules of $M.$ We investigate some\nproperties of this class of graded submodules.",
+          "arxiv_id": "2008.06886v2"
+        },
+        {
+          "title": "On Graded $1$-Absorbing Prime Submodules",
+          "year": "2021-01",
+          "abstract": "Let $G$ be a group with identity $e$, $R$ be a commutative $G$-graded ring\nwith unity $1$ and $M$ be a $G$-graded unital $R$-module. In this article, we\nintroduce the concept of graded $1$-absorbing prime submodule. A proper graded\n$R$-submodule $N$ of $M$ is said to be a graded $1$-absorbing prime\n$R$-submodule of $M$ if for all non-unit homogeneous elements $x, y$ of $R$ and\nhomogeneous element $m$ of $M$ with $xym\\in N$, either $xy\\in (N :_{R} M)$ or\n$m\\in N$. We show that the new concept is a generalization of graded prime\nsubmodules at the same time it is a special graded $2$-absorbing submodule.\nSeveral properties of a graded $1$-absorbing prime submodule have been\nobtained. We investigate graded $1$-absorbing prime submodules when the\ncomponents $\\left\\{M_{g}:g\\in G\\right\\}$ are multiplication $R_{e}$-modules.",
+          "arxiv_id": "2101.06559v1"
+        }
+      ],
+      "4": [
+        {
+          "title": "Numerical semigroups of coated odd elements",
+          "year": "2024-07",
+          "abstract": "A numerical semigroup $S$ is coated with odd elements (Coe-semigroup), if\n$\\left\\{x-1, x+1\\right\\}\\subseteq S$ for all odd element $x$ in $S$. In this\nnote, we will study this kind of numerical semigroups. In particular, we are\ninterested in the study of the Frobenius number, gender and embedding dimension\nof a numerical semigroup of this type.",
+          "arxiv_id": "2407.17153v1"
+        },
+        {
+          "title": "Factorizations into irreducible numerical semigroups",
+          "year": "2024-10",
+          "abstract": "Every numerical semigroup can be expressed as an intersection of irreducible\nnumerical semigroups. We show that the unions of sets of lengths of\nfactorizations of numerical semigroups into irreducible numerical semigroups\nare all equal to $\\mathbb{N}_{\\ge 2}$.",
+          "arxiv_id": "2410.13729v1"
+        },
+        {
+          "title": "The covariety of perfect numerical semigroups with fixed Frobenius number",
+          "year": "2023-05",
+          "abstract": "Let $S$ be a numerical semigroup. We will say that $h\\in {\\mathbb{N}}\n\\backslash S$ is an {\\it isolated gap }of $S$ if $\\{h-1,h+1\\}\\subseteq S.$ A\nnumerical semigroup without isolated gaps is called perfect numerical\nsemigroup. Denote by ${\\mathrm m}(S)$ the multiplicity of a numerical semigroup\n$S$. A covariety is a nonempty family ${\\mathscr{C}}$ of numerical semigroups\nthat fulfills the following conditions: there is the minimum of\n${\\mathscr{C}},$ the intersection of two elements of ${\\mathscr{C}}$ is again\nan element of ${\\mathscr{C}}$ and $S\\backslash \\{{\\mathrm m}(S)\\}\\in\n{\\mathscr{C}}$ for all $S\\in {\\mathscr{C}}$ such that $S\\neq\n\\min({\\mathscr{C}}).$ In this work we prove that the set\n${\\mathscr{P}}(F)=\\{S\\mid S \\mbox{ is a perfect numerical}\\ \\mbox{semigroup\nwith Frobenius number }F\\}$ is a covariety. Also, we describe three algorithms\nwhich compute: the set ${\\mathscr{P}}(F),$ the maximal elements of\n${\\mathscr{P}}(F)$ and the elements of ${\\mathscr{P}}(F)$ with a given genus. A\n${\\mathrm{Parf}}$-semigroup (respectively, ${\\mathrm{Psat}}$-semigroup) is a\nperfect numerical semigroup that in addition is an Arf numerical semigroup\n(respectively, saturated numerical semigroup). We will prove that the sets:\n${\\mathrm{Parf}}(F)=\\{S\\mid S \\mbox{ is a ${\\mathrm{Parf}}$-numerical semigroup\nwith Frobenius number} F\\}$ and ${\\mathrm{Psat}}(F)=\\{S\\mid S \\mbox{ is a\n${\\mathrm{Psat}}$-numerical semigroup with Frobenius number } F\\}$ are\ncovarieties. As a consequence we present some algorithms to compute\n${\\mathrm{Parf}}(F)$ and ${\\mathrm{Psat}}(F)$.",
+          "arxiv_id": "2305.14967v1"
+        }
+      ],
+      "5": [
+        {
+          "title": "On the computation of Kähler differentials and characterizations of Galois extensions with independent defect",
+          "year": "2023-05",
+          "abstract": "For important cases of algebraic extensions of valued fields, we develop\npresentations of the associated K\\\"ahler differentials of the extensions of\ntheir valuation rings. We compute their annihilators as well as the associated\nDedekind differentials. We then apply the results to Galois defect extensions\nof prime degree. Defects can appear in finite extensions of valued fields of\npositive residue characteristic and are serious obstructions to several\nproblems in positive characteristic. A classification of defects (dependent\nvs.\\ independent) has been introduced by the second and the third author. It\nhas been shown that perfectoid fields and deeply ramified fields only admit\nextensions with independent defect. We give several characterizations of\nindependent defect, using ramification ideals, K\\\"ahler differentials and\ntraces of the maximal ideals of valuation rings. All of our results are for\narbitrary valuations; in particular, we have no restrictions on their rank or\nvalue groups.",
+          "arxiv_id": "2305.10022v3"
+        },
+        {
+          "title": "Defect extensions and a characterization of tame fields",
+          "year": "2022-09",
+          "abstract": "We study the relation between two important classes of valued fields: tame\nfields and defectless fields. We show that in the case of valued fields of\nequal characteristic or rank one valued fields of mixed characteristic, tame\nfields are exactly the valued fields for which all algebraic extensions are\ndefectless fields. In general tame fields form a proper subclass of valued\nfields for which all algebraic extensions are defectless fields. We introduce a\nwider class of roughly tame fields and show that every algebraic extension of a\ngiven valued field is defectless if and only if its henselization is roughly\ntame. Proving the above results we also present constructions of Galois defect\nextensions in positive as well as mixed characteristic.",
+          "arxiv_id": "2209.03308v1"
+        },
+        {
+          "title": "KĂ¤hler differentials of extensions of valuation rings and deeply ramified fields",
+          "year": "2023-06",
+          "abstract": "Assume that $(L,v)$ is a finite Galois extension of a valued field $(K,v)$.\nWe give an explicit construction of the valuation ring $\\mathcal O_L$ of $L$ as\nan $\\mathcal O_K$-algebra, and an explicit description of the module of\nrelative K\\\"ahler differentials $\\Omega_{\\mathcal O_L|\\mathcal O_K}$ when $L|K$\nis a Kummer extension of prime degree or an Artin-Schreier extension, in terms\nof invariants of the valuation and field extension. The case when this\nextension has nontrivial defect was solved in a recent paper by the authors\nwith Anna Rzepka. The present paper deals with the complementary (defectless)\ncase. The results are known classically for (rank 1) discrete valuations, but\nour systematic approach to non-discrete valuations (even of rank 1) is new.\n  Using our results from the prime degree case, we characterize when\n$\\Omega_{\\mathcal O_L|\\mathcal O_K}=0$ holds for an arbitrary finite Galois\nextension of valued fields. As an application of these results, we give a\nsimple proof of a theorem of Gabber and Ramero, which characterizes when a\nvalued field is deeply ramified. We further give a simple characterization of\ndeeply ramified fields with residue fields of characteristic $p>0$ in terms of\nthe K\\\"ahler differentials of Galois extensions of degree $p$.",
+          "arxiv_id": "2306.04967v6"
+        }
+      ],
+      "6": [
+        {
+          "title": "On the additive structure of algebraic valuations of polynomial semirings",
+          "year": "2020-08",
+          "abstract": "In this paper, we study factorizations in the additive monoids of positive\nalgebraic valuations $\\mathbb{N}_0[\\alpha]$ of the semiring of polynomials\n$\\mathbb{N}_0[X]$ using a methodology introduced by D. D. Anderson, D. F.\nAnderson, and M. Zafrullah in 1990. A cancellative commutative monoid is atomic\nif every non-invertible element factors into irreducibles. We begin by\ndetermining when $\\mathbb{N}_0[\\alpha]$ is atomic, and we give an explicit\ndescription of its set of irreducibles. An atomic monoid is a finite\nfactorization monoid (FFM) if every element has only finitely many\nfactorizations (up to order and associates), and it is a bounded factorization\nmonoid (BFM) if for every element there is a bound for the number of\nirreducibles (counting repetitions) in each of its factorizations. We show\nthat, for the monoid $\\mathbb{N}_0[\\alpha]$, the property of being a BFM and\nthe property of being an FFM are equivalent to the ascending chain condition on\nprincipal ideals (ACCP). Finally, we give various characterizations for\n$\\mathbb{N}_0[\\alpha]$ to be a unique factorization monoid (UFM), two of them\nin terms of the minimal polynomial of $\\alpha$. The properties of being\nfinitely generated, half-factorial, and length-factorial are also investigated\nalong the way.",
+          "arxiv_id": "2008.13073v2"
+        },
+        {
+          "title": "Atomicity and Factorization of Puiseux Monoids",
+          "year": "2020-06",
+          "abstract": "A Puiseux monoid is an additive submonoid of the nonnegative cone of rational\nnumbers. Although Puiseux monoids are torsion-free rank-one monoids, their\natomic structure is rich and highly complex. For this reason, they have been\nimportant objects to construct crucial examples in commutative algebra and\nfactorization theory. In 1974 Anne Grams used a Puiseux monoid to construct the\nfirst example of an atomic domain not satisfying the ACCP, disproving Cohn's\nconjecture that every atomic domain satisfies the ACCP. Even recently, Jim\nCoykendall and Felix Gotti have used Puiseux monoids to construct the first\natomic monoids with monoid algebras (over a field) that are not atomic,\nanswering a question posed by Robert Gilmer back in the 1980s.\n  This dissertation is focused on the investigation of the atomic structure and\nfactorization theory of Puiseux monoids. Here we established various sufficient\nconditions for a Puiseux monoid to be atomic (or satisfy the ACCP). We do the\nsame for two of the most important atomic properties: the finite-factorization\nproperty and the bounded-factorization property. Then we compare these four\natomic properties in the context of Puiseux monoids. This leads us to construct\nand study several classes of Puiseux monoids with distinct atomic structure.\nOur investigation provides sufficient evidence to believe that the class of\nPuiseux monoids is the simplest class with enough complexity to find monoids\nsatisfying almost every fundamental atomic behavior.",
+          "arxiv_id": "2006.09173v1"
+        },
+        {
+          "title": "On the atomicity of power monoids of Puiseux monoids",
+          "year": "2024-01",
+          "abstract": "A submonoid of the additive group $\\mathbb{Q}$ is called a Puiseux monoid if\nit consists of nonnegative rationals. Given a monoid $M$, the set consisting of\nall nonempty finite subsets of $M$ is also a monoid under the Minkowski sum,\nand it is called the (finitary) power monoid of $M$. In this paper we study\natomicity and factorization properties in power monoids of Puiseux monoids. We\nspecially focus on the ascent of the property of being atomic and both the\nbounded and the finite factorization properties (the ascending chain on\nprincipal ideals and the length-finite factorization properties are also\nconsidered here). We prove that both the bounded and the finite factorization\nproperties ascend from any Puiseux monoid to its power monoid. On the other\nhand, we construct an atomic Puiseux monoid whose power monoid is not atomic.\nWe also prove that the existence of maximal common divisors for nonempty finite\nsubsets is a sufficient condition for the property of being atomic to ascend\nfrom a Puiseux monoid to its power monoid.",
+          "arxiv_id": "2401.12444v1"
+        }
+      ],
+      "7": [
+        {
+          "title": "Integer-valued rational functions over globalized pseudovaluation domains",
+          "year": "2023-07",
+          "abstract": "$\\DeclareMathOperator{\\IntR}{Int{}^\\text{R}}$$\\DeclareMathOperator{\\Int}{Int}$Let\n$D$ be a domain. Park determined the necessary and sufficient conditions for\nwhich the ring of integer-valued polynomials $\\Int(D)$ is a globalized\npseudovaluation domain (GPVD). In this work, we investigate the ring of\ninteger-valued rational functions $\\IntR(D)$. Since it is necessary that $D$ be\na GPVD for $\\IntR(D)$ to be a GPVD, we consider $\\IntR(D)$, where $D$ is a\nGPVD. We determine that if $D$ is a pseudosingular GPVD, then $\\IntR(D)$ is a\nGPVD. We also completely characterize when $\\IntR(D)$ is a GPVD if $D$ is a\npseudovaluation domain that is not a valuation domain.",
+          "arxiv_id": "2307.06446v2"
+        },
+        {
+          "title": "Divisibility in rings of integer-valued polynomials",
+          "year": "2021-07",
+          "abstract": "In this paper, we address various aspects of divisibility by irreducibles in\nrings consisting of integer-valued polynomials. An integral domain is called\natomic if every nonzero nonunit factors into irreducibles. Atomic domains that\ndo not satisfy the ascending chain condition on principal ideals (ACCP) have\nproved to be elusive, and not many of them have been found since the first one\nwas constructed by A. Grams in 1974. Here we exhibit the first class of atomic\nrings of integer-valued polynomials without the ACCP. An integral domain is\ncalled a finite factorization domain (FFD) if it is simultaneously atomic and\nan idf-domain (i.e., every nonzero element is divisible by only finitely many\nirreducibles up to associates). We prove that a ring is an FFD if and only if\nits ring of integer-valued polynomials is an FFD. In addition, we show that\nneither being atomic nor being an idf-domain transfer, in general, from an\nintegral domain to its ring of integer-valued polynomials. In the same class of\nrings of integer-valued polynomials, we consider further properties that are\ndefined in terms of divisibility by irreducibles, including being\nCohen-Kaplansky and being Furstenberg.",
+          "arxiv_id": "2107.11752v1"
+        },
+        {
+          "title": "A realization theorem for almost Dedekind domains",
+          "year": "2024-05",
+          "abstract": "An integral domain $D$ is called an SP-domain if every ideal is a product of\nradical ideals. Such domains are always almost Dedekind domains, but not every\nalmost Dedekind domain is an SP-domain. The SP-rank of $D$ provides a natural\nmeasure of the deviation of $D$ from being an SP-domain. In the present paper\nwe show that every ordinal number $\\alpha$ can be realized as the SP-rank of an\nalmost Dedekind domain.",
+          "arxiv_id": "2405.04512v1"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-09-24T22:29:43Z",
+    "dataVersion": "0.0.2",
+    "period": {
+      "start": "2020-01",
+      "end": "2025-09"
+    }
+  }
+}
