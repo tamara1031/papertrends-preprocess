@@ -61,7 +61,7 @@ for category in tqdm(categories, desc="Processing categories"):
         stop_words="english",
         ngram_range=(1, 3),
         min_df=min(30, max(2, int(num_texts * 0.0001))),  # 0.0001%以上に出現（最低2件, 最高30件）
-        max_df=int(num_texts * 0.95), 
+        max_df=int(num_texts * 0.65), 
         max_features=None,
         vocabulary=None,
 
@@ -109,7 +109,9 @@ for category in tqdm(categories, desc="Processing categories"):
 
     # # UMAPパラメータをデータセットサイズに応じてproportionで自動調整
     num_texts = len(texts)
-    n_neighbors = 15
+    # n_neighborsをデータセットサイズ(num_texts)に応じてシグモイド関数で自動調整
+    # f(x) = 10 + 1 / (1 + exp(-0.00005 * (x - 20000)))
+    n_neighbors = int(10 + 1 / (1 + np.exp(-0.00005 * (num_texts - 20000))))
     n_components = 5
 
     umap_model = UMAP(
