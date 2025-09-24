@@ -19,7 +19,7 @@ from common.utils import get_custom_embedding_model, get_category_codes
 VERSION = "0.0.2"
 
 def already_processed(category: str):
-    return os.path.exists(f"./visualizations/{category}.json")
+    return os.path.exists(f"./analysis/{category}.json")
 
 def load_model(category: str):
     embedding_model = get_custom_embedding_model()
@@ -59,8 +59,8 @@ def get_topic_distr(category: str, model: BERTopic, texts: List[str]):
     """データを読み込み、トピック分布を計算する"""
     
     # トピック分布を計算
-    # tmp_path = f"./visualizations/{category}/topic_distr_tmp.npy"
-    # os.makedirs(f"./visualizations/{category}", exist_ok=True)
+    # tmp_path = f"./analysis/{category}/topic_distr_tmp.npy"
+    # os.makedirs(f"./analysis/{category}", exist_ok=True)
     # if os.path.exists(tmp_path):
     #     topic_distr = np.load(tmp_path)
     # else:
@@ -267,11 +267,11 @@ def save_visualization_data(category, visualization_data):
     """可視化データをJSONファイルとして保存"""
     
     # 出力ディレクトリを作成
-    output_dir = f"./visualizations"
+    output_dir = f"./analysis"
     os.makedirs(output_dir, exist_ok=True)
     
     # JSONファイルとして保存
-    output_path = f"{output_dir}/{category}.json"
+    output_path = f"{output_dir}/{category}/{category}.json"
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(visualization_data
     , f, ensure_ascii=False, indent=2)

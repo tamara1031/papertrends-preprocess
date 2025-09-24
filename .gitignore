@@ -3,7 +3,8 @@
 mysql/data/
 preprocessed/
 models/
-visualizations/topic_distr_tmp.npy
+analysis/topic_distr_tmp.npy
+analysis/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
