@@ -61,7 +61,7 @@ for category in tqdm(categories, desc="Processing categories"):
         stop_words="english",
         ngram_range=(1, 3),
         min_df=min(30, max(2, int(num_texts * 0.0001))),  # 0.0001%以上に出現（最低2件, 最高30件）
-        max_df=int(num_texts * 0.65), 
+        max_df=int(num_texts * 0.65), # modelsなどを弾きたい
         max_features=None,
         vocabulary=None,
 
