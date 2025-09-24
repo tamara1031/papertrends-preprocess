@@ -14,7 +14,7 @@ from scipy.spatial.distance import jensenshannon
 
 from common.utils import get_custom_embedding_model
 
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 def load_model(category: str):
     embedding_model = get_custom_embedding_model()
