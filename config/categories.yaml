@@ -1,12 +1,10 @@
 # https://arxiv.org/category_taxonomy
-astro-ph: Astrophysics
 astro-ph.CO: Cosmology and Nongalactic Astrophysics
 astro-ph.EP: Earth and Planetary Astrophysics
 astro-ph.GA: Astrophysics of Galaxies
 astro-ph.HE: High Energy Astrophysical Phenomena
 astro-ph.IM: Instrumentation and Methods for Astrophysics
 astro-ph.SR: Solar and Stellar Astrophysics
-cond-mat: Condensed Matter
 cond-mat.dis-nn: Disordered Systems and Neural Networks
 cond-mat.mes-hall: Mesoscale and Nanoscale Physics
 cond-mat.mtrl-sci: Materials Science
@@ -130,7 +128,6 @@ physics.plasm-ph: Plasma Physics
 physics.pop-ph: Popular Physics
 physics.soc-ph: Physics and Society
 physics.space-ph: Space Physics
-q-bio: Quantitative Biology
 q-bio.BM: Biomolecules
 q-bio.CB: Cell Behavior
 q-bio.GN: Genomics

@@ -15,10 +15,10 @@ from common.utils import (
 )
 
 # PARAMS
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 FROM_DATE = date(2020, 1, 1)
-CATEGORIES = ["cs.IR"]
-#CATEGORIES = get_category_codes()
+CATEGORIES = ["astro-ph"]
+# CATEGORIES = get_category_codes()
 
 def encode_texts(model: CustomEmbeddingModel, texts: List[str], memmap_path: str):
 

@@ -1,5 +1,7 @@
 from typing import List
 
+import os
+
 import json
 from tqdm import tqdm
 import gc
@@ -31,10 +33,16 @@ def get_text_embeddings(category: str) -> np.ndarray:
     return embeddings
 
 # 一旦固定でAIカテゴリを処理
-# categories = get_category_codes()
-categories = ["cs.IR"]
+categories = get_category_codes()
+# categories = ["cs.IR"]
 
 for category in tqdm(categories, desc="Processing categories"):
+
+    model_dir = f"./models/{category}"
+    if os.path.exists(model_dir):
+        continue
+    os.makedirs(model_dir, exist_ok=True)
+
     # 前処理済データを取得
     papers = get_papers(category)
     text_embeddings = get_text_embeddings(category)
