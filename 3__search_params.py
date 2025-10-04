@@ -53,39 +53,36 @@ warnings.filterwarnings('ignore', message='invalid value encountered')
 # ============================================================================
 
 class OptimizationConfig:
-    """Centralized configuration for clustering optimization."""
+    """Centralized configuration for clustering optimization with simple fixed ranges."""
     
     # Numerical precision
     EPSILON = 1e-6
     
-    # Clustering constraints
-    MIN_CLUSTER_RATIO = 20   # min_cluster_size = dataset_size // MIN_CLUSTER_RATIO
-    MAX_CLUSTER_RATIO = 500  # max_cluster_size = dataset_size // MAX_CLUSTER_RATIO
-    
-    # UMAP parameters
-    UMAP_NEIGHBORS_RATIO = 0.03  # n_neighbors ≤ dataset_size * UMAP_NEIGHBORS_RATIO
-    UMAP_MAX_NEIGHBORS = 50  # Absolute maximum for n_neighbors
-    UMAP_MIN_COMPONENTS = 2
-    UMAP_MAX_COMPONENTS = 15
-    
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout by default
     MIN_TRIALS = 30
-    MAX_TRIALS = 100
-    TRIALS_SCALE_FACTOR = 50  # Trials ≈ dataset_size // TRIALS_SCALE_FACTOR
+    MAX_TRIALS = 200
+    TRIALS_SCALE_FACTOR = 50
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
-    UMAP_METRICS = ["cosine", "euclidean", "manhattan"]  # All compatible
-    HDBSCAN_METRICS = ["euclidean", "manhattan"]         # Only these supported
+    UMAP_METRICS = ["cosine", "euclidean", "manhattan"]
+    HDBSCAN_METRICS = ["euclidean", "manhattan"]
     
-    # Text processing
+    # Fixed parameter ranges (simple and safe)
     TOP_N_WORDS_RANGE = (10, 30)
     NGRAM_RANGES = [[1, 2], [1, 3]]
     
-    # TF-IDF bounds (percentage-based for robustness)
-    MIN_DF_PERCENT_MAX = 0.01    # 1% maximum(2 minimum)
-    MAX_DF_PERCENT_MIN = 0.10    # 30% minimum
-    MAX_DF_PERCENT_MAX = 0.95    # 95% maximum
+    # Clustering parameters (fixed safe ranges)
+    MIN_CLUSTER_SIZE_RANGE = (5, 200)
+    MIN_SAMPLES_MAX_MULTIPLIER = 0.8
+    
+    # Vectorization parameters (fixed percentage ranges)
+    MIN_DF_PERCENT_RANGE = (0.001, 0.01)  # (0.1% to 1%)
+    MAX_DF_PERCENT_RANGE = (0.1, 0.95)    # (10% to 95%)
+    
+    # UMAP parameters (fixed safe ranges)
+    N_NEIGHBORS_RANGE = (5, 50)
+    N_COMPONENTS_RANGE = (2, 15)
 
 
 # ============================================================================
@@ -274,7 +271,7 @@ def compute_cluster_quality_score(
     original_embeddings: np.ndarray, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute combined clustering quality score: 40% coherence + 60% DBCV."""
+    """Compute combined clustering quality score: 20% coherence + 80% DBCV."""
     try:
         coherence_score = _compute_topic_coherence_score(model, eps=eps)
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
@@ -313,22 +310,15 @@ def create_median_pruner() -> MedianPruner:
 # ============================================================================
 
 def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest HDBSCAN clustering parameters with robust dataset constraints."""
-    # Robust clustering parameters that scale well
-    dataset_divisor_min = max(OptimizationConfig.MIN_CLUSTER_RATIO, dataset_size // 100)  # Ensure reasonable minimum
-    dataset_divisor_max = min(OptimizationConfig.MAX_CLUSTER_RATIO, dataset_size // 10)   # Ensure reasonable maximum
-    
-    min_cluster_size_lower = max(5, dataset_size // dataset_divisor_max)
-    min_cluster_size_upper = min(200, dataset_size // dataset_divisor_min)  # Increased upper bound for large datasets
-    
+    """Suggest HDBSCAN clustering parameters with fixed safe bounds."""
+    # Simple fixed ranges
     min_cluster_size = trial.suggest_int(
         "min_cluster_size", 
-        min_cluster_size_lower, 
-        min_cluster_size_upper
+        *OptimizationConfig.MIN_CLUSTER_SIZE_RANGE
     )
     
     # min_samples constraint (relative to min_cluster_size)
-    min_samples_max = max(3, int(min_cluster_size * 0.8))
+    min_samples_max = max(3, int(min_cluster_size * OptimizationConfig.MIN_SAMPLES_MAX_MULTIPLIER))
     min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
     
     # HDBSCAN distance metric (validated compatible metrics only)
@@ -338,45 +328,29 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
 
 
 def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, float]:
-    """Suggest text vectorization parameters with robust percentage-based constraints."""
+    """Suggest text vectorization parameters with simple percentage ranges."""
     # Topic representation
     top_n_words = trial.suggest_int("top_n_words", *OptimizationConfig.TOP_N_WORDS_RANGE)
     
     # N-gram configuration
     ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
-    # Both integer count approach to guarantee CountVectorizer constraint satisfaction
-    min_df_max = int(OptimizationConfig.MIN_DF_PERCENT_MAX * dataset_size)
-    min_df = trial.suggest_int("min_df", 2, min_df_max)
+    # Simple percentage-based TF-IDF bounds
+    min_df_percent = trial.suggest_float("min_df_percent", *OptimizationConfig.MIN_DF_PERCENT_RANGE)
+    max_df_percent = trial.suggest_float("max_df_percent", *OptimizationConfig.MAX_DF_PERCENT_RANGE)
     
-    # Flexible upper bound: ensure reasonable search range
-    max_df_min = int(OptimizationConfig.MAX_DF_PERCENT_MIN * dataset_size)
-    max_df_max = int(OptimizationConfig.MAX_DF_PERCENT_MAX * dataset_size)
-    max_df = trial.suggest_int("max_df", max_df_min, max_df_max)
+    # Convert to integer counts (simple approach)
+    min_df = max(2, int(min_df_percent * dataset_size))
+    max_df = max_df_percent
     
     return top_n_words, ngram_range, min_df, max_df
 
 
 def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest UMAP dimensionality reduction parameters with robust scaling."""
-    # Robust n_neighbors constraint
-    neighbors_ratio_max = min(int(dataset_size * OptimizationConfig.UMAP_NEIGHBORS_RATIO), OptimizationConfig.UMAP_MAX_NEIGHBORS)
-    neighbors_min_safe = max(5, dataset_size // 1000)  # Ensure minimum for large datasets
-    
-    n_neighbors = trial.suggest_int("n_neighbors", neighbors_min_safe, neighbors_ratio_max)
-    
-    # Robust dimensionality constraint
-    min_components_safe = max(
-        OptimizationConfig.UMAP_MIN_COMPONENTS,
-        min(int(np.log10(dataset_size)), OptimizationConfig.UMAP_MAX_COMPONENTS // 2)
-    )
-    
-    max_components_safe = min(
-        OptimizationConfig.UMAP_MAX_COMPONENTS,
-        max(min_components_safe + 5, dataset_size // 500)  # Reasonable upper bound
-    )
-    
-    n_components = trial.suggest_int("n_components", min_components_safe, max_components_safe)
+    """Suggest UMAP dimensionality reduction parameters with fixed ranges."""
+    # Simple fixed ranges
+    n_neighbors = trial.suggest_int("n_neighbors", *OptimizationConfig.N_NEIGHBORS_RANGE)
+    n_components = trial.suggest_int("n_components", *OptimizationConfig.N_COMPONENTS_RANGE)
     
     # UMAP distance metric (optimized for SPECTER2 embeddings)
     umap_metric = trial.suggest_categorical("umap_metric", OptimizationConfig.UMAP_METRICS)
@@ -385,7 +359,7 @@ def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[in
 
 
 def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
-    """Suggest complete hyperparameter set with cross-parameter constraints."""
+    """Suggest complete hyperparameter set with simple fixed constraints."""
     min_cluster_size, min_samples, hdbscan_metric = _suggest_clustering_parameters(trial, dataset_size)
     top_n_words, ngram_range, min_df, max_df = _suggest_vectorization_parameters(trial, dataset_size)
     n_neighbors, n_components, umap_metric = _suggest_umap_parameters(trial, dataset_size)
@@ -546,7 +520,7 @@ def optimize_category_clustering(
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(Exception,)  # Catch all exceptions gracefully
+            catch=(Exception,)  # Catch all exceptions gracefully...
         )
         
         # Display results
@@ -599,7 +573,7 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 
 def main():
     """Main execution function for hyperparameter optimization."""
-    category = "physics.geo-ph"
+    category = "cs.AI"
     
     # Create output directory
     model_path = f"./models/{category}"
