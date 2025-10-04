@@ -5,6 +5,7 @@ import os
 import pickle
 import json
 import numpy as np
+import warnings
 
 import optuna
 import optuna.exceptions
@@ -23,6 +24,12 @@ from hdbscan.validity import validity_index
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics.pairwise import cosine_similarity
 from itertools import combinations
+
+# Suppress expected numerical warnings from HDBSCAN and related libraries
+warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
+warnings.filterwarnings('ignore', message='overflow encountered in power')
+warnings.filterwarnings('ignore', message='divide by zero encountered')
+warnings.filterwarnings('ignore', message='invalid value encountered')
 
 # Constants
 EPSILON = 1e-6
@@ -152,6 +159,8 @@ def _compute_coherence_score(model: BERTopic, eps=EPSILON):
     return normalized_coherence
 
 def _compute_dbcv_score(model: BERTopic, original_embeddings: np.ndarray, eps=EPSILON):
+    import warnings
+    
     try:
         # Use original document embeddings for DBCV calculation
         labels = model.hdbscan_model.labels_
@@ -174,12 +183,22 @@ def _compute_dbcv_score(model: BERTopic, original_embeddings: np.ndarray, eps=EP
         # Ensure distance matrix dtype is correct and clean up extreme values
         distance_matrix = distance_matrix.astype(np.float64)
         
-        # Clean up problematic values for numerical stability
+        # Enhanced numerical stability preprocessing for HDBSCAN validity
+        # Clean up problematic values more aggressively
         distance_matrix[distance_matrix <= 0] = EPSILON  # Avoid division by zero
-        distance_matrix[distance_matrix > 1e6] = 1e6     # Avoid overflow
+        distance_matrix[distance_matrix > 1e3] = 1e3      # More conservative overflow prevention
+        distance_matrix[np.isnan(distance_matrix)] = EPSILON  # Handle NaN values
+        distance_matrix[np.isinf(distance_matrix)] = 1e3      # Handle infinity values
         
-        # Compute raw DBCV score
-        dbcv_score = validity_index(distance_matrix, filtered_labels)
+        # Suppress HDBSCAN validity warnings for expected numerical issues
+        with warnings.catch_warnings():
+            warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
+            warnings.filterwarnings('ignore', message='overflow encountered in power')
+            warnings.filterwarnings('ignore', message='divide by zero encountered')
+            warnings.filterwarnings('ignore', message='invalid value encountered')
+            
+            # Compute raw DBCV score
+            dbcv_score = validity_index(distance_matrix, filtered_labels)
         
         # DBCV score can be negative, so we normalize and clip to [0, 1]
         # Adding 1 to shift negative values to positive range, then normalize
