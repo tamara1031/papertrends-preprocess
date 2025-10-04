@@ -340,6 +340,100 @@ def compute_diversity(model, top_n=10, eps=EPSILON):
         print(f"Diversity traceback: {traceback.format_exc()}")
         return eps
 
+def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -> float:
+    """
+    Evaluate the appropriateness of cluster count based on dataset size and characteristics.
+    
+    This function applies multiple validation criteria to assess if the number of
+    clusters is appropriate for the given dataset size. It considers:
+    - Square root rule (√n rule) for small datasets
+    - Elbow method approximation for medium datasets  
+    - Log-based scaling for large datasets
+    - Domain-specific constraints (minimum viable clusters, maximum interpretability)
+    
+    Args:
+        n_clusters: Number of clusters found by the model
+        n_docs: Total number of documents in the dataset
+        eps: Minimum epsilon value returned for invalid scenarios
+        
+    Returns:
+        Validity score between 0 and 1, where 1 is optimal
+    """
+    try:
+        # Zero clusters is invalid
+        if n_clusters <= 0:
+            return eps
+            
+        # Single cluster provides limited insight 
+        if n_clusters == 1:
+            return eps * 0.5
+            
+        # Too many clusters relative to dataset size
+        max_reasonable_clusters = min(n_docs // 5, n_docs * 0.3)
+        if n_clusters > max_reasonable_clusters:
+            return eps
+            
+        # Calculate expected optimal cluster ranges based on dataset size
+        if n_docs <= SMALL_DATASET_THRESHOLD:
+            # Small datasets: Use square root rule with adaptations
+            expected_clusters_sqrt = int(np.sqrt(n_docs))
+            min_reasonable = max(2, int(expected_clusters_sqrt * 0.5))
+            max_reasonable = int(expected_clusters_sqrt * 2.0)
+            
+        elif n_docs <= MEDIUM_DATASET_THRESHOLD:
+            # Medium datasets: Use modified Gap statistic approximation
+            expected_clusters_elbow = int(np.sqrt(n_docs / 2))
+            min_reasonable = max(3, int(expected_clusters_elbow * 0.4))
+            max_reasonable = int(expected_clusters_elbow * 1.8)
+            
+        else:
+            # Large datasets: Use log-based scaling
+            expected_clusters_log = int(np.log2(n_docs) * 4)
+            min_reasonable = max(10, int(expected_clusters_log * 0.3))
+            max_reasonable = int(expected_clusters_log * 1.5)
+        
+        # Check if within reasonable range
+        if n_clusters < min_reasonable or n_clusters > max_reasonable:
+            # Calculate penalty based on distance from optimal range  
+            optimal_center = (min_reasonable + max_reasonable) / 2
+            distance_from_optimal = abs(n_clusters - optimal_center) / max(optimal_center, 1)
+            # Use gentler exponential penalty
+            return max(eps, np.exp(-distance_from_optimal * 1.5))
+            
+        # Calculate score based on optimal range proximity
+        if n_docs <= SMALL_DATASET_THRESHOLD:
+            # Fine-grained scoring for small datasets
+            expected_clusters_sqrt = int(np.sqrt(n_docs))
+            distance = abs(n_clusters - expected_clusters_sqrt) / max(expected_clusters_sqrt, 1)
+            
+            # Normalize distance and apply gentler penalty
+            normalized_distance = min(distance, 1.0)
+            return max(eps, 1.0 - normalized_distance * 0.3)
+            
+        elif n_docs <= MEDIUM_DATASET_THRESHOLD:
+            # Moderate tolerance for medium datasets
+            expected_clusters_elbow = int(np.sqrt(n_docs / 2))
+            distance = abs(n_clusters - expected_clusters_elbow) / max(expected_clusters_elbow, 1)
+            
+            # Apply moderate penalty with cap
+            normalized_distance = min(distance, 1.0)
+            return max(eps, 1.0 - normalized_distance * 0.2)
+            
+        else:
+            # Flexible scoring for large datasets (interpretability matters)
+            expected_clusters_log = int(np.log2(n_docs) * 4)
+            distance = abs(n_clusters - expected_clusters_log) / max(expected_clusters_log, 1)
+            
+            # Large datasets can have more clusters naturally
+            normalized_distance = min(distance, 1.0)
+            return max(eps, 1.0 - normalized_distance * 0.25)
+            
+    except Exception as e:
+        print(f"Cluster count evaluation failed: {e}")
+        import traceback
+        print(f"Cluster count traceback: {traceback.format_exc()}")
+        return eps
+
 def compute_cluster_score(model, eps=EPSILON):
     """
     BERTopic の UMAP 埋め込みを使ったクラスタリング評価
@@ -491,10 +585,10 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         diversity = compute_diversity(model, eps=eps)
         cluster_score = compute_cluster_score(model, eps=eps)
         
-        # Calculate cluster count validity (placeholder)
+        # Calculate cluster count validity
         topic_info = model.get_topic_info()
         n_clusters = len(topic_info[topic_info['Topic'] != -1])
-        cluster_validity = 0.5  # Placeholder value until evaluate_cluster_count is implemented
+        cluster_validity = evaluate_cluster_count(n_clusters, len(texts), eps)
 
         # Detailed logging output for debugging
         print(f"  Coherence: {coherence:.4f}")
@@ -590,6 +684,7 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
     )
 
     return study
+
 
 if __name__ == "__main__":
     category = "physics.geo-ph"
