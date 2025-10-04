@@ -371,15 +371,6 @@ def objective_function(
         model = create_bertopic_model(params, embedding_model)
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
-        # Validate clustering results
-        topic_info = model.get_topic_info()
-        n_clusters = len(topic_info[topic_info['Topic'] != -1])
-        
-        # Early termination if no valid clusters found
-        if n_clusters == 0:
-            trial.report(eps, 0)
-            raise optuna.exceptions.TrialPruned("No valid clusters found")
-        
         # Evaluate clustering quality
         combined_score = compute_cluster_quality_score(model, text_embeddings, eps=eps)
         
