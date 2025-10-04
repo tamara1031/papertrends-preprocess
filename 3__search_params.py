@@ -87,38 +87,17 @@ def _get_umap_embeddings(model, all_labels):
         Tuple of (umap_embeddings, filtered_labels) or (None, None) if extraction fails
     """
     mask = all_labels != -1  # Filter out noise
-    print(f"DEBUG: UMAP extraction - mask sum: {np.sum(mask)}/{len(mask)}")
-    
     umap_embeddings = None
-    
-    # Try different methods to get UMAP embeddings with priority order
-    print(f"DEBUG: Model has umap_embeddings_: {hasattr(model, 'umap_embeddings_')}")
-    if hasattr(model, 'umap_embeddings_'):
-        print(f"DEBUG: model.umap_embeddings_ is None: {model.umap_embeddings_ is None}")
-        
-    if hasattr(model, 'umap_model'):
-        print(f"DEBUG: UMAP model type: {type(model.umap_model)}")
-        print(f"DEBUG: UMAP model has embedding_: {hasattr(model.umap_model, 'embedding_')}")
-        print(f"DEBUG: UMAP model has _raw_data: {hasattr(model.umap_model, '_raw_data')}")
-        
-        if hasattr(model.umap_model, 'embedding_'):
-            emb_shape = model.umap_model.embedding_.shape if model.umap_model.embedding_ is not None else 'None'
-            print(f"DEBUG: UMAP embedding_ shape: {emb_shape}")
     
     # Extract embeddings for all points (including noise)
     if hasattr(model, 'umap_embeddings_') and model.umap_embeddings_ is not None:
-        print("DEBUG: Using model.umap_embeddings_")
         umap_embeddings = model.umap_embeddings_
     elif hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
-        print("DEBUG: Using model.umap_model.embedding_")
         umap_embeddings = model.umap_model.embedding_
     elif hasattr(model, 'umap_model') and hasattr(model.umap_model, '_raw_data'):
-        print("DEBUG: Using model.umap_model._raw_data")
         umap_embeddings = model.umap_model._raw_data
     
     if umap_embeddings is not None:
-        print(f"DEBUG: Retrieved embeddings shape: {umap_embeddings.shape}")
-        
         # Now apply the mask to both embeddings and labels
         masked_embeddings = umap_embeddings[mask]
         masked_labels = all_labels[mask]
@@ -126,13 +105,9 @@ def _get_umap_embeddings(model, all_labels):
         valid = (masked_embeddings is not None and 
                 len(masked_embeddings) > 0 and 
                 masked_embeddings.shape[1] >= 2)
-        print(f"DEBUG: Masked embeddings valid: {valid}")
-        print(f"DEBUG: Masked embeddings shape: {masked_embeddings.shape}")
-        print(f"DEBUG: Masked labels shape: {masked_labels.shape}")
         
         return (masked_embeddings, masked_labels) if valid else (None, None)
     else:
-        print("DEBUG: No embeddings retrieved")
         return (None, None)
 
 
@@ -562,18 +537,6 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         trial.set_user_attr("n_clusters", n_clusters)
         trial.set_user_attr("cluster_score", float(cluster_score))
         
-        # Debug: Print cluster scores when they're high with individual metrics
-        if final_score > 0.7:
-            # Extract individual scores for debugging (recompute to get detailed metrics)
-            debug_labels = model.hdbscan_model.labels_
-            debug_umap_embeddings, debug_filtered_labels = _get_umap_embeddings(model, debug_labels)
-            if debug_umap_embeddings is not None:
-                s_score = _compute_silhouette_score_normalized(debug_umap_embeddings, debug_filtered_labels)
-                ch_score = _compute_ch_score_normalized(debug_umap_embeddings, debug_filtered_labels)
-                db_score = _compute_davies_bouldin_score_normalized(debug_umap_embeddings, debug_filtered_labels)
-                print(f"High cluster score - Trial {trial.number}: "
-                      f"s_score={s_score:.4f}, ch_score={ch_score:.4f}, db_score={db_score:.4f}, "
-                      f"combined={cluster_score:.4f}, n_clusters={n_clusters}")
 
         return np.clip(final_score, eps, 1.0)
 
