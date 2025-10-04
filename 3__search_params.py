@@ -38,23 +38,8 @@ UMAP_MAX_COMPONENTS = 15
 # Optimization limits
 EARLY_PRUNING_THRESHOLD = 20
 MID_OPTIMIZATION_THRESHOLD = 100
-DEFAULT_BONUS_CLUSTER_RANGE = (8, 25)  # Range that gets bonus scoring
 
-# Penalty factors for scoring
-HVARSH_PENALTY_FACTOR = 0.1
-EXCESSIVE_CLUSTERS_FACTOR = 0.3
-RESTRICTIVE_CLUSTERING_FACTOR = 0.9
-LOOSE_CLUSTERING_FACTOR = 0.95
-LARGE_NEIGHBORS_FACTOR = 0.95
-VERY_LARGE_NEIGHBORS_FACTOR = 0.85
-
-# Threshold ratios for penalties
-CLUSTER_SIZE_PENALTY_THRESHOLD = 0.05  # 5% of dataset
-CLUSTER_SIZE_MIN_THRESHOLD = 0.002     # 0.2% of dataset
-NEIGHBOR_RATIO_THRESHOLD = 0.02        # 2% of dataset
-BONUS_SCORE_FACTOR = 1.05              # Bonus for good cluster ranges
-
-# Score weights for composite evaluation (balanced for practical utility)
+# Score weights for composite evaluation
 SCORE_WEIGHTS = {
     'coherence': 0.30,      # Topic internal consistency
     'diversity': 0.20,      # Topic distinctiveness  
@@ -233,7 +218,10 @@ def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -
             
         else:
             # Too many clusters - likely overfitting
-            return eps
+            # More stringent penalty for excessive clusters
+            excess_ratio = n_clusters / 50
+            penalty = eps * (0.1 ** min(excess_ratio, 3))  # Exponential penalty
+            return penalty
             
     except Exception:
         return eps
@@ -306,8 +294,8 @@ def _compute_ch_score_normalized(embeddings, labels):
             # CH scores typically range within (log n, log n²)
             max_expected_ch = n_samples * np.log(n_clusters + 1) * 10  # Empirical value
             ch_score_scaled = min(ch_score / max_expected_ch, 1.0)
-            # Lower bound guarantee: avoid overly small values
-            return max(ch_score_scaled, 0.1)
+            # More conservative lower bound
+            return max(ch_score_scaled, 0.01)
         else:
             return 0.0
             
@@ -657,37 +645,17 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         # Step 5: Calculate composite score using helper function
         base_score = _calculate_composite_score(coherence, diversity, cluster_score, cluster_validity, eps)
         
-        # Step 6: Apply intelligent penalties and rewards
+        # Step 6: Simplified scoring without penalties
         final_score = base_score
         
-        # Enhanced cluster count validation with new scoring system
-        if n_clusters < MIN_CLUSTERS:
-            final_score *= HVARSH_PENALTY_FACTOR  # Very harsh penalty for no/few clusters
-        elif n_clusters > dataset_size // MIN_CLUSTER_RATIO:
-            final_score *= EXCESSIVE_CLUSTERS_FACTOR  # Penalty for excessive clusters
-        elif DEFAULT_BONUS_CLUSTER_RANGE[0] <= n_clusters <= DEFAULT_BONUS_CLUSTER_RANGE[1]:
-            final_score *= BONUS_SCORE_FACTOR  # Bonus for practical cluster ranges
-        
-        # Balanced parameter combinations penalty
-        cluster_size_ratio = params.min_cluster_size / dataset_size
-        if cluster_size_ratio > CLUSTER_SIZE_PENALTY_THRESHOLD:  # min_cluster_size > threshold
-            final_score *= RESTRICTIVE_CLUSTERING_FACTOR  # Penalty for overly restrictive clustering
-        elif cluster_size_ratio < CLUSTER_SIZE_MIN_THRESHOLD:  # min_cluster_size < threshold
-            final_score *= LOOSE_CLUSTERING_FACTOR  # Slight penalty for too loose clustering
-        
-        # n_neighbors appropriateness penalty (encourage moderate values)
-        neighbor_ratio = params.n_neighbors / dataset_size
-        if neighbor_ratio > UMAP_NEIGHBORS_RATIO:  # n_neighbors > threshold
-            final_score *= VERY_LARGE_NEIGHBORS_FACTOR  # Penalty for overly large n_neighbors
-        elif neighbor_ratio > NEIGHBOR_RATIO_THRESHOLD:  # n_neighbors > threshold
-            final_score *= LARGE_NEIGHBORS_FACTOR  # Light penalty for large n_neighbors
-        
-        # Store additional metrics for analysis (best practice)
+        # Store additional metrics for analysis 
         trial.set_user_attr("n_clusters", n_clusters)
         trial.set_user_attr("coherence", coherence)
         trial.set_user_attr("diversity", diversity) 
         trial.set_user_attr("cluster_score", cluster_score)
         trial.set_user_attr("cluster_validity", cluster_validity)
+        trial.set_user_attr("base_score", base_score)
+        trial.set_user_attr("final_score_before_clip", final_score)
 
         return np.clip(final_score, eps, 1.0)
 
