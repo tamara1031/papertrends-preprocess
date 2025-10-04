@@ -423,9 +423,9 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     """
     
     # Core clustering parameters (optimized for practical cluster counts)
-    # Aim for clusters representing 50-500 documents each
+    # Aim for clusters representing 20-500 documents each (more reasonable range)
     min_cluster_size_lower = max(5, dataset_size // 500)  # At least 5 documents per cluster
-    min_cluster_size_upper = min(100, dataset_size // 50) # At most 1 cluster per 50 docs
+    min_cluster_size_upper = min(100, dataset_size // 20) # At most 1 cluster per 20 docs
     min_cluster_size = trial.suggest_int("min_cluster_size", min_cluster_size_lower, min_cluster_size_upper)
     
     # min_samples scales with min_cluster_size (important constraint!)
@@ -449,11 +449,14 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     strip_accents = trial.suggest_categorical("strip_accents", [None, "ascii", "unicode"])
     bm25_weighting = trial.suggest_categorical("bm25_weighting", [True, False])
     
-    # UMAP parameters with truly appropriate bounds
+    # UMAP parameters with truly appropriate bounds (independent of min_cluster_size)
     # UMAP best practice: n_neighbors should be 1-3% of dataset size for balanced local/global structure
     practical_max = min(int(dataset_size * 0.03), 50)  # Max 3% of dataset or 50, whichever is smaller
+    
+    # UMAP n_neighbors should be independent of clustering parameters
+    # Use fixed reasonable range based only on dataset characteristics
     n_neighbors = trial.suggest_int("n_neighbors", 
-                                  max(5, min_cluster_size), 
+                                  5,  # Minimum for UMAP to work
                                   practical_max)
     
     n_components = trial.suggest_int("n_components", 
