@@ -278,7 +278,7 @@ def compute_cluster_quality_score(
     try:
         coherence_score = _compute_topic_coherence_score(model, eps=eps)
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
-        return 0.2 * coherence_score + 0.8 * dbcv_score
+        return 0.8 * dbcv_score + 0.2 * coherence_score
     except Exception:
         return eps
 
