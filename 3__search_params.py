@@ -341,19 +341,18 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     # N-gram configuration
     ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
-    # Robust min_df/max_df constraint handling using percentages
-    min_df_percent_min = 2 / dataset_size  # 2 documents as percentage
-    min_df_percent_max = min(OptimizationConfig.MIN_DF_PERCENT_LIMIT, 50 / dataset_size)
+    # Direct integer count approach for guaranteed constraint satisfaction
+    min_df_max = min(20, max(2, dataset_size // 200))  # Conservative upper bound
+    min_df = trial.suggest_int("min_df", 2, min_df_max)
     
-    min_df_percent = trial.suggest_float("min_df_percent", min_df_percent_min, min_df_percent_max)
-    min_df = max(2, int(min_df_percent * dataset_size))
+    # Calculate max_df threshold: must be > min_df/document_count AND > min_df_ratio
+    min_df_ratio = min_df / dataset_size
     
-    # Calculate max_df with proper constraint satisfaction
-    max_df_min = min_df_percent + OptimizationConfig.MAX_DF_MIN_BUFFER
-    max_df_min_safe = max(max_df_min, OptimizationConfig.MAX_DF_MIN_SAFE)
-    max_df_max = min(max_df_min_safe + 0.2, 0.9)
+    # Use larger safety margins
+    max_df_min_safe = max(min_df_ratio + 0.02, 0.05)  # 2% buffer or 5% minimum
+    max_df_max_safe = min(max_df_min_safe + 0.25, 0.8)  # 25% range, max 80%
     
-    max_df = trial.suggest_float("max_df", max_df_min_safe, max_df_max)
+    max_df = trial.suggest_float("max_df", max_df_min_safe, max_df_max_safe)
     
     return top_n_words, ngram_range, min_df, max_df
 
@@ -526,7 +525,7 @@ def optimize_category_clustering(
     
     study = optuna.create_study(
         storage=storage,
-        load_if_exists=False,  # Start fresh to avoid cached incompatible metrics
+        load_if_exists=True,  
         direction="maximize",
         study_name=study_name,
         sampler=create_tpe_sampler(study_name, dataset_size),
