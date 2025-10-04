@@ -1,10 +1,10 @@
 from typing import List, Tuple, Any
 from dataclasses import dataclass
 
-import gc
+import gc, os
 import pickle
+import json
 
-import torch
 import numpy as np
 
 import optuna
@@ -33,7 +33,7 @@ def get_text_embeddings(category: str) -> np.ndarray:
 
 @dataclass
 class Params:
-    ngram_range: Tuple[int, int]
+    ngram_range: List[int]
     min_df: float | int
     max_df: float | int
     lowercase: bool
@@ -50,7 +50,7 @@ class Params:
 def predict_once(texts, text_embeddings, params: Params):
     vectorizer_model = CountVectorizer(
         stop_words="english",
-        ngram_range=params.ngram_range,
+        ngram_range=tuple(params.ngram_range),
         min_df=params.min_df,  # 0.0001%以上に出現（最低2件, 最高30件）
         max_df=params.max_df, # modelsなどを弾きたい
         max_features=None,
@@ -376,7 +376,7 @@ def compute_cluster_score(model, eps=1e-6):
 def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
 
     params = Params(
-        ngram_range=trial.suggest_categorical("ngram_range", [(1,1), (1,2), (1,3)]),
+        ngram_range=trial.suggest_categorical("ngram_range", [[1,1], [1,2], [1,3]]),
         min_df=trial.suggest_int("min_df", 2, 20),
         max_df=trial.suggest_float("max_df", 0.2, 0.95),  # 0.3-0.80の範囲に修正
         lowercase=trial.suggest_categorical("lowercase", [True, False]),
@@ -394,7 +394,7 @@ def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
         model = BERTopic(
             vectorizer_model=CountVectorizer(
                 stop_words="english",
-                ngram_range=params.ngram_range,
+                ngram_range=tuple(params.ngram_range),
                 min_df=params.min_df,
                 max_df=params.max_df,
                 lowercase=params.lowercase,
@@ -413,7 +413,7 @@ def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
                 min_cluster_size=params.min_cluster_size,
                 min_samples=params.min_samples,
                 metric='euclidean',
-                prediction_data=True
+                prediction_data=False
             ),
             embedding_model=EMBEDDING_MODEL,
             calculate_probabilities=False,
@@ -488,7 +488,7 @@ def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
         print(f"Trial traceback: {traceback.format_exc()}")
         return eps
 
-def run_for_category(category: str, n_trials: int = 100):
+def run_one_category(category: str, timeout: int = 10*60, storage: str | None = None):
 
     papers = get_papers(category)
     text_embeddings = get_text_embeddings(category)
@@ -497,6 +497,7 @@ def run_for_category(category: str, n_trials: int = 100):
     gc.collect()
 
     study = optuna.create_study(
+        storage=storage,
         direction="maximize",
         study_name="search_params",
         sampler=optuna.samplers.TPESampler(seed=42),
@@ -504,7 +505,7 @@ def run_for_category(category: str, n_trials: int = 100):
 
     study.optimize(
         lambda trial: objective(trial, texts, text_embeddings),
-        n_trials=n_trials,
+        timeout=timeout,
         gc_after_trial=True,
         show_progress_bar=True,
     )
@@ -512,8 +513,15 @@ def run_for_category(category: str, n_trials: int = 100):
     return study
 
 if __name__ == "__main__":
-    study = run_for_category("physics.geo-ph", n_trials=100)
-    print("Study completed!")
-    print(f"Best params: {study.best_params}")
-    print(f"Best value: {study.best_value}")
-    print(f"Number of finished trials: {len(study.trials)}")
+    category = "physics.geo-ph"
+
+    model_path = f"./models/{category}"
+    os.makedirs(model_path, exist_ok=True)
+
+    study_storage_path = f"sqlite:///{model_path}/search_params.db"
+    study = run_one_category("physics.geo-ph", timeout=5*60, storage=study_storage_path)
+
+    params_storage_path = f"{model_path}/best_params.json"
+    with open(params_storage_path, "w") as f:
+        json.dump(study.best_params, f, indent=2)
+
