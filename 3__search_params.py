@@ -319,7 +319,7 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
     return min_cluster_size, min_samples, hdbscan_metric
 
 
-def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, float]:
+def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, int]:
     """Suggest text vectorization parameters with simple percentage ranges."""
     # Topic representation
     top_n_words = trial.suggest_int("top_n_words", *OptimizationConfig.TOP_N_WORDS_RANGE)
@@ -333,7 +333,7 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     
     # Convert to integer counts (simple approach)
     min_df = max(2, int(min_df_percent * dataset_size))
-    max_df = max_df_percent
+    max_df = int(max_df_percent * dataset_size)
     
     return top_n_words, ngram_range, min_df, max_df
 
