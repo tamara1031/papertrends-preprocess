@@ -148,199 +148,61 @@ def compute_coherence(model: BERTopic, top_n: int = 10, eps: float = EPSILON) ->
     try:
         topics = {k: v for k, v in model.get_topics().items() if k != -1}
         if len(topics) < 2:
-            return eps  # トピックが少なくても最小値を返す
+            return eps  # Return minimum value if too few topics
 
-        # 文書-単語行列を取得（モデルから抽出）
-        vectorizer = model.vectorizer_model
-        if not hasattr(model, 'fit_transform') or not hasattr(model, 'vectorizer_model'):
+        all_words = []
+        for topic_words in topics.values():
+            topic_words_list = [word for word, _ in topic_words[:top_n]]
+            all_words.extend(topic_words_list)
+
+        if not all_words:
             return eps
 
-        # 訓練データから文書-単語行列を再構築
-        texts = model.get_document_info(model.get_document_ids()) if hasattr(model, 'get_document_ids') else []
-        if len(texts) == 0:
-            # 代替としてc-TF-IDFの情報を利用
-            ctfidf_matrix = model.c_tf_idf_
-            if ctfidf_matrix is None or ctfidf_matrix.shape[0] == 0:
-                return eps
+        unique_words = len(set(all_words))
+        total_words = len(all_words)
+        score = unique_words / total_words if total_words > 0 else 0.0
+        return np.clip(score, eps, 1.0)
 
-            # 簡易的なcoherence計算（単語重複を避ける）
-            all_words = []
-            for topic_id, words in topics.items():
-                topic_words = [word for word, _ in words[:top_n]]
-                all_words.extend(topic_words)
-
-            if len(all_words) == 0:
-                return eps
-
-            # 単語の多様性に基づく簡易coherence
-            unique_words = len(set(all_words))
-            total_words = len(all_words)
-            coherence_score = unique_words / total_words if total_words > 0 else 0.0
-            return np.clip(coherence_score, eps, 1.0)
-
-        try:
-            # テキストから文書-単語行列を作成
-            doc_term_matrix = vectorizer.transform(texts)
-            word_probabilities = doc_term_matrix.sum(axis=0).A1 / doc_term_matrix.sum()
-
-            # 各トピックについてcoherenceを計算
-            coherence_scores = []
-            for topic_id, words in topics.items():
-                topic_words = [word for word, _ in words[:top_n]]
-                if len(topic_words) < 2:
-                    continue
-
-                # 各単語ペアについてcoherenceを計算（UMass方式）
-                topic_coherence = 0.0
-                pair_count = 0
-
-                for i, word_i in enumerate(topic_words):
-                    for j in range(i + 1, min(i + 6, len(topic_words))):  # 上位5ペアのみ
-                        word_j = topic_words[j]
-
-                        # 単語のインデックスを取得
-                        try:
-                            idx_i = vectorizer.vocabulary_.get(word_i)
-                            idx_j = vectorizer.vocabulary_.get(word_j)
-
-                            if idx_i is None or idx_j is None:
-                                continue
-
-                            # P(w_j)の計算
-                            p_wj = word_probabilities[idx_j]
-
-                            # P(w_i, w_j)の計算（共起確率）
-                            # 簡易版：両方の単語を含む文書の割合
-                            docs_with_i = doc_term_matrix[:, idx_i].toarray().flatten()
-                            docs_with_j = doc_term_matrix[:, idx_j].toarray().flatten()
-
-                            co_occur = np.sum(docs_with_i & docs_with_j)
-                            total_docs = doc_term_matrix.shape[0]
-
-                            p_wi_wj = co_occur / total_docs if total_docs > 0 else eps
-
-                            # UMass coherence計算
-                            if p_wj > 0:
-                                pair_coherence = np.log((p_wi_wj + eps) / p_wj)
-                                topic_coherence += pair_coherence
-                                pair_count += 1
-
-                        except (KeyError, IndexError):
-                            continue
-
-                if pair_count > 0:
-                    coherence_scores.append(topic_coherence / pair_count)
-
-            # 全トピックの平均coherenceを返す
-            if len(coherence_scores) == 0:
-                return eps
-
-            avg_coherence = np.mean(coherence_scores)
-            # 負の値をクリップして0-1の範囲に正規化
-            coherence_score = np.clip((avg_coherence + 2) / 4, eps, 1.0)  # -2〜2を0〜1にマッピング
-            return coherence_score
-
-        except Exception as inner_e:
-            print(f"Coherence calculation inner failed: {inner_e}")
-            # フォールバック：単純な多様性ベースの計算
-            all_words = []
-            for topic_id, words in topics.items():
-                topic_words = [word for word, _ in words[:top_n]]
-                all_words.extend(topic_words)
-
-            if len(all_words) == 0:
-                return eps
-
-            unique_words = len(set(all_words))
-            total_words = len(all_words)
-            coherence_score = unique_words / total_words if total_words > 0 else 0.0
-            return np.clip(coherence_score, eps, 1.0)
-
-    except Exception as e:
-        print(f"Coherence calculation failed: {e}")
-        import traceback
-        print(f"Coherence traceback: {traceback.format_exc()}")
+    except Exception:
         return eps
 
 def compute_diversity(model, top_n=10, eps=EPSILON):
+    """
+    Compute topic diversity based on word uniqueness.
+    
+    Args:
+        model: Trained BERTopic model
+        top_n: Number of top words per topic
+        eps: Minimum epsilon value
+        
+    Returns:
+        Diversity score between 0 and 1
+    """
     try:
         topics = {k: v for k, v in model.get_topics().items() if k != -1}
         if len(topics) < 2:
             return eps
 
-        # 各トピックの単語セットを作成
+        # Calculate word uniqueness per topic
         topic_word_sets = {}
         for topic_id, words in topics.items():
-            topic_words = [word for word, _ in words[:top_n]]
-            topic_word_sets[topic_id] = set(topic_words)
+            words_list = [word for word, _ in words[:top_n]]
+            topic_word_sets[topic_id] = set(words_list)
 
-        if len(topic_word_sets) < 2:
-            return eps
-
-        # 単語の独自性に基づく多様性計算
-        all_unique_words = set()
-        topic_unique_words = {}
-
+        diversity_scores = []
         for topic_id, word_set in topic_word_sets.items():
-            all_unique_words.update(word_set)
-            # このトピック独自の単語をカウント
             other_words = set()
             for other_id, other_set in topic_word_sets.items():
                 if other_id != topic_id:
                     other_words.update(other_set)
+            
             unique_words = word_set - other_words
-            topic_unique_words[topic_id] = unique_words
+            unique_ratio = len(unique_words) / len(word_set) if len(word_set) > 0 else 0
+            diversity_scores.append(unique_ratio)
 
-        # 各トピックが独自に持つ単語の割合を計算
-        diversity_scores = []
-        for topic_id in topic_unique_words:
-            unique_count = len(topic_unique_words[topic_id])
-            total_count = len(topic_word_sets[topic_id])
-            if total_count > 0:
-                diversity_scores.append(unique_count / total_count)
+        return np.clip(np.mean(diversity_scores), eps, 1.0) if diversity_scores else eps
 
-        if len(diversity_scores) == 0:
-            return eps
-
-        avg_diversity = np.mean(diversity_scores)
-
-        # より洗練された多様性評価：トピックベクトル間の距離も考慮
-        try:
-            # c-TF-IDFベクトルを取得してトピック間の距離を計算
-            if hasattr(model, 'c_tf_idf_') and model.c_tf_idf_ is not None:
-                ctfidf_matrix = model.c_tf_idf_
-                if ctfidf_matrix.shape[0] > 1:
-                    # コサイン距離を計算して多様性を評価
-                    from sklearn.metrics.pairwise import cosine_distances
-
-                    # 有効なトピックのみを選択
-                    valid_topic_ids = list(topics.keys())
-                    if len(valid_topic_ids) > 1:
-                        topic_indices = [i for i, tid in enumerate(valid_topic_ids) if tid in topics]
-                        if len(topic_indices) > 1:
-                            topic_vectors = ctfidf_matrix[topic_indices]
-
-                            # コサイン距離を計算
-                            cosine_dist = cosine_distances(topic_vectors)
-
-                            # 多様性は距離の平均値として計算（高いほど良い）
-                            distance_score = np.mean(cosine_dist[np.triu_indices_from(cosine_dist, k=1)])
-
-                            # 独自性スコアと距離スコアを組み合わせ
-                            combined_diversity = 0.6 * avg_diversity + 0.4 * distance_score
-                            combined_diversity = np.clip(combined_diversity, eps, 1.0)
-                            return combined_diversity
-        except Exception:
-            # c-TF-IDFが利用できない場合は独自性スコアのみを使用
-            pass
-
-        diversity_score = np.clip(avg_diversity, eps, 1.0)
-        return diversity_score
-
-    except Exception as e:
-        print(f"Diversity calculation failed: {e}")
-        import traceback
-        print(f"Diversity traceback: {traceback.format_exc()}")
+    except Exception:
         return eps
 
 def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -> float:
@@ -431,19 +293,22 @@ def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -
             normalized_distance = min(distance, 1.0)
             return max(eps, 1.0 - normalized_distance * 0.25)
             
-    except Exception as e:
-        print(f"Cluster count evaluation failed: {e}")
-        import traceback
-        print(f"Cluster count traceback: {traceback.format_exc()}")
+    except Exception:
         return eps
 
 def compute_cluster_score(model, eps=EPSILON):
     """
-    BERTopic の UMAP 埋め込みを使ったクラスタリング評価
-    Silhouette + Calinski-Harabasz を組み合わせ、適正に正規化
+    Compute clustering quality using Silhouette and Calinski-Harabasz scores.
+    
+    Args:
+        model: Trained BERTopic model
+        eps: Minimum epsilon value
+        
+    Returns:
+        Combined cluster quality score between 0 and 1
     """
     try:
-        # HDBSCAN ラベルを取得
+        # Get HDBSCAN labels
         if not hasattr(model, 'hdbscan_model') or model.hdbscan_model is None:
             return eps
 
@@ -451,9 +316,9 @@ def compute_cluster_score(model, eps=EPSILON):
         if labels is None or len(labels) == 0:
             return eps
 
-        mask = labels != -1  # ノイズを除外
-
-        # 有効クラスタが2つ以上ない場合は最小値返却
+        mask = labels != -1  # Filter out noise
+        
+        # Check minimum cluster requirement
         unique_labels = set(labels[mask])
         if len(unique_labels) < 2:
             return eps
@@ -484,9 +349,9 @@ def compute_cluster_score(model, eps=EPSILON):
             s_score = silhouette_score(umap_embeddings, labels[mask])
             s_score_scaled = (s_score + 1) / 2
         except Exception:
-            s_score_scaled = 0.5  # エラー時は中間値を使用
+            s_score_scaled = 0.5  # Default on error
 
-        # Calinski-Harabaszスコアをより適切に正規化
+        # Calinski-Harabasz score normalization
         try:
             ch_score = calinski_harabasz_score(umap_embeddings, labels[mask])
 
@@ -514,10 +379,7 @@ def compute_cluster_score(model, eps=EPSILON):
 
         return combined_score
 
-    except Exception as e:
-        print(f"Cluster score calculation failed: {e}")
-        import traceback
-        print(f"Cluster score traceback: {traceback.format_exc()}")
+    except Exception:
         return eps
 
 def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray, eps: float = EPSILON) -> float:
@@ -596,16 +458,9 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         n_clusters = len(topic_info[topic_info['Topic'] != -1])
         cluster_validity = evaluate_cluster_count(n_clusters, len(texts), eps)
 
-        # Detailed logging output for debugging
-        print(f"  Coherence: {coherence:.4f}")
-        print(f"  Diversity: {diversity:.4f}")
-        print(f"  Cluster Score: {cluster_score:.4f}")
-        print(f"  N Clusters: {n_clusters}")
-        print(f"  Cluster Validity: {cluster_validity:.4f}")
-
-        # Use predefined score weights for consistency
+        # Calculate composite score using all valid metrics
         base_weights = SCORE_WEIGHTS.copy()
-
+        
         # Check which scores are valid for weight adjustment
         valid_scores = {
             'coherence': coherence > eps,
@@ -614,32 +469,20 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
             'validity': cluster_validity > eps
         }
 
-        valid_count = sum(valid_scores.values())
-        print(f"  Valid scores count: {valid_count}")
-
-        if valid_count == 0:
-            print("  All scores invalid, returning eps")
+        if sum(valid_scores.values()) == 0:
             return eps
 
-        # 有効なスコアのみで重みを再計算
+        # Adjust weights for valid scores only and normalize
         adjusted_weights = {}
-        total_weight = 0
-
+        total_weight = sum(base_weights[k] for k in base_weights.keys() if valid_scores[k])
+        
         for key in base_weights:
             if valid_scores[key]:
-                adjusted_weights[key] = base_weights[key]
-                total_weight += base_weights[key]
+                adjusted_weights[key] = base_weights[key] / total_weight
             else:
                 adjusted_weights[key] = 0
-                print(f"  {key} score invalid, weight set to 0")
 
-        # 重みの正規化
-        if total_weight > 0:
-            for key in adjusted_weights:
-                adjusted_weights[key] /= total_weight
-                print(f"  Adjusted weight for {key}: {adjusted_weights[key]:.4f}")
-
-        # Calculate composite score using all valid metrics
+        # Calculate composite score
         score = (
             adjusted_weights['coherence'] * coherence +
             adjusted_weights['diversity'] * diversity +
@@ -649,16 +492,11 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         
         # Apply penalty for extreme cluster counts
         if n_clusters < MIN_VALID_CLUSTERS or n_clusters > int(len(texts) * 0.3):
-            score *= 0.5  # Reduce score by 50% for extreme cluster counts
-            print(f"  Applied cluster count penalty (score × 0.5): {score:.4f}")
+            score *= 0.5
 
-        print(f"  Final combined score: {score:.4f}")
         return score
 
-    except Exception as e:
-        print(f"Trial failed: {e}")
-        import traceback
-        print(f"Trial traceback: {traceback.format_exc()}")
+    except Exception:
         return eps
 
 def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str] = None) -> optuna.Study:
