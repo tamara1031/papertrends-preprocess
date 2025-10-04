@@ -405,10 +405,10 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
     min_samples_max = max(3, int(min_cluster_size * 0.8))
     min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
     
-    # HDBSCAN distance metric options
+    # HDBSCAN distance metric options (limited to supported metrics)
     hdbscan_metric = trial.suggest_categorical(
         "hdbscan_metric", 
-        ["euclidean", "manhattan", "cosine", "haversine"]
+        ["euclidean", "manhattan"]
     )
     
     return min_cluster_size, min_samples, hdbscan_metric
@@ -430,18 +430,21 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     
     ngram_range = trial.suggest_categorical("ngram_range", [[1, 2], [1, 3]])
     
-    # min_df constraint based on dataset size
-    min_df = trial.suggest_int("min_df", 2, min(10, dataset_size // 100))
+    # Use percentage-based approach for better constraint handling
+    # Convert min_df from count to percentage first  
+    min_df_percent_min = 2 / dataset_size  # 2 documents as percentage
+    min_df_percent_max = min(0.01, 50 / dataset_size)  # At most 1% or 50 documents
     
-    # Calculate minimum max_df to satisfy constraint: max_df > min_df/dataset_size
-    min_df_ratio = min_df / dataset_size
-    max_df_min_safe = min_df_ratio + 0.001  # Small buffer above the theoretical minimum
+    min_df_percent = trial.suggest_float("min_df_percent", min_df_percent_min, min_df_percent_max)
+    min_df = max(2, int(min_df_percent * dataset_size))  # Round up to integer count
     
-    # Ensure we have a reasonable range for max_df
-    max_df_min = max(max_df_min_safe, 0.01)  # At least 1% of documents
-    max_df_max = max(max_df_min + 0.1, 0.95)  # Ensure we have room to sample
+    # Now calculate max_df with proper constraints
+    max_df_min = min_df_percent + 0.005  # At least 0.5% buffer above min_df_percent
+    max_df_min_safe = max(max_df_min, 0.015)  # At least 1.5% minimum
     
-    max_df = trial.suggest_float("max_df", max_df_min, max_df_max)
+    max_df_max = min(max_df_min_safe + 0.2, 0.9)  # At least 20% range, but not more than 90%
+    
+    max_df = trial.suggest_float("max_df", max_df_min_safe, max_df_max)
     
     return top_n_words, ngram_range, min_df, max_df
 
