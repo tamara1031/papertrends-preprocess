@@ -14,8 +14,8 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
-from sklearn.metrics import calinski_harabasz_score, silhouette_score, davies_bouldin_score
-# Note: gensim/topic coherence metrics intentionally excluded due to numpy version compatibility issues
+from sklearn.metrics import davies_bouldin_score
+from sentence_transformers import util
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model
@@ -39,8 +39,6 @@ UMAP_MAX_COMPONENTS = 15
 EARLY_PRUNING_THRESHOLD = 20
 MID_OPTIMIZATION_THRESHOLD = 100
 
-
-
 def get_papers(category: str) -> List[Paper]:
     """Load papers from preprocessed data for the given category."""
     with open(f"./preprocessed/{category}/papers.pkl", "rb") as f:
@@ -56,14 +54,6 @@ def get_text_embeddings(category: str) -> np.ndarray:
 
 @dataclass
 class Hyperparameters:
-    """
-    Configuration parameters for BERTopic model optimization.
-    
-    This dataclass encapsulates all tunable hyperparameters for:
-    - Text vectorization (ngram_range, min_df, max_df)
-    - UMAP dimensionality reduction (n_neighbors, n_components, min_dist, spread)
-    - HDBSCAN clustering (min_cluster_size, min_samples)
-    """
     ngram_range: List[int]
     min_df: Union[float, int]
     max_df: Union[float, int]
@@ -76,16 +66,6 @@ class Hyperparameters:
 
 
 def _get_umap_embeddings(model, all_labels):
-    """
-    Helper function to extract UMAP embeddings from the model safely.
-    
-    Args:
-        model: Trained BERTopic model
-        all_labels: Full HDBSCAN labels array (including noise points as -1)
-        
-    Returns:
-        Tuple of (umap_embeddings, filtered_labels) or (None, None) if extraction fails
-    """
     mask = all_labels != -1  # Filter out noise
     umap_embeddings = None
     
@@ -111,200 +91,50 @@ def _get_umap_embeddings(model, all_labels):
         return (None, None)
 
 
-def _compute_silhouette_score_normalized(embeddings, labels):
-    """
-    Compute normalized silhouette score.
-    
-    Args:
-        embeddings: UMAP embeddings
-        labels: Cluster labels
-        
-    Returns:
-        Silhouette score normalized to [0, 1] range
-    """
-    try:
-        s_score = silhouette_score(embeddings, labels)
-        return (s_score + 1) / 2  # Convert from [-1,1] to [0,1]
-    except Exception:
-        return 0.5  # Default value on error
-
-
 def _compute_davies_bouldin_score_normalized(embeddings, labels):
-    """
-    Compute normalized Davies-Bouldin score.
-    
-    Davies-Bouldin score normalization based on typical clustering quality ranges:
-    - Excellent (DB < 0.4): mapped to [0.8, 1.0]
-    - Good (0.4 ≤ DB < 0.8): mapped to [0.6, 0.8] 
-    - Moderate (0.8 ≤ DB < 1.2): mapped to [0.3, 0.6]
-    - Poor (1.2 ≤ DB < 2.0): mapped to [0.1, 0.3]
-    - Very Poor (DB ≥ 2.0): mapped to [0.01, 0.1]
-    
-    Note: Lower DB scores indicate better clustering (inverse relationship)
-    
-    Args:
-        embeddings: UMAP embeddings
-        labels: Cluster labels
-        
-    Returns:
-        DB score normalized to [0, 1] range where higher values indicate better clustering
-    """
     try:
-        db_score = davies_bouldin_score(embeddings, labels)
-        
-        # DB score is inversely related to clustering quality (lower = better)
-        # Reverse the relationship for consistent [0,1] scale with other metrics
-        
-        if db_score <= 0.4:
-            # Excellent clustering - map (0, 0.4] to [0.8, 1.0]
-            normalized = 0.8 + (0.4 - db_score) / 0.4 * 0.2
-        elif db_score <= 0.8:
-            # Good clustering - map (0.4, 0.8] to [0.6, 0.8]
-            normalized = 0.6 + (0.8 - db_score) / 0.4 * 0.2
-        elif db_score <= 1.2:
-            # Moderate clustering - map (0.8, 1.2] to [0.3, 0.6]
-            normalized = 0.3 + (1.2 - db_score) / 0.4 * 0.3
-        elif db_score <= 2.0:
-            # Poor clustering - map (1.2, 2.0] to [0.1, 0.3]
-            normalized = 0.1 + (2.0 - db_score) / 0.8 * 0.2
-        else:
-            # Very poor clustering - map (2.0, ∞) to [0.01, 0.1]
-            normalized = 0.01 + min(1.0 / db_score, 0.09)
-        
-        return np.clip(normalized, 0.01, 1.0)
+        return davies_bouldin_score(embeddings, labels)
         
     except Exception:
-        return 0.5  # Default value on error
-
-
-
-
-def _compute_ch_score_normalized(embeddings, labels):
-    """
-    Compute normalized Calinski-Harabasz score using empirically-based ranges.
-    
-    Updated CH score normalization based on actual clustering performance ranges:
-    - Excellent (CH≥100,000): mapped to [0.9, 1.0]
-    - Very Good (10,000≤CH<100,000): mapped to [0.8, 0.9] 
-    - Good (1,000≤CH<10,000): mapped to [0.6, 0.8]
-    - Moderate (100≤CH<1,000): mapped to [0.3, 0.6]
-    - Poor (0<CH<100): mapped to [0.01, 0.3]
-    
-    Args:
-        embeddings: UMAP embeddings
-        labels: Cluster labels
+        return 2.0  # Davies-Bouldinでは低いほど良いので、中程度の悪いスコアを返す
         
-    Returns:
-        CH score normalized to [0, 1] range where higher values indicate better clustering
-    """
-    try:
-        ch_score = calinski_harabasz_score(embeddings, labels)
-        
-        if ch_score > 0:
-            # Updated normalization based on realistic CH score ranges observed in practice:
-            # - Excellent clustering: CH ≥ 100,000 (very tight clusters)
-            # - Very Good clustering: 10,000 ≤ CH < 100,000 
-            # - Good clustering: 1,000 ≤ CH < 10,000
-            # - Moderate clustering: 100 ≤ CH < 1,000
-            # - Poor clustering: CH < 100
-            
-            if ch_score >= 100000:
-                # Excellent clustering - map [100,000, ∞) to [0.9, 1.0]
-                # Use logarithmic scaling to handle very large values gracefully
-                normalized = 0.9 + min(np.log10(ch_score / 100000) / 10, 0.1)
-            elif ch_score >= 10000:
-                # Very Good clustering - map [10,000, 100,000) to [0.8, 0.9]
-                normalized = 0.8 + (ch_score - 10000) / 90000 * 0.1
-            elif ch_score >= 1000:
-                # Good clustering - map [1,000, 10,000) to [0.6, 0.8]
-                normalized = 0.6 + (ch_score - 1000) / 9000 * 0.2
-            elif ch_score >= 100:
-                # Moderate clustering - map [100, 1,000) to [0.3, 0.6]
-                normalized = 0.3 + (ch_score - 100) / 900 * 0.3
-            else:
-                # Poor clustering - map (0, 100) to [0.01, 0.3]
-                normalized = 0.01 + (ch_score / 100) * 0.29
-            
-            return np.clip(normalized, 0.01, 1.0)
-        else:
-            return 0.01
-            
-    except Exception:
-        return 0.5  # Default value on error
-
-def compute_cluster_score(model, eps=EPSILON):
-    """
-    Compute clustering quality using Silhouette, Calinski-Harabasz, and Davies-Bouldin scores.
-    
-    Enhanced evaluation combining three complementary clustering metrics:
-    - Silhouette: Separation vs cohesion balance
-    - Calinski-Harabasz: Inter-cluster vs intra-cluster variance ratio  
-    - Davies-Bouldin: Intra-cluster density evaluation
-    
-    Note: Topic Coherence metrics (gensim) are excluded due to numpy version 
-    compatibility issues in the current environment.
-    
-    Args:
-        model: Trained BERTopic model
-        eps: Minimum epsilon value
-        
-    Returns:
-        Combined cluster quality score between 0 and 1
-    """
+def compute_cluster_score(model: BERTopic, eps=EPSILON):
     try:
         # Get HDBSCAN labels
         if not hasattr(model, 'hdbscan_model') or model.hdbscan_model is None:
-            return eps
+            return -2.0
 
         labels = model.hdbscan_model.labels_
         if labels is None or len(labels) == 0:
-            return eps
+            return -2.0
 
         mask = labels != -1  # Filter out noise
         
         # Check minimum cluster requirement
         unique_labels = set(labels[mask])
         if len(unique_labels) < MIN_CLUSTERS:
-            return eps
+            return -2.0
 
         # Get UMAP embeddings using helper function
         umap_embeddings, filtered_labels = _get_umap_embeddings(model, labels)
         if umap_embeddings is None:
-            return eps
+            return -2.0
 
-        # Compute normalized scores using helper functions
-        s_score_scaled = _compute_silhouette_score_normalized(umap_embeddings, filtered_labels)
-        ch_score_scaled = _compute_ch_score_normalized(umap_embeddings, filtered_labels)
-        db_score_scaled = _compute_davies_bouldin_score_normalized(umap_embeddings, filtered_labels)
-
-        # Optimized weighting based on empirical analysis and numpy compatibility considerations:
-        # Silhouette: 40% (separation-cohesion balance, most stable metric)
-        # Calinski-Harabasz: 35% (inter-cluster separation, robust for academic papers) 
-        # Davies-Bouldin: 25% (intra-cluster cohesion, complements other metrics)
-        # 
-        # Note: This 3-metric combination provides comprehensive evaluation without
-        # dependency on gensim/topic coherence metrics that have numpy version conflicts
-        combined_score = (0.40 * s_score_scaled + 0.35 * ch_score_scaled + 0.25 * db_score_scaled)
-        return np.clip(combined_score, eps, 1.0)
+        # Compute Davies-Bouldin score (lower is better, so return negative for maximization)
+        db_score = _compute_davies_bouldin_score_normalized(umap_embeddings, filtered_labels)
+        
+        # Davies-Bouldinは低いほど良いので、負の値を返してOptunaに最大化させる
+        return -db_score
 
     except Exception:
-        return eps
+        return -2.0  # 例外時は悪いスコア（2.0）の負の値
 
 def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
-    """
-    Create an enhanced TPE sampler following clustering optimization best practices.
-    
-    Key improvements:
-    - Enhanced parameter relationships consideration
-    - Proper Bayesian priors for better exploration
-    - Optimized for mixed continuous/categorical parameter spaces
-    - More exploration to break away from plateaus
-    """
     
     # Enhanced TPE Sampler: Compatible with dynamic value spaces
     return TPESampler(
         consider_prior=True,      # Use Bayesian mixture more explicitly
-        prior_weight=0.8,         # Reduced prior weight to encourage more exploration
+        prior_weight=0.85,         # Reduced prior weight to encourage more exploration
         consider_magic_clip=True, # Clips extremes adaptively
         consider_endpoints=False, # Exclude boundary values
         warn_independent_sampling=False,  # Suppress warning for dynamic search space
@@ -312,14 +142,6 @@ def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
     )
 
 def get_advanced_pruner(trial_count: int) -> MedianPruner:
-    """
-    Create adaptive pruner with best practices for clustering.
-    
-    Best Practices:
-    1. Early pruning: Aggressive cost-saving for expensive evaluations
-    2. Mid optimization: Balanced approach with moderate pruning
-    3. Late optimization: Conservative pruning for final refinement
-    """
     
     # Early pruning: Aggressive cost-saving
     if trial_count < EARLY_PRUNING_THRESHOLD:
@@ -346,16 +168,6 @@ def get_advanced_pruner(trial_count: int) -> MedianPruner:
         )
 
 def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[int, int]:
-    """
-    Suggest clustering parameters with constraints.
-    
-    Args:
-        trial: Optuna trial object
-        dataset_size: Size of the dataset
-        
-    Returns:
-        Tuple of (min_cluster_size, min_samples)
-    """
     # Core clustering parameters (optimized for practical cluster counts)
     min_cluster_size_lower = max(5, dataset_size // MAX_CLUSTER_RATIO)
     min_cluster_size_upper = min(100, dataset_size // MIN_CLUSTER_RATIO)
@@ -369,16 +181,6 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> tu
 
 
 def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[List[int], int, float]:
-    """
-    Suggest text vectorization parameters with constraints.
-    
-    Args:
-        trial: Optuna trial object
-        dataset_size: Size of the dataset
-        
-    Returns:
-        Tuple of (ngram_range, min_df, max_df)
-    """
     ngram_range = trial.suggest_categorical("ngram_range", [[1,2], [1,3]])
     
     # min_df vs max_df relationship (crucial!)
@@ -392,16 +194,6 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
 
 
 def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[int, int, float, float]:
-    """
-    Suggest UMAP dimensionality reduction parameters.
-    
-    Args:
-        trial: Optuna trial object  
-        dataset_size: Size of the dataset
-        
-    Returns:
-        Tuple of (n_neighbors, n_components, min_dist, spread)
-    """
     # UMAP parameters with truly appropriate bounds
     practical_max = min(int(dataset_size * UMAP_NEIGHBORS_RATIO), UMAP_MAX_NEIGHBORS)
     
@@ -419,15 +211,6 @@ def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[in
 
 
 def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
-    """
-    Suggest parameters with intelligent constraints and interdependencies.
-    
-    Best Practice: Implement parameter constraints to avoid invalid combinations:
-    - min_samples ≤ min_cluster_size (clustering constraint)
-    - max_df > min_df (vectorization constraint)
-    - n_neighbors ≤ dataset_size (computational constraint)
-    - Focus on practical cluster count ranges (5-50 clusters preferred)
-    """
     
     # Get parameter groups using helper functions
     min_cluster_size, min_samples = _suggest_clustering_parameters(trial, dataset_size)
@@ -447,15 +230,6 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     )
 
 def _create_bertopic_model(params: Hyperparameters) -> BERTopic:
-    """
-    Create a BERTopic model with the given hyperparameters.
-    
-    Args:
-        params: Hyperparameter configuration
-        
-    Returns:
-        Configured BERTopic model instance
-    """
     vectorizer_model = CountVectorizer(
         stop_words="english",
         ngram_range=tuple(params.ngram_range),
@@ -491,22 +265,7 @@ def _create_bertopic_model(params: Hyperparameters) -> BERTopic:
         verbose=False
     )
 
-
-
-
 def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray, eps: float = EPSILON) -> float:
-    """
-    Objective function for BERTopic hyperparameter optimization.
-    
-    Args:
-        trial: Optuna trial object
-        texts: List of input texts
-        text_embeddings: Pre-computed text embeddings
-        eps: Minimum epsilon value for score calculations
-        
-    Returns:
-        Composite optimization score (0-1)
-    """
     
     # Step 1: Suggest constrained parameters using best practices
     dataset_size = len(texts)
@@ -523,39 +282,20 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         topic_info = model.get_topic_info()
         n_clusters = len(topic_info[topic_info['Topic'] != -1])
         
-        # Early exit for obvious failures (helps pruning)
-        if n_clusters < 2 or n_clusters > dataset_size // 5:
-            return eps * 0.1  # Very low score for clear failures
-        
         # Step 4: Cluster quality evaluation only
         cluster_score = compute_cluster_score(model, eps=eps)
-        
-        # Step 5: Use cluster_score as final_score
-        final_score = cluster_score
         
         # Store key metrics for analysis
         trial.set_user_attr("n_clusters", n_clusters)
         trial.set_user_attr("cluster_score", float(cluster_score))
         
-
-        return np.clip(final_score, eps, 1.0)
+        return cluster_score
 
     except Exception as e:
         # Graceful failure handling for clustering optimization
         return eps
 
 def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str] = None) -> optuna.Study:
-    """
-    Run hyperparameter optimization for a paper category.
-    
-    Args:
-        category: Paper category to optimize
-        timeout: Optimization timeout in seconds
-        storage: Optuna storage backend
-        
-    Returns:
-        Completed Optuna study
-    """
     
     # Step 1: Load and prepare data efficiently
     papers = get_papers(category)
