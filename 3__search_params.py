@@ -684,35 +684,8 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
 
     return study
 
-
-def test_new_evaluation_system(dataset_size: int = 3876):
-    """
-    Test the new cluster count evaluation system to verify improvements.
-    """
-    print(f"Testing new evaluation system for dataset size: {dataset_size}")
-    print("=" * 60)
-    
-    test_cluster_counts = [1, 5, 10, 15, 25, 35, 50, 75, 100, 200]
-    
-    for n_clusters in test_cluster_counts:
-        score = evaluate_cluster_count(n_clusters, dataset_size)
-        # Calculate expected docs per cluster
-        docs_per_cluster = dataset_size / n_clusters if n_clusters > 0 else 0
-        
-        print(f"n_clusters={n_clusters:3d}: score={score:.4f}, "
-              f"docs/cluster={docs_per_cluster:.1f}")
-    
-    print("\nKey improvements:")
-    print("- Prioritizes practical cluster counts (5-25 clusters)")
-    print("- Rewards interpretable granularity (50-500 docs per cluster)")
-    print("- Penalizes extreme clustering (too few/many clusters)")
-    print("- Balances quality vs quantity trade-offs")
-
 if __name__ == "__main__":
     category = "physics.geo-ph"
-
-    # Test the new evaluation system first
-    test_new_evaluation_system()
     
     model_path = f"./models/{category}"
     os.makedirs(model_path, exist_ok=True)
