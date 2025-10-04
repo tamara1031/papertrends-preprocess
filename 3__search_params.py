@@ -14,11 +14,14 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
-from sklearn.metrics import davies_bouldin_score
-from sentence_transformers import util
 
 from common.domain.dto import Paper
-from common.utils import get_custom_embedding_model
+from common.utils import get_custom_embedding_model, CustomEmbeddingModel
+
+from hdbscan.validity import validity_index
+from sklearn.metrics import pairwise_distances
+from sklearn.metrics.pairwise import cosine_similarity
+from itertools import combinations
 
 # Constants
 EPSILON = 1e-6
@@ -64,70 +67,99 @@ class Hyperparameters:
     min_cluster_size: int
     min_samples: int
 
+def _compute_words_coherence(words, embedding_model: CustomEmbeddingModel):
+    """
+    words_list: list of words (1トピックの単語リスト)
+    returns: 平均cosine similarity
+    """
+    embeddings = embedding_model.embed(words)
 
-def _get_umap_embeddings(model, all_labels):
-    mask = all_labels != -1  # Filter out noise
-    umap_embeddings = None
+    sims = []
+    for w1, w2 in combinations(range(len(words)), 2):
+        sim = cosine_similarity([embeddings[w1]], [embeddings[w2]])[0][0]
+        sims.append(sim)
     
-    # Extract embeddings for all points (including noise)
-    if hasattr(model, 'umap_embeddings_') and model.umap_embeddings_ is not None:
-        umap_embeddings = model.umap_embeddings_
-    elif hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
-        umap_embeddings = model.umap_model.embedding_
-    elif hasattr(model, 'umap_model') and hasattr(model.umap_model, '_raw_data'):
-        umap_embeddings = model.umap_model._raw_data
+    return np.mean(sims)
+
+def _compute_coherence_score(model: BERTopic, eps=EPSILON):
+    """
+    Calculate topic coherence score: document-count weighted average coherence of all topics.
+    Returns score in range [0, 1].
+    """
+    embedding_model = model.embedding_model
+    topic_words_dict = model.get_topics()
+    topic_words_dict = {k: [w for w, _ in v] for k, v in topic_words_dict.items() if k != -1}
+
+    if not topic_words_dict:
+        return eps
+
+    # Get topic document counts from model labels
+    topic_counts = {}
+    labels = model.hdbscan_model.labels_
+    for label in labels:
+        if label != -1:  # Exclude outliers
+            topic_counts[label] = topic_counts.get(label, 0) + 1
+
+    topic_coherences = []
+    topic_weights = []
     
-    if umap_embeddings is not None:
-        # Now apply the mask to both embeddings and labels
-        masked_embeddings = umap_embeddings[mask]
-        masked_labels = all_labels[mask]
+    for topic_id, words in topic_words_dict.items():
+        if len(words) < 2:  # Skip topics with less than 2 words
+            continue
         
-        valid = (masked_embeddings is not None and 
-                len(masked_embeddings) > 0 and 
-                masked_embeddings.shape[1] >= 2)
+        topic_coherence = _compute_words_coherence(words, embedding_model)
+        topic_coherences.append(topic_coherence)
         
-        return (masked_embeddings, masked_labels) if valid else (None, None)
-    else:
-        return (None, None)
+        # Use document count as weight
+        doc_count = topic_counts.get(topic_id, 1)  # Default to 1 if not found
+        topic_weights.append(doc_count)
+    
+    if not topic_coherences:
+        return eps
+    
+    # Calculate document-count weighted average coherence
+    topic_coherences = np.array(topic_coherences)
+    topic_weights = np.array(topic_weights)
+    
+    weighted_avg_coherence = np.average(topic_coherences, weights=topic_weights)
+    
+    # Ensure the score is in [0, 1] range
+    # cosine similarity can be negative, so we clip and normalize
+    normalized_coherence = max(0.0, min(1.0, (weighted_avg_coherence + 1.0) / 2.0))
+    
+    return normalized_coherence
 
-
-def _compute_davies_bouldin_score_normalized(embeddings, labels):
+def _compute_dbcv_score(model: BERTopic, eps=EPSILON):
     try:
-        return davies_bouldin_score(embeddings, labels)
+        embeddings = model.umap_model.embedding_
+        labels = model.hdbscan_model.labels_
+        distance_matrix = pairwise_distances(embeddings, metric='euclidean')
         
-    except Exception:
-        return 2.0  # Davies-Bouldinでは低いほど良いので、中程度の悪いスコアを返す
+        # Compute raw DBCV score
+        dbcv_score = validity_index(distance_matrix, labels)
+        
+        # DBCV score can be negative, so we normalize and clip to [0, 1]
+        # Adding 1 to shift negative values to positive range, then normalize
+        normalized_score = max(0.0, min(1.0, (dbcv_score + 1.0) / 2.0))
+        
+        return normalized_score
+        
+    except Exception as e:
+        # Return fallback value on any error
+        print(f"Warning: DBCV computation failed: {e}")
+        return eps
         
 def compute_cluster_score(model: BERTopic, eps=EPSILON):
     try:
-        # Get HDBSCAN labels
-        if not hasattr(model, 'hdbscan_model') or model.hdbscan_model is None:
-            return -2.0
-
-        labels = model.hdbscan_model.labels_
-        if labels is None or len(labels) == 0:
-            return -2.0
-
-        mask = labels != -1  # Filter out noise
+        coherence_score = _compute_coherence_score(model, eps=eps)
+        dbcv_score = _compute_dbcv_score(model, eps=eps)
         
-        # Check minimum cluster requirement
-        unique_labels = set(labels[mask])
-        if len(unique_labels) < MIN_CLUSTERS:
-            return -2.0
-
-        # Get UMAP embeddings using helper function
-        umap_embeddings, filtered_labels = _get_umap_embeddings(model, labels)
-        if umap_embeddings is None:
-            return -2.0
-
-        # Compute Davies-Bouldin score (lower is better, so return negative for maximization)
-        db_score = _compute_davies_bouldin_score_normalized(umap_embeddings, filtered_labels)
+        combined_score = 0.4 * coherence_score + 0.6 * dbcv_score
         
-        # Davies-Bouldinは低いほど良いので、負の値を返してOptunaに最大化させる
-        return -db_score
+        return combined_score
 
     except Exception:
-        return -2.0  # 例外時は悪いスコア（2.0）の負の値
+        return eps
 
 def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
     
@@ -282,14 +314,14 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         topic_info = model.get_topic_info()
         n_clusters = len(topic_info[topic_info['Topic'] != -1])
         
-        # Step 4: Cluster quality evaluation only
-        cluster_score = compute_cluster_score(model, eps=eps)
+        # Step 4: Topic coherence evaluation
+        coherence_score = compute_cluster_score(model, eps=eps)
         
         # Store key metrics for analysis
         trial.set_user_attr("n_clusters", n_clusters)
-        trial.set_user_attr("cluster_score", float(cluster_score))
+        trial.set_user_attr("coherence_score", float(coherence_score))
         
-        return cluster_score
+        return coherence_score
 
     except Exception as e:
         # Graceful failure handling for clustering optimization
