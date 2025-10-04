@@ -11,6 +11,7 @@ import numpy as np
 import optuna
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner, HyperbandPruner, SuccessiveHalvingPruner
+from optuna.study import MaxTrialsCallback
 from bertopic import BERTopic
 
 from umap import UMAP
@@ -693,14 +694,14 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
     try:
         # For small datasets, use fewer trials but longer timeout per trial
         n_trials = max(50, min(200, dataset_size // 20))
-        
+
         study.optimize(
             lambda trial: objective(trial, texts, text_embeddings),
-            n_trials=n_trials,
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
             catch=(Exception,),  # Catch all exceptions gracefully
+            callbacks=[MaxTrialsCallback(n_trials, states=(optuna.trial.TrialState.COMPLETE,))]
         )
         
         # Step 4: Post-optimization analysis and logging
