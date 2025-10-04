@@ -372,13 +372,12 @@ def objective_function(
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
         # Evaluate clustering quality
-        combined_score = compute_cluster_quality_score(model, text_embeddings, eps=eps)
+        score = compute_cluster_quality_score(model, text_embeddings, eps=eps)
         
         # Store evaluation metrics
-        trial.set_user_attr("n_clusters", n_clusters)
-        trial.set_user_attr("combined_score", float(combined_score))
+        trial.set_user_attr("score", float(score))
         
-        return combined_score
+        return score
     
     except optuna.exceptions.TrialPruned:
         raise
