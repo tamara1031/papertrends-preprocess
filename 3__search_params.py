@@ -1,4 +1,4 @@
-from typing import List, Tuple, Any, Optional, Dict, Union
+from typing import List, Any, Optional, Union
 from dataclasses import dataclass
 
 import gc, os
@@ -10,7 +10,6 @@ import numpy as np
 import optuna
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner, HyperbandPruner, SuccessiveHalvingPruner
-from optuna.study import MaxTrialsCallback
 from bertopic import BERTopic
 
 from umap import UMAP
@@ -19,16 +18,13 @@ from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
 
 from common.domain.dto import Paper
-from common.utils import get_custom_embedding_model, get_category_codes
+from common.utils import get_custom_embedding_model
 from sklearn.metrics import calinski_harabasz_score, silhouette_score
 
 # Constants
 EPSILON = 1e-6
 EMBEDDING_MODEL = get_custom_embedding_model()
 
-# Dataset size thresholds for adaptive parameter ranges
-SMALL_DATASET_THRESHOLD = 5000
-MEDIUM_DATASET_THRESHOLD = 50000
 
 # Score weights for composite evaluation (balanced for practical utility)
 SCORE_WEIGHTS = {
@@ -38,21 +34,6 @@ SCORE_WEIGHTS = {
     'validity': 0.25        # Practical cluster count appropriateness
 }
 
-# Cluster count validation thresholds
-MIN_VALID_CLUSTERS = 3
-
-# Advanced optimization strategy constants
-EARLY_PRUNING_FACTOR = 0.8  # Prune trials below this percentile early
-MIN_TRIALS_FOR_PRUNING = 10  # Minimum trials before pruning starts
-CMA_ES_SWITCH_THRESHOLD = 50  # Switch to CMA-ES after this many trials
-MULTI_OBJECTIVE_SPLIT = 100  # Use multi-objective optimization after this many trials
-
-# Parameter relationship constraints
-PARAMETER_CONSTRAINTS = {
-    'min_samples': {'default_factor': 2.0, 'relative_to': 'min_cluster_size'},
-    'max_df': {'min_with_min_df': 0.05},  # Ensure max_df > min_df + margin
-    'n_neighbors': {'max_ratio': {'dataset_size': 0.1}}  # n_neighbors <= dataset_size * 0.1
-}
 
 def get_papers(category: str) -> List[Paper]:
     """Load papers from preprocessed data for the given category."""
@@ -552,7 +533,7 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         )
 
         # Step 3: Efficient evaluation with early termination hooks
-        topics, probs = model.fit_transform(texts, embeddings=text_embeddings)
+        topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
         # Quick validation checkpoint for pruning
         topic_info = model.get_topic_info()
@@ -683,8 +664,7 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
             # timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(Exception,),  # Catch all exceptions gracefully
-            # callbacks=[MaxTrialsCallback(n_trials, states=(optuna.trial.TrialState.COMPLETE,))]
+            catch=(Exception,)  # Catch all exceptions gracefully
         )
         
         # Step 4: Post-optimization analysis and logging
