@@ -34,7 +34,8 @@ from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import pairwise_distances, pairwise as cosine_similarity
+from sklearn.metrics import pairwise_distances
+from sklearn.metrics.pairwise import cosine_similarity
 from hdbscan.validity import validity_index
 
 from common.domain.dto import Paper
