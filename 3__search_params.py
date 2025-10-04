@@ -4,7 +4,6 @@ from dataclasses import dataclass
 import gc, os
 import pickle
 import json
-import warnings
 
 import numpy as np
 
@@ -22,9 +21,6 @@ from bertopic.vectorizers import ClassTfidfTransformer
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, get_category_codes
 from sklearn.metrics import calinski_harabasz_score, silhouette_score
-
-# Suppress Optuna experimental warnings for cleaner output
-warnings.filterwarnings("ignore", category=optuna.exceptions.ExperimentalWarning)
 
 # Constants
 EPSILON = 1e-6
@@ -412,14 +408,12 @@ def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
     - Optimized for mixed continuous/categorical parameter spaces
     """
     
-    # Enhanced TPE Sampler: Best overall performer for clustering optimization
+    # Enhanced TPE Sampler: Compatible with dynamic value spaces
     return TPESampler(
         consider_prior=True,      # Use Bayesian mixture more explicitly
         prior_weight=1.0,         # Strong prior weight for categorical parameters
         consider_magic_clip=True, # Clips extremes adaptively
         consider_endpoints=False, # Exclude boundary values
-        multivariate=True,        # Consider parameter relationships
-        group=True,              # Group selection for better convergence
         warn_independent_sampling=False,  # Suppress warning for dynamic search space
         seed=42
     )
@@ -476,7 +470,7 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
     
     # Text preprocessing parameters
-    ngram_range = trial.suggest_categorical("ngram_range", [[1,1], [1,2], [2,2]])
+    ngram_range = trial.suggest_categorical("ngram_range", [[1,1], [1,2], [1,3]])
     
     # min_df vs max_df relationship (crucial!)
     min_df = trial.suggest_int("min_df", 2, 30)
