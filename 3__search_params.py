@@ -584,9 +584,7 @@ def _calculate_composite_score(coherence: float, diversity: float,
         else:
             adjusted_weights[key] = 0
 
-
-
-    # Calculate composite score with best practice multi-objective approach
+    # Calculate composite score
     base_score = (
         adjusted_weights['coherence'] * coherence +
         adjusted_weights['diversity'] * diversity +
@@ -599,13 +597,7 @@ def _calculate_composite_score(coherence: float, diversity: float,
 
 def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray, eps: float = EPSILON) -> float:
     """
-    Enhanced objective function with clustering optimization best practices.
-    
-    Key improvements:
-    1. Constrained parameter suggestions based on dataset characteristics
-    2. Early termination support with pruning-aware checkpointing
-    3. Multi-metric optimization with stability measures
-    4. Memory-efficient evaluation with comprehensive scoring
+    Objective function for BERTopic hyperparameter optimization.
     
     Args:
         trial: Optuna trial object
@@ -614,7 +606,7 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         eps: Minimum epsilon value for score calculations
         
     Returns:
-        Composite optimization score (0-1) with additional metrics for analysis
+        Composite optimization score (0-1)
     """
     
     # Step 1: Suggest constrained parameters using best practices
@@ -648,14 +640,9 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         # Step 6: Simplified scoring without penalties
         final_score = base_score
         
-        # Store additional metrics for analysis 
+        # Store key metrics for analysis
         trial.set_user_attr("n_clusters", n_clusters)
-        trial.set_user_attr("coherence", coherence)
-        trial.set_user_attr("diversity", diversity) 
-        trial.set_user_attr("cluster_score", cluster_score)
-        trial.set_user_attr("cluster_validity", cluster_validity)
         trial.set_user_attr("base_score", base_score)
-        trial.set_user_attr("final_score_before_clip", final_score)
 
         return np.clip(final_score, eps, 1.0)
 
@@ -665,13 +652,7 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
 
 def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str] = None) -> optuna.Study:
     """
-    Enhanced optimization runner with clustering optimization best practices.
-    
-    Key improvements:
-    1. Adaptive sampler selection based on dataset characteristics
-    2. Intelligent pruning strategies for different optimization phases
-    3. Warm-start capabilities for continuing previous studies
-    4. Advanced study configuration with comprehensive tracking
+    Run hyperparameter optimization for a paper category.
     
     Args:
         category: Paper category to optimize
@@ -679,9 +660,9 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
         storage: Optuna storage backend
         
     Returns:
-        Completed Optuna study with comprehensive optimization history
+        Completed Optuna study
     """
-
+    
     # Step 1: Load and prepare data efficiently
     papers = get_papers(category)
     text_embeddings = get_text_embeddings(category)
