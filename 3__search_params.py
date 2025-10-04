@@ -61,73 +61,15 @@ class Hyperparameters:
     ngram_range: List[int]
     min_df: Union[float, int]
     max_df: Union[float, int]
-    lowercase: bool
-    strip_accents: Optional[Any]
-    bm25_weighting: bool
+    # lowercase: bool
+    # strip_accents: Optional[Any]
+    # bm25_weighting: bool
     n_neighbors: int
     n_components: int
     min_dist: float
     spread: float
     min_cluster_size: int
     min_samples: int
-
-
-def predict_once(texts: List[str], text_embeddings: np.ndarray, params: Hyperparameters) -> tuple[List[int], Optional[np.ndarray]]:
-    """
-    Train a single BERTopic model with given parameters and return topic assignments.
-    
-    Args:
-        texts: List of input texts
-        text_embeddings: Pre-computed text embeddings
-        params: Hyperparameters configuration
-        
-    Returns:
-        Tuple of (topic_assignments, probabilities)
-    """
-    vectorizer_model = CountVectorizer(
-        stop_words="english",
-        ngram_range=tuple(params.ngram_range),
-        min_df=params.min_df,  
-        max_df=params.max_df, 
-        max_features=None,
-        vocabulary=None,
-
-        lowercase=params.lowercase,
-        strip_accents=params.strip_accents,
-    )
-    ctfidf_model = ClassTfidfTransformer(
-        # reduce_frequent_words=True,
-        bm25_weighting=params.bm25_weighting,
-    )
-    umap_model = UMAP(
-        n_neighbors=params.n_neighbors,
-        n_components=params.n_components,
-        metric='cosine',
-        low_memory=False,
-        min_dist=params.min_dist,  
-        spread=params.spread,
-        random_state=42
-    )
-    hdbscan_model = HDBSCAN(
-        min_cluster_size=params.min_cluster_size,
-        min_samples=params.min_samples,
-        metric='euclidean',
-        prediction_data=True
-    )
-
-    # topic model
-    model = BERTopic(
-        vectorizer_model=vectorizer_model,
-        ctfidf_model=ctfidf_model,
-        hdbscan_model=hdbscan_model,
-        umap_model=umap_model,
-        embedding_model=EMBEDDING_MODEL,
-        calculate_probabilities=True,
-        verbose=False
-    )
-
-    # fit
-    return model.fit_transform(texts, embeddings=text_embeddings)
 
 # coherenceを算出（UMass coherenceに基づく）
 def compute_coherence(model: BERTopic, top_n: int = 10, eps: float = EPSILON) -> float:
@@ -445,9 +387,9 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     max_df = trial.suggest_float("max_df", max_df_min, 0.95)
     
     # Embedding model parameters
-    lowercase = trial.suggest_categorical("lowercase", [True, False])
-    strip_accents = trial.suggest_categorical("strip_accents", [None, "ascii", "unicode"])
-    bm25_weighting = trial.suggest_categorical("bm25_weighting", [True, False])
+    # lowercase = trial.suggest_categorical("lowercase", [True, False])
+    # strip_accents = trial.suggest_categorical("strip_accents", [None, "ascii", "unicode"])
+    # bm25_weighting = trial.suggest_categorical("bm25_weighting", [True, False])
     
     # UMAP parameters with truly appropriate bounds (independent of min_cluster_size)
     # UMAP best practice: n_neighbors should be 1-3% of dataset size for balanced local/global structure
@@ -470,9 +412,9 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
         ngram_range=ngram_range,
         min_df=min_df,
         max_df=max_df,
-        lowercase=lowercase,
-        strip_accents=strip_accents,
-        bm25_weighting=bm25_weighting,
+        # lowercase=lowercase,
+        # strip_accents=strip_accents,
+        # bm25_weighting=bm25_weighting,
         n_neighbors=n_neighbors,
         n_components=n_components,
         min_dist=min_dist,
@@ -514,10 +456,10 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
                 ngram_range=tuple(params.ngram_range),
                 min_df=params.min_df,
                 max_df=params.max_df,
-                lowercase=params.lowercase,
-                strip_accents=params.strip_accents
+                lowercase=False,
+                strip_accents="unicode"
             ),
-            ctfidf_model=ClassTfidfTransformer(bm25_weighting=params.bm25_weighting),
+            ctfidf_model=ClassTfidfTransformer(bm25_weighting=True),
             umap_model=UMAP(
                 n_neighbors=params.n_neighbors,
                 n_components=params.n_components,
