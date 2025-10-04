@@ -2,8 +2,15 @@
 Hyperparameter Optimization for BERTopic Clustering
 
 This module implements automated hyperparameter optimization for BERTopic clustering
-using Optuna. It optimizes parameters for text vectorization, UMAP dimensionality
-reduction, and HDBSCAN clustering with combined coherence and DBCV evaluation metrics.
+using Optuna with SPECTER2 embeddings. It optimizes parameters for text vectorization,
+UMAP dimensionality reduction, and HDBSCAN clustering with combined coherence and
+DBCV evaluation metrics.
+
+Key Features:
+- SPECTER2 embedding compatibility
+- Robust parameter constraints
+- Combined coherence + DBCV evaluation
+- Efficient pruning and sampling
 
 Author: PaperTrends Preprocessing Team
 """
@@ -27,45 +34,57 @@ from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import pairwise_distances
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics import pairwise_distances, pairwise as cosine_similarity
 from hdbscan.validity import validity_index
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel
 
-# Suppress expected numerical warnings from HDBSCAN and related libraries
+# Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
 warnings.filterwarnings('ignore', message='overflow encountered in power')
 warnings.filterwarnings('ignore', message='divide by zero encountered')
 warnings.filterwarnings('ignore', message='invalid value encountered')
 
+
 # ============================================================================
-# Configuration Constants
+# Configuration
 # ============================================================================
 
-class ClusteringConfig:
-    """Configuration parameters for clustering optimization."""
+class OptimizationConfig:
+    """Centralized configuration for clustering optimization."""
     
-    # Numerical stability
-    EPSILON: float = 1e-6
+    # Numerical precision
+    EPSILON = 1e-6
     
-    # Clustering constraints - these ratios determine min/max cluster sizes
-    MIN_CLUSTER_RATIO: int = 20  # Min cluster size = dataset_size // MIN_CLUSTER_RATIO
-    MAX_CLUSTER_RATIO: int = 500  # Max cluster size = dataset_size // MAX_CLUSTER_RATIO
+    # Clustering constraints
+    MIN_CLUSTER_RATIO = 20   # min_cluster_size = dataset_size // MIN_CLUSTER_RATIO
+    MAX_CLUSTER_RATIO = 500  # max_cluster_size = dataset_size // MAX_CLUSTER_RATIO
     
-    # UMAP dimensionality reduction parameters
-    UMAP_NEIGHBORS_RATIO: float = 0.03  # Max n_neighbors = dataset_size * UMAP_NEIGHBORS_RATIO
-    UMAP_MAX_NEIGHBORS: int = 50  # Absolute maximum for n_neighbors
-    UMAP_MIN_COMPONENTS: int = 2
-    UMAP_MAX_COMPONENTS: int = 15
+    # UMAP parameters
+    UMAP_NEIGHBORS_RATIO = 0.03  # n_neighbors ≤ dataset_size * UMAP_NEIGHBORS_RATIO
+    UMAP_MAX_NEIGHBORS = 50  # Absolute maximum for n_neighbors
+    UMAP_MIN_COMPONENTS = 2
+    UMAP_MAX_COMPONENTS = 15
     
-    # Optimization settings
-    DEFAULT_TIMEOUT: int | None = None
-    DEFAULT_TRIALS: int = 100
-    MIN_TRIALS: int = 30
-    MAX_TRIALS: int = 100
-    TRIALS_SCALE_FACTOR: int = 50  # Trials scale with dataset_size // TRIALS_SCALE_FACTOR
+    # Optimization sessions
+    DEFAULT_TIMEOUT = None  # No timeout by default
+    MIN_TRIALS = 30
+    MAX_TRIALS = 100
+    TRIALS_SCALE_FACTOR = 50  # Trials ≈ dataset_size // TRIALS_SCALE_FACTOR
+    
+    # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
+    UMAP_METRICS = ["cosine", "euclidean", "manhattan"]  # All compatible
+    HDBSCAN_METRICS = ["euclidean", "manhattan"]         # Only these supported
+    
+    # Text processing
+    TOP_N_WORDS_RANGE = (10, 30)
+    NGRAM_RANGES = [[1, 1], [1, 2], [1, 3]]
+    
+    # TF-IDF bounds (percentage-based for robustness)
+    MIN_DF_PERCENT_LIMIT = 0.01    # 1% maximum
+    MAX_DF_MIN_BUFFER = 0.005      # 0.5% minimum buffer
+    MAX_DF_MIN_SAFE = 0.015        # 1.5% absolute minimum
 
 
 # ============================================================================
@@ -74,27 +93,28 @@ class ClusteringConfig:
 
 @dataclass
 class Hyperparameters:
-    """Hyperparameters for BERTopic clustering optimization."""
-
+    """Complete hyperparameter set for BERTopic clustering."""
+    
+    # Topic representation
     top_n_words: int
     
-    # Text vectorization parameters
+    # Text vectorization
     ngram_range: List[int]
     min_df: Union[float, int]
     max_df: Union[float, int]
     
-    # UMAP dimensionality reduction parameters
+    # UMAP dimensionality reduction
     n_neighbors: int
     n_components: int
     umap_metric: str
     
-    # HDBSCAN clustering parameters
+    # HDBSCAN clustering
     min_cluster_size: int
     min_samples: int
     hdbscan_metric: str
     
     def to_dict(self) -> Dict[str, Any]:
-        """Convert hyperparameters to dictionary format."""
+        """Convert to dictionary format for serialization."""
         return {
             'top_n_words': self.top_n_words,
             'ngram_range': self.ngram_range,
@@ -110,49 +130,25 @@ class Hyperparameters:
 
 
 # ============================================================================
-# Data Loading and Preparation
+# Data Management
 # ============================================================================
 
 def load_papers(category: str) -> List[Paper]:
-    """
-    Load papers from preprocessed data for the given category.
-    
-    Args:
-        category: The arXiv category (e.g., 'physics.geo-ph')
-        
-    Returns:
-        List of Paper objects preprocessed for the category
-        
-    Raises:
-        FileNotFoundError: If preprocessed data doesn't exist
-    """
+    """Load preprocessed papers for a given arXiv category."""
     filepath = f"./preprocessed/{category}/papers.pkl"
     try:
         with open(filepath, "rb") as f:
-            papers = pickle.load(f)
-        return papers
+            return pickle.load(f)
     except FileNotFoundError:
         raise FileNotFoundError(f"Preprocessed papers not found at {filepath}")
 
 
 def load_text_embeddings(category: str) -> np.ndarray:
-    """
-    Load pre-computed text embeddings for the given category.
-    
-    Args:
-        category: The arXiv category (e.g., 'physics.geo-ph')
-        
-    Returns:
-        Numpy array of shape (n_samples, embedding_dim) containing embeddings
-        
-    Raises:
-        FileNotFoundError: If embeddings file doesn't exist
-    """
+    """Load pre-computed SPECTER2 text embeddings."""
     filepath = f"./preprocessed/{category}/text_embeddings.npy"
     try:
         with open(filepath, "rb") as f:
-            embeddings = np.load(f)
-        return embeddings
+            return np.load(f)
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
@@ -162,35 +158,20 @@ def load_text_embeddings(category: str) -> np.ndarray:
 # ============================================================================
 
 def _compute_word_coherence(words: List[str], model: BERTopic) -> float:
-    """
-    Compute topic coherence for a set of words using embedding similarity.
-    
-    This is a simplified coherence measure based on word embedding similarity.
-    True topic coherence ideally requires external corpus analysis.
-    
-    Args:
-        words: List of words for a specific topic
-        model: Fitted BERTopic model for accessing embeddings
-    
-    Returns:
-        Average pairwise cosine similarity between word embeddings [0, 1]
-    """
+    """Compute semantic coherence for a topic's word set using SPECTER2 embeddings."""
     if len(words) < 2:
         return 0.0
     
     try:
-        # Get word embeddings from the model
         embeddings = model.embedding_model.embed(words)
         
         # Optimize computation based on vocabulary size
         if len(words) <= 50:
-            # For small vocabularies, compute pairwise similarities individually
             similarities = []
             for w1_idx, w2_idx in combinations(range(len(words)), 2):
                 sim = cosine_similarity([embeddings[w1_idx]], [embeddings[w2_idx]])[0, 0]
                 similarities.append(sim)
         else:
-            # For large vocabularies, compute full similarity matrix and extract upper triangle
             similarity_matrix = cosine_similarity(embeddings)
             upper_triangle_indices = np.triu_indices_from(similarity_matrix, k=1)
             similarities = similarity_matrix[upper_triangle_indices]
@@ -198,23 +179,13 @@ def _compute_word_coherence(words: List[str], model: BERTopic) -> float:
         return np.mean(similarities) if similarities else 0.0
         
     except Exception as e:
-        # Return 0.0 if embedding computation fails (rare edge case)
         print(f"Warning: Word coherence computation failed: {e}")
         return 0.0
 
 
-def _compute_topic_coherence_score(model: BERTopic, eps: float = ClusteringConfig.EPSILON) -> float:
-    """
-    Calculate document-count weighted topic coherence score.
-    
-    Args:
-        model: Fitted BERTopic model
-        eps: Minimum score for degenerated cases
-        
-    Returns:
-        Weighted average coherence score normalized to [0, 1]
-    """
-    # Extract topic words (excluding outlier topic -1)
+def _compute_topic_coherence_score(model: BERTopic, eps: float = OptimizationConfig.EPSILON) -> float:
+    """Calculate document-count weighted topic coherence across all topics."""
+    # Extract topic words (exclude outlier topic -1)
     topic_words_dict = model.get_topics()
     topic_words_dict = {
         k: [word for word, _ in words_tuples] 
@@ -264,19 +235,9 @@ def _compute_topic_coherence_score(model: BERTopic, eps: float = ClusteringConfi
 def _compute_dbcv_score(
     model: BERTopic, 
     original_embeddings: np.ndarray, 
-    eps: float = ClusteringConfig.EPSILON
+    eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """
-    Compute Density-Based Cluster Validation (DBCV) score.
-    
-    Args:
-        model: Fitted BERTopic model
-        original_embeddings: Original document embeddings
-        eps: Minimum score for degenerated cases
-        
-    Returns:
-        Normalized DBCV score in [0, 1] range
-    """
+    """Compute Density-Based Cluster Validation (DBCV) score."""
     labels = model.hdbscan_model.labels_
     
     # Remove outliers (-1 labels) for cleaner DBCV calculation
@@ -287,16 +248,16 @@ def _compute_dbcv_score(
     filtered_embeddings = original_embeddings[valid_mask].astype(np.float64)
     filtered_labels = labels[valid_mask]
     
-    # Calculate distance matrix with numerical stability preprocessing
+    # Calculate distance matrix with enhanced numerical stability
     distance_matrix = pairwise_distances(filtered_embeddings, metric='euclidean').astype(np.float64)
     
-    # Numerical stability preprocessing for HDBSCAN validity
-    distance_matrix[distance_matrix <= 0] = eps  # Avoid division by zero
-    distance_matrix[distance_matrix > 1e3] = 1e3  # Conservative overflow prevention
-    distance_matrix[np.isnan(distance_matrix)] = eps  # Handle NaN values
-    distance_matrix[np.isinf(distance_matrix)] = 1e3  # Handle infinity values
+    # Clean numeric issues (warnings suppressed globally)
+    distance_matrix[distance_matrix <= 0] = eps
+    distance_matrix[distance_matrix > 1e3] = 1e3
+    distance_matrix[np.isnan(distance_matrix)] = eps
+    distance_matrix[np.isinf(distance_matrix)] = 1e3
     
-    # Compute DBCV score (warnings already suppressed globally)
+    # Compute DBCV score
     try:
         dbcv_score = validity_index(distance_matrix, filtered_labels)
     except Exception as e:
@@ -304,35 +265,19 @@ def _compute_dbcv_score(
         return eps
     
     # Normalize DBCV score from [-1, 1] to [0, 1]
-    normalized_score = max(0.0, min(1.0, (dbcv_score + 1.0) / 2.0))
-    
-    return normalized_score
+    return max(0.0, min(1.0, (dbcv_score + 1.0) / 2.0))
 
 
 def compute_cluster_quality_score(
     model: BERTopic, 
     original_embeddings: np.ndarray, 
-    eps: float = ClusteringConfig.EPSILON
+    eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """
-    Compute combined clustering quality score from coherence and DBCV metrics.
-    
-    Args:
-        model: Fitted BERTopic model
-        original_embeddings: Original document embeddings  
-        eps: Minimum score for degenerated cases
-        
-    Returns:
-        Combined quality score weighted: 40% coherence + 60% DBCV
-    """
+    """Compute combined clustering quality score: 40% coherence + 60% DBCV."""
     try:
         coherence_score = _compute_topic_coherence_score(model, eps=eps)
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
-        
-        combined_score = 0.4 * coherence_score + 0.6 * dbcv_score
-        
-        return combined_score
-    
+        return 0.4 * coherence_score + 0.6 * dbcv_score
     except Exception:
         return eps
 
@@ -342,37 +287,23 @@ def compute_cluster_quality_score(
 # ============================================================================
 
 def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
-    """
-    Create TPE sampler optimized for clustering hyperparameter search.
-    
-    Args:
-        study_name: Name of the Optuna study
-        dataset_size: Number of documents in dataset
-        
-    Returns:
-        Configured TPESampler instance
-    """
+    """Create TPE sampler optimized for clustering hyperparameter search."""
     return TPESampler(
-        consider_prior=True,           # Use Bayesian mixture for better adaptation
-        prior_weight=0.85,            # Balance between exploration and exploitation
-        consider_magic_clip=True,      # Adaptive clipping for extreme values
-        consider_endpoints=False,      # Exclude boundary parameter values
-        warn_independent_sampling=False,  # Suppress dynamic search space warnings
-        seed=42                       # Reproducible random sampling
+        consider_prior=True,
+        prior_weight=0.85,
+        consider_magic_clip=True,
+        consider_endpoints=False,
+        warn_independent_sampling=False,
+        seed=42
     )
 
 
 def create_median_pruner() -> MedianPruner:
-    """
-    Create median pruner for early stopping of poor trials.
-    
-    Returns:
-        Configured MedianPruner instance
-    """
+    """Create median pruner for early stopping of poor trials."""
     return MedianPruner(
-        n_startup_trials=10,    # Wait for sufficient trials before pruning
-        n_warmup_steps=3,       # Warmup period without pruning
-        interval_steps=3        # Check for pruning every 3 steps
+        n_startup_trials=10,
+        n_warmup_steps=3,
+        interval_steps=3
     )
 
 
@@ -381,19 +312,10 @@ def create_median_pruner() -> MedianPruner:
 # ============================================================================
 
 def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """
-    Suggest HDBSCAN clustering parameters with dataset-aware constraints.
-    
-    Args:
-        trial: Optuna trial instance
-        dataset_size: Number of documents in dataset
-        
-    Returns:
-        Tuple of (min_cluster_size, min_samples, hdbscan_metric)
-    """
-    # Core clustering parameters optimized for practical cluster counts
-    min_cluster_size_lower = max(5, dataset_size // ClusteringConfig.MAX_CLUSTER_RATIO)
-    min_cluster_size_upper = min(100, dataset_size // ClusteringConfig.MIN_CLUSTER_RATIO)
+    """Suggest HDBSCAN clustering parameters with dataset-aware constraints."""
+    # Core clustering parameters
+    min_cluster_size_lower = max(5, dataset_size // OptimizationConfig.MAX_CLUSTER_RATIO)
+    min_cluster_size_upper = min(100, dataset_size // OptimizationConfig.MIN_CLUSTER_RATIO)
     
     min_cluster_size = trial.suggest_int(
         "min_cluster_size", 
@@ -401,48 +323,35 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
         min_cluster_size_upper
     )
     
-    # min_samples should be constrained relative to min_cluster_size
+    # min_samples constraint (relative to min_cluster_size)
     min_samples_max = max(3, int(min_cluster_size * 0.8))
     min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
     
-    # HDBSCAN distance metric options (limited to supported metrics)
-    hdbscan_metric = trial.suggest_categorical(
-        "hdbscan_metric", 
-        ["euclidean", "manhattan"]
-    )
+    # HDBSCAN distance metric (validated compatible metrics only)
+    hdbscan_metric = trial.suggest_categorical("hdbscan_metric", OptimizationConfig.HDBSCAN_METRICS)
     
     return min_cluster_size, min_samples, hdbscan_metric
 
 
 def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, float]:
-    """
-    Suggest text vectorization parameters with mutual constraints.
+    """Suggest text vectorization parameters with robust percentage-based constraints."""
+    # Topic representation
+    top_n_words = trial.suggest_int("top_n_words", *OptimizationConfig.TOP_N_WORDS_RANGE)
     
-    Args:
-        trial: Optuna trial instance
-        dataset_size: Number of documents in dataset
-        
-    Returns:
-        Tuple of (top_n_words, ngram_range, min_df, max_df)
-    """
-    # Topic representation parameter
-    top_n_words = trial.suggest_int("top_n_words", 10, 30)
+    # N-gram configuration
+    ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
-    ngram_range = trial.suggest_categorical("ngram_range", [[1, 2], [1, 3]])
-    
-    # Use percentage-based approach for better constraint handling
-    # Convert min_df from count to percentage first  
+    # Robust min_df/max_df constraint handling using percentages
     min_df_percent_min = 2 / dataset_size  # 2 documents as percentage
-    min_df_percent_max = min(0.01, 50 / dataset_size)  # At most 1% or 50 documents
+    min_df_percent_max = min(OptimizationConfig.MIN_DF_PERCENT_LIMIT, 50 / dataset_size)
     
     min_df_percent = trial.suggest_float("min_df_percent", min_df_percent_min, min_df_percent_max)
-    min_df = max(2, int(min_df_percent * dataset_size))  # Round up to integer count
+    min_df = max(2, int(min_df_percent * dataset_size))
     
-    # Now calculate max_df with proper constraints
-    max_df_min = min_df_percent + 0.005  # At least 0.5% buffer above min_df_percent
-    max_df_min_safe = max(max_df_min, 0.015)  # At least 1.5% minimum
-    
-    max_df_max = min(max_df_min_safe + 0.2, 0.9)  # At least 20% range, but not more than 90%
+    # Calculate max_df with proper constraint satisfaction
+    max_df_min = min_df_percent + OptimizationConfig.MAX_DF_MIN_BUFFER
+    max_df_min_safe = max(max_df_min, OptimizationConfig.MAX_DF_MIN_SAFE)
+    max_df_max = min(max_df_min_safe + 0.2, 0.9)
     
     max_df = trial.suggest_float("max_df", max_df_min_safe, max_df_max)
     
@@ -450,55 +359,35 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
 
 
 def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """
-    Suggest UMAP dimensionality reduction parameters.
-    
-    Args:
-        trial: Optuna trial instance
-        dataset_size: Number of documents in dataset
-        
-    Returns:
-        Tuple of (n_neighbors, n_components, umap_metric)
-    """
+    """Suggest UMAP dimensionality reduction parameters."""
     # Constrain n_neighbors based on dataset size
     practical_max = min(
-        int(dataset_size * ClusteringConfig.UMAP_NEIGHBORS_RATIO), 
-        ClusteringConfig.UMAP_MAX_NEIGHBORS
+        int(dataset_size * OptimizationConfig.UMAP_NEIGHBORS_RATIO), 
+        OptimizationConfig.UMAP_MAX_NEIGHBORS
     )
     
     n_neighbors = trial.suggest_int("n_neighbors", 5, practical_max)
     
     # Constrain dimensionality based on dataset size
     min_components = max(
-        ClusteringConfig.UMAP_MIN_COMPONENTS, 
+        OptimizationConfig.UMAP_MIN_COMPONENTS, 
         int(np.log10(dataset_size))
     )
     max_components = min(
-        ClusteringConfig.UMAP_MAX_COMPONENTS, 
+        OptimizationConfig.UMAP_MAX_COMPONENTS, 
         dataset_size // 100
     )
     
     n_components = trial.suggest_int("n_components", min_components, max_components)
     
-    # UMAP distance metric optimized for SPECTER2 embeddings
-    # Cosine is preferred for semantic similarities, but allow optimization
-    umap_metric_options = ["cosine", "euclidean", "manhattan"]
-    umap_metric = trial.suggest_categorical("umap_metric", umap_metric_options)
+    # UMAP distance metric (optimized for SPECTER2 embeddings)
+    umap_metric = trial.suggest_categorical("umap_metric", OptimizationConfig.UMAP_METRICS)
     
     return n_neighbors, n_components, umap_metric
 
 
 def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
-    """
-    Suggest complete hyperparameter set with cross-parameter constraints.
-    
-    Args:
-        trial: Optuna trial instance
-        dataset_size: Number of documents in dataset
-        
-    Returns:
-        Hyperparameters dataclass instance
-    """
+    """Suggest complete hyperparameter set with cross-parameter constraints."""
     min_cluster_size, min_samples, hdbscan_metric = _suggest_clustering_parameters(trial, dataset_size)
     top_n_words, ngram_range, min_df, max_df = _suggest_vectorization_parameters(trial, dataset_size)
     n_neighbors, n_components, umap_metric = _suggest_umap_parameters(trial, dataset_size)
@@ -518,20 +407,11 @@ def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> H
 
 
 # ============================================================================
-# Model Creation and Training
+# Model Creation
 # ============================================================================
 
 def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbeddingModel) -> BERTopic:
-    """
-    Create BERTopic model with specified hyperparameters.
-    
-    Args:
-        params: Hyperparameters for model configuration
-        embedding_model: Custom embedding model instance
-        
-    Returns:
-        Configured BERTopic model instance
-    """
+    """Create BERTopic model with optimized parameter configuration."""
     vectorizer_model = CountVectorizer(
         stop_words="english",
         ngram_range=tuple(params.ngram_range),
@@ -548,7 +428,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        low_memory=False  # Better performance for parameter search
+        low_memory=False
     )
     
     hdbscan_model = HDBSCAN(
@@ -575,21 +455,9 @@ def objective_function(
     texts: List[str], 
     text_embeddings: np.ndarray, 
     embedding_model: CustomEmbeddingModel,
-    eps: float = ClusteringConfig.EPSILON
+    eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """
-    Optuna objective function for hyperparameter optimization.
-    
-    Args:
-        trial: Optuna trial instance
-        texts: List of input text documents
-        text_embeddings: Pre-computed text embeddings
-        embedding_model: Custom embedding model
-        eps: Minimum score for failed evaluations
-        
-    Returns:
-        Combined clustering quality score
-    """
+    """Optuna objective function for hyperparameter optimization."""
     dataset_size = len(texts)
     
     try:
@@ -612,16 +480,15 @@ def objective_function(
         # Evaluate clustering quality
         combined_score = compute_cluster_quality_score(model, text_embeddings, eps=eps)
         
-        # Store evaluation metrics for analysis
+        # Store evaluation metrics
         trial.set_user_attr("n_clusters", n_clusters)
         trial.set_user_attr("combined_score", float(combined_score))
         
         return combined_score
     
     except optuna.exceptions.TrialPruned:
-        raise  # Re-raise pruned trials
+        raise
     except Exception as e:
-        # Graceful handling of other failures
         print(f"Warning: Trial failed: {e}")
         trial.set_user_attr("error", str(e))
         return eps
@@ -636,18 +503,8 @@ def optimize_category_clustering(
     timeout: Optional[int] = None, 
     storage: Optional[str] = None
 ) -> optuna.Study:
-    """
-    Run hyperparameter optimization for a specific category.
-    
-    Args:
-        category: The arXiv category to optimize (e.g., 'physics.geo-ph')
-        timeout: Maximum optimization time in seconds (default: 10 minutes)
-        storage: Database URL for study persistence (optional)
-        
-    Returns:
-        Completed Optuna study with optimization results
-    """
-    timeout = timeout or ClusteringConfig.DEFAULT_TIMEOUT
+    """Run hyperparameter optimization for a specific arXiv category."""
+    timeout = timeout or OptimizationConfig.DEFAULT_TIMEOUT
     
     # Load and prepare data
     print(f"Loading data for category: {category}")
@@ -658,7 +515,7 @@ def optimize_category_clustering(
     texts = [embedding_model.get_input_text(paper) for paper in papers]
     dataset_size = len(texts)
     
-    # Clean up paper objects to save memory
+    # Memory cleanup
     del papers
     gc.collect()
     
@@ -669,7 +526,7 @@ def optimize_category_clustering(
     
     study = optuna.create_study(
         storage=storage,
-        load_if_exists=True,
+        load_if_exists=False,  # Start fresh to avoid cached incompatible metrics
         direction="maximize",
         study_name=study_name,
         sampler=create_tpe_sampler(study_name, dataset_size),
@@ -678,8 +535,8 @@ def optimize_category_clustering(
     
     # Run optimization
     n_trials = min(
-        ClusteringConfig.MAX_TRIALS, 
-        max(ClusteringConfig.MIN_TRIALS, dataset_size // ClusteringConfig.TRIALS_SCALE_FACTOR)
+        OptimizationConfig.MAX_TRIALS, 
+        max(OptimizationConfig.MIN_TRIALS, dataset_size // OptimizationConfig.TRIALS_SCALE_FACTOR)
     )
     
     print(f"Starting optimization with {n_trials} trials...")
@@ -694,19 +551,8 @@ def optimize_category_clustering(
             catch=(Exception,)  # Catch all exceptions gracefully
         )
         
-        # Display optimization results
-        if len(study.trials) > 0:
-            best_trial = study.best_trial
-            print(f"\n{'='*50}")
-            print(f"OPTIMIZATION RESULTS")
-            print(f"{'='*50}")
-            print(f"Best score: {best_trial.value:.4f}")
-            print(f"Best parameters: {json.dumps(best_trial.params, indent=2)}")
-            print(f"Total trials: {len(study.trials)}")
-            print(f"Pruned trials: {len([t for t in study.trials if t.state == optuna.trial.TrialState.PRUNED])}")
-            print(f"{'='*50}")
-        else:
-            print("No completed trials found.")
+        # Display results
+        _display_optimization_results(study)
             
     except KeyboardInterrupt:
         print(f"\nOptimization interrupted. Completed {len(study.trials)} trials.")
@@ -716,14 +562,29 @@ def optimize_category_clustering(
     return study
 
 
-def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
-    """
-    Save optimization results to disk.
+def _display_optimization_results(study: optuna.Study) -> None:
+    """Display comprehensive optimization results."""
+    if len(study.trials) == 0:
+        print("No completed trials found.")
+        return
     
-    Args:
-        study: Completed Optuna study
-        output_dir: Directory to save results
-    """
+    best_trial = study.best_trial
+    pruned_count = len([t for t in study.trials if t.state == optuna.trial.TrialState.PRUNED])
+    
+    print(f"\n{'='*50}")
+    print(f"OPTIMIZATION RESULTS")
+    print(f"{'='*50}")
+    print(f"Best score: {best_trial.value:.4f}")
+    print(f"Best parameters:")
+    print(json.dumps(best_trial.params, indent=2))
+    print(f"Total trials: {len(study.trials)}")
+    print(f"Pruned trials: {pruned_count}")
+    print(f"Success rate: {(len(study.trials) - pruned_count) / len(study.trials):.1%}")
+    print(f"{'='*50}")
+
+
+def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
+    """Save optimization results to disk."""
     os.makedirs(output_dir, exist_ok=True)
     
     # Save best parameters
@@ -739,7 +600,7 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 # ============================================================================
 
 def main():
-    """Main execution function."""
+    """Main execution function for hyperparameter optimization."""
     category = "physics.geo-ph"
     
     # Create output directory
@@ -750,7 +611,6 @@ def main():
     study_storage_path = f"sqlite:///{model_path}/search_params.db"
     study = optimize_category_clustering(
         category=category,
-        # timeout=20 * 60,
         storage=study_storage_path
     )
     
