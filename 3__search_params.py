@@ -22,6 +22,9 @@ from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, get_category_codes
 from sklearn.metrics import calinski_harabasz_score, silhouette_score
 
+# Suppress Optuna experimental warnings for cleaner output
+warnings.filterwarnings("ignore", category=optuna.exceptions.ExperimentalWarning)
+
 # Constants
 EPSILON = 1e-6
 EMBEDDING_MODEL = get_custom_embedding_model()
@@ -106,8 +109,8 @@ def predict_once(texts: List[str], text_embeddings: np.ndarray, params: Hyperpar
     vectorizer_model = CountVectorizer(
         stop_words="english",
         ngram_range=tuple(params.ngram_range),
-        min_df=params.min_df,  # 0.0001%以上に出現（最低2件, 最高30件）
-        max_df=params.max_df, # modelsなどを弾きたい
+        min_df=params.min_df,  
+        max_df=params.max_df, 
         max_features=None,
         vocabulary=None,
 
@@ -476,7 +479,9 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     
     # min_df vs max_df relationship (crucial!)
     min_df = trial.suggest_int("min_df", 2, 30)
-    max_df_min = max(min_df / dataset_size + 0.01, min_df + 1) / dataset_size
+    # max_df is a float in (0, 1], must be > min_df/doc_count
+    min_df_ratio = min_df / dataset_size
+    max_df_min = min_df_ratio + 0.01  # ensure max_df > min_df/doc_count
     max_df = trial.suggest_float("max_df", max_df_min, 0.95)
     
     # Embedding model parameters
