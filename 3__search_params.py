@@ -1,4 +1,4 @@
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Tuple
 from dataclasses import dataclass
 import gc
 import os
@@ -64,19 +64,44 @@ class Hyperparameters:
     min_cluster_size: int
     min_samples: int
 
-def _compute_words_coherence(words, embedding_model: CustomEmbeddingModel):
+def _compute_words_coherence(words, model: BERTopic):
     """
-    words_list: list of words (1トピックの単語リスト)
-    returns: 平均cosine similarity
-    """
-    embeddings = embedding_model.embed(words)
-
-    sims = []
-    for w1, w2 in combinations(range(len(words)), 2):
-        sim = cosine_similarity([embeddings[w1]], [embeddings[w2]])[0][0]
-        sims.append(sim)
+    Compute topic coherence using word embedding similarity.
+    Note: This is a simplified coherence measure. True topic coherence 
+    ideally requires external corpus or document-level analysis.
     
-    return np.mean(sims)
+    Args:
+        words: list of words for a specific topic
+        model: fitted BERTopic model for accessing embeddings
+    
+    Returns:
+        Average pairwise cosine similarity between word embeddings
+    """
+    if len(words) < 2:
+        return 0.0
+    
+    try:
+        # Use the embedding model to get word embeddings
+        embeddings = model.embedding_model.embed(words)
+        
+        # Optimize for large vocabularies: compute full pairwise similarity matrix at once
+        if len(words) <= 50:  # For small vocabularies, use pairwise computation
+            sims = []
+            for w1, w2 in combinations(range(len(words)), 2):
+                sim = cosine_similarity([embeddings[w1]], [embeddings[w2]])[0][0]
+                sims.append(sim)
+        else:  # For large vocabularies, compute full matrix and extract upper triangle
+            similarity_matrix = cosine_similarity(embeddings)
+            # Extract upper triangle (excluding diagonal) values
+            indices = np.triu_indices_from(similarity_matrix, k=1)
+            sims = similarity_matrix[indices]
+        
+        return np.mean(sims)
+        
+    except Exception as e:
+        # Return 0.0 if embedding fails (rare edge case)
+        print(f"Warning: Word coherence computation failed: {e}")
+        return 0.0
 
 def _compute_coherence_score(model: BERTopic, eps=EPSILON):
     """
@@ -104,7 +129,7 @@ def _compute_coherence_score(model: BERTopic, eps=EPSILON):
         if len(words) < 2:  # Skip topics with less than 2 words
             continue
         
-        topic_coherence = _compute_words_coherence(words, embedding_model)
+        topic_coherence = _compute_words_coherence(words, model)
         topic_coherences.append(topic_coherence)
         
         # Use document count as weight
@@ -121,19 +146,40 @@ def _compute_coherence_score(model: BERTopic, eps=EPSILON):
     weighted_avg_coherence = np.average(topic_coherences, weights=topic_weights)
     
     # Ensure the score is in [0, 1] range
-    # cosine similarity can be negative, so we clip and normalize
-    normalized_coherence = max(0.0, min(1.0, (weighted_avg_coherence + 1.0) / 2.0))
+    # Cosine similarity ranges [-1, 1], normalize to [0, 1]
+    normalized_coherence = (weighted_avg_coherence + 1.0) / 2.0
     
     return normalized_coherence
 
-def _compute_dbcv_score(model: BERTopic, eps=EPSILON):
+def _compute_dbcv_score(model: BERTopic, original_embeddings: np.ndarray, eps=EPSILON):
     try:
-        embeddings = model.umap_model.embedding_
+        # Use original document embeddings for DBCV calculation
         labels = model.hdbscan_model.labels_
-        distance_matrix = pairwise_distances(embeddings, metric='euclidean')
+        
+        # Remove outliers (-1 labels) for cleaner DBCV calculation
+        valid_mask = labels != -1
+        if valid_mask.sum() < 2:
+            return eps
+        
+        filtered_embeddings = original_embeddings[valid_mask]
+        filtered_labels = labels[valid_mask]
+        
+        # Ensure embeddings are in the correct dtype for HDBSCAN validity
+        if filtered_embeddings.dtype != np.float64:
+            filtered_embeddings = filtered_embeddings.astype(np.float64)
+        
+        # Calculate distance matrix with numerical stability
+        distance_matrix = pairwise_distances(filtered_embeddings, metric='euclidean')
+        
+        # Ensure distance matrix dtype is correct and clean up extreme values
+        distance_matrix = distance_matrix.astype(np.float64)
+        
+        # Clean up problematic values for numerical stability
+        distance_matrix[distance_matrix <= 0] = EPSILON  # Avoid division by zero
+        distance_matrix[distance_matrix > 1e6] = 1e6     # Avoid overflow
         
         # Compute raw DBCV score
-        dbcv_score = validity_index(distance_matrix, labels)
+        dbcv_score = validity_index(distance_matrix, filtered_labels)
         
         # DBCV score can be negative, so we normalize and clip to [0, 1]
         # Adding 1 to shift negative values to positive range, then normalize
@@ -146,10 +192,10 @@ def _compute_dbcv_score(model: BERTopic, eps=EPSILON):
         print(f"Warning: DBCV computation failed: {e}")
         return eps
         
-def compute_cluster_score(model: BERTopic, eps=EPSILON):
+def compute_cluster_score(model: BERTopic, original_embeddings: np.ndarray, eps=EPSILON):
     try:
         coherence_score = _compute_coherence_score(model, eps=eps)
-        dbcv_score = _compute_dbcv_score(model, eps=eps)
+        dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         
         combined_score = 0.4 * coherence_score + 0.6 * dbcv_score
         
@@ -178,7 +224,7 @@ def get_advanced_pruner() -> MedianPruner:
         interval_steps=3            # Consider pruning every 3 steps
     )
 
-def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[int, int]:
+def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int]:
     # Core clustering parameters (optimized for practical cluster counts)
     min_cluster_size_lower = max(5, dataset_size // MAX_CLUSTER_RATIO)
     min_cluster_size_upper = min(100, dataset_size // MIN_CLUSTER_RATIO)
@@ -299,7 +345,7 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
             raise optuna.exceptions.TrialPruned()
         
         # Step 4: Evaluate clustering quality with combined coherence and DBCV scores
-        combined_score = compute_cluster_score(model, eps=eps)
+        combined_score = compute_cluster_score(model, text_embeddings, eps=eps)
         
         # Store key metrics for analysis
         trial.set_user_attr("n_clusters", n_clusters)
