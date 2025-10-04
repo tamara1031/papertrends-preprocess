@@ -19,7 +19,7 @@ from common.utils import get_custom_embedding_model, get_category_codes
 VERSION = "0.0.2"
 
 def already_processed(category: str):
-    return os.path.exists(f"./analysis/{category}.json")
+    return os.path.exists(f"./analysis/{category}/{category}.json")
 
 def load_model(category: str):
     embedding_model = get_custom_embedding_model()
@@ -267,11 +267,11 @@ def save_visualization_data(category, visualization_data):
     """可視化データをJSONファイルとして保存"""
     
     # 出力ディレクトリを作成
-    output_dir = f"./analysis"
+    output_dir = f"./analysis/{category}"
     os.makedirs(output_dir, exist_ok=True)
     
     # JSONファイルとして保存
-    output_path = f"{output_dir}/{category}/{category}.json"
+    output_path = f"{output_dir}/{category}.json"
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(visualization_data
     , f, ensure_ascii=False, indent=2)

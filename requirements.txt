@@ -6,10 +6,5 @@ cryptography
 
 bertopic[spacy]
 adapters
-networkx
-python-louvain
-git+https://github.com/boudinfl/pke.git
 
-matplotlib
-wordcloud
-highcharts-core
+optuna
