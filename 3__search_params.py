@@ -1,4 +1,4 @@
-from typing import List, Tuple, Any
+from typing import List, Tuple, Any, Optional, Dict, Union
 from dataclasses import dataclass
 
 import gc, os
@@ -19,25 +19,50 @@ from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, get_category_codes
 from sklearn.metrics import calinski_harabasz_score, silhouette_score
 
+# Constants
+EPSILON = 1e-6
 EMBEDDING_MODEL = get_custom_embedding_model()
 
+# Dataset size thresholds for adaptive parameter ranges
+SMALL_DATASET_THRESHOLD = 5000
+MEDIUM_DATASET_THRESHOLD = 50000
+
+# Score weights for composite evaluation
+SCORE_WEIGHTS = {
+    'coherence': 0.35,
+    'diversity': 0.25,
+    'cluster': 0.30,
+    'validity': 0.10
+}
+
 def get_papers(category: str) -> List[Paper]:
+    """Load papers from preprocessed data for the given category."""
     with open(f"./preprocessed/{category}/papers.pkl", "rb") as f:
-        embeddings = pickle.load(f)
-    return embeddings
+        papers = pickle.load(f)
+    return papers
+
 
 def get_text_embeddings(category: str) -> np.ndarray:
+    """Load pre-computed text embeddings for the given category."""
     with open(f"./preprocessed/{category}/text_embeddings.npy", "rb") as f:
         embeddings = np.load(f)
     return embeddings
 
 @dataclass
-class Params:
+class Hyperparameters:
+    """
+    Configuration parameters for BERTopic model optimization.
+    
+    This dataclass encapsulates all tunable hyperparameters for:
+    - Text vectorization (ngram_range, min_df, max_df)
+    - UMAP dimensionality reduction (n_neighbors, n_components, min_dist, spread)
+    - HDBSCAN clustering (min_cluster_size, min_samples)
+    """
     ngram_range: List[int]
-    min_df: float | int
-    max_df: float | int
+    min_df: Union[float, int]
+    max_df: Union[float, int]
     lowercase: bool
-    strip_accents: Any | None
+    strip_accents: Optional[Any]
     bm25_weighting: bool
     n_neighbors: int
     n_components: int
@@ -47,7 +72,18 @@ class Params:
     min_samples: int
 
 
-def predict_once(texts, text_embeddings, params: Params):
+def predict_once(texts: List[str], text_embeddings: np.ndarray, params: Hyperparameters) -> tuple[List[int], Optional[np.ndarray]]:
+    """
+    Train a single BERTopic model with given parameters and return topic assignments.
+    
+    Args:
+        texts: List of input texts
+        text_embeddings: Pre-computed text embeddings
+        params: Hyperparameters configuration
+        
+    Returns:
+        Tuple of (topic_assignments, probabilities)
+    """
     vectorizer_model = CountVectorizer(
         stop_words="english",
         ngram_range=tuple(params.ngram_range),
@@ -94,7 +130,18 @@ def predict_once(texts, text_embeddings, params: Params):
     return model.fit_transform(texts, embeddings=text_embeddings)
 
 # coherenceを算出（UMass coherenceに基づく）
-def compute_coherence(model, top_n=10, eps=1e-6):
+def compute_coherence(model: BERTopic, top_n: int = 10, eps: float = EPSILON) -> float:
+    """
+    Compute topic coherence based on UMass coherence.
+    
+    Args:
+        model: Trained BERTopic model
+        top_n: Number of top words per topic to consider
+        eps: Minimum epsilon value
+        
+    Returns:
+        Coherence score between 0 and 1
+    """
     try:
         topics = {k: v for k, v in model.get_topics().items() if k != -1}
         if len(topics) < 2:
@@ -212,7 +259,7 @@ def compute_coherence(model, top_n=10, eps=1e-6):
         print(f"Coherence traceback: {traceback.format_exc()}")
         return eps
 
-def compute_diversity(model, top_n=10, eps=1e-6):
+def compute_diversity(model, top_n=10, eps=EPSILON):
     try:
         topics = {k: v for k, v in model.get_topics().items() if k != -1}
         if len(topics) < 2:
@@ -293,7 +340,7 @@ def compute_diversity(model, top_n=10, eps=1e-6):
         print(f"Diversity traceback: {traceback.format_exc()}")
         return eps
 
-def compute_cluster_score(model, eps=1e-6):
+def compute_cluster_score(model, eps=EPSILON):
     """
     BERTopic の UMAP 埋め込みを使ったクラスタリング評価
     Silhouette + Calinski-Harabasz を組み合わせ、適正に正規化
@@ -373,9 +420,25 @@ def compute_cluster_score(model, eps=1e-6):
         print(f"Cluster score traceback: {traceback.format_exc()}")
         return eps
 
-def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
+def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray, eps: float = EPSILON) -> float:
+    """
+    Optuna objective function for BERTopic hyperparameter optimization.
+    
+    This function trains a BERTopic model with suggested hyperparameters and
+    returns an evaluation score based on coherence, diversity, clustering quality,
+    and cluster count validity.
+    
+    Args:
+        trial: Optuna trial object
+        texts: List of input texts
+        text_embeddings: Pre-computed text embeddings
+        eps: Minimum epsilon value for score calculations
+        
+    Returns:
+        Composite optimization score (0-1)
+    """
 
-    params = Params(
+    params = Hyperparameters(
         ngram_range=trial.suggest_categorical("ngram_range", [[1,1], [1,2], [1,3]]),
         min_df=trial.suggest_int("min_df", 2, 20),
         max_df=trial.suggest_float("max_df", 0.2, 0.95),  # 0.3-0.80の範囲に修正
@@ -427,24 +490,28 @@ def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
         coherence = compute_coherence(model, eps=eps)
         diversity = compute_diversity(model, eps=eps)
         cluster_score = compute_cluster_score(model, eps=eps)
+        
+        # Calculate cluster count validity (placeholder)
+        topic_info = model.get_topic_info()
+        n_clusters = len(topic_info[topic_info['Topic'] != -1])
+        cluster_validity = 0.5  # Placeholder value until evaluate_cluster_count is implemented
 
-        # 詳細なログ出力（デバッグ用）
+        # Detailed logging output for debugging
         print(f"  Coherence: {coherence:.4f}")
         print(f"  Diversity: {diversity:.4f}")
         print(f"  Cluster Score: {cluster_score:.4f}")
+        print(f"  N Clusters: {n_clusters}")
+        print(f"  Cluster Validity: {cluster_validity:.4f}")
 
-        # 適応的な重み付け：各スコアの信頼性に基づいて重みを調整
-        base_weights = {
-            'coherence': 0.5,    # 最も重要な指標
-            'diversity': 0.3,    # 重要だがcoherenceほどではない
-            'cluster': 0.2       # 補助的な指標
-        }
+        # Use predefined score weights for consistency
+        base_weights = SCORE_WEIGHTS.copy()
 
-        # 各スコアが有効かチェックして重みを調整
+        # Check which scores are valid for weight adjustment
         valid_scores = {
             'coherence': coherence > eps,
             'diversity': diversity > eps,
-            'cluster': cluster_score > eps
+            'cluster': cluster_score > eps,
+            'validity': cluster_validity > eps
         }
 
         valid_count = sum(valid_scores.values())
@@ -476,7 +543,8 @@ def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
         score = (
             adjusted_weights['coherence'] * coherence +
             adjusted_weights['diversity'] * diversity +
-            adjusted_weights['cluster'] * cluster_score
+            adjusted_weights['cluster'] * cluster_score +
+            adjusted_weights['validity'] * cluster_validity
         )
 
         print(f"  Final combined score: {score:.4f}")
@@ -488,7 +556,18 @@ def objective(trial: optuna.Trial, texts, text_embeddings, eps=1e-6):
         print(f"Trial traceback: {traceback.format_exc()}")
         return eps
 
-def run_one_category(category: str, timeout: int = 10*60, storage: str | None = None):
+def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str] = None) -> optuna.Study:
+    """
+    Run hyperparameter optimization for a single category.
+    
+    Args:
+        category: Paper category to optimize
+        timeout: Optimization timeout in seconds
+        storage: Optuna storage backend
+        
+    Returns:
+        Completed Optuna study
+    """
 
     papers = get_papers(category)
     text_embeddings = get_text_embeddings(category)

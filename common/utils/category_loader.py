@@ -5,7 +5,7 @@ from pathlib import Path
 
 def load_categories_from_yaml(yaml_path: str = "config/categories.yaml") -> Dict[str, str]:
     """
-    Load categories from YAML file and return as dictionary.
+    Load categories from YAML file and return as flattened dictionary.
     
     Args:
         yaml_path: Path to the categories YAML file
@@ -18,7 +18,14 @@ def load_categories_from_yaml(yaml_path: str = "config/categories.yaml") -> Dict
         raise FileNotFoundError(f"Categories file not found: {yaml_path}")
     
     with open(yaml_file, 'r', encoding='utf-8') as file:
-        categories = yaml.safe_load(file)
+        nested_categories = yaml.safe_load(file)
+    
+    # Flatten the nested structure
+    categories = {}
+    if isinstance(nested_categories, dict):
+        for main_category, subcategories in nested_categories.items():
+            if isinstance(subcategories, dict):
+                categories.update(subcategories)
     
     return categories
 
@@ -64,3 +71,50 @@ def get_categories_by_prefix(prefix: str, yaml_path: str = "config/categories.ya
     """
     categories = load_categories_from_yaml(yaml_path)
     return {k: v for k, v in categories.items() if k.startswith(prefix)}
+
+
+def get_categories_by_main_category(main_category: str, yaml_path: str = "config/categories.yaml") -> Dict[str, str]:
+    """
+    Get all subcategories under a main category (e.g., 'cs', 'physics', 'math').
+    
+    Args:
+        main_category: Main category name (e.g., 'cs', 'physics', 'math')
+        yaml_path: Path to the categories YAML file
+        
+    Returns:
+        Dictionary of subcategories under the main category
+    """
+    yaml_file = Path(yaml_path)
+    if not yaml_file.exists():
+        raise FileNotFoundError(f"Categories file not found: {yaml_path}")
+    
+    with open(yaml_file, 'r', encoding='utf-8') as file:
+        nested_categories = yaml.safe_load(file)
+    
+    if not isinstance(nested_categories, dict):
+        return {}
+    
+    return nested_categories.get(main_category, {})
+
+
+def get_main_categories(yaml_path: str = "config/categories.yaml") -> List[str]:
+    """
+    Get list of main categories from YAML file.
+    
+    Args:
+        yaml_path: Path to the categories YAML file
+        
+    Returns:
+        List of main category names
+    """
+    yaml_file = Path(yaml_path)
+    if not yaml_file.exists():
+        raise FileNotFoundError(f"Categories file not found: {yaml_path}")
+    
+    with open(yaml_file, 'r', encoding='utf-8') as file:
+        nested_categories = yaml.safe_load(file)
+    
+    if not isinstance(nested_categories, dict):
+        return []
+    
+    return list(nested_categories.keys())
