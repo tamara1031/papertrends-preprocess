@@ -4,6 +4,7 @@ from dataclasses import dataclass
 import gc, os
 import pickle
 import json
+import warnings
 
 import numpy as np
 
@@ -415,7 +416,7 @@ def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
         consider_endpoints=False, # Exclude boundary values
         multivariate=True,        # Consider parameter relationships
         group=True,              # Group selection for better convergence
-        warn_independent_sampling=True,  # Be cautious with categorical
+        warn_independent_sampling=False,  # Suppress warning for dynamic search space
         seed=42
     )
 
@@ -672,23 +673,16 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
     # Step 2: Create or load existing study with advanced configuration
     study_name = f"clustering_optimization_{category}_{dataset_size}"
     
-    try:
-        # Try to load existing study for warm-start
-        study = optuna.load_study(
-            study_name=study_name,
-            storage=storage
-        )
-        print(f"Loaded existing study: {len(study.trials)} trials")
-    except optuna.exceptions.OptunaError:
-        # Create new study with best practices
-        study = optuna.create_study(
-            storage=storage,
-            direction="maximize",
-            study_name=study_name,
-            sampler=get_adaptive_sampler(study_name, dataset_size),
-            pruner=get_advanced_pruner(dataset_size)
-        )
-        print(f"Created new study: {study_name}")
+    # Create new study with best practices
+    study = optuna.create_study(
+        storage=storage,
+        load_if_exists=True,
+
+        direction="maximize",
+        study_name=study_name,
+        sampler=get_adaptive_sampler(study_name, dataset_size),
+        pruner=get_advanced_pruner(dataset_size)
+    )
 
     # Step 3: Run optimization with best practices
     try:
@@ -729,7 +723,7 @@ if __name__ == "__main__":
     os.makedirs(model_path, exist_ok=True)
 
     study_storage_path = f"sqlite:///{model_path}/search_params.db"
-    study = run_one_category(category, timeout=5*60, storage=study_storage_path)
+    study = run_one_category(category, timeout=20*60, storage=study_storage_path)
 
     params_storage_path = f"{model_path}/best_params.json"
     with open(params_storage_path, "w") as f:
