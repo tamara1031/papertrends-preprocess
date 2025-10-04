@@ -312,10 +312,13 @@ def create_median_pruner() -> MedianPruner:
 # ============================================================================
 
 def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest HDBSCAN clustering parameters with dataset-aware constraints."""
-    # Core clustering parameters
-    min_cluster_size_lower = max(5, dataset_size // OptimizationConfig.MAX_CLUSTER_RATIO)
-    min_cluster_size_upper = min(100, dataset_size // OptimizationConfig.MIN_CLUSTER_RATIO)
+    """Suggest HDBSCAN clustering parameters with robust dataset constraints."""
+    # Robust clustering parameters that scale well
+    dataset_divisor_min = max(OptimizationConfig.MIN_CLUSTER_RATIO, dataset_size // 100)  # Ensure reasonable minimum
+    dataset_divisor_max = min(OptimizationConfig.MAX_CLUSTER_RATIO, dataset_size // 10)   # Ensure reasonable maximum
+    
+    min_cluster_size_lower = max(5, dataset_size // dataset_divisor_max)
+    min_cluster_size_upper = min(200, dataset_size // dataset_divisor_min)  # Increased upper bound for large datasets
     
     min_cluster_size = trial.suggest_int(
         "min_cluster_size", 
@@ -341,43 +344,43 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     # N-gram configuration
     ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
-    # Direct integer count approach for guaranteed constraint satisfaction
-    min_df_max = min(20, max(2, dataset_size // 200))  # Conservative upper bound
+    # Both integer count approach to guarantee CountVectorizer constraint satisfaction
+    min_df_max = min(5, max(2, dataset_size // 500))
     min_df = trial.suggest_int("min_df", 2, min_df_max)
     
-    # Calculate max_df threshold: must be > min_df/document_count AND > min_df_ratio
-    min_df_ratio = min_df / dataset_size
+    # max_df as integer count - MUST be > min_df
+    max_df_min_count = min_df + 1  # At least 1 more document than min_df
     
-    # Use larger safety margins
-    max_df_min_safe = max(min_df_ratio + 0.02, 0.05)  # 2% buffer or 5% minimum
-    max_df_max_safe = min(max_df_min_safe + 0.25, 0.8)  # 25% range, max 80%
+    # Flexible upper bound: ensure reasonable search range
+    reasonable_range = min_df + min(5000, dataset_size // 4)  # Good range for exploration
+    dataset_95_percent = int(dataset_size * 0.95)
+    max_df_max_count = min(reasonable_range, dataset_95_percent)
     
-    max_df = trial.suggest_float("max_df", max_df_min_safe, max_df_max_safe)
+    max_df = trial.suggest_int("max_df", max_df_min_count, max_df_max_count)
     
     return top_n_words, ngram_range, min_df, max_df
 
 
 def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest UMAP dimensionality reduction parameters."""
-    # Constrain n_neighbors based on dataset size
-    practical_max = min(
-        int(dataset_size * OptimizationConfig.UMAP_NEIGHBORS_RATIO), 
-        OptimizationConfig.UMAP_MAX_NEIGHBORS
+    """Suggest UMAP dimensionality reduction parameters with robust scaling."""
+    # Robust n_neighbors constraint
+    neighbors_ratio_max = min(int(dataset_size * OptimizationConfig.UMAP_NEIGHBORS_RATIO), OptimizationConfig.UMAP_MAX_NEIGHBORS)
+    neighbors_min_safe = max(5, dataset_size // 1000)  # Ensure minimum for large datasets
+    
+    n_neighbors = trial.suggest_int("n_neighbors", neighbors_min_safe, neighbors_ratio_max)
+    
+    # Robust dimensionality constraint
+    min_components_safe = max(
+        OptimizationConfig.UMAP_MIN_COMPONENTS,
+        min(int(np.log10(dataset_size)), OptimizationConfig.UMAP_MAX_COMPONENTS // 2)
     )
     
-    n_neighbors = trial.suggest_int("n_neighbors", 5, practical_max)
-    
-    # Constrain dimensionality based on dataset size
-    min_components = max(
-        OptimizationConfig.UMAP_MIN_COMPONENTS, 
-        int(np.log10(dataset_size))
-    )
-    max_components = min(
-        OptimizationConfig.UMAP_MAX_COMPONENTS, 
-        dataset_size // 100
+    max_components_safe = min(
+        OptimizationConfig.UMAP_MAX_COMPONENTS,
+        max(min_components_safe + 5, dataset_size // 500)  # Reasonable upper bound
     )
     
-    n_components = trial.suggest_int("n_components", min_components, max_components)
+    n_components = trial.suggest_int("n_components", min_components_safe, max_components_safe)
     
     # UMAP distance metric (optimized for SPECTER2 embeddings)
     umap_metric = trial.suggest_categorical("umap_metric", OptimizationConfig.UMAP_METRICS)
