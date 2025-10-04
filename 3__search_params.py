@@ -120,6 +120,8 @@ def _compute_silhouette_score_normalized(embeddings, labels):
         return 0.5  # Default value on error
 
 
+
+
 def _compute_ch_score_normalized(embeddings, labels):
     """
     Compute normalized Calinski-Harabasz score.
@@ -150,10 +152,9 @@ def _compute_ch_score_normalized(embeddings, labels):
     except Exception:
         return 0.5  # Default value on error
 
-
 def compute_cluster_score(model, eps=EPSILON):
     """
-    Compute clustering quality using Silhouette and Calinski-Harabasz scores.
+    Compute clustering quality using Silhouette, Calinski-Harabasz, and Davies-Bouldin scores.
     
     Args:
         model: Trained BERTopic model
@@ -186,8 +187,9 @@ def compute_cluster_score(model, eps=EPSILON):
         # Compute normalized scores using helper functions
         s_score_scaled = _compute_silhouette_score_normalized(umap_embeddings, labels[mask])
         ch_score_scaled = _compute_ch_score_normalized(umap_embeddings, labels[mask])
-        
-        combined_score = 0.5 * s_score_scaled + 0.5 * ch_score_scaled
+
+        # Equal weighting of all three clustering metrics
+        combined_score = (s_score_scaled + ch_score_scaled) / 2.0
         return np.clip(combined_score, eps, 1.0)
 
     except Exception:
@@ -440,10 +442,20 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         trial.set_user_attr("n_clusters", n_clusters)
         trial.set_user_attr("cluster_score", float(cluster_score))
         
-        # Debug: Print cluster scores when they're high
-        if final_score > 0.8:
-            print(f"High cluster score - Trial {trial.number}: "
-                  f"cluster_score={cluster_score:.4f}, n_clusters={n_clusters}")
+        # Debug: Print cluster scores when they're high with individual metrics
+        if final_score > 0.7:
+            # Extract individual scores for debugging (recompute to get detailed metrics)
+            labels = model.hdbscan_model.labels_
+            mask = labels != -1
+            if len(labels[mask]) > 0:
+                umap_embeddings = _get_umap_embeddings(model, labels[mask])
+                if umap_embeddings is not None:
+                    s_score = _compute_silhouette_score_normalized(umap_embeddings, labels[mask])
+                    ch_score = _compute_ch_score_normalized(umap_embeddings, labels[mask])
+                    db_score = _compute_db_score_normalized(umap_embeddings, labels[mask])
+                    print(f"High cluster score - Trial {trial.number}: "
+                          f"s_score={s_score:.4f}, ch_score={ch_score:.4f}, db_score={db_score:.4f}, "
+                          f"combined={cluster_score:.4f}, n_clusters={n_clusters}")
 
         return np.clip(final_score, eps, 1.0)
 
