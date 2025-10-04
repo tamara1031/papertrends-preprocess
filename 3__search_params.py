@@ -61,7 +61,7 @@ class ClusteringConfig:
     UMAP_MAX_COMPONENTS: int = 15
     
     # Optimization settings
-    DEFAULT_TIMEOUT: int = 10 * 60  # 10 minutes
+    DEFAULT_TIMEOUT: int | None = None
     DEFAULT_TRIALS: int = 100
     MIN_TRIALS: int = 30
     MAX_TRIALS: int = 100
@@ -421,10 +421,15 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     # min_df constraint based on dataset size
     min_df = trial.suggest_int("min_df", 2, min(10, dataset_size // 100))
     
-    # max_df must be greater than min_df/doc_count ratio
+    # Calculate minimum max_df to satisfy constraint: max_df > min_df/dataset_size
     min_df_ratio = min_df / dataset_size
-    max_df_min = max(min_df_ratio + 0.01, min_df / dataset_size + 0.001)  # Ensure max_df > min_df/doc_count
-    max_df = trial.suggest_float("max_df", max_df_min, 0.95)
+    max_df_min_safe = min_df_ratio + 0.001  # Small buffer above the theoretical minimum
+    
+    # Ensure we have a reasonable range for max_df
+    max_df_min = max(max_df_min_safe, 0.01)  # At least 1% of documents
+    max_df_max = max(max_df_min + 0.1, 0.95)  # Ensure we have room to sample
+    
+    max_df = trial.suggest_float("max_df", max_df_min, max_df_max)
     
     return ngram_range, min_df, max_df
 
@@ -728,7 +733,7 @@ def main():
     study_storage_path = f"sqlite:///{model_path}/search_params.db"
     study = optimize_category_clustering(
         category=category,
-        timeout=20 * 60,  # 20 minutes
+        # timeout=20 * 60,
         storage=study_storage_path
     )
     
