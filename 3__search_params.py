@@ -14,7 +14,7 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
-from sklearn.metrics import calinski_harabasz_score, silhouette_score
+from sklearn.metrics import calinski_harabasz_score, silhouette_score, davies_bouldin_score
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model
@@ -120,34 +120,105 @@ def _compute_silhouette_score_normalized(embeddings, labels):
         return 0.5  # Default value on error
 
 
-
-
-def _compute_ch_score_normalized(embeddings, labels):
+def _compute_davies_bouldin_score_normalized(embeddings, labels):
     """
-    Compute normalized Calinski-Harabasz score.
+    Compute normalized Davies-Bouldin score.
+    
+    Davies-Bouldin score normalization based on typical clustering quality ranges:
+    - Excellent (DB < 0.4): mapped to [0.8, 1.0]
+    - Good (0.4 ≤ DB < 0.8): mapped to [0.6, 0.8] 
+    - Moderate (0.8 ≤ DB < 1.2): mapped to [0.3, 0.6]
+    - Poor (1.2 ≤ DB < 2.0): mapped to [0.1, 0.3]
+    - Very Poor (DB ≥ 2.0): mapped to [0.01, 0.1]
+    
+    Note: Lower DB scores indicate better clustering (inverse relationship)
     
     Args:
         embeddings: UMAP embeddings
         labels: Cluster labels
         
     Returns:
-        CH score normalized to [0, 1] range
+        DB score normalized to [0, 1] range where higher values indicate better clustering
+    """
+    try:
+        db_score = davies_bouldin_score(embeddings, labels)
+        
+        # DB score is inversely related to clustering quality (lower = better)
+        # Reverse the relationship for consistent [0,1] scale with other metrics
+        
+        if db_score <= 0.4:
+            # Excellent clustering - map (0, 0.4] to [0.8, 1.0]
+            normalized = 0.8 + (0.4 - db_score) / 0.4 * 0.2
+        elif db_score <= 0.8:
+            # Good clustering - map (0.4, 0.8] to [0.6, 0.8]
+            normalized = 0.6 + (0.8 - db_score) / 0.4 * 0.2
+        elif db_score <= 1.2:
+            # Moderate clustering - map (0.8, 1.2] to [0.3, 0.6]
+            normalized = 0.3 + (1.2 - db_score) / 0.4 * 0.3
+        elif db_score <= 2.0:
+            # Poor clustering - map (1.2, 2.0] to [0.1, 0.3]
+            normalized = 0.1 + (2.0 - db_score) / 0.8 * 0.2
+        else:
+            # Very poor clustering - map (2.0, ∞) to [0.01, 0.1]
+            normalized = 0.01 + min(1.0 / db_score, 0.09)
+        
+        return np.clip(normalized, 0.01, 1.0)
+        
+    except Exception:
+        return 0.5  # Default value on error
+
+
+
+
+def _compute_ch_score_normalized(embeddings, labels):
+    """
+    Compute normalized Calinski-Harabasz score using empirically-based ranges.
+    
+    Updated CH score normalization based on actual clustering performance ranges:
+    - Excellent (CH≥100,000): mapped to [0.9, 1.0]
+    - Very Good (10,000≤CH<100,000): mapped to [0.8, 0.9] 
+    - Good (1,000≤CH<10,000): mapped to [0.6, 0.8]
+    - Moderate (100≤CH<1,000): mapped to [0.3, 0.6]
+    - Poor (0<CH<100): mapped to [0.01, 0.3]
+    
+    Args:
+        embeddings: UMAP embeddings
+        labels: Cluster labels
+        
+    Returns:
+        CH score normalized to [0, 1] range where higher values indicate better clustering
     """
     try:
         ch_score = calinski_harabasz_score(embeddings, labels)
         
         if ch_score > 0:
-            n_clusters = len(set(labels))
-            n_samples = len(embeddings)
+            # Updated normalization based on realistic CH score ranges observed in practice:
+            # - Excellent clustering: CH ≥ 100,000 (very tight clusters)
+            # - Very Good clustering: 10,000 ≤ CH < 100,000 
+            # - Good clustering: 1,000 ≤ CH < 10,000
+            # - Moderate clustering: 100 ≤ CH < 1,000
+            # - Poor clustering: CH < 100
             
-            # CH score normalization: more realistic approach
-            # CH scores typically range within (log n, log n²)
-            max_expected_ch = n_samples * np.log(n_clusters + 1) * 10  # Empirical value
-            ch_score_scaled = min(ch_score / max_expected_ch, 1.0)
-            # More conservative lower bound
-            return max(ch_score_scaled, 0.01)
+            if ch_score >= 100000:
+                # Excellent clustering - map [100,000, ∞) to [0.9, 1.0]
+                # Use logarithmic scaling to handle very large values gracefully
+                normalized = 0.9 + min(np.log10(ch_score / 100000) / 10, 0.1)
+            elif ch_score >= 10000:
+                # Very Good clustering - map [10,000, 100,000) to [0.8, 0.9]
+                normalized = 0.8 + (ch_score - 10000) / 90000 * 0.1
+            elif ch_score >= 1000:
+                # Good clustering - map [1,000, 10,000) to [0.6, 0.8]
+                normalized = 0.6 + (ch_score - 1000) / 9000 * 0.2
+            elif ch_score >= 100:
+                # Moderate clustering - map [100, 1,000) to [0.3, 0.6]
+                normalized = 0.3 + (ch_score - 100) / 900 * 0.3
+            else:
+                # Poor clustering - map (0, 100) to [0.01, 0.3]
+                normalized = 0.01 + (ch_score / 100) * 0.29
+            
+            return np.clip(normalized, 0.01, 1.0)
         else:
-            return 0.0
+            return 0.01
             
     except Exception:
         return 0.5  # Default value on error
@@ -155,6 +226,11 @@ def _compute_ch_score_normalized(embeddings, labels):
 def compute_cluster_score(model, eps=EPSILON):
     """
     Compute clustering quality using Silhouette, Calinski-Harabasz, and Davies-Bouldin scores.
+    
+    Enhanced evaluation combining three complementary clustering metrics:
+    - Silhouette: Separation vs cohesion balance
+    - Calinski-Harabasz: Inter-cluster vs intra-cluster variance ratio
+    - Davies-Bouldin: Intra-cluster density evaluation
     
     Args:
         model: Trained BERTopic model
@@ -187,9 +263,13 @@ def compute_cluster_score(model, eps=EPSILON):
         # Compute normalized scores using helper functions
         s_score_scaled = _compute_silhouette_score_normalized(umap_embeddings, labels[mask])
         ch_score_scaled = _compute_ch_score_normalized(umap_embeddings, labels[mask])
+        db_score_scaled = _compute_davies_bouldin_score_normalized(umap_embeddings, labels[mask])
 
-        # Equal weighting of all three clustering metrics
-        combined_score = (s_score_scaled + ch_score_scaled) / 2.0
+        # Enhanced weighting: prioritize silhouette and CH for separation, DB for cohesion
+        # Silhouette: 40% (separation-cohesion balance)
+        # Calinski-Harabasz: 35% (inter-cluster separation) 
+        # Davies-Bouldin: 25% (intra-cluster cohesion)
+        combined_score = (0.40 * s_score_scaled + 0.35 * ch_score_scaled + 0.25 * db_score_scaled)
         return np.clip(combined_score, eps, 1.0)
 
     except Exception:
@@ -452,7 +532,7 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
                 if umap_embeddings is not None:
                     s_score = _compute_silhouette_score_normalized(umap_embeddings, labels[mask])
                     ch_score = _compute_ch_score_normalized(umap_embeddings, labels[mask])
-                    db_score = _compute_db_score_normalized(umap_embeddings, labels[mask])
+                    db_score = _compute_davies_bouldin_score_normalized(umap_embeddings, labels[mask])
                     print(f"High cluster score - Trial {trial.number}: "
                           f"s_score={s_score:.4f}, ch_score={ch_score:.4f}, db_score={db_score:.4f}, "
                           f"combined={cluster_score:.4f}, n_clusters={n_clusters}")
