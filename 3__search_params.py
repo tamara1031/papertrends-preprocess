@@ -35,6 +35,9 @@ SCORE_WEIGHTS = {
     'validity': 0.10
 }
 
+# Cluster count validation thresholds
+MIN_VALID_CLUSTERS = 3
+
 def get_papers(category: str) -> List[Paper]:
     """Load papers from preprocessed data for the given category."""
     with open(f"./preprocessed/{category}/papers.pkl", "rb") as f:
@@ -487,15 +490,18 @@ def compute_cluster_score(model, eps=EPSILON):
         try:
             ch_score = calinski_harabasz_score(umap_embeddings, labels[mask])
 
-            # CHスコアの正規化：クラスタ数に応じて調整
+            # CHスコアの正規化：より現実的な方法
             n_clusters = len(unique_labels)
             n_samples = len(umap_embeddings)
 
-            # CHスコアは一般的に大きな値ほど良いが、クラスタ数に依存する
-            # ここでは単純に0-1にクリップ
             if ch_score > 0:
-                # 一般的なCHスコアの範囲に基づいて正規化（経験値に基づく）
-                ch_score_scaled = min(ch_score / (n_samples * n_clusters), 1.0)
+                # CHスコアは(log n, log n²)の範囲になることが多い
+                # より良い正規化: 経験的な最大値で除算
+                # CHスコアの典型的な範囲を考慮した動的正規化
+                max_expected_ch = n_samples * np.log(n_clusters + 1) * 10  # 経験値
+                ch_score_scaled = min(ch_score / max_expected_ch, 1.0)
+                # 下限保証: あまりにも小さな値を避ける
+                ch_score_scaled = max(ch_score_scaled, 0.1)
             else:
                 ch_score_scaled = 0.0
 
@@ -633,13 +639,18 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
                 adjusted_weights[key] /= total_weight
                 print(f"  Adjusted weight for {key}: {adjusted_weights[key]:.4f}")
 
-        # 最終スコアの計算
+        # Calculate composite score using all valid metrics
         score = (
             adjusted_weights['coherence'] * coherence +
             adjusted_weights['diversity'] * diversity +
             adjusted_weights['cluster'] * cluster_score +
             adjusted_weights['validity'] * cluster_validity
         )
+        
+        # Apply penalty for extreme cluster counts
+        if n_clusters < MIN_VALID_CLUSTERS or n_clusters > int(len(texts) * 0.3):
+            score *= 0.5  # Reduce score by 50% for extreme cluster counts
+            print(f"  Applied cluster count penalty (score × 0.5): {score:.4f}")
 
         print(f"  Final combined score: {score:.4f}")
         return score
