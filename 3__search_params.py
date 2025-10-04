@@ -423,7 +423,7 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     
     # max_df must be greater than min_df/doc_count ratio
     min_df_ratio = min_df / dataset_size
-    max_df_min = min_df_ratio + 0.01  # Ensure max_df > min_df/doc_count
+    max_df_min = max(min_df_ratio + 0.01, min_df / dataset_size + 0.001)  # Ensure max_df > min_df/doc_count
     max_df = trial.suggest_float("max_df", max_df_min, 0.95)
     
     return ngram_range, min_df, max_df
