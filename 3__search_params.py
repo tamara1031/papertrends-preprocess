@@ -191,12 +191,61 @@ def _compute_dbcv_score(
     return max(0.0, min(1.0, (dbcv_score + 1.0) / 2.0))
 
 
+def _compute_topic_diversity(
+    model: BERTopic, 
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute topic diversity based on topic word overlap."""
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        
+        if len(valid_topics) < 2:
+            return eps
+        
+        # Get top words for each topic
+        topic_words = []
+        for _, row in valid_topics.iterrows():
+            topic_id = row['Topic']
+            words = model.get_topic(topic_id)
+            if words:
+                # Extract just the words (first element of each tuple)
+                word_list = [word[0] for word in words[:10]]  # Top 10 words
+                topic_words.append(set(word_list))
+        
+        if len(topic_words) < 2:
+            return eps
+        
+        # Calculate pairwise Jaccard similarity
+        similarities = []
+        for i in range(len(topic_words)):
+            for j in range(i + 1, len(topic_words)):
+                intersection = len(topic_words[i] & topic_words[j])
+                union = len(topic_words[i] | topic_words[j])
+                if union > 0:
+                    jaccard_sim = intersection / union
+                    similarities.append(jaccard_sim)
+        
+        if not similarities:
+            return eps
+        
+        # Diversity = 1 - average similarity (higher is better)
+        avg_similarity = np.mean(similarities)
+        diversity = 1.0 - avg_similarity
+        
+        return max(eps, min(1.0, diversity))
+    
+    except Exception as e:
+        print(f"Warning: Topic diversity computation failed: {e}")
+        return eps
+
+
 def compute_cluster_quality_score(
     model: BERTopic, 
     original_embeddings: np.ndarray, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute combined clustering quality score: 20% coherence + 80% DBCV."""
+    """Compute combined clustering quality score with multiple metrics."""
     try:
         # Get number of topics (excluding noise topic -1)
         topic_info = model.get_topic_info()
@@ -206,7 +255,19 @@ def compute_cluster_quality_score(
         if n_topics <= 2:
             return eps  # Return minimum score for too few topics
         
-        return _compute_dbcv_score(model, original_embeddings, eps=eps)
+        # Compute individual metrics
+        dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
+        topic_diversity = _compute_topic_diversity(model, eps=eps)
+        
+        # Weighted combination of metrics
+        # DBCV: 70% (density-based clustering quality including separation)
+        # Topic Diversity: 30% (word overlap between topics - unique to topic modeling)
+        combined_score = (
+            0.70 * dbcv_score +
+            0.30 * topic_diversity
+        )
+        
+        return combined_score
     except Exception:
         return eps
 
