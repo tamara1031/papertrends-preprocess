@@ -15,7 +15,6 @@ from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
 from sklearn.metrics import calinski_harabasz_score, silhouette_score
-from sklearn.metrics.pairwise import cosine_similarity
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model
@@ -26,7 +25,6 @@ EMBEDDING_MODEL = get_custom_embedding_model()
 
 # Clustering constraints
 MIN_CLUSTERS = 2
-MAX_CLUSTERS_RATIO = 5  # Max clusters = dataset_size // MAX_CLUSTERS_RATIO
 MIN_CLUSTER_RATIO = 20  # Min cluster size = dataset_size // MIN_CLUSTER_RATIO
 MAX_CLUSTER_RATIO = 500  # Max cluster size = dataset_size // MAX_CLUSTER_RATIO
 
@@ -40,12 +38,6 @@ UMAP_MAX_COMPONENTS = 15
 EARLY_PRUNING_THRESHOLD = 20
 MID_OPTIMIZATION_THRESHOLD = 100
 
-# Score weights for composite evaluation
-SCORE_WEIGHTS = {
-    'coherence': 0.40,      # Topic internal consistency
-    'cluster': 0.40,        # Clustering quality metrics
-    'validity': 0.20        # Practical cluster count appropriateness
-}
 
 
 def get_papers(category: str) -> List[Paper]:
@@ -81,140 +73,6 @@ class Hyperparameters:
     min_cluster_size: int
     min_samples: int
 
-def compute_coherence(model: BERTopic, top_n: int = 10, eps: float = EPSILON) -> float:
-    """
-    Compute topic coherence using cosine similarity between word embeddings.
-    
-    Args:
-        model: Trained BERTopic model
-        top_n: Number of top words per topic to consider
-        eps: Minimum epsilon value
-        
-    Returns:
-        Coherence score between 0 and 1
-    """
-    try:
-        topics = {k: v for k, v in model.get_topics().items() if k != -1}
-        if len(topics) < 2:
-            return eps
-
-        coherence_scores = []
-        
-        # Calculate coherence for each topic separately
-        for topic_id, topic_words in topics.items():
-            if len(topic_words) < 2:
-                continue
-                
-            words = [word for word, _ in topic_words[:top_n]]
-            if len(words) < 2:
-                continue
-            
-            try:
-                # Get word embeddings using the embedding model
-                word_vectors = EMBEDDING_MODEL.encode(words)
-                
-                if len(word_vectors) != len(words):
-                    continue
-                
-                # Calculate pairwise cosine similarity
-                similarity_matrix = cosine_similarity(word_vectors)
-                
-                # Extract upper triangle (excluding diagonal) to avoid duplicates
-                n_words = len(words)
-                similarities = []
-                for i in range(n_words):
-                    for j in range(i + 1, n_words):
-                        similarities.append(similarity_matrix[i, j])
-                
-                if similarities:
-                    # Topic coherence: average semantic similarity within topic
-                    avg_coherence = np.mean(similarities)
-                    coherence_scores.append(max(avg_coherence, eps))
-                    
-            except Exception:
-                # Skip this topic if embedding fails
-                continue
-        
-        if coherence_scores:
-            return np.clip(np.mean(coherence_scores), eps, 1.0)
-        else:
-            return eps
-
-    except Exception:
-        return eps
-
-
-def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -> float:
-    """
-    Evaluate the appropriateness of cluster count with emphasis on practical utility.
-    
-    This function prioritizes cluster quality over quantity, considering:
-    - Interpretability: Fewer, well-defined clusters are more valuable
-    - Coverage: Each cluster should represent meaningful document subsets
-    - Balance: Avoid extreme clustering (too few/many clusters)
-    - Domain knowledge: Academic papers benefit from distinct thematic clusters
-    
-    Args:
-        n_clusters: Number of clusters found by the model
-        n_docs: Total number of documents in the dataset
-        eps: Minimum epsilon value returned for invalid scenarios
-        
-    Returns:
-        Validity score between 0 and 1, where 1 is optimal
-    """
-    try:
-        # Zero clusters is invalid
-        if n_clusters <= 0:
-            return eps
-            
-        # Single cluster provides limited insight 
-        if n_clusters == 1:
-            return eps * 0.3
-            
-        # Absolute limits based on practicality using constants
-        min_practical_clusters = max(MIN_CLUSTERS, n_docs // MAX_CLUSTER_RATIO)
-        max_practical_clusters = min(n_docs // MIN_CLUSTER_RATIO, 100)
-        
-        if n_clusters < min_practical_clusters or n_clusters > max_practical_clusters:
-            return eps * 0.1
-        
-        # Define quality zones with different scoring philosophies
-        if n_clusters <= 5:
-            # Very focused clusters - excellent for interpretability
-            # Score based on how well they can cover the dataset
-            coverage_ratio = n_clusters / np.min([n_docs // 200, 10])
-            return np.clip(coverage_ratio, eps, 1.0)
-            
-        elif n_clusters <= 15:
-            # Optimal range for academic topic modeling
-            # Each cluster represents ~260-1940 documents (good granularity)
-            baseline_score = 0.9
-            # Slight preference for middle of this range (8-12 clusters)
-            if 8 <= n_clusters <= 12:
-                bonus = 0.05
-            else:
-                bonus = 0.02
-            return np.clip(baseline_score + bonus, eps, 1.0)
-            
-        elif n_clusters <= 30:
-            # Detailed clustering - good for comprehensive analysis
-            # Score decreases gradually (more clusters = lower interpretability)
-            distance_from_optimal = abs(n_clusters - 20) / 20
-            return np.clip(0.7 - distance_from_optimal * 0.4, eps, 1.0)
-            
-        elif n_clusters <= 50:
-            # Fine-grained clustering - limited practical value
-            return eps + 0.2
-            
-        else:
-            # Too many clusters - likely overfitting
-            # More stringent penalty for excessive clusters
-            excess_ratio = n_clusters / 50
-            penalty = eps * (0.1 ** min(excess_ratio, 3))  # Exponential penalty
-            return penalty
-            
-    except Exception:
-        return eps
 
 def _get_umap_embeddings(model, labels):
     """
@@ -328,9 +186,8 @@ def compute_cluster_score(model, eps=EPSILON):
         # Compute normalized scores using helper functions
         s_score_scaled = _compute_silhouette_score_normalized(umap_embeddings, labels[mask])
         ch_score_scaled = _compute_ch_score_normalized(umap_embeddings, labels[mask])
-
-        # Combined weighted score (Silhouette weighted higher)
-        combined_score = 0.6 * s_score_scaled + 0.4 * ch_score_scaled
+        
+        combined_score = 0.5 * s_score_scaled + 0.5 * ch_score_scaled
         return np.clip(combined_score, eps, 1.0)
 
     except Exception:
@@ -344,12 +201,13 @@ def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
     - Enhanced parameter relationships consideration
     - Proper Bayesian priors for better exploration
     - Optimized for mixed continuous/categorical parameter spaces
+    - More exploration to break away from plateaus
     """
     
     # Enhanced TPE Sampler: Compatible with dynamic value spaces
     return TPESampler(
         consider_prior=True,      # Use Bayesian mixture more explicitly
-        prior_weight=1.0,         # Strong prior weight for categorical parameters
+        prior_weight=0.8,         # Reduced prior weight to encourage more exploration
         consider_magic_clip=True, # Clips extremes adaptively
         consider_endpoints=False, # Exclude boundary values
         warn_independent_sampling=False,  # Suppress warning for dynamic search space
@@ -537,48 +395,6 @@ def _create_bertopic_model(params: Hyperparameters) -> BERTopic:
     )
 
 
-def _calculate_composite_score(coherence: float, cluster_score: float, cluster_validity: float,
-                              eps: float = EPSILON) -> float:
-    """
-    Calculate weighted composite score from individual components.
-    
-    Args:
-        coherence: Topic coherence score
-        cluster_score: Clustering quality score
-        cluster_validity: Cluster count validity score
-        eps: Minimum epsilon value
-        
-    Returns:
-        Composite optimization score between 0 and 1
-    """
-    # Check which scores are valid for weight adjustment
-    valid_scores = {
-        'coherence': coherence > eps,
-        'cluster': cluster_score > eps,
-        'validity': cluster_validity > eps
-    }
-
-    if sum(valid_scores.values()) == 0:
-        return eps
-
-    # Adjust weights for valid scores only and normalize
-    adjusted_weights = {}
-    total_weight = sum(SCORE_WEIGHTS[k] for k in SCORE_WEIGHTS.keys() if valid_scores[k])
-    
-    for key in SCORE_WEIGHTS:
-        if valid_scores[key]:
-            adjusted_weights[key] = SCORE_WEIGHTS[key] / total_weight
-        else:
-            adjusted_weights[key] = 0
-
-    # Calculate composite score
-    base_score = (
-        adjusted_weights['coherence'] * coherence +
-        adjusted_weights['cluster'] * cluster_score +
-        adjusted_weights['validity'] * cluster_validity
-    )
-    
-    return np.clip(base_score, eps, 1.0)
 
 
 def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray, eps: float = EPSILON) -> float:
@@ -614,20 +430,20 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         if n_clusters < 2 or n_clusters > dataset_size // 5:
             return eps * 0.1  # Very low score for clear failures
         
-        # Step 4: Multi-metric evaluation
-        coherence = compute_coherence(model, eps=eps)
+        # Step 4: Cluster quality evaluation only
         cluster_score = compute_cluster_score(model, eps=eps)
-        cluster_validity = evaluate_cluster_count(n_clusters, dataset_size, eps)
-
-        # Step 5: Calculate composite score using helper function
-        base_score = _calculate_composite_score(coherence, cluster_score, cluster_validity, eps)
         
-        # Step 6: Simplified scoring without penalties
-        final_score = base_score
+        # Step 5: Use cluster_score as final_score
+        final_score = cluster_score
         
         # Store key metrics for analysis
         trial.set_user_attr("n_clusters", n_clusters)
-        trial.set_user_attr("base_score", base_score)
+        trial.set_user_attr("cluster_score", float(cluster_score))
+        
+        # Debug: Print cluster scores when they're high
+        if final_score > 0.8:
+            print(f"High cluster score - Trial {trial.number}: "
+                  f"cluster_score={cluster_score:.4f}, n_clusters={n_clusters}")
 
         return np.clip(final_score, eps, 1.0)
 
