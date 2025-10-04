@@ -206,8 +206,7 @@ def compute_cluster_quality_score(
         if n_topics <= 2:
             return eps  # Return minimum score for too few topics
         
-        dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
-        return 1.0 * dbcv_score
+        return _compute_dbcv_score(model, original_embeddings, eps=eps)
     except Exception:
         return eps
 
