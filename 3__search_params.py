@@ -15,6 +15,7 @@ from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
 from sklearn.metrics import calinski_harabasz_score, silhouette_score
+from sklearn.metrics.pairwise import cosine_similarity
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model
@@ -41,10 +42,9 @@ MID_OPTIMIZATION_THRESHOLD = 100
 
 # Score weights for composite evaluation
 SCORE_WEIGHTS = {
-    'coherence': 0.30,      # Topic internal consistency
-    'diversity': 0.20,      # Topic distinctiveness  
-    'cluster': 0.25,        # Clustering quality metrics
-    'validity': 0.25        # Practical cluster count appropriateness
+    'coherence': 0.40,      # Topic internal consistency
+    'cluster': 0.40,        # Clustering quality metrics
+    'validity': 0.20        # Practical cluster count appropriateness
 }
 
 
@@ -81,10 +81,9 @@ class Hyperparameters:
     min_cluster_size: int
     min_samples: int
 
-# coherenceを算出（UMass coherenceに基づく）
 def compute_coherence(model: BERTopic, top_n: int = 10, eps: float = EPSILON) -> float:
     """
-    Compute topic coherence based on UMass coherence.
+    Compute topic coherence using cosine similarity between word embeddings.
     
     Args:
         model: Trained BERTopic model
@@ -97,62 +96,53 @@ def compute_coherence(model: BERTopic, top_n: int = 10, eps: float = EPSILON) ->
     try:
         topics = {k: v for k, v in model.get_topics().items() if k != -1}
         if len(topics) < 2:
-            return eps  # Return minimum value if too few topics
-
-        all_words = []
-        for topic_words in topics.values():
-            topic_words_list = [word for word, _ in topic_words[:top_n]]
-            all_words.extend(topic_words_list)
-
-        if not all_words:
             return eps
 
-        unique_words = len(set(all_words))
-        total_words = len(all_words)
-        score = unique_words / total_words if total_words > 0 else 0.0
-        return np.clip(score, eps, 1.0)
-
-    except Exception:
-        return eps
-
-def compute_diversity(model, top_n=10, eps=EPSILON):
-    """
-    Compute topic diversity based on word uniqueness.
-    
-    Args:
-        model: Trained BERTopic model
-        top_n: Number of top words per topic
-        eps: Minimum epsilon value
+        coherence_scores = []
         
-    Returns:
-        Diversity score between 0 and 1
-    """
-    try:
-        topics = {k: v for k, v in model.get_topics().items() if k != -1}
-        if len(topics) < 2:
-            return eps
-
-        # Calculate word uniqueness per topic
-        topic_word_sets = {}
-        for topic_id, words in topics.items():
-            words_list = [word for word, _ in words[:top_n]]
-            topic_word_sets[topic_id] = set(words_list)
-
-        diversity_scores = []
-        for topic_id, word_set in topic_word_sets.items():
-            other_words = set()
-            for other_id, other_set in topic_word_sets.items():
-                if other_id != topic_id:
-                    other_words.update(other_set)
+        # Calculate coherence for each topic separately
+        for topic_id, topic_words in topics.items():
+            if len(topic_words) < 2:
+                continue
+                
+            words = [word for word, _ in topic_words[:top_n]]
+            if len(words) < 2:
+                continue
             
-            unique_words = word_set - other_words
-            unique_ratio = len(unique_words) / len(word_set) if len(word_set) > 0 else 0
-            diversity_scores.append(unique_ratio)
-
-        return np.clip(np.mean(diversity_scores), eps, 1.0) if diversity_scores else eps
+            try:
+                # Get word embeddings using the embedding model
+                word_vectors = EMBEDDING_MODEL.encode(words)
+                
+                if len(word_vectors) != len(words):
+                    continue
+                
+                # Calculate pairwise cosine similarity
+                similarity_matrix = cosine_similarity(word_vectors)
+                
+                # Extract upper triangle (excluding diagonal) to avoid duplicates
+                n_words = len(words)
+                similarities = []
+                for i in range(n_words):
+                    for j in range(i + 1, n_words):
+                        similarities.append(similarity_matrix[i, j])
+                
+                if similarities:
+                    # Topic coherence: average semantic similarity within topic
+                    avg_coherence = np.mean(similarities)
+                    coherence_scores.append(max(avg_coherence, eps))
+                    
+            except Exception:
+                # Skip this topic if embedding fails
+                continue
+        
+        if coherence_scores:
+            return np.clip(np.mean(coherence_scores), eps, 1.0)
+        else:
+            return eps
 
     except Exception:
         return eps
+
 
 def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -> float:
     """
@@ -547,15 +537,13 @@ def _create_bertopic_model(params: Hyperparameters) -> BERTopic:
     )
 
 
-def _calculate_composite_score(coherence: float, diversity: float, 
-                              cluster_score: float, cluster_validity: float,
+def _calculate_composite_score(coherence: float, cluster_score: float, cluster_validity: float,
                               eps: float = EPSILON) -> float:
     """
     Calculate weighted composite score from individual components.
     
     Args:
         coherence: Topic coherence score
-        diversity: Topic diversity score
         cluster_score: Clustering quality score
         cluster_validity: Cluster count validity score
         eps: Minimum epsilon value
@@ -566,7 +554,6 @@ def _calculate_composite_score(coherence: float, diversity: float,
     # Check which scores are valid for weight adjustment
     valid_scores = {
         'coherence': coherence > eps,
-        'diversity': diversity > eps,
         'cluster': cluster_score > eps,
         'validity': cluster_validity > eps
     }
@@ -587,7 +574,6 @@ def _calculate_composite_score(coherence: float, diversity: float,
     # Calculate composite score
     base_score = (
         adjusted_weights['coherence'] * coherence +
-        adjusted_weights['diversity'] * diversity +
         adjusted_weights['cluster'] * cluster_score +
         adjusted_weights['validity'] * cluster_validity
     )
@@ -628,14 +614,13 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         if n_clusters < 2 or n_clusters > dataset_size // 5:
             return eps * 0.1  # Very low score for clear failures
         
-        # Step 4: Multi-metric evaluation with best practices
+        # Step 4: Multi-metric evaluation
         coherence = compute_coherence(model, eps=eps)
-        diversity = compute_diversity(model, eps=eps)
         cluster_score = compute_cluster_score(model, eps=eps)
         cluster_validity = evaluate_cluster_count(n_clusters, dataset_size, eps)
 
         # Step 5: Calculate composite score using helper function
-        base_score = _calculate_composite_score(coherence, diversity, cluster_score, cluster_validity, eps)
+        base_score = _calculate_composite_score(coherence, cluster_score, cluster_validity, eps)
         
         # Step 6: Simplified scoring without penalties
         final_score = base_score
