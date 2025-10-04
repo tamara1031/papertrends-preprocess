@@ -198,6 +198,14 @@ def compute_cluster_quality_score(
 ) -> float:
     """Compute combined clustering quality score: 20% coherence + 80% DBCV."""
     try:
+        # Get number of topics (excluding noise topic -1)
+        topic_info = model.get_topic_info()
+        n_topics = len(topic_info[topic_info['Topic'] != -1])
+        
+        # Apply penalty if number of topics is 2 or fewer
+        if n_topics <= 2:
+            return eps  # Return minimum score for too few topics
+        
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         return 1.0 * dbcv_score
     except Exception:
