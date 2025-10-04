@@ -470,7 +470,7 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
     
     # Text preprocessing parameters
-    ngram_range = trial.suggest_categorical("ngram_range", [[1,1], [1,2], [1,3]])
+    ngram_range = trial.suggest_categorical("ngram_range", [[1,2], [1,3]])
     
     # min_df vs max_df relationship (crucial!)
     min_df = trial.suggest_int("min_df", 2, 30)
@@ -485,7 +485,7 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     bm25_weighting = trial.suggest_categorical("bm25_weighting", [True, False])
     
     # UMAP parameters with intelligent bounds
-    max_neighbors = min(dataset_size // 10, 100)
+    max_neighbors = min(dataset_size // 10, 200)
     n_neighbors = trial.suggest_int("n_neighbors", max(5, min_cluster_size), max_neighbors)
     
     n_components = trial.suggest_int("n_components", 
@@ -691,11 +691,12 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
 
         study.optimize(
             lambda trial: objective(trial, texts, text_embeddings),
-            timeout=timeout,
+            n_trials=n_trials,
+            # timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
             catch=(Exception,),  # Catch all exceptions gracefully
-            callbacks=[MaxTrialsCallback(n_trials, states=(optuna.trial.TrialState.COMPLETE,))]
+            # callbacks=[MaxTrialsCallback(n_trials, states=(optuna.trial.TrialState.COMPLETE,))]
         )
         
         # Step 4: Post-optimization analysis and logging
