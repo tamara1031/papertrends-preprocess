@@ -1,20 +1,3 @@
-"""
-Hyperparameter Optimization for BERTopic Clustering
-
-This module implements automated hyperparameter optimization for BERTopic clustering
-using Optuna with SPECTER2 embeddings. It optimizes parameters for text vectorization,
-UMAP dimensionality reduction, and HDBSCAN clustering with combined coherence and
-DBCV evaluation metrics.
-
-Key Features:
-- SPECTER2 embedding compatibility
-- Robust parameter constraints
-- Combined coherence + DBCV evaluation
-- Efficient pruning and sampling
-
-Author: PaperTrends Preprocessing Team
-"""
-
 from typing import List, Optional, Union, Tuple, Dict, Any
 from dataclasses import dataclass
 import gc
@@ -23,7 +6,6 @@ import pickle
 import json
 import numpy as np
 import warnings
-from itertools import combinations
 
 import optuna
 import optuna.exceptions
@@ -35,7 +17,6 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import pairwise_distances
-from sklearn.metrics.pairwise import cosine_similarity
 from hdbscan.validity import validity_index
 
 from common.domain.dto import Paper
