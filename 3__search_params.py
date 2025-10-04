@@ -1,36 +1,64 @@
-from typing import List, Any, Optional, Union
+from typing import List, Optional, Union
 from dataclasses import dataclass
-
-import gc, os
+import gc
+import os
 import pickle
 import json
-
 import numpy as np
 
 import optuna
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner, HyperbandPruner, SuccessiveHalvingPruner
 from bertopic import BERTopic
-
 from umap import UMAP
 from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from bertopic.vectorizers import ClassTfidfTransformer
+from sklearn.metrics import calinski_harabasz_score, silhouette_score
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model
-from sklearn.metrics import calinski_harabasz_score, silhouette_score
 
 # Constants
 EPSILON = 1e-6
 EMBEDDING_MODEL = get_custom_embedding_model()
 
+# Clustering constraints
+MIN_CLUSTERS = 2
+MAX_CLUSTERS_RATIO = 5  # Max clusters = dataset_size // MAX_CLUSTERS_RATIO
+MIN_CLUSTER_RATIO = 20  # Min cluster size = dataset_size // MIN_CLUSTER_RATIO
+MAX_CLUSTER_RATIO = 500  # Max cluster size = dataset_size // MAX_CLUSTER_RATIO
+
+# UMAP parameters
+UMAP_NEIGHBORS_RATIO = 0.03  # Max n_neighbors = dataset_size * UMAP_NEIGHBORS_RATIO
+UMAP_MAX_NEIGHBORS = 50  # Absolute maximum for n_neighbors
+UMAP_MIN_COMPONENTS = 2
+UMAP_MAX_COMPONENTS = 15
+
+# Optimization limits
+EARLY_PRUNING_THRESHOLD = 20
+MID_OPTIMIZATION_THRESHOLD = 100
+DEFAULT_BONUS_CLUSTER_RANGE = (8, 25)  # Range that gets bonus scoring
+
+# Penalty factors for scoring
+HVARSH_PENALTY_FACTOR = 0.1
+EXCESSIVE_CLUSTERS_FACTOR = 0.3
+RESTRICTIVE_CLUSTERING_FACTOR = 0.9
+LOOSE_CLUSTERING_FACTOR = 0.95
+LARGE_NEIGHBORS_FACTOR = 0.95
+VERY_LARGE_NEIGHBORS_FACTOR = 0.85
+
+# Threshold ratios for penalties
+CLUSTER_SIZE_PENALTY_THRESHOLD = 0.05  # 5% of dataset
+CLUSTER_SIZE_MIN_THRESHOLD = 0.002     # 0.2% of dataset
+NEIGHBOR_RATIO_THRESHOLD = 0.02        # 2% of dataset
+BONUS_SCORE_FACTOR = 1.05              # Bonus for good cluster ranges
 
 # Score weights for composite evaluation (balanced for practical utility)
 SCORE_WEIGHTS = {
     'coherence': 0.30,      # Topic internal consistency
     'diversity': 0.20,      # Topic distinctiveness  
-    'cluster': 0.25,         # Clustering quality metrics
+    'cluster': 0.25,        # Clustering quality metrics
     'validity': 0.25        # Practical cluster count appropriateness
 }
 
@@ -61,9 +89,6 @@ class Hyperparameters:
     ngram_range: List[int]
     min_df: Union[float, int]
     max_df: Union[float, int]
-    # lowercase: bool
-    # strip_accents: Optional[Any]
-    # bm25_weighting: bool
     n_neighbors: int
     n_components: int
     min_dist: float
@@ -171,9 +196,9 @@ def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -
         if n_clusters == 1:
             return eps * 0.3
             
-        # Absolute limits based on practicality
-        min_practical_clusters = max(2, n_docs // 1000)  # At least 1 cluster per 1000 docs
-        max_practical_clusters = min(n_docs // 10, 100)  # At most 1 cluster per 10 docs, max 100
+        # Absolute limits based on practicality using constants
+        min_practical_clusters = max(MIN_CLUSTERS, n_docs // MAX_CLUSTER_RATIO)
+        max_practical_clusters = min(n_docs // MIN_CLUSTER_RATIO, 100)
         
         if n_clusters < min_practical_clusters or n_clusters > max_practical_clusters:
             return eps * 0.1
@@ -213,6 +238,83 @@ def evaluate_cluster_count(n_clusters: int, n_docs: int, eps: float = EPSILON) -
     except Exception:
         return eps
 
+def _get_umap_embeddings(model, labels):
+    """
+    Helper function to extract UMAP embeddings from the model safely.
+    
+    Args:
+        model: Trained BERTopic model
+        labels: HDBSCAN labels array
+        
+    Returns:
+        UMAP embeddings array or None if extraction fails
+    """
+    mask = labels != -1  # Filter out noise
+    
+    umap_embeddings = None
+    
+    # Try different methods to get UMAP embeddings with priority order
+    if hasattr(model, 'umap_embeddings_') and model.umap_embeddings_ is not None:
+        umap_embeddings = model.umap_embeddings_[mask]
+    elif hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
+        umap_embeddings = model.umap_model.embedding_[mask]
+    elif hasattr(model, 'umap_model') and hasattr(model.umap_model, '_raw_data'):
+        umap_embeddings = model.umap_model._raw_data[mask]
+    
+    return umap_embeddings if (umap_embeddings is not None and 
+                              len(umap_embeddings) > 0 and 
+                              umap_embeddings.shape[1] >= 2) else None
+
+
+def _compute_silhouette_score_normalized(embeddings, labels):
+    """
+    Compute normalized silhouette score.
+    
+    Args:
+        embeddings: UMAP embeddings
+        labels: Cluster labels
+        
+    Returns:
+        Silhouette score normalized to [0, 1] range
+    """
+    try:
+        s_score = silhouette_score(embeddings, labels)
+        return (s_score + 1) / 2  # Convert from [-1,1] to [0,1]
+    except Exception:
+        return 0.5  # Default value on error
+
+
+def _compute_ch_score_normalized(embeddings, labels):
+    """
+    Compute normalized Calinski-Harabasz score.
+    
+    Args:
+        embeddings: UMAP embeddings
+        labels: Cluster labels
+        
+    Returns:
+        CH score normalized to [0, 1] range
+    """
+    try:
+        ch_score = calinski_harabasz_score(embeddings, labels)
+        
+        if ch_score > 0:
+            n_clusters = len(set(labels))
+            n_samples = len(embeddings)
+            
+            # CH score normalization: more realistic approach
+            # CH scores typically range within (log n, log n²)
+            max_expected_ch = n_samples * np.log(n_clusters + 1) * 10  # Empirical value
+            ch_score_scaled = min(ch_score / max_expected_ch, 1.0)
+            # Lower bound guarantee: avoid overly small values
+            return max(ch_score_scaled, 0.1)
+        else:
+            return 0.0
+            
+    except Exception:
+        return 0.5  # Default value on error
+
+
 def compute_cluster_score(model, eps=EPSILON):
     """
     Compute clustering quality using Silhouette and Calinski-Harabasz scores.
@@ -237,64 +339,21 @@ def compute_cluster_score(model, eps=EPSILON):
         
         # Check minimum cluster requirement
         unique_labels = set(labels[mask])
-        if len(unique_labels) < 2:
+        if len(unique_labels) < MIN_CLUSTERS:
             return eps
 
-        # UMAP 埋め込みを取得（複数の可能な属性を試す）
-        umap_embeddings = None
-
-        # 優先順位で埋め込みを取得
-        if hasattr(model, 'umap_embeddings_') and model.umap_embeddings_ is not None:
-            umap_embeddings = model.umap_embeddings_[mask]
-        elif hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
-            umap_embeddings = model.umap_model.embedding_[mask]
-        elif hasattr(model, 'umap_model') and hasattr(model.umap_model, '_raw_data'):
-            umap_embeddings = model.umap_model._raw_data[mask]
-        else:
-            # 埋め込みが取得できない場合はスキップ
+        # Get UMAP embeddings using helper function
+        umap_embeddings = _get_umap_embeddings(model, labels[mask])
+        if umap_embeddings is None:
             return eps
 
-        if umap_embeddings is None or len(umap_embeddings) == 0:
-            return eps
+        # Compute normalized scores using helper functions
+        s_score_scaled = _compute_silhouette_score_normalized(umap_embeddings, labels[mask])
+        ch_score_scaled = _compute_ch_score_normalized(umap_embeddings, labels[mask])
 
-        # 埋め込みの次元チェック
-        if umap_embeddings.shape[1] < 2:
-            return eps
-
-        # Silhouetteスコアを計算 [-1,1] → [0,1]
-        try:
-            s_score = silhouette_score(umap_embeddings, labels[mask])
-            s_score_scaled = (s_score + 1) / 2
-        except Exception:
-            s_score_scaled = 0.5  # Default on error
-
-        # Calinski-Harabasz score normalization
-        try:
-            ch_score = calinski_harabasz_score(umap_embeddings, labels[mask])
-
-            # CHスコアの正規化：より現実的な方法
-            n_clusters = len(unique_labels)
-            n_samples = len(umap_embeddings)
-
-            if ch_score > 0:
-                # CHスコアは(log n, log n²)の範囲になることが多い
-                # より良い正規化: 経験的な最大値で除算
-                # CHスコアの典型的な範囲を考慮した動的正規化
-                max_expected_ch = n_samples * np.log(n_clusters + 1) * 10  # 経験値
-                ch_score_scaled = min(ch_score / max_expected_ch, 1.0)
-                # 下限保証: あまりにも小さな値を避ける
-                ch_score_scaled = max(ch_score_scaled, 0.1)
-            else:
-                ch_score_scaled = 0.0
-
-        except Exception:
-            ch_score_scaled = 0.5  # エラー時は中間値を使用
-
-        # 重み付き組み合わせ（Silhouetteをより重視）
+        # Combined weighted score (Silhouette weighted higher)
         combined_score = 0.6 * s_score_scaled + 0.4 * ch_score_scaled
-        combined_score = np.clip(combined_score, eps, 1.0)
-
-        return combined_score
+        return np.clip(combined_score, eps, 1.0)
 
     except Exception:
         return eps
@@ -330,7 +389,7 @@ def get_advanced_pruner(trial_count: int) -> MedianPruner:
     """
     
     # Early pruning: Aggressive cost-saving
-    if trial_count < 20:
+    if trial_count < EARLY_PRUNING_THRESHOLD:
         return HyperbandPruner(
             min_resource=1,
             max_resource=10,
@@ -339,7 +398,7 @@ def get_advanced_pruner(trial_count: int) -> MedianPruner:
         )
     
     # Mid optimization: Balanced approach  
-    elif trial_count < 100:
+    elif trial_count < MID_OPTIMIZATION_THRESHOLD:
         return SuccessiveHalvingPruner(
             min_resource=1,
             reduction_factor=2
@@ -353,6 +412,79 @@ def get_advanced_pruner(trial_count: int) -> MedianPruner:
             interval_steps=5            # Consider pruning every 5 steps
         )
 
+def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[int, int]:
+    """
+    Suggest clustering parameters with constraints.
+    
+    Args:
+        trial: Optuna trial object
+        dataset_size: Size of the dataset
+        
+    Returns:
+        Tuple of (min_cluster_size, min_samples)
+    """
+    # Core clustering parameters (optimized for practical cluster counts)
+    min_cluster_size_lower = max(5, dataset_size // MAX_CLUSTER_RATIO)
+    min_cluster_size_upper = min(100, dataset_size // MIN_CLUSTER_RATIO)
+    min_cluster_size = trial.suggest_int("min_cluster_size", min_cluster_size_lower, min_cluster_size_upper)
+    
+    # min_samples scales with min_cluster_size (important constraint!)
+    min_samples_max = max(3, int(min_cluster_size * 0.8))
+    min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
+    
+    return min_cluster_size, min_samples
+
+
+def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[List[int], int, float]:
+    """
+    Suggest text vectorization parameters with constraints.
+    
+    Args:
+        trial: Optuna trial object
+        dataset_size: Size of the dataset
+        
+    Returns:
+        Tuple of (ngram_range, min_df, max_df)
+    """
+    ngram_range = trial.suggest_categorical("ngram_range", [[1,2], [1,3]])
+    
+    # min_df vs max_df relationship (crucial!)
+    min_df = trial.suggest_int("min_df", 2, min(10, dataset_size // 100))
+    # max_df is a float in (0, 1], must be > min_df/doc_count
+    min_df_ratio = min_df / dataset_size
+    max_df_min = min_df_ratio + 0.01  # ensure max_df > min_df/doc_count
+    max_df = trial.suggest_float("max_df", max_df_min, 0.95)
+    
+    return ngram_range, min_df, max_df
+
+
+def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[int, int, float, float]:
+    """
+    Suggest UMAP dimensionality reduction parameters.
+    
+    Args:
+        trial: Optuna trial object  
+        dataset_size: Size of the dataset
+        
+    Returns:
+        Tuple of (n_neighbors, n_components, min_dist, spread)
+    """
+    # UMAP parameters with truly appropriate bounds
+    practical_max = min(int(dataset_size * UMAP_NEIGHBORS_RATIO), UMAP_MAX_NEIGHBORS)
+    
+    # UMAP n_neighbors should be independent of clustering parameters
+    n_neighbors = trial.suggest_int("n_neighbors", 5, practical_max)
+    
+    n_components = trial.suggest_int("n_components", 
+                                  max(UMAP_MIN_COMPONENTS, int(np.log10(dataset_size))), 
+                                  min(UMAP_MAX_COMPONENTS, dataset_size // 100))
+    
+    min_dist = trial.suggest_float("min_dist", 0.0, 0.5)
+    spread = trial.suggest_float("spread", 0.8, 1.3)  # Narrower range for more stable results
+    
+    return n_neighbors, n_components, min_dist, spread
+
+
 def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
     """
     Suggest parameters with intelligent constraints and interdependencies.
@@ -364,57 +496,15 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     - Focus on practical cluster count ranges (5-50 clusters preferred)
     """
     
-    # Core clustering parameters (optimized for practical cluster counts)
-    # Aim for clusters representing 20-500 documents each (more reasonable range)
-    min_cluster_size_lower = max(5, dataset_size // 500)  # At least 5 documents per cluster
-    min_cluster_size_upper = min(100, dataset_size // 20) # At most 1 cluster per 20 docs
-    min_cluster_size = trial.suggest_int("min_cluster_size", min_cluster_size_lower, min_cluster_size_upper)
-    
-    # min_samples scales with min_cluster_size (important constraint!)
-    # More lenient constraint: min_samples can be up to 80% of min_cluster_size
-    min_samples_max = max(3, int(min_cluster_size * 0.8))
-    min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
-    
-    # Text preprocessing parameters
-    ngram_range = trial.suggest_categorical("ngram_range", [[1,2], [1,3]])
-    
-    # min_df vs max_df relationship (crucial!)
-    # More conservative min_df to avoid overfiltering
-    min_df = trial.suggest_int("min_df", 2, min(10, dataset_size // 100))
-    # max_df is a float in (0, 1], must be > min_df/doc_count
-    min_df_ratio = min_df / dataset_size
-    max_df_min = min_df_ratio + 0.01  # ensure max_df > min_df/doc_count
-    max_df = trial.suggest_float("max_df", max_df_min, 0.95)
-    
-    # Embedding model parameters
-    # lowercase = trial.suggest_categorical("lowercase", [True, False])
-    # strip_accents = trial.suggest_categorical("strip_accents", [None, "ascii", "unicode"])
-    # bm25_weighting = trial.suggest_categorical("bm25_weighting", [True, False])
-    
-    # UMAP parameters with truly appropriate bounds (independent of min_cluster_size)
-    # UMAP best practice: n_neighbors should be 1-3% of dataset size for balanced local/global structure
-    practical_max = min(int(dataset_size * 0.03), 50)  # Max 3% of dataset or 50, whichever is smaller
-    
-    # UMAP n_neighbors should be independent of clustering parameters
-    # Use fixed reasonable range based only on dataset characteristics
-    n_neighbors = trial.suggest_int("n_neighbors", 
-                                  5,  # Minimum for UMAP to work
-                                  practical_max)
-    
-    n_components = trial.suggest_int("n_components", 
-                                  max(2, int(np.log10(dataset_size))), 
-                                  min(15, dataset_size // 100))  # More conservative upper bound
-    
-    min_dist = trial.suggest_float("min_dist", 0.0, 0.5)
-    spread = trial.suggest_float("spread", 0.8, 1.3)  # Narrower range for more stable results
+    # Get parameter groups using helper functions
+    min_cluster_size, min_samples = _suggest_clustering_parameters(trial, dataset_size)
+    ngram_range, min_df, max_df = _suggest_vectorization_parameters(trial, dataset_size)
+    n_neighbors, n_components, min_dist, spread = _suggest_umap_parameters(trial, dataset_size)
     
     return Hyperparameters(
         ngram_range=ngram_range,
         min_df=min_df,
         max_df=max_df,
-        # lowercase=lowercase,
-        # strip_accents=strip_accents,
-        # bm25_weighting=bm25_weighting,
         n_neighbors=n_neighbors,
         n_components=n_components,
         min_dist=min_dist,
@@ -422,6 +512,102 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
         min_cluster_size=min_cluster_size,
         min_samples=min_samples
     )
+
+def _create_bertopic_model(params: Hyperparameters) -> BERTopic:
+    """
+    Create a BERTopic model with the given hyperparameters.
+    
+    Args:
+        params: Hyperparameter configuration
+        
+    Returns:
+        Configured BERTopic model instance
+    """
+    vectorizer_model = CountVectorizer(
+        stop_words="english",
+        ngram_range=tuple(params.ngram_range),
+        min_df=params.min_df,
+        max_df=params.max_df,
+        lowercase=False,
+        strip_accents="unicode"
+    )
+    ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
+    umap_model = UMAP(
+        n_neighbors=params.n_neighbors,
+        n_components=params.n_components,
+        metric='cosine',
+        min_dist=params.min_dist,
+        spread=params.spread,
+        random_state=42,
+        low_memory=False  # Better for pruned early termination
+    )
+    hdbscan_model = HDBSCAN(
+        min_cluster_size=params.min_cluster_size,
+        min_samples=params.min_samples,
+        metric='euclidean',
+        prediction_data=False
+    )
+    
+    return BERTopic(
+        vectorizer_model=vectorizer_model,
+        ctfidf_model=ctfidf_model,
+        umap_model=umap_model,
+        hdbscan_model=hdbscan_model,
+        embedding_model=EMBEDDING_MODEL,
+        calculate_probabilities=False,
+        verbose=False
+    )
+
+
+def _calculate_composite_score(coherence: float, diversity: float, 
+                              cluster_score: float, cluster_validity: float,
+                              eps: float = EPSILON) -> float:
+    """
+    Calculate weighted composite score from individual components.
+    
+    Args:
+        coherence: Topic coherence score
+        diversity: Topic diversity score
+        cluster_score: Clustering quality score
+        cluster_validity: Cluster count validity score
+        eps: Minimum epsilon value
+        
+    Returns:
+        Composite optimization score between 0 and 1
+    """
+    # Check which scores are valid for weight adjustment
+    valid_scores = {
+        'coherence': coherence > eps,
+        'diversity': diversity > eps,
+        'cluster': cluster_score > eps,
+        'validity': cluster_validity > eps
+    }
+
+    if sum(valid_scores.values()) == 0:
+        return eps
+
+    # Adjust weights for valid scores only and normalize
+    adjusted_weights = {}
+    total_weight = sum(SCORE_WEIGHTS[k] for k in SCORE_WEIGHTS.keys() if valid_scores[k])
+    
+    for key in SCORE_WEIGHTS:
+        if valid_scores[key]:
+            adjusted_weights[key] = SCORE_WEIGHTS[key] / total_weight
+        else:
+            adjusted_weights[key] = 0
+
+
+
+    # Calculate composite score with best practice multi-objective approach
+    base_score = (
+        adjusted_weights['coherence'] * coherence +
+        adjusted_weights['diversity'] * diversity +
+        adjusted_weights['cluster'] * cluster_score +
+        adjusted_weights['validity'] * cluster_validity
+    )
+    
+    return np.clip(base_score, eps, 1.0)
+
 
 def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray, eps: float = EPSILON) -> float:
     """
@@ -448,37 +634,8 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
     params = suggest_constrained_parameters(trial, dataset_size)
 
     try:
-        # Step 2: Train model with pruning-friendly checkpointing
-        dataset_size = len(texts)
-        model = BERTopic(
-            vectorizer_model=CountVectorizer(
-                stop_words="english",
-                ngram_range=tuple(params.ngram_range),
-                min_df=params.min_df,
-                max_df=params.max_df,
-                lowercase=False,
-                strip_accents="unicode"
-            ),
-            ctfidf_model=ClassTfidfTransformer(bm25_weighting=True),
-            umap_model=UMAP(
-                n_neighbors=params.n_neighbors,
-                n_components=params.n_components,
-                metric='cosine',
-                min_dist=params.min_dist,
-                spread=params.spread,
-                random_state=42,
-                low_memory=False  # Better for pruned early termination
-            ),
-            hdbscan_model=HDBSCAN(
-                min_cluster_size=params.min_cluster_size,
-                min_samples=params.min_samples,
-                metric='euclidean',
-                prediction_data=False
-            ),
-            embedding_model=EMBEDDING_MODEL,
-            calculate_probabilities=False,
-            verbose=False
-        )
+        # Step 2: Train model using helper function
+        model = _create_bertopic_model(params)
 
         # Step 3: Efficient evaluation with early termination hooks
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
@@ -497,62 +654,33 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         cluster_score = compute_cluster_score(model, eps=eps)
         cluster_validity = evaluate_cluster_count(n_clusters, dataset_size, eps)
 
-        # Step 5: Enhanced composite scoring with stability measures
-        base_weights = SCORE_WEIGHTS.copy()
-        
-        # Check which scores are valid for weight adjustment
-        valid_scores = {
-            'coherence': coherence > eps,
-            'diversity': diversity > eps,
-            'cluster': cluster_score > eps,
-            'validity': cluster_validity > eps
-        }
-
-        if sum(valid_scores.values()) == 0:
-            return eps
-
-        # Adjust weights for valid scores only and normalize
-        adjusted_weights = {}
-        total_weight = sum(base_weights[k] for k in base_weights.keys() if valid_scores[k])
-        
-        for key in base_weights:
-            if valid_scores[key]:
-                adjusted_weights[key] = base_weights[key] / total_weight
-            else:
-                adjusted_weights[key] = 0
-
-        # Calculate composite score with best practice multi-objective approach
-        base_score = (
-            adjusted_weights['coherence'] * coherence +
-            adjusted_weights['diversity'] * diversity +
-            adjusted_weights['cluster'] * cluster_score +
-            adjusted_weights['validity'] * cluster_validity
-        )
+        # Step 5: Calculate composite score using helper function
+        base_score = _calculate_composite_score(coherence, diversity, cluster_score, cluster_validity, eps)
         
         # Step 6: Apply intelligent penalties and rewards
         final_score = base_score
         
         # Enhanced cluster count validation with new scoring system
-        if n_clusters < 2:
-            final_score *= 0.1  # Very harsh penalty for no/few clusters
-        elif n_clusters > dataset_size // 10:
-            final_score *= 0.3  # Penalty for excessive clusters
-        elif 8 <= n_clusters <= 25:
-            final_score *= 1.05  # Bonus for practical cluster ranges
+        if n_clusters < MIN_CLUSTERS:
+            final_score *= HVARSH_PENALTY_FACTOR  # Very harsh penalty for no/few clusters
+        elif n_clusters > dataset_size // MIN_CLUSTER_RATIO:
+            final_score *= EXCESSIVE_CLUSTERS_FACTOR  # Penalty for excessive clusters
+        elif DEFAULT_BONUS_CLUSTER_RANGE[0] <= n_clusters <= DEFAULT_BONUS_CLUSTER_RANGE[1]:
+            final_score *= BONUS_SCORE_FACTOR  # Bonus for practical cluster ranges
         
         # Balanced parameter combinations penalty
         cluster_size_ratio = params.min_cluster_size / dataset_size
-        if cluster_size_ratio > 0.05:  # min_cluster_size > 5% of dataset
-            final_score *= 0.9  # Penalty for overly restrictive clustering
-        elif cluster_size_ratio < 0.002:  # min_cluster_size < 0.2% of dataset  
-            final_score *= 0.95  # Slight penalty for too loose clustering
+        if cluster_size_ratio > CLUSTER_SIZE_PENALTY_THRESHOLD:  # min_cluster_size > threshold
+            final_score *= RESTRICTIVE_CLUSTERING_FACTOR  # Penalty for overly restrictive clustering
+        elif cluster_size_ratio < CLUSTER_SIZE_MIN_THRESHOLD:  # min_cluster_size < threshold
+            final_score *= LOOSE_CLUSTERING_FACTOR  # Slight penalty for too loose clustering
         
         # n_neighbors appropriateness penalty (encourage moderate values)
         neighbor_ratio = params.n_neighbors / dataset_size
-        if neighbor_ratio > 0.03:  # n_neighbors > 3% of dataset
-            final_score *= 0.85  # Penalty for overly large n_neighbors
-        elif neighbor_ratio > 0.02:  # n_neighbors > 2% of dataset
-            final_score *= 0.95  # Light penalty for large n_neighbors
+        if neighbor_ratio > UMAP_NEIGHBORS_RATIO:  # n_neighbors > threshold
+            final_score *= VERY_LARGE_NEIGHBORS_FACTOR  # Penalty for overly large n_neighbors
+        elif neighbor_ratio > NEIGHBOR_RATIO_THRESHOLD:  # n_neighbors > threshold
+            final_score *= LARGE_NEIGHBORS_FACTOR  # Light penalty for large n_neighbors
         
         # Store additional metrics for analysis (best practice)
         trial.set_user_attr("n_clusters", n_clusters)
