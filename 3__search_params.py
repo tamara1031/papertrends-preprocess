@@ -7,8 +7,9 @@ import json
 import numpy as np
 
 import optuna
+import optuna.exceptions
 from optuna.samplers import TPESampler
-from optuna.pruners import MedianPruner, HyperbandPruner, SuccessiveHalvingPruner
+from optuna.pruners import MedianPruner
 from bertopic import BERTopic
 from umap import UMAP
 from hdbscan import HDBSCAN
@@ -28,7 +29,6 @@ EPSILON = 1e-6
 EMBEDDING_MODEL = get_custom_embedding_model()
 
 # Clustering constraints
-MIN_CLUSTERS = 2
 MIN_CLUSTER_RATIO = 20  # Min cluster size = dataset_size // MIN_CLUSTER_RATIO
 MAX_CLUSTER_RATIO = 500  # Max cluster size = dataset_size // MAX_CLUSTER_RATIO
 
@@ -38,9 +38,6 @@ UMAP_MAX_NEIGHBORS = 50  # Absolute maximum for n_neighbors
 UMAP_MIN_COMPONENTS = 2
 UMAP_MAX_COMPONENTS = 15
 
-# Optimization limits
-EARLY_PRUNING_THRESHOLD = 20
-MID_OPTIMIZATION_THRESHOLD = 100
 
 def get_papers(category: str) -> List[Paper]:
     """Load papers from preprocessed data for the given category."""
@@ -173,31 +170,13 @@ def get_adaptive_sampler(study_name: str, dataset_size: int) -> TPESampler:
         seed=42
     )
 
-def get_advanced_pruner(trial_count: int) -> MedianPruner:
-    
-    # Early pruning: Aggressive cost-saving
-    if trial_count < EARLY_PRUNING_THRESHOLD:
-        return HyperbandPruner(
-            min_resource=1,
-            max_resource=10,
-            reduction_factor=3,
-            bootstrap_count=0  # Compatible with fixed max_resource
-        )
-    
-    # Mid optimization: Balanced approach  
-    elif trial_count < MID_OPTIMIZATION_THRESHOLD:
-        return SuccessiveHalvingPruner(
-            min_resource=1,
-            reduction_factor=2
-        )
-    
-    # Late optimization: Conservative pruning
-    else:
-        return MedianPruner(
-            n_startup_trials=20,        # Wait for enough trials
-            n_warmup_steps=5,           # Some steps without pruning
-            interval_steps=5            # Consider pruning every 5 steps
-        )
+def get_advanced_pruner() -> MedianPruner:
+    """Simple but effective pruner for clustering optimization."""
+    return MedianPruner(
+        n_startup_trials=10,        # Wait for enough trials to start pruning
+        n_warmup_steps=3,           # Some steps without pruning  
+        interval_steps=3            # Consider pruning every 3 steps
+    )
 
 def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> tuple[int, int]:
     # Core clustering parameters (optimized for practical cluster counts)
@@ -314,14 +293,19 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
         topic_info = model.get_topic_info()
         n_clusters = len(topic_info[topic_info['Topic'] != -1])
         
-        # Step 4: Topic coherence evaluation
-        coherence_score = compute_cluster_score(model, eps=eps)
+        # Early termination if no valid clusters found
+        if n_clusters == 0:
+            trial.report(eps, 0)
+            raise optuna.exceptions.TrialPruned()
+        
+        # Step 4: Evaluate clustering quality with combined coherence and DBCV scores
+        combined_score = compute_cluster_score(model, eps=eps)
         
         # Store key metrics for analysis
         trial.set_user_attr("n_clusters", n_clusters)
-        trial.set_user_attr("coherence_score", float(coherence_score))
+        trial.set_user_attr("combined_score", float(combined_score))
         
-        return coherence_score
+        return combined_score
 
     except Exception as e:
         # Graceful failure handling for clustering optimization
@@ -348,13 +332,13 @@ def run_one_category(category: str, timeout: int = 10*60, storage: Optional[str]
         direction="maximize",
         study_name=study_name,
         sampler=get_adaptive_sampler(study_name, dataset_size),
-        pruner=get_advanced_pruner(dataset_size)
+        pruner=get_advanced_pruner()
     )
 
-    # Step 3: Run optimization with best practices
+    # Step 3: Run optimization with appropriate trial count
     try:
-        # For small datasets, use fewer trials but longer timeout per trial
-        n_trials = max(50, min(200, dataset_size // 20))
+        # Scale trial count based on dataset size
+        n_trials = min(100, max(30, dataset_size // 50))
 
         study.optimize(
             lambda trial: objective(trial, texts, text_embeddings),
