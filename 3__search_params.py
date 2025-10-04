@@ -80,12 +80,12 @@ class OptimizationConfig:
     
     # Text processing
     TOP_N_WORDS_RANGE = (10, 30)
-    NGRAM_RANGES = [[1, 1], [1, 2], [1, 3]]
+    NGRAM_RANGES = [[1, 2], [1, 3]]
     
     # TF-IDF bounds (percentage-based for robustness)
-    MIN_DF_PERCENT_LIMIT = 0.01    # 1% maximum
-    MAX_DF_MIN_BUFFER = 0.005      # 0.5% minimum buffer
-    MAX_DF_MIN_SAFE = 0.015        # 1.5% absolute minimum
+    MIN_DF_PERCENT_MAX = 0.01    # 1% maximum(2 minimum)
+    MAX_DF_PERCENT_MIN = 0.10    # 30% minimum
+    MAX_DF_PERCENT_MAX = 0.95    # 95% maximum
 
 
 # ============================================================================
@@ -346,18 +346,13 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
     # Both integer count approach to guarantee CountVectorizer constraint satisfaction
-    min_df_max = min(5, max(2, dataset_size // 500))
+    min_df_max = int(OptimizationConfig.MIN_DF_PERCENT_MAX * dataset_size)
     min_df = trial.suggest_int("min_df", 2, min_df_max)
     
-    # max_df as integer count - MUST be > min_df
-    max_df_min_count = min_df + 1  # At least 1 more document than min_df
-    
     # Flexible upper bound: ensure reasonable search range
-    reasonable_range = min_df + min(5000, dataset_size // 4)  # Good range for exploration
-    dataset_95_percent = int(dataset_size * 0.95)
-    max_df_max_count = min(reasonable_range, dataset_95_percent)
-    
-    max_df = trial.suggest_int("max_df", max_df_min_count, max_df_max_count)
+    max_df_min = int(OptimizationConfig.MAX_DF_PERCENT_MIN * dataset_size)
+    max_df_max = int(OptimizationConfig.MAX_DF_PERCENT_MAX * dataset_size)
+    max_df = trial.suggest_int("max_df", max_df_min, max_df_max)
     
     return top_n_words, ngram_range, min_df, max_df
 
