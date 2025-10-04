@@ -449,9 +449,12 @@ def suggest_constrained_parameters(trial: optuna.Trial, dataset_size: int) -> Hy
     strip_accents = trial.suggest_categorical("strip_accents", [None, "ascii", "unicode"])
     bm25_weighting = trial.suggest_categorical("bm25_weighting", [True, False])
     
-    # UMAP parameters with intelligent bounds
-    max_neighbors = min(dataset_size // 20, 150)  # More conservative upper bound
-    n_neighbors = trial.suggest_int("n_neighbors", max(5, min_cluster_size), max_neighbors)
+    # UMAP parameters with truly appropriate bounds
+    # UMAP best practice: n_neighbors should be 1-3% of dataset size for balanced local/global structure
+    practical_max = min(int(dataset_size * 0.03), 50)  # Max 3% of dataset or 50, whichever is smaller
+    n_neighbors = trial.suggest_int("n_neighbors", 
+                                  max(5, min_cluster_size), 
+                                  practical_max)
     
     n_components = trial.suggest_int("n_components", 
                                   max(2, int(np.log10(dataset_size))), 
@@ -598,6 +601,13 @@ def objective(trial: optuna.Trial, texts: List[str], text_embeddings: np.ndarray
             final_score *= 0.9  # Penalty for overly restrictive clustering
         elif cluster_size_ratio < 0.002:  # min_cluster_size < 0.2% of dataset  
             final_score *= 0.95  # Slight penalty for too loose clustering
+        
+        # n_neighbors appropriateness penalty (encourage moderate values)
+        neighbor_ratio = params.n_neighbors / dataset_size
+        if neighbor_ratio > 0.03:  # n_neighbors > 3% of dataset
+            final_score *= 0.85  # Penalty for overly large n_neighbors
+        elif neighbor_ratio > 0.02:  # n_neighbors > 2% of dataset
+            final_score *= 0.95  # Light penalty for large n_neighbors
         
         # Store additional metrics for analysis (best practice)
         trial.set_user_attr("n_clusters", n_clusters)
