@@ -155,81 +155,6 @@ def load_text_embeddings(category: str) -> np.ndarray:
 # Evaluation Metrics
 # ============================================================================
 
-def _compute_word_coherence(words: List[str], model: BERTopic) -> float:
-    """Compute semantic coherence for a topic's word set using SPECTER2 embeddings."""
-    if len(words) < 2:
-        return 0.0
-    
-    try:
-        embeddings = model.embedding_model.embed(words)
-        
-        # Optimize computation based on vocabulary size
-        if len(words) <= 50:
-            similarities = []
-            for w1_idx, w2_idx in combinations(range(len(words)), 2):
-                sim = cosine_similarity([embeddings[w1_idx]], [embeddings[w2_idx]])[0, 0]
-                similarities.append(sim)
-        else:
-            similarity_matrix = cosine_similarity(embeddings)
-            upper_triangle_indices = np.triu_indices_from(similarity_matrix, k=1)
-            similarities = similarity_matrix[upper_triangle_indices]
-        
-        return np.mean(similarities) if similarities else 0.0
-        
-    except Exception as e:
-        print(f"Warning: Word coherence computation failed: {e}")
-        return 0.0
-
-
-def _compute_topic_coherence_score(model: BERTopic, eps: float = OptimizationConfig.EPSILON) -> float:
-    """Calculate document-count weighted topic coherence across all topics."""
-    # Extract topic words (exclude outlier topic -1)
-    topic_words_dict = model.get_topics()
-    topic_words_dict = {
-        k: [word for word, _ in words_tuples] 
-        for k, words_tuples in topic_words_dict.items() 
-        if k != -1
-    }
-    
-    if not topic_words_dict:
-        return eps
-    
-    # Count documents per topic
-    topic_counts = {}
-    for label in model.hdbscan_model.labels_:
-        if label != -1:  # Exclude outliers
-            topic_counts[label] = topic_counts.get(label, 0) + 1
-    
-    # Compute coherence scores for each topic
-    topic_coherences = []
-    topic_weights = []
-    
-    for topic_id, words in topic_words_dict.items():
-        if len(words) < 2:  # Skip topics with insufficient words
-            continue
-        
-        topic_coherence = _compute_word_coherence(words, model)
-        topic_coherences.append(topic_coherence)
-        
-        # Use document count as weight
-        doc_count = topic_counts.get(topic_id, 1)
-        topic_weights.append(doc_count)
-    
-    if not topic_coherences:
-        return eps
-    
-    # Calculate document-count weighted average coherence
-    topic_coherences = np.array(topic_coherences)
-    topic_weights = np.array(topic_weights)
-    
-    weighted_avg_coherence = np.average(topic_coherences, weights=topic_weights)
-    
-    # Normalize from [-1, 1] to [0, 1] range
-    normalized_coherence = (weighted_avg_coherence + 1.0) / 2.0
-    
-    return normalized_coherence
-
-
 def _compute_dbcv_score(
     model: BERTopic, 
     original_embeddings: np.ndarray, 
@@ -273,9 +198,8 @@ def compute_cluster_quality_score(
 ) -> float:
     """Compute combined clustering quality score: 20% coherence + 80% DBCV."""
     try:
-        coherence_score = _compute_topic_coherence_score(model, eps=eps)
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
-        return 0.8 * dbcv_score + 0.2 * coherence_score
+        return 1.0 * dbcv_score
     except Exception:
         return eps
 
