@@ -75,6 +75,8 @@ class ClusteringConfig:
 @dataclass
 class Hyperparameters:
     """Hyperparameters for BERTopic clustering optimization."""
+
+    top_n_words: int
     
     # Text vectorization parameters
     ngram_range: List[int]
@@ -84,25 +86,26 @@ class Hyperparameters:
     # UMAP dimensionality reduction parameters
     n_neighbors: int
     n_components: int
-    min_dist: float
-    spread: float
+    umap_metric: str
     
     # HDBSCAN clustering parameters
     min_cluster_size: int
     min_samples: int
+    hdbscan_metric: str
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert hyperparameters to dictionary format."""
         return {
+            'top_n_words': self.top_n_words,
             'ngram_range': self.ngram_range,
             'min_df': self.min_df,
             'max_df': self.max_df,
             'n_neighbors': self.n_neighbors,
             'n_components': self.n_components,
-            'min_dist': self.min_dist,
-            'spread': self.spread,
+            'umap_metric': self.umap_metric,
             'min_cluster_size': self.min_cluster_size,
-            'min_samples': self.min_samples
+            'min_samples': self.min_samples,
+            'hdbscan_metric': self.hdbscan_metric
         }
 
 
@@ -377,7 +380,7 @@ def create_median_pruner() -> MedianPruner:
 # Parameter Suggestion Functions
 # ============================================================================
 
-def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int]:
+def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
     """
     Suggest HDBSCAN clustering parameters with dataset-aware constraints.
     
@@ -386,7 +389,7 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
         dataset_size: Number of documents in dataset
         
     Returns:
-        Tuple of (min_cluster_size, min_samples)
+        Tuple of (min_cluster_size, min_samples, hdbscan_metric)
     """
     # Core clustering parameters optimized for practical cluster counts
     min_cluster_size_lower = max(5, dataset_size // ClusteringConfig.MAX_CLUSTER_RATIO)
@@ -402,10 +405,16 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
     min_samples_max = max(3, int(min_cluster_size * 0.8))
     min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
     
-    return min_cluster_size, min_samples
+    # HDBSCAN distance metric options
+    hdbscan_metric = trial.suggest_categorical(
+        "hdbscan_metric", 
+        ["euclidean", "manhattan", "cosine", "haversine"]
+    )
+    
+    return min_cluster_size, min_samples, hdbscan_metric
 
 
-def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[List[int], int, float]:
+def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, float]:
     """
     Suggest text vectorization parameters with mutual constraints.
     
@@ -414,8 +423,11 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
         dataset_size: Number of documents in dataset
         
     Returns:
-        Tuple of (ngram_range, min_df, max_df)
+        Tuple of (top_n_words, ngram_range, min_df, max_df)
     """
+    # Topic representation parameter
+    top_n_words = trial.suggest_int("top_n_words", 10, 30)
+    
     ngram_range = trial.suggest_categorical("ngram_range", [[1, 2], [1, 3]])
     
     # min_df constraint based on dataset size
@@ -431,10 +443,10 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     
     max_df = trial.suggest_float("max_df", max_df_min, max_df_max)
     
-    return ngram_range, min_df, max_df
+    return top_n_words, ngram_range, min_df, max_df
 
 
-def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, float, float]:
+def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
     """
     Suggest UMAP dimensionality reduction parameters.
     
@@ -443,7 +455,7 @@ def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[in
         dataset_size: Number of documents in dataset
         
     Returns:
-        Tuple of (n_neighbors, n_components, min_dist, spread)
+        Tuple of (n_neighbors, n_components, umap_metric)
     """
     # Constrain n_neighbors based on dataset size
     practical_max = min(
@@ -465,10 +477,12 @@ def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[in
     
     n_components = trial.suggest_int("n_components", min_components, max_components)
     
-    min_dist = trial.suggest_float("min_dist", 0.0, 0.5)
-    spread = trial.suggest_float("spread", 0.8, 1.3)  # Narrower range for stability
+    # UMAP distance metric optimized for SPECTER2 embeddings
+    # Cosine is preferred for semantic similarities, but allow optimization
+    umap_metric_options = ["cosine", "euclidean", "manhattan"]
+    umap_metric = trial.suggest_categorical("umap_metric", umap_metric_options)
     
-    return n_neighbors, n_components, min_dist, spread
+    return n_neighbors, n_components, umap_metric
 
 
 def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
@@ -482,20 +496,21 @@ def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> H
     Returns:
         Hyperparameters dataclass instance
     """
-    min_cluster_size, min_samples = _suggest_clustering_parameters(trial, dataset_size)
-    ngram_range, min_df, max_df = _suggest_vectorization_parameters(trial, dataset_size)
-    n_neighbors, n_components, min_dist, spread = _suggest_umap_parameters(trial, dataset_size)
+    min_cluster_size, min_samples, hdbscan_metric = _suggest_clustering_parameters(trial, dataset_size)
+    top_n_words, ngram_range, min_df, max_df = _suggest_vectorization_parameters(trial, dataset_size)
+    n_neighbors, n_components, umap_metric = _suggest_umap_parameters(trial, dataset_size)
     
     return Hyperparameters(
+        top_n_words=top_n_words,
         ngram_range=ngram_range,
         min_df=min_df,
         max_df=max_df,
         n_neighbors=n_neighbors,
         n_components=n_components,
-        min_dist=min_dist,
-        spread=spread,
+        umap_metric=umap_metric,
         min_cluster_size=min_cluster_size,
-        min_samples=min_samples
+        min_samples=min_samples,
+        hdbscan_metric=hdbscan_metric
     )
 
 
@@ -528,9 +543,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
     umap_model = UMAP(
         n_neighbors=params.n_neighbors,
         n_components=params.n_components,
-        metric='cosine',
-        min_dist=params.min_dist,
-        spread=params.spread,
+        metric=params.umap_metric,
         random_state=42,
         low_memory=False  # Better performance for parameter search
     )
@@ -538,8 +551,8 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
-        metric='euclidean',
-        prediction_data=False  # Not needed for optimization
+        metric=params.hdbscan_metric,
+        prediction_data=True
     )
     
     return BERTopic(
@@ -548,6 +561,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         umap_model=umap_model,
         hdbscan_model=hdbscan_model,
         embedding_model=embedding_model,
+        top_n_words=params.top_n_words,
         calculate_probabilities=False,
         verbose=False
     )
