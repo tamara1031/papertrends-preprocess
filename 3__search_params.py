@@ -55,32 +55,29 @@ class OptimizationConfig:
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
         """Get adaptive weights based on dataset size for academic papers."""
-        if dataset_size <= 5000:
+        if dataset_size <= 10000:
             # Small datasets: focus on coverage and reasonable topic counts
             return {
                 'coverage': 0.25,
-                'topic_count': 0.15,
-                'dominance': 0.15,
+                'dominance': 0.25,
                 'coherence': 0.25,
-                'topic_diversity': 0.20
+                'topic_diversity': 0.25
             }
         elif dataset_size <= 50000:
             # Medium datasets: balanced approach
             return {
                 'coverage': 0.20,
-                'topic_count': 0.10,
-                'dominance': 0.15,
+                'dominance': 0.20,
                 'coherence': 0.30,
-                'topic_diversity': 0.25
+                'topic_diversity': 0.30
             }
         else:
             # Large datasets: focus on quality and diversity
             return {
                 'coverage': 0.15,
-                'topic_count': 0.05,
                 'dominance': 0.15,
                 'coherence': 0.35,
-                'topic_diversity': 0.30
+                'topic_diversity': 0.35
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -606,7 +603,6 @@ def compute_cluster_quality_score(
         # Compute individual metrics
         topic_coverage = _compute_topic_coverage(model, eps=eps)
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
-        topic_count_score = _compute_topic_count_score(model, dataset_size, eps=eps)
         topic_diversity_score = _compute_topic_diversity_score(model, original_embeddings, eps=eps)
         coherence_score = _compute_embedding_coherence_score(model, original_embeddings, eps=eps)
         
@@ -615,15 +611,14 @@ def compute_cluster_quality_score(
         final_score = (
             weights['coverage'] * topic_coverage +
             weights['dominance'] * dominance_score +
-            weights['topic_count'] * topic_count_score +
             weights['topic_diversity'] * topic_diversity_score +
             weights['coherence'] * coherence_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, Embedding Coherence: {coherence_score:.4f}")
-        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Topic Count: {weights['topic_count']:.1%}, Topic Diversity: {weights['topic_diversity']:.1%}, Embedding Coherence: {weights['coherence']:.1%}")
+        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, Embedding Coherence: {coherence_score:.4f}")
+        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Topic Diversity: {weights['topic_diversity']:.1%}, Embedding Coherence: {weights['coherence']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
