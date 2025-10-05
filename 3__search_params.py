@@ -418,23 +418,12 @@ def _compute_cluster_balance_score(
         
         size_balance = 0.7 * dominance_score + 0.3 * variance_score
 
-        # === Cluster Count Adequacy ===
-        # Simple optimal range: sqrt(n) to n/20
-        min_optimal = max(3, int(np.sqrt(dataset_size)))
-        max_optimal = max(min_optimal * 3, dataset_size // 20)
-        
-        if n_topics < min_optimal:
-            count_score = max(eps, n_topics / min_optimal)
-        elif n_topics > max_optimal:
-            count_score = max(eps, max_optimal / n_topics)
-        else:
-            count_score = 1.0
-
         # === Final Score ===
-        final_score = 0.6 * size_balance + 0.4 * count_score
+        # Use only size_balance as it naturally promotes optimal topic count
+        final_score = size_balance
         
-        print(f"[Balance] Topics: {n_topics}, Dominance: {dominance_score:.3f}, Variance: {variance_score:.3f}, Count: {count_score:.3f}")
-        print(f"  Range: {min_optimal}-{max_optimal}, Dominance ratio: {dominance_ratio:.3f}, Final: {final_score:.3f}")
+        print(f"[Balance] Topics: {n_topics}, Dominance: {dominance_score:.3f}, Variance: {variance_score:.3f}")
+        print(f"  Dominance ratio: {dominance_ratio:.3f}, Size balance: {size_balance:.3f}, Final: {final_score:.3f}")
 
         return float(np.clip(final_score, eps, 1.0))
 

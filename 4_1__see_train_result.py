@@ -2,7 +2,8 @@ import pickle
 from bertopic import BERTopic
 from common.utils import get_custom_embedding_model
 
-EMBEDDING_MODEL = get_custom_embedding_model()
+EMBEDDING_MODEL = None
+# EMBEDDING_MODEL = get_custom_embedding_model()
 
 def load_model(category: str):
     model = BERTopic.load(f"./models/{category}", embedding_model=EMBEDDING_MODEL)
