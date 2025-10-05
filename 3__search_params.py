@@ -337,83 +337,6 @@ def _compute_dbcv_score(
     return max(0.0, min(1.0, normalized_score))
 
 
-def _compute_topic_diversity(
-    model: BERTopic, 
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute topic diversity based on cosine similarity of word vectors.
-    
-    Topic diversity measures how distinct topics are from each other by evaluating
-    the overlap of representative words between topics. Higher diversity indicates
-    more distinct and non-overlapping topics.
-    
-    Args:
-        model: Trained BERTopic model
-        eps: Small epsilon for numerical stability
-        
-    Returns:
-        Topic diversity score in range [0, 1] where 1 indicates maximum diversity
-    """
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        
-        if len(valid_topics) < 2:
-            return eps
-        
-        # Get all unique words across topics (top 10 words per topic)
-        all_words = set()
-        topic_word_lists = []
-        
-        for _, row in valid_topics.iterrows():
-            topic_id = row['Topic']
-            words = model.get_topic(topic_id)
-            if words:
-                # Extract top 10 words from each topic
-                word_list = [word[0] for word in words[:10]]
-                topic_word_lists.append(word_list)
-                all_words.update(word_list)
-        
-        if len(topic_word_lists) < 2:
-            return eps
-        
-        # Create binary vectors for each topic
-        all_words = list(all_words)
-        topic_vectors = []
-        
-        for word_list in topic_word_lists:
-            # Binary vector: 1 if word exists in topic, 0 otherwise
-            vector = [1 if word in word_list else 0 for word in all_words]
-            topic_vectors.append(vector)
-        
-        # Calculate cosine similarity matrix between topics
-        topic_vectors = np.array(topic_vectors)
-        similarity_matrix = cosine_similarity(topic_vectors)
-        
-        # Extract upper triangle similarities (excluding diagonal)
-        similarities = []
-        for i in range(len(similarity_matrix)):
-            for j in range(i + 1, len(similarity_matrix)):
-                similarities.append(similarity_matrix[i, j])
-        
-        if not similarities:
-            return eps
-        
-        # Calculate average similarity between all topic pairs
-        avg_similarity = np.mean(similarities)
-        
-        # Diversity = 1 - average similarity
-        # Higher similarity -> lower diversity, lower similarity -> higher diversity
-        diversity = 1.0 - avg_similarity
-        
-        # Ensure output is in valid range [0, 1]
-        return max(eps, min(1.0, diversity))
-    
-    except Exception as e:
-        print(f"Warning: Topic diversity (cosine) computation failed: {e}")
-        return eps
-
-
 def _compute_topic_coverage(
     model: BERTopic, 
     eps: float = OptimizationConfig.EPSILON
@@ -470,17 +393,14 @@ def compute_cluster_quality_score(
         
         # Compute individual metrics
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
-        topic_diversity = _compute_topic_diversity(model, eps=eps)
         topic_coverage = _compute_topic_coverage(model, eps=eps)
         
-        # Weighted combination of metrics (rebalanced for better optimization)
-        # DBCV: 50% (density-based clustering quality)
-        # Topic Diversity: 30% (word overlap between topics) 
-        # Topic Coverage: 20% (document coverage)
+        # Weighted combination of metrics (simplified to avoid redundancy)
+        # DBCV: 70% (density-based clustering quality - includes separation)
+        # Topic Coverage: 30% (document coverage - unique metric)
         combined_score = (
-            0.50 * dbcv_score +
-            0.30 * topic_diversity +
-            0.20 * topic_coverage
+            0.70 * dbcv_score +
+            0.30 * topic_coverage
         )
         
         return combined_score
