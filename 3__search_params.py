@@ -18,6 +18,9 @@ from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import pairwise_distances
 from hdbscan.validity import validity_index
+from scipy.stats import entropy
+from scipy.spatial.distance import pdist, squareform
+from sklearn.metrics.pairwise import cosine_similarity
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel
@@ -287,7 +290,7 @@ def _compute_topic_diversity(
     model: BERTopic, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute topic diversity based on topic word overlap."""
+    """Compute topic diversity based on cosine similarity of word vectors."""
     try:
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
@@ -295,40 +298,73 @@ def _compute_topic_diversity(
         if len(valid_topics) < 2:
             return eps
         
-        # Get top words for each topic
-        topic_words = []
+        # Get all unique words across topics
+        all_words = set()
+        topic_word_lists = []
+        
         for _, row in valid_topics.iterrows():
             topic_id = row['Topic']
             words = model.get_topic(topic_id)
             if words:
-                # Extract just the words (first element of each tuple)
-                word_list = [word[0] for word in words[:10]]  # Top 10 words
-                topic_words.append(set(word_list))
+                word_list = [word[0] for word in words[:10]]
+                topic_word_lists.append(word_list)
+                all_words.update(word_list)
         
-        if len(topic_words) < 2:
+        if len(topic_word_lists) < 2:
             return eps
         
-        # Calculate pairwise Jaccard similarity
+        # Create binary vectors for each topic
+        all_words = list(all_words)
+        topic_vectors = []
+        
+        for word_list in topic_word_lists:
+            vector = [1 if word in word_list else 0 for word in all_words]
+            topic_vectors.append(vector)
+        
+        # Calculate cosine similarity matrix
+        topic_vectors = np.array(topic_vectors)
+        similarity_matrix = cosine_similarity(topic_vectors)
+        
+        # Get upper triangle (excluding diagonal)
         similarities = []
-        for i in range(len(topic_words)):
-            for j in range(i + 1, len(topic_words)):
-                intersection = len(topic_words[i] & topic_words[j])
-                union = len(topic_words[i] | topic_words[j])
-                if union > 0:
-                    jaccard_sim = intersection / union
-                    similarities.append(jaccard_sim)
+        for i in range(len(similarity_matrix)):
+            for j in range(i + 1, len(similarity_matrix)):
+                similarities.append(similarity_matrix[i, j])
         
         if not similarities:
             return eps
         
-        # Diversity = 1 - average similarity (higher is better)
+        # Diversity = 1 - average similarity
         avg_similarity = np.mean(similarities)
         diversity = 1.0 - avg_similarity
         
         return max(eps, min(1.0, diversity))
     
     except Exception as e:
-        print(f"Warning: Topic diversity computation failed: {e}")
+        print(f"Warning: Topic diversity (cosine) computation failed: {e}")
+        return eps
+
+
+def _compute_topic_coverage(
+    model: BERTopic, 
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute topic coverage - how well topics cover the documents."""
+    try:
+        labels = model.hdbscan_model.labels_
+        total_docs = len(labels)
+        
+        if total_docs == 0:
+            return eps
+        
+        # Count documents assigned to topics (excluding noise -1)
+        assigned_docs = (labels != -1).sum()
+        coverage = assigned_docs / total_docs
+        
+        return max(eps, min(1.0, coverage))
+    
+    except Exception as e:
+        print(f"Warning: Topic coverage computation failed: {e}")
         return eps
 
 
@@ -350,13 +386,16 @@ def compute_cluster_quality_score(
         # Compute individual metrics
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         topic_diversity = _compute_topic_diversity(model, eps=eps)
+        topic_coverage = _compute_topic_coverage(model, eps=eps)
         
         # Weighted combination of metrics
-        # DBCV: 70% (density-based clustering quality including separation)
-        # Topic Diversity: 30% (word overlap between topics - unique to topic modeling)
+        # DBCV: 70% (density-based clustering quality including cohesion)
+        # Topic Diversity: 20% (word overlap between topics)
+        # Topic Coverage: 10% (document coverage)
         combined_score = (
-            0.70 * dbcv_score +
-            0.30 * topic_diversity
+            0.60 * dbcv_score +
+            0.30 * topic_diversity +
+            0.10 * topic_coverage
         )
         
         return combined_score
