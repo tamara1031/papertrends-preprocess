@@ -40,7 +40,7 @@ class OptimizationConfig:
     
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout
-    DEFAULT_N_TRIALS = 30
+    DEFAULT_N_TRIALS = 90
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -65,7 +65,7 @@ class OptimizationConfig:
     def get_max_df_range(dataset_size: int) -> Tuple[float, float]:
         """Get max_df range (conservative for academic abstracts)."""
         min_val = int(0.15 * dataset_size)  
-        max_val = int(0.85 * dataset_size) 
+        max_val = int(0.95 * dataset_size) 
         return (min_val, max_val) 
     
     @staticmethod
