@@ -457,6 +457,12 @@ def _compute_cluster_balance_score(
         # Weighted combination: 60% size balance, 40% count adequacy
         combined_score = 0.6 * size_balance_score + 0.4 * count_score
         
+        # Output detailed balance score breakdown
+        print(f"  Balance Details:")
+        print(f"    Size Balance: {size_balance_score:.4f} (Dominance: {dominance_score:.4f}, Variance: {variance_score:.4f})")
+        print(f"    Count Adequacy: {count_score:.4f} (Topics: {n_topics}, Optimal: {min_optimal}-{max_optimal})")
+        print(f"    Dominance Ratio: {dominance_ratio:.3f} (Threshold: {OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD})")
+        
         return min(1.0, combined_score)
         
     except Exception as e:
@@ -479,6 +485,7 @@ def compute_cluster_quality_score(
         
         # Apply penalty if number of topics is 1 or fewer (more lenient)
         if n_topics <= 1:
+            print(f"Warning: Too few topics ({n_topics}), returning low score")
             return 0.1  # Return low score for too few topics
         
         # Compute individual metrics
@@ -493,10 +500,17 @@ def compute_cluster_quality_score(
             OptimizationConfig.BALANCE_WEIGHT * cluster_balance_score
         )
         
+        # Output individual scores for debugging
+        print(f"Scores - DBCV: {dbcv_score:.4f}, Coverage: {topic_coverage:.4f}, Balance: {cluster_balance_score:.4f}")
+        print(f"Weights - DBCV: {OptimizationConfig.DBCV_WEIGHT}, Coverage: {OptimizationConfig.COVERAGE_WEIGHT}, Balance: {OptimizationConfig.BALANCE_WEIGHT}")
+        print(f"Final Score: {final_score:.4f} (Topics: {n_topics}, Dataset: {dataset_size})")
+        print("-" * 60)
+        
         # Ensure score is in valid range [0, 1]
         return max(eps, min(1.0, final_score))
         
-    except Exception:
+    except Exception as e:
+        print(f"Error in compute_cluster_quality_score: {e}")
         return eps
 
 
