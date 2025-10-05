@@ -429,7 +429,7 @@ def _compute_topic_count_score(
         base_topic_count = base_count * log_decay_factor
         
         # Define optimal coefficient range (0.04 to 0.08)
-        optimal_min_coeff = 0.04
+        optimal_min_coeff = 0.02
         optimal_max_coeff = 0.08
         
         # Calculate optimal topic count range
