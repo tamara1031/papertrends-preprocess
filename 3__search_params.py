@@ -270,6 +270,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
     )
     
     return BERTopic(
+        # nr_topics="auto",
         vectorizer_model=vectorizer_model,
         ctfidf_model=ctfidf_model,
         umap_model=umap_model,
@@ -420,17 +421,23 @@ def _compute_topic_count_score(
             return eps
             
         # Optimal topic count based on dataset size
-        # Natural continuous scaling using mathematical functions
         # Use sqrt with logarithmic decay for natural progression
         base_count = np.sqrt(dataset_size)
-        
-        # Apply logarithmic decay factor that naturally decreases with dataset size
-        # This creates smooth, continuous decrease without artificial caps
         log_decay_factor = np.log10(max(10, dataset_size))
         
-        # Combine sqrt and log for natural scaling
-        # Small datasets: higher factor, large datasets: lower factor
-        optimal_topic_count = max(5, int(base_count * log_decay_factor * 0.04))
+        # Calculate base topic count with coefficient 1.0
+        base_topic_count = base_count * log_decay_factor
+        
+        # Define optimal coefficient range (0.04 to 0.08)
+        optimal_min_coeff = 0.04
+        optimal_max_coeff = 0.08
+        
+        # Calculate optimal topic count range
+        optimal_min_topics = max(5, int(base_topic_count * optimal_min_coeff))
+        optimal_max_topics = max(5, int(base_topic_count * optimal_max_coeff))
+        
+        # Use the midpoint of optimal range as the target
+        optimal_topic_count = (optimal_min_topics + optimal_max_topics) // 2
         
         # Smooth optimization function: penalize deviation from optimal
         # Use Gaussian-like function centered at optimal_topic_count
