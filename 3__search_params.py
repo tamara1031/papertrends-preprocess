@@ -34,7 +34,7 @@ warnings.filterwarnings('ignore', message='invalid value encountered')
 # ============================================================================
 
 class OptimizationConfig:
-    """Centralized configuration for clustering optimization with simple fixed ranges."""
+    """Centralized configuration for clustering optimization with data-size adaptive ranges."""
     
     # Numerical precision
     EPSILON = 1e-6
@@ -47,21 +47,48 @@ class OptimizationConfig:
     UMAP_METRICS = ["cosine"]
     HDBSCAN_METRICS = ["euclidean"]
     
-    # Fixed parameter ranges (simple and safe)
-    TOP_N_WORDS_RANGE = (10, 20)
-    NGRAM_RANGES = [[1, 3]]
+    # Topic representation (data-size independent)
+    TOP_N_WORDS_RANGE = (10, 30)
+    NGRAM_RANGES = [[1, 2], [1, 3]]
+
+    MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 0.8)  
     
-    # Clustering parameters (fixed safe ranges)
-    MIN_CLUSTER_SIZE_RANGE = (50, 500)
-    MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 1.0)
+    # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
+    @staticmethod
+    def get_min_df_range(dataset_size: int) -> Tuple[int, int]:
+        """Get min_df range based on dataset size (conservative for academic abstracts)."""
+        # More conservative ranges for academic abstracts
+        min_val = max(2, dataset_size // 2000)  # 0.05% of dataset, min 2
+        max_val = max(10, dataset_size // 500)   # 0.2% of dataset, min 10
+        return (min_val, max_val)
     
-    # Vectorization parameters
-    MIN_DF_RANGE = (2, 15)
-    MAX_DF_PERCENT_RANGE = (0.50, 0.95)    # (50% to 95%)
+    @staticmethod
+    def get_max_df_range(dataset_size: int) -> Tuple[float, float]:
+        """Get max_df range (conservative for academic abstracts)."""
+        min_val = int(0.15 * dataset_size)  
+        max_val = int(0.85 * dataset_size) 
+        return (min_val, max_val) 
     
-    # UMAP parameters (fixed safe ranges)
-    N_NEIGHBORS_RANGE = (10, 50)
-    N_COMPONENTS_RANGE = (5, 15)
+    @staticmethod
+    def get_min_cluster_size_range(dataset_size: int) -> Tuple[int, int]:
+        """Get min_cluster_size range based on dataset size."""
+        min_val = max(20, dataset_size // 100)   # 1% of dataset, min 20
+        max_val = min(1000, dataset_size // 20)    # 5% of dataset, max 1000
+        return (min_val, max_val)
+    
+    @staticmethod
+    def get_n_neighbors_range(dataset_size: int) -> Tuple[int, int]:
+        """Get n_neighbors range based on dataset size."""
+        min_val = max(10, min(30, dataset_size // 200))  # Adaptive, min 10, max 30
+        max_val = min(100, max(50, dataset_size // 100)) # Adaptive, min 50, max 100
+        return (min_val, max_val)
+    
+    @staticmethod
+    def get_n_components_range(dataset_size: int) -> Tuple[int, int]:
+        """Get n_components range based on dataset size."""
+        min_val = 5
+        max_val = min(20, max(10, dataset_size // 10000))  # Adaptive, min 10, max 20
+        return (min_val, max_val)
 
 # ============================================================================
 # Data Structures
@@ -132,11 +159,12 @@ def load_text_embeddings(category: str) -> np.ndarray:
 # ============================================================================
 
 def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest HDBSCAN clustering parameters with fixed safe bounds."""
-    # Simple fixed ranges
+    """Suggest HDBSCAN clustering parameters with data-size adaptive bounds."""
+    # Data-size adaptive ranges
+    min_cluster_size_range = OptimizationConfig.get_min_cluster_size_range(dataset_size)
     min_cluster_size = trial.suggest_int(
         "min_cluster_size", 
-        *OptimizationConfig.MIN_CLUSTER_SIZE_RANGE
+        *min_cluster_size_range
     )
     
     # min_samples constraint (relative to min_cluster_size)
@@ -151,28 +179,34 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
 
 
 def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, int]:
-    """Suggest text vectorization parameters with simple percentage ranges."""
+    """Suggest text vectorization parameters with data-size adaptive ranges."""
     # Topic representation
     top_n_words = trial.suggest_int("top_n_words", *OptimizationConfig.TOP_N_WORDS_RANGE)
     
     # N-gram configuration
     ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
-    # Simple percentage-based TF-IDF bounds
-    min_df = trial.suggest_int("min_df", *OptimizationConfig.MIN_DF_RANGE)
-    max_df_percent = trial.suggest_float("max_df_percent", *OptimizationConfig.MAX_DF_PERCENT_RANGE)
+    # Data-size adaptive TF-IDF bounds
+    min_df_range = OptimizationConfig.get_min_df_range(dataset_size)
+    min_df = trial.suggest_int("min_df", *min_df_range)
     
-    # Convert to integer counts (simple approach)
+    max_df_range = OptimizationConfig.get_max_df_range(dataset_size)
+    max_df = trial.suggest_int("max_df", *max_df_range)
+    
+    # Convert to integer counts
     max_df = int(max_df_percent * dataset_size)
     
     return top_n_words, ngram_range, min_df, max_df
 
 
 def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest UMAP dimensionality reduction parameters with fixed ranges."""
-    # Simple fixed ranges
-    n_neighbors = trial.suggest_int("n_neighbors", *OptimizationConfig.N_NEIGHBORS_RANGE)
-    n_components = trial.suggest_int("n_components", *OptimizationConfig.N_COMPONENTS_RANGE)
+    """Suggest UMAP dimensionality reduction parameters with data-size adaptive ranges."""
+    # Data-size adaptive ranges
+    n_neighbors_range = OptimizationConfig.get_n_neighbors_range(dataset_size)
+    n_neighbors = trial.suggest_int("n_neighbors", *n_neighbors_range)
+    
+    n_components_range = OptimizationConfig.get_n_components_range(dataset_size)
+    n_components = trial.suggest_int("n_components", *n_components_range)
     
     # UMAP distance metric (optimized for SPECTER2 embeddings)
     umap_metric = trial.suggest_categorical("umap_metric", OptimizationConfig.UMAP_METRICS)
