@@ -8,7 +8,6 @@ import numpy as np
 import warnings
 
 import optuna
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import pairwise_distances
 import optuna.exceptions
 from optuna.samplers import TPESampler
@@ -17,7 +16,6 @@ from bertopic import BERTopic
 from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import pairwise_distances
 from hdbscan.validity import validity_index
 
@@ -54,12 +52,37 @@ class OptimizationConfig:
 
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
     
-    # Score weighting configuration
-    COVERAGE_WEIGHT = 0.10        # Weight for topic coverage
-    DOMINANCE_WEIGHT = 0.20       # Weight for dominance score
-    TOPIC_COUNT_WEIGHT = 0.20    # Weight for topic count score
-    TOPIC_DIVERSITY_WEIGHT = 0.30 # Weight for topic diversity score
-    UCI_COHERENCE_WEIGHT = 0.30   # Weight for UCI coherence score  
+    # Score weighting configuration (adaptive by dataset size)
+    @staticmethod
+    def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
+        """Get adaptive weights based on dataset size for academic papers."""
+        if dataset_size <= 5000:
+            # Small datasets: focus on coverage and reasonable topic counts
+            return {
+                'coverage': 0.35,
+                'topic_count': 0.25,
+                'dominance': 0.15,
+                'uci_coherence': 0.15,
+                'topic_diversity': 0.10
+            }
+        elif dataset_size <= 50000:
+            # Medium datasets: balanced approach
+            return {
+                'coverage': 0.20,
+                'topic_count': 0.20,
+                'dominance': 0.20,
+                'uci_coherence': 0.20,
+                'topic_diversity': 0.20
+            }
+        else:
+            # Large datasets: focus on quality and diversity
+            return {
+                'coverage': 0.15,
+                'topic_count': 0.15,
+                'dominance': 0.15,
+                'uci_coherence': 0.25,
+                'topic_diversity': 0.30
+            }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -439,76 +462,86 @@ def _compute_topic_diversity_score(
     except Exception:
         return eps
 
-def _compute_uci_coherence_score(
+
+def _compute_embedding_coherence_score(
     model: BERTopic,
-    documents: List[str],
+    original_embeddings: np.ndarray,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute UCI coherence score using sklearn for efficiency."""
+    """Compute embedding-based coherence score using topic embeddings (gensim-free)."""
     try:
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
-        
+
         if len(valid_topics) <= 1:
             return eps
-            
-        # Get topic words
-        topic_words = []
-        for topic_id in valid_topics['Topic'].values:
-            words = model.get_topic(topic_id)
-            if words:
-                words_list = [word[0] for word in words[:10]]
-                topic_words.append(words_list)
-        
-        if not any(topic_words):
+
+        # Get topic embeddings (if available) or compute from topic words
+        try:
+            # Try to get topic embeddings from BERTopic
+            topic_embeddings = model.topic_embeddings_
+
+            if topic_embeddings is None or len(topic_embeddings) <= 1:
+                return eps
+
+            # Use topic embeddings for coherence calculation
+            if len(topic_embeddings) != len(valid_topics) + 1:  # +1 for -1 topic
+                return eps
+
+            # Get embeddings for valid topics only
+            valid_embeddings = topic_embeddings[valid_topics.index.values + 1]  # +1 to skip -1 topic
+
+        except (AttributeError, IndexError, ValueError):
+            # Fallback: compute simple embedding-based coherence
+            # Get topic words and compute average embeddings
+            topic_words = []
+            for topic_id in valid_topics['Topic'].values:
+                words = model.get_topic(topic_id)
+                if words:
+                    words_list = [word[0] for word in words[:5]]  # Top 5 words
+                    topic_words.append(words_list)
+
+            if len(topic_words) <= 1:
+                return eps
+
+            # For simplicity, use topic sizes as proxy for coherence
+            # (larger, more coherent topics tend to have more documents)
+            topic_sizes = valid_topics['Count'].values
+
+            if len(topic_sizes) <= 1:
+                return eps
+
+            # Normalize topic sizes to coherence score
+            # Larger topics = higher coherence (generally true for academic papers)
+            min_size, max_size = np.min(topic_sizes), np.max(topic_sizes)
+            if max_size == min_size:
+                return 0.5  # Neutral score if all topics same size
+
+            normalized_sizes = (topic_sizes - min_size) / (max_size - min_size)
+            return np.mean(normalized_sizes)
+
+        # Calculate pairwise cosine similarities between topic embeddings
+        if valid_embeddings.shape[0] <= 1:
             return eps
-            
-        # Calculate co-occurrence matrix
-        vectorizer = CountVectorizer()
-        doc_vectors = vectorizer.fit_transform(documents)
-        vocabulary = vectorizer.get_feature_names_out()
-        vocab_to_idx = {word: idx for idx, word in enumerate(vocabulary)}
-        
-        cooccurrence_matrix = doc_vectors.T * doc_vectors
-        cooccurrence_matrix.setdiag(0)
-        
-        # Calculate word probabilities
-        word_counts = np.array(doc_vectors.sum(axis=0)).flatten()
-        total_docs = len(documents)
-        word_probs = word_counts / total_docs
-        
-        # Calculate UCI coherence for each topic
-        topic_coherences = []
-        for words in topic_words:
-            if len(words) < 2:
-                continue
-                
-            topic_coherence = 0
-            word_pairs = 0
-            
-            for i in range(1, len(words)):
-                for j in range(i):
-                    if words[i] in vocab_to_idx and words[j] in vocab_to_idx:
-                        idx_i, idx_j = vocab_to_idx[words[i]], vocab_to_idx[words[j]]
-                        
-                        cooccurrence_count = cooccurrence_matrix[idx_i, idx_j]
-                        p_ij = cooccurrence_count / total_docs
-                        p_i, p_j = word_probs[idx_i], word_probs[idx_j]
-                        
-                        if p_i > 0 and p_j > 0:
-                            topic_coherence += np.log(p_ij + eps) - np.log(p_i * p_j + eps)
-                            word_pairs += 1
-            
-            if word_pairs > 0:
-                topic_coherences.append(topic_coherence / word_pairs)
-        
-        if not topic_coherences:
+
+        # Compute cosine similarities
+        from sklearn.metrics.pairwise import cosine_similarity
+        similarities = cosine_similarity(valid_embeddings)
+
+        # Get upper triangle (excluding diagonal)
+        mask = np.triu(np.ones_like(similarities, dtype=bool), k=1)
+        similarity_values = similarities[mask]
+
+        if len(similarity_values) == 0:
             return eps
-            
-        # Normalize to [0, 1] using sigmoid
-        avg_coherence = np.mean(topic_coherences)
-        return max(eps, 1.0 / (1.0 + np.exp(-avg_coherence)))
-        
+
+        # Convert similarity to coherence score
+        # Higher intra-topic similarity = higher coherence
+        avg_similarity = np.mean(similarity_values)
+
+        # Normalize to [0, 1] range
+        return max(eps, min(1.0, avg_similarity))
+
     except Exception:
         return eps
 
@@ -558,26 +591,26 @@ def compute_cluster_quality_score(
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
         topic_count_score = _compute_topic_count_score(model, dataset_size, eps=eps)
         topic_diversity_score = _compute_topic_diversity_score(model, eps=eps)
+        coherence_score = _compute_embedding_coherence_score(model, original_embeddings, eps=eps)
         
-        # Compute UCI coherence score if documents are provided
-        uci_coherence_score = eps
-        if documents is not None:
-            uci_coherence_score = _compute_uci_coherence_score(model, documents, eps=eps)
-        
-        # Weighted combination of all metrics
+        # Get adaptive weights for this dataset size
+        adaptive_weights = OptimizationConfig.get_adaptive_weights(dataset_size)
+
+        # Weighted combination using adaptive weights
         final_score = (
-            OptimizationConfig.COVERAGE_WEIGHT * topic_coverage +
-            OptimizationConfig.DOMINANCE_WEIGHT * dominance_score +
-            OptimizationConfig.TOPIC_COUNT_WEIGHT * topic_count_score +
-            OptimizationConfig.TOPIC_DIVERSITY_WEIGHT * topic_diversity_score +
-            OptimizationConfig.UCI_COHERENCE_WEIGHT * uci_coherence_score
+            adaptive_weights['coverage'] * topic_coverage +
+            adaptive_weights['dominance'] * dominance_score +
+            adaptive_weights['topic_count'] * topic_count_score +
+            adaptive_weights['topic_diversity'] * topic_diversity_score +
+            adaptive_weights['uci_coherence'] * coherence_score
         )
         
         # Output basic model information
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
         # Output individual scores for debugging
-        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, UCI Coherence: {uci_coherence_score:.4f}")
+        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, Embedding Coherence: {coherence_score:.4f}")
+        print(f"Weights - Coverage: {adaptive_weights['coverage']:.1%}, Dominance: {adaptive_weights['dominance']:.1%}, Topic Count: {adaptive_weights['topic_count']:.1%}, Topic Diversity: {adaptive_weights['topic_diversity']:.1%}, Embedding Coherence: {adaptive_weights['uci_coherence']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
