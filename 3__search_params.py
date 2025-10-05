@@ -499,7 +499,8 @@ def optimize_category_clustering(
     # Run optimization
     n_trials = None
     
-    print(f"Starting optimization with {n_trials} trials...")
+    if n_trials is not None:
+        print(f"Starting optimization with {n_trials} trials...")
     
     try:
         study.optimize(
