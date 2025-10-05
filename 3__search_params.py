@@ -49,7 +49,7 @@ class OptimizationConfig:
     
     # Topic representation (data-size independent)
     TOP_N_WORDS_RANGE = (10, 30)
-    NGRAM_RANGES = [[1, 1], [1, 2], [1, 3]]
+    NGRAM_RANGES = [[1, 3]]
 
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 0.8)  
     
@@ -285,7 +285,19 @@ def _compute_dbcv_score(
     original_embeddings: np.ndarray, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute Density-Based Cluster Validation (DBCV) score."""
+    """Compute Density-Based Cluster Validation (DBCV) score.
+    
+    DBCV measures the quality of density-based clustering by evaluating
+    the density separation between clusters and density connectivity within clusters.
+    
+    Args:
+        model: Trained BERTopic model
+        original_embeddings: Original embedding vectors
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Normalized DBCV score in range [0, 1] where 1 is optimal
+    """
     labels = model.hdbscan_model.labels_
     
     # Remove outliers (-1 labels) for cleaner DBCV calculation
@@ -308,19 +320,40 @@ def _compute_dbcv_score(
     # Compute DBCV score
     try:
         dbcv_score = validity_index(distance_matrix, filtered_labels)
+        
+        # Handle edge cases for validity_index output
+        if np.isnan(dbcv_score) or np.isinf(dbcv_score):
+            return eps
+            
     except Exception as e:
         print(f"Warning: DBCV computation failed: {e}")
         return eps
     
     # Normalize DBCV score from [-1, 1] to [0, 1]
-    return max(0.0, min(1.0, (dbcv_score + 1.0) / 2.0))
+    # -1 (worst) -> 0, 0 (neutral) -> 0.5, 1 (best) -> 1
+    normalized_score = (dbcv_score + 1.0) / 2.0
+    
+    # Ensure output is in valid range [0, 1]
+    return max(0.0, min(1.0, normalized_score))
 
 
 def _compute_topic_diversity(
     model: BERTopic, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute topic diversity based on cosine similarity of word vectors."""
+    """Compute topic diversity based on cosine similarity of word vectors.
+    
+    Topic diversity measures how distinct topics are from each other by evaluating
+    the overlap of representative words between topics. Higher diversity indicates
+    more distinct and non-overlapping topics.
+    
+    Args:
+        model: Trained BERTopic model
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Topic diversity score in range [0, 1] where 1 indicates maximum diversity
+    """
     try:
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
@@ -328,7 +361,7 @@ def _compute_topic_diversity(
         if len(valid_topics) < 2:
             return eps
         
-        # Get all unique words across topics
+        # Get all unique words across topics (top 10 words per topic)
         all_words = set()
         topic_word_lists = []
         
@@ -336,6 +369,7 @@ def _compute_topic_diversity(
             topic_id = row['Topic']
             words = model.get_topic(topic_id)
             if words:
+                # Extract top 10 words from each topic
                 word_list = [word[0] for word in words[:10]]
                 topic_word_lists.append(word_list)
                 all_words.update(word_list)
@@ -348,14 +382,15 @@ def _compute_topic_diversity(
         topic_vectors = []
         
         for word_list in topic_word_lists:
+            # Binary vector: 1 if word exists in topic, 0 otherwise
             vector = [1 if word in word_list else 0 for word in all_words]
             topic_vectors.append(vector)
         
-        # Calculate cosine similarity matrix
+        # Calculate cosine similarity matrix between topics
         topic_vectors = np.array(topic_vectors)
         similarity_matrix = cosine_similarity(topic_vectors)
         
-        # Get upper triangle (excluding diagonal)
+        # Extract upper triangle similarities (excluding diagonal)
         similarities = []
         for i in range(len(similarity_matrix)):
             for j in range(i + 1, len(similarity_matrix)):
@@ -364,10 +399,14 @@ def _compute_topic_diversity(
         if not similarities:
             return eps
         
-        # Diversity = 1 - average similarity
+        # Calculate average similarity between all topic pairs
         avg_similarity = np.mean(similarities)
+        
+        # Diversity = 1 - average similarity
+        # Higher similarity -> lower diversity, lower similarity -> higher diversity
         diversity = 1.0 - avg_similarity
         
+        # Ensure output is in valid range [0, 1]
         return max(eps, min(1.0, diversity))
     
     except Exception as e:
@@ -379,7 +418,19 @@ def _compute_topic_coverage(
     model: BERTopic, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute topic coverage - how well topics cover the documents."""
+    """Compute topic coverage - how well topics cover the documents.
+    
+    Topic coverage measures the proportion of documents that are successfully
+    assigned to meaningful topics (excluding noise/outliers). Higher coverage
+    indicates better topic modeling performance with fewer unassigned documents.
+    
+    Args:
+        model: Trained BERTopic model
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Topic coverage score in range [0, 1] where 1 indicates 100% coverage
+    """
     try:
         labels = model.hdbscan_model.labels_
         total_docs = len(labels)
@@ -388,9 +439,13 @@ def _compute_topic_coverage(
             return eps
         
         # Count documents assigned to topics (excluding noise -1)
+        # HDBSCAN assigns -1 to noise/outlier points
         assigned_docs = (labels != -1).sum()
+        
+        # Calculate coverage ratio
         coverage = assigned_docs / total_docs
         
+        # Ensure output is in valid range [0, 1]
         return max(eps, min(1.0, coverage))
     
     except Exception as e:
@@ -437,15 +492,27 @@ def compute_cluster_quality_score(
 # Optuna Configuration
 # ============================================================================
 
-def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
+def create_tpe_sampler(study_name: str, dataset_size: int, n_trials: int = 100) -> TPESampler:
     """Create TPE sampler optimized for BERTopic clustering hyperparameter search.
     
-    Optimized for topic modeling with strong parameter correlations:
+    Optimized for topic modeling with dynamic settings:
+    - Dynamic startup trials: Align with pruner settings
+    - Dynamic EI candidates: Scale with total trials
     - multivariate=True: Considers correlations between UMAP/HDBSCAN/TF-IDF parameters
-    - Increased startup trials: Better exploration of parameter space
     - Adjusted prior weight: Balanced exploration vs exploitation
     - group=False: Avoid complex grouping for BERTopic's mixed parameter types
+    
+    Args:
+        study_name: Name of the optimization study
+        dataset_size: Size of the dataset for adaptive parameters
+        n_trials: Total number of trials for optimization
     """
+    # Dynamic startup trials: Align with pruner (12% of total trials)
+    startup_trials = max(10, min(20, int(n_trials * 0.12)))
+    
+    # Dynamic EI candidates: Scale with total trials
+    ei_candidates = max(24, min(64, int(n_trials * 0.3)))  # 30% of trials, min 24, max 64
+    
     return TPESampler(
         # Core TPE settings
         consider_prior=True,
@@ -457,9 +524,9 @@ def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
         multivariate=True,  # Enable parameter correlation modeling
         group=False,        # Disable grouping for mixed parameter types
         
-        # Exploration settings
-        n_startup_trials=25,
-        n_ei_candidates=32, 
+        # Dynamic exploration settings
+        n_startup_trials=startup_trials,  # Dynamic startup trials
+        n_ei_candidates=ei_candidates,     # Dynamic EI candidates
         
         # Stability settings
         warn_independent_sampling=False,
@@ -467,18 +534,24 @@ def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
     )
 
 
-def create_median_pruner() -> MedianPruner:
+def create_median_pruner(n_trials: int = 100) -> MedianPruner:
     """Create median pruner optimized for BERTopic clustering optimization.
     
-    Optimized settings for topic modeling:
-    - Increased startup trials: Align with TPE sampler settings
+    Optimized settings for topic modeling with dynamic startup trials:
+    - Dynamic startup trials: 10-15% of total trials, min 10, max 20
     - Extended warmup steps: Account for BERTopic's computation time
     - Reduced pruning frequency: Avoid premature pruning of promising trials
+    
+    Args:
+        n_trials: Total number of trials for optimization
     """
+    # Dynamic startup trials: 10-15% of total trials
+    startup_trials = max(10, min(20, int(n_trials * 0.12)))  # 12% as compromise
+    
     return MedianPruner(
-        n_startup_trials=25,    # Align with TPE sampler startup trials
-        n_warmup_steps=5,       # Extended warmup for BERTopic computation
-        interval_steps=5        # Less frequent pruning for topic modeling
+        n_startup_trials=startup_trials,  # Dynamic based on total trials
+        n_warmup_steps=5,                # Extended warmup for BERTopic computation
+        interval_steps=5                 # Less frequent pruning for topic modeling
     )
 
 
@@ -522,13 +595,11 @@ def objective_function(
 
 def optimize_category_clustering(
     category: str, 
-    timeout: Optional[int] = None, 
-    n_trials: Optional[int] = None,
+    timeout: Optional[int] = OptimizationConfig.DEFAULT_TIMEOUT, 
+    n_trials: Optional[int] = OptimizationConfig.DEFAULT_N_TRIALS,
     storage: Optional[str] = None
 ) -> optuna.Study:
     """Run hyperparameter optimization for a specific arXiv category."""
-    timeout = timeout or OptimizationConfig.DEFAULT_TIMEOUT
-    n_trials = n_trials or OptimizationConfig.DEFAULT_N_TRIALS
     
     # Load and prepare data
     print(f"Loading data for category: {category}")
@@ -553,8 +624,8 @@ def optimize_category_clustering(
         load_if_exists=True,  
         direction="maximize",
         study_name=study_name,
-        sampler=create_tpe_sampler(study_name, dataset_size),
-        pruner=create_median_pruner()
+        sampler=create_tpe_sampler(study_name, dataset_size, n_trials),
+        pruner=create_median_pruner(n_trials)
     )
     
     # Run optimization
