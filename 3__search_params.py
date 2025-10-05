@@ -71,9 +71,10 @@ class OptimizationConfig:
     
     @staticmethod
     def get_min_cluster_size_range(dataset_size: int) -> Tuple[int, int]:
-        """Get min_cluster_size range based on dataset size."""
-        min_val = max(20, dataset_size // 100)   # 1% of dataset, min 20
-        max_val = min(1000, dataset_size // 20)    # 5% of dataset, max 1000
+        """Get min_cluster_size range based on dataset size (conservative for academic topics)."""
+        # More conservative ranges for academic topic modeling
+        min_val = max(20, dataset_size // 500)   # 0.2% of dataset, min 20
+        max_val = min(1000, dataset_size // 50)    # 2% of dataset, max 1000
         return (min_val, max_val)
     
     @staticmethod
