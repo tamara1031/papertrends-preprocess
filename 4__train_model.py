@@ -165,6 +165,7 @@ def process_one_category(category: str):
     models_path = f"./models/{category}"
     if(os.path.exists(models_path)):
         # すでに訓練済みの場合はスキップ
+        print(f"Model already trained for category: {category}")
         return
 
     # 前処理済データを取得
