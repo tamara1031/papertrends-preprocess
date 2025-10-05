@@ -243,8 +243,8 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         ngram_range=tuple(params.ngram_range),
         min_df=params.min_df,
         max_df=params.max_df,
-        lowercase=False,
-        strip_accents=None
+        lowercase=False,  # Keep proper nouns for academic papers
+        strip_accents="unicode"
     )
     
     ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
