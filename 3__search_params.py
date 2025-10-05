@@ -60,8 +60,8 @@ class OptimizationConfig:
     
     # Score weighting configuration
     DBCV_WEIGHT = 0.50           # Weight for DBCV score
-    COVERAGE_WEIGHT = 0.30        # Weight for topic coverage
-    BALANCE_WEIGHT = 0.20         # Weight for cluster balance score  
+    COVERAGE_WEIGHT = 0.20        # Weight for topic coverage
+    BALANCE_WEIGHT = 0.30         # Weight for cluster balance score  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -391,83 +391,56 @@ def _compute_cluster_balance_score(
     dataset_size: int,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute score for balanced cluster sizes and appropriate cluster count.
-    
-    Combines cluster size balance and cluster count adequacy into a single metric.
-    Rewards clustering solutions with well-distributed cluster sizes and 
-    appropriate number of clusters based on dataset size.
-    
-    Args:
-        model: Trained BERTopic model
-        dataset_size: Total number of documents
-        eps: Small epsilon for numerical stability
-        
-    Returns:
-        Balance score in range [0, 1] where 1 means optimal cluster distribution
-    """
+    """Simple and robust cluster balance score."""
     try:
         topic_info = model.get_topic_info()
-        # Exclude noise topic (-1)
         valid_topics = topic_info[topic_info['Topic'] != -1]
         n_topics = len(valid_topics)
         
-        if n_topics <= 0:
-            return eps  # Low score for no clusters
         if n_topics <= 1:
-            return eps  # Low score for single cluster
-        
-        # === Cluster Size Balance Score ===
+            return eps
+
+        # === Cluster Size Balance ===
         cluster_sizes = valid_topics['Count'].values
+        
+        # Dominance penalty: penalize if largest cluster > 30% of dataset
         max_cluster_size = np.max(cluster_sizes)
-        mean_cluster_size = np.mean(cluster_sizes)
-        
-        # Score 1: Largest cluster dominance (rewards balanced distribution)
         dominance_ratio = max_cluster_size / dataset_size
-        if dominance_ratio <= OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD:
-            dominance_score = 1.0  # Perfect score if below threshold
-        else:
-            # Gradual decrease as dominance increases
-            dominance_score = max(eps, 1.0 - (dominance_ratio - OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD) / (1.0 - OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD))
+        dominance_score = max(eps, 1.0 - max(0, dominance_ratio - 0.3) / 0.7)
         
-        # Score 2: Cluster size variance (rewards uniform sizes)
-        if len(cluster_sizes) > 1:
-            size_variance = np.var(cluster_sizes) / (mean_cluster_size ** 2)  # Coefficient of variation
-            variance_score = max(eps, 1.0 - min(1.0, size_variance / OptimizationConfig.CLUSTER_SIZE_VARIANCE_FACTOR))
+        # Size variance penalty: penalize high variance
+        mean_size = np.mean(cluster_sizes)
+        if mean_size > eps:
+            size_variance = np.var(cluster_sizes) / (mean_size ** 2)
+            variance_score = max(eps, np.exp(-size_variance))
         else:
             variance_score = eps
         
-        size_balance_score = 0.7 * dominance_score + 0.3 * variance_score
-        
-        # === Cluster Count Adequacy Score ===
-        # Define optimal cluster count range based on dataset size
-        min_optimal = max(3, int(np.sqrt(dataset_size) * OptimizationConfig.CLUSTER_COUNT_SQRT_FACTOR))
-        max_optimal = max(min_optimal * 3, int(dataset_size * OptimizationConfig.CLUSTER_COUNT_MAX_FACTOR))
+        size_balance = 0.7 * dominance_score + 0.3 * variance_score
+
+        # === Cluster Count Adequacy ===
+        # Simple optimal range: sqrt(n) to n/20
+        min_optimal = max(3, int(np.sqrt(dataset_size)))
+        max_optimal = max(min_optimal * 3, dataset_size // 20)
         
         if n_topics < min_optimal:
-            # Too few clusters - score decreases as count decreases
             count_score = max(eps, n_topics / min_optimal)
         elif n_topics > max_optimal:
-            # Too many clusters - score decreases as count increases
             count_score = max(eps, max_optimal / n_topics)
         else:
-            # Optimal range - perfect score
             count_score = 1.0
+
+        # === Final Score ===
+        final_score = 0.6 * size_balance + 0.4 * count_score
         
-        # === Combined Score ===
-        # Weighted combination: 60% size balance, 40% count adequacy
-        combined_score = 0.6 * size_balance_score + 0.4 * count_score
-        
-        # Output detailed balance score breakdown
-        print(f"  Balance Details:")
-        print(f"    Size Balance: {size_balance_score:.4f} (Dominance: {dominance_score:.4f}, Variance: {variance_score:.4f})")
-        print(f"    Count Adequacy: {count_score:.4f} (Topics: {n_topics}, Optimal: {min_optimal}-{max_optimal})")
-        print(f"    Dominance Ratio: {dominance_ratio:.3f} (Threshold: {OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD})")
-        
-        return min(1.0, combined_score)
-        
+        print(f"[Balance] Topics: {n_topics}, Dominance: {dominance_score:.3f}, Variance: {variance_score:.3f}, Count: {count_score:.3f}")
+        print(f"  Range: {min_optimal}-{max_optimal}, Dominance ratio: {dominance_ratio:.3f}, Final: {final_score:.3f}")
+
+        return float(np.clip(final_score, eps, 1.0))
+
     except Exception as e:
-        print(f"Warning: Cluster balance score computation failed: {e}")
-        return eps  # Low score on error
+        print(f"Warning: balance score failed: {e}")
+        return eps
 
 
 def compute_cluster_quality_score(
