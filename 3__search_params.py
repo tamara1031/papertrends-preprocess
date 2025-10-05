@@ -54,7 +54,6 @@ class OptimizationConfig:
     # Clustering parameters (fixed safe ranges)
     MIN_CLUSTER_SIZE_RANGE = (50, 500)
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 1.0)
-    MIN_SAMPLES_MAX_MULTIPLIER = 1.0
     
     # Vectorization parameters
     MIN_DF_RANGE = (2, 30)
