@@ -52,16 +52,10 @@ class OptimizationConfig:
 
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
     
-    # Cluster penalty configuration
-    CLUSTER_DOMINANCE_THRESHOLD = 0.3  # Penalty if >30% in one cluster
-    CLUSTER_SIZE_VARIANCE_FACTOR = 2.0  # Normalization factor for size variance
-    CLUSTER_COUNT_SQRT_FACTOR = 1.0    # Multiplier for sqrt(n) minimum clusters
-    CLUSTER_COUNT_MAX_FACTOR = 0.05    # Maximum clusters as fraction of dataset size
-    
     # Score weighting configuration
     DBCV_WEIGHT = 0.50           # Weight for DBCV score
-    COVERAGE_WEIGHT = 0.20        # Weight for topic coverage
-    BALANCE_WEIGHT = 0.30         # Weight for cluster balance score  
+    COVERAGE_WEIGHT = 0.10        # Weight for topic coverage
+    BALANCE_WEIGHT = 0.40         # Weight for cluster balance score  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
