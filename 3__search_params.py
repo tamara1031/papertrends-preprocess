@@ -55,7 +55,8 @@ class OptimizationConfig:
     # Score weighting configuration
     DBCV_WEIGHT = 0.50           # Weight for DBCV score
     COVERAGE_WEIGHT = 0.10        # Weight for topic coverage
-    BALANCE_WEIGHT = 0.40         # Weight for cluster balance score  
+    DOMINANCE_WEIGHT = 0.20       # Weight for dominance score
+    TOPIC_COUNT_WEIGHT = 0.20     # Weight for topic count score  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -380,12 +381,36 @@ def _compute_topic_coverage(
         return eps
 
 
-def _compute_cluster_balance_score(
-    model: BERTopic, 
+def _compute_dominance_score(
+    model: BERTopic,
     dataset_size: int,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Simple and robust cluster balance score."""
+    """Compute dominance score based on largest cluster size."""
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        cluster_sizes = valid_topics['Count'].values
+        
+        if len(cluster_sizes) == 0:
+            return eps
+            
+        max_cluster_size = np.max(cluster_sizes)
+        dominance_ratio = max_cluster_size / dataset_size
+        # Smooth sigmoid-based penalty: starts penalizing around 0.7
+        penalty_strength = 1.0 / (1.0 + np.exp(-10 * (dominance_ratio - 0.7)))
+        return max(eps, 1.0 - penalty_strength)
+        
+    except Exception as e:
+        print(f"Warning: dominance score computation failed: {e}")
+        return eps
+
+def _compute_topic_count_score(
+    model: BERTopic,
+    dataset_size: int,
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute topic count score based on optimal topic count for dataset size."""
     try:
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
@@ -393,38 +418,49 @@ def _compute_cluster_balance_score(
         
         if n_topics <= 1:
             return eps
-
-        # === Cluster Size Balance ===
-        cluster_sizes = valid_topics['Count'].values
+            
+        # Optimal topic count based on dataset size
+        # Use logarithmic scaling: optimal ≈ sqrt(dataset_size) * log(dataset_size)
+        optimal_topic_count = max(3, int(np.sqrt(dataset_size) * np.log10(max(10, dataset_size))))
         
-        # Dominance penalty: penalize if largest cluster > 30% of dataset
-        max_cluster_size = np.max(cluster_sizes)
-        dominance_ratio = max_cluster_size / dataset_size
-        dominance_score = max(eps, 1.0 - max(0, dominance_ratio - 0.3) / 0.7)
+        # Smooth optimization function: penalize deviation from optimal
+        # Use Gaussian-like function centered at optimal_topic_count
+        deviation_ratio = abs(n_topics - optimal_topic_count) / max(optimal_topic_count, 1)
         
-        # Size variance penalty: penalize high variance
-        mean_size = np.mean(cluster_sizes)
-        if mean_size > eps:
-            size_variance = np.var(cluster_sizes) / (mean_size ** 2)
-            variance_score = max(eps, np.exp(-size_variance))
-        else:
-            variance_score = eps
+        # Smooth penalty with adjustable width (sigma controls the width)
+        sigma = 0.3  # Controls how quickly score drops from optimal
+        return max(eps, np.exp(-0.5 * (deviation_ratio / sigma) ** 2))
         
-        size_balance = 0.7 * dominance_score + 0.3 * variance_score
-
-        # === Final Score ===
-        # Use only size_balance as it naturally promotes optimal topic count
-        final_score = size_balance
-        
-        print(f"[Balance] Topics: {n_topics}, Dominance: {dominance_score:.3f}, Variance: {variance_score:.3f}")
-        print(f"  Dominance ratio: {dominance_ratio:.3f}, Size balance: {size_balance:.3f}, Final: {final_score:.3f}")
-
-        return float(np.clip(final_score, eps, 1.0))
-
     except Exception as e:
-        print(f"Warning: balance score failed: {e}")
+        print(f"Warning: topic count score computation failed: {e}")
         return eps
 
+def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
+    """Get basic information about the trained model."""
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        n_topics = len(valid_topics)
+        
+        if n_topics > 0:
+            cluster_sizes = valid_topics['Count'].values
+            # Get top 3 largest clusters
+            sorted_sizes = np.sort(cluster_sizes)[::-1]  # Sort in descending order
+            top_sizes = sorted_sizes[:min(3, len(sorted_sizes))]
+        else:
+            top_sizes = []
+        
+        return {
+            'n_topics': n_topics,
+            'top_cluster_sizes': top_sizes
+        }
+        
+    except Exception as e:
+        print(f"Warning: Failed to get basic model info: {e}")
+        return {
+            'n_topics': 0,
+            'top_cluster_sizes': []
+        }
 
 def compute_cluster_quality_score(
     model: BERTopic, 
@@ -435,31 +471,30 @@ def compute_cluster_quality_score(
     try:
         dataset_size = len(original_embeddings)
         
-        # Get number of topics (excluding noise topic -1)
-        topic_info = model.get_topic_info()
-        n_topics = len(topic_info[topic_info['Topic'] != -1])
-        
-        # Apply penalty if number of topics is 1 or fewer (more lenient)
-        if n_topics <= 1:
-            print(f"Warning: Too few topics ({n_topics}), returning low score")
-            return 0.1  # Return low score for too few topics
+        # Get basic model information
+        basic_info = _get_basic_model_info(model, dataset_size)
         
         # Compute individual metrics
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         topic_coverage = _compute_topic_coverage(model, eps=eps)
-        cluster_balance_score = _compute_cluster_balance_score(model, dataset_size, eps=eps)
+        # Compute individual balance scores
+        dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
+        topic_count_score = _compute_topic_count_score(model, dataset_size, eps=eps)
         
         # Weighted combination of all metrics
         final_score = (
             OptimizationConfig.DBCV_WEIGHT * dbcv_score +
             OptimizationConfig.COVERAGE_WEIGHT * topic_coverage +
-            OptimizationConfig.BALANCE_WEIGHT * cluster_balance_score
+            OptimizationConfig.DOMINANCE_WEIGHT * dominance_score +
+            OptimizationConfig.TOPIC_COUNT_WEIGHT * topic_count_score
         )
         
+        # Output basic model information
+        print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
+        
         # Output individual scores for debugging
-        print(f"Scores - DBCV: {dbcv_score:.4f}, Coverage: {topic_coverage:.4f}, Balance: {cluster_balance_score:.4f}")
-        print(f"Weights - DBCV: {OptimizationConfig.DBCV_WEIGHT}, Coverage: {OptimizationConfig.COVERAGE_WEIGHT}, Balance: {OptimizationConfig.BALANCE_WEIGHT}")
-        print(f"Final Score: {final_score:.4f} (Topics: {n_topics}, Dataset: {dataset_size})")
+        print(f"Scores - DBCV: {dbcv_score:.4f}, Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}")
+        print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
         # Ensure score is in valid range [0, 1]
