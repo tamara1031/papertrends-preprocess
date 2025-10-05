@@ -480,25 +480,18 @@ def _compute_topic_diversity_score(
         if len(upper_triangle) == 0:
             return eps
             
-        # Use median similarity for robustness against outliers
-        median_similarity = np.median(upper_triangle)
-        mean_similarity = np.mean(upper_triangle)
+        # Compute cluster diversity based on inter-cluster distances
+        # Convert cosine similarities to distances: distance = 1 - similarity
+        distances = 1 - upper_triangle
+        median_distance = np.median(distances)
         
-        # Apply non-linear transformation for more natural diversity scoring
-        # Using exponential decay: diversity = exp(-similarity) 
-        # This provides more intuitive scaling where:
-        # - similarity=0 → diversity=1.0 (perfect diversity)
-        # - similarity=1 → diversity≈0.37 (low diversity)
-        # - similarity=0.5 → diversity≈0.61 (moderate diversity)
-        diversity_score = np.exp(-median_similarity)
+        # Apply power transformation: distance^2.0 to emphasize high diversity
+        # This creates steep slope at high distance values (well-separated clusters)
+        # Consistent with coherence score transformation for unified scoring
+        power = 2.0
+        diversity_score = median_distance ** power
         
-        # Additional penalty for high variance in similarities (indicates inconsistent diversity)
-        similarity_std = np.std(upper_triangle)
-        consistency_penalty = np.exp(-similarity_std * 2)  # Penalty for high variance
-        diversity_score *= consistency_penalty
-        
-        print(f"Topic diversity - Topics: {len(topic_centroids)}, Median similarity: {median_similarity:.4f}, "
-              f"Mean similarity: {mean_similarity:.4f}, Std: {similarity_std:.4f}, "
+        print(f"Topic diversity - Topics: {len(topic_centroids)}, Median distance: {median_distance:.4f}, "
               f"Diversity: {diversity_score:.4f}")
         
         return max(eps, min(1.0, diversity_score))
@@ -539,9 +532,12 @@ def _compute_embedding_coherence_score(
         # Apply non-linear transformation to emphasize high coherence scores
         mean_coherence = np.mean(topic_coherences) if topic_coherences else eps
         
-        # Apply exponential transformation: exp(score) to create steeper slope at high values
+        # Apply power transformation: score^power to create steeper slope at high values
         # This makes the score more sensitive to high coherence values
-        transformed_score = np.exp(mean_coherence)
+        # Power transformation ensures monotonic increase with steeper slope at high values
+        # The power value can be adjusted based on experimental results
+        power = 2.0  # Adjustable parameter - start with 2.0 for moderate non-linearity
+        transformed_score = mean_coherence ** power
         
         return max(eps, min(1.0, transformed_score))
 
