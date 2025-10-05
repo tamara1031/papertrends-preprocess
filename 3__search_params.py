@@ -18,8 +18,6 @@ from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import pairwise_distances
 from hdbscan.validity import validity_index
-from scipy.stats import entropy
-from scipy.spatial.distance import pdist, squareform
 from sklearn.metrics.pairwise import cosine_similarity
 
 from common.domain.dto import Paper
