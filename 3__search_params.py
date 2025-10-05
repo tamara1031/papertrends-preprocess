@@ -58,28 +58,28 @@ class OptimizationConfig:
         if dataset_size <= 5000:
             # Small datasets: focus on coverage and reasonable topic counts
             return {
-                'coverage': 0.35,
-                'topic_count': 0.25,
+                'coverage': 0.25,
+                'topic_count': 0.15,
                 'dominance': 0.15,
-                'coherence': 0.15,
-                'topic_diversity': 0.10
+                'coherence': 0.25,
+                'topic_diversity': 0.20
             }
         elif dataset_size <= 50000:
             # Medium datasets: balanced approach
             return {
                 'coverage': 0.20,
-                'topic_count': 0.20,
-                'dominance': 0.20,
-                'coherence': 0.20,
-                'topic_diversity': 0.20
+                'topic_count': 0.10,
+                'dominance': 0.15,
+                'coherence': 0.30,
+                'topic_diversity': 0.25
             }
         else:
             # Large datasets: focus on quality and diversity
             return {
                 'coverage': 0.15,
-                'topic_count': 0.15,
-                'dominance': 0.15,
-                'coherence': 0.25,
+                'topic_count': 0.10,
+                'dominance': 0.10,
+                'coherence': 0.35,
                 'topic_diversity': 0.30
             }  
     
