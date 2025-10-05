@@ -49,7 +49,7 @@ class OptimizationConfig:
     
     # Topic representation (data-size independent)
     TOP_N_WORDS_RANGE = (10, 30)
-    NGRAM_RANGES = [[1, 2], [1, 3]]
+    NGRAM_RANGES = [[1, 1], [1, 2], [1, 3]]
 
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 0.8)  
     
@@ -468,11 +468,17 @@ def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
 
 
 def create_median_pruner() -> MedianPruner:
-    """Create median pruner for early stopping of poor trials."""
+    """Create median pruner optimized for BERTopic clustering optimization.
+    
+    Optimized settings for topic modeling:
+    - Increased startup trials: Align with TPE sampler settings
+    - Extended warmup steps: Account for BERTopic's computation time
+    - Reduced pruning frequency: Avoid premature pruning of promising trials
+    """
     return MedianPruner(
-        n_startup_trials=10,
-        n_warmup_steps=3,
-        interval_steps=3
+        n_startup_trials=25,    # Align with TPE sampler startup trials
+        n_warmup_steps=5,       # Extended warmup for BERTopic computation
+        interval_steps=5        # Less frequent pruning for topic modeling
     )
 
 
