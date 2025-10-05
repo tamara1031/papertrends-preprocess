@@ -540,7 +540,7 @@ def _compute_embedding_coherence_score(
         # This makes the score more sensitive to high coherence values
         # Power transformation ensures monotonic increase with steeper slope at high values
         # The power value can be adjusted based on experimental results
-        power = 2.0  # Adjustable parameter - start with 2.0 for moderate non-linearity
+        power = 2.5  # Adjustable parameter - start with 2.0 for moderate non-linearity
         transformed_score = mean_coherence ** power
         
         return max(eps, min(1.0, transformed_score))
