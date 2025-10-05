@@ -405,12 +405,30 @@ def compute_cluster_quality_score(
 # ============================================================================
 
 def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
-    """Create TPE sampler optimized for clustering hyperparameter search."""
+    """Create TPE sampler optimized for BERTopic clustering hyperparameter search.
+    
+    Optimized for topic modeling with strong parameter correlations:
+    - multivariate=True: Considers correlations between UMAP/HDBSCAN/TF-IDF parameters
+    - Increased startup trials: Better exploration of parameter space
+    - Adjusted prior weight: Balanced exploration vs exploitation
+    - group=False: Avoid complex grouping for BERTopic's mixed parameter types
+    """
     return TPESampler(
+        # Core TPE settings
         consider_prior=True,
-        prior_weight=0.85,
+        prior_weight=0.75,  # Reduced from 0.85 for more exploration
         consider_magic_clip=True,
         consider_endpoints=False,
+        
+        # Multivariate optimization (crucial for BERTopic)
+        multivariate=True,  # Enable parameter correlation modeling
+        group=False,        # Disable grouping for mixed parameter types
+        
+        # Exploration settings
+        n_startup_trials=25,  # Increased for better initial exploration
+        n_ei_candidates=32,   # Increased for more candidate evaluation
+        
+        # Stability settings
         warn_independent_sampling=False,
         seed=42
     )
