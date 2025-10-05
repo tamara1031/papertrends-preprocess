@@ -577,7 +577,7 @@ def compute_cluster_quality_score(
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
         # Output individual scores for debugging
-        print(f"Scores - DBCV: {dbcv_score:.4f}, Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, UCI Coherence: {uci_coherence_score:.4f}")
+        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, UCI Coherence: {uci_coherence_score:.4f}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
