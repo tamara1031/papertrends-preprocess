@@ -432,25 +432,7 @@ def create_tpe_sampler(study_name: str, dataset_size: int, n_trials: int = 100) 
     # Dynamic EI candidates: Scale with total trials
     ei_candidates = max(24, min(64, int(n_trials * 0.3)))  # 30% of trials, min 24, max 64
     
-    return TPESampler(
-        # Core TPE settings
-        consider_prior=True,
-        prior_weight=0.75, 
-        consider_magic_clip=True,
-        consider_endpoints=False,
-        
-        # Multivariate optimization (crucial for BERTopic)
-        multivariate=True,  # Enable parameter correlation modeling
-        group=False,        # Disable grouping for mixed parameter types
-        
-        # Dynamic exploration settings
-        n_startup_trials=startup_trials,  # Dynamic startup trials
-        n_ei_candidates=ei_candidates,     # Dynamic EI candidates
-        
-        # Stability settings
-        warn_independent_sampling=False,
-        seed=42
-    )
+    return TPESampler(seed=42)
 
 
 def create_median_pruner(n_trials: int = 100) -> MedianPruner:
@@ -465,13 +447,9 @@ def create_median_pruner(n_trials: int = 100) -> MedianPruner:
         n_trials: Total number of trials for optimization
     """
     # Dynamic startup trials: 10-15% of total trials
-    startup_trials = max(10, min(20, int(n_trials * 0.12)))  # 12% as compromise
+    # startup_trials = max(10, min(20, int(n_trials * 0.12)))  # 12% as compromise
     
-    return MedianPruner(
-        n_startup_trials=startup_trials,  # Dynamic based on total trials
-        n_warmup_steps=5,                # Extended warmup for BERTopic computation
-        interval_steps=5                 # Less frequent pruning for topic modeling
-    )
+    return MedianPruner()
 
 
 def objective_function(
