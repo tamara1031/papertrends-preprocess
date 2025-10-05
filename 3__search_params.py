@@ -8,6 +8,7 @@ import numpy as np
 import warnings
 
 import optuna
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import pairwise_distances
 import optuna.exceptions
 from optuna.samplers import TPESampler
@@ -16,8 +17,6 @@ from bertopic import BERTopic
 from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
-from sklearn.metrics import pairwise_distances
-from hdbscan.validity import validity_index
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel
@@ -62,7 +61,7 @@ class OptimizationConfig:
                 'coverage': 0.35,
                 'topic_count': 0.25,
                 'dominance': 0.15,
-                'uci_coherence': 0.15,
+                'coherence': 0.15,
                 'topic_diversity': 0.10
             }
         elif dataset_size <= 50000:
@@ -71,7 +70,7 @@ class OptimizationConfig:
                 'coverage': 0.20,
                 'topic_count': 0.20,
                 'dominance': 0.20,
-                'uci_coherence': 0.20,
+                'coherence': 0.20,
                 'topic_diversity': 0.20
             }
         else:
@@ -80,7 +79,7 @@ class OptimizationConfig:
                 'coverage': 0.15,
                 'topic_count': 0.15,
                 'dominance': 0.15,
-                'uci_coherence': 0.25,
+                'coherence': 0.25,
                 'topic_diversity': 0.30
             }  
     
@@ -468,80 +467,56 @@ def _compute_embedding_coherence_score(
     original_embeddings: np.ndarray,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute embedding-based coherence score using topic embeddings (gensim-free)."""
+    """Compute embedding-based coherence score using SPECTER2 document embeddings."""
     try:
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
-
+        
         if len(valid_topics) <= 1:
             return eps
+            
+        # Get document-topic assignments directly from HDBSCAN labels
+        labels = model.hdbscan_model.labels_
+        topic_coherences = []
+        
+        for topic_id in valid_topics['Topic'].values:
+            # Get document indices for this topic
+            topic_mask = (labels == topic_id)
+            topic_indices = np.where(topic_mask)[0]
+            
+            if len(topic_indices) >= 2:
+                topic_embeddings = original_embeddings[topic_indices]
+                coherence = _compute_intra_topic_coherence(topic_embeddings, eps)
+                if coherence > eps:
+                    topic_coherences.append(coherence)
+        
+        return np.mean(topic_coherences) if topic_coherences else eps
 
-        # Get topic embeddings (if available) or compute from topic words
-        try:
-            # Try to get topic embeddings from BERTopic
-            topic_embeddings = model.topic_embeddings_
+    except Exception:
+        return eps
 
-            if topic_embeddings is None or len(topic_embeddings) <= 1:
-                return eps
-
-            # Use topic embeddings for coherence calculation
-            if len(topic_embeddings) != len(valid_topics) + 1:  # +1 for -1 topic
-                return eps
-
-            # Get embeddings for valid topics only
-            valid_embeddings = topic_embeddings[valid_topics.index.values + 1]  # +1 to skip -1 topic
-
-        except (AttributeError, IndexError, ValueError):
-            # Fallback: compute simple embedding-based coherence
-            # Get topic words and compute average embeddings
-            topic_words = []
-            for topic_id in valid_topics['Topic'].values:
-                words = model.get_topic(topic_id)
-                if words:
-                    words_list = [word[0] for word in words[:5]]  # Top 5 words
-                    topic_words.append(words_list)
-
-            if len(topic_words) <= 1:
-                return eps
-
-            # For simplicity, use topic sizes as proxy for coherence
-            # (larger, more coherent topics tend to have more documents)
-            topic_sizes = valid_topics['Count'].values
-
-            if len(topic_sizes) <= 1:
-                return eps
-
-            # Normalize topic sizes to coherence score
-            # Larger topics = higher coherence (generally true for academic papers)
-            min_size, max_size = np.min(topic_sizes), np.max(topic_sizes)
-            if max_size == min_size:
-                return 0.5  # Neutral score if all topics same size
-
-            normalized_sizes = (topic_sizes - min_size) / (max_size - min_size)
-            return np.mean(normalized_sizes)
-
-        # Calculate pairwise cosine similarities between topic embeddings
-        if valid_embeddings.shape[0] <= 1:
+def _compute_intra_topic_coherence(
+    topic_embeddings: np.ndarray, 
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute coherence for documents within a single topic using SPECTER2 embeddings."""
+    try:
+        if len(topic_embeddings) < 2:
             return eps
-
-        # Compute cosine similarities
+            
         from sklearn.metrics.pairwise import cosine_similarity
-        similarities = cosine_similarity(valid_embeddings)
-
+        similarities = cosine_similarity(topic_embeddings)
+        
         # Get upper triangle (excluding diagonal)
         mask = np.triu(np.ones_like(similarities, dtype=bool), k=1)
         similarity_values = similarities[mask]
-
+        
         if len(similarity_values) == 0:
             return eps
-
-        # Convert similarity to coherence score
-        # Higher intra-topic similarity = higher coherence
+            
         avg_similarity = np.mean(similarity_values)
-
-        # Normalize to [0, 1] range
         return max(eps, min(1.0, avg_similarity))
-
+        
     except Exception:
         return eps
 
@@ -554,23 +529,15 @@ def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
         
         if n_topics > 0:
             cluster_sizes = valid_topics['Count'].values
-            # Get top 3 largest clusters
-            sorted_sizes = np.sort(cluster_sizes)[::-1]  # Sort in descending order
-            top_sizes = sorted_sizes[:min(3, len(sorted_sizes))]
+            top_sizes = np.sort(cluster_sizes)[::-1][:3]  # Top 3 largest clusters
         else:
             top_sizes = []
         
-        return {
-            'n_topics': n_topics,
-            'top_cluster_sizes': top_sizes
-        }
+        return {'n_topics': n_topics, 'top_cluster_sizes': top_sizes}
         
     except Exception as e:
         print(f"Warning: Failed to get basic model info: {e}")
-        return {
-            'n_topics': 0,
-            'top_cluster_sizes': []
-        }
+        return {'n_topics': 0, 'top_cluster_sizes': []}
 
 def compute_cluster_quality_score(
     model: BERTopic, 
@@ -581,40 +548,32 @@ def compute_cluster_quality_score(
     """Compute combined clustering quality score with cluster balance."""
     try:
         dataset_size = len(original_embeddings)
-        
-        # Get basic model information
         basic_info = _get_basic_model_info(model, dataset_size)
         
         # Compute individual metrics
         topic_coverage = _compute_topic_coverage(model, eps=eps)
-        # Compute individual balance scores
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
         topic_count_score = _compute_topic_count_score(model, dataset_size, eps=eps)
         topic_diversity_score = _compute_topic_diversity_score(model, eps=eps)
         coherence_score = _compute_embedding_coherence_score(model, original_embeddings, eps=eps)
         
-        # Get adaptive weights for this dataset size
-        adaptive_weights = OptimizationConfig.get_adaptive_weights(dataset_size)
-
-        # Weighted combination using adaptive weights
+        # Get adaptive weights and compute final score
+        weights = OptimizationConfig.get_adaptive_weights(dataset_size)
         final_score = (
-            adaptive_weights['coverage'] * topic_coverage +
-            adaptive_weights['dominance'] * dominance_score +
-            adaptive_weights['topic_count'] * topic_count_score +
-            adaptive_weights['topic_diversity'] * topic_diversity_score +
-            adaptive_weights['uci_coherence'] * coherence_score
+            weights['coverage'] * topic_coverage +
+            weights['dominance'] * dominance_score +
+            weights['topic_count'] * topic_count_score +
+            weights['topic_diversity'] * topic_diversity_score +
+            weights['coherence'] * coherence_score
         )
         
-        # Output basic model information
+        # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        
-        # Output individual scores for debugging
         print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, Embedding Coherence: {coherence_score:.4f}")
-        print(f"Weights - Coverage: {adaptive_weights['coverage']:.1%}, Dominance: {adaptive_weights['dominance']:.1%}, Topic Count: {adaptive_weights['topic_count']:.1%}, Topic Diversity: {adaptive_weights['topic_diversity']:.1%}, Embedding Coherence: {adaptive_weights['uci_coherence']:.1%}")
+        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Topic Count: {weights['topic_count']:.1%}, Topic Diversity: {weights['topic_diversity']:.1%}, Embedding Coherence: {weights['coherence']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
-        # Ensure score is in valid range [0, 1]
         return max(eps, min(1.0, final_score))
         
     except Exception as e:

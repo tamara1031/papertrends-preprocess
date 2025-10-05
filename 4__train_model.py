@@ -93,7 +93,7 @@ def create_model(params: Hyperparameters) -> BERTopic:
         min_df=params.min_df,
         max_df=params.max_df,
         lowercase=False,
-        strip_accents=None
+        strip_accents="unicode"
     )
     
     ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
