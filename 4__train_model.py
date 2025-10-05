@@ -27,70 +27,94 @@ EMBEDDING_MODEL = get_custom_embedding_model()
 
 @dataclass
 class Hyperparameters:
-    """
-    Configuration parameters for BERTopic model optimization.
+    """Complete hyperparameter set for BERTopic clustering."""
     
-    This dataclass encapsulates all tunable hyperparameters for:
-    - Text vectorization (ngram_range, min_df, max_df)
-    - UMAP dimensionality reduction (n_neighbors, n_components, min_dist, spread)
-    - HDBSCAN clustering (min_cluster_size, min_samples)
-    """
+    # Topic representation
+    top_n_words: int
+    
+    # Text vectorization
     ngram_range: List[int]
     min_df: Union[float, int]
     max_df: Union[float, int]
-    lowercase: bool
-    strip_accents: Optional[Any]
-    bm25_weighting: bool
+    
+    # UMAP dimensionality reduction
     n_neighbors: int
     n_components: int
-    min_dist: float
-    spread: float
+    umap_metric: str
+    
+    # HDBSCAN clustering
     min_cluster_size: int
     min_samples: int
+    hdbscan_metric: str
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary format for serialization."""
+        return {
+            'top_n_words': self.top_n_words,
+            'ngram_range': self.ngram_range,
+            'min_df': self.min_df,
+            'max_df': self.max_df,
+            'n_neighbors': self.n_neighbors,
+            'n_components': self.n_components,
+            'umap_metric': self.umap_metric,
+            'min_cluster_size': self.min_cluster_size,
+            'min_samples': self.min_samples,
+            'hdbscan_metric': self.hdbscan_metric
+        }
 
-def get_papers(category: str) -> List[Paper]:
-    with open(f"./preprocessed/{category}/papers.pkl", "rb") as f:
-        embeddings = pickle.load(f)
-    return embeddings
+# ============================================================================
+# Data Management
+# ============================================================================
 
-def get_text_embeddings(category: str) -> np.ndarray:
-    with open(f"./preprocessed/{category}/text_embeddings.npy", "rb") as f:
-        embeddings = np.load(f)
-    return embeddings
+def load_papers(category: str) -> List[Paper]:
+    """Load preprocessed papers for a given arXiv category."""
+    filepath = f"./preprocessed/{category}/papers.pkl"
+    try:
+        with open(filepath, "rb") as f:
+            return pickle.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Preprocessed papers not found at {filepath}")
+
+
+def load_text_embeddings(category: str) -> np.ndarray:
+    """Load pre-computed SPECTER2 text embeddings."""
+    filepath = f"./preprocessed/{category}/text_embeddings.npy"
+    try:
+        with open(filepath, "rb") as f:
+            return np.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
 def create_model(params: Hyperparameters) -> BERTopic:
     vectorizer_model = CountVectorizer(
         stop_words="english",
-        ngram_range=params.ngram_range,
+        analyzer="word",
+        ngram_range=tuple(params.ngram_range),
         min_df=params.min_df,
         max_df=params.max_df,
-        max_features=None,
-        vocabulary=None,
-
-        lowercase=params.lowercase,
-        strip_accents=params.strip_accents,
+        lowercase=False,
+        strip_accents=None
     )
-    ctfidf_model = ClassTfidfTransformer(
-        bm25_weighting=params.bm25_weighting,
-    )
+    
+    ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
+    
     umap_model = UMAP(
         n_neighbors=params.n_neighbors,
         n_components=params.n_components,
-        metric='cosine',
-        low_memory=False,
-        min_dist=params.min_dist,  
-        spread=params.spread,
-        random_state=42
+        metric=params.umap_metric,
+        random_state=42,
+        low_memory=False
     )
+    
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
-        metric='euclidean',
+        metric=params.hdbscan_metric,
         prediction_data=True
     )
 
     # representations(topic名、代表単語が変わる)
-    top_n_words = 10
+    top_n_words = params.top_n_words
     keybert_inspired = KeyBERTInspired(
         top_n_words=top_n_words,
         nr_repr_docs=5,         
@@ -123,6 +147,7 @@ def create_model(params: Hyperparameters) -> BERTopic:
     representation_models = [keybert_inspired, part_of_speech, maximal_marginal_relevance]
 
     model = BERTopic(
+        top_n_words=top_n_words,
         vectorizer_model=vectorizer_model,
         ctfidf_model=ctfidf_model,
         hdbscan_model=hdbscan_model,
@@ -138,8 +163,8 @@ def create_model(params: Hyperparameters) -> BERTopic:
 def process_one_category(category: str):
 
     # 前処理済データを取得
-    papers = get_papers(category)
-    text_embeddings = get_text_embeddings(category)
+    papers = load_papers(category)   
+    text_embeddings = load_text_embeddings(category)
     texts = [EMBEDDING_MODEL.get_input_text(paper) for paper in papers]
     del papers
     gc.collect()
@@ -163,6 +188,6 @@ def process_one_category(category: str):
         pickle.dump(representative_docs, f)
 
 if __name__ == "__main__":
-    category = "physics.geo-ph"
+    category = "cs.AR"
     process_one_category(category)
 

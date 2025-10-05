@@ -41,7 +41,7 @@ class OptimizationConfig:
     
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout
-    DEFAULT_N_TRIALS = 100
+    DEFAULT_N_TRIALS = 30
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -51,7 +51,7 @@ class OptimizationConfig:
     TOP_N_WORDS_RANGE = (10, 30)
     NGRAM_RANGES = [[1, 3]]
 
-    MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 0.8)  
+    MIN_SAMPLES_MULTIPLIER_RANGE = (0.1, 1.0)  # Expanded range  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -71,10 +71,10 @@ class OptimizationConfig:
     
     @staticmethod
     def get_min_cluster_size_range(dataset_size: int) -> Tuple[int, int]:
-        """Get min_cluster_size range based on dataset size (conservative for academic topics)."""
-        # More conservative ranges for academic topic modeling
-        min_val = max(20, dataset_size // 500)   # 0.2% of dataset, min 20
-        max_val = min(1000, dataset_size // 50)    # 2% of dataset, max 1000
+        """Get min_cluster_size range based on dataset size (expanded for better exploration)."""
+        # Expanded ranges for better optimization exploration
+        min_val = max(10, dataset_size // 1000)   # 0.1% of dataset, min 10
+        max_val = min(2000, dataset_size // 20)    # 5% of dataset, max 2000
         return (min_val, max_val)
     
     @staticmethod
@@ -464,23 +464,23 @@ def compute_cluster_quality_score(
         topic_info = model.get_topic_info()
         n_topics = len(topic_info[topic_info['Topic'] != -1])
         
-        # Apply penalty if number of topics is 2 or fewer
-        if n_topics <= 2:
-            return 0.1  # Return low score for too few topics(not worse than eps)
+        # Apply penalty if number of topics is 1 or fewer (more lenient)
+        if n_topics <= 1:
+            return 0.1  # Return low score for too few topics
         
         # Compute individual metrics
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         topic_diversity = _compute_topic_diversity(model, eps=eps)
         topic_coverage = _compute_topic_coverage(model, eps=eps)
         
-        # Weighted combination of metrics
-        # DBCV: 70% (density-based clustering quality including cohesion)
-        # Topic Diversity: 20% (word overlap between topics)
-        # Topic Coverage: 10% (document coverage)
+        # Weighted combination of metrics (rebalanced for better optimization)
+        # DBCV: 50% (density-based clustering quality)
+        # Topic Diversity: 30% (word overlap between topics) 
+        # Topic Coverage: 20% (document coverage)
         combined_score = (
-            0.70 * dbcv_score +
-            0.20 * topic_diversity +
-            0.10 * topic_coverage
+            0.50 * dbcv_score +
+            0.30 * topic_diversity +
+            0.20 * topic_coverage
         )
         
         return combined_score
