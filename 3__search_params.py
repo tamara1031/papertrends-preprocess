@@ -77,8 +77,8 @@ class OptimizationConfig:
             # Large datasets: focus on quality and diversity
             return {
                 'coverage': 0.15,
-                'topic_count': 0.10,
-                'dominance': 0.10,
+                'topic_count': 0.05,
+                'dominance': 0.15,
                 'coherence': 0.35,
                 'topic_diversity': 0.30
             }  
