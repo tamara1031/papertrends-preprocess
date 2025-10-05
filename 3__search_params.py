@@ -53,8 +53,8 @@ class OptimizationConfig:
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
     
     # Score weighting configuration
-    DBCV_WEIGHT = 0.50           # Weight for DBCV score
-    COVERAGE_WEIGHT = 0.10        # Weight for topic coverage
+    DBCV_WEIGHT = 0.40           # Weight for DBCV score
+    COVERAGE_WEIGHT = 0.20        # Weight for topic coverage
     DOMINANCE_WEIGHT = 0.20       # Weight for dominance score
     TOPIC_COUNT_WEIGHT = 0.20     # Weight for topic count score  
     
@@ -397,8 +397,8 @@ def _compute_dominance_score(
             
         max_cluster_size = np.max(cluster_sizes)
         dominance_ratio = max_cluster_size / dataset_size
-        # Smooth sigmoid-based penalty: starts penalizing around 0.7
-        penalty_strength = 1.0 / (1.0 + np.exp(-10 * (dominance_ratio - 0.7)))
+        # Smooth sigmoid-based penalty: starts penalizing around 0.5
+        penalty_strength = 1.0 / (1.0 + np.exp(-10 * (dominance_ratio - 0.5)))
         return max(eps, 1.0 - penalty_strength)
         
     except Exception as e:
@@ -420,8 +420,17 @@ def _compute_topic_count_score(
             return eps
             
         # Optimal topic count based on dataset size
-        # Use logarithmic scaling: optimal ≈ sqrt(dataset_size) * log(dataset_size)
-        optimal_topic_count = max(3, int(np.sqrt(dataset_size) * np.log10(max(10, dataset_size))))
+        # Natural continuous scaling using mathematical functions
+        # Use sqrt with logarithmic decay for natural progression
+        base_count = np.sqrt(dataset_size)
+        
+        # Apply logarithmic decay factor that naturally decreases with dataset size
+        # This creates smooth, continuous decrease without artificial caps
+        log_decay_factor = np.log10(max(10, dataset_size))
+        
+        # Combine sqrt and log for natural scaling
+        # Small datasets: higher factor, large datasets: lower factor
+        optimal_topic_count = max(5, int(base_count * log_decay_factor * 0.04))
         
         # Smooth optimization function: penalize deviation from optimal
         # Use Gaussian-like function centered at optimal_topic_count
