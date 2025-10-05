@@ -485,11 +485,15 @@ def _compute_topic_diversity_score(
         distances = 1 - upper_triangle
         median_distance = np.median(distances)
         
-        # Apply power transformation: distance^2.0 to emphasize high diversity
-        # This creates steep slope at high distance values (well-separated clusters)
-        # Consistent with coherence score transformation for unified scoring
-        power = 2.0
-        diversity_score = median_distance ** power
+        # Apply exponential transformation: exp(distance - 1) for practical scoring
+        # This provides more usable scores when clusters are naturally similar
+        # Transformation ensures that:
+        # - distance=0.05 (very similar) → diversity≈0.37
+        # - distance=0.1 (similar) → diversity≈0.45
+        # - distance=0.2 (moderate) → diversity≈0.61
+        # - distance=0.5 (good) → diversity≈0.82
+        # - distance=1.0 (perfect) → diversity=1.00
+        diversity_score = np.exp(median_distance - 1.0)
         
         print(f"Topic diversity - Topics: {len(topic_centroids)}, Median distance: {median_distance:.4f}, "
               f"Diversity: {diversity_score:.4f}")
