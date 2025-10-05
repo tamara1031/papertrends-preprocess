@@ -372,51 +372,6 @@ def _compute_dominance_score(
         print(f"Warning: dominance score computation failed: {e}")
         return eps
 
-def _compute_topic_count_score(
-    model: BERTopic,
-    dataset_size: int,
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute topic count score based on optimal topic count for dataset size."""
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        n_topics = len(valid_topics)
-        
-        if n_topics <= 1:
-            return eps
-            
-        # Optimal topic count based on dataset size
-        # Use sqrt with logarithmic decay for natural progression
-        base_count = np.sqrt(dataset_size)
-        log_decay_factor = np.log10(max(10, dataset_size))
-        
-        # Calculate base topic count with coefficient 1.0
-        base_topic_count = base_count * log_decay_factor
-        
-        # Define optimal coefficient range (0.04 to 0.08)
-        optimal_min_coeff = 0.02
-        optimal_max_coeff = 0.08
-        
-        # Calculate optimal topic count range
-        optimal_min_topics = max(5, int(base_topic_count * optimal_min_coeff))
-        optimal_max_topics = max(5, int(base_topic_count * optimal_max_coeff))
-        
-        # Use the midpoint of optimal range as the target
-        optimal_topic_count = (optimal_min_topics + optimal_max_topics) // 2
-        
-        # Smooth optimization function: penalize deviation from optimal
-        # Use Gaussian-like function centered at optimal_topic_count
-        deviation_ratio = abs(n_topics - optimal_topic_count) / max(optimal_topic_count, 1)
-        
-        # Smooth penalty with adjustable width (sigma controls the width)
-        sigma = 0.3  # Controls how quickly score drops from optimal
-        return max(eps, np.exp(-0.5 * (deviation_ratio / sigma) ** 2))
-        
-    except Exception as e:
-        print(f"Warning: topic count score computation failed: {e}")
-        return eps
-
 def _compute_topic_diversity_score(
     model: BERTopic,
     original_embeddings: np.ndarray,
