@@ -40,7 +40,7 @@ class OptimizationConfig:
     
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout
-    DEFAULT_N_TRIALS = 90
+    DEFAULT_N_TRIALS = 50
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -586,24 +586,24 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 # Main Execution
 # ============================================================================
 
-def main():
+def process_one_category(category: str):
     """Main execution function for hyperparameter optimization."""
-    category = "cs.AR"
     
     # Create output directory
-    model_path = f"./models/{category}"
-    os.makedirs(model_path, exist_ok=True)
+    params_path = f"./params/{category}"
+    os.makedirs(params_path, exist_ok=True)
     
     # Run optimization
-    study_storage_path = f"sqlite:///{model_path}/search_params.db"
+    study_storage_path = f"sqlite:///{params_path}/search_params.db"
     study = optimize_category_clustering(
         category=category,
         storage=study_storage_path
     )
     
     # Save results
-    save_optimization_results(study, model_path)
+    save_optimization_results(study, params_path)
 
 
 if __name__ == "__main__":
-    main()
+    category = "cs.AR"
+    process_one_category(category)

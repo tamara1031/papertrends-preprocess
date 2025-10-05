@@ -3,6 +3,7 @@
 mysql/data/
 preprocessed/
 models/
+params/
 analysis/topic_distr_tmp.npy
 analysis/
 

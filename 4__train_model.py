@@ -162,6 +162,11 @@ def create_model(params: Hyperparameters) -> BERTopic:
 
 def process_one_category(category: str):
 
+    models_path = f"./models/{category}"
+    if(os.path.exists(models_path)):
+        # すでに訓練済みの場合はスキップ
+        return
+
     # 前処理済データを取得
     papers = load_papers(category)   
     text_embeddings = load_text_embeddings(category)
@@ -170,8 +175,8 @@ def process_one_category(category: str):
     gc.collect()
 
     # パラメータを取得
-    param_dir = f"./models/{category}/best_params.json"
-    with open(param_dir, "r") as f:
+    param_path = f"./params/{category}/best_params.json"
+    with open(param_path, "r") as f:
         best_params = json.load(f)
 
     hyperparameters = Hyperparameters(**best_params)
@@ -180,11 +185,11 @@ def process_one_category(category: str):
     model = create_model(hyperparameters)
     model.fit(texts, embeddings=text_embeddings)
 
-    model.save(f"./models/{category}", serialization="safetensors", save_ctfidf=True)
+    model.save(models_path, serialization="safetensors", save_ctfidf=True)
 
     # save representative docs with pickle
     representative_docs = model.get_representative_docs()
-    with open(f"./models/{category}/representative_docs.pkl", "wb") as f:
+    with open(f"{models_path}/representative_docs.pkl", "wb") as f:
         pickle.dump(representative_docs, f)
 
 if __name__ == "__main__":
