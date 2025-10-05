@@ -411,7 +411,7 @@ def compute_cluster_quality_score(
 # Optuna Configuration
 # ============================================================================
 
-def create_tpe_sampler(study_name: str, dataset_size: int, n_trials: int = 100) -> TPESampler:
+def create_tpe_sampler(n_trials: int = 100) -> TPESampler:
     """Create TPE sampler optimized for BERTopic clustering hyperparameter search.
     
     Optimized for topic modeling with dynamic settings:
@@ -521,7 +521,7 @@ def optimize_category_clustering(
         load_if_exists=True,  
         direction="maximize",
         study_name=study_name,
-        sampler=create_tpe_sampler(study_name, dataset_size, n_trials),
+        sampler=create_tpe_sampler(n_trials),
         pruner=create_median_pruner(n_trials)
     )
     
