@@ -49,7 +49,7 @@ class OptimizationConfig:
     
     # Fixed parameter ranges (simple and safe)
     TOP_N_WORDS_RANGE = (10, 20)
-    NGRAM_RANGES = [[1, 3]]
+    NGRAM_RANGES = [[1, 2]]
     
     # Clustering parameters (fixed safe ranges)
     MIN_CLUSTER_SIZE_RANGE = (50, 500)
@@ -416,7 +416,7 @@ def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
     return TPESampler(
         # Core TPE settings
         consider_prior=True,
-        prior_weight=0.75,  # Reduced from 0.85 for more exploration
+        prior_weight=0.75, 
         consider_magic_clip=True,
         consider_endpoints=False,
         
@@ -425,8 +425,8 @@ def create_tpe_sampler(study_name: str, dataset_size: int) -> TPESampler:
         group=False,        # Disable grouping for mixed parameter types
         
         # Exploration settings
-        n_startup_trials=25,  # Increased for better initial exploration
-        n_ei_candidates=32,   # Increased for more candidate evaluation
+        n_startup_trials=25,
+        n_ei_candidates=32, 
         
         # Stability settings
         warn_independent_sampling=False,
