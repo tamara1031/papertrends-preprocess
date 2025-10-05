@@ -8,6 +8,8 @@ import numpy as np
 import warnings
 
 import optuna
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import pairwise_distances
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -53,10 +55,12 @@ class OptimizationConfig:
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
     
     # Score weighting configuration
-    DBCV_WEIGHT = 0.40           # Weight for DBCV score
-    COVERAGE_WEIGHT = 0.20        # Weight for topic coverage
-    DOMINANCE_WEIGHT = 0.20       # Weight for dominance score
-    TOPIC_COUNT_WEIGHT = 0.20     # Weight for topic count score  
+    DBCV_WEIGHT = 0.00           # Weight for DBCV score (replaced with topic diversity)
+    COVERAGE_WEIGHT = 0.15        # Weight for topic coverage
+    DOMINANCE_WEIGHT = 0.15       # Weight for dominance score
+    TOPIC_COUNT_WEIGHT = 0.15     # Weight for topic count score
+    TOPIC_DIVERSITY_WEIGHT = 0.40 # Weight for topic diversity score
+    UCI_COHERENCE_WEIGHT = 0.15   # Weight for UCI coherence score  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -451,6 +455,120 @@ def _compute_topic_count_score(
         print(f"Warning: topic count score computation failed: {e}")
         return eps
 
+def _compute_topic_diversity_score(
+    model: BERTopic,
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute topic diversity score using sklearn for efficiency."""
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        
+        if len(valid_topics) <= 1:
+            return eps
+            
+        # Get topic words
+        topic_words = []
+        for topic_id in valid_topics['Topic'].values:
+            words = model.get_topic(topic_id)
+            if words:
+                words_list = [word[0] for word in words[:10]]
+                topic_words.append(" ".join(words_list))
+        
+        if len(topic_words) <= 1:
+            return eps
+            
+        # Calculate Jaccard distances
+        vectorizer = CountVectorizer(binary=True)
+        topic_vectors = vectorizer.fit_transform(topic_words)
+        distances = pairwise_distances(topic_vectors, metric="jaccard")
+        
+        # Get upper triangle and calculate diversity score
+        mask = np.triu(np.ones_like(distances, dtype=bool), k=1)
+        jaccard_distances = distances[mask]
+        
+        if len(jaccard_distances) == 0:
+            return eps
+            
+        avg_distance = np.mean(jaccard_distances)
+        return max(eps, np.exp(-5 * (1 - avg_distance)))
+        
+    except Exception:
+        return eps
+
+def _compute_uci_coherence_score(
+    model: BERTopic,
+    documents: List[str],
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute UCI coherence score using sklearn for efficiency."""
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        
+        if len(valid_topics) <= 1:
+            return eps
+            
+        # Get topic words
+        topic_words = []
+        for topic_id in valid_topics['Topic'].values:
+            words = model.get_topic(topic_id)
+            if words:
+                words_list = [word[0] for word in words[:10]]
+                topic_words.append(words_list)
+        
+        if not any(topic_words):
+            return eps
+            
+        # Calculate co-occurrence matrix
+        vectorizer = CountVectorizer()
+        doc_vectors = vectorizer.fit_transform(documents)
+        vocabulary = vectorizer.get_feature_names_out()
+        vocab_to_idx = {word: idx for idx, word in enumerate(vocabulary)}
+        
+        cooccurrence_matrix = doc_vectors.T * doc_vectors
+        cooccurrence_matrix.setdiag(0)
+        
+        # Calculate word probabilities
+        word_counts = np.array(doc_vectors.sum(axis=0)).flatten()
+        total_docs = len(documents)
+        word_probs = word_counts / total_docs
+        
+        # Calculate UCI coherence for each topic
+        topic_coherences = []
+        for words in topic_words:
+            if len(words) < 2:
+                continue
+                
+            topic_coherence = 0
+            word_pairs = 0
+            
+            for i in range(1, len(words)):
+                for j in range(i):
+                    if words[i] in vocab_to_idx and words[j] in vocab_to_idx:
+                        idx_i, idx_j = vocab_to_idx[words[i]], vocab_to_idx[words[j]]
+                        
+                        cooccurrence_count = cooccurrence_matrix[idx_i, idx_j]
+                        p_ij = cooccurrence_count / total_docs
+                        p_i, p_j = word_probs[idx_i], word_probs[idx_j]
+                        
+                        if p_i > 0 and p_j > 0:
+                            topic_coherence += np.log(p_ij + eps) - np.log(p_i * p_j + eps)
+                            word_pairs += 1
+            
+            if word_pairs > 0:
+                topic_coherences.append(topic_coherence / word_pairs)
+        
+        if not topic_coherences:
+            return eps
+            
+        # Normalize to [0, 1] using sigmoid
+        avg_coherence = np.mean(topic_coherences)
+        return max(eps, 1.0 / (1.0 + np.exp(-avg_coherence)))
+        
+    except Exception:
+        return eps
+
 def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
     """Get basic information about the trained model."""
     try:
@@ -480,7 +598,8 @@ def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
 
 def compute_cluster_quality_score(
     model: BERTopic, 
-    original_embeddings: np.ndarray, 
+    original_embeddings: np.ndarray,
+    documents: List[str] = None,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
     """Compute combined clustering quality score with cluster balance."""
@@ -496,20 +615,28 @@ def compute_cluster_quality_score(
         # Compute individual balance scores
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
         topic_count_score = _compute_topic_count_score(model, dataset_size, eps=eps)
+        topic_diversity_score = _compute_topic_diversity_score(model, eps=eps)
+        
+        # Compute UCI coherence score if documents are provided
+        uci_coherence_score = eps
+        if documents is not None:
+            uci_coherence_score = _compute_uci_coherence_score(model, documents, eps=eps)
         
         # Weighted combination of all metrics
         final_score = (
             OptimizationConfig.DBCV_WEIGHT * dbcv_score +
             OptimizationConfig.COVERAGE_WEIGHT * topic_coverage +
             OptimizationConfig.DOMINANCE_WEIGHT * dominance_score +
-            OptimizationConfig.TOPIC_COUNT_WEIGHT * topic_count_score
+            OptimizationConfig.TOPIC_COUNT_WEIGHT * topic_count_score +
+            OptimizationConfig.TOPIC_DIVERSITY_WEIGHT * topic_diversity_score +
+            OptimizationConfig.UCI_COHERENCE_WEIGHT * uci_coherence_score
         )
         
         # Output basic model information
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
         # Output individual scores for debugging
-        print(f"Scores - DBCV: {dbcv_score:.4f}, Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}")
+        print(f"Scores - DBCV: {dbcv_score:.4f}, Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Count: {topic_count_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, UCI Coherence: {uci_coherence_score:.4f}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
@@ -585,7 +712,7 @@ def objective_function(
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
         # Evaluate clustering quality
-        score = compute_cluster_quality_score(model, text_embeddings, eps=eps)
+        score = compute_cluster_quality_score(model, text_embeddings, documents=texts, eps=eps)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
