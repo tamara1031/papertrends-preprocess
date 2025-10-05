@@ -427,10 +427,10 @@ def create_tpe_sampler(study_name: str, dataset_size: int, n_trials: int = 100) 
         n_trials: Total number of trials for optimization
     """
     # Dynamic startup trials: Align with pruner (12% of total trials)
-    startup_trials = max(10, min(20, int(n_trials * 0.12)))
+    # startup_trials = max(10, min(20, int(n_trials * 0.12)))
     
     # Dynamic EI candidates: Scale with total trials
-    ei_candidates = max(24, min(64, int(n_trials * 0.3)))  # 30% of trials, min 24, max 64
+    # ei_candidates = max(24, min(64, int(n_trials * 0.3)))  # 30% of trials, min 24, max 64
     
     return TPESampler(seed=42)
 
