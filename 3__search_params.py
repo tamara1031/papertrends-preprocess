@@ -9,7 +9,7 @@ import warnings
 
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics import silhouette_score
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -58,26 +58,23 @@ class OptimizationConfig:
         if dataset_size <= 10000:
             # Small datasets: focus on coverage and reasonable topic counts
             return {
-                'coverage': 0.25,
-                'dominance': 0.25,
-                'coherence': 0.25,
-                'topic_diversity': 0.25
+                'coverage': 0.30,
+                'dominance': 0.30,
+                'clustering_quality': 0.40
             }
         elif dataset_size <= 50000:
             # Medium datasets: balanced approach
             return {
-                'coverage': 0.20,
-                'dominance': 0.20,
-                'coherence': 0.30,
-                'topic_diversity': 0.30
+                'coverage': 0.25,
+                'dominance': 0.25,
+                'clustering_quality': 0.50
             }
         else:
             # Large datasets: focus on quality and diversity
             return {
-                'coverage': 0.15,
-                'dominance': 0.15,
-                'coherence': 0.35,
-                'topic_diversity': 0.35
+                'coverage': 0.20,
+                'dominance': 0.20,
+                'clustering_quality': 0.60
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -372,158 +369,52 @@ def _compute_dominance_score(
         print(f"Warning: dominance score computation failed: {e}")
         return eps
 
-def _compute_topic_diversity_score(
+
+
+def _compute_silhouette_based_score(
     model: BERTopic,
     original_embeddings: np.ndarray,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute topic diversity score using document embeddings with improved statistical robustness.
+    """Compute silhouette-based clustering quality score.
     
-    This function computes topic diversity by:
-    1. Computing centroids for topics with sufficient documents (>=2)
-    2. Using median similarity for robustness against outliers
-    3. Applying non-linear transformation for more natural diversity scoring
-    4. Ensuring statistical validity through proper sample size requirements
-    
-    Args:
-        model: Trained BERTopic model
-        original_embeddings: Document embeddings used for clustering
-        eps: Small epsilon for numerical stability
-        
-    Returns:
-        Topic diversity score in range [eps, 1.0] where higher values indicate more diverse topics
+    This replaces both coherence and diversity scores with a single, more efficient metric
+    that evaluates both intra-cluster cohesion and inter-cluster separation.
     """
     try:
-        # Get valid topics
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        
-        if len(valid_topics) <= 1:
-            return eps
-            
-        # Get document-topic assignments
         labels = model.hdbscan_model.labels_
-        topic_centroids = []
-        topic_sizes = []
         
-        for topic_id in valid_topics['Topic'].values:
-            # Get document indices for this topic
-            topic_mask = (labels == topic_id)
-            topic_indices = np.where(topic_mask)[0]
-            
-            # Require at least 2 documents for statistically meaningful centroid
-            if len(topic_indices) >= 2:
-                # Compute topic centroid from document embeddings
-                topic_embeddings = original_embeddings[topic_indices]
-                centroid = np.mean(topic_embeddings, axis=0)
-                topic_centroids.append(centroid)
-                topic_sizes.append(len(topic_indices))
-        
-        if len(topic_centroids) <= 1:
+        # Filter out noise points (-1 labels)
+        valid_mask = labels != -1
+        if np.sum(valid_mask) < 2:
             return eps
             
-        # Compute cosine similarities between topic centroids
-        centroids_matrix = np.array(topic_centroids)
-        similarities = cosine_similarity(centroids_matrix)
+        valid_labels = labels[valid_mask]
+        valid_embeddings = original_embeddings[valid_mask]
         
-        # Get upper triangle similarities (excluding diagonal)
-        upper_triangle = similarities[np.triu_indices_from(similarities, k=1)]
-        
-        if len(upper_triangle) == 0:
+        # Check if we have multiple clusters
+        unique_labels = np.unique(valid_labels)
+        if len(unique_labels) < 2:
             return eps
             
-        # Compute cluster diversity based on inter-cluster distances
-        # Convert cosine similarities to distances: distance = 1 - similarity
-        distances = 1 - upper_triangle
-        median_distance = np.median(distances)
+        # Compute silhouette score
+        silhouette = silhouette_score(valid_embeddings, valid_labels)
         
-        # Apply exponential transformation: exp(distance - 1) for practical scoring
-        # This provides more usable scores when clusters are naturally similar
+        # Apply non-linear transformation: exp(silhouette - 1) for steep slope at high values
+        # This emphasizes high-quality clustering results
         # Transformation ensures that:
-        # - distance=0.05 (very similar) → diversity≈0.37
-        # - distance=0.1 (similar) → diversity≈0.45
-        # - distance=0.2 (moderate) → diversity≈0.61
-        # - distance=0.5 (good) → diversity≈0.82
-        # - distance=1.0 (perfect) → diversity=1.00
-        diversity_score = np.exp(median_distance - 1.0)
-        
-        print(f"Topic diversity - Topics: {len(topic_centroids)}, Median distance: {median_distance:.4f}, "
-              f"Diversity: {diversity_score:.4f}")
-        
-        return max(eps, min(1.0, diversity_score))
-        
-    except Exception as e:
-        print(f"Warning: Topic diversity computation failed: {e}")
-        return eps
-
-
-def _compute_embedding_coherence_score(
-    model: BERTopic,
-    original_embeddings: np.ndarray,
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute embedding-based coherence score using SPECTER2 document embeddings."""
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        
-        if len(valid_topics) <= 1:
-            return eps
-            
-        # Get document-topic assignments directly from HDBSCAN labels
-        labels = model.hdbscan_model.labels_
-        topic_coherences = []
-        
-        for topic_id in valid_topics['Topic'].values:
-            # Get document indices for this topic
-            topic_mask = (labels == topic_id)
-            topic_indices = np.where(topic_mask)[0]
-            
-            if len(topic_indices) >= 2:
-                topic_embeddings = original_embeddings[topic_indices]
-                coherence = _compute_intra_topic_coherence(topic_embeddings, eps)
-                if coherence > eps:
-                    topic_coherences.append(coherence)
-        
-        # Apply non-linear transformation to emphasize high coherence scores
-        mean_coherence = np.mean(topic_coherences) if topic_coherences else eps
-        
-        # Apply power transformation: score^power to create steeper slope at high values
-        # This makes the score more sensitive to high coherence values
-        # Power transformation ensures monotonic increase with steeper slope at high values
-        # The power value can be adjusted based on experimental results
-        power = 2.5  # Adjustable parameter - start with 2.0 for moderate non-linearity
-        transformed_score = mean_coherence ** power
+        # - silhouette=-1 (worst) → score≈0.37
+        # - silhouette=0 (neutral) → score≈0.61
+        # - silhouette=0.5 (good) → score≈0.82
+        # - silhouette=1 (best) → score=1.00
+        transformed_score = np.exp(silhouette - 1.0)
         
         return max(eps, min(1.0, transformed_score))
-
-    except Exception:
+        
+    except Exception as e:
+        print(f"Warning: Silhouette-based score computation failed: {e}")
         return eps
 
-def _compute_intra_topic_coherence(
-    topic_embeddings: np.ndarray, 
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute coherence for documents within a single topic using SPECTER2 embeddings."""
-    try:
-        if len(topic_embeddings) < 2:
-            return eps
-            
-        from sklearn.metrics.pairwise import cosine_similarity
-        similarities = cosine_similarity(topic_embeddings)
-        
-        # Get upper triangle (excluding diagonal)
-        mask = np.triu(np.ones_like(similarities, dtype=bool), k=1)
-        similarity_values = similarities[mask]
-        
-        if len(similarity_values) == 0:
-            return eps
-            
-        avg_similarity = np.mean(similarity_values)
-        return max(eps, min(1.0, avg_similarity))
-        
-    except Exception:
-        return eps
 
 def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
     """Get basic information about the trained model."""
@@ -558,22 +449,20 @@ def compute_cluster_quality_score(
         # Compute individual metrics
         topic_coverage = _compute_topic_coverage(model, eps=eps)
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
-        topic_diversity_score = _compute_topic_diversity_score(model, original_embeddings, eps=eps)
-        coherence_score = _compute_embedding_coherence_score(model, original_embeddings, eps=eps)
+        clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
         weights = OptimizationConfig.get_adaptive_weights(dataset_size)
         final_score = (
             weights['coverage'] * topic_coverage +
             weights['dominance'] * dominance_score +
-            weights['topic_diversity'] * topic_diversity_score +
-            weights['coherence'] * coherence_score
+            weights['clustering_quality'] * clustering_quality_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Topic Diversity: {topic_diversity_score:.4f}, Embedding Coherence: {coherence_score:.4f}")
-        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Topic Diversity: {weights['topic_diversity']:.1%}, Embedding Coherence: {weights['coherence']:.1%}")
+        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
+        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
