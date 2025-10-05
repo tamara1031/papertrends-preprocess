@@ -40,20 +40,21 @@ class OptimizationConfig:
     EPSILON = 1e-6
     
     # Optimization sessions
-    DEFAULT_TIMEOUT = None  # No timeout by default
+    DEFAULT_TIMEOUT = None  # No timeout
     DEFAULT_N_TRIALS = 100
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
-    HDBSCAN_METRICS = ["euclidean", "manhattan"]
+    HDBSCAN_METRICS = ["euclidean"]
     
     # Fixed parameter ranges (simple and safe)
-    TOP_N_WORDS_RANGE = (10, 30)
-    NGRAM_RANGES = [[1, 2], [1, 3]]
+    TOP_N_WORDS_RANGE = (10, 20)
+    NGRAM_RANGES = [[1, 3]]
     
     # Clustering parameters (fixed safe ranges)
     MIN_CLUSTER_SIZE_RANGE = (50, 500)
-    MIN_SAMPLES_MAX_MULTIPLIER = 0.8
+    MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 1.0)
+    MIN_SAMPLES_MAX_MULTIPLIER = 1.0
     
     # Vectorization parameters
     MIN_DF_RANGE = (2, 30)
@@ -140,8 +141,9 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
     )
     
     # min_samples constraint (relative to min_cluster_size)
-    min_samples_max = max(3, int(min_cluster_size * OptimizationConfig.MIN_SAMPLES_MAX_MULTIPLIER))
-    min_samples = trial.suggest_int("min_samples", 3, min_samples_max)
+    min_samples_min = int(min_cluster_size * OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[0])
+    min_samples_max = int(min_cluster_size * OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[1])
+    min_samples = trial.suggest_int("min_samples", min_samples_min, min_samples_max)
     
     # HDBSCAN distance metric (validated compatible metrics only)
     hdbscan_metric = trial.suggest_categorical("hdbscan_metric", OptimizationConfig.HDBSCAN_METRICS)
