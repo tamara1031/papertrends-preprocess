@@ -47,10 +47,21 @@ class OptimizationConfig:
     HDBSCAN_METRICS = ["euclidean", "manhattan"]  
     
     # Topic representation (data-size independent)
-    TOP_N_WORDS_RANGE = (10, 30)
+    TOP_N_WORDS_RANGE = (10, 20)
     NGRAM_RANGES = [[1, 3]]
 
-    MIN_SAMPLES_MULTIPLIER_RANGE = (0.1, 1.0)  # Expanded range  
+    MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
+    
+    # Cluster penalty configuration
+    CLUSTER_DOMINANCE_THRESHOLD = 0.3  # Penalty if >30% in one cluster
+    CLUSTER_SIZE_VARIANCE_FACTOR = 2.0  # Normalization factor for size variance
+    CLUSTER_COUNT_SQRT_FACTOR = 1.0    # Multiplier for sqrt(n) minimum clusters
+    CLUSTER_COUNT_MAX_FACTOR = 0.05    # Maximum clusters as fraction of dataset size
+    
+    # Score weighting configuration
+    DBCV_WEIGHT = 0.50           # Weight for DBCV score
+    COVERAGE_WEIGHT = 0.30        # Weight for topic coverage
+    BALANCE_WEIGHT = 0.20         # Weight for cluster balance score  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -375,13 +386,93 @@ def _compute_topic_coverage(
         return eps
 
 
+def _compute_cluster_balance_score(
+    model: BERTopic, 
+    dataset_size: int,
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute score for balanced cluster sizes and appropriate cluster count.
+    
+    Combines cluster size balance and cluster count adequacy into a single metric.
+    Rewards clustering solutions with well-distributed cluster sizes and 
+    appropriate number of clusters based on dataset size.
+    
+    Args:
+        model: Trained BERTopic model
+        dataset_size: Total number of documents
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Balance score in range [0, 1] where 1 means optimal cluster distribution
+    """
+    try:
+        topic_info = model.get_topic_info()
+        # Exclude noise topic (-1)
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        n_topics = len(valid_topics)
+        
+        if n_topics <= 0:
+            return eps  # Low score for no clusters
+        if n_topics <= 1:
+            return eps  # Low score for single cluster
+        
+        # === Cluster Size Balance Score ===
+        cluster_sizes = valid_topics['Count'].values
+        max_cluster_size = np.max(cluster_sizes)
+        mean_cluster_size = np.mean(cluster_sizes)
+        
+        # Score 1: Largest cluster dominance (rewards balanced distribution)
+        dominance_ratio = max_cluster_size / dataset_size
+        if dominance_ratio <= OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD:
+            dominance_score = 1.0  # Perfect score if below threshold
+        else:
+            # Gradual decrease as dominance increases
+            dominance_score = max(eps, 1.0 - (dominance_ratio - OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD) / (1.0 - OptimizationConfig.CLUSTER_DOMINANCE_THRESHOLD))
+        
+        # Score 2: Cluster size variance (rewards uniform sizes)
+        if len(cluster_sizes) > 1:
+            size_variance = np.var(cluster_sizes) / (mean_cluster_size ** 2)  # Coefficient of variation
+            variance_score = max(eps, 1.0 - min(1.0, size_variance / OptimizationConfig.CLUSTER_SIZE_VARIANCE_FACTOR))
+        else:
+            variance_score = eps
+        
+        size_balance_score = 0.7 * dominance_score + 0.3 * variance_score
+        
+        # === Cluster Count Adequacy Score ===
+        # Define optimal cluster count range based on dataset size
+        min_optimal = max(3, int(np.sqrt(dataset_size) * OptimizationConfig.CLUSTER_COUNT_SQRT_FACTOR))
+        max_optimal = max(min_optimal * 3, int(dataset_size * OptimizationConfig.CLUSTER_COUNT_MAX_FACTOR))
+        
+        if n_topics < min_optimal:
+            # Too few clusters - score decreases as count decreases
+            count_score = max(eps, n_topics / min_optimal)
+        elif n_topics > max_optimal:
+            # Too many clusters - score decreases as count increases
+            count_score = max(eps, max_optimal / n_topics)
+        else:
+            # Optimal range - perfect score
+            count_score = 1.0
+        
+        # === Combined Score ===
+        # Weighted combination: 60% size balance, 40% count adequacy
+        combined_score = 0.6 * size_balance_score + 0.4 * count_score
+        
+        return min(1.0, combined_score)
+        
+    except Exception as e:
+        print(f"Warning: Cluster balance score computation failed: {e}")
+        return eps  # Low score on error
+
+
 def compute_cluster_quality_score(
     model: BERTopic, 
     original_embeddings: np.ndarray, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute combined clustering quality score with multiple metrics."""
+    """Compute combined clustering quality score with cluster balance."""
     try:
+        dataset_size = len(original_embeddings)
+        
         # Get number of topics (excluding noise topic -1)
         topic_info = model.get_topic_info()
         n_topics = len(topic_info[topic_info['Topic'] != -1])
@@ -393,16 +484,18 @@ def compute_cluster_quality_score(
         # Compute individual metrics
         dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         topic_coverage = _compute_topic_coverage(model, eps=eps)
+        cluster_balance_score = _compute_cluster_balance_score(model, dataset_size, eps=eps)
         
-        # Weighted combination of metrics (simplified to avoid redundancy)
-        # DBCV: 70% (density-based clustering quality - includes separation)
-        # Topic Coverage: 30% (document coverage - unique metric)
-        combined_score = (
-            0.70 * dbcv_score +
-            0.30 * topic_coverage
+        # Weighted combination of all metrics
+        final_score = (
+            OptimizationConfig.DBCV_WEIGHT * dbcv_score +
+            OptimizationConfig.COVERAGE_WEIGHT * topic_coverage +
+            OptimizationConfig.BALANCE_WEIGHT * cluster_balance_score
         )
         
-        return combined_score
+        # Ensure score is in valid range [0, 1]
+        return max(eps, min(1.0, final_score))
+        
     except Exception:
         return eps
 
