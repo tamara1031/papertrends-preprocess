@@ -49,15 +49,15 @@ class OptimizationConfig:
     
     # Fixed parameter ranges (simple and safe)
     TOP_N_WORDS_RANGE = (10, 20)
-    NGRAM_RANGES = [[1, 2]]
+    NGRAM_RANGES = [[1, 3]]
     
     # Clustering parameters (fixed safe ranges)
     MIN_CLUSTER_SIZE_RANGE = (50, 500)
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.2, 1.0)
     
     # Vectorization parameters
-    MIN_DF_RANGE = (2, 30)
-    MAX_DF_PERCENT_RANGE = (0.1, 0.95)    # (10% to 95%)
+    MIN_DF_RANGE = (2, 15)
+    MAX_DF_PERCENT_RANGE = (0.50, 0.95)    # (50% to 95%)
     
     # UMAP parameters (fixed safe ranges)
     N_NEIGHBORS_RANGE = (10, 50)
@@ -207,6 +207,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
     """Create BERTopic model with optimized parameter configuration."""
     vectorizer_model = CountVectorizer(
         stop_words="english",
+        analyzer="word",
         ngram_range=tuple(params.ngram_range),
         min_df=params.min_df,
         max_df=params.max_df,
@@ -390,8 +391,8 @@ def compute_cluster_quality_score(
         # Topic Diversity: 20% (word overlap between topics)
         # Topic Coverage: 10% (document coverage)
         combined_score = (
-            0.60 * dbcv_score +
-            0.30 * topic_diversity +
+            0.70 * dbcv_score +
+            0.20 * topic_diversity +
             0.10 * topic_coverage
         )
         
