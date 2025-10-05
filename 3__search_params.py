@@ -192,7 +192,6 @@ def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) ->
     
     max_df_range = OptimizationConfig.get_max_df_range(dataset_size)
     max_df = trial.suggest_int("max_df", *max_df_range)
-
     
     return top_n_words, ngram_range, min_df, max_df
 
