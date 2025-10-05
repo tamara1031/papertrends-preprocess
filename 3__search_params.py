@@ -55,12 +55,11 @@ class OptimizationConfig:
     MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
     
     # Score weighting configuration
-    DBCV_WEIGHT = 0.00           # Weight for DBCV score (replaced with topic diversity)
-    COVERAGE_WEIGHT = 0.15        # Weight for topic coverage
-    DOMINANCE_WEIGHT = 0.15       # Weight for dominance score
-    TOPIC_COUNT_WEIGHT = 0.15     # Weight for topic count score
-    TOPIC_DIVERSITY_WEIGHT = 0.40 # Weight for topic diversity score
-    UCI_COHERENCE_WEIGHT = 0.15   # Weight for UCI coherence score  
+    COVERAGE_WEIGHT = 0.10        # Weight for topic coverage
+    DOMINANCE_WEIGHT = 0.20       # Weight for dominance score
+    TOPIC_COUNT_WEIGHT = 0.20    # Weight for topic count score
+    TOPIC_DIVERSITY_WEIGHT = 0.30 # Weight for topic diversity score
+    UCI_COHERENCE_WEIGHT = 0.30   # Weight for UCI coherence score  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
     @staticmethod
@@ -289,62 +288,6 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
 # ============================================================================
 # Evaluation Metrics
 # ============================================================================
-
-def _compute_dbcv_score(
-    model: BERTopic, 
-    original_embeddings: np.ndarray, 
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute Density-Based Cluster Validation (DBCV) score.
-    
-    DBCV measures the quality of density-based clustering by evaluating
-    the density separation between clusters and density connectivity within clusters.
-    
-    Args:
-        model: Trained BERTopic model
-        original_embeddings: Original embedding vectors
-        eps: Small epsilon for numerical stability
-        
-    Returns:
-        Normalized DBCV score in range [0, 1] where 1 is optimal
-    """
-    labels = model.hdbscan_model.labels_
-    
-    # Remove outliers (-1 labels) for cleaner DBCV calculation
-    valid_mask = labels != -1
-    if valid_mask.sum() < 2:
-        return eps
-    
-    filtered_embeddings = original_embeddings[valid_mask].astype(np.float64)
-    filtered_labels = labels[valid_mask]
-    
-    # Calculate distance matrix with enhanced numerical stability
-    distance_matrix = pairwise_distances(filtered_embeddings, metric='euclidean').astype(np.float64)
-    
-    # Clean numeric issues (warnings suppressed globally)
-    distance_matrix[distance_matrix <= 0] = eps
-    distance_matrix[distance_matrix > 1e3] = 1e3
-    distance_matrix[np.isnan(distance_matrix)] = eps
-    distance_matrix[np.isinf(distance_matrix)] = 1e3
-    
-    # Compute DBCV score
-    try:
-        dbcv_score = validity_index(distance_matrix, filtered_labels)
-        
-        # Handle edge cases for validity_index output
-        if np.isnan(dbcv_score) or np.isinf(dbcv_score):
-            return eps
-            
-    except Exception as e:
-        print(f"Warning: DBCV computation failed: {e}")
-        return eps
-    
-    # Normalize DBCV score from [-1, 1] to [0, 1]
-    # -1 (worst) -> 0, 0 (neutral) -> 0.5, 1 (best) -> 1
-    normalized_score = (dbcv_score + 1.0) / 2.0
-    
-    # Ensure output is in valid range [0, 1]
-    return max(0.0, min(1.0, normalized_score))
 
 
 def _compute_topic_coverage(
@@ -610,7 +553,6 @@ def compute_cluster_quality_score(
         basic_info = _get_basic_model_info(model, dataset_size)
         
         # Compute individual metrics
-        dbcv_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         topic_coverage = _compute_topic_coverage(model, eps=eps)
         # Compute individual balance scores
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
@@ -624,7 +566,6 @@ def compute_cluster_quality_score(
         
         # Weighted combination of all metrics
         final_score = (
-            OptimizationConfig.DBCV_WEIGHT * dbcv_score +
             OptimizationConfig.COVERAGE_WEIGHT * topic_coverage +
             OptimizationConfig.DOMINANCE_WEIGHT * dominance_score +
             OptimizationConfig.TOPIC_COUNT_WEIGHT * topic_count_score +
