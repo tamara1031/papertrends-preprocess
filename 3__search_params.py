@@ -536,7 +536,14 @@ def _compute_embedding_coherence_score(
                 if coherence > eps:
                     topic_coherences.append(coherence)
         
-        return np.mean(topic_coherences) if topic_coherences else eps
+        # Apply non-linear transformation to emphasize high coherence scores
+        mean_coherence = np.mean(topic_coherences) if topic_coherences else eps
+        
+        # Apply power transformation: score^2.5 to create steeper slope at high values
+        # This makes the score more sensitive to high coherence values
+        transformed_score = mean_coherence ** 2.5
+        
+        return max(eps, min(1.0, transformed_score))
 
     except Exception:
         return eps
