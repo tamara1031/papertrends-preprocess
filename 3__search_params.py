@@ -41,6 +41,7 @@ class OptimizationConfig:
     
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout by default
+    DEFAULT_N_TRIALS = 100
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -209,7 +210,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         min_df=params.min_df,
         max_df=params.max_df,
         lowercase=False,
-        strip_accents="unicode"
+        strip_accents=None
     )
     
     ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
@@ -464,10 +465,12 @@ def objective_function(
 def optimize_category_clustering(
     category: str, 
     timeout: Optional[int] = None, 
+    n_trials: Optional[int] = None,
     storage: Optional[str] = None
 ) -> optuna.Study:
     """Run hyperparameter optimization for a specific arXiv category."""
     timeout = timeout or OptimizationConfig.DEFAULT_TIMEOUT
+    n_trials = n_trials or OptimizationConfig.DEFAULT_N_TRIALS
     
     # Load and prepare data
     print(f"Loading data for category: {category}")
@@ -497,10 +500,7 @@ def optimize_category_clustering(
     )
     
     # Run optimization
-    n_trials = None
-    
-    if n_trials is not None:
-        print(f"Starting optimization with {n_trials} trials...")
+    print(f"Starting optimization with {n_trials} trials...")
     
     try:
         study.optimize(
