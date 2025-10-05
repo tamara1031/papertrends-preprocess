@@ -43,9 +43,6 @@ class OptimizationConfig:
     
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout by default
-    MIN_TRIALS = 30
-    MAX_TRIALS = 200
-    TRIALS_SCALE_FACTOR = 50
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -502,10 +499,7 @@ def optimize_category_clustering(
     )
     
     # Run optimization
-    n_trials = min(
-        OptimizationConfig.MAX_TRIALS, 
-        max(OptimizationConfig.MIN_TRIALS, dataset_size // OptimizationConfig.TRIALS_SCALE_FACTOR)
-    )
+    n_trials = None
     
     print(f"Starting optimization with {n_trials} trials...")
     
