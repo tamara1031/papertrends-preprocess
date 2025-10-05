@@ -9,7 +9,7 @@ import warnings
 
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import pairwise_distances
+from sklearn.metrics.pairwise import cosine_similarity
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -422,43 +422,89 @@ def _compute_topic_count_score(
 
 def _compute_topic_diversity_score(
     model: BERTopic,
+    original_embeddings: np.ndarray,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute topic diversity score using sklearn for efficiency."""
+    """Compute topic diversity score using document embeddings with improved statistical robustness.
+    
+    This function computes topic diversity by:
+    1. Computing centroids for topics with sufficient documents (>=2)
+    2. Using median similarity for robustness against outliers
+    3. Applying non-linear transformation for more natural diversity scoring
+    4. Ensuring statistical validity through proper sample size requirements
+    
+    Args:
+        model: Trained BERTopic model
+        original_embeddings: Document embeddings used for clustering
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Topic diversity score in range [eps, 1.0] where higher values indicate more diverse topics
+    """
     try:
+        # Get valid topics
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
         
         if len(valid_topics) <= 1:
             return eps
             
-        # Get topic words
-        topic_words = []
+        # Get document-topic assignments
+        labels = model.hdbscan_model.labels_
+        topic_centroids = []
+        topic_sizes = []
+        
         for topic_id in valid_topics['Topic'].values:
-            words = model.get_topic(topic_id)
-            if words:
-                words_list = [word[0] for word in words[:10]]
-                topic_words.append(" ".join(words_list))
+            # Get document indices for this topic
+            topic_mask = (labels == topic_id)
+            topic_indices = np.where(topic_mask)[0]
+            
+            # Require at least 2 documents for statistically meaningful centroid
+            if len(topic_indices) >= 2:
+                # Compute topic centroid from document embeddings
+                topic_embeddings = original_embeddings[topic_indices]
+                centroid = np.mean(topic_embeddings, axis=0)
+                topic_centroids.append(centroid)
+                topic_sizes.append(len(topic_indices))
         
-        if len(topic_words) <= 1:
+        if len(topic_centroids) <= 1:
             return eps
             
-        # Calculate Jaccard distances
-        vectorizer = CountVectorizer(binary=True)
-        topic_vectors = vectorizer.fit_transform(topic_words)
-        distances = pairwise_distances(topic_vectors, metric="jaccard")
+        # Compute cosine similarities between topic centroids
+        centroids_matrix = np.array(topic_centroids)
+        similarities = cosine_similarity(centroids_matrix)
         
-        # Get upper triangle and calculate diversity score
-        mask = np.triu(np.ones_like(distances, dtype=bool), k=1)
-        jaccard_distances = distances[mask]
+        # Get upper triangle similarities (excluding diagonal)
+        upper_triangle = similarities[np.triu_indices_from(similarities, k=1)]
         
-        if len(jaccard_distances) == 0:
+        if len(upper_triangle) == 0:
             return eps
             
-        avg_distance = np.mean(jaccard_distances)
-        return max(eps, np.exp(-5 * (1 - avg_distance)))
+        # Use median similarity for robustness against outliers
+        median_similarity = np.median(upper_triangle)
+        mean_similarity = np.mean(upper_triangle)
         
-    except Exception:
+        # Apply non-linear transformation for more natural diversity scoring
+        # Using exponential decay: diversity = exp(-similarity) 
+        # This provides more intuitive scaling where:
+        # - similarity=0 → diversity=1.0 (perfect diversity)
+        # - similarity=1 → diversity≈0.37 (low diversity)
+        # - similarity=0.5 → diversity≈0.61 (moderate diversity)
+        diversity_score = np.exp(-median_similarity)
+        
+        # Additional penalty for high variance in similarities (indicates inconsistent diversity)
+        similarity_std = np.std(upper_triangle)
+        consistency_penalty = np.exp(-similarity_std * 2)  # Penalty for high variance
+        diversity_score *= consistency_penalty
+        
+        print(f"Topic diversity - Topics: {len(topic_centroids)}, Median similarity: {median_similarity:.4f}, "
+              f"Mean similarity: {mean_similarity:.4f}, Std: {similarity_std:.4f}, "
+              f"Diversity: {diversity_score:.4f}")
+        
+        return max(eps, min(1.0, diversity_score))
+        
+    except Exception as e:
+        print(f"Warning: Topic diversity computation failed: {e}")
         return eps
 
 
@@ -554,7 +600,7 @@ def compute_cluster_quality_score(
         topic_coverage = _compute_topic_coverage(model, eps=eps)
         dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
         topic_count_score = _compute_topic_count_score(model, dataset_size, eps=eps)
-        topic_diversity_score = _compute_topic_diversity_score(model, eps=eps)
+        topic_diversity_score = _compute_topic_diversity_score(model, original_embeddings, eps=eps)
         coherence_score = _compute_embedding_coherence_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
