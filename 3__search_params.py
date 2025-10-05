@@ -18,7 +18,6 @@ from hdbscan import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import pairwise_distances
 from hdbscan.validity import validity_index
-from sklearn.metrics.pairwise import cosine_similarity
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel
@@ -45,7 +44,7 @@ class OptimizationConfig:
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
-    HDBSCAN_METRICS = ["euclidean"]
+    HDBSCAN_METRICS = ["euclidean", "manhattan"]  
     
     # Topic representation (data-size independent)
     TOP_N_WORDS_RANGE = (10, 30)
