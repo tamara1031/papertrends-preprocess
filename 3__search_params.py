@@ -56,25 +56,25 @@ class OptimizationConfig:
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
         """Get adaptive weights based on dataset size for academic papers."""
         if dataset_size <= 10000:
-            # Small datasets: focus on coverage and reasonable topic counts
-            return {
-                'coverage': 0.30,
-                'dominance': 0.20,
-                'clustering_quality': 0.50
-            }
-        elif dataset_size <= 50000:
-            # Medium datasets: balanced approach
-            return {
-                'coverage': 0.25,
-                'dominance': 0.15,
-                'clustering_quality': 0.60
-            }
-        else:
-            # Large datasets: focus on quality and diversity
+            # Small datasets: prioritize clustering quality for accuracy
             return {
                 'coverage': 0.20,
+                'dominance': 0.15,
+                'clustering_quality': 0.65
+            }
+        elif dataset_size <= 50000:
+            # Medium datasets: focus heavily on clustering quality
+            return {
+                'coverage': 0.15,
                 'dominance': 0.10,
-                'clustering_quality': 0.70
+                'clustering_quality': 0.75
+            }
+        else:
+            # Large datasets: maximize clustering quality for accuracy
+            return {
+                'coverage': 0.10,
+                'dominance': 0.05,
+                'clustering_quality': 0.85
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
