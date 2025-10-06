@@ -366,8 +366,10 @@ def _compute_dominance_score(
             
         max_cluster_size = np.max(cluster_sizes)
         dominance_ratio = max_cluster_size / dataset_size
-        # Smooth sigmoid-based penalty: starts penalizing around 0.51
-        penalty_strength = 1.0 / (1.0 + np.exp(-10 * (dominance_ratio - 0.51)))
+        
+        # Apply tanh-based penalty: smooth penalty around 0.5 dominance
+        # Tanh provides smooth transition from low to high penalty
+        penalty_strength = (np.tanh(10 * (dominance_ratio - 0.5)) + 1.0) / 2.0
         return max(eps, 1.0 - penalty_strength)
         
     except Exception as e:
