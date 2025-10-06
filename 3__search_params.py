@@ -335,10 +335,23 @@ def _compute_topic_coverage(
         assigned_docs = (labels != -1).sum()
         
         # Calculate coverage ratio
-        coverage = assigned_docs / total_docs
+        coverage_ratio = assigned_docs / total_docs
+        
+        # Apply sigmoid activation to emphasize high coverage values
+        # Sigmoid function provides high sensitivity around 0.8 (good coverage)
+        # This encourages optimization toward better topic coverage
+        k = 8.0  # Steepness parameter
+        center = 0.8  # Sensitivity center point (80% coverage)
+        sigmoid_value = 1 / (1 + np.exp(-k * (coverage_ratio - center)))
+        
+        # Normalize sigmoid output to ensure 1.0 for perfect coverage
+        # Map sigmoid range to [0, 1] where 1.0 represents perfect coverage
+        min_sigmoid = 1 / (1 + np.exp(-k * (0 - center)))  # sigmoid at 0% coverage
+        max_sigmoid = 1 / (1 + np.exp(-k * (1 - center)))  # sigmoid at 100% coverage
+        transformed_coverage = (sigmoid_value - min_sigmoid) / (max_sigmoid - min_sigmoid)
         
         # Ensure output is in valid range [0, 1]
-        return max(eps, min(1.0, coverage))
+        return max(eps, min(1.0, transformed_coverage))
     
     except Exception as e:
         print(f"Warning: Topic coverage computation failed: {e}")
@@ -412,7 +425,13 @@ def _compute_silhouette_based_score(
         # k=10 controls steepness, center=0.4 is the sensitivity point
         k = 10.0  # Steepness parameter
         center = 0.4  # Sensitivity center point
-        transformed_score = 1 / (1 + np.exp(-k * (normalized_silhouette - center)))
+        sigmoid_value = 1 / (1 + np.exp(-k * (normalized_silhouette - center)))
+        
+        # Normalize sigmoid output to ensure 1.0 for perfect silhouette score
+        # Map sigmoid range to [0, 1] where 1.0 represents perfect clustering
+        min_sigmoid = 1 / (1 + np.exp(-k * (0 - center)))  # sigmoid at worst silhouette
+        max_sigmoid = 1 / (1 + np.exp(-k * (1 - center)))  # sigmoid at best silhouette
+        transformed_score = (sigmoid_value - min_sigmoid) / (max_sigmoid - min_sigmoid)
         
         return max(eps, min(1.0, transformed_score))
         
