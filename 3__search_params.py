@@ -39,7 +39,7 @@ class OptimizationConfig:
     
     # Optimization sessions
     DEFAULT_TIMEOUT = None  # No timeout
-    DEFAULT_N_TRIALS = 50
+    DEFAULT_N_TRIALS = 100
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -59,22 +59,22 @@ class OptimizationConfig:
             # Small datasets: focus on coverage and reasonable topic counts
             return {
                 'coverage': 0.30,
-                'dominance': 0.30,
-                'clustering_quality': 0.40
+                'dominance': 0.20,
+                'clustering_quality': 0.50
             }
         elif dataset_size <= 50000:
             # Medium datasets: balanced approach
             return {
                 'coverage': 0.25,
-                'dominance': 0.25,
-                'clustering_quality': 0.50
+                'dominance': 0.15,
+                'clustering_quality': 0.60
             }
         else:
             # Large datasets: focus on quality and diversity
             return {
                 'coverage': 0.20,
-                'dominance': 0.20,
-                'clustering_quality': 0.60
+                'dominance': 0.10,
+                'clustering_quality': 0.70
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
