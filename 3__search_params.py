@@ -19,7 +19,7 @@ from umap import UMAP
 from hdbscan import HDBSCAN
 
 from common.domain.dto import Paper
-from common.utils import get_custom_embedding_model, CustomEmbeddingModel
+from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
@@ -682,5 +682,6 @@ def process_one_category(category: str):
 
 
 if __name__ == "__main__":
-    category = "cs.AR"
-    process_one_category(category)
+    categories = get_category_codes()
+    for category in categories:
+        process_one_category(category)
