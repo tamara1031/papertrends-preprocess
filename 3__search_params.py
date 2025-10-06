@@ -337,17 +337,18 @@ def _compute_topic_coverage(
         # Calculate coverage ratio
         coverage_ratio = assigned_docs / total_docs
         
-        # Apply sigmoid activation to emphasize high coverage values
-        # Sigmoid function provides high sensitivity around 0.8 (good coverage)
-        # This encourages optimization toward better topic coverage
-        k = 8.0  # Steepness parameter
-        center = 0.8  # Sensitivity center point (80% coverage)
+        k = 1.0  # Steepness parameter (standard sigmoid slope)
+        center = 0.5  # Sensitivity center point (50% coverage)
+        
+        # Apply sigmoid transformation with proper center preservation
         sigmoid_value = 1 / (1 + np.exp(-k * (coverage_ratio - center)))
         
-        # Normalize sigmoid output to ensure 1.0 for perfect coverage
-        # Map sigmoid range to [0, 1] where 1.0 represents perfect coverage
+        # Normalize to [0, 1] while preserving center position
+        # Use linear scaling to map sigmoid output to desired range
         min_sigmoid = 1 / (1 + np.exp(-k * (0 - center)))  # sigmoid at 0% coverage
         max_sigmoid = 1 / (1 + np.exp(-k * (1 - center)))  # sigmoid at 100% coverage
+        
+        # Linear scaling to preserve center position
         transformed_coverage = (sigmoid_value - min_sigmoid) / (max_sigmoid - min_sigmoid)
         
         # Ensure output is in valid range [0, 1]
@@ -421,10 +422,8 @@ def _compute_silhouette_based_score(
         normalized_silhouette = (silhouette + 1.0) / 2.0  # [-1, 1] → [0, 1]
         
         
-        # Apply sigmoid transformation: 1 / (1 + exp(-k * (x - center)))
-        # k=10 controls steepness, center=0.4 is the sensitivity point
-        k = 10.0  # Steepness parameter
-        center = 0.45  # Sensitivity center point
+        k = 1.0  # Steepness parameter (standard sigmoid slope)
+        center = 0.50  # Sensitivity center point (practical range)
         sigmoid_value = 1 / (1 + np.exp(-k * (normalized_silhouette - center)))
         
         # Normalize sigmoid output to ensure 1.0 for perfect silhouette score
