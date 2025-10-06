@@ -361,8 +361,8 @@ def _compute_dominance_score(
             
         max_cluster_size = np.max(cluster_sizes)
         dominance_ratio = max_cluster_size / dataset_size
-        # Smooth sigmoid-based penalty: starts penalizing around 0.3
-        penalty_strength = 1.0 / (1.0 + np.exp(-10 * (dominance_ratio - 0.3)))
+        # Smooth sigmoid-based penalty: starts penalizing around 0.51
+        penalty_strength = 1.0 / (1.0 + np.exp(-10 * (dominance_ratio - 0.51)))
         return max(eps, 1.0 - penalty_strength)
         
     except Exception as e:
@@ -396,9 +396,11 @@ def _compute_silhouette_based_score(
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
             return eps
-            
-        # Compute silhouette score
-        silhouette = silhouette_score(valid_embeddings, valid_labels)
+        
+        # Use cosine distance for silhouette calculation
+        # SPECTER2 embeddings are non-normalized, so cosine distance is appropriate
+        # This evaluates direction similarity rather than magnitude differences
+        silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
         
         # Apply non-linear transformation: exp(silhouette - 1) for steep slope at high values
         # This emphasizes high-quality clustering results
