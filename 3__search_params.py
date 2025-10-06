@@ -424,7 +424,7 @@ def _compute_silhouette_based_score(
         # Apply sigmoid transformation: 1 / (1 + exp(-k * (x - center)))
         # k=10 controls steepness, center=0.4 is the sensitivity point
         k = 10.0  # Steepness parameter
-        center = 0.4  # Sensitivity center point
+        center = 0.45  # Sensitivity center point
         sigmoid_value = 1 / (1 + np.exp(-k * (normalized_silhouette - center)))
         
         # Normalize sigmoid output to ensure 1.0 for perfect silhouette score
