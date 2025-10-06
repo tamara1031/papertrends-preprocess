@@ -402,14 +402,17 @@ def _compute_silhouette_based_score(
         # This evaluates direction similarity rather than magnitude differences
         silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
         
-        # Apply non-linear transformation: exp(silhouette - 1) for steep slope at high values
-        # This emphasizes high-quality clustering results
-        # Transformation ensures that:
-        # - silhouette=-1 (worst) → score≈0.37
-        # - silhouette=0 (neutral) → score≈0.61
-        # - silhouette=0.5 (good) → score≈0.82
-        # - silhouette=1 (best) → score=1.00
-        transformed_score = np.exp(silhouette - 1.0)
+        # Transform silhouette score from [-1, 1] to [0, 1] range using sigmoid activation
+        # Sigmoid function provides high sensitivity around 0.4 (moderate clustering quality)
+        # This emphasizes improvements in the practical range where most clustering results fall
+        normalized_silhouette = (silhouette + 1.0) / 2.0  # [-1, 1] → [0, 1]
+        
+        
+        # Apply sigmoid transformation: 1 / (1 + exp(-k * (x - center)))
+        # k=10 controls steepness, center=0.4 is the sensitivity point
+        k = 10.0  # Steepness parameter
+        center = 0.4  # Sensitivity center point
+        transformed_score = 1 / (1 + np.exp(-k * (normalized_silhouette - center)))
         
         return max(eps, min(1.0, transformed_score))
         
