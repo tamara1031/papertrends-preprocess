@@ -337,19 +337,10 @@ def _compute_topic_coverage(
         # Calculate coverage ratio
         coverage_ratio = assigned_docs / total_docs
         
-        k = 1.0  # Steepness parameter (standard sigmoid slope)
-        center = 0.5  # Sensitivity center point (50% coverage)
-        
-        # Apply sigmoid transformation with proper center preservation
-        sigmoid_value = 1 / (1 + np.exp(-k * (coverage_ratio - center)))
-        
-        # Normalize to [0, 1] while preserving center position
-        # Use linear scaling to map sigmoid output to desired range
-        min_sigmoid = 1 / (1 + np.exp(-k * (0 - center)))  # sigmoid at 0% coverage
-        max_sigmoid = 1 / (1 + np.exp(-k * (1 - center)))  # sigmoid at 100% coverage
-        
-        # Linear scaling to preserve center position
-        transformed_coverage = (sigmoid_value - min_sigmoid) / (max_sigmoid - min_sigmoid)
+        # Apply tanh activation function (output range [-1, 1])
+        # Convert to [0, 1] range: (tanh(x) + 1) / 2
+        tanh_value = np.tanh(coverage_ratio)
+        transformed_coverage = (tanh_value + 1.0) / 2.0
         
         # Ensure output is in valid range [0, 1]
         return max(eps, min(1.0, transformed_coverage))
@@ -422,15 +413,10 @@ def _compute_silhouette_based_score(
         normalized_silhouette = (silhouette + 1.0) / 2.0  # [-1, 1] → [0, 1]
         
         
-        k = 1.0  # Steepness parameter (standard sigmoid slope)
-        center = 0.50  # Sensitivity center point (practical range)
-        sigmoid_value = 1 / (1 + np.exp(-k * (normalized_silhouette - center)))
-        
-        # Normalize sigmoid output to ensure 1.0 for perfect silhouette score
-        # Map sigmoid range to [0, 1] where 1.0 represents perfect clustering
-        min_sigmoid = 1 / (1 + np.exp(-k * (0 - center)))  # sigmoid at worst silhouette
-        max_sigmoid = 1 / (1 + np.exp(-k * (1 - center)))  # sigmoid at best silhouette
-        transformed_score = (sigmoid_value - min_sigmoid) / (max_sigmoid - min_sigmoid)
+        # Apply tanh activation function (output range [-1, 1])
+        # Convert to [0, 1] range: (tanh(x) + 1) / 2
+        tanh_value = np.tanh(normalized_silhouette)
+        transformed_score = (tanh_value + 1.0) / 2.0
         
         return max(eps, min(1.0, transformed_score))
         
