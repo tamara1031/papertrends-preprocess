@@ -82,22 +82,22 @@ class OptimizationConfig:
             # Small datasets: balance all metrics for comprehensive evaluation
             return {
                 'coverage': 0.15,        # Coverage important for small datasets
-                'entropy': 0.25,         # Topic diversity important for academic papers
-                'clustering_quality': 0.60  # Quality remains most important
+                'entropy': 0.15,         # Topic diversity important for academic papers
+                'clustering_quality': 0.70  # Quality remains most important
             }
         elif dataset_size <= 50000:
             # Medium datasets: focus on clustering quality while maintaining balance
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'entropy': 0.20,         # Maintain topic diversity
-                'clustering_quality': 0.70  # Higher quality focus for academic papers
+                'entropy': 0.10,         # Maintain topic diversity
+                'clustering_quality': 0.80  # Higher quality focus for academic papers
             }
         else:
             # Large datasets: prioritize clustering quality for scalability
             return {
                 'coverage': 0.05,        # Minimal coverage requirement
-                'entropy': 0.15,         # Maintain diversity but prioritize quality
-                'clustering_quality': 0.80  # Highest quality focus for large academic datasets
+                'entropy': 0.05,         # Maintain diversity but prioritize quality
+                'clustering_quality': 0.90  # Highest quality focus for large academic datasets
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
