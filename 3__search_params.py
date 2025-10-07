@@ -78,23 +78,29 @@ class OptimizationConfig:
         if dataset_size <= 10000:
             # Small datasets: prioritize clustering quality for accuracy
             return {
-                'coverage': 0.20,
-                'dominance': 0.15,
+                'coverage': 0.12,
+                'dominance': 0.08,
+                'entropy': 0.08,
+                'gini': 0.07,
                 'clustering_quality': 0.65
             }
         elif dataset_size <= 50000:
             # Medium datasets: focus heavily on clustering quality
             return {
-                'coverage': 0.15,
-                'dominance': 0.10,
-                'clustering_quality': 0.75
+                'coverage': 0.12,
+                'dominance': 0.08,
+                'entropy': 0.08,
+                'gini': 0.07,
+                'clustering_quality': 0.65
             }
         else:
             # Large datasets: maximize clustering quality for accuracy
             return {
-                'coverage': 0.10,
-                'dominance': 0.05,
-                'clustering_quality': 0.85
+                'coverage': 0.08,
+                'dominance': 0.04,
+                'entropy': 0.08,
+                'gini': 0.05,
+                'clustering_quality': 0.75
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -368,20 +374,138 @@ def _compute_noise_ratio_score(
         # Convert to score (lower noise ratio = higher score)
         coverage_score = 1.0 - noise_ratio
         
-        # Apply sigmoid activation with proper scaling for 0-1 input range
-        # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
-        # This emphasizes high coverage values while maintaining 0-1 output
-        scaled_input = 8 * coverage_score - 4  # [0, 1] → [-4, 4]
-        transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
-        
-        # Ensure output is in valid range [0, 1]
-        return max(eps, min(1.0, transformed_score))
+        # Noise ratio score already has appropriate sensitivity
+        return max(eps, min(1.0, coverage_score))
     
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
         print(f"Warning: Noise ratio score computation failed: {e}")
+        return eps
+
+
+def _compute_gini_coefficient_score(
+    model: BERTopic,
+    dataset_size: int,
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute Gini coefficient score for cluster size inequality evaluation.
+    
+    Gini coefficient measures the inequality of cluster sizes. Lower Gini coefficient
+    indicates more equal distribution, higher Gini coefficient indicates more unequal distribution.
+    
+    Formula: G = Σ Σ |pi - pj| / (2 * n * Σ pi)
+    Range: [0, 1] where 0 = perfect equality, 1 = maximum inequality
+    Score: 1 - gini (higher is better for equal distribution)
+    
+    Args:
+        model: Trained BERTopic model
+        dataset_size: Total number of documents (not used in calculation)
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Gini coefficient score in range [0, 1] where 1 indicates perfect equality
+    """
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        cluster_sizes = valid_topics['Count'].values
+        
+        if len(cluster_sizes) <= 1:
+            return eps
+        
+        # Simple Gini coefficient calculation
+        sorted_sizes = np.sort(cluster_sizes)
+        n = len(sorted_sizes)
+        
+        if n <= 1:
+            return eps
+        
+        # Calculate proportions
+        total_size = np.sum(sorted_sizes)
+        proportions = sorted_sizes / total_size
+        
+        # Gini coefficient: G = Σ Σ |pi - pj| / (2 * n * Σ pi)
+        # Calculate pairwise absolute differences
+        pairwise_diffs = np.abs(proportions[:, np.newaxis] - proportions[np.newaxis, :])
+        
+        # Sum all pairwise differences
+        sum_diffs = np.sum(pairwise_diffs)
+        
+        # Calculate Gini coefficient
+        gini = sum_diffs / (2 * n * np.sum(proportions))
+        
+        # Convert to score (lower Gini = higher score for equality)
+        equality_score = 1.0 - gini
+        
+        # Gini coefficient score already has appropriate sensitivity
+        return max(eps, min(1.0, equality_score))
+    
+    except KeyboardInterrupt:
+        raise    
+    except Exception as e:
+        print(f"Warning: Gini coefficient score computation failed: {e}")
+        return eps
+
+
+def _compute_shannon_entropy_score(
+    model: BERTopic,
+    dataset_size: int,
+    eps: float = OptimizationConfig.EPSILON
+) -> float:
+    """Compute Shannon entropy score for cluster diversity evaluation.
+    
+    Shannon entropy measures the diversity of cluster sizes. Higher entropy indicates
+    more balanced cluster distribution, lower entropy indicates more concentrated clusters.
+    
+    Formula: H = -Σ(pi * log(pi)) where pi = cluster_size_i / total_clustered_docs
+    Range: [0, log(n)] where n = number of non-zero clusters
+    Score: Normalized entropy (0-1 scale)
+    
+    Args:
+        model: Trained BERTopic model
+        dataset_size: Total number of documents (not used in calculation)
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Shannon entropy score in range [0, 1] where 1 indicates maximum diversity
+    """
+    try:
+        topic_info = model.get_topic_info()
+        valid_topics = topic_info[topic_info['Topic'] != -1]
+        cluster_sizes = valid_topics['Count'].values
+        
+        if len(cluster_sizes) == 0:
+            return eps
+        
+        # Calculate proportions (only valid clusters, excluding noise)
+        total_clustered_docs = np.sum(cluster_sizes)
+        proportions = cluster_sizes / total_clustered_docs
+        
+        # Filter out zero proportions to avoid log(0)
+        non_zero_proportions = proportions[proportions > 0]
+        
+        if len(non_zero_proportions) == 0:
+            return eps
+        
+        # Calculate Shannon entropy: H = -Σ(pi * log(pi))
+        # Only for non-zero proportions
+        # Use natural logarithm (base e) for Shannon entropy
+        entropy = -np.sum(non_zero_proportions * np.log(non_zero_proportions))
+        
+        # Normalize by maximum possible entropy (log(number_of_non_zero_clusters))
+        n_non_zero = len(non_zero_proportions)
+        max_entropy = np.log(n_non_zero)
+        normalized_entropy = entropy / max_entropy if max_entropy > 0 else eps
+        
+        # Shannon entropy score already has appropriate sensitivity
+        return max(eps, min(1.0, normalized_entropy))
+    
+    except KeyboardInterrupt:
+        raise    
+    except Exception as e:
+        print(f"Warning: Shannon entropy score computation failed: {e}")
         return eps
 
 
@@ -395,16 +519,18 @@ def _compute_simpsons_dominance_score(
     Simpson's dominance index measures the concentration of documents in clusters.
     Higher values indicate more dominance (less diversity), lower values indicate better balance.
     
-    Formula: C = Σ(pi)² where pi = cluster_size_i / total_documents
+    Formula: C = Σ(pi)² where pi = cluster_size_i / total_clustered_docs
+    Range: [1/n, 1] where n = number of clusters
+    Score: 1 - C (higher is better for diversity)
     
     Args:
         model: Trained BERTopic model
-        dataset_size: Total number of documents
+        dataset_size: Total number of documents (not used in calculation)
         eps: Small epsilon for numerical stability
         
     Returns:
-        Simpson's dominance score in range [0, 1] where 0 indicates maximum diversity (good),
-        1 indicates maximum dominance (bad)
+        Simpson's dominance score in range [0, 1] where 1 indicates maximum diversity (good),
+        0 indicates maximum dominance (bad)
     """
     try:
         topic_info = model.get_topic_info()
@@ -414,20 +540,16 @@ def _compute_simpsons_dominance_score(
         if len(cluster_sizes) == 0:
             return eps
             
-        # Calculate relative proportions (pi)
-        proportions = cluster_sizes / dataset_size
+        # Calculate relative proportions (pi) - only valid clusters, excluding noise
+        total_clustered_docs = np.sum(cluster_sizes)
+        proportions = cluster_sizes / total_clustered_docs
         
         # Simpson's dominance index: C = Σ(pi)²
         simpsons_dominance = np.sum(proportions ** 2)
         
-        # Apply sigmoid activation for better scaling
-        # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
-        # This emphasizes low dominance values (good balance) while maintaining 0-1 output
-        scaled_input = 8 * simpsons_dominance - 4  # [0, 1] → [-4, 4]
-        penalty_strength = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
-        
-        # Return inverse of penalty (low dominance = high score)
-        return max(eps, 1.0 - penalty_strength)
+        # Simpson's dominance index already has appropriate sensitivity
+        # Return inverse of dominance (low dominance = high score)
+        return max(eps, 1.0 - simpsons_dominance)
     
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
@@ -467,13 +589,11 @@ def _compute_silhouette_based_score(
         # Silhouette
         silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
         
-        # Apply sigmoid activation with proper scaling for 0-1 input range
-        # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
-        # This emphasizes high silhouette values while maintaining 0-1 output
-        scaled_input = 4 * silhouette  # [-1, 1] → [-4, 4]
-        transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
+        # Convert from [-1, 1] to [0, 1] range (linear transformation)
+        # silhouette = -1 → score = 0, silhouette = 1 → score = 1
+        silhouette_score_normalized = (silhouette + 1) / 2
         
-        return max(eps, min(1.0, transformed_score))
+        return max(eps, min(1.0, silhouette_score_normalized))
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
@@ -517,6 +637,8 @@ def compute_cluster_quality_score(
         # Compute individual metrics
         noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
         dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
+        entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
+        gini_score = _compute_gini_coefficient_score(model, dataset_size, eps=eps)
         clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
@@ -524,13 +646,15 @@ def compute_cluster_quality_score(
         final_score = (
             weights['coverage'] * noise_ratio_score +
             weights['dominance'] * dominance_score +
+            weights['entropy'] * entropy_score +
+            weights['gini'] * gini_score +
             weights['clustering_quality'] * clustering_quality_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Noise Ratio: {noise_ratio_score:.4f}, Dominance: {dominance_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
-        print(f"Weights - Noise Ratio: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
+        print(f"Scores - Noise Ratio: {noise_ratio_score:.4f}, Dominance: {dominance_score:.4f}, Entropy: {entropy_score:.4f}, Gini: {gini_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
+        print(f"Weights - Noise Ratio: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Entropy: {weights['entropy']:.1%}, Gini: {weights['gini']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
