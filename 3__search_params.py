@@ -74,33 +74,36 @@ class OptimizationConfig:
     # Score weighting configuration (adaptive by dataset size)
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
-        """Get adaptive weights based on dataset size for academic papers."""
+        """Get adaptive weights based on dataset size for academic papers.
+        
+        Weighting strategy:
+        - Clustering Quality (Silhouette): Most important for academic papers
+        - Coverage (Noise Ratio): Critical for comprehensive topic coverage
+        - Diversity metrics (Entropy, Dominance): Important for balanced topics
+        """
         if dataset_size <= 10000:
-            # Small datasets: prioritize clustering quality for accuracy
+            # Small datasets: balance all metrics for comprehensive evaluation
             return {
-                'coverage': 0.12,
-                'dominance': 0.08,
-                'entropy': 0.08,
-                'gini': 0.07,
-                'clustering_quality': 0.65
+                'coverage': 0.20,        # High coverage important for small datasets
+                'dominance': 0.20,       # Prevent topic dominance
+                'entropy': 0.20,         # Encourage topic diversity
+                'clustering_quality': 0.40  # Still prioritize quality
             }
         elif dataset_size <= 50000:
-            # Medium datasets: focus heavily on clustering quality
+            # Medium datasets: focus on clustering quality while maintaining balance
             return {
-                'coverage': 0.12,
-                'dominance': 0.08,
-                'entropy': 0.08,
-                'gini': 0.07,
-                'clustering_quality': 0.65
+                'coverage': 0.15,        # Good coverage needed
+                'dominance': 0.15,       # Prevent topic dominance
+                'entropy': 0.20,         # Encourage topic diversity
+                'clustering_quality': 0.50  # Higher quality focus
             }
         else:
-            # Large datasets: maximize clustering quality for accuracy
+            # Large datasets: prioritize clustering quality for scalability
             return {
-                'coverage': 0.08,
-                'dominance': 0.04,
-                'entropy': 0.08,
-                'gini': 0.05,
-                'clustering_quality': 0.75
+                'coverage': 0.10,        # Basic coverage sufficient
+                'dominance': 0.10,       # Still prevent dominance
+                'entropy': 0.20,         # Maintain diversity
+                'clustering_quality': 0.60  # Highest quality focus
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -385,70 +388,6 @@ def _compute_noise_ratio_score(
         return eps
 
 
-def _compute_gini_coefficient_score(
-    model: BERTopic,
-    dataset_size: int,
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute Gini coefficient score for cluster size inequality evaluation.
-    
-    Gini coefficient measures the inequality of cluster sizes. Lower Gini coefficient
-    indicates more equal distribution, higher Gini coefficient indicates more unequal distribution.
-    
-    Formula: G = Σ Σ |pi - pj| / (2 * n * Σ pi)
-    Range: [0, 1] where 0 = perfect equality, 1 = maximum inequality
-    Score: 1 - gini (higher is better for equal distribution)
-    
-    Args:
-        model: Trained BERTopic model
-        dataset_size: Total number of documents (not used in calculation)
-        eps: Small epsilon for numerical stability
-        
-    Returns:
-        Gini coefficient score in range [0, 1] where 1 indicates perfect equality
-    """
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        cluster_sizes = valid_topics['Count'].values
-        
-        if len(cluster_sizes) <= 1:
-            return eps
-        
-        # Simple Gini coefficient calculation
-        sorted_sizes = np.sort(cluster_sizes)
-        n = len(sorted_sizes)
-        
-        if n <= 1:
-            return eps
-        
-        # Calculate proportions
-        total_size = np.sum(sorted_sizes)
-        proportions = sorted_sizes / total_size
-        
-        # Gini coefficient: G = Σ Σ |pi - pj| / (2 * n * Σ pi)
-        # Calculate pairwise absolute differences
-        pairwise_diffs = np.abs(proportions[:, np.newaxis] - proportions[np.newaxis, :])
-        
-        # Sum all pairwise differences
-        sum_diffs = np.sum(pairwise_diffs)
-        
-        # Calculate Gini coefficient
-        gini = sum_diffs / (2 * n * np.sum(proportions))
-        
-        # Convert to score (lower Gini = higher score for equality)
-        equality_score = 1.0 - gini
-        
-        # Gini coefficient score already has appropriate sensitivity
-        return max(eps, min(1.0, equality_score))
-    
-    except KeyboardInterrupt:
-        raise    
-    except Exception as e:
-        print(f"Warning: Gini coefficient score computation failed: {e}")
-        return eps
-
-
 def _compute_shannon_entropy_score(
     model: BERTopic,
     dataset_size: int,
@@ -638,7 +577,6 @@ def compute_cluster_quality_score(
         noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
         dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
         entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
-        gini_score = _compute_gini_coefficient_score(model, dataset_size, eps=eps)
         clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
@@ -647,14 +585,13 @@ def compute_cluster_quality_score(
             weights['coverage'] * noise_ratio_score +
             weights['dominance'] * dominance_score +
             weights['entropy'] * entropy_score +
-            weights['gini'] * gini_score +
             weights['clustering_quality'] * clustering_quality_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Noise Ratio: {noise_ratio_score:.4f}, Dominance: {dominance_score:.4f}, Entropy: {entropy_score:.4f}, Gini: {gini_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
-        print(f"Weights - Noise Ratio: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Entropy: {weights['entropy']:.1%}, Gini: {weights['gini']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
+        print(f"Scores - Noise Ratio: {noise_ratio_score:.4f}, Dominance: {dominance_score:.4f}, Entropy: {entropy_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
+        print(f"Weights - Noise Ratio: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Entropy: {weights['entropy']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
