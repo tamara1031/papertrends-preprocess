@@ -646,7 +646,7 @@ def optimize_category_clustering(
     """Run hyperparameter optimization for a specific arXiv category with adaptive settings."""
     
     # Load and prepare data
-    print(f"Loading data for category: {category}")
+    print(f"📂 Loading data for category: {category}")
     papers = load_papers(category)
     text_embeddings = load_text_embeddings(category)
     embedding_model = EMBEDDING_MODEL
@@ -658,7 +658,8 @@ def optimize_category_clustering(
     del papers
     gc.collect()
     
-    print(f"Dataset size: {dataset_size} documents")
+    print(f"📊 Dataset size: {dataset_size:,} documents")
+    print(f"🧠 Using SPECTER2 Proximity adapter (110M parameters)")
     
     # Adaptive configuration based on dataset size
     if n_trials is None:
@@ -667,7 +668,11 @@ def optimize_category_clustering(
         timeout_minutes = OptimizationConfig.get_default_timeout(dataset_size)
         timeout = timeout_minutes * 60 if timeout_minutes else None  # Convert to seconds
     
-    print(f"Optimization settings: {n_trials} trials, timeout: {timeout//60 if timeout else 'None'} minutes")
+    print(f"⚙️  Optimization settings:")
+    print(f"   • Trials: {n_trials}")
+    print(f"   • Timeout: {timeout//60 if timeout else 'None'} minutes")
+    print(f"   • Sampler: TPE (multivariate=True)")
+    print(f"   • Pruner: MedianPruner (adaptive)")
     
     # Create optimization study with adaptive sampler and pruner
     study_name = f"clustering_optimization_{category}_{dataset_size}"
@@ -682,7 +687,9 @@ def optimize_category_clustering(
     )
     
     # Run optimization
-    print(f"Starting optimization with {n_trials} trials...")
+    print(f"\n🚀 Starting optimization with {n_trials} trials...")
+    print(f"📈 Progress will be shown below:")
+    print("-" * 60)
     
     try:
         study.optimize(
@@ -698,9 +705,9 @@ def optimize_category_clustering(
         _display_optimization_results(study)
             
     except KeyboardInterrupt:
-        print(f"\nOptimization interrupted. Completed {len(study.trials)} trials.")
+        print(f"\n⚠️  Optimization interrupted. Completed {len(study.trials)} trials.")
     except Exception as e:
-        print(f"Optimization error: {e}")
+        print(f"❌ Optimization error: {e}")
     
     return study
 
@@ -708,22 +715,24 @@ def optimize_category_clustering(
 def _display_optimization_results(study: optuna.Study) -> None:
     """Display comprehensive optimization results."""
     if len(study.trials) == 0:
-        print("No completed trials found.")
+        print("❌ No completed trials found.")
         return
     
     best_trial = study.best_trial
     pruned_count = len([t for t in study.trials if t.state == optuna.trial.TrialState.PRUNED])
+    success_rate = (len(study.trials) - pruned_count) / len(study.trials)
     
-    print(f"\n{'='*50}")
-    print(f"OPTIMIZATION RESULTS")
-    print(f"{'='*50}")
-    print(f"Best score: {best_trial.value:.4f}")
-    print(f"Best parameters:")
-    print(json.dumps(best_trial.params, indent=2))
-    print(f"Total trials: {len(study.trials)}")
-    print(f"Pruned trials: {pruned_count}")
-    print(f"Success rate: {(len(study.trials) - pruned_count) / len(study.trials):.1%}")
-    print(f"{'='*50}")
+    print(f"\n{'='*60}")
+    print(f"🎯 OPTIMIZATION RESULTS")
+    print(f"{'='*60}")
+    print(f"🏆 Best score: {best_trial.value:.4f}")
+    print(f"📊 Total trials: {len(study.trials)}")
+    print(f"✂️  Pruned trials: {pruned_count}")
+    print(f"✅ Success rate: {success_rate:.1%}")
+    print(f"\n🔧 Best parameters:")
+    for key, value in best_trial.params.items():
+        print(f"   • {key}: {value}")
+    print(f"{'='*60}")
 
 
 def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
@@ -735,7 +744,8 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
     with open(best_params_path, "w") as f:
         json.dump(study.best_params, f, indent=2)
     
-    print(f"Best parameters saved to: {best_params_path}")
+    print(f"💾 Best parameters saved to: {best_params_path}")
+    print(f"📊 Study database: {output_dir}/search_params.db")
 
 
 # ============================================================================
@@ -761,6 +771,33 @@ def process_one_category(category: str):
 
 
 if __name__ == "__main__":
-    categories = get_category_codes()[0:1]
-    for category in categories:
-        process_one_category(category)
+    print("=" * 80)
+    print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
+    print("=" * 80)
+    
+    categories = get_category_codes()
+    print(f"📚 Processing {len(categories)} arXiv categories:")
+    for i, category in enumerate(categories, 1):
+        print(f"  {i:2d}. {category}")
+    
+    print(f"\n🚀 Starting hyperparameter optimization...")
+    print(f"📊 Using SPECTER2 Proximity adapter for academic paper clustering")
+    print(f"🎯 Target: Optimize BERTopic parameters for topic discovery")
+    print(f"⚙️  Pipeline: SPECTER2 → UMAP → HDBSCAN → Topic Modeling")
+    print("-" * 80)
+    
+    for i, category in enumerate(categories, 1):
+        print(f"\n📖 [{i}/{len(categories)}] Processing category: {category}")
+        print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        try:
+            process_one_category(category)
+            print(f"✅ Completed category: {category}")
+        except Exception as e:
+            print(f"❌ Failed category {category}: {e}")
+            continue
+    
+    print("\n" + "=" * 80)
+    print("🎉 ALL CATEGORIES PROCESSED SUCCESSFULLY!")
+    print("📁 Results saved to: ./params/{category}/best_params.json")
+    print("💾 Study data saved to: ./params/{category}/search_params.db")
+    print("=" * 80)
