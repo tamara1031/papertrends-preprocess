@@ -204,9 +204,7 @@ def load_text_embeddings(category: str) -> np.ndarray:
     filepath = f"./preprocessed/{category}/text_embeddings.npy"
     try:
         with open(filepath, "rb") as f:
-            embeddings = np.load(f)
-            # Convert to float64 to avoid HDBSCAN dtype mismatch errors
-            return embeddings.astype(np.float64)
+            return np.load(f)
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
