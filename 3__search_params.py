@@ -9,7 +9,6 @@ import warnings
 
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import silhouette_score
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -77,7 +76,7 @@ class OptimizationConfig:
         """Get adaptive weights based on dataset size for academic papers.
         
         Weighting strategy:
-        - Clustering Quality (Silhouette): Most important for academic papers
+        - Clustering Quality (DBCV): Most important for academic papers
         - Coverage (Noise Ratio): Critical for comprehensive topic coverage
         - Diversity metrics (Entropy): Important for balanced topics
         """
@@ -442,15 +441,23 @@ def _compute_shannon_entropy_score(
 
 
 
-def _compute_silhouette_based_score(
+def _compute_dbcv_score(
     model: BERTopic,
     original_embeddings: np.ndarray,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute silhouette-based clustering quality score.
+    """Compute DBCV (Density-Based Cluster Validation) score using HDBSCAN's implementation.
     
-    This replaces both coherence and diversity scores with a single, more efficient metric
-    that evaluates both intra-cluster cohesion and inter-cluster separation.
+    Uses HDBSCAN's built-in validity_index function which implements the DBCV metric.
+    DBCV is specifically designed for density-based clustering algorithms like HDBSCAN.
+    
+    Args:
+        model: Trained BERTopic model with HDBSCAN clustering
+        original_embeddings: Original embeddings used for clustering
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        DBCV score normalized to [0, 1] range where higher values indicate better clustering
     """
     try:
         labels = model.hdbscan_model.labels_
@@ -468,19 +475,27 @@ def _compute_silhouette_based_score(
         if len(unique_labels) < 2:
             return eps
 
-        # Silhouette
-        silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
+        # Use HDBSCAN's built-in DBCV implementation
+        from hdbscan import validity_index
+        
+        # Compute DBCV using cosine metric (appropriate for embeddings)
+        dbcv_score = validity_index(
+            valid_embeddings, 
+            valid_labels, 
+            metric='cosine'
+        )
         
         # Convert from [-1, 1] to [0, 1] range (linear transformation)
-        # silhouette = -1 → score = 0, silhouette = 1 → score = 1
-        silhouette_score_normalized = (silhouette + 1) / 2
+        # dbcv = -1 → score = 0, dbcv = 1 → score = 1
+        dbcv_score_normalized = (dbcv_score + 1) / 2
         
-        return max(eps, min(1.0, silhouette_score_normalized))
+        return max(eps, min(1.0, dbcv_score_normalized))
+        
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: Silhouette-based score computation failed: {e}")
+        print(f"Warning: DBCV score computation failed: {e}")
         return eps
 
 
@@ -531,7 +546,7 @@ def compute_cluster_quality_score(
             entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
         
         if weights['clustering_quality'] > 0.00:
-            clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
+            clustering_quality_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
         
         # Compute final score
         final_score = (
