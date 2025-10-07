@@ -10,7 +10,6 @@ import warnings
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import silhouette_score
-from sklearn.decomposition import PCA
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -407,7 +406,7 @@ def _compute_silhouette_based_score(
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
             return eps
-        
+
         # Silhouette
         silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
         
