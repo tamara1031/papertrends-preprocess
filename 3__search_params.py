@@ -771,6 +771,8 @@ def process_one_category(category: str):
 
 
 if __name__ == "__main__":
+    # TODO: use logging
+    
     print("=" * 80)
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
