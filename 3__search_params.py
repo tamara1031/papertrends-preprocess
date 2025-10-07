@@ -15,7 +15,7 @@ from optuna.pruners import MedianPruner
 from bertopic import BERTopic
 from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
-from hdbscan import HDBSCAN
+from hdbscan import HDBSCAN, validity_index
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
@@ -32,9 +32,6 @@ warnings.filterwarnings('ignore', message='invalid value encountered')
 
 class OptimizationConfig:
     """Centralized configuration for clustering optimization with data-size adaptive ranges."""
-    
-    # Numerical precision
-    EPSILON = 1e-6
     
     # Optimization sessions - Adaptive based on dataset size
     @staticmethod
@@ -337,8 +334,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
 
 
 def _compute_noise_ratio_score(
-    model: BERTopic, 
-    eps: float = OptimizationConfig.EPSILON
+    model: BERTopic
 ) -> float:
     """Compute noise ratio score based on outlier detection evaluation.
     
@@ -350,7 +346,6 @@ def _compute_noise_ratio_score(
     
     Args:
         model: Trained BERTopic model
-        eps: Small epsilon for numerical stability
         
     Returns:
         Noise ratio score in range [0, 1] where 1 indicates 0% noise (perfect coverage)
@@ -360,7 +355,7 @@ def _compute_noise_ratio_score(
         total_docs = len(labels)
         
         if total_docs == 0:
-            return eps
+            return 0.0  # No documents to cluster
         
         # Count noise points (HDBSCAN assigns -1 to noise/outliers)
         noise_docs = (labels == -1).sum()
@@ -369,21 +364,17 @@ def _compute_noise_ratio_score(
         # Convert to score (lower noise ratio = higher score)
         coverage_score = 1.0 - noise_ratio
         
-        # Noise ratio score already has appropriate sensitivity
-        return max(eps, min(1.0, coverage_score))
+        return coverage_score
     
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
         print(f"Warning: Noise ratio score computation failed: {e}")
-        return eps
-
+        return 0.0
 
 def _compute_shannon_entropy_score(
-    model: BERTopic,
-    dataset_size: int,
-    eps: float = OptimizationConfig.EPSILON
+    model: BERTopic
 ) -> float:
     """Compute Shannon entropy score for cluster diversity evaluation.
     
@@ -396,8 +387,6 @@ def _compute_shannon_entropy_score(
     
     Args:
         model: Trained BERTopic model
-        dataset_size: Total number of documents (not used in calculation)
-        eps: Small epsilon for numerical stability
         
     Returns:
         Shannon entropy score in range [0, 1] where 1 indicates maximum diversity
@@ -408,7 +397,7 @@ def _compute_shannon_entropy_score(
         cluster_sizes = valid_topics['Count'].values
         
         if len(cluster_sizes) == 0:
-            return eps
+            return 0.0  # No valid clusters
         
         # Calculate proportions (only valid clusters, excluding noise)
         total_clustered_docs = np.sum(cluster_sizes)
@@ -418,7 +407,7 @@ def _compute_shannon_entropy_score(
         non_zero_proportions = proportions[proportions > 0]
         
         if len(non_zero_proportions) == 0:
-            return eps
+            return 0.0  # No valid proportions
         
         # Calculate Shannon entropy: H = -Σ(pi * log(pi))
         # Only for non-zero proportions
@@ -428,23 +417,21 @@ def _compute_shannon_entropy_score(
         # Normalize by maximum possible entropy (log(number_of_non_zero_clusters))
         n_non_zero = len(non_zero_proportions)
         max_entropy = np.log(n_non_zero)
-        normalized_entropy = entropy / max_entropy if max_entropy > 0 else eps
+        normalized_entropy = entropy / max_entropy if max_entropy > 0 else 0.0
         
-        # Shannon entropy score already has appropriate sensitivity
-        return max(eps, min(1.0, normalized_entropy))
+        return normalized_entropy
     
     except KeyboardInterrupt:
         raise    
     except Exception as e:
         print(f"Warning: Shannon entropy score computation failed: {e}")
-        return eps
+        return 0.0 
 
 
 
 def _compute_dbcv_score(
     model: BERTopic,
-    original_embeddings: np.ndarray,
-    eps: float = OptimizationConfig.EPSILON
+    original_embeddings: np.ndarray
 ) -> float:
     """Compute DBCV (Density-Based Cluster Validation) score using HDBSCAN's implementation.
     
@@ -454,7 +441,6 @@ def _compute_dbcv_score(
     Args:
         model: Trained BERTopic model with HDBSCAN clustering
         original_embeddings: Original embeddings used for clustering
-        eps: Small epsilon for numerical stability
         
     Returns:
         DBCV score normalized to [0, 1] range where higher values indicate better clustering
@@ -465,7 +451,7 @@ def _compute_dbcv_score(
         # Filter out noise points (-1 labels)
         valid_mask = labels != -1
         if np.sum(valid_mask) < 2:
-            return eps
+            return 0.0  # Not enough valid points
             
         valid_labels = labels[valid_mask]
         valid_embeddings = original_embeddings[valid_mask]
@@ -473,10 +459,7 @@ def _compute_dbcv_score(
         # Check if we have multiple clusters
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
-            return eps
-
-        # Use HDBSCAN's built-in DBCV implementation
-        from hdbscan import validity_index
+            return 0.0  # Need at least 2 clusters for DBCV
         
         # Compute DBCV using cosine metric (appropriate for embeddings)
         dbcv_score = validity_index(
@@ -489,14 +472,14 @@ def _compute_dbcv_score(
         # dbcv = -1 → score = 0, dbcv = 1 → score = 1
         dbcv_score_normalized = (dbcv_score + 1) / 2
         
-        return max(eps, min(1.0, dbcv_score_normalized))
+        return dbcv_score_normalized
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
         print(f"Warning: DBCV score computation failed: {e}")
-        return eps
+        return 0.0  # Return neutral score on error
 
 
 def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
@@ -523,8 +506,7 @@ def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
 def compute_cluster_quality_score(
     model: BERTopic, 
     original_embeddings: np.ndarray,
-    documents: List[str] = None,
-    eps: float = OptimizationConfig.EPSILON
+    documents: List[str] = None
 ) -> float:
     """Compute combined clustering quality score with cluster balance."""
     try:
@@ -540,13 +522,13 @@ def compute_cluster_quality_score(
         clustering_quality_score = 0.0
         
         if weights['coverage'] > 0.00:
-            noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
+            noise_ratio_score = _compute_noise_ratio_score(model)
         
         if weights['entropy'] > 0.00:
-            entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
+            entropy_score = _compute_shannon_entropy_score(model)
         
         if weights['clustering_quality'] > 0.00:
-            clustering_quality_score = _compute_dbcv_score(model, original_embeddings, eps=eps)
+            clustering_quality_score = _compute_dbcv_score(model, original_embeddings)
         
         # Compute final score
         final_score = (
@@ -588,13 +570,13 @@ def compute_cluster_quality_score(
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
-        return max(eps, min(1.0, final_score))
+        return final_score
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise
     except Exception as e:
         print(f"Error in compute_cluster_quality_score: {e}")
-        return eps
+        return 0.0  
 
 
 # ============================================================================
@@ -689,8 +671,7 @@ def objective_function(
     trial: optuna.Trial, 
     texts: List[str], 
     text_embeddings: np.ndarray, 
-    embedding_model: CustomEmbeddingModel,
-    eps: float = OptimizationConfig.EPSILON
+    embedding_model: CustomEmbeddingModel
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
     dataset_size = len(texts)
@@ -704,7 +685,7 @@ def objective_function(
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
         # Evaluate clustering quality
-        score = compute_cluster_quality_score(model, text_embeddings, documents=texts, eps=eps)
+        score = compute_cluster_quality_score(model, text_embeddings, documents=texts)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
@@ -719,7 +700,7 @@ def objective_function(
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
         trial.set_user_attr("error", str(e))
-        return eps
+        return 0.0  
 
 
 # ============================================================================
