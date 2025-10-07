@@ -383,17 +383,17 @@ def _compute_topic_coverage(
         return eps
 
 
-def _compute_simpsons_diversity_score(
+def _compute_simpsons_dominance_score(
     model: BERTopic,
     dataset_size: int,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute Simpson's diversity index adapted for clustering evaluation.
+    """Compute Simpson's dominance index adapted for clustering evaluation.
     
-    Simpson's diversity index measures the probability that two randomly selected
-    documents belong to different clusters. Higher values indicate better diversity.
+    Simpson's dominance index measures the concentration of documents in clusters.
+    Higher values indicate more dominance (less diversity), lower values indicate better balance.
     
-    Formula: D = 1 - Σ(pi)² where pi = cluster_size_i / total_documents
+    Formula: C = Σ(pi)² where pi = cluster_size_i / total_documents
     
     Args:
         model: Trained BERTopic model
@@ -401,7 +401,8 @@ def _compute_simpsons_diversity_score(
         eps: Small epsilon for numerical stability
         
     Returns:
-        Simpson's diversity score in range [0, 1] where 1 indicates maximum diversity
+        Simpson's dominance score in range [0, 1] where 0 indicates maximum diversity (good),
+        1 indicates maximum dominance (bad)
     """
     try:
         topic_info = model.get_topic_info()
@@ -414,22 +415,23 @@ def _compute_simpsons_diversity_score(
         # Calculate relative proportions (pi)
         proportions = cluster_sizes / dataset_size
         
-        # Simpson's diversity index: D = 1 - Σ(pi)²
-        simpsons_diversity = 1.0 - np.sum(proportions ** 2)
+        # Simpson's dominance index: C = Σ(pi)²
+        simpsons_dominance = np.sum(proportions ** 2)
         
         # Apply sigmoid activation for better scaling
         # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
-        # This emphasizes high diversity values while maintaining 0-1 output
-        scaled_input = 8 * simpsons_diversity - 4  # [0, 1] → [-4, 4]
-        transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
+        # This emphasizes low dominance values (good balance) while maintaining 0-1 output
+        scaled_input = 8 * simpsons_dominance - 4  # [0, 1] → [-4, 4]
+        penalty_strength = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         
-        return max(eps, min(1.0, transformed_score))
+        # Return inverse of penalty (low dominance = high score)
+        return max(eps, 1.0 - penalty_strength)
     
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: Simpson's diversity score computation failed: {e}")
+        print(f"Warning: Simpson's dominance score computation failed: {e}")
         return eps
 
 
@@ -512,21 +514,21 @@ def compute_cluster_quality_score(
         
         # Compute individual metrics
         topic_coverage = _compute_topic_coverage(model, eps=eps)
-        diversity_score = _compute_simpsons_diversity_score(model, dataset_size, eps=eps)
+        dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
         clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
         weights = OptimizationConfig.get_adaptive_weights(dataset_size)
         final_score = (
             weights['coverage'] * topic_coverage +
-            weights['dominance'] * diversity_score +
+            weights['dominance'] * dominance_score +
             weights['clustering_quality'] * clustering_quality_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Coverage: {topic_coverage:.4f}, Diversity: {diversity_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
-        print(f"Weights - Coverage: {weights['coverage']:.1%}, Diversity: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
+        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
+        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
