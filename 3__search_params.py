@@ -79,31 +79,28 @@ class OptimizationConfig:
         Weighting strategy:
         - Clustering Quality (Silhouette): Most important for academic papers
         - Coverage (Noise Ratio): Critical for comprehensive topic coverage
-        - Diversity metrics (Entropy, Dominance): Important for balanced topics
+        - Diversity metrics (Entropy): Important for balanced topics
         """
         if dataset_size <= 10000:
             # Small datasets: balance all metrics for comprehensive evaluation
             return {
-                'coverage': 0.10,        # High coverage important for small datasets
-                'dominance': 0.10,       # Prevent topic dominance
-                'entropy': 0.25,         # Encourage topic diversity
+                'coverage': 0.15,        # High coverage important for small datasets
+                'entropy': 0.30,         # Encourage topic diversity
                 'clustering_quality': 0.55  # Still prioritize quality
             }
         elif dataset_size <= 50000:
             # Medium datasets: focus on clustering quality while maintaining balance
             return {
-                'coverage': 0.05,        # Good coverage needed
-                'dominance': 0.05,       # Prevent topic dominance
-                'entropy': 0.20,         # Encourage topic diversity
-                'clustering_quality': 0.70  # Higher quality focus
+                'coverage': 0.10,        # Good coverage needed
+                'entropy': 0.25,         # Encourage topic diversity
+                'clustering_quality': 0.65  # Higher quality focus
             }
         else:
             # Large datasets: prioritize clustering quality for scalability
             return {
                 'coverage': 0.00,
-                'dominance': 0.00,       # Still prevent dominance
-                'entropy': 0.15,         # Maintain diversity
-                'clustering_quality': 0.85  # Highest quality focus
+                'entropy': 0.20,         # Maintain diversity
+                'clustering_quality': 0.80  # Highest quality focus
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -444,56 +441,6 @@ def _compute_shannon_entropy_score(
         return eps
 
 
-def _compute_simpsons_dominance_score(
-    model: BERTopic,
-    dataset_size: int,
-    eps: float = OptimizationConfig.EPSILON
-) -> float:
-    """Compute Simpson's dominance index adapted for clustering evaluation.
-    
-    Simpson's dominance index measures the concentration of documents in clusters.
-    Higher values indicate more dominance (less diversity), lower values indicate better balance.
-    
-    Formula: C = Σ(pi)² where pi = cluster_size_i / total_clustered_docs
-    Range: [1/n, 1] where n = number of clusters
-    Score: 1 - C (higher is better for diversity)
-    
-    Args:
-        model: Trained BERTopic model
-        dataset_size: Total number of documents (not used in calculation)
-        eps: Small epsilon for numerical stability
-        
-    Returns:
-        Simpson's dominance score in range [0, 1] where 1 indicates maximum diversity (good),
-        0 indicates maximum dominance (bad)
-    """
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        cluster_sizes = valid_topics['Count'].values
-        
-        if len(cluster_sizes) == 0:
-            return eps
-            
-        # Calculate relative proportions (pi) - only valid clusters, excluding noise
-        total_clustered_docs = np.sum(cluster_sizes)
-        proportions = cluster_sizes / total_clustered_docs
-        
-        # Simpson's dominance index: C = Σ(pi)²
-        simpsons_dominance = np.sum(proportions ** 2)
-        
-        # Simpson's dominance index already has appropriate sensitivity
-        # Return inverse of dominance (low dominance = high score)
-        return max(eps, 1.0 - simpsons_dominance)
-    
-    except KeyboardInterrupt:
-        # Re-raise KeyboardInterrupt to be caught by outer try-except
-        raise    
-    except Exception as e:
-        print(f"Warning: Simpson's dominance score computation failed: {e}")
-        return eps
-
-
 
 def _compute_silhouette_based_score(
     model: BERTopic,
@@ -574,15 +521,11 @@ def compute_cluster_quality_score(
         
         # Compute individual metrics only if their weights are non-zero
         noise_ratio_score = 0.0
-        dominance_score = 0.0
         entropy_score = 0.0
         clustering_quality_score = 0.0
         
         if weights['coverage'] > 0.00:
             noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
-        
-        if weights['dominance'] > 0.00:
-            dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
         
         if weights['entropy'] > 0.00:
             entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
@@ -593,7 +536,6 @@ def compute_cluster_quality_score(
         # Compute final score
         final_score = (
             weights['coverage'] * noise_ratio_score +
-            weights['dominance'] * dominance_score +
             weights['entropy'] * entropy_score +
             weights['clustering_quality'] * clustering_quality_score
         )
@@ -611,13 +553,6 @@ def compute_cluster_quality_score(
         else:
             score_parts.append("Noise Ratio: N/A")
             weight_parts.append("Noise Ratio: 0.0%")
-            
-        if weights['dominance'] > 0:
-            score_parts.append(f"Dominance: {dominance_score:.4f}")
-            weight_parts.append(f"Dominance: {weights['dominance']:.1%}")
-        else:
-            score_parts.append("Dominance: N/A")
-            weight_parts.append("Dominance: 0.0%")
             
         if weights['entropy'] > 0:
             score_parts.append(f"Entropy: {entropy_score:.4f}")
