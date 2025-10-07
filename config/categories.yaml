@@ -1,7 +1,7 @@
 # https://arxiv.org/category_taxonomy
 cs:
-  cs.AI: Artificial Intelligence
   cs.AR: Hardware Architecture
+  cs.AI: Artificial Intelligence
   cs.CC: Computational Complexity
   cs.CE: Computational Engineering, Finance, and Science
   cs.CG: Computational Geometry

@@ -682,6 +682,6 @@ def process_one_category(category: str):
 
 
 if __name__ == "__main__":
-    categories = get_category_codes()
+    categories = get_category_codes()[0]
     for category in categories:
         process_one_category(category)
