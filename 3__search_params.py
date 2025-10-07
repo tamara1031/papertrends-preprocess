@@ -9,6 +9,7 @@ import warnings
 
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_distances
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -456,20 +457,17 @@ def _compute_dbcv_score(
         valid_labels = labels[valid_mask]
         valid_embeddings = original_embeddings[valid_mask]
         
-        # Ensure embeddings are float64 for HDBSCAN compatibility
-        if valid_embeddings.dtype != np.float64:
-            valid_embeddings = valid_embeddings.astype(np.float64)
-        
         # Check if we have multiple clusters
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
             return 0.0  # Need at least 2 clusters for DBCV
         
-        # Compute DBCV using cosine metric (appropriate for embeddings)
+        # Compute DBCV using precomputed cosine distances (more efficient)
+        distance_matrix = cosine_distances(valid_embeddings)
         dbcv_score = validity_index(
-            valid_embeddings, 
+            distance_matrix, 
             valid_labels, 
-            metric='cosine'
+            metric='precomputed'
         )
         
         # Convert from [-1, 1] to [0, 1] range (linear transformation)
