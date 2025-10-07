@@ -82,8 +82,8 @@ class OptimizationConfig:
     def get_min_df_range(dataset_size: int) -> Tuple[int, int]:
         """Get min_df range based on dataset size (conservative for academic abstracts)."""
         # More conservative ranges for academic abstracts
-        min_val = max(2, dataset_size // 2000)  # 0.05% of dataset, min 2
-        max_val = max(10, dataset_size // 500)   # 0.2% of dataset, min 10
+        min_val = 2
+        max_val = 50
         return (min_val, max_val)
     
     @staticmethod
@@ -337,10 +337,11 @@ def _compute_topic_coverage(
         # Calculate coverage ratio
         coverage_ratio = assigned_docs / total_docs
         
-        # Apply tanh activation function (output range [-1, 1])
-        # Convert to [0, 1] range: (tanh(x) + 1) / 2
-        tanh_value = np.tanh(coverage_ratio)
-        transformed_coverage = (tanh_value + 1.0) / 2.0
+        # Apply sigmoid activation with proper scaling for 0-1 input range
+        # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
+        # This emphasizes high coverage values while maintaining 0-1 output
+        scaled_input = 8 * coverage_ratio - 4  # [0, 1] → [-4, 4]
+        transformed_coverage = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         
         # Ensure output is in valid range [0, 1]
         return max(eps, min(1.0, transformed_coverage))
@@ -367,9 +368,11 @@ def _compute_dominance_score(
         max_cluster_size = np.max(cluster_sizes)
         dominance_ratio = max_cluster_size / dataset_size
         
-        # Apply tanh-based penalty: smooth penalty around 0.5 dominance
-        # Tanh provides smooth transition from low to high penalty
-        penalty_strength = (np.tanh(10 * (dominance_ratio - 0.5)) + 1.0) / 2.0
+        # Apply sigmoid activation with proper scaling for 0-1 input range
+        # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
+        # This emphasizes low dominance values (good balance) while maintaining 0-1 output
+        scaled_input = 8 * dominance_ratio - 4  # [0, 1] → [-4, 4]
+        penalty_strength = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         return max(eps, 1.0 - penalty_strength)
         
     except Exception as e:
@@ -409,16 +412,11 @@ def _compute_silhouette_based_score(
         # This evaluates direction similarity rather than magnitude differences
         silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
         
-        # Transform silhouette score from [-1, 1] to [0, 1] range using sigmoid activation
-        # Sigmoid function provides high sensitivity around 0.4 (moderate clustering quality)
-        # This emphasizes improvements in the practical range where most clustering results fall
-        normalized_silhouette = (silhouette + 1.0) / 2.0  # [-1, 1] → [0, 1]
-        
-        
-        # Apply tanh activation function (output range [-1, 1])
-        # Convert to [0, 1] range: (tanh(x) + 1) / 2
-        tanh_value = np.tanh(normalized_silhouette)
-        transformed_score = (tanh_value + 1.0) / 2.0
+        # Apply sigmoid activation with proper scaling for 0-1 input range
+        # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
+        # This emphasizes high silhouette values while maintaining 0-1 output
+        scaled_input = 4 * silhouette  # [-1, 1] → [-4, 4]
+        transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         
         return max(eps, min(1.0, transformed_score))
         
@@ -567,6 +565,8 @@ def objective_function(
 # Main Optimization Pipeline
 # ============================================================================
 
+EMBEDDING_MODEL = get_custom_embedding_model()
+
 def optimize_category_clustering(
     category: str, 
     timeout: Optional[int] = OptimizationConfig.DEFAULT_TIMEOUT, 
@@ -579,7 +579,7 @@ def optimize_category_clustering(
     print(f"Loading data for category: {category}")
     papers = load_papers(category)
     text_embeddings = load_text_embeddings(category)
-    embedding_model = get_custom_embedding_model()
+    embedding_model = EMBEDDING_MODEL
     
     texts = [embedding_model.get_input_text(paper) for paper in papers]
     dataset_size = len(texts)
