@@ -37,9 +37,28 @@ class OptimizationConfig:
     # Numerical precision
     EPSILON = 1e-6
     
-    # Optimization sessions
-    DEFAULT_TIMEOUT = None  # No timeout
-    DEFAULT_N_TRIALS = 100
+    # Optimization sessions - Adaptive based on dataset size
+    @staticmethod
+    def get_default_n_trials(dataset_size: int) -> int:
+        """Get default number of trials based on dataset size."""
+        if dataset_size <= 5000:
+            return 50   # Small datasets: fewer trials needed
+        elif dataset_size <= 20000:
+            return 100  # Medium datasets: standard trials
+        elif dataset_size <= 50000:
+            return 150  # Large datasets: more trials for better exploration
+        else:
+            return 200  # Very large datasets: maximum trials
+    
+    @staticmethod
+    def get_default_timeout(dataset_size: int) -> Optional[int]:
+        """Get default timeout based on dataset size (in minutes)."""
+        if dataset_size <= 10000:
+            return None  # Small datasets: no timeout
+        elif dataset_size <= 50000:
+            return 120   # Medium datasets: 2 hours
+        else:
+            return 240   # Large datasets: 4 hours
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
@@ -484,45 +503,87 @@ def compute_cluster_quality_score(
 # Optuna Configuration
 # ============================================================================
 
-def create_tpe_sampler(n_trials: int = 100) -> TPESampler:
-    """Create TPE sampler optimized for BERTopic clustering hyperparameter search.
+def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESampler:
+    """Create TPE sampler optimized for SPECTER2-based academic paper clustering.
     
-    Optimized for topic modeling with dynamic settings:
-    - Dynamic startup trials: Align with pruner settings
-    - Dynamic EI candidates: Scale with total trials
-    - multivariate=True: Considers correlations between UMAP/HDBSCAN/TF-IDF parameters
-    - Adjusted prior weight: Balanced exploration vs exploitation
-    - group=False: Avoid complex grouping for BERTopic's mixed parameter types
+    Optimized for BERTopic with SPECTER2 embeddings and academic paper characteristics:
+    - Dynamic startup trials: 15-20% of total trials for thorough exploration
+    - Dynamic EI candidates: Scale with dataset size and trial count
+    - multivariate=True: Essential for UMAP/HDBSCAN parameter correlations
+    - Balanced prior weight: Optimized for academic paper clustering
+    - group=False: Avoid grouping issues with mixed parameter types
     
     Args:
-        study_name: Name of the optimization study
+        n_trials: Total number of trials for optimization
         dataset_size: Size of the dataset for adaptive parameters
-        n_trials: Total number of trials for optimization
     """
-    # Dynamic startup trials: Align with pruner (12% of total trials)
-    # startup_trials = max(10, min(20, int(n_trials * 0.12)))
+    # Dynamic startup trials: 15-20% of total trials, min 15, max 30
+    # Academic papers need more exploration due to complex topic structures
+    startup_trials = max(15, min(30, int(n_trials * 0.18)))
     
-    # Dynamic EI candidates: Scale with total trials
-    # ei_candidates = max(24, min(64, int(n_trials * 0.3)))  # 30% of trials, min 24, max 64
+    # Dynamic EI candidates: Scale with dataset size and trials
+    # Larger datasets need more candidates for better exploration
+    if dataset_size <= 10000:
+        ei_candidates = max(24, min(48, int(n_trials * 0.25)))
+    elif dataset_size <= 50000:
+        ei_candidates = max(32, min(64, int(n_trials * 0.30)))
+    else:
+        ei_candidates = max(40, min(80, int(n_trials * 0.35)))
     
-    return TPESampler(seed=42)
+    # Prior weight: Balanced for academic paper clustering
+    # Slightly higher weight for better exploration of complex topic spaces
+    prior_weight = 1.0
+    
+    return TPESampler(
+        n_startup_trials=startup_trials,
+        n_ei_candidates=ei_candidates,
+        multivariate=True,  # Essential for UMAP/HDBSCAN correlations
+        group=False,        # Avoid grouping issues
+        prior_weight=prior_weight,
+        seed=42
+    )
 
 
-def create_median_pruner(n_trials: int = 100) -> MedianPruner:
-    """Create median pruner optimized for BERTopic clustering optimization.
+def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> MedianPruner:
+    """Create median pruner optimized for SPECTER2-based academic paper clustering.
     
-    Optimized settings for topic modeling with dynamic startup trials:
-    - Dynamic startup trials: 10-15% of total trials, min 10, max 20
-    - Extended warmup steps: Account for BERTopic's computation time
-    - Reduced pruning frequency: Avoid premature pruning of promising trials
+    Optimized for BERTopic with SPECTER2 embeddings and academic paper characteristics:
+    - Dynamic startup trials: 15-20% of total trials for thorough exploration
+    - Extended warmup steps: Account for BERTopic's computation time and SPECTER2 embeddings
+    - Conservative pruning: Academic papers have complex topic structures requiring patience
+    - Adaptive intervals: Scale with dataset size for optimal pruning frequency
     
     Args:
         n_trials: Total number of trials for optimization
+        dataset_size: Size of the dataset for adaptive parameters
     """
-    # Dynamic startup trials: 10-15% of total trials
-    # startup_trials = max(10, min(20, int(n_trials * 0.12)))  # 12% as compromise
+    # Dynamic startup trials: 15-20% of total trials, min 15, max 30
+    # Academic papers need more exploration due to complex topic structures
+    startup_trials = max(15, min(30, int(n_trials * 0.18)))
     
-    return MedianPruner()
+    # Dynamic warmup steps: Scale with dataset size
+    # Larger datasets take longer to converge, need more patience
+    if dataset_size <= 10000:
+        warmup_steps = 5
+    elif dataset_size <= 50000:
+        warmup_steps = 8
+    else:
+        warmup_steps = 10
+    
+    # Dynamic intervals: Scale with dataset size
+    # Larger datasets need more frequent pruning checks
+    if dataset_size <= 10000:
+        interval_steps = 3
+    elif dataset_size <= 50000:
+        interval_steps = 2
+    else:
+        interval_steps = 1
+    
+    return MedianPruner(
+        n_startup_trials=startup_trials,
+        n_warmup_steps=warmup_steps,
+        interval_steps=interval_steps
+    )
 
 
 def objective_function(
@@ -567,11 +628,11 @@ EMBEDDING_MODEL = get_custom_embedding_model()
 
 def optimize_category_clustering(
     category: str, 
-    timeout: Optional[int] = OptimizationConfig.DEFAULT_TIMEOUT, 
-    n_trials: Optional[int] = OptimizationConfig.DEFAULT_N_TRIALS,
+    timeout: Optional[int] = None, 
+    n_trials: Optional[int] = None,
     storage: Optional[str] = None
 ) -> optuna.Study:
-    """Run hyperparameter optimization for a specific arXiv category."""
+    """Run hyperparameter optimization for a specific arXiv category with adaptive settings."""
     
     # Load and prepare data
     print(f"Loading data for category: {category}")
@@ -588,7 +649,16 @@ def optimize_category_clustering(
     
     print(f"Dataset size: {dataset_size} documents")
     
-    # Create optimization study
+    # Adaptive configuration based on dataset size
+    if n_trials is None:
+        n_trials = OptimizationConfig.get_default_n_trials(dataset_size)
+    if timeout is None:
+        timeout_minutes = OptimizationConfig.get_default_timeout(dataset_size)
+        timeout = timeout_minutes * 60 if timeout_minutes else None  # Convert to seconds
+    
+    print(f"Optimization settings: {n_trials} trials, timeout: {timeout//60 if timeout else 'None'} minutes")
+    
+    # Create optimization study with adaptive sampler and pruner
     study_name = f"clustering_optimization_{category}_{dataset_size}"
     
     study = optuna.create_study(
@@ -596,8 +666,8 @@ def optimize_category_clustering(
         load_if_exists=True,  
         direction="maximize",
         study_name=study_name,
-        sampler=create_tpe_sampler(n_trials),
-        pruner=create_median_pruner(n_trials)
+        sampler=create_tpe_sampler(n_trials, dataset_size),
+        pruner=create_median_pruner(n_trials, dataset_size)
     )
     
     # Run optimization
