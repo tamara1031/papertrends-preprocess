@@ -84,26 +84,26 @@ class OptimizationConfig:
         if dataset_size <= 10000:
             # Small datasets: balance all metrics for comprehensive evaluation
             return {
-                'coverage': 0.20,        # High coverage important for small datasets
-                'dominance': 0.20,       # Prevent topic dominance
-                'entropy': 0.20,         # Encourage topic diversity
-                'clustering_quality': 0.40  # Still prioritize quality
+                'coverage': 0.10,        # High coverage important for small datasets
+                'dominance': 0.10,       # Prevent topic dominance
+                'entropy': 0.25,         # Encourage topic diversity
+                'clustering_quality': 0.55  # Still prioritize quality
             }
         elif dataset_size <= 50000:
             # Medium datasets: focus on clustering quality while maintaining balance
             return {
-                'coverage': 0.15,        # Good coverage needed
-                'dominance': 0.15,       # Prevent topic dominance
+                'coverage': 0.05,        # Good coverage needed
+                'dominance': 0.05,       # Prevent topic dominance
                 'entropy': 0.20,         # Encourage topic diversity
-                'clustering_quality': 0.50  # Higher quality focus
+                'clustering_quality': 0.70  # Higher quality focus
             }
         else:
             # Large datasets: prioritize clustering quality for scalability
             return {
-                'coverage': 0.10,        # Basic coverage sufficient
-                'dominance': 0.10,       # Still prevent dominance
-                'entropy': 0.20,         # Maintain diversity
-                'clustering_quality': 0.60  # Highest quality focus
+                'coverage': 0.00,
+                'dominance': 0.00,       # Still prevent dominance
+                'entropy': 0.15,         # Maintain diversity
+                'clustering_quality': 0.85  # Highest quality focus
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -573,14 +573,28 @@ def compute_cluster_quality_score(
         dataset_size = len(original_embeddings)
         basic_info = _get_basic_model_info(model, dataset_size)
         
-        # Compute individual metrics
-        noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
-        dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
-        entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
-        clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
-        
-        # Get adaptive weights and compute final score
+        # Get adaptive weights first to determine which metrics to compute
         weights = OptimizationConfig.get_adaptive_weights(dataset_size)
+        
+        # Compute individual metrics only if their weights are non-zero
+        noise_ratio_score = 0.0
+        dominance_score = 0.0
+        entropy_score = 0.0
+        clustering_quality_score = 0.0
+        
+        if weights['coverage'] > 0:
+            noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
+        
+        if weights['dominance'] > 0:
+            dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
+        
+        if weights['entropy'] > 0:
+            entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
+        
+        if weights['clustering_quality'] > 0:
+            clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
+        
+        # Compute final score
         final_score = (
             weights['coverage'] * noise_ratio_score +
             weights['dominance'] * dominance_score +
@@ -590,8 +604,41 @@ def compute_cluster_quality_score(
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Noise Ratio: {noise_ratio_score:.4f}, Dominance: {dominance_score:.4f}, Entropy: {entropy_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
-        print(f"Weights - Noise Ratio: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Entropy: {weights['entropy']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
+        
+        # Build score and weight strings dynamically
+        score_parts = []
+        weight_parts = []
+        
+        if weights['coverage'] > 0:
+            score_parts.append(f"Noise Ratio: {noise_ratio_score:.4f}")
+            weight_parts.append(f"Noise Ratio: {weights['coverage']:.1%}")
+        else:
+            score_parts.append("Noise Ratio: N/A")
+            weight_parts.append("Noise Ratio: 0.0%")
+            
+        if weights['dominance'] > 0:
+            score_parts.append(f"Dominance: {dominance_score:.4f}")
+            weight_parts.append(f"Dominance: {weights['dominance']:.1%}")
+        else:
+            score_parts.append("Dominance: N/A")
+            weight_parts.append("Dominance: 0.0%")
+            
+        if weights['entropy'] > 0:
+            score_parts.append(f"Entropy: {entropy_score:.4f}")
+            weight_parts.append(f"Entropy: {weights['entropy']:.1%}")
+        else:
+            score_parts.append("Entropy: N/A")
+            weight_parts.append("Entropy: 0.0%")
+            
+        if weights['clustering_quality'] > 0:
+            score_parts.append(f"Clustering Quality: {clustering_quality_score:.4f}")
+            weight_parts.append(f"Clustering Quality: {weights['clustering_quality']:.1%}")
+        else:
+            score_parts.append("Clustering Quality: N/A")
+            weight_parts.append("Clustering Quality: 0.0%")
+        
+        print(f"Scores - {', '.join(score_parts)}")
+        print(f"Weights - {', '.join(weight_parts)}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
