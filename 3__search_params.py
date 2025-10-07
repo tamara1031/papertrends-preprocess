@@ -63,7 +63,7 @@ class OptimizationConfig:
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
     # HDBSCAN metrics: cosine requires algorithm='generic', others use algorithm='best'
-    HDBSCAN_METRICS = ["cosine", "euclidean", "manhattan"]  
+    HDBSCAN_METRICS = ["euclidean", "manhattan"]  
     
     # Topic representation (data-size independent)
     TOP_N_WORDS_RANGE = (10, 20)
@@ -315,14 +315,10 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         low_memory=False
     )
     
-    # HDBSCAN設定: cosineメトリクスの場合はalgorithm='generic'が必要
-    algorithm = 'generic' if params.hdbscan_metric == 'cosine' else 'best'
-    
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        algorithm=algorithm,
         prediction_data=True
     )
     
