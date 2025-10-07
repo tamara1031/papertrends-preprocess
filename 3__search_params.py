@@ -79,25 +79,25 @@ class OptimizationConfig:
         - Diversity metrics (Entropy): Important for balanced topics
         """
         if dataset_size <= 10000:
-            # Small datasets: balance all metrics for comprehensive evaluation
+            # Small datasets: focus on clustering quality with minimal diversity constraint
             return {
-                'coverage': 0.15,        # Coverage important for small datasets
-                'entropy': 0.15,         # Topic diversity important for academic papers
-                'clustering_quality': 0.70  # Quality remains most important
+                'coverage': 0.20,        # Coverage important for small datasets
+                'entropy': 0.05,         # Minimal diversity constraint
+                'clustering_quality': 0.75  # Quality is most important
             }
         elif dataset_size <= 50000:
-            # Medium datasets: focus on clustering quality while maintaining balance
+            # Medium datasets: prioritize clustering quality
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'entropy': 0.10,         # Maintain topic diversity
-                'clustering_quality': 0.80  # Higher quality focus for academic papers
+                'entropy': 0.05,         # Minimal diversity constraint
+                'clustering_quality': 0.85  # High quality focus for academic papers
             }
         else:
-            # Large datasets: prioritize clustering quality for scalability
+            # Large datasets: maximize clustering quality
             return {
                 'coverage': 0.05,        # Minimal coverage requirement
-                'entropy': 0.05,         # Maintain diversity but prioritize quality
-                'clustering_quality': 0.90  # Highest quality focus for large academic datasets
+                'entropy': 0.00,         # No diversity constraint for large datasets
+                'clustering_quality': 0.95  # Maximum quality focus for large academic datasets
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
