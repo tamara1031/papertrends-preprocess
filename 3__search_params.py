@@ -375,17 +375,34 @@ def _compute_topic_coverage(
         # Ensure output is in valid range [0, 1]
         return max(eps, min(1.0, transformed_coverage))
     
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise    
     except Exception as e:
         print(f"Warning: Topic coverage computation failed: {e}")
         return eps
 
 
-def _compute_dominance_score(
+def _compute_simpsons_diversity_score(
     model: BERTopic,
     dataset_size: int,
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute dominance score based on largest cluster size."""
+    """Compute Simpson's diversity index adapted for clustering evaluation.
+    
+    Simpson's diversity index measures the probability that two randomly selected
+    documents belong to different clusters. Higher values indicate better diversity.
+    
+    Formula: D = 1 - Σ(pi)² where pi = cluster_size_i / total_documents
+    
+    Args:
+        model: Trained BERTopic model
+        dataset_size: Total number of documents
+        eps: Small epsilon for numerical stability
+        
+    Returns:
+        Simpson's diversity score in range [0, 1] where 1 indicates maximum diversity
+    """
     try:
         topic_info = model.get_topic_info()
         valid_topics = topic_info[topic_info['Topic'] != -1]
@@ -394,18 +411,25 @@ def _compute_dominance_score(
         if len(cluster_sizes) == 0:
             return eps
             
-        max_cluster_size = np.max(cluster_sizes)
-        dominance_ratio = max_cluster_size / dataset_size
+        # Calculate relative proportions (pi)
+        proportions = cluster_sizes / dataset_size
         
-        # Apply sigmoid activation with proper scaling for 0-1 input range
+        # Simpson's diversity index: D = 1 - Σ(pi)²
+        simpsons_diversity = 1.0 - np.sum(proportions ** 2)
+        
+        # Apply sigmoid activation for better scaling
         # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
-        # This emphasizes low dominance values (good balance) while maintaining 0-1 output
-        scaled_input = 8 * dominance_ratio - 4  # [0, 1] → [-4, 4]
-        penalty_strength = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
-        return max(eps, 1.0 - penalty_strength)
+        # This emphasizes high diversity values while maintaining 0-1 output
+        scaled_input = 8 * simpsons_diversity - 4  # [0, 1] → [-4, 4]
+        transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         
+        return max(eps, min(1.0, transformed_score))
+    
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise    
     except Exception as e:
-        print(f"Warning: dominance score computation failed: {e}")
+        print(f"Warning: Simpson's diversity score computation failed: {e}")
         return eps
 
 
@@ -446,7 +470,9 @@ def _compute_silhouette_based_score(
         transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         
         return max(eps, min(1.0, transformed_score))
-        
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise    
     except Exception as e:
         print(f"Warning: Silhouette-based score computation failed: {e}")
         return eps
@@ -466,7 +492,9 @@ def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
             top_sizes = []
         
         return {'n_topics': n_topics, 'top_cluster_sizes': top_sizes}
-        
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise    
     except Exception as e:
         print(f"Warning: Failed to get basic model info: {e}")
         return {'n_topics': 0, 'top_cluster_sizes': []}
@@ -484,26 +512,28 @@ def compute_cluster_quality_score(
         
         # Compute individual metrics
         topic_coverage = _compute_topic_coverage(model, eps=eps)
-        dominance_score = _compute_dominance_score(model, dataset_size, eps=eps)
+        diversity_score = _compute_simpsons_diversity_score(model, dataset_size, eps=eps)
         clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
         weights = OptimizationConfig.get_adaptive_weights(dataset_size)
         final_score = (
             weights['coverage'] * topic_coverage +
-            weights['dominance'] * dominance_score +
+            weights['dominance'] * diversity_score +
             weights['clustering_quality'] * clustering_quality_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
-        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
+        print(f"Scores - Coverage: {topic_coverage:.4f}, Diversity: {diversity_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
+        print(f"Weights - Coverage: {weights['coverage']:.1%}, Diversity: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
         return max(eps, min(1.0, final_score))
-        
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise
     except Exception as e:
         print(f"Error in compute_cluster_quality_score: {e}")
         return eps
@@ -625,6 +655,9 @@ def objective_function(
     
     except optuna.exceptions.TrialPruned:
         raise
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise    
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
         trial.set_user_attr("error", str(e))
