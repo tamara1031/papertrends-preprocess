@@ -204,7 +204,9 @@ def load_text_embeddings(category: str) -> np.ndarray:
     filepath = f"./preprocessed/{category}/text_embeddings.npy"
     try:
         with open(filepath, "rb") as f:
-            return np.load(f)
+            embeddings = np.load(f)
+            # Convert to float64 to avoid HDBSCAN dtype mismatch errors
+            return embeddings.astype(np.float64)
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
@@ -772,7 +774,6 @@ def objective_function(
         raise    
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
-        e.print_exc()
         trial.set_user_attr("error", str(e))
         return eps
 
@@ -844,7 +845,7 @@ def optimize_category_clustering(
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(Exception,)  # Catch all exceptions gracefully...
+            catch=(ValueError, RuntimeError, MemoryError)  # Catch specific exceptions, not KeyboardInterrupt
         )
         
         # Display results
