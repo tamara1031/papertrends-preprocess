@@ -456,6 +456,10 @@ def _compute_dbcv_score(
         valid_labels = labels[valid_mask]
         valid_embeddings = original_embeddings[valid_mask]
         
+        # Ensure embeddings are float64 for HDBSCAN compatibility
+        if valid_embeddings.dtype != np.float64:
+            valid_embeddings = valid_embeddings.astype(np.float64)
+        
         # Check if we have multiple clusters
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
