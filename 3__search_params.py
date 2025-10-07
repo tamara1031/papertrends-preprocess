@@ -467,7 +467,8 @@ def _compute_dbcv_score(
         dbcv_score = validity_index(
             distance_matrix, 
             valid_labels, 
-            metric='precomputed'
+            metric='precomputed',
+            d=valid_embeddings.shape[1]  # Set dimension for precomputed metric
         )
         
         # Convert from [-1, 1] to [0, 1] range (linear transformation)
