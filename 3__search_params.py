@@ -335,22 +335,24 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
 # ============================================================================
 
 
-def _compute_topic_coverage(
+def _compute_noise_ratio_score(
     model: BERTopic, 
     eps: float = OptimizationConfig.EPSILON
 ) -> float:
-    """Compute topic coverage - how well topics cover the documents.
+    """Compute noise ratio score based on outlier detection evaluation.
     
-    Topic coverage measures the proportion of documents that are successfully
-    assigned to meaningful topics (excluding noise/outliers). Higher coverage
-    indicates better topic modeling performance with fewer unassigned documents.
+    Noise ratio measures the proportion of documents classified as noise/outliers.
+    Lower noise ratio indicates better clustering performance with fewer outliers.
+    
+    Formula: noise_ratio = noise_points / total_points
+    Score: 1 - noise_ratio (higher is better)
     
     Args:
         model: Trained BERTopic model
         eps: Small epsilon for numerical stability
         
     Returns:
-        Topic coverage score in range [0, 1] where 1 indicates 100% coverage
+        Noise ratio score in range [0, 1] where 1 indicates 0% noise (perfect coverage)
     """
     try:
         labels = model.hdbscan_model.labels_
@@ -359,27 +361,27 @@ def _compute_topic_coverage(
         if total_docs == 0:
             return eps
         
-        # Count documents assigned to topics (excluding noise -1)
-        # HDBSCAN assigns -1 to noise/outlier points
-        assigned_docs = (labels != -1).sum()
+        # Count noise points (HDBSCAN assigns -1 to noise/outliers)
+        noise_docs = (labels == -1).sum()
+        noise_ratio = noise_docs / total_docs
         
-        # Calculate coverage ratio
-        coverage_ratio = assigned_docs / total_docs
+        # Convert to score (lower noise ratio = higher score)
+        coverage_score = 1.0 - noise_ratio
         
         # Apply sigmoid activation with proper scaling for 0-1 input range
         # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
         # This emphasizes high coverage values while maintaining 0-1 output
-        scaled_input = 8 * coverage_ratio - 4  # [0, 1] → [-4, 4]
-        transformed_coverage = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
+        scaled_input = 8 * coverage_score - 4  # [0, 1] → [-4, 4]
+        transformed_score = 1 / (1 + np.exp(-scaled_input))  # [-4, 4] → [0.02, 0.98]
         
         # Ensure output is in valid range [0, 1]
-        return max(eps, min(1.0, transformed_coverage))
+        return max(eps, min(1.0, transformed_score))
     
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: Topic coverage computation failed: {e}")
+        print(f"Warning: Noise ratio score computation failed: {e}")
         return eps
 
 
@@ -513,22 +515,22 @@ def compute_cluster_quality_score(
         basic_info = _get_basic_model_info(model, dataset_size)
         
         # Compute individual metrics
-        topic_coverage = _compute_topic_coverage(model, eps=eps)
+        noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
         dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
         clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Get adaptive weights and compute final score
         weights = OptimizationConfig.get_adaptive_weights(dataset_size)
         final_score = (
-            weights['coverage'] * topic_coverage +
+            weights['coverage'] * noise_ratio_score +
             weights['dominance'] * dominance_score +
             weights['clustering_quality'] * clustering_quality_score
         )
         
         # Output results
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        print(f"Scores - Coverage: {topic_coverage:.4f}, Dominance: {dominance_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
-        print(f"Weights - Coverage: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
+        print(f"Scores - Noise Ratio: {noise_ratio_score:.4f}, Dominance: {dominance_score:.4f}, Clustering Quality: {clustering_quality_score:.4f}")
+        print(f"Weights - Noise Ratio: {weights['coverage']:.1%}, Dominance: {weights['dominance']:.1%}, Clustering Quality: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
