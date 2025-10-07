@@ -754,7 +754,6 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 
 def process_one_category(category: str):
     """Main execution function for hyperparameter optimization."""
-    
     # Create output directory
     params_path = f"./params/{category}"
     os.makedirs(params_path, exist_ok=True)
@@ -788,15 +787,26 @@ if __name__ == "__main__":
     print(f"⚙️  Pipeline: SPECTER2 → UMAP → HDBSCAN → Topic Modeling")
     print("-" * 80)
     
-    for i, category in enumerate(categories, 1):
-        print(f"\n📖 [{i}/{len(categories)}] Processing category: {category}")
-        print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        try:
-            process_one_category(category)
-            print(f"✅ Completed category: {category}")
-        except Exception as e:
-            print(f"❌ Failed category {category}: {e}")
-            continue
+    try:
+        for i, category in enumerate(categories, 1):
+            print(f"\n📖 [{i}/{len(categories)}] Processing category: {category}")
+            print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            try:
+                process_one_category(category)
+                print(f"✅ Completed category: {category}")
+            except KeyboardInterrupt:
+                # Re-raise KeyboardInterrupt to be caught by outer try-except
+                raise
+            except Exception as e:
+                print(f"❌ Failed category {category}: {e}")
+                continue
+    except KeyboardInterrupt:
+        print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
+        print(f"🛑 Stopping optimization process...")
+        print(f"📊 Processed {i-1}/{len(categories)} categories before interruption")
+        print(f"💾 Partial results saved to: ./params/")
+        print(f"🔄 To resume, run the script again (it will continue from where it left off)")
+        exit(0)
     
     print("\n" + "=" * 80)
     print("🎉 ALL CATEGORIES PROCESSED SUCCESSFULLY!")
