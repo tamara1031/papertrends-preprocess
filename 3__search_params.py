@@ -62,7 +62,8 @@ class OptimizationConfig:
     
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
-    HDBSCAN_METRICS = ["euclidean", "manhattan"]  
+    # HDBSCAN metrics: cosine requires algorithm='generic', others use algorithm='best'
+    HDBSCAN_METRICS = ["cosine", "euclidean", "manhattan"]  
     
     # Topic representation (data-size independent)
     TOP_N_WORDS_RANGE = (10, 20)
@@ -211,10 +212,15 @@ def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tu
         *min_cluster_size_range
     )
     
-    # min_samples constraint (relative to min_cluster_size)
-    min_samples_min = int(min_cluster_size * OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[0])
-    min_samples_max = int(min_cluster_size * OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[1])
-    min_samples = trial.suggest_int("min_samples", min_samples_min, min_samples_max)
+    # Derive min_samples from an independent multiplier to avoid dynamic search space
+    # This keeps TPE multivariate sampling effective while preserving the constraint
+    min_samples_multiplier = trial.suggest_float(
+        "min_samples_multiplier",
+        OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[0],
+        OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[1]
+    )
+    # Ensure at least 1 and not exceeding min_cluster_size
+    min_samples = max(1, min(int(min_cluster_size * min_samples_multiplier), min_cluster_size))
     
     # HDBSCAN distance metric (validated compatible metrics only)
     hdbscan_metric = trial.suggest_categorical("hdbscan_metric", OptimizationConfig.HDBSCAN_METRICS)
@@ -300,10 +306,14 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         low_memory=False
     )
     
+    # HDBSCAN設定: cosineメトリクスの場合はalgorithm='generic'が必要
+    algorithm = 'generic' if params.hdbscan_metric == 'cosine' else 'best'
+    
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
+        algorithm=algorithm,
         prediction_data=True
     )
     
@@ -540,6 +550,7 @@ def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESam
         multivariate=True,  # Essential for UMAP/HDBSCAN correlations
         group=False,        # Avoid grouping issues
         prior_weight=prior_weight,
+        warn_independent_sampling=True,
         seed=42
     )
 
