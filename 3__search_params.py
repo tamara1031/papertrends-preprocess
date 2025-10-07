@@ -10,6 +10,7 @@ import warnings
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_distances
+from sklearn.decomposition import PCA
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -462,13 +463,19 @@ def _compute_dbcv_score(
         if len(unique_labels) < 2:
             return 0.0  # Need at least 2 clusters for DBCV
         
-        # Compute DBCV using precomputed cosine distances (more efficient)
-        distance_matrix = cosine_distances(valid_embeddings)
+        # Apply PCA for dimensionality reduction (more efficient for same-category papers)
+        # Use 95% variance retention for optimal balance between efficiency and information preservation
+        pca = PCA(n_components=0.95, random_state=42)
+        embeddings_pca = pca.fit_transform(valid_embeddings)
+    
+        
+        # Compute DBCV using precomputed cosine distances on PCA-reduced embeddings
+        distance_matrix = cosine_distances(embeddings_pca)
         dbcv_score = validity_index(
             distance_matrix, 
             valid_labels, 
             metric='precomputed',
-            d=valid_embeddings.shape[1]  # Set dimension for precomputed metric
+            d=embeddings_pca.shape[1]  # Use PCA dimension
         )
         
         # Convert from [-1, 1] to [0, 1] range (linear transformation)
