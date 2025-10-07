@@ -582,16 +582,16 @@ def compute_cluster_quality_score(
         entropy_score = 0.0
         clustering_quality_score = 0.0
         
-        if weights['coverage'] > 0:
+        if weights['coverage'] > 0.00:
             noise_ratio_score = _compute_noise_ratio_score(model, eps=eps)
         
-        if weights['dominance'] > 0:
+        if weights['dominance'] > 0.00:
             dominance_score = _compute_simpsons_dominance_score(model, dataset_size, eps=eps)
         
-        if weights['entropy'] > 0:
+        if weights['entropy'] > 0.00:
             entropy_score = _compute_shannon_entropy_score(model, dataset_size, eps=eps)
         
-        if weights['clustering_quality'] > 0:
+        if weights['clustering_quality'] > 0.00:
             clustering_quality_score = _compute_silhouette_based_score(model, original_embeddings, eps=eps)
         
         # Compute final score
@@ -772,6 +772,7 @@ def objective_function(
         raise    
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
+        e.print_exc()
         trial.set_user_attr("error", str(e))
         return eps
 
@@ -851,6 +852,7 @@ def optimize_category_clustering(
             
     except KeyboardInterrupt:
         print(f"\n⚠️  Optimization interrupted. Completed {len(study.trials)} trials.")
+        raise
     except Exception as e:
         print(f"❌ Optimization error: {e}")
     
