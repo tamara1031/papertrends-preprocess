@@ -408,34 +408,8 @@ def _compute_silhouette_based_score(
         if len(unique_labels) < 2:
             return eps
         
-        # PCA
-        try:
-            n_samples, n_features = valid_embeddings.shape
-            # PCA次元数を決定する
-            # 1. 基本方針: 特徴量の半分、サンプル数の1/10、最大512次元のうち最小値
-            base_components = min(512, n_features // 2, max(2, n_samples // 10))
-            
-            # 2. PCAの数学的制約を満たすように調整
-            # - 次元数はサンプル数-1以下でなければならない
-            # - 次元数は特徴量数以下でなければならない
-            # - 最低2次元は保証する
-            max_allowed = min(n_samples - 1, n_features)
-            n_components = max(2, min(base_components, max_allowed))
-            # PCAを実行して次元削減
-            pca = PCA(n_components=n_components, random_state=42)
-            reduced_embeddings = pca.fit_transform(valid_embeddings)
-            
-            # 1次元になってしまった場合は2次元に拡張（シルエットスコア計算のため）
-            if reduced_embeddings.shape[1] == 1:
-                # ゼロベクトルを追加して2次元にする
-                zero_column = np.zeros_like(reduced_embeddings)
-                reduced_embeddings = np.column_stack([reduced_embeddings, zero_column])
-        except Exception as pca_error:
-            print(f"PCA failed, using original embeddings: {pca_error}")
-            reduced_embeddings = valid_embeddings
-                
         # Silhouette
-        silhouette = silhouette_score(reduced_embeddings, valid_labels, metric='cosine')
+        silhouette = silhouette_score(valid_embeddings, valid_labels, metric='cosine')
         
         # Apply sigmoid activation with proper scaling for 0-1 input range
         # Scale input to [-4, 4] range to utilize sigmoid's steep slope around 0
