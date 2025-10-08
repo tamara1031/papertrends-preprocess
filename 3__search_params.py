@@ -82,21 +82,21 @@ class OptimizationConfig:
             # Small datasets: focus on clustering quality with minimal shape constraint
             return {
                 'coverage': 0.20,        # Coverage important for small datasets
-                'entropy': 0.05,         # Minimal cluster shape constraint (DBCV UMAP)
+                'cluster_shape': 0.05,   # Minimal cluster shape constraint (DBCV UMAP)
                 'clustering_quality': 0.75  # Quality is most important (DBCV PCA)
             }
         elif dataset_size <= 50000:
             # Medium datasets: prioritize clustering quality
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'entropy': 0.05,         # Minimal cluster shape constraint (DBCV UMAP)
+                'cluster_shape': 0.05,   # Minimal cluster shape constraint (DBCV UMAP)
                 'clustering_quality': 0.85  # High quality focus for academic papers (DBCV PCA)
             }
         else:
             # Large datasets: maximize clustering quality
             return {
                 'coverage': 0.05,        # Minimal coverage requirement
-                'entropy': 0.00,         # No cluster shape constraint for large datasets
+                'cluster_shape': 0.00,   # No cluster shape constraint for large datasets
                 'clustering_quality': 0.95  # Maximum quality focus for large academic datasets (DBCV PCA)
             }  
     
@@ -543,7 +543,7 @@ def compute_cluster_quality_score(
         if weights['coverage'] > 0.00:
             noise_ratio_score = _compute_noise_ratio_score(model)
         
-        if weights['entropy'] > 0.00:
+        if weights['cluster_shape'] > 0.00:
             dbcv_umap_score = _compute_dbcv_umap_score(model, original_embeddings)
         
         if weights['clustering_quality'] > 0.00:
@@ -552,7 +552,7 @@ def compute_cluster_quality_score(
         # Compute final score
         final_score = (
             weights['coverage'] * noise_ratio_score +
-            weights['entropy'] * dbcv_umap_score +
+            weights['cluster_shape'] * dbcv_umap_score +
             weights['clustering_quality'] * dbcv_pca_score
         )
         
@@ -570,9 +570,9 @@ def compute_cluster_quality_score(
             score_parts.append("Noise Ratio: N/A")
             weight_parts.append("Noise Ratio: 0.0%")
             
-        if weights['entropy'] > 0:
+        if weights['cluster_shape'] > 0:
             score_parts.append(f"DBCV UMAP: {dbcv_umap_score:.4f}")
-            weight_parts.append(f"DBCV UMAP: {weights['entropy']:.1%}")
+            weight_parts.append(f"DBCV UMAP: {weights['cluster_shape']:.1%}")
         else:
             score_parts.append("DBCV UMAP: N/A")
             weight_parts.append("DBCV UMAP: 0.0%")
