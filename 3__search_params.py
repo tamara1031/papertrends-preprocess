@@ -60,7 +60,8 @@ class OptimizationConfig:
     # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
     UMAP_METRICS = ["cosine"]
     # HDBSCAN metrics: cosine requires algorithm='generic', others use algorithm='best'
-    HDBSCAN_METRICS = ["euclidean", "manhattan"]  
+    HDBSCAN_METRICS = ["euclidean", "manhattan"]
+    
     
     # Topic representation (data-size independent)
     TOP_N_WORDS_RANGE = (10, 20)
@@ -383,6 +384,8 @@ def _compute_dbcv_umap_score(
     This function uses the UMAP embedding from the BERTopic model to compute DBCV score,
     which is suitable for comparing general cluster shapes in the reduced dimensional space.
     
+    Uses euclidean distance metric which is optimal for low-dimensional UMAP embeddings (5-20 dimensions).
+    
     Args:
         model: Trained BERTopic model with UMAP and HDBSCAN
         original_embeddings: Original embeddings used for clustering
@@ -416,11 +419,12 @@ def _compute_dbcv_umap_score(
         if valid_umap_embedding.dtype != np.float64:
             valid_umap_embedding = valid_umap_embedding.astype(np.float64)
         
-        # Compute DBCV using cosine metric on UMAP embeddings
+        # Compute DBCV using euclidean metric on UMAP embeddings
+        # Euclidean distance is optimal for low-dimensional embeddings (5-20 dimensions)
         dbcv_score = validity_index(
             valid_umap_embedding, 
             valid_labels, 
-            metric='cosine'
+            metric='euclidean'
         )
         
         # Convert from [-1, 1] to [0, 1] range (linear transformation)
@@ -447,6 +451,8 @@ def _compute_dbcv_pca_score(
     This function applies PCA to the original high-dimensional embeddings to compute DBCV score,
     which is suitable for detailed cluster shape analysis while maintaining high-dimensional information.
     Uses 95% variance retention for optimal balance between efficiency and information preservation.
+    
+    Uses cosine distance metric which is optimal for high-dimensional embeddings after PCA.
     
     Args:
         model: Trained BERTopic model with HDBSCAN clustering
@@ -481,6 +487,7 @@ def _compute_dbcv_pca_score(
             embeddings_pca = embeddings_pca.astype(np.float64)
         
         # Compute DBCV using cosine metric on PCA embeddings
+        # Cosine distance is optimal for high-dimensional embeddings after PCA
         dbcv_score = validity_index(
             embeddings_pca, 
             valid_labels, 
