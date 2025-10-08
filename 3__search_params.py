@@ -390,11 +390,7 @@ def _compute_silhouette_umap_score(
         # Normalize to [0, 1] range
         silhouette_score_normalized = (silhouette_avg + 1) / 2
         
-        # Apply sigmoid activation for enhanced sensitivity
-        scaled_score = silhouette_score_normalized * 8 - 4  # Maps [0, 1] to [-4, 4]
-        sigmoid_score = 1 / (1 + np.exp(-scaled_score))
-        
-        return sigmoid_score
+        return silhouette_score_normalized
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
@@ -409,7 +405,7 @@ def _compute_dbcv_basis_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using PCA and sigmoid activation."""
+    """Compute DBCV score using PCA."""
     try:
         labels = model.hdbscan_model.labels_
         
@@ -441,11 +437,7 @@ def _compute_dbcv_basis_score(
         # Normalize to [0, 1] range
         dbcv_score_normalized = (dbcv_score + 1) / 2
         
-        # Apply sigmoid activation for enhanced sensitivity
-        scaled_score = dbcv_score_normalized * 8 - 4  # Maps [0, 1] to [-4, 4]
-        sigmoid_score = 1 / (1 + np.exp(-scaled_score))
-        
-        return sigmoid_score
+        return dbcv_score_normalized
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
