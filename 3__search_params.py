@@ -437,7 +437,12 @@ def _compute_silhouette_umap_score(
         # silhouette = -1 → score = 0, silhouette = 1 → score = 1
         silhouette_score_normalized = (silhouette_avg + 1) / 2
         
-        return silhouette_score_normalized
+        # Apply sigmoid activation to enhance sensitivity
+        # Scale the score to use sigmoid's effective range [-4, 4] for nearly complete [0, 1] output
+        scaled_score = silhouette_score_normalized * 8 - 4  # Maps [0, 1] to [-4, 4]
+        sigmoid_score = 1 / (1 + np.exp(-scaled_score))
+        
+        return sigmoid_score
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
@@ -507,7 +512,13 @@ def _compute_dbcv_basis_score(
         # dbcv = -1 → score = 0, dbcv = 1 → score = 1
         dbcv_score_normalized = (dbcv_score + 1) / 2
         
-        return dbcv_score_normalized
+        # Apply sigmoid activation to enhance sensitivity around 0.3 threshold
+        # This non-linear transformation can improve DBCV sensitivity in the critical range
+        # Scale the score to use sigmoid's effective range [-4, 4] for nearly complete [0, 1] output
+        scaled_score = dbcv_score_normalized * 8 - 4  # Maps [0, 1] to [-4, 4]
+        sigmoid_score = 1 / (1 + np.exp(-scaled_score))
+        
+        return sigmoid_score
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
