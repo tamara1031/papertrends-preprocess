@@ -10,6 +10,7 @@ import warnings
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import PCA
+from sklearn.metrics import silhouette_score
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
@@ -77,20 +78,20 @@ class OptimizationConfig:
         Weighting strategy:
         - Clustering Quality (DBCV PCA): Most important for detailed cluster shape analysis
         - Coverage (Noise Ratio): Critical for comprehensive topic coverage
-        - Cluster Shape (DBCV UMAP): Important for general cluster shape comparison
+        - Cluster Shape (Silhouette UMAP): Important for general cluster shape comparison
         """
         if dataset_size <= 10000:
             # Small datasets: focus on clustering quality with minimal shape constraint
             return {
                 'coverage': 0.20,        # Coverage important for small datasets
-                'cluster_shape': 0.05,   # Minimal cluster shape constraint (DBCV UMAP)
+                'cluster_shape': 0.05,   # Minimal cluster shape constraint (Silhouette UMAP)
                 'clustering_quality': 0.75  # Quality is most important (DBCV PCA)
             }
         elif dataset_size <= 50000:
             # Medium datasets: prioritize clustering quality
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'cluster_shape': 0.05,   # Minimal cluster shape constraint (DBCV UMAP)
+                'cluster_shape': 0.05,   # Minimal cluster shape constraint (Silhouette UMAP)
                 'clustering_quality': 0.85  # High quality focus for academic papers (DBCV PCA)
             }
         else:
@@ -375,23 +376,24 @@ def _compute_noise_ratio_score(
         print(f"Warning: Noise ratio score computation failed: {e}")
         return 0.0
 
-def _compute_dbcv_umap_score(
+def _compute_silhouette_umap_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using UMAP embedding for cluster shape comparison.
+    """Compute silhouette score using UMAP embedding for cluster shape comparison.
     
-    This function uses the UMAP embedding from the BERTopic model to compute DBCV score,
+    This function uses the UMAP embedding from the BERTopic model to compute silhouette score,
     which is suitable for comparing general cluster shapes in the reduced dimensional space.
     
-    Uses euclidean distance metric which is optimal for low-dimensional UMAP embeddings (5-20 dimensions).
+    Silhouette score is more sensitive for 5-20 dimensional UMAP embeddings compared to DBCV.
+    Uses euclidean distance metric which is optimal for low-dimensional UMAP embeddings.
     
     Args:
         model: Trained BERTopic model with UMAP and HDBSCAN
         original_embeddings: Original embeddings used for clustering
         
     Returns:
-        DBCV score normalized to [0, 1] range where higher values indicate better clustering
+        Silhouette score normalized to [0, 1] range where higher values indicate better clustering
     """
     try:
         labels = model.hdbscan_model.labels_
@@ -413,31 +415,27 @@ def _compute_dbcv_umap_score(
         # Check if we have multiple clusters
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
-            return 0.0  # Need at least 2 clusters for DBCV
+            return 0.0  # Need at least 2 clusters for silhouette score
         
-        # Ensure UMAP embeddings are float64 for HDBSCAN compatibility
-        if valid_umap_embedding.dtype != np.float64:
-            valid_umap_embedding = valid_umap_embedding.astype(np.float64)
-        
-        # Compute DBCV using euclidean metric on UMAP embeddings
+        # Compute silhouette score using euclidean metric on UMAP embeddings
         # Euclidean distance is optimal for low-dimensional embeddings (5-20 dimensions)
-        dbcv_score = validity_index(
+        silhouette_avg = silhouette_score(
             valid_umap_embedding, 
             valid_labels, 
             metric='euclidean'
         )
         
         # Convert from [-1, 1] to [0, 1] range (linear transformation)
-        # dbcv = -1 → score = 0, dbcv = 1 → score = 1
-        dbcv_score_normalized = (dbcv_score + 1) / 2
+        # silhouette = -1 → score = 0, silhouette = 1 → score = 1
+        silhouette_score_normalized = (silhouette_avg + 1) / 2
         
-        return dbcv_score_normalized
+        return silhouette_score_normalized
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: DBCV UMAP score computation failed: {e}")
+        print(f"Warning: Silhouette UMAP score computation failed: {e}")
         return 0.0  # Return neutral score on error 
 
 
@@ -544,14 +542,14 @@ def compute_cluster_quality_score(
         
         # Compute individual metrics only if their weights are non-zero
         noise_ratio_score = 0.0
-        dbcv_umap_score = 0.0
+        silhouette_umap_score = 0.0
         dbcv_pca_score = 0.0
         
         if weights['coverage'] > 0.00:
             noise_ratio_score = _compute_noise_ratio_score(model)
         
         if weights['cluster_shape'] > 0.00:
-            dbcv_umap_score = _compute_dbcv_umap_score(model, original_embeddings)
+            silhouette_umap_score = _compute_silhouette_umap_score(model, original_embeddings)
         
         if weights['clustering_quality'] > 0.00:
             dbcv_pca_score = _compute_dbcv_pca_score(model, original_embeddings)
@@ -559,7 +557,7 @@ def compute_cluster_quality_score(
         # Compute final score
         final_score = (
             weights['coverage'] * noise_ratio_score +
-            weights['cluster_shape'] * dbcv_umap_score +
+            weights['cluster_shape'] * silhouette_umap_score +
             weights['clustering_quality'] * dbcv_pca_score
         )
         
@@ -578,11 +576,11 @@ def compute_cluster_quality_score(
             weight_parts.append("Noise Ratio: 0.0%")
             
         if weights['cluster_shape'] > 0:
-            score_parts.append(f"DBCV UMAP: {dbcv_umap_score:.4f}")
-            weight_parts.append(f"DBCV UMAP: {weights['cluster_shape']:.1%}")
+            score_parts.append(f"Silhouette UMAP: {silhouette_umap_score:.4f}")
+            weight_parts.append(f"Silhouette UMAP: {weights['cluster_shape']:.1%}")
         else:
-            score_parts.append("DBCV UMAP: N/A")
-            weight_parts.append("DBCV UMAP: 0.0%")
+            score_parts.append("Silhouette UMAP: N/A")
+            weight_parts.append("Silhouette UMAP: 0.0%")
             
         if weights['clustering_quality'] > 0:
             score_parts.append(f"DBCV PCA: {dbcv_pca_score:.4f}")
