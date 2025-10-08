@@ -9,7 +9,6 @@ import warnings
 
 import optuna
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 import optuna.exceptions
 from optuna.samplers import TPESampler
@@ -112,7 +111,7 @@ class OptimizationConfig:
         """Get min_df range based on dataset size (conservative for academic abstracts)."""
         # More conservative ranges for academic abstracts
         min_val = 2
-        max_val = 50
+        max_val = min(50, dataset_size // 1000)
         return (min_val, max_val)
     
     @staticmethod
@@ -448,17 +447,19 @@ def _compute_silhouette_umap_score(
 
 
 
-def _compute_dbcv_pca_score(
+def _compute_dbcv_basis_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using PCA embedding for detailed cluster shape comparison.
+    """Compute DBCV score using cluster mean vectors as basis vectors.
     
-    This function applies PCA to the original high-dimensional embeddings to compute DBCV score,
-    which is suitable for detailed cluster shape analysis while maintaining high-dimensional information.
-    Uses 95% variance retention for optimal balance between efficiency and information preservation.
+    This function uses cluster mean vectors as basis vectors to create a cluster-specific
+    coordinate system, then evaluates DBCV in this new space. This approach is particularly
+    effective for academic papers where clusters represent distinct topics within the same
+    research domain.
     
-    Uses cosine distance metric which is optimal for high-dimensional embeddings after PCA.
+    The method projects each data point onto the cluster mean vectors (normalized as unit vectors)
+    to create a new representation where each dimension represents similarity to a specific cluster.
     
     Args:
         model: Trained BERTopic model with HDBSCAN clustering
@@ -483,19 +484,31 @@ def _compute_dbcv_pca_score(
         if len(unique_labels) < 2:
             return 0.0  # Need at least 2 clusters for DBCV
         
-        # Apply PCA for dimensionality reduction (better information retention)
-        # Use 95% variance retention for optimal balance between efficiency and information preservation
-        pca = PCA(n_components=0.95, random_state=42)
-        embeddings_pca = pca.fit_transform(valid_embeddings)
+        # Calculate mean vector for each cluster
+        cluster_means = []
+        for label in unique_labels:
+            cluster_mask = valid_labels == label
+            cluster_embeddings = valid_embeddings[cluster_mask]
+            cluster_mean = np.mean(cluster_embeddings, axis=0)
+            cluster_means.append(cluster_mean)
         
-        # Ensure PCA embeddings are float64 for HDBSCAN compatibility
-        if embeddings_pca.dtype != np.float64:
-            embeddings_pca = embeddings_pca.astype(np.float64)
+        cluster_means = np.array(cluster_means)  # Shape: (n_clusters, embedding_dim)
         
-        # Compute DBCV using cosine metric on PCA embeddings
-        # Cosine distance is optimal for high-dimensional embeddings after PCA
+        # Normalize cluster means to unit vectors (basis vectors)
+        normalized_means = cluster_means / np.linalg.norm(cluster_means, axis=1, keepdims=True)
+        
+        # Project each data point onto the cluster basis vectors
+        # Each dimension represents similarity to a specific cluster
+        projected_embeddings = np.dot(valid_embeddings, normalized_means.T)
+        
+        # Ensure projected embeddings are float64 for HDBSCAN compatibility
+        if projected_embeddings.dtype != np.float64:
+            projected_embeddings = projected_embeddings.astype(np.float64)
+        
+        # Compute DBCV using cosine metric on projected embeddings
+        # Cosine distance is optimal for this cluster-specific coordinate system
         dbcv_score = validity_index(
-            embeddings_pca, 
+            projected_embeddings, 
             valid_labels, 
             metric='cosine'
         )
@@ -510,7 +523,7 @@ def _compute_dbcv_pca_score(
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: DBCV PCA score computation failed: {e}")
+        print(f"Warning: DBCV basis score computation failed: {e}")
         return 0.0  # Return neutral score on error
 
 
@@ -551,7 +564,7 @@ def compute_cluster_quality_score(
         # Compute individual metrics only if their weights are non-zero
         noise_ratio_score = 0.0
         silhouette_umap_score = 0.0
-        dbcv_pca_score = 0.0
+        dbcv_basis_score = 0.0
         
         if weights['coverage'] > 0.00:
             noise_ratio_score = _compute_noise_ratio_score(model)
@@ -560,13 +573,11 @@ def compute_cluster_quality_score(
             silhouette_umap_score = _compute_silhouette_umap_score(model, original_embeddings)
         
         if weights['clustering_quality'] > 0.00:
-            dbcv_pca_score = _compute_dbcv_pca_score(model, original_embeddings)
-        
-        # Compute final score
+            dbcv_basis_score = _compute_dbcv_basis_score(model, original_embeddings)
         final_score = (
             weights['coverage'] * noise_ratio_score +
             weights['cluster_shape'] * silhouette_umap_score +
-            weights['clustering_quality'] * dbcv_pca_score
+            weights['clustering_quality'] * dbcv_basis_score
         )
         
         # Output results
@@ -591,11 +602,11 @@ def compute_cluster_quality_score(
             weight_parts.append("Silhouette UMAP: 0.0%")
             
         if weights['clustering_quality'] > 0:
-            score_parts.append(f"DBCV PCA: {dbcv_pca_score:.4f}")
-            weight_parts.append(f"DBCV PCA: {weights['clustering_quality']:.1%}")
+            score_parts.append(f"DBCV Basis: {dbcv_basis_score:.4f}")
+            weight_parts.append(f"DBCV: {weights['clustering_quality']:.1%}")
         else:
-            score_parts.append("DBCV PCA: N/A")
-            weight_parts.append("DBCV PCA: 0.0%")
+            score_parts.append("DBCV Basis: N/A")
+            weight_parts.append("DBCV: 0.0%")
         
         print(f"Scores - {', '.join(score_parts)}")
         print(f"Weights - {', '.join(weight_parts)}")
@@ -876,6 +887,10 @@ def process_one_category(category: str):
 
 if __name__ == "__main__":
     # TODO: use logging
+    import torch
+    import gc
+    gc.collect()
+    torch.cuda.empty_cache()
     
     print("=" * 80)
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
