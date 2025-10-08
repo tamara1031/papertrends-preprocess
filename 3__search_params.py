@@ -33,107 +33,83 @@ warnings.filterwarnings('ignore', message='invalid value encountered')
 # ============================================================================
 
 class OptimizationConfig:
-    """Centralized configuration for clustering optimization with data-size adaptive ranges."""
+    """Configuration for clustering optimization."""
     
-    # Optimization sessions - Adaptive based on dataset size
+    # Optimization settings
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get default number of trials based on dataset size."""
+        """Get number of trials based on dataset size."""
         if dataset_size <= 5000:
-            return 50   # Small datasets: fewer trials needed
+            return 50
         elif dataset_size <= 20000:
-            return 100  # Medium datasets: standard trials
+            return 100
         elif dataset_size <= 50000:
-            return 150  # Large datasets: more trials for better exploration
+            return 150
         else:
-            return 200  # Very large datasets: maximum trials
+            return 200
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
-        """Get default timeout based on dataset size (in minutes)."""
+        """Get timeout in minutes based on dataset size."""
         if dataset_size <= 10000:
-            return None  # Small datasets: no timeout
+            return None
         elif dataset_size <= 50000:
-            return 120   # Medium datasets: 2 hours
+            return 120
         else:
-            return 240   # Large datasets: 4 hours
+            return 240
     
-    # Distance metrics (validated for SPECTER2 -> UMAP -> HDBSCAN pipeline)
+    # Distance metrics
     UMAP_METRICS = ["cosine"]
-    # HDBSCAN metrics: cosine requires algorithm='generic', others use algorithm='best'
     HDBSCAN_METRICS = ["euclidean", "manhattan"]
     
-    
-    # Topic representation (data-size independent)
+    # Topic representation
     TOP_N_WORDS_RANGE = (10, 20)
     NGRAM_RANGES = [[1, 3]]
-
-    MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)  # Expanded range
+    MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)
     
-    # Score weighting configuration (adaptive by dataset size)
+    # Score weights
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
-        """Get adaptive weights based on dataset size for academic papers.
-        
-        Weighting strategy:
-        - Clustering Quality (DBCV Basis): Detailed cluster shape analysis using basis vectors
-        - Cluster Shape (Silhouette UMAP): General cluster shape comparison
-        """
-        if dataset_size <= 10000:
-            # Small datasets: balanced weights for both metrics
-            return {
-                'cluster_shape': 0.50,   # Silhouette UMAP for general cluster shape
-                'clustering_quality': 0.50  # DBCV Basis for detailed cluster analysis
-            }
-        elif dataset_size <= 50000:
-            # Medium datasets: balanced weights for both metrics
-            return {
-                'cluster_shape': 0.50,   # Silhouette UMAP for general cluster shape
-                'clustering_quality': 0.50  # DBCV Basis for detailed cluster analysis
-            }
-        else:
-            # Large datasets: balanced weights for both metrics
-            return {
-                'cluster_shape': 0.50,   # Silhouette UMAP for general cluster shape
-                'clustering_quality': 0.50  # DBCV Basis for detailed cluster analysis
-            }  
+        """Get balanced weights for both metrics."""
+        return {
+            'cluster_shape': 0.50,      # Silhouette UMAP
+            'clustering_quality': 0.50  # DBCV Basis
+        }  
     
-    # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
+    # Parameter ranges
     @staticmethod
     def get_min_df_range(dataset_size: int) -> Tuple[int, int]:
-        """Get min_df range based on dataset size (conservative for academic abstracts)."""
-        # More conservative ranges for academic abstracts
+        """Get min_df range based on dataset size."""
         min_val = 2
         max_val = max(2, min(50, dataset_size // 1000))
         return (min_val, max_val)
     
     @staticmethod
     def get_max_df_range(dataset_size: int) -> Tuple[float, float]:
-        """Get max_df range (conservative for academic abstracts)."""
+        """Get max_df range based on dataset size."""
         min_val = int(0.15 * dataset_size)  
         max_val = int(0.95 * dataset_size) 
         return (min_val, max_val) 
     
     @staticmethod
     def get_min_cluster_size_range(dataset_size: int) -> Tuple[int, int]:
-        """Get min_cluster_size range based on dataset size (expanded for better exploration)."""
-        # Expanded ranges for better optimization exploration
-        min_val = max(10, dataset_size // 1000)   # 0.1% of dataset, min 10
-        max_val = min(2000, dataset_size // 20)    # 5% of dataset, max 2000
+        """Get min_cluster_size range based on dataset size."""
+        min_val = max(10, dataset_size // 1000)
+        max_val = min(2000, dataset_size // 20)
         return (min_val, max_val)
     
     @staticmethod
     def get_n_neighbors_range(dataset_size: int) -> Tuple[int, int]:
         """Get n_neighbors range based on dataset size."""
-        min_val = max(10, min(30, dataset_size // 200))  # Adaptive, min 10, max 30
-        max_val = min(100, max(50, dataset_size // 100)) # Adaptive, min 50, max 100
+        min_val = max(10, min(30, dataset_size // 200))
+        max_val = min(100, max(50, dataset_size // 100))
         return (min_val, max_val)
     
     @staticmethod
     def get_n_components_range(dataset_size: int) -> Tuple[int, int]:
         """Get n_components range based on dataset size."""
         min_val = 5
-        max_val = min(20, max(10, dataset_size // 10000))  # Adaptive, min 10, max 20
+        max_val = min(20, max(10, dataset_size // 10000))
         return (min_val, max_val)
 
 # ============================================================================
@@ -380,21 +356,7 @@ def _compute_silhouette_umap_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute silhouette score using UMAP embedding for cluster shape comparison.
-    
-    This function uses the UMAP embedding from the BERTopic model to compute silhouette score,
-    which is suitable for comparing general cluster shapes in the reduced dimensional space.
-    
-    Silhouette score is more sensitive for 5-20 dimensional UMAP embeddings compared to DBCV.
-    Uses euclidean distance metric which is optimal for low-dimensional UMAP embeddings.
-    
-    Args:
-        model: Trained BERTopic model with UMAP and HDBSCAN
-        original_embeddings: Original embeddings used for clustering
-        
-    Returns:
-        Silhouette score normalized to [0, 1] range where higher values indicate better clustering
-    """
+    """Compute silhouette score using UMAP embedding."""
     try:
         labels = model.hdbscan_model.labels_
         
@@ -425,12 +387,10 @@ def _compute_silhouette_umap_score(
             metric='euclidean'
         )
         
-        # Convert from [-1, 1] to [0, 1] range (linear transformation)
-        # silhouette = -1 → score = 0, silhouette = 1 → score = 1
+        # Normalize to [0, 1] range
         silhouette_score_normalized = (silhouette_avg + 1) / 2
         
-        # Apply sigmoid activation to enhance sensitivity
-        # Scale the score to use sigmoid's effective range [-4, 4] for nearly complete [0, 1] output
+        # Apply sigmoid activation for enhanced sensitivity
         scaled_score = silhouette_score_normalized * 8 - 4  # Maps [0, 1] to [-4, 4]
         sigmoid_score = 1 / (1 + np.exp(-scaled_score))
         
@@ -449,23 +409,7 @@ def _compute_dbcv_basis_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using cluster mean vectors as basis vectors.
-    
-    This function uses cluster mean vectors as basis vectors to create a cluster-specific
-    coordinate system, then evaluates DBCV in this new space. This approach is particularly
-    effective for academic papers where clusters represent distinct topics within the same
-    research domain.
-    
-    The method projects each data point onto the cluster mean vectors (normalized as unit vectors)
-    to create a new representation where each dimension represents similarity to a specific cluster.
-    
-    Args:
-        model: Trained BERTopic model with HDBSCAN clustering
-        original_embeddings: Original high-dimensional embeddings used for clustering
-        
-    Returns:
-        DBCV score normalized to [0, 1] range where higher values indicate better clustering
-    """
+    """Compute DBCV score using PCA and sigmoid activation."""
     try:
         labels = model.hdbscan_model.labels_
         
@@ -483,30 +427,21 @@ def _compute_dbcv_basis_score(
             return 0.0  # Need at least 2 clusters for DBCV
     
         
-        # Apply PCA to find principal components of the entire dataset
-        # Use 99% variance retention to maintain almost all original information
+        # Apply PCA with 99% variance retention
         pca = PCA(n_components=0.99, random_state=42)
         projected_embeddings = pca.fit_transform(valid_embeddings)
         
-        # Ensure projected embeddings are float64 for HDBSCAN compatibility
+        # Ensure float64 for HDBSCAN compatibility
         if projected_embeddings.dtype != np.float64:
             projected_embeddings = projected_embeddings.astype(np.float64)
         
-        # Compute DBCV using euclidean metric on PCA-transformed embeddings
-        # Euclidean distance is appropriate for PCA-transformed space
-        dbcv_score = validity_index(
-            projected_embeddings, 
-            valid_labels, 
-            metric='cosine'
-        )
+        # Compute DBCV using cosine metric
+        dbcv_score = validity_index(projected_embeddings, valid_labels, metric='cosine')
         
-        # Convert from [-1, 1] to [0, 1] range (linear transformation)
-        # dbcv = -1 → score = 0, dbcv = 1 → score = 1
+        # Normalize to [0, 1] range
         dbcv_score_normalized = (dbcv_score + 1) / 2
         
-        # Apply sigmoid activation to enhance sensitivity around 0.3 threshold
-        # This non-linear transformation can improve DBCV sensitivity in the critical range
-        # Scale the score to use sigmoid's effective range [-4, 4] for nearly complete [0, 1] output
+        # Apply sigmoid activation for enhanced sensitivity
         scaled_score = dbcv_score_normalized * 8 - 4  # Maps [0, 1] to [-4, 4]
         sigmoid_score = 1 / (1 + np.exp(-scaled_score))
         
