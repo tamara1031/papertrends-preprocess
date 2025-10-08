@@ -448,24 +448,33 @@ def _compute_silhouette_umap_score(
 
 
 
-def _compute_dbcv_pca_score(
+def _compute_dbcv_pca_ensemble_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using PCA embedding for detailed cluster shape comparison.
+    """Compute ensemble DBCV score using multiple PCA configurations with information loss tracking.
     
-    This function applies PCA to the original high-dimensional embeddings to compute DBCV score,
-    which is suitable for detailed cluster shape analysis while maintaining high-dimensional information.
-    Uses 95% variance retention for optimal balance between efficiency and information preservation.
+    This function applies PCA with different variance retention levels and computes DBCV scores,
+    then combines them using ensemble methods while tracking information loss.
     
-    Uses cosine distance metric which is optimal for high-dimensional embeddings after PCA.
+    PCA configurations tested:
+    - 85% variance retention (aggressive compression)
+    - 90% variance retention (moderate compression)  
+    - 95% variance retention (conservative compression)
+    - 99% variance retention (minimal compression)
+    - Fixed component counts (10, 20, 30 components)
+    
+    Information loss tracking:
+    - Variance explained ratio
+    - Reconstruction error estimation
+    - Dimensionality reduction impact
     
     Args:
         model: Trained BERTopic model with HDBSCAN clustering
         original_embeddings: Original high-dimensional embeddings used for clustering
         
     Returns:
-        DBCV score normalized to [0, 1] range where higher values indicate better clustering
+        Ensemble DBCV score normalized to [0, 1] range with information loss consideration
     """
     try:
         labels = model.hdbscan_model.labels_
@@ -483,35 +492,164 @@ def _compute_dbcv_pca_score(
         if len(unique_labels) < 2:
             return 0.0  # Need at least 2 clusters for DBCV
         
-        # Apply PCA for dimensionality reduction (better information retention)
-        # Use 95% variance retention for optimal balance between efficiency and information preservation
-        pca = PCA(n_components=0.95, random_state=42)
-        embeddings_pca = pca.fit_transform(valid_embeddings)
+        dbcv_scores = []
+        information_losses = []
+        variance_ratios = []
         
-        # Ensure PCA embeddings are float64 for HDBSCAN compatibility
-        if embeddings_pca.dtype != np.float64:
-            embeddings_pca = embeddings_pca.astype(np.float64)
+        # Strategy 1: Variable variance retention PCA
+        variance_retention_levels = [0.85, 0.90, 0.95, 0.99]
         
-        # Compute DBCV using cosine metric on PCA embeddings
-        # Cosine distance is optimal for high-dimensional embeddings after PCA
-        dbcv_score = validity_index(
-            embeddings_pca, 
-            valid_labels, 
-            metric='cosine'
-        )
+        for variance_retention in variance_retention_levels:
+            try:
+                pca = PCA(n_components=variance_retention, random_state=42)
+                embeddings_pca = pca.fit_transform(valid_embeddings)
+                
+                # Track information loss
+                variance_ratio = pca.explained_variance_ratio_.sum()
+                n_components = pca.n_components_
+                original_dim = valid_embeddings.shape[1]
+                compression_ratio = n_components / original_dim
+                
+                # Estimate reconstruction error (simplified)
+                reconstruction_error = 1.0 - variance_ratio
+                information_loss = reconstruction_error * (1.0 - compression_ratio)
+                
+                variance_ratios.append(variance_ratio)
+                information_losses.append(information_loss)
+                
+                if embeddings_pca.dtype != np.float64:
+                    embeddings_pca = embeddings_pca.astype(np.float64)
+                
+                # Compute DBCV with cosine metric
+                try:
+                    dbcv_score = validity_index(
+                        embeddings_pca, 
+                        valid_labels, 
+                        metric='cosine'
+                    )
+                    dbcv_scores.append(dbcv_score)
+                    print(f"PCA {variance_retention:.0%}: DBCV={dbcv_score:.4f}, "
+                          f"VarRatio={variance_ratio:.4f}, InfoLoss={information_loss:.4f}, "
+                          f"Dim={n_components}/{original_dim}")
+                except Exception as e:
+                    print(f"PCA {variance_retention:.0%}: DBCV computation failed: {e}")
+                    continue
+                    
+            except Exception as e:
+                print(f"PCA {variance_retention:.0%}: PCA computation failed: {e}")
+                continue
         
-        # Convert from [-1, 1] to [0, 1] range (linear transformation)
-        # dbcv = -1 → score = 0, dbcv = 1 → score = 1
-        dbcv_score_normalized = (dbcv_score + 1) / 2
+        # Strategy 2: Fixed component count PCA
+        fixed_components = [10, 20, 30]
+        max_components = min(50, valid_embeddings.shape[1] // 2)  # Don't exceed half of original dims
         
-        return dbcv_score_normalized
+        for n_components in fixed_components:
+            if n_components >= max_components:
+                continue
+                
+            try:
+                pca = PCA(n_components=n_components, random_state=42)
+                embeddings_pca = pca.fit_transform(valid_embeddings)
+                
+                # Track information loss
+                variance_ratio = pca.explained_variance_ratio_.sum()
+                original_dim = valid_embeddings.shape[1]
+                compression_ratio = n_components / original_dim
+                reconstruction_error = 1.0 - variance_ratio
+                information_loss = reconstruction_error * (1.0 - compression_ratio)
+                
+                variance_ratios.append(variance_ratio)
+                information_losses.append(information_loss)
+                
+                if embeddings_pca.dtype != np.float64:
+                    embeddings_pca = embeddings_pca.astype(np.float64)
+                
+                # Compute DBCV with euclidean metric (better for fixed low dimensions)
+                try:
+                    dbcv_score = validity_index(
+                        embeddings_pca, 
+                        valid_labels, 
+                        metric='euclidean'
+                    )
+                    dbcv_scores.append(dbcv_score)
+                    print(f"PCA {n_components}D: DBCV={dbcv_score:.4f}, "
+                          f"VarRatio={variance_ratio:.4f}, InfoLoss={information_loss:.4f}, "
+                          f"CompRatio={compression_ratio:.3f}")
+                except Exception as e:
+                    print(f"PCA {n_components}D: DBCV computation failed: {e}")
+                    continue
+                    
+            except Exception as e:
+                print(f"PCA {n_components}D: PCA computation failed: {e}")
+                continue
+        
+        # Strategy 3: Original embeddings (no PCA) as baseline
+        try:
+            if valid_embeddings.dtype != np.float64:
+                valid_embeddings = valid_embeddings.astype(np.float64)
+            
+            dbcv_score = validity_index(
+                valid_embeddings, 
+                valid_labels, 
+                metric='cosine'
+            )
+            dbcv_scores.append(dbcv_score)
+            variance_ratios.append(1.0)  # No information loss
+            information_losses.append(0.0)  # No information loss
+            print(f"Original: DBCV={dbcv_score:.4f}, VarRatio=1.0000, InfoLoss=0.0000, Dim={valid_embeddings.shape[1]}")
+        except Exception as e:
+            print(f"Original: DBCV computation failed: {e}")
+        
+        # Ensemble scoring with information loss weighting
+        if len(dbcv_scores) == 0:
+            return 0.0
+        
+        # Convert DBCV scores to [0, 1] range
+        normalized_scores = [(score + 1) / 2 for score in dbcv_scores]
+        
+        # Weight scores by information preservation (lower information loss = higher weight)
+        weights = []
+        for info_loss in information_losses:
+            # Weight inversely proportional to information loss
+            # Higher information preservation gets higher weight
+            weight = 1.0 / (1.0 + info_loss)
+            weights.append(weight)
+        
+        # Normalize weights
+        total_weight = sum(weights)
+        if total_weight > 0:
+            weights = [w / total_weight for w in weights]
+        else:
+            weights = [1.0 / len(weights)] * len(weights)
+        
+        # Compute weighted ensemble score
+        ensemble_score = sum(score * weight for score, weight in zip(normalized_scores, weights))
+        
+        # Calculate ensemble statistics
+        avg_information_loss = np.mean(information_losses)
+        avg_variance_ratio = np.mean(variance_ratios)
+        
+        print(f"Ensemble DBCV: {ensemble_score:.4f} (weighted)")
+        print(f"Avg Information Loss: {avg_information_loss:.4f}")
+        print(f"Avg Variance Ratio: {avg_variance_ratio:.4f}")
+        print(f"Number of configurations: {len(dbcv_scores)}")
+        
+        return ensemble_score
         
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: DBCV PCA score computation failed: {e}")
-        return 0.0  # Return neutral score on error
+        print(f"Warning: Ensemble DBCV PCA score computation failed: {e}")
+        return 0.0
+
+
+def _compute_dbcv_pca_score(
+    model: BERTopic,
+    original_embeddings: np.ndarray
+) -> float:
+    """Legacy DBCV computation - now uses ensemble approach."""
+    return _compute_dbcv_pca_ensemble_score(model, original_embeddings)
 
 
 def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
