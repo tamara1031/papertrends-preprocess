@@ -76,30 +76,30 @@ class OptimizationConfig:
         """Get adaptive weights based on dataset size for academic papers.
         
         Weighting strategy:
-        - Clustering Quality (DBCV PCA): Most important for detailed cluster shape analysis
         - Coverage (Noise Ratio): Critical for comprehensive topic coverage
+        - Clustering Quality (DBCV PCA): Most important for detailed cluster shape analysis
         - Cluster Shape (Silhouette UMAP): Important for general cluster shape comparison
         """
         if dataset_size <= 10000:
             # Small datasets: focus on clustering quality with minimal shape constraint
             return {
                 'coverage': 0.20,        # Coverage important for small datasets
-                'cluster_shape': 0.05,   # Minimal cluster shape constraint (Silhouette UMAP)
-                'clustering_quality': 0.75  # Quality is most important (DBCV PCA)
+                'cluster_shape': 0.40,   # Minimal cluster shape constraint (Silhouette UMAP)
+                'clustering_quality': 0.40  # Quality is most important (DBCV PCA)
             }
         elif dataset_size <= 50000:
             # Medium datasets: prioritize clustering quality
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'cluster_shape': 0.05,   # Minimal cluster shape constraint (Silhouette UMAP)
-                'clustering_quality': 0.85  # High quality focus for academic papers (DBCV PCA)
+                'cluster_shape': 0.45,   # Minimal cluster shape constraint (Silhouette UMAP)
+                'clustering_quality': 0.45  # High quality focus for academic papers (DBCV PCA)
             }
         else:
             # Large datasets: maximize clustering quality
             return {
-                'coverage': 0.05,        # Minimal coverage requirement
-                'cluster_shape': 0.00,   # No cluster shape constraint for large datasets
-                'clustering_quality': 0.95  # Maximum quality focus for large academic datasets (DBCV PCA)
+                'coverage': 0.00,        # Minimal coverage requirement
+                'cluster_shape': 0.50,   # No cluster shape constraint for large datasets
+                'clustering_quality': 0.50  # Maximum quality focus for large academic datasets (DBCV PCA)
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -365,7 +365,11 @@ def _compute_noise_ratio_score(
         noise_ratio = noise_docs / total_docs
         
         # Convert to score (lower noise ratio = higher score)
-        coverage_score = 1.0 - noise_ratio
+        # Apply log transformation for smoother scaling of coverage score
+        # coverage_score = 1.0 - noise_ratio gives [0, 1] range
+        # Apply log transformation: log(1 + x) / log(2) for smoother scaling
+        raw_coverage_score = 1.0 - noise_ratio
+        coverage_score = np.log(1 + raw_coverage_score) / np.log(2)
         
         return coverage_score
     
