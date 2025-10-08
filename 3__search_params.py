@@ -74,30 +74,30 @@ class OptimizationConfig:
         """Get adaptive weights based on dataset size for academic papers.
         
         Weighting strategy:
-        - Clustering Quality (DBCV): Most important for academic papers
+        - Clustering Quality (DBCV PCA): Most important for detailed cluster shape analysis
         - Coverage (Noise Ratio): Critical for comprehensive topic coverage
-        - Diversity metrics (Entropy): Important for balanced topics
+        - Cluster Shape (DBCV UMAP): Important for general cluster shape comparison
         """
         if dataset_size <= 10000:
-            # Small datasets: focus on clustering quality with minimal diversity constraint
+            # Small datasets: focus on clustering quality with minimal shape constraint
             return {
                 'coverage': 0.20,        # Coverage important for small datasets
-                'entropy': 0.05,         # Minimal diversity constraint
-                'clustering_quality': 0.75  # Quality is most important
+                'entropy': 0.05,         # Minimal cluster shape constraint (DBCV UMAP)
+                'clustering_quality': 0.75  # Quality is most important (DBCV PCA)
             }
         elif dataset_size <= 50000:
             # Medium datasets: prioritize clustering quality
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'entropy': 0.05,         # Minimal diversity constraint
-                'clustering_quality': 0.85  # High quality focus for academic papers
+                'entropy': 0.05,         # Minimal cluster shape constraint (DBCV UMAP)
+                'clustering_quality': 0.85  # High quality focus for academic papers (DBCV PCA)
             }
         else:
             # Large datasets: maximize clustering quality
             return {
                 'coverage': 0.05,        # Minimal coverage requirement
-                'entropy': 0.00,         # No diversity constraint for large datasets
-                'clustering_quality': 0.95  # Maximum quality focus for large academic datasets
+                'entropy': 0.00,         # No cluster shape constraint for large datasets
+                'clustering_quality': 0.95  # Maximum quality focus for large academic datasets (DBCV PCA)
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -374,74 +374,83 @@ def _compute_noise_ratio_score(
         print(f"Warning: Noise ratio score computation failed: {e}")
         return 0.0
 
-def _compute_shannon_entropy_score(
-    model: BERTopic
-) -> float:
-    """Compute Shannon entropy score for cluster diversity evaluation.
-    
-    Shannon entropy measures the diversity of cluster sizes. Higher entropy indicates
-    more balanced cluster distribution, lower entropy indicates more concentrated clusters.
-    
-    Formula: H = -Σ(pi * log(pi)) where pi = cluster_size_i / total_clustered_docs
-    Range: [0, log(n)] where n = number of non-zero clusters
-    Score: Normalized entropy (0-1 scale)
-    
-    Args:
-        model: Trained BERTopic model
-        
-    Returns:
-        Shannon entropy score in range [0, 1] where 1 indicates maximum diversity
-    """
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
-        cluster_sizes = valid_topics['Count'].values
-        
-        if len(cluster_sizes) == 0:
-            return 0.0  # No valid clusters
-        
-        # Calculate proportions (only valid clusters, excluding noise)
-        total_clustered_docs = np.sum(cluster_sizes)
-        proportions = cluster_sizes / total_clustered_docs
-        
-        # Filter out zero proportions to avoid log(0)
-        non_zero_proportions = proportions[proportions > 0]
-        
-        if len(non_zero_proportions) == 0:
-            return 0.0  # No valid proportions
-        
-        # Calculate Shannon entropy: H = -Σ(pi * log(pi))
-        # Only for non-zero proportions
-        # Use natural logarithm (base e) for Shannon entropy
-        entropy = -np.sum(non_zero_proportions * np.log(non_zero_proportions))
-        
-        # Normalize by maximum possible entropy (log(number_of_non_zero_clusters))
-        n_non_zero = len(non_zero_proportions)
-        max_entropy = np.log(n_non_zero)
-        normalized_entropy = entropy / max_entropy if max_entropy > 0 else 0.0
-        
-        return normalized_entropy
-    
-    except KeyboardInterrupt:
-        raise    
-    except Exception as e:
-        print(f"Warning: Shannon entropy score computation failed: {e}")
-        return 0.0 
-
-
-
-def _compute_dbcv_score(
+def _compute_dbcv_umap_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV (Density-Based Cluster Validation) score using HDBSCAN's implementation.
+    """Compute DBCV score using UMAP embedding for cluster shape comparison.
     
-    Uses HDBSCAN's built-in validity_index function which implements the DBCV metric.
-    DBCV is specifically designed for density-based clustering algorithms like HDBSCAN.
+    This function uses the UMAP embedding from the BERTopic model to compute DBCV score,
+    which is suitable for comparing general cluster shapes in the reduced dimensional space.
+    
+    Args:
+        model: Trained BERTopic model with UMAP and HDBSCAN
+        original_embeddings: Original embeddings used for clustering
+        
+    Returns:
+        DBCV score normalized to [0, 1] range where higher values indicate better clustering
+    """
+    try:
+        labels = model.hdbscan_model.labels_
+        
+        # Filter out noise points (-1 labels)
+        valid_mask = labels != -1
+        if np.sum(valid_mask) < 2:
+            return 0.0  # Not enough valid points
+            
+        valid_labels = labels[valid_mask]
+        
+        # Get UMAP embedding from the model
+        umap_embedding = model.umap_model.embedding_
+        if umap_embedding is None:
+            return 0.0  # UMAP embedding not available
+            
+        valid_umap_embedding = umap_embedding[valid_mask]
+        
+        # Check if we have multiple clusters
+        unique_labels = np.unique(valid_labels)
+        if len(unique_labels) < 2:
+            return 0.0  # Need at least 2 clusters for DBCV
+        
+        # Ensure UMAP embeddings are float64 for HDBSCAN compatibility
+        if valid_umap_embedding.dtype != np.float64:
+            valid_umap_embedding = valid_umap_embedding.astype(np.float64)
+        
+        # Compute DBCV using cosine metric on UMAP embeddings
+        dbcv_score = validity_index(
+            valid_umap_embedding, 
+            valid_labels, 
+            metric='cosine'
+        )
+        
+        # Convert from [-1, 1] to [0, 1] range (linear transformation)
+        # dbcv = -1 → score = 0, dbcv = 1 → score = 1
+        dbcv_score_normalized = (dbcv_score + 1) / 2
+        
+        return dbcv_score_normalized
+        
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to be caught by outer try-except
+        raise    
+    except Exception as e:
+        print(f"Warning: DBCV UMAP score computation failed: {e}")
+        return 0.0  # Return neutral score on error 
+
+
+
+def _compute_dbcv_pca_score(
+    model: BERTopic,
+    original_embeddings: np.ndarray
+) -> float:
+    """Compute DBCV score using PCA embedding for detailed cluster shape comparison.
+    
+    This function applies PCA to the original high-dimensional embeddings to compute DBCV score,
+    which is suitable for detailed cluster shape analysis while maintaining high-dimensional information.
+    Uses 95% variance retention for optimal balance between efficiency and information preservation.
     
     Args:
         model: Trained BERTopic model with HDBSCAN clustering
-        original_embeddings: Original embeddings used for clustering
+        original_embeddings: Original high-dimensional embeddings used for clustering
         
     Returns:
         DBCV score normalized to [0, 1] range where higher values indicate better clustering
@@ -488,7 +497,7 @@ def _compute_dbcv_score(
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: DBCV score computation failed: {e}")
+        print(f"Warning: DBCV PCA score computation failed: {e}")
         return 0.0  # Return neutral score on error
 
 
@@ -518,7 +527,7 @@ def compute_cluster_quality_score(
     original_embeddings: np.ndarray,
     documents: List[str] = None
 ) -> float:
-    """Compute combined clustering quality score with cluster balance."""
+    """Compute combined clustering quality score with DBCV-based cluster shape analysis."""
     try:
         dataset_size = len(original_embeddings)
         basic_info = _get_basic_model_info(model, dataset_size)
@@ -528,23 +537,23 @@ def compute_cluster_quality_score(
         
         # Compute individual metrics only if their weights are non-zero
         noise_ratio_score = 0.0
-        entropy_score = 0.0
-        clustering_quality_score = 0.0
+        dbcv_umap_score = 0.0
+        dbcv_pca_score = 0.0
         
         if weights['coverage'] > 0.00:
             noise_ratio_score = _compute_noise_ratio_score(model)
         
         if weights['entropy'] > 0.00:
-            entropy_score = _compute_shannon_entropy_score(model)
+            dbcv_umap_score = _compute_dbcv_umap_score(model, original_embeddings)
         
         if weights['clustering_quality'] > 0.00:
-            clustering_quality_score = _compute_dbcv_score(model, original_embeddings)
+            dbcv_pca_score = _compute_dbcv_pca_score(model, original_embeddings)
         
         # Compute final score
         final_score = (
             weights['coverage'] * noise_ratio_score +
-            weights['entropy'] * entropy_score +
-            weights['clustering_quality'] * clustering_quality_score
+            weights['entropy'] * dbcv_umap_score +
+            weights['clustering_quality'] * dbcv_pca_score
         )
         
         # Output results
@@ -562,18 +571,18 @@ def compute_cluster_quality_score(
             weight_parts.append("Noise Ratio: 0.0%")
             
         if weights['entropy'] > 0:
-            score_parts.append(f"Entropy: {entropy_score:.4f}")
-            weight_parts.append(f"Entropy: {weights['entropy']:.1%}")
+            score_parts.append(f"DBCV UMAP: {dbcv_umap_score:.4f}")
+            weight_parts.append(f"DBCV UMAP: {weights['entropy']:.1%}")
         else:
-            score_parts.append("Entropy: N/A")
-            weight_parts.append("Entropy: 0.0%")
+            score_parts.append("DBCV UMAP: N/A")
+            weight_parts.append("DBCV UMAP: 0.0%")
             
         if weights['clustering_quality'] > 0:
-            score_parts.append(f"Clustering Quality: {clustering_quality_score:.4f}")
-            weight_parts.append(f"Clustering Quality: {weights['clustering_quality']:.1%}")
+            score_parts.append(f"DBCV PCA: {dbcv_pca_score:.4f}")
+            weight_parts.append(f"DBCV PCA: {weights['clustering_quality']:.1%}")
         else:
-            score_parts.append("Clustering Quality: N/A")
-            weight_parts.append("Clustering Quality: 0.0%")
+            score_parts.append("DBCV PCA: N/A")
+            weight_parts.append("DBCV PCA: 0.0%")
         
         print(f"Scores - {', '.join(score_parts)}")
         print(f"Weights - {', '.join(weight_parts)}")
