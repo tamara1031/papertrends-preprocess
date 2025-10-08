@@ -76,34 +76,26 @@ class OptimizationConfig:
         """Get adaptive weights based on dataset size for academic papers.
         
         Weighting strategy:
-        - Coverage (Noise Ratio): Critical for comprehensive topic coverage
-        - Clustering Quality (DBCV PCA): Most important for detailed cluster shape analysis
-        - Cluster Shape (Silhouette UMAP): Important for general cluster shape comparison
+        - Clustering Quality (DBCV Basis): Detailed cluster shape analysis using basis vectors
+        - Cluster Shape (Silhouette UMAP): General cluster shape comparison
         """
         if dataset_size <= 10000:
-            # Small datasets: focus on clustering quality with balanced shape constraint
-            # Adjusted weights to compensate for different score ranges:
-            # DBCV PCA typically ~0.4, Silhouette UMAP typically ~0.75
+            # Small datasets: balanced weights for both metrics
             return {
-                'coverage': 0.00,        # Coverage important for small datasets
-                'cluster_shape': 0.50,   # Reduced weight for Silhouette UMAP (higher typical scores)
-                'clustering_quality': 0.50  # Increased weight for DBCV PCA (lower typical scores)
+                'cluster_shape': 0.50,   # Silhouette UMAP for general cluster shape
+                'clustering_quality': 0.50  # DBCV Basis for detailed cluster analysis
             }
         elif dataset_size <= 50000:
-            # Medium datasets: prioritize clustering quality with balanced weights
-            # Adjusted weights to compensate for different score ranges
+            # Medium datasets: balanced weights for both metrics
             return {
-                'coverage': 0.00,        # Good coverage needed
-                'cluster_shape': 0.50,   # Reduced weight for Silhouette UMAP (higher typical scores)
-                'clustering_quality': 0.50  # Increased weight for DBCV PCA (lower typical scores)
+                'cluster_shape': 0.50,   # Silhouette UMAP for general cluster shape
+                'clustering_quality': 0.50  # DBCV Basis for detailed cluster analysis
             }
         else:
-            # Large datasets: maximize clustering quality with balanced weights
-            # Adjusted weights to compensate for different score ranges
+            # Large datasets: balanced weights for both metrics
             return {
-                'coverage': 0.00,        # Minimal coverage requirement
-                'cluster_shape': 0.50,   # Reduced weight for Silhouette UMAP (higher typical scores)
-                'clustering_quality': 0.50  # Increased weight for DBCV PCA (lower typical scores)
+                'cluster_shape': 0.50,   # Silhouette UMAP for general cluster shape
+                'clustering_quality': 0.50  # DBCV Basis for detailed cluster analysis
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
@@ -112,7 +104,7 @@ class OptimizationConfig:
         """Get min_df range based on dataset size (conservative for academic abstracts)."""
         # More conservative ranges for academic abstracts
         min_val = 2
-        max_val = min(50, dataset_size // 1000)
+        max_val = max(2, min(50, dataset_size // 1000))
         return (min_val, max_val)
     
     @staticmethod
@@ -563,20 +555,16 @@ def compute_cluster_quality_score(
         weights = OptimizationConfig.get_adaptive_weights(dataset_size)
         
         # Compute individual metrics only if their weights are non-zero
-        noise_ratio_score = 0.0
         silhouette_umap_score = 0.0
         dbcv_basis_score = 0.0
-        
-        if weights['coverage'] > 0.00:
-            noise_ratio_score = _compute_noise_ratio_score(model)
         
         if weights['cluster_shape'] > 0.00:
             silhouette_umap_score = _compute_silhouette_umap_score(model, original_embeddings)
         
         if weights['clustering_quality'] > 0.00:
             dbcv_basis_score = _compute_dbcv_basis_score(model, original_embeddings)
+        
         final_score = (
-            weights['coverage'] * noise_ratio_score +
             weights['cluster_shape'] * silhouette_umap_score +
             weights['clustering_quality'] * dbcv_basis_score
         )
@@ -587,13 +575,6 @@ def compute_cluster_quality_score(
         # Build score and weight strings dynamically
         score_parts = []
         weight_parts = []
-        
-        if weights['coverage'] > 0:
-            score_parts.append(f"Noise Ratio: {noise_ratio_score:.4f}")
-            weight_parts.append(f"Noise Ratio: {weights['coverage']:.1%}")
-        else:
-            score_parts.append("Noise Ratio: N/A")
-            weight_parts.append("Noise Ratio: 0.0%")
             
         if weights['cluster_shape'] > 0:
             score_parts.append(f"Silhouette UMAP: {silhouette_umap_score:.4f}")
