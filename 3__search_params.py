@@ -81,25 +81,29 @@ class OptimizationConfig:
         - Cluster Shape (Silhouette UMAP): Important for general cluster shape comparison
         """
         if dataset_size <= 10000:
-            # Small datasets: focus on clustering quality with minimal shape constraint
+            # Small datasets: focus on clustering quality with balanced shape constraint
+            # Adjusted weights to compensate for different score ranges:
+            # DBCV PCA typically ~0.4, Silhouette UMAP typically ~0.75
             return {
                 'coverage': 0.20,        # Coverage important for small datasets
-                'cluster_shape': 0.40,   # Minimal cluster shape constraint (Silhouette UMAP)
-                'clustering_quality': 0.40  # Quality is most important (DBCV PCA)
+                'cluster_shape': 0.25,   # Reduced weight for Silhouette UMAP (higher typical scores)
+                'clustering_quality': 0.55  # Increased weight for DBCV PCA (lower typical scores)
             }
         elif dataset_size <= 50000:
-            # Medium datasets: prioritize clustering quality
+            # Medium datasets: prioritize clustering quality with balanced weights
+            # Adjusted weights to compensate for different score ranges
             return {
                 'coverage': 0.10,        # Good coverage needed
-                'cluster_shape': 0.45,   # Minimal cluster shape constraint (Silhouette UMAP)
-                'clustering_quality': 0.45  # High quality focus for academic papers (DBCV PCA)
+                'cluster_shape': 0.30,   # Reduced weight for Silhouette UMAP (higher typical scores)
+                'clustering_quality': 0.60  # Increased weight for DBCV PCA (lower typical scores)
             }
         else:
-            # Large datasets: maximize clustering quality
+            # Large datasets: maximize clustering quality with balanced weights
+            # Adjusted weights to compensate for different score ranges
             return {
                 'coverage': 0.00,        # Minimal coverage requirement
-                'cluster_shape': 0.50,   # No cluster shape constraint for large datasets
-                'clustering_quality': 0.50  # Maximum quality focus for large academic datasets (DBCV PCA)
+                'cluster_shape': 0.35,   # Reduced weight for Silhouette UMAP (higher typical scores)
+                'clustering_quality': 0.65  # Increased weight for DBCV PCA (lower typical scores)
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
