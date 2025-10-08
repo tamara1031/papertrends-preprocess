@@ -85,25 +85,25 @@ class OptimizationConfig:
             # Adjusted weights to compensate for different score ranges:
             # DBCV PCA typically ~0.4, Silhouette UMAP typically ~0.75
             return {
-                'coverage': 0.10,        # Coverage important for small datasets
-                'cluster_shape': 0.45,   # Reduced weight for Silhouette UMAP (higher typical scores)
-                'clustering_quality': 0.45  # Increased weight for DBCV PCA (lower typical scores)
+                'coverage': 0.00,        # Coverage important for small datasets
+                'cluster_shape': 0.50,   # Reduced weight for Silhouette UMAP (higher typical scores)
+                'clustering_quality': 0.50  # Increased weight for DBCV PCA (lower typical scores)
             }
         elif dataset_size <= 50000:
             # Medium datasets: prioritize clustering quality with balanced weights
             # Adjusted weights to compensate for different score ranges
             return {
-                'coverage': 0.05,        # Good coverage needed
-                'cluster_shape': 0.475,   # Reduced weight for Silhouette UMAP (higher typical scores)
-                'clustering_quality': 0.475  # Increased weight for DBCV PCA (lower typical scores)
+                'coverage': 0.00,        # Good coverage needed
+                'cluster_shape': 0.50,   # Reduced weight for Silhouette UMAP (higher typical scores)
+                'clustering_quality': 0.50  # Increased weight for DBCV PCA (lower typical scores)
             }
         else:
             # Large datasets: maximize clustering quality with balanced weights
             # Adjusted weights to compensate for different score ranges
             return {
-                'coverage': 0.01,        # Minimal coverage requirement
-                'cluster_shape': 0.495,   # Reduced weight for Silhouette UMAP (higher typical scores)
-                'clustering_quality': 0.495  # Increased weight for DBCV PCA (lower typical scores)
+                'coverage': 0.00,        # Minimal coverage requirement
+                'cluster_shape': 0.50,   # Reduced weight for Silhouette UMAP (higher typical scores)
+                'clustering_quality': 0.50  # Increased weight for DBCV PCA (lower typical scores)
             }  
     
     # Data-size adaptive parameter ranges (optimized for 3K-200K documents)
