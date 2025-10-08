@@ -8,6 +8,7 @@ import numpy as np
 import warnings
 
 import optuna
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import silhouette_score
 import optuna.exceptions
@@ -483,30 +484,19 @@ def _compute_dbcv_basis_score(
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
             return 0.0  # Need at least 2 clusters for DBCV
+    
         
-        # Calculate mean vector for each cluster
-        cluster_means = []
-        for label in unique_labels:
-            cluster_mask = valid_labels == label
-            cluster_embeddings = valid_embeddings[cluster_mask]
-            cluster_mean = np.mean(cluster_embeddings, axis=0)
-            cluster_means.append(cluster_mean)
-        
-        cluster_means = np.array(cluster_means)  # Shape: (n_clusters, embedding_dim)
-        
-        # Normalize cluster means to unit vectors (basis vectors)
-        normalized_means = cluster_means / np.linalg.norm(cluster_means, axis=1, keepdims=True)
-        
-        # Project each data point onto the cluster basis vectors
-        # Each dimension represents similarity to a specific cluster
-        projected_embeddings = np.dot(valid_embeddings, normalized_means.T)
+        # Apply PCA to find principal components of the entire dataset
+        # Use 99% variance retention to maintain almost all original information
+        pca = PCA(n_components=0.99, random_state=42)
+        projected_embeddings = pca.fit_transform(valid_embeddings)
         
         # Ensure projected embeddings are float64 for HDBSCAN compatibility
         if projected_embeddings.dtype != np.float64:
             projected_embeddings = projected_embeddings.astype(np.float64)
         
-        # Compute DBCV using cosine metric on projected embeddings
-        # Cosine distance is optimal for this cluster-specific coordinate system
+        # Compute DBCV using euclidean metric on PCA-transformed embeddings
+        # Euclidean distance is appropriate for PCA-transformed space
         dbcv_score = validity_index(
             projected_embeddings, 
             valid_labels, 
