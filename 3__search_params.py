@@ -46,6 +46,12 @@ def log_memory_usage(stage: str):
     """Log memory usage at different stages."""
     memory_mb = get_memory_usage()
     print(f"🧠 Memory usage at {stage}: {memory_mb:.1f} MB")
+    
+    # Warning if memory usage is high
+    if memory_mb > 5000:  # 5GB warning threshold
+        print(f"⚠️  WARNING: High memory usage detected!")
+    elif memory_mb > 7000:  # 7GB critical threshold
+        print(f"🚨 CRITICAL: Very high memory usage! Consider cleanup.")
 
 def force_memory_cleanup():
     """Force aggressive memory cleanup."""
@@ -54,8 +60,21 @@ def force_memory_cleanup():
         torch.cuda.empty_cache()
         torch.cuda.synchronize()
     gc.collect()
+    
+    # Additional cleanup for BERTopic models
+    try:
+        import weakref
+        # Force cleanup of any remaining model references
+        for obj in gc.get_objects():
+            if hasattr(obj, '__class__') and 'BERTopic' in str(obj.__class__):
+                if hasattr(obj, 'umap_model') and hasattr(obj.umap_model, 'embedding_'):
+                    obj.umap_model.embedding_ = None
+                if hasattr(obj, 'hdbscan_model') and hasattr(obj.hdbscan_model, 'labels_'):
+                    obj.hdbscan_model.labels_ = None
+    except Exception:
+        pass  # Ignore cleanup errors
 
-def check_memory_threshold(threshold_mb: int = 8000) -> bool:
+def check_memory_threshold(threshold_mb: int = 6000) -> bool:
     """Check if memory usage exceeds threshold."""
     return get_memory_usage() > threshold_mb
 
@@ -311,14 +330,16 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        # low_memory=True
+        low_memory=True,  # Enable low memory mode
+        #n_jobs=1  # Single thread to reduce memory usage
     )
     
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=False  # Disable prediction data to save memory
+        prediction_data=False,  # Disable prediction data to save memory
+        #core_dist_n_jobs=1  # Single thread to reduce memory usage
     )
     
     return BERTopic(
@@ -671,11 +692,15 @@ def objective_function(
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
     # Check memory before starting
-    if check_memory_threshold(8000):  # 8GB threshold
+    if check_memory_threshold(6000):  # Reduced threshold to 6GB
         print(f"⚠️  High memory usage detected: {get_memory_usage():.1f} MB")
         force_memory_cleanup()
     
     dataset_size = len(texts)
+    model = None
+    topics = None
+    params = None
+    score = 0.0
     
     try:
         # Suggest constrained hyperparameters
@@ -704,10 +729,26 @@ def objective_function(
         return 0.0
     finally:
         # Aggressive cleanup of model and variables to prevent memory leaks
-        local_vars = ['model', 'topics', 'params', 'score']
-        for var in local_vars:
-            if var in locals():
-                del locals()[var]
+        try:
+            if model is not None:
+                # Explicitly clear model internals
+                if hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
+                    model.umap_model.embedding_ = None
+                if hasattr(model, 'hdbscan_model') and hasattr(model.hdbscan_model, 'labels_'):
+                    model.hdbscan_model.labels_ = None
+                if hasattr(model, 'vectorizer_model'):
+                    model.vectorizer_model = None
+                if hasattr(model, 'ctfidf_model'):
+                    model.ctfidf_model = None
+                del model
+        except Exception:
+            pass
+            
+        # Clear other variables
+        for var_name in ['topics', 'params', 'score']:
+            if var_name in locals():
+                del locals()[var_name]
+                
         force_memory_cleanup()
         
         # Log memory usage after cleanup
@@ -743,6 +784,13 @@ def optimize_category_clustering(
     del papers
     force_memory_cleanup()
     log_memory_usage("After data loading")
+    
+    # Additional memory check after data loading
+    if check_memory_threshold(5000):  # 5GB threshold after loading
+        print(f"⚠️  Memory usage too high after data loading: {get_memory_usage():.1f} MB")
+        print("🔄 Performing additional cleanup...")
+        force_memory_cleanup()
+        log_memory_usage("After additional cleanup")
     
     print(f"📊 Dataset size: {dataset_size:,} documents")
     print(f"🧠 Using SPECTER2 Proximity adapter (110M parameters)")
@@ -784,7 +832,8 @@ def optimize_category_clustering(
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(ValueError, RuntimeError, MemoryError)  # Catch specific exceptions, not KeyboardInterrupt
+            catch=(ValueError, RuntimeError, MemoryError),  # Catch specific exceptions, not KeyboardInterrupt
+            callbacks=[lambda study, trial: force_memory_cleanup() if trial.number % 5 == 0 else None]  # Cleanup every 5 trials
         )
         
         # Display results
