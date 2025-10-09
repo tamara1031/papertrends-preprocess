@@ -7,6 +7,9 @@ import json
 import numpy as np
 import warnings
 
+import torch
+import gc
+
 import optuna
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
@@ -626,6 +629,9 @@ def objective_function(
     embedding_model: CustomEmbeddingModel
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
+    gc.collect()
+    torch.cuda.empty_cache()
+
     dataset_size = len(texts)
     
     try:
@@ -652,7 +658,17 @@ def objective_function(
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
         trial.set_user_attr("error", str(e))
-        return 0.0  
+        return 0.0
+    finally:
+        # Explicit cleanup of model and variables to prevent memory leaks
+        if 'model' in locals():
+            del model
+        if 'topics' in locals():
+            del topics
+        if 'params' in locals():
+            del params
+        gc.collect()
+        torch.cuda.empty_cache()  
 
 
 # ============================================================================
@@ -733,6 +749,11 @@ def optimize_category_clustering(
         raise
     except Exception as e:
         print(f"❌ Optimization error: {e}")
+    finally:
+        # Memory cleanup after optimization
+        del texts, text_embeddings
+        gc.collect()
+        torch.cuda.empty_cache()
     
     return study
 
@@ -779,33 +800,35 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 
 def process_one_category(category: str):
     """Main execution function for hyperparameter optimization."""
-    # Create output directory
-    params_path = f"./params/{category}"
-    os.makedirs(params_path, exist_ok=True)
-    
-    # Run optimization
-    study_storage_path = f"sqlite:///{params_path}/search_params.db"
-    study = optimize_category_clustering(
-        category=category,
-        storage=study_storage_path
-    )
-    
-    # Save results
-    save_optimization_results(study, params_path)
+    try:
+        # Create output directory
+        params_path = f"./params/{category}"
+        os.makedirs(params_path, exist_ok=True)
+        
+        # Run optimization
+        study_storage_path = f"sqlite:///{params_path}/search_params.db"
+        study = optimize_category_clustering(
+            category=category,
+            storage=study_storage_path
+        )
+        
+        # Save results
+        save_optimization_results(study, params_path)
+        
+    finally:
+        # Additional memory cleanup after each category
+        gc.collect()
+        torch.cuda.empty_cache()
 
 
 if __name__ == "__main__":
     # TODO: use logging
-    import torch
-    import gc
-    gc.collect()
-    torch.cuda.empty_cache()
     
     print("=" * 80)
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
     
-    categories = get_category_codes()
+    categories = get_category_codes()[1:]
     print(f"📚 Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
         print(f"  {i:2d}. {category}")
