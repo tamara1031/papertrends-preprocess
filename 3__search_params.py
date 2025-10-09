@@ -872,7 +872,15 @@ def process_one_category(category: str):
 
 if __name__ == "__main__":
     # TODO: use logging
-    
+    # TODO: better memory cleanup
+    # TODO: better exception handling especially for keyboard interrupt
+    # TODO: abstruct score metrics
+    # TODO: external config
+    # TODO: save embeddings to DB
+    # TODO: save params to DB
+    # TODO: load papers from DB
+    # TODO: save results to DB
+
     print("=" * 80)
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
