@@ -828,7 +828,7 @@ if __name__ == "__main__":
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
     
-    categories = get_category_codes()[1:]
+    categories = get_category_codes()
     print(f"📚 Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
         print(f"  {i:2d}. {category}")
