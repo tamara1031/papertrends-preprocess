@@ -6,6 +6,8 @@ import pickle
 import json
 import numpy as np
 import warnings
+import psutil
+import sys
 
 import torch
 import gc
@@ -32,6 +34,32 @@ warnings.filterwarnings('ignore', message='divide by zero encountered')
 warnings.filterwarnings('ignore', message='invalid value encountered')
 
 # ============================================================================
+# Memory Management
+# ============================================================================
+
+def get_memory_usage():
+    """Get current memory usage in MB."""
+    process = psutil.Process(os.getpid())
+    return process.memory_info().rss / 1024 / 1024
+
+def log_memory_usage(stage: str):
+    """Log memory usage at different stages."""
+    memory_mb = get_memory_usage()
+    print(f"🧠 Memory usage at {stage}: {memory_mb:.1f} MB")
+
+def force_memory_cleanup():
+    """Force aggressive memory cleanup."""
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+    gc.collect()
+
+def check_memory_threshold(threshold_mb: int = 8000) -> bool:
+    """Check if memory usage exceeds threshold."""
+    return get_memory_usage() > threshold_mb
+
+# ============================================================================
 # Configuration
 # ============================================================================
 
@@ -41,15 +69,15 @@ class OptimizationConfig:
     # Optimization settings
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get number of trials based on dataset size."""
+        """Get number of trials based on dataset size with memory optimization."""
         if dataset_size <= 5000:
-            return 50
+            return 30  # Reduced from 50
         elif dataset_size <= 20000:
-            return 100
+            return 60  # Reduced from 100
         elif dataset_size <= 50000:
-            return 150
+            return 80  # Reduced from 150
         else:
-            return 200
+            return 100  # Reduced from 200
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
@@ -283,14 +311,14 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        low_memory=False
+        # low_memory=True
     )
     
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=True
+        prediction_data=False  # Disable prediction data to save memory
     )
     
     return BERTopic(
@@ -400,8 +428,14 @@ def _compute_silhouette_umap_score(
         raise    
     except Exception as e:
         print(f"Warning: Silhouette UMAP score computation failed: {e}")
-        return 0.0  # Return neutral score on error 
-
+        return 0.0  # Return neutral score on error
+    finally:
+        # Aggressive cleanup of local variables
+        local_vars = ['umap_embedding', 'valid_umap_embedding', 'valid_labels', 'valid_mask', 'labels', 'unique_labels']
+        for var in local_vars:
+            if var in locals():
+                del locals()[var]
+        force_memory_cleanup()
 
 
 def _compute_dbcv_basis_score(
@@ -448,6 +482,13 @@ def _compute_dbcv_basis_score(
     except Exception as e:
         print(f"Warning: DBCV basis score computation failed: {e}")
         return 0.0  # Return neutral score on error
+    finally:
+        # Aggressive cleanup of local variables
+        local_vars = ['projected_embeddings', 'valid_embeddings', 'valid_labels', 'unique_labels', 'valid_mask', 'labels', 'pca']
+        for var in local_vars:
+            if var in locals():
+                del locals()[var]
+        force_memory_cleanup()
 
 
 def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
@@ -552,18 +593,18 @@ def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESam
         n_trials: Total number of trials for optimization
         dataset_size: Size of the dataset for adaptive parameters
     """
-    # Dynamic startup trials: 15-20% of total trials, min 15, max 30
+    # Dynamic startup trials: 15-20% of total trials, min 10, max 20 (reduced for memory)
     # Academic papers need more exploration due to complex topic structures
-    startup_trials = max(15, min(30, int(n_trials * 0.18)))
+    startup_trials = max(10, min(20, int(n_trials * 0.15)))
     
-    # Dynamic EI candidates: Scale with dataset size and trials
+    # Dynamic EI candidates: Scale with dataset size and trials (reduced for memory)
     # Larger datasets need more candidates for better exploration
     if dataset_size <= 10000:
-        ei_candidates = max(24, min(48, int(n_trials * 0.25)))
+        ei_candidates = max(16, min(32, int(n_trials * 0.20)))
     elif dataset_size <= 50000:
-        ei_candidates = max(32, min(64, int(n_trials * 0.30)))
+        ei_candidates = max(20, min(40, int(n_trials * 0.25)))
     else:
-        ei_candidates = max(40, min(80, int(n_trials * 0.35)))
+        ei_candidates = max(24, min(48, int(n_trials * 0.30)))
     
     # Prior weight: Balanced for academic paper clustering
     # Slightly higher weight for better exploration of complex topic spaces
@@ -593,25 +634,25 @@ def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> Medi
         n_trials: Total number of trials for optimization
         dataset_size: Size of the dataset for adaptive parameters
     """
-    # Dynamic startup trials: 15-20% of total trials, min 15, max 30
+    # Dynamic startup trials: 15-20% of total trials, min 10, max 20 (reduced for memory)
     # Academic papers need more exploration due to complex topic structures
-    startup_trials = max(15, min(30, int(n_trials * 0.18)))
+    startup_trials = max(10, min(20, int(n_trials * 0.15)))
     
-    # Dynamic warmup steps: Scale with dataset size
+    # Dynamic warmup steps: Scale with dataset size (reduced for memory)
     # Larger datasets take longer to converge, need more patience
     if dataset_size <= 10000:
-        warmup_steps = 5
+        warmup_steps = 3
     elif dataset_size <= 50000:
-        warmup_steps = 8
+        warmup_steps = 5
     else:
-        warmup_steps = 10
+        warmup_steps = 7
     
-    # Dynamic intervals: Scale with dataset size
+    # Dynamic intervals: Scale with dataset size (more aggressive pruning)
     # Larger datasets need more frequent pruning checks
     if dataset_size <= 10000:
-        interval_steps = 3
-    elif dataset_size <= 50000:
         interval_steps = 2
+    elif dataset_size <= 50000:
+        interval_steps = 1
     else:
         interval_steps = 1
     
@@ -629,9 +670,11 @@ def objective_function(
     embedding_model: CustomEmbeddingModel
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
-    gc.collect()
-    torch.cuda.empty_cache()
-
+    # Check memory before starting
+    if check_memory_threshold(8000):  # 8GB threshold
+        print(f"⚠️  High memory usage detected: {get_memory_usage():.1f} MB")
+        force_memory_cleanup()
+    
     dataset_size = len(texts)
     
     try:
@@ -660,15 +703,15 @@ def objective_function(
         trial.set_user_attr("error", str(e))
         return 0.0
     finally:
-        # Explicit cleanup of model and variables to prevent memory leaks
-        if 'model' in locals():
-            del model
-        if 'topics' in locals():
-            del topics
-        if 'params' in locals():
-            del params
-        gc.collect()
-        torch.cuda.empty_cache()  
+        # Aggressive cleanup of model and variables to prevent memory leaks
+        local_vars = ['model', 'topics', 'params', 'score']
+        for var in local_vars:
+            if var in locals():
+                del locals()[var]
+        force_memory_cleanup()
+        
+        # Log memory usage after cleanup
+        log_memory_usage(f"Trial {trial.number} cleanup")  
 
 
 # ============================================================================
@@ -687,6 +730,8 @@ def optimize_category_clustering(
     
     # Load and prepare data
     print(f"📂 Loading data for category: {category}")
+    log_memory_usage("Before data loading")
+    
     papers = load_papers(category)
     text_embeddings = load_text_embeddings(category)
     embedding_model = EMBEDDING_MODEL
@@ -696,7 +741,8 @@ def optimize_category_clustering(
     
     # Memory cleanup
     del papers
-    gc.collect()
+    force_memory_cleanup()
+    log_memory_usage("After data loading")
     
     print(f"📊 Dataset size: {dataset_size:,} documents")
     print(f"🧠 Using SPECTER2 Proximity adapter (110M parameters)")
@@ -751,9 +797,12 @@ def optimize_category_clustering(
         print(f"❌ Optimization error: {e}")
     finally:
         # Memory cleanup after optimization
-        del texts, text_embeddings
-        gc.collect()
-        torch.cuda.empty_cache()
+        local_vars = ['texts', 'text_embeddings', 'embedding_model']
+        for var in local_vars:
+            if var in locals():
+                del locals()[var]
+        force_memory_cleanup()
+        log_memory_usage("After optimization cleanup")
     
     return study
 
@@ -817,8 +866,8 @@ def process_one_category(category: str):
         
     finally:
         # Additional memory cleanup after each category
-        gc.collect()
-        torch.cuda.empty_cache()
+        force_memory_cleanup()
+        log_memory_usage(f"After category {category} completion")
 
 
 if __name__ == "__main__":
@@ -828,7 +877,7 @@ if __name__ == "__main__":
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
     
-    categories = get_category_codes()
+    categories = get_category_codes()[1:]
     print(f"📚 Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
         print(f"  {i:2d}. {category}")
@@ -843,6 +892,8 @@ if __name__ == "__main__":
         for i, category in enumerate(categories, 1):
             print(f"\n📖 [{i}/{len(categories)}] Processing category: {category}")
             print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            log_memory_usage(f"Before category {category}")
+            
             try:
                 process_one_category(category)
                 print(f"✅ Completed category: {category}")
@@ -852,6 +903,10 @@ if __name__ == "__main__":
             except Exception as e:
                 print(f"❌ Failed category {category}: {e}")
                 continue
+                
+            # Force cleanup between categories
+            force_memory_cleanup()
+            
     except KeyboardInterrupt:
         print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
         print(f"🛑 Stopping optimization process...")
