@@ -43,28 +43,9 @@ def compute_dbcv_score(
     labels: np.ndarray,
     embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using PCA with minimal memory usage."""
-    # Filter out noise points (-1 labels)
-    valid_mask = labels != -1
-    valid_count = np.sum(valid_mask)
+    """Compute DBCV score."""
     
-    if valid_count < 2:
-        raise ValueError("Not enough valid points for DBCV score calculation")
-        
-    # Extract only valid labels
-    valid_labels = labels[valid_mask]
-    
-    # Check if we have multiple clusters
-    unique_labels = np.unique(valid_labels)
-    if len(unique_labels) < 2:
-        raise ValueError("Need at least 2 clusters for DBCV score calculation")
-
-    valid_embeddings = embeddings[valid_mask].astype(np.float64)
-    
-    # Compute DBCV using cosine metric
-    dbcv_score = validity_index(valid_embeddings, valid_labels,  metric='euclidean')
-    
-    return dbcv_score
+    return validity_index(embeddings.astype(np.float64), labels,  metric='euclidean')
 
 
 if __name__ == "__main__":
