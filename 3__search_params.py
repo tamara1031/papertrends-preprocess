@@ -16,12 +16,11 @@ from bertopic import BERTopic
 from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
-from typing import List, Dict
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
 from common.utils.memory_utils import force_memory_cleanup
-from common.utils.score_utils import compute_silhouette_score, compute_dbcv_score
+from common.utils.score_utils import compute_dbcv_score
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
@@ -645,13 +644,7 @@ if __name__ == "__main__":
                 process_one_category(category)
                 print(f"✅ Completed category: {category}")
             except KeyboardInterrupt:
-                print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
-                print(f"🛑 Stopping optimization process...")
-                print(f"📊 Processed {i-1}/{len(categories)} categories before interruption")
-                print(f"💾 Partial results saved to: ./params/")
-                print(f"🔄 To resume, run the script again (it will continue from where it left off)")
-                import sys
-                sys.exit(0)
+                raise  # Re-raise KeyboardInterrupt to be caught by outer try-except
             except Exception as e:
                 print(f"❌ Failed category {category}: {e}")
                 continue
@@ -659,7 +652,10 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
         print(f"🛑 Stopping optimization process...")
-        print(f"📊 Processed {i-1}/{len(categories)} categories before interruption")
+        try:
+            print(f"📊 Processed {i-1}/{len(categories)} categories before interruption")
+        except NameError:
+            print(f"📊 No categories processed before interruption")
         print(f"💾 Partial results saved to: ./params/")
         print(f"🔄 To resume, run the script again (it will continue from where it left off)")
         import sys
