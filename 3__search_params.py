@@ -352,28 +352,27 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
 
 def compute_cluster_quality_score(
     labels: np.ndarray,
-    umap_embedding: np.ndarray,
-    original_embeddings: np.ndarray,
+    embedding: np.ndarray,
     weights: Dict[str, float]
 ) -> float:
     """Compute combined clustering quality score with minimal memory usage."""
     try:
         # Compute metrics
-        silhouette_umap_score = compute_silhouette_score(labels, umap_embedding)
+        silhouette_score = compute_silhouette_score(labels, embedding)
         force_memory_cleanup()
         
-        dbcv_basis_score = compute_dbcv_score(labels, original_embeddings)
+        dbcv_score = compute_dbcv_score(labels, embedding)
         force_memory_cleanup()
         
         # Calculate final score
         final_score = (
-            weights['cluster_shape'] * silhouette_umap_score +
-            weights['clustering_quality'] * dbcv_basis_score
+            weights['cluster_shape'] * silhouette_score +
+            weights['clustering_quality'] * dbcv_score
         )
         
         # Output results
-        print(f"Scores - Silhouette UMAP: {silhouette_umap_score:.4f}, DBCV Basis: {dbcv_basis_score:.4f}")
-        print(f"Weights - Silhouette UMAP: {weights['cluster_shape']:.1%}, DBCV: {weights['clustering_quality']:.1%}")
+        print(f"Scores - Silhouette: {silhouette_score:.4f}, DBCV: {dbcv_score:.4f}")
+        print(f"Weights - Silhouette: {weights['cluster_shape']:.1%}, DBCV: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
@@ -470,7 +469,7 @@ def objective_function(
         basic_info = _get_basic_model_info(topic_info)
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
-        score = compute_cluster_quality_score(labels, umap_embedding, text_embeddings, weights)
+        score = compute_cluster_quality_score(labels, umap_embedding, weights)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))

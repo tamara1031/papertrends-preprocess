@@ -22,7 +22,7 @@ def compute_silhouette_score(
         
     # Extract only valid data
     valid_labels = labels[valid_mask]
-    valid_embeddings = embeddings[valid_mask]
+    valid_embeddings = embeddings[valid_mask].astype(np.float64)
     
     # Check if we have multiple clusters
     unique_labels = np.unique(valid_labels)
