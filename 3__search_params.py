@@ -452,10 +452,8 @@ def _compute_dbcv_basis_score(
         # Memory-efficient PCA: Use fewer components for large datasets
         dataset_size = len(valid_embeddings)
         if dataset_size > 20000:
-            # For large datasets, use fixed number of components to save memory
-            pca = PCA(n_components=0.90, random_state=42)
+            pca = PCA(n_components=0.95, random_state=42)
         else:
-            # For smaller datasets, use variance-based PCA
             pca = PCA(n_components=0.99, random_state=42)
         
         projected_embeddings = pca.fit_transform(valid_embeddings)
