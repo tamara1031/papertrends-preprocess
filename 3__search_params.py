@@ -20,8 +20,8 @@ from typing import List, Dict
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
-from common.memory_utils import force_memory_cleanup
-from common.score_utils import compute_silhouette_score, compute_dbcv_score
+from common.utils.memory_utils import force_memory_cleanup
+from common.utils.score_utils import compute_silhouette_score, compute_dbcv_score
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
@@ -443,6 +443,7 @@ def objective_function(
     embedding_model: CustomEmbeddingModel
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
+    model = None
     try:
         # Suggest hyperparameters and create model
         params = suggest_optimal_hyperparameters(trial, len(texts))
@@ -462,6 +463,7 @@ def objective_function(
         # Clean up model immediately after extracting data
         cleanup_bertopic_model(model)
         del model
+        model = None
         force_memory_cleanup()
         
         # Get basic info and output
@@ -475,9 +477,10 @@ def objective_function(
         
         return score
     
-    except optuna.exceptions.TrialPruned:
-        raise
     except KeyboardInterrupt:
+        print(f"\n⚠️  KeyboardInterrupt in trial {trial.number}")
+        raise
+    except optuna.exceptions.TrialPruned:
         raise
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
@@ -485,10 +488,10 @@ def objective_function(
         return -1.0  # Return worst score on error (range: [-1, 1])
     finally:
         # Critical cleanup only (model may already be cleaned up)
-        if 'model' in locals() and model is not None:
+        if model is not None:
             cleanup_bertopic_model(model)
             del model
-        force_memory_cleanup()  
+        force_memory_cleanup()
 
 
 # ============================================================================
@@ -561,7 +564,7 @@ def optimize_category_clustering(
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(ValueError, RuntimeError, MemoryError),
+            catch=(ValueError, RuntimeError, MemoryError, KeyboardInterrupt),
             callbacks=[_memory_cleanup_callback] if n_trials > 10 else []
         )
         
@@ -569,7 +572,8 @@ def optimize_category_clustering(
         _display_optimization_results(study)
             
     except KeyboardInterrupt:
-        print(f"\n⚠️  Optimization interrupted. Completed {len(study.trials)} trials.")
+        print(f"\n⚠️  Optimization interrupted by user. Completed {len(study.trials)} trials.")
+        print(f"🛑 Stopping optimization process...")
         raise
     except Exception as e:
         print(f"❌ Optimization error: {e}")
@@ -663,6 +667,7 @@ if __name__ == "__main__":
                 process_one_category(category)
                 print(f"✅ Completed category: {category}")
             except KeyboardInterrupt:
+                print(f"\n⚠️  KeyboardInterrupt in category {category}")
                 raise
             except Exception as e:
                 print(f"❌ Failed category {category}: {e}")
@@ -674,7 +679,8 @@ if __name__ == "__main__":
         print(f"📊 Processed {i-1}/{len(categories)} categories before interruption")
         print(f"💾 Partial results saved to: ./params/")
         print(f"🔄 To resume, run the script again (it will continue from where it left off)")
-        exit(0)
+        import sys
+        sys.exit(0)
     
     print("\n" + "=" * 80)
     print("🎉 ALL CATEGORIES PROCESSED SUCCESSFULLY!")
