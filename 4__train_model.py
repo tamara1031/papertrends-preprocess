@@ -131,7 +131,7 @@ def create_model(params: Hyperparameters) -> BERTopic:
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=False  # Disable prediction data to save memory
+        prediction_data=True  # Disable prediction data to save memory
     )
 
     # representations(topic名、代表単語が変わる)
