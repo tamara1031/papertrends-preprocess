@@ -168,7 +168,7 @@ def create_model(params: Hyperparameters) -> BERTopic:
     representation_models = [keybert_inspired, part_of_speech, maximal_marginal_relevance]
 
     model = BERTopic(
-        nr_topic="auto",
+        nr_topics="auto",
         top_n_words=top_n_words,
         vectorizer_model=vectorizer_model,
         ctfidf_model=ctfidf_model,
