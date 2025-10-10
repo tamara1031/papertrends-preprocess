@@ -18,7 +18,7 @@ def compute_silhouette_score(
     valid_count = np.sum(valid_mask)
     
     if valid_count < 2:
-        return 0.0  # Not enough valid points
+        raise ValueError("Not enough valid points for silhouette score calculation")
         
     # Extract only valid data
     valid_labels = labels[valid_mask]
@@ -27,16 +27,16 @@ def compute_silhouette_score(
     # Check if we have multiple clusters
     unique_labels = np.unique(valid_labels)
     if len(unique_labels) < 2:
-        return 0.0  # Need at least 2 clusters for silhouette score
+        raise ValueError("Need at least 2 clusters for silhouette score calculation")
     
     # Compute silhouette score using euclidean metric
-    silhouette_avg = silhouette_score(
+    silhouette_result = silhouette_score(
         valid_embeddings, 
         valid_labels, 
         metric='euclidean'
     )
     
-    return silhouette_avg
+    return silhouette_result
 
 
 def compute_dbcv_score(
@@ -49,7 +49,7 @@ def compute_dbcv_score(
     valid_count = np.sum(valid_mask)
     
     if valid_count < 2:
-        return 0.0  # Not enough valid points
+        raise ValueError("Not enough valid points for DBCV score calculation")
         
     # Extract only valid labels
     valid_labels = labels[valid_mask]
@@ -57,7 +57,7 @@ def compute_dbcv_score(
     # Check if we have multiple clusters
     unique_labels = np.unique(valid_labels)
     if len(unique_labels) < 2:
-        return 0.0  # Need at least 2 clusters for DBCV
+        raise ValueError("Need at least 2 clusters for DBCV score calculation")
 
     valid_embeddings = embeddings[valid_mask]
     
@@ -77,11 +77,17 @@ if __name__ == "__main__":
     original_embeddings = np.random.rand(8, 768)
     
     # Test silhouette score
-    silhouette_score = compute_silhouette_score(labels, umap_embedding)
-    print(f"Silhouette score: {silhouette_score:.4f}")
+    try:
+        silhouette_result = compute_silhouette_score(labels, umap_embedding)
+        print(f"Silhouette score: {silhouette_result:.4f}")
+    except ValueError as e:
+        print(f"Silhouette score error: {e}")
     
     # Test DBCV score
-    dbcv_score = compute_dbcv_score(labels, original_embeddings)
-    print(f"DBCV score: {dbcv_score:.4f}")
+    try:
+        dbcv_score = compute_dbcv_score(labels, original_embeddings)
+        print(f"DBCV score: {dbcv_score:.4f}")
+    except ValueError as e:
+        print(f"DBCV score error: {e}")
     
     print("Score utilities test completed successfully!")

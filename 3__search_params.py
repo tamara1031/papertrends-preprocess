@@ -20,10 +20,7 @@ from typing import List, Dict
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
-from common.memory_utils import (
-    log_memory_usage, force_memory_cleanup, check_memory_threshold,
-    get_dataset_memory_estimate, recommend_dataset_limit
-)
+from common.memory_utils import force_memory_cleanup
 from common.score_utils import compute_silhouette_score, compute_dbcv_score
 
 # Suppress expected numerical warnings (validated as safe)
@@ -125,10 +122,10 @@ class OptimizationConfig:
     
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
-        """Get balanced weights for both metrics."""
+        """Get balanced weights for both metrics (scores in [-1, 1] range)."""
         return {
-            'cluster_shape': 0.50,
-            'clustering_quality': 0.50
+            'cluster_shape': 0.5,
+            'clustering_quality': 0.5
         }
     
     @staticmethod
@@ -354,44 +351,19 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
         return {'n_topics': 0, 'top_cluster_sizes': []}
 
 def compute_cluster_quality_score(
-    model: BERTopic, 
+    labels: np.ndarray,
+    umap_embedding: np.ndarray,
     original_embeddings: np.ndarray,
-    documents: List[str] = None,
-    weights: Dict[str, float] = None
+    weights: Dict[str, float]
 ) -> float:
     """Compute combined clustering quality score with minimal memory usage."""
     try:
-        dataset_size = len(original_embeddings)
+        # Compute metrics
+        silhouette_umap_score = compute_silhouette_score(labels, umap_embedding)
+        force_memory_cleanup()
         
-        # Extract necessary data from model first
-        labels = model.hdbscan_model.labels_
-        umap_embedding = model.umap_model.embedding_
-        topic_info = model.get_topic_info()
-        
-        # Get basic info first (lightweight operation)
-        basic_info = _get_basic_model_info(topic_info)
-        
-        # Use provided weights or default weights
-        if weights is None:
-            weights = {
-                'cluster_shape': 0.50,
-                'clustering_quality': 0.50
-            }
-        
-        # Initialize scores
-        silhouette_umap_score = 0.0
-        dbcv_basis_score = 0.0
-        
-        # Compute metrics only if needed (avoid unnecessary computation)
-        if weights['cluster_shape'] > 0.00:
-            silhouette_umap_score = compute_silhouette_score(labels, umap_embedding)
-            # Clean up immediately after silhouette computation
-            force_memory_cleanup()
-        
-        if weights['clustering_quality'] > 0.00:
-            dbcv_basis_score = compute_dbcv_score(labels, original_embeddings)
-            # Clean up immediately after DBCV computation
-            force_memory_cleanup()
+        dbcv_basis_score = compute_dbcv_score(labels, original_embeddings)
+        force_memory_cleanup()
         
         # Calculate final score
         final_score = (
@@ -399,34 +371,11 @@ def compute_cluster_quality_score(
             weights['clustering_quality'] * dbcv_basis_score
         )
         
-        # Output results (minimal string operations)
-        print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
-        
-        # Build output strings efficiently
-        score_parts = []
-        weight_parts = []
-            
-        if weights['cluster_shape'] > 0:
-            score_parts.append(f"Silhouette UMAP: {silhouette_umap_score:.4f}")
-            weight_parts.append(f"Silhouette UMAP: {weights['cluster_shape']:.1%}")
-        else:
-            score_parts.append("Silhouette UMAP: N/A")
-            weight_parts.append("Silhouette UMAP: 0.0%")
-            
-        if weights['clustering_quality'] > 0:
-            score_parts.append(f"DBCV Basis: {dbcv_basis_score:.4f}")
-            weight_parts.append(f"DBCV: {weights['clustering_quality']:.1%}")
-        else:
-            score_parts.append("DBCV Basis: N/A")
-            weight_parts.append("DBCV: 0.0%")
-        
-        print(f"Scores - {', '.join(score_parts)}")
-        print(f"Weights - {', '.join(weight_parts)}")
+        # Output results
+        print(f"Scores - Silhouette UMAP: {silhouette_umap_score:.4f}, DBCV Basis: {dbcv_basis_score:.4f}")
+        print(f"Weights - Silhouette UMAP: {weights['cluster_shape']:.1%}, DBCV: {weights['clustering_quality']:.1%}")
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
-        
-        # Clean up all local variables
-        del basic_info, weights, score_parts, weight_parts, labels, umap_embedding, topic_info
         
         return final_score
     except KeyboardInterrupt:
@@ -434,7 +383,7 @@ def compute_cluster_quality_score(
         raise
     except Exception as e:
         print(f"Error in compute_cluster_quality_score: {e}")
-        return 0.0  
+        return -1.0  # Return worst score on error (range: [-1, 1])  
 
 
 # ============================================================================
@@ -493,63 +442,53 @@ def objective_function(
     text_embeddings: np.ndarray, 
     embedding_model: CustomEmbeddingModel
 ) -> float:
-    """Optuna objective function for hyperparameter optimization with aggressive memory management."""
-    dataset_size = len(texts)
-    model = None
-    embeddings_copy = None
-    
+    """Optuna objective function for hyperparameter optimization."""
     try:
-        # Suggest constrained hyperparameters
-        params = suggest_optimal_hyperparameters(trial, dataset_size)
-        
-        # Create and train model
+        # Suggest hyperparameters and create model
+        params = suggest_optimal_hyperparameters(trial, len(texts))
         model = create_bertopic_model(params, embedding_model)
         
-        # For memory-mapped embeddings, create a copy only for this trial
-        if hasattr(text_embeddings, 'base'):  # memory-mapped array
-            embeddings_copy = np.array(text_embeddings)
-        else:
-            embeddings_copy = text_embeddings
-            
-        # Fit model and get topics
-        topics, _ = model.fit_transform(texts, embeddings=embeddings_copy)
+        # Fit model
+        topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
-        # Immediately clean up embeddings copy after fit_transform
-        del embeddings_copy
-        embeddings_copy = None
+        # Evaluate clustering quality
+        weights = OptimizationConfig.get_adaptive_weights(len(texts))
+        
+        # Extract necessary data from model
+        labels = model.hdbscan_model.labels_
+        umap_embedding = model.umap_model.embedding_
+        topic_info = model.get_topic_info()
+        
+        # Clean up model immediately after extracting data
+        cleanup_bertopic_model(model)
+        del model
         force_memory_cleanup()
         
-        # Evaluate clustering quality (this will use the model's internal data)
-        weights = OptimizationConfig.get_adaptive_weights(dataset_size)
-        score = compute_cluster_quality_score(model, text_embeddings, documents=texts, weights=weights)
+        # Get basic info and output
+        basic_info = _get_basic_model_info(topic_info)
+        print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
+        
+        score = compute_cluster_quality_score(labels, umap_embedding, text_embeddings, weights)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
-        
-        # Immediately clean up model after evaluation
-        cleanup_bertopic_model(model)
-        del model
-        model = None
-        force_memory_cleanup()
         
         return score
     
     except optuna.exceptions.TrialPruned:
         raise
     except KeyboardInterrupt:
-        raise    
+        raise
     except Exception as e:
         print(f"Warning: Trial failed: {e}")
         trial.set_user_attr("error", str(e))
-        return 0.0
+        return -1.0  # Return worst score on error (range: [-1, 1])
     finally:
-        # Aggressive cleanup in finally block
-        if embeddings_copy is not None:
-            del embeddings_copy
-        if model is not None:
+        # Critical cleanup only (model may already be cleaned up)
+        if 'model' in locals() and model is not None:
             cleanup_bertopic_model(model)
             del model
-        force_memory_cleanup(aggressive=True)  
+        force_memory_cleanup()  
 
 
 # ============================================================================
@@ -559,15 +498,9 @@ def objective_function(
 EMBEDDING_MODEL = get_custom_embedding_model()
 
 def _memory_cleanup_callback(study, trial):
-    """Memory cleanup callback with monitoring."""
-    memory_info = log_memory_usage(f"Trial {trial.number}", verbose=False)
-    
-    # If memory usage is high, perform aggressive cleanup
-    if memory_info['rss_mb'] > 1500:  # More than 1.5GB
-        print(f"⚠️  High memory usage detected: {memory_info['rss_mb']:.1f} MB")
-        force_memory_cleanup(aggressive=True)
-        log_memory_usage(f"After aggressive cleanup (Trial {trial.number})", verbose=False)
-    else:
+    """Simple memory cleanup callback."""
+    # Only cleanup if trial number is divisible by 10 (every 10 trials)
+    if trial.number % 10 == 0 and trial.number > 0:
         force_memory_cleanup()
 
 # ============================================================================
@@ -580,14 +513,12 @@ def optimize_category_clustering(
     n_trials: Optional[int] = None,
     storage: Optional[str] = None
 ) -> optuna.Study:
-    """Run hyperparameter optimization for a specific arXiv category with adaptive settings."""
+    """Run hyperparameter optimization for a specific arXiv category."""
     
     # Load and prepare data
     print(f"📂 Loading data for category: {category}")
-    log_memory_usage("Before data loading")
-    
     papers = load_papers(category)
-    text_embeddings = load_text_embeddings(category)  # Now uses memory mapping
+    text_embeddings = load_text_embeddings(category)
     embedding_model = EMBEDDING_MODEL
     
     if embedding_model is None:
@@ -596,48 +527,20 @@ def optimize_category_clustering(
     
     texts = [embedding_model.get_input_text(paper) for paper in papers]
     dataset_size = len(texts)
-
-    # Enhanced memory management
-    del papers
-    force_memory_cleanup()
-    log_memory_usage("After data loading")
-    
-    # Enhanced memory safety check with dynamic limits
-    memory_info = log_memory_usage("After data loading", verbose=False)
-    available_memory = memory_info['available_mb']
-    # recommended_limit = recommend_dataset_limit(available_memory)
-    
-    # if dataset_size > recommended_limit:
-    #     print(f"⚠️  Dataset size exceeds memory limit for category: {category}")
-    #     print(f"   • Dataset size: {dataset_size:,} documents")
-    #     print(f"   • Recommended limit: {recommended_limit:,} documents")
-    #     print(f"   • Available memory: {available_memory:.1f} MB")
-    #     print(f"💡 Consider using a subset or increasing system memory")
-    #     return None
-    
-    # Estimate memory requirements
-    memory_estimate = get_dataset_memory_estimate(dataset_size)
-    print(f"📊 Memory estimate: {memory_estimate['total_estimated_mb']:.1f} MB")
     
     print(f"📊 Dataset size: {dataset_size:,} documents")
-    print(f"🧠 Using SPECTER2 Proximity adapter (110M parameters)")
     
-    # Adaptive configuration based on dataset size
+    # Adaptive configuration
     if n_trials is None:
         n_trials = OptimizationConfig.get_default_n_trials(dataset_size)
     if timeout is None:
         timeout_minutes = OptimizationConfig.get_default_timeout(dataset_size)
-        timeout = timeout_minutes * 60 if timeout_minutes else None  # Convert to seconds
+        timeout = timeout_minutes * 60 if timeout_minutes else None
     
-    print(f"⚙️  Optimization settings:")
-    print(f"   • Trials: {n_trials}")
-    print(f"   • Timeout: {timeout//60 if timeout else 'None'} minutes")
-    print(f"   • Sampler: TPE (multivariate=True)")
-    print(f"   • Pruner: MedianPruner (adaptive)")
+    print(f"⚙️  Optimization settings: {n_trials} trials, {timeout//60 if timeout else 'None'} min timeout")
     
-    # Create optimization study with adaptive sampler and pruner
+    # Create study
     study_name = f"clustering_optimization_{category}_{dataset_size}"
-    
     study = optuna.create_study(
         storage=storage,
         load_if_exists=True,  
@@ -648,8 +551,7 @@ def optimize_category_clustering(
     )
     
     # Run optimization
-    print(f"\n🚀 Starting optimization with {n_trials} trials...")
-    print(f"📈 Progress will be shown below:")
+    print(f"\n🚀 Starting optimization...")
     print("-" * 60)
     
     try:
@@ -660,12 +562,7 @@ def optimize_category_clustering(
             gc_after_trial=True,
             show_progress_bar=True,
             catch=(ValueError, RuntimeError, MemoryError),
-            callbacks=[
-                # Enhanced memory cleanup callback every 3 trials with memory monitoring
-                lambda study, trial: (
-                    _memory_cleanup_callback(study, trial) if trial.number % 3 == 0 and trial.number > 0 else None
-                )
-            ]
+            callbacks=[_memory_cleanup_callback] if n_trials > 10 else []
         )
         
         # Display results
@@ -676,12 +573,10 @@ def optimize_category_clustering(
         raise
     except Exception as e:
         print(f"❌ Optimization error: {e}")
+        raise
     finally:
-        # Enhanced cleanup after optimization
-        print("🧹 Performing final memory cleanup...")
-        del texts, text_embeddings, embedding_model
-        force_memory_cleanup(aggressive=True)
-        log_memory_usage("After optimization cleanup")
+        # Critical cleanup only
+        force_memory_cleanup()
     
     return study
 
@@ -728,24 +623,19 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 
 def process_one_category(category: str):
     """Main execution function for hyperparameter optimization."""
-    try:
-        # Create output directory
-        params_path = f"./params/{category}"
-        os.makedirs(params_path, exist_ok=True)
-        
-        # Run optimization
-        study_storage_path = f"sqlite:///{params_path}/search_params.db"
-        study = optimize_category_clustering(
-            category=category,
-            storage=study_storage_path
-        )
-        
-        # Save results
-        save_optimization_results(study, params_path)
-        
-    finally:
-        # Simple cleanup after each category
-        force_memory_cleanup()
+    # Create output directory
+    params_path = f"./params/{category}"
+    os.makedirs(params_path, exist_ok=True)
+    
+    # Run optimization
+    study_storage_path = f"sqlite:///{params_path}/search_params.db"
+    study = optimize_category_clustering(
+        category=category,
+        storage=study_storage_path
+    )
+    
+    # Save results
+    save_optimization_results(study, params_path)
 
 
 if __name__ == "__main__":
@@ -768,7 +658,6 @@ if __name__ == "__main__":
         for i, category in enumerate(categories, 1):
             print(f"\n📖 [{i}/{len(categories)}] Processing category: {category}")
             print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-            log_memory_usage(f"Before category {category}")
             
             try:
                 process_one_category(category)
@@ -779,8 +668,6 @@ if __name__ == "__main__":
                 print(f"❌ Failed category {category}: {e}")
                 continue
                 
-            force_memory_cleanup()
-            
     except KeyboardInterrupt:
         print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
         print(f"🛑 Stopping optimization process...")
