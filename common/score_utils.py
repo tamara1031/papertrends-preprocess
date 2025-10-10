@@ -4,7 +4,6 @@ This module provides functions to compute clustering quality scores with minimal
 """
 
 import numpy as np
-from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 from hdbscan import validity_index
 
@@ -62,16 +61,8 @@ def compute_dbcv_score(
 
     valid_embeddings = embeddings[valid_mask]
     
-    # Apply PCA for dimensionality reduction
-    pca = PCA(n_components=0.99, random_state=42)
-    projected_embeddings = pca.fit_transform(valid_embeddings)
-    
-    # Ensure float64 for HDBSCAN compatibility
-    if projected_embeddings.dtype != np.float64:
-        projected_embeddings = projected_embeddings.astype(np.float64)
-    
     # Compute DBCV using cosine metric
-    dbcv_score = validity_index(projected_embeddings, valid_labels, metric='cosine')
+    dbcv_score = validity_index(valid_embeddings, valid_labels, metric='cosine')
     
     return dbcv_score
 
