@@ -185,6 +185,48 @@ def recommend_dataset_limit(available_memory_mb: float) -> int:
     
     return max_documents
 
+def monitor_model_memory_usage(func, *args, **kwargs):
+    """Monitor memory usage during model operations."""
+    initial_memory = get_memory_usage()
+    
+    print(f"🚀 Starting model operation. Initial memory: {initial_memory['rss_mb']:.1f} MB")
+    
+    try:
+        result = func(*args, **kwargs)
+        
+        final_memory = get_memory_usage()
+        memory_change = final_memory['rss_mb'] - initial_memory['rss_mb']
+        
+        print(f"✅ Model operation completed. Memory change: {memory_change:+.1f} MB")
+        print(f"   Final memory: {final_memory['rss_mb']:.1f} MB")
+        
+        # If memory increased significantly, warn user
+        if memory_change > 200:  # More than 200MB increase
+            print(f"⚠️  Significant memory increase detected: {memory_change:.1f} MB")
+            print("   Consider running memory cleanup")
+        
+        return result
+        
+    except Exception as e:
+        final_memory = get_memory_usage()
+        memory_change = final_memory['rss_mb'] - initial_memory['rss_mb']
+        
+        print(f"❌ Model operation failed. Memory change: {memory_change:+.1f} MB")
+        print(f"   Final memory: {final_memory['rss_mb']:.1f} MB")
+        
+        raise
+
+def get_memory_usage_summary() -> str:
+    """Get a concise memory usage summary."""
+    memory_info = get_memory_usage()
+    
+    summary = f"RAM: {memory_info['rss_mb']:.1f}MB ({memory_info['percent']:.1f}%)"
+    
+    if 'gpu_allocated_mb' in memory_info:
+        summary += f" | GPU: {memory_info['gpu_allocated_mb']:.1f}MB"
+    
+    return summary
+
 if __name__ == "__main__":
     # Test memory utilities
     print("Memory utilities test:")

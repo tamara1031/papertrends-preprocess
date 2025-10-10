@@ -1,28 +1,22 @@
 from typing import List, Optional, Union, Tuple, Dict, Any
 from dataclasses import dataclass
-import gc
 import os
 import pickle
 import json
 import numpy as np
 import warnings
-import psutil
-import sys
 
 import torch
-import gc
-
 import optuna
-from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import silhouette_score
 import optuna.exceptions
 from optuna.samplers import TPESampler
 from optuna.pruners import MedianPruner
 from bertopic import BERTopic
 from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
-from hdbscan import HDBSCAN, validity_index
+from hdbscan import HDBSCAN
+from typing import List, Dict
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
@@ -30,6 +24,7 @@ from common.memory_utils import (
     log_memory_usage, force_memory_cleanup, check_memory_threshold,
     get_dataset_memory_estimate, recommend_dataset_limit
 )
+from common.score_utils import compute_silhouette_score, compute_dbcv_score
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
@@ -40,8 +35,6 @@ warnings.filterwarnings('ignore', message='invalid value encountered')
 # ============================================================================
 # Memory Management
 # ============================================================================
-
-# Memory management functions are now imported from memory_utils
 
 def cleanup_bertopic_model(model):
     """Clean up BERTopic model internal data to prevent memory leaks."""
@@ -103,18 +96,22 @@ def cleanup_bertopic_model(model):
 class OptimizationConfig:
     """Configuration for clustering optimization."""
     
-    # Optimization settings
+    # Constants
+    UMAP_METRICS = ["cosine"]
+    HDBSCAN_METRICS = ["euclidean", "manhattan"]
+    TOP_N_WORDS_RANGE = (10, 20)
+    NGRAM_RANGES = [[1, 3]]
+    MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)
+    
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get number of trials based on dataset size with memory optimization."""
+        """Get number of trials based on dataset size."""
         if dataset_size <= 5000:
-            return 20  # Reduced from 30
+            return 20
         elif dataset_size <= 20000:
-            return 40  # Reduced from 60
-        elif dataset_size <= 30000:
-            return 50  # Reduced from 80
+            return 40
         else:
-            return 60  # Reduced from 100
+            return 60
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
@@ -126,25 +123,14 @@ class OptimizationConfig:
         else:
             return 240
     
-    # Distance metrics
-    UMAP_METRICS = ["cosine"]
-    HDBSCAN_METRICS = ["euclidean", "manhattan"]
-    
-    # Topic representation
-    TOP_N_WORDS_RANGE = (10, 20)
-    NGRAM_RANGES = [[1, 3]]
-    MIN_SAMPLES_MULTIPLIER_RANGE = (0.5, 1.0)
-    
-    # Score weights
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
         """Get balanced weights for both metrics."""
         return {
-            'cluster_shape': 0.50,      # Silhouette UMAP
-            'clustering_quality': 0.50  # DBCV Basis
-        }  
+            'cluster_shape': 0.50,
+            'clustering_quality': 0.50
+        }
     
-    # Parameter ranges
     @staticmethod
     def get_min_df_range(dataset_size: int) -> Tuple[int, int]:
         """Get min_df range based on dataset size."""
@@ -157,7 +143,7 @@ class OptimizationConfig:
         """Get max_df range based on dataset size."""
         min_val = int(0.15 * dataset_size)  
         max_val = int(0.95 * dataset_size) 
-        return (min_val, max_val) 
+        return (min_val, max_val)
     
     @staticmethod
     def get_min_cluster_size_range(dataset_size: int) -> Tuple[int, int]:
@@ -234,12 +220,10 @@ def load_papers(category: str) -> List[Paper]:
     except FileNotFoundError:
         raise FileNotFoundError(f"Preprocessed papers not found at {filepath}")
 
-
 def load_text_embeddings(category: str) -> np.ndarray:
     """Load pre-computed SPECTER2 text embeddings with memory mapping."""
     filepath = f"./preprocessed/{category}/text_embeddings.npy"
     try:
-        # Use memory mapping to avoid loading entire file into memory
         return np.load(filepath, mmap_mode='r')
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
@@ -248,69 +232,37 @@ def load_text_embeddings(category: str) -> np.ndarray:
 # Parameter Suggestion Functions
 # ============================================================================
 
-def _suggest_clustering_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest HDBSCAN clustering parameters with data-size adaptive bounds."""
-    # Data-size adaptive ranges
+def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
+    """Suggest complete hyperparameter set."""
+    # Clustering parameters
     min_cluster_size_range = OptimizationConfig.get_min_cluster_size_range(dataset_size)
-    min_cluster_size = trial.suggest_int(
-        "min_cluster_size", 
-        *min_cluster_size_range
-    )
+    min_cluster_size = trial.suggest_int("min_cluster_size", *min_cluster_size_range)
     
-    # Derive min_samples from an independent multiplier to avoid dynamic search space
-    # This keeps TPE multivariate sampling effective while preserving the constraint
     min_samples_multiplier = trial.suggest_float(
         "min_samples_multiplier",
-        OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[0],
-        OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE[1]
+        *OptimizationConfig.MIN_SAMPLES_MULTIPLIER_RANGE
     )
-    # Ensure at least 1 and not exceeding min_cluster_size
     min_samples = max(1, min(int(min_cluster_size * min_samples_multiplier), min_cluster_size))
-    
-    # HDBSCAN distance metric (validated compatible metrics only)
     hdbscan_metric = trial.suggest_categorical("hdbscan_metric", OptimizationConfig.HDBSCAN_METRICS)
     
-    return min_cluster_size, min_samples, hdbscan_metric
-
-
-def _suggest_vectorization_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, List[int], int, int]:
-    """Suggest text vectorization parameters with data-size adaptive ranges."""
-    # Topic representation
+    # Vectorization parameters
     top_n_words = trial.suggest_int("top_n_words", *OptimizationConfig.TOP_N_WORDS_RANGE)
-    
-    # N-gram configuration
     ngram_range = trial.suggest_categorical("ngram_range", OptimizationConfig.NGRAM_RANGES)
     
-    # Data-size adaptive TF-IDF bounds
     min_df_range = OptimizationConfig.get_min_df_range(dataset_size)
     min_df = trial.suggest_int("min_df", *min_df_range)
     
     max_df_range = OptimizationConfig.get_max_df_range(dataset_size)
     max_df = trial.suggest_int("max_df", *max_df_range)
     
-    return top_n_words, ngram_range, min_df, max_df
-
-
-def _suggest_umap_parameters(trial: optuna.Trial, dataset_size: int) -> Tuple[int, int, str]:
-    """Suggest UMAP dimensionality reduction parameters with data-size adaptive ranges."""
-    # Data-size adaptive ranges
+    # UMAP parameters
     n_neighbors_range = OptimizationConfig.get_n_neighbors_range(dataset_size)
     n_neighbors = trial.suggest_int("n_neighbors", *n_neighbors_range)
     
     n_components_range = OptimizationConfig.get_n_components_range(dataset_size)
     n_components = trial.suggest_int("n_components", *n_components_range)
     
-    # UMAP distance metric (optimized for SPECTER2 embeddings)
     umap_metric = trial.suggest_categorical("umap_metric", OptimizationConfig.UMAP_METRICS)
-    
-    return n_neighbors, n_components, umap_metric
-
-
-def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> Hyperparameters:
-    """Suggest complete hyperparameter set with simple fixed constraints."""
-    min_cluster_size, min_samples, hdbscan_metric = _suggest_clustering_parameters(trial, dataset_size)
-    top_n_words, ngram_range, min_df, max_df = _suggest_vectorization_parameters(trial, dataset_size)
-    n_neighbors, n_components, umap_metric = _suggest_umap_parameters(trial, dataset_size)
     
     return Hyperparameters(
         top_n_words=top_n_words,
@@ -337,7 +289,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         ngram_range=tuple(params.ngram_range),
         min_df=params.min_df,
         max_df=params.max_df,
-        lowercase=False,  # Keep proper nouns for academic papers
+        lowercase=False,
         strip_accents="unicode"
     )
     
@@ -348,20 +300,17 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        low_memory=True,  # Enable low memory mode
-        #n_jobs=1  # Single thread to reduce memory usage
+        low_memory=True
     )
     
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=False,  # Disable prediction data to save memory
-        #core_dist_n_jobs=1  # Single thread to reduce memory usage
+        prediction_data=False
     )
     
     return BERTopic(
-        # nr_topics="auto",
         vectorizer_model=vectorizer_model,
         ctfidf_model=ctfidf_model,
         umap_model=umap_model,
@@ -377,122 +326,24 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
 # Evaluation Metrics
 # ============================================================================
 
-def _compute_silhouette_umap_score(
-    model: BERTopic,
-    original_embeddings: np.ndarray
-) -> float:
-    """Compute silhouette score using UMAP embedding."""
+def _get_basic_model_info(topic_info: np.ndarray) -> dict:
+    """Get basic information about the trained model with minimal memory usage."""
     try:
-        labels = model.hdbscan_model.labels_
-        
-        # Filter out noise points (-1 labels)
-        valid_mask = labels != -1
-        if np.sum(valid_mask) < 2:
-            return 0.0  # Not enough valid points
-            
-        valid_labels = labels[valid_mask]
-        
-        # Get UMAP embedding from the model
-        umap_embedding = model.umap_model.embedding_
-        if umap_embedding is None:
-            return 0.0  # UMAP embedding not available
-            
-        valid_umap_embedding = umap_embedding[valid_mask]
-        
-        # Check if we have multiple clusters
-        unique_labels = np.unique(valid_labels)
-        if len(unique_labels) < 2:
-            return 0.0  # Need at least 2 clusters for silhouette score
-        
-        # Compute silhouette score using euclidean metric on UMAP embeddings
-        # Euclidean distance is optimal for low-dimensional embeddings (5-20 dimensions)
-        silhouette_avg = silhouette_score(
-            valid_umap_embedding, 
-            valid_labels, 
-            metric='euclidean'
-        )
-        
-        # Normalize to [0, 1] range
-        silhouette_score_normalized = (silhouette_avg + 1) / 2
-        
-        return silhouette_score_normalized
-        
-    except KeyboardInterrupt:
-        raise    
-    except Exception as e:
-        print(f"Warning: Silhouette UMAP score computation failed: {e}")
-        return 0.0  # Return neutral score on error
-
-
-def _compute_dbcv_basis_score(
-    model: BERTopic,
-    original_embeddings: np.ndarray
-) -> float:
-    """Compute DBCV score using PCA with memory optimization."""
-    try:
-        labels = model.hdbscan_model.labels_
-        
-        # Filter out noise points (-1 labels)
-        valid_mask = labels != -1
-        if np.sum(valid_mask) < 2:
-            return 0.0  # Not enough valid points
-            
-        valid_labels = labels[valid_mask]
-        # Create a copy only if needed (for memory-mapped arrays)
-        if hasattr(original_embeddings, 'base'):  # memory-mapped array
-            valid_embeddings = np.array(original_embeddings[valid_mask])
-        else:
-            valid_embeddings = original_embeddings[valid_mask]
-        
-        # Check if we have multiple clusters
-        unique_labels = np.unique(valid_labels)
-        if len(unique_labels) < 2:
-            return 0.0  # Need at least 2 clusters for DBCV
-        
-        # Memory-efficient PCA: Use fewer components for large datasets
-        dataset_size = len(valid_embeddings)
-        if dataset_size > 20000:
-            pca = PCA(n_components=0.95, random_state=42)
-        else:
-            pca = PCA(n_components=0.99, random_state=42)
-        
-        projected_embeddings = pca.fit_transform(valid_embeddings)
-        
-        # Ensure float64 for HDBSCAN compatibility
-        if projected_embeddings.dtype != np.float64:
-            projected_embeddings = projected_embeddings.astype(np.float64)
-        
-        # Compute DBCV using cosine metric
-        dbcv_score = validity_index(projected_embeddings, valid_labels, metric='cosine')
-        
-        # Normalize to [0, 1] range
-        dbcv_score_normalized = (dbcv_score + 1) / 2
-        
-        # Clean up large arrays immediately
-        del projected_embeddings, valid_embeddings, pca
-        force_memory_cleanup()
-        
-        return dbcv_score_normalized
-        
-    except KeyboardInterrupt:
-        raise    
-    except Exception as e:
-        print(f"Warning: DBCV basis score computation failed: {e}")
-        return 0.0  # Return neutral score on error
-
-
-def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
-    """Get basic information about the trained model."""
-    try:
-        topic_info = model.get_topic_info()
-        valid_topics = topic_info[topic_info['Topic'] != -1]
+        # Filter out noise topics (-1) efficiently
+        valid_topics_mask = topic_info['Topic'] != -1
+        valid_topics = topic_info[valid_topics_mask]
         n_topics = len(valid_topics)
         
         if n_topics > 0:
+            # Get only the count values (small array)
             cluster_sizes = valid_topics['Count'].values
+            # Sort and get top 3 without creating large intermediate arrays
             top_sizes = np.sort(cluster_sizes)[::-1][:3]  # Top 3 largest clusters
         else:
             top_sizes = []
+        
+        # Clean up intermediate variables
+        del valid_topics, cluster_sizes
         
         return {'n_topics': n_topics, 'top_cluster_sizes': top_sizes}
     except KeyboardInterrupt:
@@ -505,35 +356,53 @@ def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
 def compute_cluster_quality_score(
     model: BERTopic, 
     original_embeddings: np.ndarray,
-    documents: List[str] = None
+    documents: List[str] = None,
+    weights: Dict[str, float] = None
 ) -> float:
-    """Compute combined clustering quality score with DBCV-based cluster shape analysis."""
+    """Compute combined clustering quality score with minimal memory usage."""
     try:
         dataset_size = len(original_embeddings)
-        basic_info = _get_basic_model_info(model, dataset_size)
         
-        # Get adaptive weights first to determine which metrics to compute
-        weights = OptimizationConfig.get_adaptive_weights(dataset_size)
+        # Extract necessary data from model first
+        labels = model.hdbscan_model.labels_
+        umap_embedding = model.umap_model.embedding_
+        topic_info = model.get_topic_info()
         
-        # Compute individual metrics only if their weights are non-zero
+        # Get basic info first (lightweight operation)
+        basic_info = _get_basic_model_info(topic_info)
+        
+        # Use provided weights or default weights
+        if weights is None:
+            weights = {
+                'cluster_shape': 0.50,
+                'clustering_quality': 0.50
+            }
+        
+        # Initialize scores
         silhouette_umap_score = 0.0
         dbcv_basis_score = 0.0
         
+        # Compute metrics only if needed (avoid unnecessary computation)
         if weights['cluster_shape'] > 0.00:
-            silhouette_umap_score = _compute_silhouette_umap_score(model, original_embeddings)
+            silhouette_umap_score = compute_silhouette_score(labels, umap_embedding)
+            # Clean up immediately after silhouette computation
+            force_memory_cleanup()
         
         if weights['clustering_quality'] > 0.00:
-            dbcv_basis_score = _compute_dbcv_basis_score(model, original_embeddings)
+            dbcv_basis_score = compute_dbcv_score(labels, original_embeddings)
+            # Clean up immediately after DBCV computation
+            force_memory_cleanup()
         
+        # Calculate final score
         final_score = (
             weights['cluster_shape'] * silhouette_umap_score +
             weights['clustering_quality'] * dbcv_basis_score
         )
         
-        # Output results
+        # Output results (minimal string operations)
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
-        # Build score and weight strings dynamically
+        # Build output strings efficiently
         score_parts = []
         weight_parts = []
             
@@ -556,6 +425,9 @@ def compute_cluster_quality_score(
         print(f"Final Score: {final_score:.4f}")
         print("-" * 60)
         
+        # Clean up all local variables
+        del basic_info, weights, score_parts, weight_parts, labels, umap_embedding, topic_info
+        
         return final_score
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
@@ -570,25 +442,9 @@ def compute_cluster_quality_score(
 # ============================================================================
 
 def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESampler:
-    """Create TPE sampler optimized for SPECTER2-based academic paper clustering.
-    
-    Optimized for BERTopic with SPECTER2 embeddings and academic paper characteristics:
-    - Dynamic startup trials: 15-20% of total trials for thorough exploration
-    - Dynamic EI candidates: Scale with dataset size and trial count
-    - multivariate=True: Essential for UMAP/HDBSCAN parameter correlations
-    - Balanced prior weight: Optimized for academic paper clustering
-    - group=False: Avoid grouping issues with mixed parameter types
-    
-    Args:
-        n_trials: Total number of trials for optimization
-        dataset_size: Size of the dataset for adaptive parameters
-    """
-    # Dynamic startup trials: 15-20% of total trials, min 10, max 20 (reduced for memory)
-    # Academic papers need more exploration due to complex topic structures
+    """Create TPE sampler optimized for clustering."""
     startup_trials = max(10, min(20, int(n_trials * 0.15)))
     
-    # Dynamic EI candidates: Scale with dataset size and trials (reduced for memory)
-    # Larger datasets need more candidates for better exploration
     if dataset_size <= 10000:
         ei_candidates = max(16, min(32, int(n_trials * 0.20)))
     elif dataset_size <= 50000:
@@ -596,40 +452,20 @@ def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESam
     else:
         ei_candidates = max(24, min(48, int(n_trials * 0.30)))
     
-    # Prior weight: Balanced for academic paper clustering
-    # Slightly higher weight for better exploration of complex topic spaces
-    prior_weight = 1.0
-    
     return TPESampler(
         n_startup_trials=startup_trials,
         n_ei_candidates=ei_candidates,
-        multivariate=True,  # Essential for UMAP/HDBSCAN correlations
-        group=False,        # Avoid grouping issues
-        prior_weight=prior_weight,
+        multivariate=True,
+        group=False,
+        prior_weight=1.0,
         warn_independent_sampling=True,
         seed=42
     )
 
-
 def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> MedianPruner:
-    """Create median pruner optimized for SPECTER2-based academic paper clustering.
-    
-    Optimized for BERTopic with SPECTER2 embeddings and academic paper characteristics:
-    - Dynamic startup trials: 15-20% of total trials for thorough exploration
-    - Extended warmup steps: Account for BERTopic's computation time and SPECTER2 embeddings
-    - Conservative pruning: Academic papers have complex topic structures requiring patience
-    - Adaptive intervals: Scale with dataset size for optimal pruning frequency
-    
-    Args:
-        n_trials: Total number of trials for optimization
-        dataset_size: Size of the dataset for adaptive parameters
-    """
-    # Dynamic startup trials: 15-20% of total trials, min 10, max 20 (reduced for memory)
-    # Academic papers need more exploration due to complex topic structures
+    """Create median pruner optimized for clustering."""
     startup_trials = max(10, min(20, int(n_trials * 0.15)))
     
-    # Dynamic warmup steps: Scale with dataset size (reduced for memory)
-    # Larger datasets take longer to converge, need more patience
     if dataset_size <= 10000:
         warmup_steps = 3
     elif dataset_size <= 50000:
@@ -637,8 +473,6 @@ def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> Medi
     else:
         warmup_steps = 7
     
-    # Dynamic intervals: Scale with dataset size (more aggressive pruning)
-    # Larger datasets need more frequent pruning checks
     if dataset_size <= 10000:
         interval_steps = 2
     elif dataset_size <= 50000:
@@ -659,9 +493,10 @@ def objective_function(
     text_embeddings: np.ndarray, 
     embedding_model: CustomEmbeddingModel
 ) -> float:
-    """Optuna objective function for hyperparameter optimization."""
+    """Optuna objective function for hyperparameter optimization with aggressive memory management."""
     dataset_size = len(texts)
     model = None
+    embeddings_copy = None
     
     try:
         # Suggest constrained hyperparameters
@@ -676,16 +511,25 @@ def objective_function(
         else:
             embeddings_copy = text_embeddings
             
+        # Fit model and get topics
         topics, _ = model.fit_transform(texts, embeddings=embeddings_copy)
         
-        # Evaluate clustering quality
-        score = compute_cluster_quality_score(model, embeddings_copy, documents=texts)
+        # Immediately clean up embeddings copy after fit_transform
+        del embeddings_copy
+        embeddings_copy = None
+        force_memory_cleanup()
+        
+        # Evaluate clustering quality (this will use the model's internal data)
+        weights = OptimizationConfig.get_adaptive_weights(dataset_size)
+        score = compute_cluster_quality_score(model, text_embeddings, documents=texts, weights=weights)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
         
-        # Clean up embeddings copy immediately
-        del embeddings_copy
+        # Immediately clean up model after evaluation
+        cleanup_bertopic_model(model)
+        del model
+        model = None
         force_memory_cleanup()
         
         return score
@@ -699,41 +543,32 @@ def objective_function(
         trial.set_user_attr("error", str(e))
         return 0.0
     finally:
-        # Clean up model and force memory cleanup
+        # Aggressive cleanup in finally block
+        if embeddings_copy is not None:
+            del embeddings_copy
         if model is not None:
             cleanup_bertopic_model(model)
             del model
-        force_memory_cleanup()  
+        force_memory_cleanup(aggressive=True)  
 
 
 # ============================================================================
 # Embedding Model Management
 # ============================================================================
 
-def create_embedding_model_with_cleanup():
-    """Create embedding model with proper memory management."""
-    try:
-        model = get_custom_embedding_model()
-        return model
-    except Exception as e:
-        print(f"Warning: Failed to create embedding model: {e}")
-        return None
+EMBEDDING_MODEL = get_custom_embedding_model()
 
-def cleanup_embedding_model(model):
-    """Clean up embedding model to free GPU memory."""
-    if model is not None:
-        try:
-            # Clear model from GPU memory
-            if hasattr(model, 'model'):
-                del model.model
-            if hasattr(model, 'tokenizer'):
-                del model.tokenizer
-            # Force GPU cleanup
-            if torch.cuda.is_available():
-                torch.cuda.empty_cache()
-                torch.cuda.synchronize()
-        except Exception:
-            pass
+def _memory_cleanup_callback(study, trial):
+    """Memory cleanup callback with monitoring."""
+    memory_info = log_memory_usage(f"Trial {trial.number}", verbose=False)
+    
+    # If memory usage is high, perform aggressive cleanup
+    if memory_info['rss_mb'] > 1500:  # More than 1.5GB
+        print(f"⚠️  High memory usage detected: {memory_info['rss_mb']:.1f} MB")
+        force_memory_cleanup(aggressive=True)
+        log_memory_usage(f"After aggressive cleanup (Trial {trial.number})", verbose=False)
+    else:
+        force_memory_cleanup()
 
 # ============================================================================
 # Main Optimization Pipeline
@@ -753,7 +588,7 @@ def optimize_category_clustering(
     
     papers = load_papers(category)
     text_embeddings = load_text_embeddings(category)  # Now uses memory mapping
-    embedding_model = create_embedding_model_with_cleanup()  # Create fresh instance per category
+    embedding_model = EMBEDDING_MODEL
     
     if embedding_model is None:
         print(f"❌ Failed to create embedding model for category: {category}")
@@ -826,9 +661,9 @@ def optimize_category_clustering(
             show_progress_bar=True,
             catch=(ValueError, RuntimeError, MemoryError),
             callbacks=[
-                # Enhanced memory cleanup callback every 5 trials
+                # Enhanced memory cleanup callback every 3 trials with memory monitoring
                 lambda study, trial: (
-                    force_memory_cleanup() if trial.number % 5 == 0 and trial.number > 0 else None
+                    _memory_cleanup_callback(study, trial) if trial.number % 3 == 0 and trial.number > 0 else None
                 )
             ]
         )
@@ -843,9 +678,9 @@ def optimize_category_clustering(
         print(f"❌ Optimization error: {e}")
     finally:
         # Enhanced cleanup after optimization
-        cleanup_embedding_model(embedding_model)
+        print("🧹 Performing final memory cleanup...")
         del texts, text_embeddings, embedding_model
-        force_memory_cleanup()
+        force_memory_cleanup(aggressive=True)
         log_memory_usage("After optimization cleanup")
     
     return study
@@ -914,16 +749,6 @@ def process_one_category(category: str):
 
 
 if __name__ == "__main__":
-    # TODO: use logging
-    # TODO: better memory cleanup
-    # TODO: better exception handling especially for keyboard interrupt
-    # TODO: abstruct score metrics
-    # TODO: external config
-    # TODO: save embeddings to DB
-    # TODO: save params to DB
-    # TODO: load papers from DB
-    # TODO: save results to DB
-
     print("=" * 80)
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
@@ -949,13 +774,11 @@ if __name__ == "__main__":
                 process_one_category(category)
                 print(f"✅ Completed category: {category}")
             except KeyboardInterrupt:
-                # Re-raise KeyboardInterrupt to be caught by outer try-except
                 raise
             except Exception as e:
                 print(f"❌ Failed category {category}: {e}")
                 continue
                 
-            # Simple cleanup between categories
             force_memory_cleanup()
             
     except KeyboardInterrupt:
