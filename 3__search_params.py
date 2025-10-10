@@ -52,7 +52,40 @@ def force_memory_cleanup():
     gc.collect()
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
+        torch.cuda.synchronize()
     gc.collect()
+
+def cleanup_bertopic_model(model):
+    """Clean up BERTopic model internal data to prevent memory leaks."""
+    try:
+        # Clear UMAP embedding
+        if hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
+            model.umap_model.embedding_ = None
+        
+        # Clear HDBSCAN labels
+        if hasattr(model, 'hdbscan_model') and hasattr(model.hdbscan_model, 'labels_'):
+            model.hdbscan_model.labels_ = None
+        
+        # Clear vectorizer internal data
+        if hasattr(model, 'vectorizer_model'):
+            if hasattr(model.vectorizer_model, 'vocabulary_'):
+                model.vectorizer_model.vocabulary_ = None
+            if hasattr(model.vectorizer_model, 'stop_words_'):
+                model.vectorizer_model.stop_words_ = None
+        
+        # Clear c-TF-IDF model data
+        if hasattr(model, 'ctfidf_model'):
+            if hasattr(model.ctfidf_model, 'idf_'):
+                model.ctfidf_model.idf_ = None
+        
+        # Clear topic data
+        if hasattr(model, 'topics_'):
+            model.topics_ = None
+        if hasattr(model, 'probabilities_'):
+            model.probabilities_ = None
+            
+    except Exception:
+        pass  # Ignore cleanup errors
 
 # ============================================================================
 # Configuration
@@ -66,13 +99,13 @@ class OptimizationConfig:
     def get_default_n_trials(dataset_size: int) -> int:
         """Get number of trials based on dataset size with memory optimization."""
         if dataset_size <= 5000:
-            return 30  # Reduced from 50
+            return 20  # Reduced from 30
         elif dataset_size <= 20000:
-            return 60  # Reduced from 100
-        elif dataset_size <= 50000:
-            return 80  # Reduced from 150
+            return 40  # Reduced from 60
+        elif dataset_size <= 30000:
+            return 50  # Reduced from 80
         else:
-            return 100  # Reduced from 200
+            return 60  # Reduced from 100
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
@@ -335,51 +368,6 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
 # Evaluation Metrics
 # ============================================================================
 
-
-def _compute_noise_ratio_score(
-    model: BERTopic
-) -> float:
-    """Compute noise ratio score based on outlier detection evaluation.
-    
-    Noise ratio measures the proportion of documents classified as noise/outliers.
-    Lower noise ratio indicates better clustering performance with fewer outliers.
-    
-    Formula: noise_ratio = noise_points / total_points
-    Score: 1 - noise_ratio (higher is better)
-    
-    Args:
-        model: Trained BERTopic model
-        
-    Returns:
-        Noise ratio score in range [0, 1] where 1 indicates 0% noise (perfect coverage)
-    """
-    try:
-        labels = model.hdbscan_model.labels_
-        total_docs = len(labels)
-        
-        if total_docs == 0:
-            return 0.0  # No documents to cluster
-        
-        # Count noise points (HDBSCAN assigns -1 to noise/outliers)
-        noise_docs = (labels == -1).sum()
-        noise_ratio = noise_docs / total_docs
-        
-        # Convert to score (lower noise ratio = higher score)
-        # Apply log transformation for smoother scaling of coverage score
-        # coverage_score = 1.0 - noise_ratio gives [0, 1] range
-        # Apply log transformation: log(1 + x) / log(2) for smoother scaling
-        raw_coverage_score = 1.0 - noise_ratio
-        coverage_score = np.log(1 + raw_coverage_score) / np.log(2)
-        
-        return coverage_score
-    
-    except KeyboardInterrupt:
-        # Re-raise KeyboardInterrupt to be caught by outer try-except
-        raise    
-    except Exception as e:
-        print(f"Warning: Noise ratio score computation failed: {e}")
-        return 0.0
-
 def _compute_silhouette_umap_score(
     model: BERTopic,
     original_embeddings: np.ndarray
@@ -421,25 +409,17 @@ def _compute_silhouette_umap_score(
         return silhouette_score_normalized
         
     except KeyboardInterrupt:
-        # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
         print(f"Warning: Silhouette UMAP score computation failed: {e}")
         return 0.0  # Return neutral score on error
-    finally:
-        # Aggressive cleanup of local variables
-        local_vars = ['umap_embedding', 'valid_umap_embedding', 'valid_labels', 'valid_mask', 'labels', 'unique_labels']
-        for var in local_vars:
-            if var in locals():
-                del locals()[var]
-        force_memory_cleanup()
 
 
 def _compute_dbcv_basis_score(
     model: BERTopic,
     original_embeddings: np.ndarray
 ) -> float:
-    """Compute DBCV score using PCA."""
+    """Compute DBCV score using PCA with memory optimization."""
     try:
         labels = model.hdbscan_model.labels_
         
@@ -455,10 +435,16 @@ def _compute_dbcv_basis_score(
         unique_labels = np.unique(valid_labels)
         if len(unique_labels) < 2:
             return 0.0  # Need at least 2 clusters for DBCV
-    
         
-        # Apply PCA with 95% variance retention
-        pca = PCA(n_components=0.95, random_state=42)
+        # Memory-efficient PCA: Use fewer components for large datasets
+        dataset_size = len(valid_embeddings)
+        if dataset_size > 20000:
+            # For large datasets, use fixed number of components to save memory
+            pca = PCA(n_components=0.90, random_state=42)
+        else:
+            # For smaller datasets, use variance-based PCA
+            pca = PCA(n_components=0.99, random_state=42)
+        
         projected_embeddings = pca.fit_transform(valid_embeddings)
         
         # Ensure float64 for HDBSCAN compatibility
@@ -471,21 +457,16 @@ def _compute_dbcv_basis_score(
         # Normalize to [0, 1] range
         dbcv_score_normalized = (dbcv_score + 1) / 2
         
+        # Clean up large arrays immediately
+        del projected_embeddings, valid_embeddings, pca
+        
         return dbcv_score_normalized
         
     except KeyboardInterrupt:
-        # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
         print(f"Warning: DBCV basis score computation failed: {e}")
         return 0.0  # Return neutral score on error
-    finally:
-        # Aggressive cleanup of local variables
-        local_vars = ['projected_embeddings', 'valid_embeddings', 'valid_labels', 'unique_labels', 'valid_mask', 'labels', 'pca']
-        for var in local_vars:
-            if var in locals():
-                del locals()[var]
-        force_memory_cleanup()
 
 
 def _get_basic_model_info(model: BERTopic, dataset_size: int) -> dict:
@@ -694,7 +675,10 @@ def objective_function(
         trial.set_user_attr("error", str(e))
         return 0.0
     finally:
-        # Simple cleanup
+        # Clean up model and force memory cleanup
+        if 'model' in locals() and model is not None:
+            cleanup_bertopic_model(model)
+            del model
         force_memory_cleanup()  
 
 
@@ -723,9 +707,9 @@ def optimize_category_clustering(
     texts = [embedding_model.get_input_text(paper) for paper in papers]
     dataset_size = len(texts)
 
-    if dataset_size > 50000:
-        print(f"⚠️  Dataset size is too large for category: {category}")
-        return None
+    # if dataset_size > 30000:  # Reduced from 50000 to 30000 for better memory management
+    #     print(f"⚠️  Dataset size is too large for category: {category} ({dataset_size:,} documents)")
+    #     return None
     
     # Simple cleanup
     del papers
@@ -772,7 +756,13 @@ def optimize_category_clustering(
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(ValueError, RuntimeError, MemoryError)
+            catch=(ValueError, RuntimeError, MemoryError),
+            callbacks=[
+                # Memory cleanup callback every 10 trials
+                lambda study, trial: (
+                    force_memory_cleanup() if trial.number % 10 == 0 and trial.number > 0 else None
+                )
+            ]
         )
         
         # Display results
