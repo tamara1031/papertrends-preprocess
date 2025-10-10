@@ -59,10 +59,10 @@ def compute_dbcv_score(
     if len(unique_labels) < 2:
         raise ValueError("Need at least 2 clusters for DBCV score calculation")
 
-    valid_embeddings = embeddings[valid_mask]
+    valid_embeddings = embeddings[valid_mask].astype(np.float64)
     
     # Compute DBCV using cosine metric
-    dbcv_score = validity_index(valid_embeddings, valid_labels, metric='euclidean')
+    dbcv_score = validity_index(valid_embeddings, valid_labels,  metric='euclidean')
     
     return dbcv_score
 

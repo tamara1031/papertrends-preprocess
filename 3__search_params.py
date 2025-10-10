@@ -119,13 +119,6 @@ class OptimizationConfig:
         else:
             return 240
     
-    @staticmethod
-    def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
-        """Get balanced weights for both metrics (scores in [-1, 1] range)."""
-        return {
-            'cluster_shape': 0.5,
-            'clustering_quality': 0.5
-        }
     
     @staticmethod
     def get_min_df_range(dataset_size: int) -> Tuple[int, int]:
@@ -351,31 +344,19 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
 
 def compute_cluster_quality_score(
     labels: np.ndarray,
-    embedding: np.ndarray,
-    weights: Dict[str, float]
+    embedding: np.ndarray
 ) -> float:
-    """Compute combined clustering quality score with minimal memory usage."""
+    """Compute DBCV clustering quality score with minimal memory usage."""
     try:
-        # Compute metrics
-        silhouette_score = compute_silhouette_score(labels, embedding)
-        force_memory_cleanup()
-        
+        # Compute DBCV score only
         dbcv_score = compute_dbcv_score(labels, embedding)
         force_memory_cleanup()
         
-        # Calculate final score
-        final_score = (
-            weights['cluster_shape'] * silhouette_score +
-            weights['clustering_quality'] * dbcv_score
-        )
-        
         # Output results
-        print(f"Scores - Silhouette: {silhouette_score:.4f}, DBCV: {dbcv_score:.4f}")
-        print(f"Weights - Silhouette: {weights['cluster_shape']:.1%}, DBCV: {weights['clustering_quality']:.1%}")
-        print(f"Final Score: {final_score:.4f}")
+        print(f"DBCV Score: {dbcv_score:.4f}")
         print("-" * 60)
         
-        return final_score
+        return dbcv_score
     except KeyboardInterrupt:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise
@@ -450,9 +431,6 @@ def objective_function(
         # Fit model
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
-        # Evaluate clustering quality
-        weights = OptimizationConfig.get_adaptive_weights(len(texts))
-        
         # Extract necessary data from model
         labels = model.hdbscan_model.labels_
         umap_embedding = model.umap_model.embedding_
@@ -468,7 +446,8 @@ def objective_function(
         basic_info = _get_basic_model_info(topic_info)
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
-        score = compute_cluster_quality_score(labels, umap_embedding, weights)
+        # Evaluate clustering quality using DBCV only
+        score = compute_cluster_quality_score(labels, umap_embedding)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
