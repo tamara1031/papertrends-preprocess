@@ -26,7 +26,7 @@ from hdbscan import HDBSCAN, validity_index
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
-from memory_utils import (
+from common.memory_utils import (
     log_memory_usage, force_memory_cleanup, check_memory_threshold,
     get_dataset_memory_estimate, recommend_dataset_limit
 )
