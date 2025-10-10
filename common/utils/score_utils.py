@@ -22,7 +22,7 @@ def compute_silhouette_score(
         
     # Extract only valid data
     valid_labels = labels[valid_mask]
-    valid_embeddings = embeddings[valid_mask].astype(np.float64)
+    valid_embeddings = embeddings[valid_mask]
     
     # Check if we have multiple clusters
     unique_labels = np.unique(valid_labels)
@@ -59,10 +59,10 @@ def compute_dbcv_score(
     if len(unique_labels) < 2:
         raise ValueError("Need at least 2 clusters for DBCV score calculation")
 
-    valid_embeddings = embeddings[valid_mask].astype(np.float64)
+    valid_embeddings = embeddings[valid_mask]
     
     # Compute DBCV using cosine metric
-    dbcv_score = validity_index(valid_embeddings, valid_labels, metric='cosine')
+    dbcv_score = validity_index(valid_embeddings, valid_labels, metric='euclidean')
     
     return dbcv_score
 
