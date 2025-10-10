@@ -77,11 +77,11 @@ def load_papers(category: str) -> List[Paper]:
 
 
 def load_text_embeddings(category: str) -> np.ndarray:
-    """Load pre-computed SPECTER2 text embeddings."""
+    """Load pre-computed SPECTER2 text embeddings with memory mapping."""
     filepath = f"./preprocessed/{category}/text_embeddings.npy"
     try:
-        with open(filepath, "rb") as f:
-            return np.load(f)
+        # Use memory mapping to avoid loading entire file into memory
+        return np.load(filepath, mmap_mode='r')
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
@@ -103,14 +103,14 @@ def create_model(params: Hyperparameters) -> BERTopic:
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        low_memory=False
+        low_memory=True  # Enable low memory mode
     )
     
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=True
+        prediction_data=False  # Disable prediction data to save memory
     )
 
     # representations(topic名、代表単語が変わる)
@@ -170,7 +170,7 @@ def process_one_category(category: str):
 
     # 前処理済データを取得
     papers = load_papers(category)   
-    text_embeddings = load_text_embeddings(category)
+    text_embeddings = load_text_embeddings(category)  # Now uses memory mapping
     texts = [EMBEDDING_MODEL.get_input_text(paper) for paper in papers]
     del papers
     gc.collect()

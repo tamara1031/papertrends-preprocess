@@ -26,6 +26,10 @@ from hdbscan import HDBSCAN, validity_index
 
 from common.domain.dto import Paper
 from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
+from memory_utils import (
+    log_memory_usage, force_memory_cleanup, check_memory_threshold,
+    get_dataset_memory_estimate, recommend_dataset_limit
+)
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
@@ -37,23 +41,7 @@ warnings.filterwarnings('ignore', message='invalid value encountered')
 # Memory Management
 # ============================================================================
 
-def get_memory_usage():
-    """Get current memory usage in MB."""
-    process = psutil.Process(os.getpid())
-    return process.memory_info().rss / 1024 / 1024
-
-def log_memory_usage(stage: str):
-    """Log memory usage at different stages."""
-    memory_mb = get_memory_usage()
-    print(f"🧠 Memory usage at {stage}: {memory_mb:.1f} MB")
-
-def force_memory_cleanup():
-    """Simple memory cleanup."""
-    gc.collect()
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
-        torch.cuda.synchronize()
-    gc.collect()
+# Memory management functions are now imported from memory_utils
 
 def cleanup_bertopic_model(model):
     """Clean up BERTopic model internal data to prevent memory leaks."""
@@ -62,9 +50,16 @@ def cleanup_bertopic_model(model):
         if hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
             model.umap_model.embedding_ = None
         
-        # Clear HDBSCAN labels
-        if hasattr(model, 'hdbscan_model') and hasattr(model.hdbscan_model, 'labels_'):
-            model.hdbscan_model.labels_ = None
+        # Clear HDBSCAN labels and other data
+        if hasattr(model, 'hdbscan_model'):
+            if hasattr(model.hdbscan_model, 'labels_'):
+                model.hdbscan_model.labels_ = None
+            if hasattr(model.hdbscan_model, 'cluster_persistence_'):
+                model.hdbscan_model.cluster_persistence_ = None
+            if hasattr(model.hdbscan_model, 'condensed_tree_'):
+                model.hdbscan_model.condensed_tree_ = None
+            if hasattr(model.hdbscan_model, 'minimum_spanning_tree_'):
+                model.hdbscan_model.minimum_spanning_tree_ = None
         
         # Clear vectorizer internal data
         if hasattr(model, 'vectorizer_model'):
@@ -72,17 +67,31 @@ def cleanup_bertopic_model(model):
                 model.vectorizer_model.vocabulary_ = None
             if hasattr(model.vectorizer_model, 'stop_words_'):
                 model.vectorizer_model.stop_words_ = None
+            if hasattr(model.vectorizer_model, 'idf_'):
+                model.vectorizer_model.idf_ = None
         
         # Clear c-TF-IDF model data
         if hasattr(model, 'ctfidf_model'):
             if hasattr(model.ctfidf_model, 'idf_'):
                 model.ctfidf_model.idf_ = None
+            if hasattr(model.ctfidf_model, 'X_'):
+                model.ctfidf_model.X_ = None
         
         # Clear topic data
         if hasattr(model, 'topics_'):
             model.topics_ = None
         if hasattr(model, 'probabilities_'):
             model.probabilities_ = None
+        if hasattr(model, 'topic_embeddings_'):
+            model.topic_embeddings_ = None
+        if hasattr(model, 'topic_labels_'):
+            model.topic_labels_ = None
+            
+        # Clear document data
+        if hasattr(model, 'documents_'):
+            model.documents_ = None
+        if hasattr(model, 'embeddings_'):
+            model.embeddings_ = None
             
     except Exception:
         pass  # Ignore cleanup errors
@@ -227,11 +236,11 @@ def load_papers(category: str) -> List[Paper]:
 
 
 def load_text_embeddings(category: str) -> np.ndarray:
-    """Load pre-computed SPECTER2 text embeddings."""
+    """Load pre-computed SPECTER2 text embeddings with memory mapping."""
     filepath = f"./preprocessed/{category}/text_embeddings.npy"
     try:
-        with open(filepath, "rb") as f:
-            return np.load(f)
+        # Use memory mapping to avoid loading entire file into memory
+        return np.load(filepath, mmap_mode='r')
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
@@ -429,7 +438,11 @@ def _compute_dbcv_basis_score(
             return 0.0  # Not enough valid points
             
         valid_labels = labels[valid_mask]
-        valid_embeddings = original_embeddings[valid_mask]
+        # Create a copy only if needed (for memory-mapped arrays)
+        if hasattr(original_embeddings, 'base'):  # memory-mapped array
+            valid_embeddings = np.array(original_embeddings[valid_mask])
+        else:
+            valid_embeddings = original_embeddings[valid_mask]
         
         # Check if we have multiple clusters
         unique_labels = np.unique(valid_labels)
@@ -459,6 +472,7 @@ def _compute_dbcv_basis_score(
         
         # Clean up large arrays immediately
         del projected_embeddings, valid_embeddings, pca
+        force_memory_cleanup()
         
         return dbcv_score_normalized
         
@@ -649,6 +663,7 @@ def objective_function(
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
     dataset_size = len(texts)
+    model = None
     
     try:
         # Suggest constrained hyperparameters
@@ -656,13 +671,24 @@ def objective_function(
         
         # Create and train model
         model = create_bertopic_model(params, embedding_model)
-        topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
+        
+        # For memory-mapped embeddings, create a copy only for this trial
+        if hasattr(text_embeddings, 'base'):  # memory-mapped array
+            embeddings_copy = np.array(text_embeddings)
+        else:
+            embeddings_copy = text_embeddings
+            
+        topics, _ = model.fit_transform(texts, embeddings=embeddings_copy)
         
         # Evaluate clustering quality
-        score = compute_cluster_quality_score(model, text_embeddings, documents=texts)
+        score = compute_cluster_quality_score(model, embeddings_copy, documents=texts)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
+        
+        # Clean up embeddings copy immediately
+        del embeddings_copy
+        force_memory_cleanup()
         
         return score
     
@@ -676,17 +702,44 @@ def objective_function(
         return 0.0
     finally:
         # Clean up model and force memory cleanup
-        if 'model' in locals() and model is not None:
+        if model is not None:
             cleanup_bertopic_model(model)
             del model
         force_memory_cleanup()  
 
 
 # ============================================================================
-# Main Optimization Pipeline
+# Embedding Model Management
 # ============================================================================
 
-EMBEDDING_MODEL = get_custom_embedding_model()
+def create_embedding_model_with_cleanup():
+    """Create embedding model with proper memory management."""
+    try:
+        model = get_custom_embedding_model()
+        return model
+    except Exception as e:
+        print(f"Warning: Failed to create embedding model: {e}")
+        return None
+
+def cleanup_embedding_model(model):
+    """Clean up embedding model to free GPU memory."""
+    if model is not None:
+        try:
+            # Clear model from GPU memory
+            if hasattr(model, 'model'):
+                del model.model
+            if hasattr(model, 'tokenizer'):
+                del model.tokenizer
+            # Force GPU cleanup
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+                torch.cuda.synchronize()
+        except Exception:
+            pass
+
+# ============================================================================
+# Main Optimization Pipeline
+# ============================================================================
 
 def optimize_category_clustering(
     category: str, 
@@ -701,20 +754,37 @@ def optimize_category_clustering(
     log_memory_usage("Before data loading")
     
     papers = load_papers(category)
-    text_embeddings = load_text_embeddings(category)
-    embedding_model = EMBEDDING_MODEL
+    text_embeddings = load_text_embeddings(category)  # Now uses memory mapping
+    embedding_model = create_embedding_model_with_cleanup()  # Create fresh instance per category
+    
+    if embedding_model is None:
+        print(f"❌ Failed to create embedding model for category: {category}")
+        return None
     
     texts = [embedding_model.get_input_text(paper) for paper in papers]
     dataset_size = len(texts)
 
-    # if dataset_size > 30000:  # Reduced from 50000 to 30000 for better memory management
-    #     print(f"⚠️  Dataset size is too large for category: {category} ({dataset_size:,} documents)")
-    #     return None
-    
-    # Simple cleanup
+    # Enhanced memory management
     del papers
     force_memory_cleanup()
     log_memory_usage("After data loading")
+    
+    # Enhanced memory safety check with dynamic limits
+    memory_info = log_memory_usage("After data loading", verbose=False)
+    available_memory = memory_info['available_mb']
+    # recommended_limit = recommend_dataset_limit(available_memory)
+    
+    # if dataset_size > recommended_limit:
+    #     print(f"⚠️  Dataset size exceeds memory limit for category: {category}")
+    #     print(f"   • Dataset size: {dataset_size:,} documents")
+    #     print(f"   • Recommended limit: {recommended_limit:,} documents")
+    #     print(f"   • Available memory: {available_memory:.1f} MB")
+    #     print(f"💡 Consider using a subset or increasing system memory")
+    #     return None
+    
+    # Estimate memory requirements
+    memory_estimate = get_dataset_memory_estimate(dataset_size)
+    print(f"📊 Memory estimate: {memory_estimate['total_estimated_mb']:.1f} MB")
     
     print(f"📊 Dataset size: {dataset_size:,} documents")
     print(f"🧠 Using SPECTER2 Proximity adapter (110M parameters)")
@@ -758,9 +828,9 @@ def optimize_category_clustering(
             show_progress_bar=True,
             catch=(ValueError, RuntimeError, MemoryError),
             callbacks=[
-                # Memory cleanup callback every 10 trials
+                # Enhanced memory cleanup callback every 5 trials
                 lambda study, trial: (
-                    force_memory_cleanup() if trial.number % 10 == 0 and trial.number > 0 else None
+                    force_memory_cleanup() if trial.number % 5 == 0 and trial.number > 0 else None
                 )
             ]
         )
@@ -774,7 +844,9 @@ def optimize_category_clustering(
     except Exception as e:
         print(f"❌ Optimization error: {e}")
     finally:
-        # Simple cleanup after optimization
+        # Enhanced cleanup after optimization
+        cleanup_embedding_model(embedding_model)
+        del texts, text_embeddings, embedding_model
         force_memory_cleanup()
         log_memory_usage("After optimization cleanup")
     
