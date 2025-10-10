@@ -563,7 +563,7 @@ def optimize_category_clustering(
             timeout=timeout,
             gc_after_trial=True,
             show_progress_bar=True,
-            catch=(ValueError, RuntimeError, MemoryError, KeyboardInterrupt),
+            catch=(ValueError, RuntimeError, MemoryError),
             callbacks=[_memory_cleanup_callback] if n_trials > 10 else []
         )
         
@@ -666,7 +666,6 @@ if __name__ == "__main__":
                 process_one_category(category)
                 print(f"✅ Completed category: {category}")
             except KeyboardInterrupt:
-                print(f"\n⚠️  KeyboardInterrupt in category {category}")
                 raise
             except Exception as e:
                 print(f"❌ Failed category {category}: {e}")
