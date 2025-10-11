@@ -1,10 +1,4 @@
-tqdm
-sqlalchemy
-arxiv
-pymysql
-cryptography
-
-bertopic[spacy]
-adapters
-
 optuna
+bertopic[spacy]
+
+git+https://github.com/tamara1031/papertrends-dataset.git#subdirectory=papertrends_dataset_lib
