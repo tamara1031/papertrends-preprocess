@@ -2,6 +2,7 @@ from typing import List, Tuple, Any, Optional, Dict, Union
 from dataclasses import dataclass
 
 import os
+from pathlib import Path
 
 import json
 from tqdm import tqdm
@@ -32,24 +33,45 @@ EMBEDDING_MODEL = Specter2Embedder(device=device)
 # Data Management
 # ============================================================================
 
-def load_papers(category: str, subcategory: str) -> List[Paper]:
-    """Load preprocessed papers for a given arXiv category/subcategory."""
-    filepath = f"./dataset/{category}/{subcategory}/papers.pkl"
-    try:
-        with open(filepath, "rb") as f:
-            return pickle.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Preprocessed papers not found at {filepath}")
+def load_texts(category: str, subcategory: str) -> List[str]:
+    """
+    Load preprocessed paper titles for a given arXiv category/subcategory
+    from the ./dataset directory.
 
+    Args:
+        category (str): Top-level arXiv category.
+        subcategory (str): Subcategory.
+
+    Returns:
+        List[str]: List of paper titles. If not found, returns an empty list.
+    """
+    base_dir = Path("./dataset") / category / subcategory
+    titles_path = base_dir / "titles.pkl"
+    abstracts_path = base_dir / "abstracts.pkl"
+    
+    if not titles_path.exists() or not abstracts_path.exists():
+        print(f"Dataset files not found for {category}/{subcategory}")
+        return []
+    
+    with open(titles_path, "rb") as f:
+        titles = pickle.load(f)
+    with open(abstracts_path, "rb") as f:
+        abstracts = pickle.load(f)
+    
+    return [EMBEDDING_MODEL.get_input_text(title, abstract) for title, abstract in zip(titles, abstracts)]
 
 def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
-    """Load pre-computed SPECTER2 text embeddings."""
-    filepath = f"./dataset/{category}/{subcategory}/embeddings.pkl"
-    try:
-        with open(filepath, "rb") as f:
-            return pickle.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Text embeddings not found at {filepath}")
+    """Load text embeddings for a category/subcategory."""
+    base_dir = Path("./dataset") / category / subcategory
+    embeddings_path = base_dir / "embeddings.pkl"
+    
+    if not embeddings_path.exists():
+        print(f"Embeddings file not found for {category}/{subcategory}")
+        return np.array([])
+    
+    with open(embeddings_path, "rb") as f:
+        embeddings = pickle.load(f)
+    return embeddings
 
 def create_model(params: Hyperparameters) -> BERTopic:
     vectorizer_model = CountVectorizer(
@@ -76,7 +98,7 @@ def create_model(params: Hyperparameters) -> BERTopic:
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=False  # Disable prediction data to save memory
+        prediction_data=True  # Disable prediction data to save memory
     )
 
     # representations(topic名、代表単語が変わる)
@@ -136,11 +158,8 @@ def process_one_category(category: str, subcategory: str):
         return
 
     # 前処理済データを取得
-    papers = load_papers(category, subcategory)   
+    texts = load_texts(category, subcategory)
     text_embeddings = load_text_embeddings(category, subcategory)
-    texts = [EMBEDDING_MODEL.get_input_text(paper.title, paper.abstract) for paper in papers]
-    del papers
-    gc.collect()
 
     # パラメータを取得
     param_path = f"./params/{category}/{subcategory}/best_params.json"
@@ -161,7 +180,7 @@ def process_one_category(category: str, subcategory: str):
         pickle.dump(representative_docs, f)
 
 if __name__ == "__main__":
-    category = "cs.AR"
-    subcategory = "AR"  # サブカテゴリを指定
+    category = "cs"
+    subcategory = "cs.AR"  # サブカテゴリを指定
     process_one_category(category, subcategory)
 
