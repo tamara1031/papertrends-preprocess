@@ -17,8 +17,8 @@ def load_papers(category: str, subcategory: str):
     return papers
 
 if __name__ == "__main__":
-    category = "cs.AR"
-    subcategory = "AR"  # サブカテゴリを指定
+    category = "cs"
+    subcategory = "cs.AR"  # サブカテゴリを指定
     model = load_model(category, subcategory)
     vis = model.visualize_topics()
     vis.show()
