@@ -41,7 +41,6 @@ def save_dataset(category_name: str, subcategory: str, papers: List[Paper]):
     
     # Extract data
     ids = [paper.id for paper in papers]
-    arxiv_ids = [paper.arxiv_id for paper in papers]
     titles = [paper.title for paper in papers]
     abstracts = [paper.abstract for paper in papers]
     published_dates = [paper.published for paper in papers]
@@ -49,9 +48,7 @@ def save_dataset(category_name: str, subcategory: str, papers: List[Paper]):
     
     # Save files
     files_to_save = {
-        'papers.pkl': papers,  # 元のPaperオブジェクトも保存
         'ids.pkl': ids,
-        'arxiv_ids.pkl': arxiv_ids,
         'titles.pkl': titles,
         'abstracts.pkl': abstracts,
         'published_dates.pkl': published_dates,
