@@ -19,9 +19,6 @@ from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
 from utils.custom_embedder import Specter2Embedder
 from utils.memory_utils import force_memory_cleanup
 from utils.score_utils import compute_silhouette_score, compute_dbcv_score
