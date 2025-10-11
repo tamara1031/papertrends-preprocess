@@ -161,13 +161,13 @@ class OptimizationConfig:
     
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get number of trials based on dataset size."""
+        """Get number of trials based on dataset size with increased trials for diversity."""
         if dataset_size <= 5000:
-            return 30  # 増加
+            return 50  # 30 → 50に増加
         elif dataset_size <= 20000:
-            return 50  # 増加
+            return 80  # 50 → 80に増加
         else:
-            return 80  # 増加
+            return 120  # 80 → 120に増加
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
@@ -384,24 +384,24 @@ def compute_cluster_quality_score(
 # ============================================================================
 
 def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESampler:
-    """Create TPE sampler optimized for clustering."""
-    # より効率的なstartup_trials設定（ランダム探索を減らし、TPE探索を早く開始）
-    startup_trials = max(5, min(15, int(n_trials * 0.10)))
+    """Create TPE sampler optimized for clustering with increased random walk."""
+    # ランダムウォークを大幅に増やして多様性を確保
+    startup_trials = max(15, min(30, int(n_trials * 0.25)))  # 10% → 25%に大幅増加
     
-    # ei_candidatesを増やして探索効率を向上
+    # ei_candidatesを適度に調整（多様性と効率のバランス）
     if dataset_size <= 10000:
-        ei_candidates = max(24, min(50, int(n_trials * 0.30)))
+        ei_candidates = max(24, min(40, int(n_trials * 0.25)))
     elif dataset_size <= 50000:
-        ei_candidates = max(24, min(60, int(n_trials * 0.35)))
+        ei_candidates = max(24, min(50, int(n_trials * 0.30)))
     else:
-        ei_candidates = max(24, min(70, int(n_trials * 0.40)))
+        ei_candidates = max(24, min(60, int(n_trials * 0.35)))
     
     return TPESampler(
         n_startup_trials=startup_trials,
         n_ei_candidates=ei_candidates,
         multivariate=True,
         group=False,
-        prior_weight=1.5,  # より強い事前分布の重み
+        prior_weight=1.0,  # より強い事前分布の重み
         warn_independent_sampling=True,
         seed=42
     )
