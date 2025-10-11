@@ -10,10 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from datetime import date
 import pickle
-import numpy as np
 from tqdm import tqdm
-
-from utils.custom_embedder import Specter2Embedder
 
 # ============================================================================
 # Hyperparameters
