@@ -407,20 +407,20 @@ def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESam
     )
 
 def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> MedianPruner:
-    """Create median pruner optimized for clustering."""
-    # startup_trialsを減らして早期停止を早く開始
-    startup_trials = max(5, min(15, int(n_trials * 0.10)))
+    """Create median pruner with delayed pruning for more exploration."""
+    # startup_trialsを増やしてプルーニング開始を遅らせる
+    startup_trials = max(20, min(40, int(n_trials * 0.30)))
     
-    # warmup_stepsを減らしてより早くプルーニングを開始
+    # warmup_stepsを適度に増やしてプルーニング判定を遅らせる
     if dataset_size <= 10000:
-        warmup_steps = 2
+        warmup_steps = 6  # 10 → 6に調整
     elif dataset_size <= 50000:
-        warmup_steps = 3
+        warmup_steps = 8  # 15 → 8に調整
     else:
-        warmup_steps = 4
+        warmup_steps = 10  # 20 → 10に調整
     
-    # interval_stepsを1に固定してより頻繁にプルーニング判定
-    interval_steps = 1
+    # interval_stepsを増やしてプルーニング判定頻度を下げる
+    interval_steps = 3  # 1 → 3に増加
     
     return MedianPruner(
         n_startup_trials=startup_trials,
