@@ -1,5 +1,5 @@
 from .custom_embedder import (
-    CustomEmbedder
+    Specter2Embedder
 )
 
 from .memory_utils import (
@@ -13,8 +13,13 @@ from .score_utils import (
     compute_dbcv_score
 )
 
+from .hyperparameter import (
+    Hyperparameters
+)
+
 __all__ = [
-    'CustomEmbedder',
+    'Specter2Embedder',
+    'Hyperparameters',
     'force_memory_cleanup',
     'get_memory_usage',
     'log_memory_usage',
