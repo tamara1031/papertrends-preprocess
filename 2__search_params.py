@@ -69,7 +69,7 @@ def load_texts(category: str, subcategory: str) -> List[str]:
     abstracts_path = base_dir / "abstracts.pkl"
     
     if not titles_path.exists() or not abstracts_path.exists():
-        print(f"Warning: Dataset files not found for {category}/{subcategory}")
+        print(f"Dataset files not found for {category}/{subcategory}")
         return []
     
     with open(titles_path, "rb") as f:
@@ -85,7 +85,7 @@ def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
     embeddings_path = base_dir / "embeddings.pkl"
     
     if not embeddings_path.exists():
-        print(f"Warning: Embeddings file not found for {category}/{subcategory}")
+        print(f"Embeddings file not found for {category}/{subcategory}")
         return np.array([])
     
     with open(embeddings_path, "rb") as f:
@@ -410,7 +410,7 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Warning: Failed to get basic model info: {e}")
+        print(f"Failed to get basic model info: {e}")
         return {'n_topics': 0, 'top_cluster_sizes': []}
 
 def compute_cluster_quality_score(
@@ -434,10 +434,7 @@ def compute_cluster_quality_score(
         )
         
         # Output results
-        print(f"Scores - Silhouette: {silhouette_score:.4f}, DBCV: {dbcv_score:.4f}")
-        print(f"Weights - Silhouette: {weights['cluster_shape']:.1%}, DBCV: {weights['clustering_quality']:.1%}")
-        print(f"Final Score: {final_score:.4f}")
-        print("-" * 60)
+        print(f"Silhouette: {silhouette_score:.4f}, DBCV: {dbcv_score:.4f}, Final: {final_score:.4f}")
         
         return final_score
     except KeyboardInterrupt:
@@ -539,12 +536,12 @@ def objective_function(
         return score
     
     except KeyboardInterrupt:
-        print(f"\n⚠️  KeyboardInterrupt in trial {trial.number}")
+        print(f"KeyboardInterrupt in trial {trial.number}")
         raise
     except optuna.exceptions.TrialPruned:
         raise
     except Exception as e:
-        print(f"Warning: Trial failed: {e}")
+        print(f"Trial failed: {e}")
         trial.set_user_attr("error", str(e))
         return -1.0  # Return worst score on error (range: [-1, 1])
     finally:
@@ -574,13 +571,12 @@ def optimize_category_clustering(
     """Run hyperparameter optimization for a specific arXiv category."""
     
     # Load and prepare data
-    print(f"📂 Loading data for category: {category}/{subcategory}")
+    print(f"Loading data for {category}/{subcategory}")
     texts = load_texts(category, subcategory)
     text_embeddings = load_text_embeddings(category, subcategory)
     
     dataset_size = len(texts)
-    
-    print(f"📊 Dataset size: {dataset_size:,} documents")
+    print(f"Dataset size: {dataset_size:,} documents")
     
     # Adaptive configuration
     if n_trials is None:
@@ -589,7 +585,7 @@ def optimize_category_clustering(
         timeout_minutes = OptimizationConfig.get_default_timeout(dataset_size)
         timeout = timeout_minutes * 60 if timeout_minutes else None
     
-    print(f"⚙️  Optimization settings: {n_trials} trials, {timeout//60 if timeout else 'None'} min timeout")
+    print(f"Settings: {n_trials} trials, {timeout//60 if timeout else 'None'} min timeout")
     
     # Create study
     study_name = f"clustering_optimization_{category}_{subcategory}_{dataset_size}"
@@ -603,8 +599,7 @@ def optimize_category_clustering(
     )
     
     # Run optimization
-    print(f"\n🚀 Starting optimization...")
-    print("-" * 60)
+    print(f"Starting optimization...")
     
     try:
         study.optimize(
@@ -621,11 +616,10 @@ def optimize_category_clustering(
         _display_optimization_results(study)
             
     except KeyboardInterrupt:
-        print(f"\n⚠️  Optimization interrupted by user. Completed {len(study.trials)} trials.")
-        print(f"🛑 Stopping optimization process...")
+        print(f"Optimization interrupted. Completed {len(study.trials)} trials.")
         raise
     except Exception as e:
-        print(f"❌ Optimization error: {e}")
+        print(f"Optimization error: {e}")
         raise
     finally:
         # Critical cleanup only
@@ -635,26 +629,23 @@ def optimize_category_clustering(
 
 
 def _display_optimization_results(study: optuna.Study) -> None:
-    """Display comprehensive optimization results."""
+    """Display optimization results."""
     if len(study.trials) == 0:
-        print("❌ No completed trials found.")
+        print("No completed trials found.")
         return
     
     best_trial = study.best_trial
     pruned_count = len([t for t in study.trials if t.state == optuna.trial.TrialState.PRUNED])
     success_rate = (len(study.trials) - pruned_count) / len(study.trials)
     
-    print(f"\n{'='*60}")
-    print(f"🎯 OPTIMIZATION RESULTS")
-    print(f"{'='*60}")
-    print(f"🏆 Best score: {best_trial.value:.4f}")
-    print(f"📊 Total trials: {len(study.trials)}")
-    print(f"✂️  Pruned trials: {pruned_count}")
-    print(f"✅ Success rate: {success_rate:.1%}")
-    print(f"\n🔧 Best parameters:")
+    print(f"\nOptimization Results:")
+    print(f"Best score: {best_trial.value:.4f}")
+    print(f"Total trials: {len(study.trials)}")
+    print(f"Pruned trials: {pruned_count}")
+    print(f"Success rate: {success_rate:.1%}")
+    print(f"Best parameters:")
     for key, value in best_trial.params.items():
-        print(f"   • {key}: {value}")
-    print(f"{'='*60}")
+        print(f"  {key}: {value}")
 
 
 def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
@@ -666,8 +657,7 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
     with open(best_params_path, "w") as f:
         json.dump(study.best_params, f, indent=2)
     
-    print(f"💾 Best parameters saved to: {best_params_path}")
-    print(f"📊 Study database: {output_dir}/search_params.db")
+    print(f"Results saved to: {best_params_path}")
 
 
 # ============================================================================
@@ -693,21 +683,17 @@ def process_one_category(category: str, subcategory: str):
 
 
 if __name__ == "__main__":
-    print("=" * 80)
-    print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
-    print("=" * 80)
+    print("SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
+    print("=" * 60)
     
     categories = CONFIG_LOADER.load_yaml("categories.yaml")
-
-    print(f"📚 Processing {len(categories)} arXiv categories:")
+    
+    print(f"Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
         print(f"  {i:2d}. {category}")
     
-    print(f"\n🚀 Starting hyperparameter optimization...")
-    print(f"📊 Using SPECTER2 Proximity adapter for academic paper clustering")
-    print(f"🎯 Target: Optimize BERTopic parameters for topic discovery")
-    print(f"⚙️  Pipeline: SPECTER2 → UMAP → HDBSCAN → Topic Modeling")
-    print("-" * 80)
+    print(f"\nStarting hyperparameter optimization...")
+    print("-" * 60)
     
     total_subcategories = sum(len(category_items) for category_items in categories.values())
     processed_count = 0
@@ -715,27 +701,21 @@ if __name__ == "__main__":
     for category_name, category_items in categories.items():
         for subcategory in category_items:
             processed_count += 1
-            print(f"\n📖 [{processed_count}/{total_subcategories}] Processing category: {category_name}/{subcategory}")
-            print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"\n[{processed_count}/{total_subcategories}] Processing {category_name}/{subcategory}")
             
             try:
                 process_one_category(category_name, subcategory)
-                print(f"✅ Completed category: {category_name}/{subcategory}")
+                print(f"Completed: {category_name}/{subcategory}")
             except KeyboardInterrupt:
-                print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
-                print(f"🛑 Stopping optimization process...")
-                print(f"📊 Processed {processed_count-1}/{total_subcategories} subcategories before interruption")
-                print(f"💾 Partial results saved to: ./params/")
-                print(f"🔄 To resume, run the script again (it will continue from where it left off)")
+                print(f"\nInterrupted by user. Processed {processed_count-1}/{total_subcategories} subcategories.")
+                print(f"Results saved to: ./params/")
                 import sys
                 sys.exit(0)
             except Exception as e:
-                print(f"❌ Failed category {category_name}/{subcategory}: {e}")
+                print(f"Failed {category_name}/{subcategory}: {e}")
                 continue
                 
-    
-    print("\n" + "=" * 80)
-    print("🎉 ALL SUBCATEGORIES PROCESSED SUCCESSFULLY!")
-    print("📁 Results saved to: ./params/{category}/{subcategory}/best_params.json")
-    print("💾 Study data saved to: ./params/{category}/{subcategory}/search_params.db")
-    print("=" * 80)
+    print("\n" + "=" * 60)
+    print("All subcategories processed successfully!")
+    print("Results saved to: ./params/{category}/{subcategory}/")
+    print("=" * 60)

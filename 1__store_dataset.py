@@ -19,7 +19,7 @@ from utils.custom_embedder import Specter2Embedder
 # Hyperparameters
 # ============================================================================
 
-FROM_DATE = date(2025, 1, 1)
+FROM_DATE = date(2020, 1, 1)
 
 # ============================================================================
 # Singleton
@@ -49,6 +49,7 @@ def save_dataset(category_name: str, subcategory: str, papers: List[Paper]):
     
     # Save files
     files_to_save = {
+        'papers.pkl': papers,  # 元のPaperオブジェクトも保存
         'ids.pkl': ids,
         'arxiv_ids.pkl': arxiv_ids,
         'titles.pkl': titles,

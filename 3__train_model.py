@@ -89,9 +89,9 @@ class Hyperparameters:
 # Data Management
 # ============================================================================
 
-def load_papers(category: str) -> List[Paper]:
-    """Load preprocessed papers for a given arXiv category."""
-    filepath = f"./preprocessed/{category}/papers.pkl"
+def load_papers(category: str, subcategory: str) -> List[Paper]:
+    """Load preprocessed papers for a given arXiv category/subcategory."""
+    filepath = f"./dataset/{category}/{subcategory}/papers.pkl"
     try:
         with open(filepath, "rb") as f:
             return pickle.load(f)
@@ -99,12 +99,12 @@ def load_papers(category: str) -> List[Paper]:
         raise FileNotFoundError(f"Preprocessed papers not found at {filepath}")
 
 
-def load_text_embeddings(category: str) -> np.ndarray:
-    """Load pre-computed SPECTER2 text embeddings with memory mapping."""
-    filepath = f"./preprocessed/{category}/text_embeddings.npy"
+def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
+    """Load pre-computed SPECTER2 text embeddings."""
+    filepath = f"./dataset/{category}/{subcategory}/embeddings.pkl"
     try:
-        # Use memory mapping to avoid loading entire file into memory
-        return np.load(filepath, mmap_mode='r')
+        with open(filepath, "rb") as f:
+            return pickle.load(f)
     except FileNotFoundError:
         raise FileNotFoundError(f"Text embeddings not found at {filepath}")
 
@@ -184,23 +184,23 @@ def create_model(params: Hyperparameters) -> BERTopic:
 
     return model
 
-def process_one_category(category: str):
+def process_one_category(category: str, subcategory: str):
 
-    models_path = f"./models/{category}"
+    models_path = f"./models/{category}/{subcategory}"
     if(os.path.exists(models_path)):
         # すでに訓練済みの場合はスキップ
-        print(f"Model already trained for category: {category}")
+        print(f"Model already trained for category: {category}/{subcategory}")
         return
 
     # 前処理済データを取得
-    papers = load_papers(category)   
-    text_embeddings = load_text_embeddings(category)  # Now uses memory mapping
+    papers = load_papers(category, subcategory)   
+    text_embeddings = load_text_embeddings(category, subcategory)
     texts = [EMBEDDING_MODEL.get_input_text(paper.title, paper.abstract) for paper in papers]
     del papers
     gc.collect()
 
     # パラメータを取得
-    param_path = f"./params/{category}/best_params.json"
+    param_path = f"./params/{category}/{subcategory}/best_params.json"
     with open(param_path, "r") as f:
         best_params = json.load(f)
 
@@ -219,5 +219,6 @@ def process_one_category(category: str):
 
 if __name__ == "__main__":
     category = "cs.AR"
-    process_one_category(category)
+    subcategory = "AR"  # サブカテゴリを指定
+    process_one_category(category, subcategory)
 
