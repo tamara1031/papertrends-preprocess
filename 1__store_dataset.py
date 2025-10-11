@@ -83,6 +83,8 @@ if __name__ == "__main__":
                     embedding_type="specter2"
                 )
                 save_dataset(category_name, subcategory, papers)
+
+                print(f"[{category_name}/{subcategory}] Number of papers: {len(papers)}")
                 
                 pbar.update(1)
 
