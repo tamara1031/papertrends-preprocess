@@ -17,10 +17,12 @@ from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
 
-from common.domain.dto import Paper
-from common.utils import get_custom_embedding_model, CustomEmbeddingModel, get_category_codes
-from common.utils.memory_utils import force_memory_cleanup
-from common.utils.score_utils import compute_silhouette_score, compute_dbcv_score
+from papertrends_dataset_lib.domain import Paper
+from utils.custom_embedder import CustomEmbeddingModel
+from utils.custom_embedder import get_custom_embedding_model
+from utils.category_loader import get_category_codes
+from utils.memory_utils import force_memory_cleanup
+from utils.score_utils import compute_silhouette_score, compute_dbcv_score
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')

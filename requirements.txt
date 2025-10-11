@@ -1,4 +1,4 @@
 optuna
 bertopic[spacy]
 
-git+https://github.com/tamara1031/papertrends-dataset.git#subdirectory=papertrends_dataset_lib
+git+https://github.com/tamara1031/papertrends-dataset.git
