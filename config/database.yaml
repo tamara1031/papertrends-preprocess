@@ -1,0 +1,1 @@
+url: mysql+pymysql://papertrends:papertrends@localhost:3306/papertrends

@@ -1,8 +1,12 @@
-from typing import List, Optional, Union, Tuple, Dict, Any
-from dataclasses import dataclass
 import os
 import pickle
+from pathlib import Path
+
+from datetime import date
+from typing import List, Optional, Union, Tuple, Dict, Any
+from dataclasses import dataclass
 import json
+from bertopic.backend import BaseEmbedder
 import numpy as np
 import warnings
 
@@ -17,18 +21,76 @@ from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
 from hdbscan import HDBSCAN
 
-from papertrends_dataset_lib.domain import Paper
-from utils.custom_embedder import CustomEmbeddingModel
-from utils.custom_embedder import get_custom_embedding_model
-from utils.category_loader import get_category_codes
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+from utils.custom_embedder import Specter2Embedder
 from utils.memory_utils import force_memory_cleanup
 from utils.score_utils import compute_silhouette_score, compute_dbcv_score
+from papertrends_dataset_lib.utils import ConfigLoader
 
 # Suppress expected numerical warnings (validated as safe)
 warnings.filterwarnings('ignore', category=RuntimeWarning, module='hdbscan.validity')
 warnings.filterwarnings('ignore', message='overflow encountered in power')
 warnings.filterwarnings('ignore', message='divide by zero encountered')
 warnings.filterwarnings('ignore', message='invalid value encountered')
+
+# ============================================================================
+# Hyperparameters
+# ============================================================================
+FROM_DATE = date(2020, 1, 1)
+
+# ============================================================================
+# Singleton
+# ============================================================================
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+EMBEDDING_MODEL = Specter2Embedder(device=device)
+CONFIG_LOADER = ConfigLoader(Path(__file__).parent / "config")
+
+# ============================================================================
+# Dataset Loader
+# ============================================================================
+
+def load_texts(category: str, subcategory: str) -> List[str]:
+    """
+    Load preprocessed paper titles for a given arXiv category/subcategory
+    from the ./dataset directory.
+
+    Args:
+        category (str): Top-level arXiv category.
+        subcategory (str): Subcategory.
+
+    Returns:
+        List[str]: List of paper titles. If not found, returns an empty list.
+    """
+    base_dir = Path("./dataset") / category / subcategory
+    titles_path = base_dir / "titles.pkl"
+    abstracts_path = base_dir / "abstracts.pkl"
+    
+    if not titles_path.exists() or not abstracts_path.exists():
+        print(f"Warning: Dataset files not found for {category}/{subcategory}")
+        return []
+    
+    with open(titles_path, "rb") as f:
+        titles = pickle.load(f)
+    with open(abstracts_path, "rb") as f:
+        abstracts = pickle.load(f)
+    
+    return [EMBEDDING_MODEL.get_input_text(title, abstract) for title, abstract in zip(titles, abstracts)]
+
+def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
+    """Load text embeddings for a category/subcategory."""
+    base_dir = Path("./dataset") / category / subcategory
+    embeddings_path = base_dir / "embeddings.pkl"
+    
+    if not embeddings_path.exists():
+        print(f"Warning: Embeddings file not found for {category}/{subcategory}")
+        return np.array([])
+    
+    with open(embeddings_path, "rb") as f:
+        embeddings = pickle.load(f)
+    return embeddings
 
 # ============================================================================
 # Memory Management
@@ -227,27 +289,6 @@ class Hyperparameters:
         )
 
 # ============================================================================
-# Data Management
-# ============================================================================
-
-def load_papers(category: str) -> List[Paper]:
-    """Load preprocessed papers for a given arXiv category."""
-    filepath = f"./preprocessed/{category}/papers.pkl"
-    try:
-        with open(filepath, "rb") as f:
-            return pickle.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Preprocessed papers not found at {filepath}")
-
-def load_text_embeddings(category: str) -> np.ndarray:
-    """Load pre-computed SPECTER2 text embeddings with memory mapping."""
-    filepath = f"./preprocessed/{category}/text_embeddings.npy"
-    try:
-        return np.load(filepath, mmap_mode='r')
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Text embeddings not found at {filepath}")
-
-# ============================================================================
 # Parameter Suggestion Functions
 # ============================================================================
 
@@ -300,7 +341,7 @@ def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> H
 # Model Creation
 # ============================================================================
 
-def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbeddingModel) -> BERTopic:
+def create_bertopic_model(params: Hyperparameters) -> BERTopic:
     """Create BERTopic model with optimized parameter configuration."""
     vectorizer_model = CountVectorizer(
         stop_words="english",
@@ -334,7 +375,7 @@ def create_bertopic_model(params: Hyperparameters, embedding_model: CustomEmbedd
         ctfidf_model=ctfidf_model,
         umap_model=umap_model,
         hdbscan_model=hdbscan_model,
-        embedding_model=embedding_model,
+        embedding_model=EMBEDDING_MODEL,
         top_n_words=params.top_n_words,
         calculate_probabilities=False,
         verbose=False
@@ -460,15 +501,14 @@ def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> Medi
 def objective_function(
     trial: optuna.Trial, 
     texts: List[str], 
-    text_embeddings: np.ndarray, 
-    embedding_model: CustomEmbeddingModel
+    text_embeddings: np.ndarray
 ) -> float:
     """Optuna objective function for hyperparameter optimization."""
     model = None
     try:
         # Suggest hyperparameters and create model
         params = suggest_optimal_hyperparameters(trial, len(texts))
-        model = create_bertopic_model(params, embedding_model)
+        model = create_bertopic_model(params)
         
         # Fit model
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
@@ -514,12 +554,9 @@ def objective_function(
             del model
         force_memory_cleanup()
 
-
 # ============================================================================
-# Embedding Model Management
+# Main Optimization Pipeline
 # ============================================================================
-
-EMBEDDING_MODEL = get_custom_embedding_model()
 
 def _memory_cleanup_callback(study, trial):
     """Simple memory cleanup callback."""
@@ -527,12 +564,9 @@ def _memory_cleanup_callback(study, trial):
     if trial.number % 10 == 0 and trial.number > 0:
         force_memory_cleanup()
 
-# ============================================================================
-# Main Optimization Pipeline
-# ============================================================================
-
 def optimize_category_clustering(
     category: str, 
+    subcategory: str,
     timeout: Optional[int] = None, 
     n_trials: Optional[int] = None,
     storage: Optional[str] = None
@@ -540,16 +574,10 @@ def optimize_category_clustering(
     """Run hyperparameter optimization for a specific arXiv category."""
     
     # Load and prepare data
-    print(f"📂 Loading data for category: {category}")
-    papers = load_papers(category)
-    text_embeddings = load_text_embeddings(category)
-    embedding_model = EMBEDDING_MODEL
+    print(f"📂 Loading data for category: {category}/{subcategory}")
+    texts = load_texts(category, subcategory)
+    text_embeddings = load_text_embeddings(category, subcategory)
     
-    if embedding_model is None:
-        print(f"❌ Failed to create embedding model for category: {category}")
-        return None
-    
-    texts = [embedding_model.get_input_text(paper) for paper in papers]
     dataset_size = len(texts)
     
     print(f"📊 Dataset size: {dataset_size:,} documents")
@@ -564,7 +592,7 @@ def optimize_category_clustering(
     print(f"⚙️  Optimization settings: {n_trials} trials, {timeout//60 if timeout else 'None'} min timeout")
     
     # Create study
-    study_name = f"clustering_optimization_{category}_{dataset_size}"
+    study_name = f"clustering_optimization_{category}_{subcategory}_{dataset_size}"
     study = optuna.create_study(
         storage=storage,
         load_if_exists=True,  
@@ -580,7 +608,7 @@ def optimize_category_clustering(
     
     try:
         study.optimize(
-            lambda trial: objective_function(trial, texts, text_embeddings, embedding_model),
+            lambda trial: objective_function(trial, texts, text_embeddings),
             n_trials=n_trials,
             timeout=timeout,
             gc_after_trial=True,
@@ -646,16 +674,17 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 # Main Execution
 # ============================================================================
 
-def process_one_category(category: str):
+def process_one_category(category: str, subcategory: str):
     """Main execution function for hyperparameter optimization."""
     # Create output directory
-    params_path = f"./params/{category}"
+    params_path = f"./params/{category}/{subcategory}"
     os.makedirs(params_path, exist_ok=True)
     
     # Run optimization
     study_storage_path = f"sqlite:///{params_path}/search_params.db"
     study = optimize_category_clustering(
         category=category,
+        subcategory=subcategory,
         storage=study_storage_path
     )
     
@@ -668,7 +697,8 @@ if __name__ == "__main__":
     print("🔬 SPECTER2-BASED ACADEMIC PAPER CLUSTERING OPTIMIZATION")
     print("=" * 80)
     
-    categories = get_category_codes()
+    categories = CONFIG_LOADER.load_yaml("categories.yaml")
+
     print(f"📚 Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
         print(f"  {i:2d}. {category}")
@@ -679,31 +709,33 @@ if __name__ == "__main__":
     print(f"⚙️  Pipeline: SPECTER2 → UMAP → HDBSCAN → Topic Modeling")
     print("-" * 80)
     
-    for i, category in enumerate(categories, 1):
-        print(f"\n📖 [{i}/{len(categories)}] Processing category: {category}")
-        print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        
-        try:
-            process_one_category(category)
-            print(f"✅ Completed category: {category}")
-        except KeyboardInterrupt:
-            print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
-            print(f"🛑 Stopping optimization process...")
+    total_subcategories = sum(len(category_items) for category_items in categories.values())
+    processed_count = 0
+    
+    for category_name, category_items in categories.items():
+        for subcategory in category_items:
+            processed_count += 1
+            print(f"\n📖 [{processed_count}/{total_subcategories}] Processing category: {category_name}/{subcategory}")
+            print(f"⏰ Started at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            
             try:
-                print(f"📊 Processed {i-1}/{len(categories)} categories before interruption")
-            except NameError:
-                print(f"📊 No categories processed before interruption")
-            print(f"💾 Partial results saved to: ./params/")
-            print(f"🔄 To resume, run the script again (it will continue from where it left off)")
-            import sys
-            sys.exit(0)
-        except Exception as e:
-            print(f"❌ Failed category {category}: {e}")
-            continue
+                process_one_category(category_name, subcategory)
+                print(f"✅ Completed category: {category_name}/{subcategory}")
+            except KeyboardInterrupt:
+                print(f"\n⚠️  INTERRUPTED BY USER (Ctrl+C)")
+                print(f"🛑 Stopping optimization process...")
+                print(f"📊 Processed {processed_count-1}/{total_subcategories} subcategories before interruption")
+                print(f"💾 Partial results saved to: ./params/")
+                print(f"🔄 To resume, run the script again (it will continue from where it left off)")
+                import sys
+                sys.exit(0)
+            except Exception as e:
+                print(f"❌ Failed category {category_name}/{subcategory}: {e}")
+                continue
                 
     
     print("\n" + "=" * 80)
-    print("🎉 ALL CATEGORIES PROCESSED SUCCESSFULLY!")
-    print("📁 Results saved to: ./params/{category}/best_params.json")
-    print("💾 Study data saved to: ./params/{category}/search_params.db")
+    print("🎉 ALL SUBCATEGORIES PROCESSED SUCCESSFULLY!")
+    print("📁 Results saved to: ./params/{category}/{subcategory}/best_params.json")
+    print("💾 Study data saved to: ./params/{category}/{subcategory}/search_params.db")
     print("=" * 80)

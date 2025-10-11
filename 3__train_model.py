@@ -20,10 +20,12 @@ from bertopic.vectorizers import ClassTfidfTransformer
 
 from bertopic.representation import KeyBERTInspired, PartOfSpeech, MaximalMarginalRelevance
 
-from common.domain.dto import Paper
-from common.utils import get_custom_embedding_model, get_category_codes
+from utils.custom_embedder import Specter2Embedder
+from papertrends_dataset_lib.domain import Paper
 
-EMBEDDING_MODEL = get_custom_embedding_model()
+# Initialize embedding model
+device = "cuda" if torch.cuda.is_available() else "cpu"
+EMBEDDING_MODEL = Specter2Embedder(device=device)
 
 @dataclass
 class Hyperparameters:
@@ -131,7 +133,7 @@ def create_model(params: Hyperparameters) -> BERTopic:
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=True  # Disable prediction data to save memory
+        prediction_data=False  # Disable prediction data to save memory
     )
 
     # representations(topic名、代表単語が変わる)
@@ -193,7 +195,7 @@ def process_one_category(category: str):
     # 前処理済データを取得
     papers = load_papers(category)   
     text_embeddings = load_text_embeddings(category)  # Now uses memory mapping
-    texts = [EMBEDDING_MODEL.get_input_text(paper) for paper in papers]
+    texts = [EMBEDDING_MODEL.get_input_text(paper.title, paper.abstract) for paper in papers]
     del papers
     gc.collect()
 

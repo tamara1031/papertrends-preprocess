@@ -1,8 +1,11 @@
 import pickle
 from bertopic import BERTopic
-from common.utils import get_custom_embedding_model
+from utils.custom_embedder import Specter2Embedder
 
-EMBEDDING_MODEL = get_custom_embedding_model()
+# Initialize embedding model
+import torch
+device = "cuda" if torch.cuda.is_available() else "cpu"
+EMBEDDING_MODEL = Specter2Embedder(device=device)
 
 def load_model(category: str):
     model = BERTopic.load(f"./models/{category}", embedding_model=EMBEDDING_MODEL)
