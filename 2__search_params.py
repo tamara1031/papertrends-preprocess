@@ -163,21 +163,21 @@ class OptimizationConfig:
     def get_default_n_trials(dataset_size: int) -> int:
         """Get number of trials based on dataset size."""
         if dataset_size <= 5000:
-            return 20
+            return 30  # 増加
         elif dataset_size <= 20000:
-            return 40
+            return 50  # 増加
         else:
-            return 60
+            return 80  # 増加
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
         """Get timeout in minutes based on dataset size."""
         if dataset_size <= 10000:
-            return None
+            return 60  # タイムアウトを設定
         elif dataset_size <= 50000:
-            return 120
+            return 90  # 短縮
         else:
-            return 240
+            return 180  # 短縮
     
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
@@ -385,42 +385,42 @@ def compute_cluster_quality_score(
 
 def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESampler:
     """Create TPE sampler optimized for clustering."""
-    startup_trials = max(10, min(20, int(n_trials * 0.15)))
+    # より効率的なstartup_trials設定（ランダム探索を減らし、TPE探索を早く開始）
+    startup_trials = max(5, min(15, int(n_trials * 0.10)))
     
+    # ei_candidatesを増やして探索効率を向上
     if dataset_size <= 10000:
-        ei_candidates = max(24, min(32, int(n_trials * 0.20)))
+        ei_candidates = max(24, min(50, int(n_trials * 0.30)))
     elif dataset_size <= 50000:
-        ei_candidates = max(24, min(40, int(n_trials * 0.25)))
+        ei_candidates = max(24, min(60, int(n_trials * 0.35)))
     else:
-        ei_candidates = max(24, min(48, int(n_trials * 0.30)))
+        ei_candidates = max(24, min(70, int(n_trials * 0.40)))
     
     return TPESampler(
         n_startup_trials=startup_trials,
         n_ei_candidates=ei_candidates,
         multivariate=True,
         group=False,
-        prior_weight=1.0,
+        prior_weight=1.5,  # より強い事前分布の重み
         warn_independent_sampling=True,
         seed=42
     )
 
 def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> MedianPruner:
     """Create median pruner optimized for clustering."""
-    startup_trials = max(10, min(20, int(n_trials * 0.15)))
+    # startup_trialsを減らして早期停止を早く開始
+    startup_trials = max(5, min(15, int(n_trials * 0.10)))
     
+    # warmup_stepsを減らしてより早くプルーニングを開始
     if dataset_size <= 10000:
+        warmup_steps = 2
+    elif dataset_size <= 50000:
         warmup_steps = 3
-    elif dataset_size <= 50000:
-        warmup_steps = 5
     else:
-        warmup_steps = 7
+        warmup_steps = 4
     
-    if dataset_size <= 10000:
-        interval_steps = 2
-    elif dataset_size <= 50000:
-        interval_steps = 1
-    else:
-        interval_steps = 1
+    # interval_stepsを1に固定してより頻繁にプルーニング判定
+    interval_steps = 1
     
     return MedianPruner(
         n_startup_trials=startup_trials,
