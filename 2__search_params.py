@@ -388,9 +388,9 @@ def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESam
     startup_trials = max(10, min(20, int(n_trials * 0.15)))
     
     if dataset_size <= 10000:
-        ei_candidates = max(16, min(32, int(n_trials * 0.20)))
+        ei_candidates = max(24, min(32, int(n_trials * 0.20)))
     elif dataset_size <= 50000:
-        ei_candidates = max(20, min(40, int(n_trials * 0.25)))
+        ei_candidates = max(24, min(40, int(n_trials * 0.25)))
     else:
         ei_candidates = max(24, min(48, int(n_trials * 0.30)))
     
