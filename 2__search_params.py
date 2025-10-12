@@ -599,26 +599,18 @@ def objective_function(
 
 def _memory_cleanup_callback(study, trial):
     """Enhanced memory cleanup callback with more frequent cleanup for large datasets."""
-    # More frequent cleanup for large datasets - every 2-3 trials for 100k+ datasets
-    if len(study.trials) >= 100000:  # Large dataset threshold
-        cleanup_interval = 2
-    elif len(study.trials) > 20000:
-        cleanup_interval = 3
-    else:
-        cleanup_interval = 5 if len(study.trials) > 20 else 10
 
-    if trial.number % cleanup_interval == 0 and trial.number > 0:
-        # Aggressive cleanup for large datasets
-        force_memory_cleanup(aggressive=True)
-        print(f"Memory cleanup performed at trial {trial.number}")
+    # Aggressive cleanup for large datasets
+    force_memory_cleanup(aggressive=True)
+    print(f"Memory cleanup performed at trial {trial.number}")
 
-        # Additional cleanup for study object
-        if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
-            study._storage.cache.clear()
+    # Additional cleanup for study object
+    if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
+        study._storage.cache.clear()
 
-        # Force garbage collection of trial objects
-        import gc
-        gc.collect()
+    # Force garbage collection of trial objects
+    import gc
+    gc.collect()
 
 def optimize_category_clustering(
     category: str, 
@@ -782,6 +774,9 @@ if __name__ == "__main__":
     print("=" * 60)
     
     categories = CONFIG_LOADER.load_yaml("categories.yaml")
+    categories = {
+        "cs": ["cs.AR"],
+    }
     
     print(f"Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
