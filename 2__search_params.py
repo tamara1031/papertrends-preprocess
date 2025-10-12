@@ -529,10 +529,17 @@ def objective_function(
             cleanup_bertopic_model(model)
             del model
         
-        # Clean up any remaining variables
-        for var in [labels, umap_embedding, topic_info]:
-            if var is not None:
-                del var
+        # Clean up any remaining variables (check if they exist first)
+        cleanup_vars = []
+        if 'labels' in locals() and labels is not None:
+            cleanup_vars.append(labels)
+        if 'umap_embedding' in locals() and umap_embedding is not None:
+            cleanup_vars.append(umap_embedding)
+        if 'topic_info' in locals() and topic_info is not None:
+            cleanup_vars.append(topic_info)
+        
+        for var in cleanup_vars:
+            del var
         
         force_memory_cleanup()
 
