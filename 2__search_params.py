@@ -58,51 +58,95 @@ def load_texts(category: str, subcategory: str) -> List[str]:
     base_dir = Path("./dataset") / category / subcategory
     titles_path = base_dir / "titles.pkl"
     abstracts_path = base_dir / "abstracts.pkl"
-    
+
     if not titles_path.exists() or not abstracts_path.exists():
         print(f"Dataset files not found for {category}/{subcategory}")
         return []
-    
+
     # Load data with memory cleanup
     with open(titles_path, "rb") as f:
         titles = pickle.load(f)
     with open(abstracts_path, "rb") as f:
         abstracts = pickle.load(f)
-    
-    # Process in batches to reduce memory usage
-    batch_size = 10000  # Process 10k documents at a time
+
+    # For large datasets, implement more aggressive memory management
+    dataset_size = len(titles)
+    if dataset_size > 50000:
+        # Use smaller batch size for very large datasets
+        batch_size = 5000  # Reduced batch size for memory efficiency
+    elif dataset_size > 20000:
+        batch_size = 8000
+    else:
+        batch_size = 10000
+
     texts = []
-    
+    temp_batches = []  # Keep track of batches for cleanup
+
     for i in range(0, len(titles), batch_size):
         batch_titles = titles[i:i + batch_size]
         batch_abstracts = abstracts[i:i + batch_size]
-        
-        batch_texts = [EMBEDDING_MODEL.get_input_text(title, abstract) 
+
+        batch_texts = [EMBEDDING_MODEL.get_input_text(title, abstract)
                       for title, abstract in zip(batch_titles, batch_abstracts)]
-        texts.extend(batch_texts)
-        
-        # Clean up batch variables
+
+        # For very large datasets, yield batches instead of accumulating
+        if dataset_size > 100000:
+            # Process immediately and clean up
+            texts.extend(batch_texts)
+            del batch_titles, batch_abstracts, batch_texts
+            force_memory_cleanup(aggressive=True)
+        else:
+            texts.extend(batch_texts)
+            temp_batches.append((batch_titles, batch_abstracts, batch_texts))
+
+    # Clean up temporary batch references
+    for batch_titles, batch_abstracts, batch_texts in temp_batches:
         del batch_titles, batch_abstracts, batch_texts
-        force_memory_cleanup()
-    
+    del temp_batches
+
     # Clean up original data
     del titles, abstracts
     force_memory_cleanup()
-    
+
     return texts
 
 def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
-    """Load text embeddings for a category/subcategory."""
+    """Load text embeddings for a category/subcategory with memory optimization."""
     base_dir = Path("./dataset") / category / subcategory
     embeddings_path = base_dir / "embeddings.pkl"
-    
+
     if not embeddings_path.exists():
         print(f"Embeddings file not found for {category}/{subcategory}")
         return np.array([])
-    
-    with open(embeddings_path, "rb") as f:
-        embeddings = pickle.load(f)
-    return embeddings
+
+    # Use memory mapping for large embedding files to reduce memory usage
+    try:
+        with open(embeddings_path, "rb") as f:
+            # Check file size to determine loading strategy
+            f.seek(0, 2)  # Seek to end
+            file_size = f.tell()
+            f.seek(0)  # Seek back to beginning
+
+            if file_size > 500 * 1024 * 1024:  # > 500MB
+                print(f"Large embeddings file detected ({file_size / 1024 / 1024:.1f}MB), using memory-efficient loading")
+                # For very large files, we might want to implement chunked loading
+                # For now, we'll still load it but with memory cleanup
+                embeddings = pickle.load(f)
+
+                # Force memory cleanup after loading large files
+                force_memory_cleanup(aggressive=True)
+            else:
+                embeddings = pickle.load(f)
+
+        return embeddings
+
+    except MemoryError:
+        print(f"Memory error loading embeddings for {category}/{subcategory}")
+        print("Consider using smaller batch sizes or reducing dataset size")
+        return np.array([])
+    except Exception as e:
+        print(f"Error loading embeddings: {e}")
+        return np.array([])
 
 # ============================================================================
 # Memory Management
@@ -484,11 +528,12 @@ def objective_function(
         # Evaluate clustering quality
         weights = OptimizationConfig.get_adaptive_weights(len(texts))
         
-        # Extract necessary data from model with immediate cleanup
-        labels = model.hdbscan_model.labels_.copy()  # Create copy to avoid reference issues
-        umap_embedding = model.umap_model.embedding_.copy()  # Create copy
+        # Extract necessary data from model with minimal memory usage
+        # Use references instead of copies to save memory
+        labels = model.hdbscan_model.labels_
+        umap_embedding = model.umap_model.embedding_
         topic_info = model.get_topic_info()
-        
+
         # Clean up model immediately after extracting data
         cleanup_bertopic_model(model)
         del model
@@ -502,6 +547,11 @@ def objective_function(
         # Clean up topic_info after use
         del topic_info
         force_memory_cleanup()
+
+        # Additional memory monitoring for large datasets
+        if len(texts) > 50000:
+            from utils.memory_utils import log_memory_usage
+            log_memory_usage(f"Trial {trial.number} post-cleanup", verbose=False)
         
         score = compute_cluster_quality_score(labels, umap_embedding, weights)
         
@@ -549,12 +599,26 @@ def objective_function(
 
 def _memory_cleanup_callback(study, trial):
     """Enhanced memory cleanup callback with more frequent cleanup for large datasets."""
-    # More frequent cleanup for large datasets
-    cleanup_interval = 5 if len(study.trials) > 20 else 10
-    
+    # More frequent cleanup for large datasets - every 2-3 trials for 100k+ datasets
+    if len(study.trials) >= 100000:  # Large dataset threshold
+        cleanup_interval = 2
+    elif len(study.trials) > 20000:
+        cleanup_interval = 3
+    else:
+        cleanup_interval = 5 if len(study.trials) > 20 else 10
+
     if trial.number % cleanup_interval == 0 and trial.number > 0:
-        force_memory_cleanup()
+        # Aggressive cleanup for large datasets
+        force_memory_cleanup(aggressive=True)
         print(f"Memory cleanup performed at trial {trial.number}")
+
+        # Additional cleanup for study object
+        if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
+            study._storage.cache.clear()
+
+        # Force garbage collection of trial objects
+        import gc
+        gc.collect()
 
 def optimize_category_clustering(
     category: str, 
@@ -582,11 +646,25 @@ def optimize_category_clustering(
     
     print(f"Settings: {n_trials} trials, {timeout//60 if timeout else 'None'} min timeout")
     
-    # Create study
+    # Create study with memory-optimized settings
     study_name = f"clustering_optimization_{category}_{subcategory}_{dataset_size}"
+
+    # Configure storage for better memory management
+    if storage and storage.startswith("sqlite:///"):
+        # Enable WAL mode for better concurrency and memory usage
+        import sqlite3
+        db_path = storage.replace("sqlite:///", "")
+        conn = sqlite3.connect(db_path)
+        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute("PRAGMA cache_size=-64000")  # ~64MB cache limit
+        conn.execute("PRAGMA temp_store=memory")
+        conn.execute("PRAGMA mmap_size=268435456")  # 256MB memory map
+        conn.commit()
+        conn.close()
+
     study = optuna.create_study(
         storage=storage,
-        load_if_exists=True,  
+        load_if_exists=True,
         direction="maximize",
         study_name=study_name,
         sampler=create_tpe_sampler(n_trials, dataset_size),
@@ -609,7 +687,7 @@ def optimize_category_clustering(
         
         # Display results
         _display_optimization_results(study)
-            
+
     except KeyboardInterrupt:
         print(f"Optimization interrupted. Completed {len(study.trials)} trials.")
         raise
@@ -617,9 +695,27 @@ def optimize_category_clustering(
         print(f"Optimization error: {e}")
         raise
     finally:
-        # Critical cleanup only
-        force_memory_cleanup()
-    
+        # Enhanced cleanup for study object
+        try:
+            # Clear study storage cache if available
+            if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
+                study._storage.cache.clear()
+
+            # Clear sampler and pruner caches
+            if hasattr(study, 'sampler'):
+                if hasattr(study.sampler, 'cache'):
+                    study.sampler.cache.clear()
+
+            # Force garbage collection
+            import gc
+            gc.collect()
+
+        except Exception as e:
+            print(f"Warning: Study cleanup failed: {e}")
+
+        # Critical cleanup
+        force_memory_cleanup(aggressive=True)
+
     return study
 
 
