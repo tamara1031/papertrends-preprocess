@@ -46,7 +46,7 @@ CONFIG_LOADER = ConfigLoader(Path(__file__).parent / "config")
 def load_texts(category: str, subcategory: str) -> List[str]:
     """
     Load preprocessed paper titles for a given arXiv category/subcategory
-    from the ./dataset directory.
+    from the ./dataset directory with memory-efficient processing.
 
     Args:
         category (str): Top-level arXiv category.
@@ -63,12 +63,33 @@ def load_texts(category: str, subcategory: str) -> List[str]:
         print(f"Dataset files not found for {category}/{subcategory}")
         return []
     
+    # Load data with memory cleanup
     with open(titles_path, "rb") as f:
         titles = pickle.load(f)
     with open(abstracts_path, "rb") as f:
         abstracts = pickle.load(f)
     
-    return [EMBEDDING_MODEL.get_input_text(title, abstract) for title, abstract in zip(titles, abstracts)]
+    # Process in batches to reduce memory usage
+    batch_size = 10000  # Process 10k documents at a time
+    texts = []
+    
+    for i in range(0, len(titles), batch_size):
+        batch_titles = titles[i:i + batch_size]
+        batch_abstracts = abstracts[i:i + batch_size]
+        
+        batch_texts = [EMBEDDING_MODEL.get_input_text(title, abstract) 
+                      for title, abstract in zip(batch_titles, batch_abstracts)]
+        texts.extend(batch_texts)
+        
+        # Clean up batch variables
+        del batch_titles, batch_abstracts, batch_texts
+        force_memory_cleanup()
+    
+    # Clean up original data
+    del titles, abstracts
+    force_memory_cleanup()
+    
+    return texts
 
 def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
     """Load text embeddings for a category/subcategory."""
@@ -156,23 +177,25 @@ class OptimizationConfig:
     
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get number of trials based on dataset size with increased trials for diversity."""
+        """Get number of trials based on dataset size with memory-conscious scaling."""
         if dataset_size <= 5000:
-            return 50  # 30 → 50に増加
+            return 50
         elif dataset_size <= 20000:
-            return 80  # 50 → 80に増加
+            return 60  # Reduced for memory efficiency
+        elif dataset_size <= 50000:
+            return 40  # Further reduced for large datasets
         else:
-            return 120  # 80 → 120に増加
+            return 30  # Minimal trials for very large datasets to prevent memory overflow
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
-        """Get timeout in minutes based on dataset size."""
+        """Get timeout in minutes based on dataset size with memory-conscious scaling."""
         if dataset_size <= 10000:
-            return 60  # タイムアウトを設定
+            return 60
         elif dataset_size <= 50000:
-            return 90  # 短縮
+            return 120  # Increased timeout for large datasets
         else:
-            return 180  # 短縮
+            return 180  # Extended timeout for very large datasets
     
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
@@ -270,8 +293,8 @@ def suggest_optimal_hyperparameters(trial: optuna.Trial, dataset_size: int) -> H
 # Model Creation
 # ============================================================================
 
-def create_bertopic_model(params: Hyperparameters) -> BERTopic:
-    """Create BERTopic model with optimized parameter configuration."""
+def create_bertopic_model(params: Hyperparameters, dataset_size: int) -> BERTopic:
+    """Create BERTopic model with optimized parameter configuration for large datasets."""
     vectorizer_model = CountVectorizer(
         stop_words="english",
         analyzer="word",
@@ -284,19 +307,27 @@ def create_bertopic_model(params: Hyperparameters) -> BERTopic:
     
     ctfidf_model = ClassTfidfTransformer(bm25_weighting=True)
     
+    # UMAP with memory optimization
     umap_model = UMAP(
         n_neighbors=params.n_neighbors,
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        low_memory=True
+        low_memory=True,
+        # Additional memory optimizations for large datasets
+        n_jobs=1 if dataset_size > 50000 else -1,  # Single thread for very large datasets
+        transform_seed=42
     )
     
+    # HDBSCAN with memory optimization
     hdbscan_model = HDBSCAN(
         min_cluster_size=params.min_cluster_size,
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
-        prediction_data=False
+        prediction_data=False,
+        # Memory optimization for large datasets
+        core_dist_n_jobs=1 if dataset_size > 50000 else -1,
+        cluster_selection_epsilon=0.0  # Disable epsilon clustering to save memory
     )
     
     return BERTopic(
@@ -307,7 +338,10 @@ def create_bertopic_model(params: Hyperparameters) -> BERTopic:
         embedding_model=EMBEDDING_MODEL,
         top_n_words=params.top_n_words,
         calculate_probabilities=False,
-        verbose=False
+        verbose=False,
+        # Additional memory optimizations
+        nr_topics="auto" if dataset_size > 50000 else None,  # Auto-reduce topics for large datasets
+        low_memory=True
     )
 
 
@@ -429,22 +463,30 @@ def objective_function(
     texts: List[str], 
     text_embeddings: np.ndarray
 ) -> float:
-    """Optuna objective function for hyperparameter optimization."""
+    """Optuna objective function for hyperparameter optimization with enhanced memory management."""
     model = None
+    labels = None
+    umap_embedding = None
+    topic_info = None
+    
     try:
         # Suggest hyperparameters and create model
         params = suggest_optimal_hyperparameters(trial, len(texts))
-        model = create_bertopic_model(params)
+        model = create_bertopic_model(params, len(texts))
         
         # Fit model
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
+        # Clean up topics immediately
+        del topics
+        force_memory_cleanup()
+        
         # Evaluate clustering quality
         weights = OptimizationConfig.get_adaptive_weights(len(texts))
         
-        # Extract necessary data from model
-        labels = model.hdbscan_model.labels_
-        umap_embedding = model.umap_model.embedding_
+        # Extract necessary data from model with immediate cleanup
+        labels = model.hdbscan_model.labels_.copy()  # Create copy to avoid reference issues
+        umap_embedding = model.umap_model.embedding_.copy()  # Create copy
         topic_info = model.get_topic_info()
         
         # Clean up model immediately after extracting data
@@ -457,7 +499,15 @@ def objective_function(
         basic_info = _get_basic_model_info(topic_info)
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
+        # Clean up topic_info after use
+        del topic_info
+        force_memory_cleanup()
+        
         score = compute_cluster_quality_score(labels, umap_embedding, weights)
+        
+        # Clean up evaluation data
+        del labels, umap_embedding
+        force_memory_cleanup()
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
@@ -474,10 +524,16 @@ def objective_function(
         trial.set_user_attr("error", str(e))
         return -1.0  # Return worst score on error (range: [-1, 1])
     finally:
-        # Critical cleanup only (model may already be cleaned up)
+        # Comprehensive cleanup
         if model is not None:
             cleanup_bertopic_model(model)
             del model
+        
+        # Clean up any remaining variables
+        for var in [labels, umap_embedding, topic_info]:
+            if var is not None:
+                del var
+        
         force_memory_cleanup()
 
 # ============================================================================
@@ -485,10 +541,13 @@ def objective_function(
 # ============================================================================
 
 def _memory_cleanup_callback(study, trial):
-    """Simple memory cleanup callback."""
-    # Only cleanup if trial number is divisible by 10 (every 10 trials)
-    if trial.number % 10 == 0 and trial.number > 0:
+    """Enhanced memory cleanup callback with more frequent cleanup for large datasets."""
+    # More frequent cleanup for large datasets
+    cleanup_interval = 5 if len(study.trials) > 20 else 10
+    
+    if trial.number % cleanup_interval == 0 and trial.number > 0:
         force_memory_cleanup()
+        print(f"Memory cleanup performed at trial {trial.number}")
 
 def optimize_category_clustering(
     category: str, 
@@ -538,7 +597,7 @@ def optimize_category_clustering(
             gc_after_trial=True,
             show_progress_bar=True,
             catch=(ValueError, RuntimeError, MemoryError),
-            callbacks=[_memory_cleanup_callback] if n_trials > 10 else []
+            callbacks=[_memory_cleanup_callback]  # Always use callback for memory management
         )
         
         # Display results
@@ -594,7 +653,7 @@ def save_optimization_results(study: optuna.Study, output_dir: str) -> None:
 # ============================================================================
 
 def process_one_category(category: str, subcategory: str):
-    """Main execution function for hyperparameter optimization."""
+    """Main execution function for hyperparameter optimization with memory management."""
     # Create output directory
     params_path = f"./params/{category}/{subcategory}"
     os.makedirs(params_path, exist_ok=True)
@@ -609,6 +668,10 @@ def process_one_category(category: str, subcategory: str):
     
     # Save results
     save_optimization_results(study, params_path)
+    
+    # Clean up study object
+    del study
+    force_memory_cleanup()
 
 
 if __name__ == "__main__":
@@ -635,6 +698,10 @@ if __name__ == "__main__":
             try:
                 process_one_category(category_name, subcategory)
                 print(f"Completed: {category_name}/{subcategory}")
+                
+                # Force memory cleanup after each category
+                force_memory_cleanup()
+                
             except KeyboardInterrupt:
                 print(f"\nInterrupted by user. Processed {processed_count-1}/{total_subcategories} subcategories.")
                 print(f"Results saved to: ./params/")
@@ -642,6 +709,8 @@ if __name__ == "__main__":
                 sys.exit(0)
             except Exception as e:
                 print(f"Failed {category_name}/{subcategory}: {e}")
+                # Clean up on error
+                force_memory_cleanup()
                 continue
                 
     print("\n" + "=" * 60)
