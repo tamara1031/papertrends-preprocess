@@ -21,7 +21,7 @@ from hdbscan import HDBSCAN
 
 from utils.custom_embedder import Specter2Embedder
 from utils.memory_utils import force_memory_cleanup
-from utils.score_utils import compute_silhouette_score, compute_dbcv_score
+from utils.score_utils import compute_silhouette_score, compute_dbcv_score, compute_dcsi_score
 from utils.hyperparameter import Hyperparameters
 from papertrends_dataset_lib.utils import ConfigLoader
 
@@ -148,10 +148,11 @@ class OptimizationConfig:
     
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
-        """Get balanced weights for both metrics (scores in [-1, 1] range)."""
+        """Get balanced weights for metrics (scores in [-1, 1] range)."""
         return {
             'cluster_shape': 0.0,
-            'clustering_quality': 1.0
+            'clustering_quality': 0.5,
+            'dcsi': 0.5
         }
     
     @staticmethod
@@ -333,15 +334,20 @@ def compute_cluster_quality_score(
         # Compute metrics
         silhouette_score = compute_silhouette_score(labels, embedding)
         dbcv_score = compute_dbcv_score(labels, embedding)
+        dcsi_score = compute_dcsi_score(labels, embedding)
         
-        # Calculate final score
+        # Calculate final score (DCSI is in [0,∞] range, others are in [-1,1])
+        # Normalize DCSI to [-1,1] range using sigmoid: dcsi_norm = 2 / (1 + exp(-dcsi)) - 1
+        dcsi_normalized = 2 / (1 + np.exp(-dcsi_score)) - 1
+        
         final_score = (
             weights['cluster_shape'] * silhouette_score +
-            weights['clustering_quality'] * dbcv_score
+            weights['clustering_quality'] * dbcv_score +
+            weights.get('dcsi', 0.0) * dcsi_normalized
         )
         
         # Output results
-        print(f"Silhouette: {silhouette_score:.4f}, DBCV: {dbcv_score:.4f}, Final: {final_score:.4f}")
+        print(f"Silhouette: {silhouette_score:.4f}, DBCV: {dbcv_score:.4f}, DCSI: {dcsi_score:.4f}, Final: {final_score:.4f}")
         
         return final_score
     except KeyboardInterrupt:
