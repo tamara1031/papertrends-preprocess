@@ -126,25 +126,13 @@ class OptimizationConfig:
     
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get number of trials based on dataset size with memory-conscious scaling."""
-        if dataset_size <= 5000:
-            return 50
-        elif dataset_size <= 20000:
-            return 60  # Reduced for memory efficiency
-        elif dataset_size <= 50000:
-            return 40  # Further reduced for large datasets
-        else:
-            return 30  # Minimal trials for very large datasets to prevent memory overflow
+        """Get number of trials (simplified - no longer dataset size dependent)."""
+        return 50  # Fixed number of trials for simplicity
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
-        """Get timeout in minutes based on dataset size with memory-conscious scaling."""
-        if dataset_size <= 10000:
-            return 60
-        elif dataset_size <= 50000:
-            return 120  # Increased timeout for large datasets
-        else:
-            return 180  # Extended timeout for very large datasets
+        """Get timeout in minutes (simplified - no longer dataset size dependent)."""
+        return 120  # Fixed timeout for simplicity
     
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
@@ -263,9 +251,6 @@ def create_bertopic_model(params: Hyperparameters, dataset_size: int) -> BERTopi
         n_components=params.n_components,
         metric=params.umap_metric,
         random_state=42,
-        low_memory=True,
-        # Additional memory optimizations for large datasets
-        n_jobs=1 if dataset_size > 50000 else -1,  # Single thread for very large datasets
         transform_seed=42
     )
     
@@ -275,9 +260,6 @@ def create_bertopic_model(params: Hyperparameters, dataset_size: int) -> BERTopi
         min_samples=params.min_samples,
         metric=params.hdbscan_metric,
         prediction_data=False,
-        # Memory optimization for large datasets
-        core_dist_n_jobs=1 if dataset_size > 50000 else -1,
-        cluster_selection_epsilon=0.0  # Disable epsilon clustering to save memory
     )
     
     return BERTopic(
@@ -289,9 +271,6 @@ def create_bertopic_model(params: Hyperparameters, dataset_size: int) -> BERTopi
         top_n_words=params.top_n_words,
         calculate_probabilities=False,
         verbose=False,
-        # Additional memory optimizations
-        nr_topics="auto" if dataset_size > 50000 else None,  # Auto-reduce topics for large datasets
-        low_memory=True
     )
 
 
@@ -360,44 +339,28 @@ def compute_cluster_quality_score(
 # ============================================================================
 
 def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESampler:
-    """Create TPE sampler optimized for clustering with increased random walk."""
-    # ランダムウォークを大幅に増やして多様性を確保
-    startup_trials = max(15, min(30, int(n_trials * 0.25)))  # 10% → 25%に大幅増加
-    
-    # ei_candidatesを適度に調整（多様性と効率のバランス）
-    if dataset_size <= 10000:
-        ei_candidates = max(24, min(40, int(n_trials * 0.25)))
-    elif dataset_size <= 50000:
-        ei_candidates = max(24, min(50, int(n_trials * 0.30)))
-    else:
-        ei_candidates = max(24, min(60, int(n_trials * 0.35)))
-    
+    """Create TPE sampler optimized for clustering (simplified settings)."""
+    # Simplified fixed settings for consistency
+    startup_trials = max(15, min(30, int(n_trials * 0.25)))
+    ei_candidates = max(24, min(40, int(n_trials * 0.25)))
+
     return TPESampler(
         n_startup_trials=startup_trials,
         n_ei_candidates=ei_candidates,
         multivariate=True,
         group=False,
-        prior_weight=1.0,  # より強い事前分布の重み
+        prior_weight=1.0,
         warn_independent_sampling=True,
         seed=42
     )
 
 def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> MedianPruner:
-    """Create median pruner with delayed pruning for more exploration."""
-    # startup_trialsを増やしてプルーニング開始を遅らせる
+    """Create median pruner with delayed pruning for more exploration (simplified settings)."""
+    # Simplified fixed settings for consistency
     startup_trials = max(20, min(40, int(n_trials * 0.30)))
-    
-    # warmup_stepsを適度に増やしてプルーニング判定を遅らせる
-    if dataset_size <= 10000:
-        warmup_steps = 6  # 10 → 6に調整
-    elif dataset_size <= 50000:
-        warmup_steps = 8  # 15 → 8に調整
-    else:
-        warmup_steps = 10  # 20 → 10に調整
-    
-    # interval_stepsを増やしてプルーニング判定頻度を下げる
-    interval_steps = 3  # 1 → 3に増加
-    
+    warmup_steps = 8  # Fixed value for simplicity
+    interval_steps = 3  # Fixed value for simplicity
+
     return MedianPruner(
         n_startup_trials=startup_trials,
         n_warmup_steps=warmup_steps,
@@ -457,7 +420,6 @@ def objective_function(
 # ============================================================================
 
 def _memory_cleanup_callback(study, trial):
-    """Enhanced memory cleanup callback with more frequent cleanup for large datasets."""
     
     force_memory_cleanup(aggressive=True)
 
