@@ -21,7 +21,7 @@ from hdbscan import HDBSCAN
 
 from utils.custom_embedder import Specter2Embedder
 from utils.memory_utils import force_memory_cleanup
-from utils.score_utils import compute_dbcv_score
+from utils.score_utils import compute_dbcv_score_with_pca
 from utils.hyperparameter import Hyperparameters
 from papertrends_dataset_lib.utils import ConfigLoader
 
@@ -303,20 +303,20 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
 
 def compute_cluster_quality_score(
     labels: np.ndarray,
-    embedding: np.ndarray,
+    text_embeddings: np.ndarray,
     weights: Dict[str, float]
 ) -> float:
     """Compute combined clustering quality score."""
     try:
         # Compute metrics
-        dbcv_score = compute_dbcv_score(labels, embedding)
+        dbcv_score = compute_dbcv_score_with_pca(text_embeddings, labels, metric='cosine')
         
         # Calculate final score (DBCV is in [-1,1] range)
         final_score = weights['dbcv'] * dbcv_score
         
         # Output results
         print(f"DBCV: {dbcv_score:.4f}, Final: {final_score:.4f}")
-        
+            
         return final_score
     except KeyboardInterrupt:
         raise
@@ -380,14 +380,13 @@ def objective_function(
         
         # Extract necessary data from model
         labels = model.hdbscan_model.labels_
-        umap_embedding = model.umap_model.embedding_
         topic_info = model.get_topic_info()
         
         # Get basic info and output
         basic_info = _get_basic_model_info(topic_info)
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
-        score = compute_cluster_quality_score(labels, umap_embedding, weights)
+        score = compute_cluster_quality_score(labels, text_embeddings, weights)
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
@@ -560,7 +559,7 @@ if __name__ == "__main__":
     
     categories = CONFIG_LOADER.load_yaml("categories.yaml")
     categories = {
-        "cs": ["cs.AI"],
+        "cs": ["cs.AR"],
     }
     
     print(f"Processing {len(categories)} arXiv categories:")

@@ -5,13 +5,13 @@ This module provides functions to compute clustering quality scores with minimal
 
 import numpy as np
 from sklearn.metrics import silhouette_score
-from sklearn.neighbors import NearestNeighbors
+from sklearn.decomposition import PCA
 from hdbscan import validity_index
 
 
 def compute_silhouette_score(
-    labels: np.ndarray,
     embeddings: np.ndarray,
+    labels: np.ndarray,
     metric: str = 'euclidean'
 ) -> float:
     """Compute silhouette score using embeddings with minimal memory usage."""
@@ -42,14 +42,25 @@ def compute_silhouette_score(
 
 
 def compute_dbcv_score(
-    labels: np.ndarray,
     embeddings: np.ndarray,
+    labels: np.ndarray,
     metric: str = 'euclidean'
 ) -> float:
     """Compute DBCV score using embeddings."""
     embeddings = embeddings.astype(np.float64)
     dbcv_score = validity_index(embeddings, labels,  metric=metric)
     
+    return dbcv_score
+
+def compute_dbcv_score_with_pca(
+    embeddings: np.ndarray,
+    labels: np.ndarray,
+    metric: str = 'euclidean'
+) -> float:
+    """Compute DBCV score using embeddings with PCA."""
+    pca = PCA(n_components=0.99, random_state=42)
+    embeddings = pca.fit_transform(embeddings)
+    dbcv_score = compute_dbcv_score(embeddings, labels, metric=metric)
     return dbcv_score
 
 
