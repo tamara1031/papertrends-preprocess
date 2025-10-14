@@ -21,7 +21,7 @@ from hdbscan import HDBSCAN
 
 from utils.custom_embedder import Specter2Embedder
 from utils.memory_utils import force_memory_cleanup
-from utils.score_utils import compute_dbcv_score_with_pca
+from utils.score_utils import compute_dbcv_score_with_pca, compute_dbcv_score
 from utils.hyperparameter import Hyperparameters
 from papertrends_dataset_lib.utils import ConfigLoader
 
@@ -292,7 +292,7 @@ def compute_cluster_quality_score(
     """Compute combined clustering quality score."""
     try:
         # Compute metrics
-        dbcv_score = compute_dbcv_score_with_pca(text_embeddings, labels, metric='cosine')
+        dbcv_score = compute_dbcv_score(text_embeddings, labels, metric='cosine')
         
         # Calculate final score (DBCV is in [-1,1] range)
         final_score = weights['dbcv'] * dbcv_score
@@ -425,19 +425,6 @@ def optimize_category_clustering(
     # Create study with memory-optimized settings
     study_name = f"clustering_optimization_{category}_{subcategory}_{dataset_size}"
 
-    # Configure storage for better memory management
-    if storage and storage.startswith("sqlite:///"):
-        # Enable WAL mode for better concurrency and memory usage
-        import sqlite3
-        db_path = storage.replace("sqlite:///", "")
-        conn = sqlite3.connect(db_path)
-        conn.execute("PRAGMA journal_mode=WAL")
-        conn.execute("PRAGMA cache_size=-64000")  # ~64MB cache limit
-        conn.execute("PRAGMA temp_store=memory")
-        conn.execute("PRAGMA mmap_size=268435456")  # 256MB memory map
-        conn.commit()
-        conn.close()
-
     study = optuna.create_study(
         storage=storage,
         load_if_exists=True,
@@ -470,15 +457,6 @@ def optimize_category_clustering(
     except Exception as e:
         print(f"Optimization error: {e}")
         raise
-    finally:
-        # Simple cleanup
-        try:
-            # Clear study storage cache if available
-            if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
-                study._storage.cache.clear()
-        except Exception as e:
-            print(f"Warning: Study cleanup failed: {e}")
-
     return study
 
 
