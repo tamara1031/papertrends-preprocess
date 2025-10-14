@@ -125,9 +125,9 @@ class OptimizationConfig:
         }
     
     @staticmethod
-    def get_min_df_range(dataset_size: int) -> Tuple[int, int]:
+    def get_min_df_range(dataset_size: int) -> Tuple[int, int]: # always >= 2
         """Get min_df range based on dataset size using exponential formula."""
-        min_val = int((dataset_size ** 0.5) // 100) + 1
+        min_val = max(2, int((dataset_size ** 0.5) // 100) + 1)
         max_val = max(min_val + 1, min(50, min_val * 10))
         return (min_val, max_val)
     

@@ -55,10 +55,11 @@ def compute_dbcv_score(
 def compute_dbcv_score_with_pca(
     embeddings: np.ndarray,
     labels: np.ndarray,
-    metric: str = 'euclidean'
+    metric: str = 'euclidean',
+    pca_components: float = 0.99
 ) -> float:
     """Compute DBCV score using embeddings with PCA."""
-    pca = PCA(n_components=0.99, random_state=42)
+    pca = PCA(n_components=pca_components, random_state=42)
     embeddings = pca.fit_transform(embeddings)
     dbcv_score = compute_dbcv_score(embeddings, labels, metric=metric)
     return dbcv_score
