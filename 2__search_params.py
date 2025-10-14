@@ -69,18 +69,9 @@ def load_texts(category: str, subcategory: str) -> List[str]:
     with open(abstracts_path, "rb") as f:
         abstracts = pickle.load(f)
 
-    # Process texts with simplified batching (32GB memory allows larger batches)
-    dataset_size = len(titles)
-    batch_size = min(20000, dataset_size)  # Larger batches with 32GB memory
-    
-    texts = []
-    for i in range(0, len(titles), batch_size):
-        batch_titles = titles[i:i + batch_size]
-        batch_abstracts = abstracts[i:i + batch_size]
-        
-        batch_texts = [EMBEDDING_MODEL.get_input_text(title, abstract)
-                      for title, abstract in zip(batch_titles, batch_abstracts)]
-        texts.extend(batch_texts)
+    # Process texts
+    texts = [EMBEDDING_MODEL.get_input_text(title, abstract)
+             for title, abstract in zip(titles, abstracts)]
 
     return texts
 
@@ -93,17 +84,9 @@ def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
         print(f"Embeddings file not found for {category}/{subcategory}")
         return np.array([])
 
-    try:
-        with open(embeddings_path, "rb") as f:
-            embeddings = pickle.load(f)
-        return embeddings
-
-    except MemoryError:
-        print(f"Memory error loading embeddings for {category}/{subcategory}")
-        return np.array([])
-    except Exception as e:
-        print(f"Error loading embeddings: {e}")
-        return np.array([])
+    with open(embeddings_path, "rb") as f:
+        embeddings = pickle.load(f)
+    return embeddings
 
 # ============================================================================
 # Memory Management
