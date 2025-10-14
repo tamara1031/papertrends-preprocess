@@ -21,7 +21,7 @@ from hdbscan import HDBSCAN
 
 from utils.custom_embedder import Specter2Embedder
 from utils.memory_utils import force_memory_cleanup
-from utils.score_utils import compute_dbcv_score_with_pca, compute_dbcv_score
+from utils.score_utils import compute_dbcv_score
 from utils.hyperparameter import Hyperparameters
 from papertrends_dataset_lib.utils import ConfigLoader
 
@@ -87,11 +87,6 @@ def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
     with open(embeddings_path, "rb") as f:
         embeddings = pickle.load(f)
     return embeddings
-
-# ============================================================================
-# Memory Management
-# ============================================================================
-
 
 # ============================================================================
 # Configuration
