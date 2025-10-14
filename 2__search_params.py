@@ -138,8 +138,7 @@ class OptimizationConfig:
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
         """Get balanced weights for metrics (scores in [-1, 1] range)."""
         return {
-            'cluster_shape': 0.0,
-            'clustering_quality': 0.5,
+            'dbcv': 0.5,
             'dcsi': 0.5
         }
     
@@ -319,8 +318,8 @@ def compute_cluster_quality_score(
         dcsi_normalized = 2 / (1 + np.exp(-dcsi_score)) - 1
         
         final_score = (
-            weights['clustering_quality'] * dbcv_score +
-            weights.get('dcsi', 0.0) * dcsi_normalized
+            weights['dbcv'] * dbcv_score +
+            weights['dcsi'] * dcsi_normalized
         )
         
         # Output results
