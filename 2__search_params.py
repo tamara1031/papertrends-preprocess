@@ -46,7 +46,7 @@ CONFIG_LOADER = ConfigLoader(Path(__file__).parent / "config")
 def load_texts(category: str, subcategory: str) -> List[str]:
     """
     Load preprocessed paper titles for a given arXiv category/subcategory
-    from the ./dataset directory with memory-efficient processing.
+    from the ./dataset directory.
 
     Args:
         category (str): Top-level arXiv category.
@@ -63,55 +63,29 @@ def load_texts(category: str, subcategory: str) -> List[str]:
         print(f"Dataset files not found for {category}/{subcategory}")
         return []
 
-    # Load data with memory cleanup
+    # Load data
     with open(titles_path, "rb") as f:
         titles = pickle.load(f)
     with open(abstracts_path, "rb") as f:
         abstracts = pickle.load(f)
 
-    # For large datasets, implement more aggressive memory management
+    # Process texts with simplified batching (32GB memory allows larger batches)
     dataset_size = len(titles)
-    if dataset_size > 50000:
-        # Use smaller batch size for very large datasets
-        batch_size = 5000  # Reduced batch size for memory efficiency
-    elif dataset_size > 20000:
-        batch_size = 8000
-    else:
-        batch_size = 10000
-
+    batch_size = min(20000, dataset_size)  # Larger batches with 32GB memory
+    
     texts = []
-    temp_batches = []  # Keep track of batches for cleanup
-
     for i in range(0, len(titles), batch_size):
         batch_titles = titles[i:i + batch_size]
         batch_abstracts = abstracts[i:i + batch_size]
-
+        
         batch_texts = [EMBEDDING_MODEL.get_input_text(title, abstract)
                       for title, abstract in zip(batch_titles, batch_abstracts)]
-
-        # For very large datasets, yield batches instead of accumulating
-        if dataset_size > 100000:
-            # Process immediately and clean up
-            texts.extend(batch_texts)
-            del batch_titles, batch_abstracts, batch_texts
-            force_memory_cleanup(aggressive=True)
-        else:
-            texts.extend(batch_texts)
-            temp_batches.append((batch_titles, batch_abstracts, batch_texts))
-
-    # Clean up temporary batch references
-    for batch_titles, batch_abstracts, batch_texts in temp_batches:
-        del batch_titles, batch_abstracts, batch_texts
-    del temp_batches
-
-    # Clean up original data
-    del titles, abstracts
-    force_memory_cleanup()
+        texts.extend(batch_texts)
 
     return texts
 
 def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
-    """Load text embeddings for a category/subcategory with memory optimization."""
+    """Load text embeddings for a category/subcategory."""
     base_dir = Path("./dataset") / category / subcategory
     embeddings_path = base_dir / "embeddings.pkl"
 
@@ -119,30 +93,13 @@ def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
         print(f"Embeddings file not found for {category}/{subcategory}")
         return np.array([])
 
-    # Use memory mapping for large embedding files to reduce memory usage
     try:
         with open(embeddings_path, "rb") as f:
-            # Check file size to determine loading strategy
-            f.seek(0, 2)  # Seek to end
-            file_size = f.tell()
-            f.seek(0)  # Seek back to beginning
-
-            if file_size > 500 * 1024 * 1024:  # > 500MB
-                print(f"Large embeddings file detected ({file_size / 1024 / 1024:.1f}MB), using memory-efficient loading")
-                # For very large files, we might want to implement chunked loading
-                # For now, we'll still load it but with memory cleanup
-                embeddings = pickle.load(f)
-
-                # Force memory cleanup after loading large files
-                force_memory_cleanup(aggressive=True)
-            else:
-                embeddings = pickle.load(f)
-
+            embeddings = pickle.load(f)
         return embeddings
 
     except MemoryError:
         print(f"Memory error loading embeddings for {category}/{subcategory}")
-        print("Consider using smaller batch sizes or reducing dataset size")
         return np.array([])
     except Exception as e:
         print(f"Error loading embeddings: {e}")
@@ -152,58 +109,6 @@ def load_text_embeddings(category: str, subcategory: str) -> np.ndarray:
 # Memory Management
 # ============================================================================
 
-def cleanup_bertopic_model(model):
-    """Clean up BERTopic model internal data to prevent memory leaks."""
-    try:
-        # Clear UMAP embedding
-        if hasattr(model, 'umap_model') and hasattr(model.umap_model, 'embedding_'):
-            model.umap_model.embedding_ = None
-        
-        # Clear HDBSCAN labels and other data
-        if hasattr(model, 'hdbscan_model'):
-            if hasattr(model.hdbscan_model, 'labels_'):
-                model.hdbscan_model.labels_ = None
-            if hasattr(model.hdbscan_model, 'cluster_persistence_'):
-                model.hdbscan_model.cluster_persistence_ = None
-            if hasattr(model.hdbscan_model, 'condensed_tree_'):
-                model.hdbscan_model.condensed_tree_ = None
-            if hasattr(model.hdbscan_model, 'minimum_spanning_tree_'):
-                model.hdbscan_model.minimum_spanning_tree_ = None
-        
-        # Clear vectorizer internal data
-        if hasattr(model, 'vectorizer_model'):
-            if hasattr(model.vectorizer_model, 'vocabulary_'):
-                model.vectorizer_model.vocabulary_ = None
-            if hasattr(model.vectorizer_model, 'stop_words_'):
-                model.vectorizer_model.stop_words_ = None
-            if hasattr(model.vectorizer_model, 'idf_'):
-                model.vectorizer_model.idf_ = None
-        
-        # Clear c-TF-IDF model data
-        if hasattr(model, 'ctfidf_model'):
-            if hasattr(model.ctfidf_model, 'idf_'):
-                model.ctfidf_model.idf_ = None
-            if hasattr(model.ctfidf_model, 'X_'):
-                model.ctfidf_model.X_ = None
-        
-        # Clear topic data
-        if hasattr(model, 'topics_'):
-            model.topics_ = None
-        if hasattr(model, 'probabilities_'):
-            model.probabilities_ = None
-        if hasattr(model, 'topic_embeddings_'):
-            model.topic_embeddings_ = None
-        if hasattr(model, 'topic_labels_'):
-            model.topic_labels_ = None
-            
-        # Clear document data
-        if hasattr(model, 'documents_'):
-            model.documents_ = None
-        if hasattr(model, 'embeddings_'):
-            model.embeddings_ = None
-            
-    except Exception:
-        pass  # Ignore cleanup errors
 
 # ============================================================================
 # Configuration
@@ -245,8 +150,8 @@ class OptimizationConfig:
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
         """Get balanced weights for both metrics (scores in [-1, 1] range)."""
         return {
-            'cluster_shape': 0.5,
-            'clustering_quality': 0.5
+            'cluster_shape': 0.0,
+            'clustering_quality': 1.0
         }
     
     @staticmethod
@@ -409,8 +314,6 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
         else:
             top_sizes = []
         
-        # Clean up intermediate variables
-        del valid_topics, cluster_sizes
         
         return {'n_topics': n_topics, 'top_cluster_sizes': top_sizes}
     except KeyboardInterrupt:
@@ -425,14 +328,11 @@ def compute_cluster_quality_score(
     embedding: np.ndarray,
     weights: Dict[str, float]
 ) -> float:
-    """Compute combined clustering quality score with minimal memory usage."""
+    """Compute combined clustering quality score."""
     try:
         # Compute metrics
         silhouette_score = compute_silhouette_score(labels, embedding)
-        force_memory_cleanup()
-        
         dbcv_score = compute_dbcv_score(labels, embedding)
-        force_memory_cleanup()
         
         # Calculate final score
         final_score = (
@@ -445,7 +345,6 @@ def compute_cluster_quality_score(
         
         return final_score
     except KeyboardInterrupt:
-        # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise
     except Exception as e:
         print(f"Error in compute_cluster_quality_score: {e}")
@@ -507,11 +406,8 @@ def objective_function(
     texts: List[str], 
     text_embeddings: np.ndarray
 ) -> float:
-    """Optuna objective function for hyperparameter optimization with enhanced memory management."""
+    """Optuna objective function for hyperparameter optimization."""
     model = None
-    labels = None
-    umap_embedding = None
-    topic_info = None
     
     try:
         # Suggest hyperparameters and create model
@@ -521,43 +417,19 @@ def objective_function(
         # Fit model
         topics, _ = model.fit_transform(texts, embeddings=text_embeddings)
         
-        # Clean up topics immediately
-        del topics
-        force_memory_cleanup()
-        
         # Evaluate clustering quality
         weights = OptimizationConfig.get_adaptive_weights(len(texts))
         
-        # Extract necessary data from model with minimal memory usage
-        # Use references instead of copies to save memory
+        # Extract necessary data from model
         labels = model.hdbscan_model.labels_
         umap_embedding = model.umap_model.embedding_
         topic_info = model.get_topic_info()
-
-        # Clean up model immediately after extracting data
-        cleanup_bertopic_model(model)
-        del model
-        model = None
-        force_memory_cleanup()
         
         # Get basic info and output
         basic_info = _get_basic_model_info(topic_info)
         print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
-        # Clean up topic_info after use
-        del topic_info
-        force_memory_cleanup()
-
-        # Additional memory monitoring for large datasets
-        if len(texts) > 50000:
-            from utils.memory_utils import log_memory_usage
-            log_memory_usage(f"Trial {trial.number} post-cleanup", verbose=False)
-        
         score = compute_cluster_quality_score(labels, umap_embedding, weights)
-        
-        # Clean up evaluation data
-        del labels, umap_embedding
-        force_memory_cleanup()
         
         # Store evaluation metrics
         trial.set_user_attr("score", float(score))
@@ -574,24 +446,7 @@ def objective_function(
         trial.set_user_attr("error", str(e))
         return -1.0  # Return worst score on error (range: [-1, 1])
     finally:
-        # Comprehensive cleanup
-        if model is not None:
-            cleanup_bertopic_model(model)
-            del model
-        
-        # Clean up any remaining variables (check if they exist first)
-        cleanup_vars = []
-        if 'labels' in locals() and labels is not None:
-            cleanup_vars.append(labels)
-        if 'umap_embedding' in locals() and umap_embedding is not None:
-            cleanup_vars.append(umap_embedding)
-        if 'topic_info' in locals() and topic_info is not None:
-            cleanup_vars.append(topic_info)
-        
-        for var in cleanup_vars:
-            del var
-        
-        force_memory_cleanup()
+        pass
 
 # ============================================================================
 # Main Optimization Pipeline
@@ -599,18 +454,8 @@ def objective_function(
 
 def _memory_cleanup_callback(study, trial):
     """Enhanced memory cleanup callback with more frequent cleanup for large datasets."""
-
-    # Aggressive cleanup for large datasets
+    
     force_memory_cleanup(aggressive=True)
-    print(f"Memory cleanup performed at trial {trial.number}")
-
-    # Additional cleanup for study object
-    if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
-        study._storage.cache.clear()
-
-    # Force garbage collection of trial objects
-    import gc
-    gc.collect()
 
 def optimize_category_clustering(
     category: str, 
@@ -687,26 +532,13 @@ def optimize_category_clustering(
         print(f"Optimization error: {e}")
         raise
     finally:
-        # Enhanced cleanup for study object
+        # Simple cleanup
         try:
             # Clear study storage cache if available
             if hasattr(study, '_storage') and hasattr(study._storage, 'cache'):
                 study._storage.cache.clear()
-
-            # Clear sampler and pruner caches
-            if hasattr(study, 'sampler'):
-                if hasattr(study.sampler, 'cache'):
-                    study.sampler.cache.clear()
-
-            # Force garbage collection
-            import gc
-            gc.collect()
-
         except Exception as e:
             print(f"Warning: Study cleanup failed: {e}")
-
-        # Critical cleanup
-        force_memory_cleanup(aggressive=True)
 
     return study
 
@@ -763,10 +595,6 @@ def process_one_category(category: str, subcategory: str):
     
     # Save results
     save_optimization_results(study, params_path)
-    
-    # Clean up study object
-    del study
-    force_memory_cleanup()
 
 
 if __name__ == "__main__":
@@ -797,9 +625,6 @@ if __name__ == "__main__":
                 process_one_category(category_name, subcategory)
                 print(f"Completed: {category_name}/{subcategory}")
                 
-                # Force memory cleanup after each category
-                force_memory_cleanup()
-                
             except KeyboardInterrupt:
                 print(f"\nInterrupted by user. Processed {processed_count-1}/{total_subcategories} subcategories.")
                 print(f"Results saved to: ./params/")
@@ -807,8 +632,6 @@ if __name__ == "__main__":
                 sys.exit(0)
             except Exception as e:
                 print(f"Failed {category_name}/{subcategory}: {e}")
-                # Clean up on error
-                force_memory_cleanup()
                 continue
                 
     print("\n" + "=" * 60)
