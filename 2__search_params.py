@@ -104,13 +104,12 @@ class OptimizationConfig:
     
     @staticmethod
     def get_default_n_trials(dataset_size: int) -> int:
-        """Get number of trials (simplified - no longer dataset size dependent)."""
-        return 50  # Fixed number of trials for simplicity
+        """Get number of trials optimized for thorough exploration."""
+        return 100
     
     @staticmethod
     def get_default_timeout(dataset_size: int) -> Optional[int]:
-        """Get timeout in minutes (simplified - no longer dataset size dependent)."""
-        return 120  # Fixed timeout for simplicity
+        return 120
     
     @staticmethod
     def get_adaptive_weights(dataset_size: int) -> Dict[str, float]:
@@ -122,8 +121,8 @@ class OptimizationConfig:
     @staticmethod
     def get_min_df_range(dataset_size: int) -> Tuple[int, int]: # always >= 2
         """Get min_df range based on dataset size using exponential formula."""
-        min_val = max(2, int((dataset_size ** 0.5) // 100) + 1)
-        max_val = max(min_val + 1, min(50, min_val * 10))
+        min_val = max(2, int((dataset_size ** 0.5) // 100))
+        max_val = max(min_val + 1, int((dataset_size ** 0.5) // 10))
         return (min_val, max_val)
     
     @staticmethod
@@ -136,22 +135,22 @@ class OptimizationConfig:
     @staticmethod
     def get_min_cluster_size_range(dataset_size: int) -> Tuple[int, int]:
         """Get min_cluster_size range based on dataset size."""
-        min_val = max(10, dataset_size // 1000)
-        max_val = min(2000, dataset_size // 20)
+        min_val = max(10, int((dataset_size ** 0.5) // 10))
+        max_val = max(min_val + 1, int((dataset_size ** 0.5)))
         return (min_val, max_val)
     
     @staticmethod
     def get_n_neighbors_range(dataset_size: int) -> Tuple[int, int]:
         """Get n_neighbors range based on dataset size."""
-        min_val = max(10, min(30, dataset_size // 200))
-        max_val = min(100, max(50, dataset_size // 100))
+        min_val = max(10, int((dataset_size ** 0.5) // 10))
+        max_val = max(min_val + 1, int((dataset_size ** 0.5)))
         return (min_val, max_val)
     
     @staticmethod
     def get_n_components_range(dataset_size: int) -> Tuple[int, int]:
         """Get n_components range based on dataset size."""
         min_val = 5
-        max_val = min(20, max(10, dataset_size // 10000))
+        max_val = max(min_val + 1, int((dataset_size ** 0.5) // 10))
         return (min_val, max_val)
 
 # ============================================================================
@@ -308,10 +307,10 @@ def compute_cluster_quality_score(
 # ============================================================================
 
 def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESampler:
-    """Create TPE sampler optimized for clustering (simplified settings)."""
-    # Simplified fixed settings for consistency
-    startup_trials = max(15, min(30, int(n_trials * 0.25)))
-    ei_candidates = max(24, min(40, int(n_trials * 0.25)))
+    """Create TPE sampler optimized for clustering."""
+    # Simple scaling based on n_trials
+    startup_trials = min(30, n_trials // 3)  # 1/3 of trials, max 30
+    ei_candidates = min(50, n_trials // 2)  # 1/2 of trials, max 50
 
     return TPESampler(
         n_startup_trials=startup_trials,
@@ -324,11 +323,11 @@ def create_tpe_sampler(n_trials: int = 100, dataset_size: int = 10000) -> TPESam
     )
 
 def create_median_pruner(n_trials: int = 100, dataset_size: int = 10000) -> MedianPruner:
-    """Create median pruner with delayed pruning for more exploration (simplified settings)."""
-    # Simplified fixed settings for consistency
-    startup_trials = max(20, min(40, int(n_trials * 0.30)))
-    warmup_steps = 8  # Fixed value for simplicity
-    interval_steps = 3  # Fixed value for simplicity
+    """Create median pruner with delayed pruning for more exploration."""
+    # Simple scaling based on n_trials
+    startup_trials = min(40, n_trials // 2)  # 1/2 of trials, max 40
+    warmup_steps = min(10, n_trials // 10)  # 1/10 of trials, max 10
+    interval_steps = min(5, n_trials // 20)  # 1/20 of trials, max 5
 
     return MedianPruner(
         n_startup_trials=startup_trials,
@@ -514,9 +513,7 @@ if __name__ == "__main__":
     print("=" * 60)
     
     categories = CONFIG_LOADER.load_yaml("categories.yaml")
-    categories = {
-        "cs": ["cs.AR"],
-    }
+    skip_subcategories = []
     
     print(f"Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
@@ -531,6 +528,11 @@ if __name__ == "__main__":
     for category_name, category_items in categories.items():
         for subcategory in category_items:
             processed_count += 1
+            
+            if subcategory in skip_subcategories:
+                print(f"Skipping {category_name}/{subcategory}")
+                continue
+
             print(f"\n[{processed_count}/{total_subcategories}] Processing {category_name}/{subcategory}")
             
             try:
