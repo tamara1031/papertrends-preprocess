@@ -275,7 +275,7 @@ def _get_basic_model_info(topic_info: np.ndarray) -> dict:
         # Re-raise KeyboardInterrupt to be caught by outer try-except
         raise    
     except Exception as e:
-        print(f"Failed to get basic model info: {e}")
+        # print(f"Failed to get basic model info: {e}")
         return {'n_topics': 0, 'top_cluster_sizes': []}
 
 def compute_cluster_quality_score(
@@ -292,13 +292,13 @@ def compute_cluster_quality_score(
         final_score = weights['dbcv'] * dbcv_score
         
         # Output results
-        print(f"DBCV: {dbcv_score:.4f}, Final: {final_score:.4f}")
+        # print(f"DBCV: {dbcv_score:.4f}, Final: {final_score:.4f}")
             
         return final_score
     except KeyboardInterrupt:
         raise
     except Exception as e:
-        print(f"Error in compute_cluster_quality_score: {e}")
+        # print(f"Error in compute_cluster_quality_score: {e}")
         return -1.0  # Return worst score on error (range: [-1, 1])  
 
 
@@ -357,11 +357,11 @@ def objective_function(
         
         # Extract necessary data from model
         labels = model.hdbscan_model.labels_
-        topic_info = model.get_topic_info()
+        # topic_info = model.get_topic_info()
         
         # Get basic info and output
-        basic_info = _get_basic_model_info(topic_info)
-        print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
+        # basic_info = _get_basic_model_info(topic_info)
+        # print(f"Topics: {basic_info['n_topics']}, Top sizes: {basic_info['top_cluster_sizes']}")
         
         score = compute_cluster_quality_score(labels, text_embeddings, weights)
         
@@ -371,12 +371,12 @@ def objective_function(
         return score
     
     except KeyboardInterrupt:
-        print(f"KeyboardInterrupt in trial {trial.number}")
+        # print(f"KeyboardInterrupt in trial {trial.number}")
         raise
     except optuna.exceptions.TrialPruned:
         raise
     except Exception as e:
-        print(f"Trial failed: {e}")
+        # print(f"Trial failed: {e}")
         trial.set_user_attr("error", str(e))
         return -1.0  # Return worst score on error (range: [-1, 1])
     finally:
@@ -513,7 +513,8 @@ if __name__ == "__main__":
     print("=" * 60)
     
     categories = CONFIG_LOADER.load_yaml("categories.yaml")
-    skip_subcategories = []
+    # OOMするので一旦スキップ
+    skip_subcategories = ["cs.RO", "hep-ph"]
     
     print(f"Processing {len(categories)} arXiv categories:")
     for i, category in enumerate(categories, 1):
@@ -524,13 +525,17 @@ if __name__ == "__main__":
     
     total_subcategories = sum(len(category_items) for category_items in categories.values())
     processed_count = 0
-    
+
     for category_name, category_items in categories.items():
         for subcategory in category_items:
             processed_count += 1
+
+            if os.path.exists(f"./params/{category_name}/{subcategory}/best_params.json"):
+                print(f"Skipping {category_name}/{subcategory} (already processed)")
+                continue
             
             if subcategory in skip_subcategories:
-                print(f"Skipping {category_name}/{subcategory}")
+                print(f"Skipping {category_name}/{subcategory} (category is skipped)")
                 continue
 
             print(f"\n[{processed_count}/{total_subcategories}] Processing {category_name}/{subcategory}")
